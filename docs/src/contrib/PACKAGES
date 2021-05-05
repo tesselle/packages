@@ -24,11 +24,10 @@ MD5sum: c16116a1186e79c1512f81f217ed38bc
 NeedsCompilation: no
 
 Package: khroma
-Version: 1.3.0
-Depends: R (>= 3.2)
-Imports: grDevices
-Suggests: covr (>= 3.2.1), crayon (>= 1.3.4), fansi (>= 0.4.0), ggplot2 (>= 3.1.0), knitr, rmarkdown, scales (>= 1.0.0), testthat (>=
-               2.1.1), vdiffr (>= 0.3.0)
+Version: 1.4.0
+Depends: R (>= 3.3)
+Imports: ggplot2, grDevices, grid, scales, spacesXYZ
+Suggests: covr, crayon, fansi, knitr, rmarkdown, testthat, vdiffr
 License: GPL-3
-MD5sum: 1f783282923aea074bacb758b132c00b
+MD5sum: 9006259d4508038e3014a1078e11ed37
 NeedsCompilation: no
