@@ -31,3 +31,12 @@ Suggests: covr, crayon, fansi, knitr, rmarkdown, testthat (>= 3.0.0), vdiffr
 License: GPL-3
 MD5sum: 4161e509ed203f904afa6ea3668b79a1
 NeedsCompilation: no
+
+Package: tabula
+Version: 1.0.0
+Depends: R (>= 3.4)
+Imports: dplyr (>= 0.7), FactoMineR, ggplot2 (>= 3.0.0), grDevices, magrittr, methods, rlang, stats, tidyr, utils
+Suggests: testthat, knitr, rmarkdown
+License: GPL-3
+MD5sum: 4f7e25afe00fb645cfd4f3d55c98c79e
+NeedsCompilation: no
