@@ -24,9 +24,10 @@ MD5sum: c16116a1186e79c1512f81f217ed38bc
 NeedsCompilation: no
 
 Package: khroma
-Version: 1.1.0
-Depends: R (>= 3.4)
-Imports: ggplot2 (>= 3.0.0), grDevices, scales
+Version: 1.1.1
+Depends: R (>= 3.1)
+Imports: ggplot2 (>= 3.0.0), grDevices, scales (>= 1.0.0)
+Suggests: covr, testthat
 License: GPL-3
-MD5sum: 0fd68e3783eca4c0f3ec80e5278577a7
+MD5sum: 31a7cccbb5f68e7054b0863ea3f99e2b
 NeedsCompilation: no
