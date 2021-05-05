@@ -33,11 +33,11 @@ MD5sum: 4161e509ed203f904afa6ea3668b79a1
 NeedsCompilation: no
 
 Package: tabula
-Version: 1.5.0
+Version: 1.5.1
 Depends: R (>= 3.2), arkhe
 Imports: ca (>= 0.71), ggplot2 (>= 3.2.1), grDevices, methods, rlang (>= 0.4.0), stats, utils
 Suggests: covr (>= 3.3.1), khroma (>= 1.3.0), knitr, magrittr (>= 1.5), pbapply (>= 1.4-2), rmarkdown, testthat (>= 2.2.1), vdiffr (>=
                0.3.1)
 License: GPL-3
-MD5sum: 2a0b173d598fa4a7f93d5500bd9dbbc4
+MD5sum: df248ce74f13dd0bccfbdcbf7abef628
 NeedsCompilation: no
