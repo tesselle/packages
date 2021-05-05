@@ -1,0 +1,8 @@
+Package: arkhe
+Version: 0.2.0
+Depends: R (>= 3.2)
+Imports: methods
+Suggests: covr, knitr, rmarkdown, testthat
+License: GPL-3
+MD5sum: 32c0126488ba5ee042a968683a7f6736
+NeedsCompilation: no
