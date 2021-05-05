@@ -22,3 +22,12 @@ Depends: R (>= 2.10)
 License: GPL (>= 3)
 MD5sum: c16116a1186e79c1512f81f217ed38bc
 NeedsCompilation: no
+
+Package: khroma
+Version: 1.0.0
+Depends: R (>= 3.4)
+Imports: grDevices
+Suggests: ggplot2 (>= 3.0.0), scales
+License: GPL-3
+MD5sum: f5ff2fe8b6fb066e6123bf2101e8730c
+NeedsCompilation: no
