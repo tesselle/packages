@@ -33,10 +33,10 @@ MD5sum: 4161e509ed203f904afa6ea3668b79a1
 NeedsCompilation: no
 
 Package: tabula
-Version: 1.0.0
+Version: 1.2.0
 Depends: R (>= 3.4)
-Imports: dplyr (>= 0.7), FactoMineR, ggplot2 (>= 3.0.0), grDevices, magrittr, methods, rlang, stats, tidyr, utils
-Suggests: testthat, knitr, rmarkdown
+Imports: dplyr (>= 0.7), FactoMineR, ggplot2 (>= 3.0.0), grDevices, magrittr, methods, plyr, rlang, stats, tidyr, utils
+Suggests: covr, khroma, knitr, pbapply, rmarkdown, testthat
 License: GPL-3
-MD5sum: 4f7e25afe00fb645cfd4f3d55c98c79e
+MD5sum: f8a52f16d6fa55542afe1727fbb3c181
 NeedsCompilation: no
