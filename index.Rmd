@@ -1,13 +1,26 @@
-# Package repository
+---
+title: "tesselle"
+image: "tesselle.png"
+links:
+  - label: GitHub
+    url: "https://github.com/tesselle"
+output:
+  postcards::trestles
+---
 
 This is a repository holding R packages of the [tesselle](https://www.tesselle.org/) project. Most of the packages are distributed on [CRAN](https://cran.r-project.org/), but some data packages are too large and can only be installed from this repository.
+
+If available, CRAN releases must be regarded as the preferred source.
 
 ## Download tesselle packages
  
 If you want to install a package, simply use `install.packages()` with the additional repository:
 
-``` r
+```{r, eval=FALSE}
 repos <- c("https://packages.tesselle.org", getOption("repos"))
+```
+
+```{r, eval=FALSE}
 install.packages("tabula", repos = repos, type = "source")
 ```
 
