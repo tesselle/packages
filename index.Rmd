@@ -2,6 +2,8 @@
 title: "tesselle"
 image: "tesselle.png"
 links:
+  - label: Home
+    url: "https://www.tesselle.org"
   - label: GitHub
     url: "https://github.com/tesselle"
 output:
