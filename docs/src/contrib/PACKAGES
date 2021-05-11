@@ -11,7 +11,8 @@ Package: dimensio
 Version: 0.2.0
 Depends: R (>= 3.3)
 Imports: ggplot2, methods, rlang
-Suggests: folio, FactoMineR, ggrepel, khroma, testthat (>= 3.0.0), vdiffr
+Suggests: folio, FactoMineR, ggrepel, khroma, testthat (>= 3.0.0),
+        vdiffr
 License: GPL (>= 3)
 MD5sum: 3198565a9296d58709b6d141b0da9c39
 NeedsCompilation: no
@@ -27,17 +28,19 @@ Package: khroma
 Version: 1.5.0
 Depends: R (>= 3.3)
 Imports: ggplot2, grDevices, grid, scales, spacesXYZ
-Suggests: covr, crayon, fansi, knitr, rmarkdown, testthat (>= 3.0.0), vdiffr
+Suggests: covr, crayon, fansi, knitr, rmarkdown, testthat (>= 3.0.0),
+        vdiffr
 License: GPL-3
 MD5sum: 4161e509ed203f904afa6ea3668b79a1
 NeedsCompilation: no
 
 Package: tabula
-Version: 1.5.1
-Depends: R (>= 3.2), arkhe
-Imports: ca (>= 0.71), ggplot2 (>= 3.2.1), grDevices, methods, rlang (>= 0.4.0), stats, utils
-Suggests: covr (>= 3.3.1), khroma (>= 1.3.0), knitr, magrittr (>= 1.5), pbapply (>= 1.4-2), rmarkdown, testthat (>= 2.2.1), vdiffr (>=
-               0.3.1)
+Version: 1.6.0
+Depends: R (>= 3.3)
+Imports: arkhe (>= 0.3.0), dimensio, ggplot2, grDevices, methods,
+        rlang, stats, utils
+Suggests: covr, folio, khroma, knitr, magrittr, rmarkdown, testthat (>=
+        3.0.0), vdiffr
 License: GPL-3
-MD5sum: df248ce74f13dd0bccfbdcbf7abef628
+MD5sum: 8686f9eaf57fe9c3813146b0455d4509
 NeedsCompilation: no
