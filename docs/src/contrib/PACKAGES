@@ -1,10 +1,10 @@
 Package: arkhe
-Version: 0.3.0
+Version: 0.3.1
 Depends: R (>= 3.3)
 Imports: methods, stats
 Suggests: covr, knitr, rmarkdown, testthat (>= 3.0.0)
 License: GPL (>= 3)
-MD5sum: 0245f852e1cfa166f5ed62a2bf74d680
+MD5sum: be6faabccfb9a2f8efa19463596bfe1d
 NeedsCompilation: no
 
 Package: dimensio
