@@ -1,6 +1,7 @@
 ---
 title: "tesselle"
-image: "tesselle.png"
+image: logo.png
+favicon: favicon.png
 links:
   - label: Home
     url: "https://www.tesselle.org"
