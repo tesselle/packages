@@ -1,8 +1,8 @@
-pandoc: 2.7.3
+pandoc: 2.11.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-02-12T13:29Z
+last_built: 2021-05-24T14:32Z
 urls:
   reference: https://folio.tesselle.org/reference
   article: https://folio.tesselle.org/articles

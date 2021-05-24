@@ -1,10 +1,10 @@
-pandoc: 2.7.3
+pandoc: 2.11.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   crameri: crameri.html
   tol: tol.html
-last_built: 2021-04-22T15:59Z
+last_built: 2021-05-24T14:36Z
 urls:
   reference: https://khroma.tesselle.org/reference
   article: https://khroma.tesselle.org/articles
