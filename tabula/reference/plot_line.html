@@ -71,9 +71,11 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Line Plot — plot_line" />
-<meta property="og:description" content="plot_rank plots a rank vs relative abundance diagram." />
+<meta property="og:description" content="Plots a rank vs relative abundance diagram." />
 <meta property="og:image" content="https://tabula.tesselle.org/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -183,7 +185,7 @@
     </div>
 
     <div class="ref-description">
-    <p><code>plot_rank</code> plots a rank <em>vs</em> relative abundance diagram.</p>
+    <p>Plots a rank <em>vs</em> relative abundance diagram.</p>
     </div>
 
     <pre class="usage"><span class='fu'>plot_rank</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
@@ -204,30 +206,29 @@
     </tr>
     <tr>
       <th>log</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string which contains "<code>x</code>" if the
-x axis is to be logarithmic, "<code>y</code>" if the y axis is to be logarithmic
-and "<code>xy</code>" or "<code>yx</code>" if both axes are to be logarithmic (base 10).</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string which contains "<code>x</code>" if the x axis is to be
+logarithmic, "<code>y</code>" if the y axis is to be logarithmic and "<code>xy</code>" or "<code>yx</code>"
+if both axes are to be logarithmic (base 10).</p></td>
     </tr>
     <tr>
       <th>facet</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a matrix of panels
-defined by case/sample be drawn?</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a matrix of panels defined by
+case/sample be drawn?</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></code> object.</p>
+    <p>A <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
- Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other plot: 
 <code><a href='plot_bar.html'>plot_bar</a></code>,
-<code><a href='plot_date.html'>plot_date</a>()</code>,
 <code><a href='plot_diversity.html'>plot_diversity</a></code>,
 <code><a href='plot_matrix.html'>plot_matrix</a></code>,
 <code><a href='plot_spot.html'>plot_spot</a>()</code></p></div>

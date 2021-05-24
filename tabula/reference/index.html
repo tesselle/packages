@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Function reference" />
 <meta property="og:image" content="https://tabula.tesselle.org/logo.png" />
@@ -111,7 +113,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -236,19 +238,7 @@
     </tbody><tbody>
       
       
-      <tr>
-        
-        <td>
-          <p><code><a href="date_mcd.html">date_mcd()</a></code> <code><a href="date_mcd.html">bootstrap_mcd()</a></code> </p>
-        </td>
-        <td><p>Mean Ceramic Date</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="event.html">date_event()</a></code> <code><a href="event.html">predict_event()</a></code> <code><a href="event.html">predict_accumulation()</a></code> <code><a href="event.html">bootstrap_event()</a></code> <code><a href="event.html">jackknife_event()</a></code> </p>
-        </td>
-        <td><p>Event and Accumulation Dates</p></td>
-      </tr>
+      
     </tbody><tbody>
       <tr>
         <th colspan="2">
@@ -264,7 +254,7 @@
       <tr>
         
         <td>
-          <p><code><a href="seriation.html">seriate_average()</a></code> <code><a href="seriation.html">seriate_rank()</a></code> <code><a href="seriation.html">permute()</a></code> <code><a href="seriation.html">refine_seriation()</a></code> <code><a href="seriation.html">seriate_correspondence(<i>&lt;CountMatrix&gt;</i>)</a></code> <code><a href="seriation.html">seriate_correspondence(<i>&lt;IncidenceMatrix&gt;</i>)</a></code> <code><a href="seriation.html">get_order(<i>&lt;PermutationOrder&gt;</i>)</a></code> </p>
+          <p><code><a href="seriation.html">seriate_average()</a></code> <code><a href="seriation.html">seriate_rank()</a></code> <code><a href="seriation.html">permute()</a></code> <code><a href="seriation.html">refine_seriation()</a></code> <code><a href="seriation.html">get_order(<i>&lt;PermutationOrder&gt;</i>)</a></code> </p>
         </td>
         <td><p>Matrix Seriation</p></td>
       </tr>
@@ -286,12 +276,6 @@
           <p><code><a href="plot_bar.html">plot_bertin()</a></code> <code><a href="plot_bar.html">plot_ford()</a></code> </p>
         </td>
         <td><p>Bar Plot</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="plot_date.html">plot_date()</a></code> <code><a href="plot_date.html">plot_time()</a></code> </p>
-        </td>
-        <td><p>Date and Time Plot</p></td>
       </tr><tr>
         
         <td>
@@ -341,12 +325,6 @@
           <p><code><a href="test_diversity.html">test_diversity()</a></code> </p>
         </td>
         <td><p>Diversity Test</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="test_fit.html">test_fit()</a></code> <code><a href="test_fit.html">plot_time(<i>&lt;IncrementTest&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
-        </td>
-        <td><p>Frequency Increment Test</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -363,27 +341,9 @@
       <tr>
         
         <td>
-          <p><code><a href="DateEvent-class.html">DateEvent-class</a></code> </p>
-        </td>
-        <td><p>Date Model</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="DateMCD-class.html">DateMCD-class</a></code> </p>
-        </td>
-        <td><p>Mean Ceramic Date</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="DiversityIndex.html">DiversityIndex</a></code> </p>
         </td>
         <td><p>Diversity Index</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="IncrementTest-class.html">IncrementTest-class</a></code> </p>
-        </td>
-        <td><p>Frequency Increment Test</p></td>
       </tr><tr>
         
         <td>
@@ -418,7 +378,7 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="subset.html">`[[`(<i>&lt;DiversityIndex&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;IncrementTest&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;DateMCD&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;DateEvent&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;RefineCA&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;PermutationOrder&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
+          <p><code><a href="subset.html">`[[`(<i>&lt;DiversityIndex&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;RefineCA&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset.html">`[[`(<i>&lt;PermutationOrder&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
         </td>
         <td><p>Extract or Replace Parts of an Object</p></td>
       </tr>

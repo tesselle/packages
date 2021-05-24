@@ -71,11 +71,17 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Matrix Seriation — seriation" />
-<meta property="og:description" content="* seriate_* computes a permutation order for rows and/or columns.
- * permute rearranges a data matrix according to a permutation order.
- * get_order returns the seriation order for rows and columns." />
+<meta property="og:description" content="
+
+seriate_*() computes a permutation order for rows and/or columns.
+permute() rearranges a data matrix according to a permutation order.
+get_order() returns the seriation order for rows and columns.
+
+" />
 <meta property="og:image" content="https://tabula.tesselle.org/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -114,7 +120,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -180,14 +186,18 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Matrix Seriation</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/tabula/blob/master/R/AllGenerics.R'><code>R/AllGenerics.R</code></a>, <a href='https://github.com/tesselle/tabula/blob/master/R/deprecate.R'><code>R/deprecate.R</code></a>, <a href='https://github.com/tesselle/tabula/blob/master/R/mutators.R'><code>R/mutators.R</code></a>, and 4 more</small>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/tabula/blob/master/R/AllGenerics.R'><code>R/AllGenerics.R</code></a>, <a href='https://github.com/tesselle/tabula/blob/master/R/mutators.R'><code>R/mutators.R</code></a>, <a href='https://github.com/tesselle/tabula/blob/master/R/permute.R'><code>R/permute.R</code></a>, and 3 more</small>
     <div class="hidden name"><code>seriation.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>* <code>seriate_*</code> computes a permutation order for rows and/or columns.
- * <code>permute</code> rearranges a data matrix according to a permutation order.
- * <code>get_order</code> returns the seriation order for rows and columns.</p>
+    
+<ul>
+<li><p><code>seriate_*()</code> computes a permutation order for rows and/or columns.</p></li>
+<li><p><code>permute()</code> rearranges a data matrix according to a permutation order.</p></li>
+<li><p><code><a href='mutator.html'>get_order()</a></code> returns the seriation order for rows and columns.</p></li>
+</ul>
+
     </div>
 
     <pre class="usage"><span class='fu'>seriate_average</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
@@ -197,12 +207,6 @@
 <span class='fu'>permute</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>order</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>refine_seriation</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
-
-<span class='co'># S4 method for CountMatrix</span>
-<span class='fu'><a href='deprecate.html'>seriate_correspondence</a></span><span class='op'>(</span><span class='va'>object</span>, margin <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, <span class='va'>...</span><span class='op'>)</span>
-
-<span class='co'># S4 method for IncidenceMatrix</span>
-<span class='fu'><a href='deprecate.html'>seriate_correspondence</a></span><span class='op'>(</span><span class='va'>object</span>, margin <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='co'># S4 method for PermutationOrder</span>
 <span class='fu'><a href='mutator.html'>get_order</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
@@ -241,7 +245,7 @@
     <tr>
       <th>object, x</th>
       <td><p>An \(m \times p\) data matrix (typically an object
-of class CountMatrix or IncidenceMatrix.</p></td>
+of class <code>CountMatrix</code> or <code>IncidenceMatrix</code>.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -249,15 +253,8 @@ of class CountMatrix or IncidenceMatrix.</p></td>
     </tr>
     <tr>
       <th>order</th>
-      <td><p>A <a href='PermutationOrder-class.html'>PermutationOrder</a> object giving the permutation
+      <td><p>A <code><a href='PermutationOrder-class.html'>PermutationOrder</a></code> object giving the permutation
 order for rows and columns.</p></td>
-    </tr>
-    <tr>
-      <th>margin</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the subscripts which the
-rearrangement will be applied over: <code>1</code> indicates rows, <code>2</code>
-indicates columns, <code><a href='https://rdrr.io/r/base/c.html'>c(1, 2)</a></code> indicates rows then columns,
-<code><a href='https://rdrr.io/r/base/c.html'>c(2, 1)</a></code> indicates columns then rows.</p></td>
     </tr>
     <tr>
       <th>cutoff</th>
@@ -271,111 +268,121 @@ replications.</p></td>
     </tr>
     <tr>
       <th>axes</th>
-      <td><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the subscripts of the CA
-axes to be used.</p></td>
+      <td><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the subscripts of the CA axes to be
+used.</p></td>
     </tr>
     <tr>
       <th>progress</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a progress bar be
-displayed?</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a progress bar be displayed?</p></td>
+    </tr>
+    <tr>
+      <th>margin</th>
+      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the subscripts which the
+rearrangement will be applied over: <code>1</code> indicates rows, <code>2</code> indicates
+columns, <code><a href='https://rdrr.io/r/base/c.html'>c(1, 2)</a></code> indicates rows then columns, <code><a href='https://rdrr.io/r/base/c.html'>c(2, 1)</a></code> indicates columns
+then rows.</p></td>
     </tr>
     <tr>
       <th>EPPM</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the seriation be computed
-on EPPM instead of raw data?</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the seriation be computed on EPPM
+instead of raw data?</p></td>
     </tr>
     <tr>
       <th>stop</th>
-      <td><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> giving the stopping rule
-(i.e. maximum number of iterations) to avoid infinite loop.</p></td>
+      <td><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> giving the stopping rule (i.e. maximum number of
+iterations) to avoid infinite loop.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>seriate_*</code> returns a <a href='PermutationOrder-class.html'>PermutationOrder</a> object.</p>
-<p><code>refine_seriation</code> returns a <a href='RefineCA-class.html'>RefineCA</a> object.</p>
-<p><code>permute</code> returns either a permuted CountMatrix or an
- IncidenceMatrix (the same as <code>object</code>).</p>
+    
+<ul>
+<li><p><code>seriate_*()</code> returns a <code><a href='PermutationOrder-class.html'>PermutationOrder</a></code> object.</p></li>
+<li><p><code>refine_seriation()</code> returns a <code><a href='RefineCA-class.html'>RefineCA</a></code> object.</p></li>
+<li><p><code>permute()</code> returns either a permuted <code>CountMatrix</code> or an
+<code>IncidenceMatrix</code> (the same as <code>object</code>).</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Refining method can lead to much longer execution times and larger output
- objects.</p>
+objects.</p>
     <h2 class="hasAnchor" id="seriation"><a class="anchor" href="#seriation"></a>Seriation</h2>
 
     
 
 <p>The matrix seriation problem in archaeology is based on three conditions
- and two assumptions, which Dunell (1970) summarizes as follows.</p>
+and two assumptions, which Dunell (1970) summarizes as follows.</p>
 <p>The homogeneity conditions state that all the groups included in a
- seriation must:</p><ol>
+seriation must:</p><ol>
 <li><p>Be of comparable duration.</p></li>
 <li><p>Belong to the same cultural tradition.</p></li>
 <li><p>Come from the same local area.</p></li>
 </ol>
 
 <p>The mathematical assumptions state that the distribution of any historical
- or temporal class:</p><ol>
+or temporal class:</p><ol>
 <li><p>Is continuous through time.</p></li>
 <li><p>Exhibits the form of a unimodal curve.</p></li>
 </ol><p>Theses assumptions create a distributional model and ordering is
- accomplished by arranging the matrix so that the class distributions
- approximate the required pattern. The resulting order is inferred
- to be chronological.</p>
+accomplished by arranging the matrix so that the class distributions
+approximate the required pattern. The resulting order is inferred
+to be chronological.</p>
 <p>The following seriation methods are available:</p><dl>
-  <dt><code>seriate_average</code></dt><dd><p>Correspondence analysis-based seriation
-  (average ranking). Correspondence analysis (CA) is an effective method for
-  the seriation of archaeological assemblages. The order of the rows and
-  columns is given by the coordinates along one dimension of the CA space,
-  assumed to account for temporal variation. The direction of temporal change
-  within the correspondence analysis space is arbitrary: additional
-  information is needed to determine the actual order in time.</p></dd>
-  <dt><code>seriate_rank</code></dt><dd><p>Reciprocal ranking seriation. These procedures
-  iteratively rearrange rows and/or columns according to their weighted rank
-  in the data matrix until convergence.
-  Note that this procedure could enter into an infinite loop.
-  If no convergence is reached before the maximum number of iterations, it
-  stops with a warning.</p></dd>
- 
+<dt><code>seriate_average()</code></dt><dd><p>Correspondence analysis-based seriation
+(average ranking). Correspondence analysis (CA) is an effective method for
+the seriation of archaeological assemblages. The order of the rows and
+columns is given by the coordinates along one dimension of the CA space,
+assumed to account for temporal variation. The direction of temporal change
+within the correspondence analysis space is arbitrary: additional
+information is needed to determine the actual order in time.</p></dd>
+<dt><code>seriate_rank()</code></dt><dd><p>Reciprocal ranking seriation. These procedures
+iteratively rearrange rows and/or columns according to their weighted rank
+in the data matrix until convergence.
+Note that this procedure could enter into an infinite loop.
+If no convergence is reached before the maximum number of iterations, it
+stops with a warning.</p></dd>
+
 </dl>
 
     <h2 class="hasAnchor" id="correspondence-analysis"><a class="anchor" href="#correspondence-analysis"></a>Correspondence Analysis</h2>
 
     
 
-<p><code>refine_seriation</code> allows to identify samples that are subject to
- sampling error or samples that have underlying structural relationships
- and might be influencing the ordering along the CA space.</p>
+<p><code>refine_seriation()</code> allows to identify samples that are subject to
+sampling error or samples that have underlying structural relationships
+and might be influencing the ordering along the CA space.</p>
 <p>This relies on a partial bootstrap approach to CA-based seriation where each
- sample is replicated <code>n</code> times. The maximum dimension length of
- the convex hull around the sample point cloud allows to remove samples for
- a given <code>cutoff</code> value.</p>
+sample is replicated <code>n</code> times. The maximum dimension length of
+the convex hull around the sample point cloud allows to remove samples for
+a given <code>cutoff</code> value.</p>
 <p>According to Peebles and Schachner (2012), "[this] point removal procedure
- [results in] a reduced dataset where the position of individuals within the
- CA are highly stable and which produces an ordering consistent with the
- assumptions of frequency seriation."</p>
+[results in] a reduced dataset where the position of individuals within the
+CA are highly stable and which produces an ordering consistent with the
+assumptions of frequency seriation."</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Desachy, B. (2004). Le sériographe EPPM: un outil informatisé de sériation
- graphique pour tableaux de comptages. <em>Revue archéologique de
- Picardie</em>, 3(1), 39-56. doi: <a href='https://doi.org/10.3406/pica.2004.2396'>10.3406/pica.2004.2396</a>
+graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
+3(1), 39-56. doi: <a href='https://doi.org/10.3406/pica.2004.2396'>10.3406/pica.2004.2396</a>
 .</p>
 <p>Dunnell, R. C. (1970). Seriation Method and Its Evaluation. <em>American
- Antiquity</em>, 35(03), 305-319. doi: <a href='https://doi.org/10.2307/278341'>10.2307/278341</a>
+Antiquity</em>, 35(03), 305-319. doi: <a href='https://doi.org/10.2307/278341'>10.2307/278341</a>
 .</p>
 <p>Ihm, P. (2005). A Contribution to the History of Seriation in Archaeology.
- In C. Weihs &amp; W. Gaul (Eds.), <em>Classification: The Ubiquitous
- Challenge</em>. Berlin Heidelberg: Springer, p. 307-316.
- doi: <a href='https://doi.org/10.1007/3-540-28084-7_34'>10.1007/3-540-28084-7_34</a>
+In C. Weihs &amp; W. Gaul (Eds.), <em>Classification: The Ubiquitous
+Challenge</em>. Berlin Heidelberg: Springer, p. 307-316.
+doi: <a href='https://doi.org/10.1007/3-540-28084-7_34'>10.1007/3-540-28084-7_34</a>
 .</p>
 <p>Peeples, M. A., &amp; Schachner, G. (2012). Refining correspondence
- analysis-based ceramic seriation of regional data sets. <em>Journal of
- Archaeological Science</em>, 39(8), 2818-2827.
- doi: <a href='https://doi.org/10.1016/j.jas.2012.04.040'>10.1016/j.jas.2012.04.040</a>
+analysis-based ceramic seriation of regional data sets. <em>Journal of
+Archaeological Science</em>, 39(8), 2818-2827.
+doi: <a href='https://doi.org/10.1016/j.jas.2012.04.040'>10.1016/j.jas.2012.04.040</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>refine_seriation, <a href='http://dimensio.tesselle.org/reference/ca.html'>ca</a></p></div>
+    <div class='dont-index'><p><code><a href='http://dimensio.tesselle.org/reference/ca.html'>dimensio::ca()</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

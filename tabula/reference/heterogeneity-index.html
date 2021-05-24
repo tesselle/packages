@@ -71,12 +71,18 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Heterogeneity and Evenness — heterogeneity-index" />
-<meta property="og:description" content="index_heterogeneity returns an heterogeneity or dominance index.
-index_evenness returns an evenness measure.
-bootstrap_* and jackknife_* perform bootstrap/jackknife
- resampling." />
+<meta property="og:description" content="
+
+index_heterogeneity() returns an heterogeneity or dominance index.
+index_evenness() returns an evenness measure.
+bootstrap_*() and jackknife_*() perform bootstrap/jackknife
+resampling.
+
+" />
 <meta property="og:image" content="https://tabula.tesselle.org/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -115,7 +121,7 @@ bootstrap_* and jackknife_* perform bootstrap/jackknife
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -186,10 +192,14 @@ bootstrap_* and jackknife_* perform bootstrap/jackknife
     </div>
 
     <div class="ref-description">
-    <p><code>index_heterogeneity</code> returns an heterogeneity or dominance index.</p>
-<p><code>index_evenness</code> returns an evenness measure.</p>
-<p><code>bootstrap_*</code> and <code>jackknife_*</code> perform bootstrap/jackknife
- resampling.</p>
+    
+<ul>
+<li><p><code>index_heterogeneity()</code> returns an heterogeneity or dominance index.</p></li>
+<li><p><code>index_evenness()</code> returns an evenness measure.</p></li>
+<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> perform bootstrap/jackknife
+resampling.</p></li>
+</ul>
+
     </div>
 
     <pre class="usage"><span class='fu'>index_heterogeneity</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
@@ -284,7 +294,7 @@ bootstrap_* and jackknife_* perform bootstrap/jackknife
     <tr>
       <th>object</th>
       <td><p>A \(m \times p\) matrix of count data (typically
-a CountMatrix object).</p></td>
+a <code>CountMatrix</code> object).</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -292,20 +302,19 @@ a CountMatrix object).</p></td>
     </tr>
     <tr>
       <th>method</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the index to be
-computed (see details). Any unambiguous substring can be given.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the index to be computed
+(see details). Any unambiguous substring can be given.</p></td>
     </tr>
     <tr>
       <th>quantiles</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should sample quantiles
-be used as confidence interval? If <code>TRUE</code> (the default),
-sample quantiles are used as described in Kintigh (1989), else quantiles of
-the normal distribution are used.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should sample quantiles be used as
+confidence interval? If <code>TRUE</code> (the default), sample quantiles are used as
+described in Kintigh (1989), else quantiles of the normal distribution are
+used.</p></td>
     </tr>
     <tr>
       <th>level</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the
-confidence level.</p></td>
+      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the confidence level.</p></td>
     </tr>
     <tr>
       <th>step</th>
@@ -319,119 +328,121 @@ replications.</p></td>
     </tr>
     <tr>
       <th>progress</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a progress bar be
-displayed?</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a progress bar be displayed?</p></td>
     </tr>
     <tr>
       <th>probs</th>
       <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector of probabilities with values in
-\([0,1]\) (see <code><a href='https://rdrr.io/r/stats/quantile.html'>quantile</a></code>).</p></td>
+\([0,1]\) (see <code><a href='https://rdrr.io/r/stats/quantile.html'>stats::quantile()</a></code>).</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>index_heterogeneity</code>, <code>index_evenness</code> and
- <code>simulate_evenness</code> return a <a href='DiversityIndex.html'>DiversityIndex</a> object.</p>
-<p><code>bootstrap_*</code> and <code>jackknife_*</code> return a <code>data.frame</code>.</p>
+    
+<ul>
+<li><p><code>index_heterogeneity()</code>, <code>index_evenness()</code> and <code>simulate_evenness()</code>
+return a <code><a href='DiversityIndex.html'>DiversityIndex</a></code> object.</p></li>
+<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> return a <code><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></code>.</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p><em>Diversity</em> measurement assumes that all individuals in a specific
- taxa are equivalent and that all types are equally different from each
- other (Peet 1974). A measure of diversity can be achieved by using indices
- built on the relative abundance of taxa. These indices (sometimes referred
- to as non-parametric indices) benefit from not making assumptions about the
- underlying distribution of taxa abundance: they only take relative
- abundances of the species that are present and species richness into
- account. Peet (1974) refers to them as indices of <em>heterogeneity</em>.</p>
+taxa are equivalent and that all types are equally different from each
+other (Peet 1974). A measure of diversity can be achieved by using indices
+built on the relative abundance of taxa. These indices (sometimes referred
+to as non-parametric indices) benefit from not making assumptions about the
+underlying distribution of taxa abundance: they only take relative
+abundances of the species that are present and species richness into
+account. Peet (1974) refers to them as indices of <em>heterogeneity</em>.</p>
 <p>Diversity indices focus on one aspect of the taxa abundance and emphasize
- either <em>richness</em> (weighting towards uncommon taxa)
- or dominance (weighting towards abundant taxa; Magurran 1988).</p>
-<p><em>Evenness</em> is a measure of how evenly individuals are distributed
- across the sample.</p>
+either <em>richness</em> (weighting towards uncommon taxa) or dominance (weighting
+towards abundant taxa; Magurran 1988).</p>
+<p><em>Evenness</em> is a measure of how evenly individuals are distributed across the
+sample.</p>
 <p>The following heterogeneity index and corresponding evenness measures
- are available (see Magurran 1988 for details):</p><dl>
-  <dt>berger</dt><dd><p>Berger-Parker dominance index. The Berger-Parker index
-   expresses the proportional importance of the most abundant type. This
-   metric is highly biased by sample size and richness, moreover it does not
-   make use of all the information available from sample.</p></dd>
-  <dt>brillouin</dt><dd><p>Brillouin diversity index. The Brillouin index describes a
-   known collection: it does not assume random sampling in an infinite
-   population. Pielou (1975) and Laxton (1978) argues for the use of the
-   Brillouin index in all circumstances, especially in preference to the
-   Shannon index.</p></dd>
-  <dt>mcintosh</dt><dd><p>McIntosh dominance index. The McIntosh index expresses the
-   heterogeneity of a sample in geometric terms. It describes the sample as a
-   point of a <code>S</code>-dimensional hypervolume and uses the Euclidean
-   distance of this point from the origin.</p></dd>
-  <dt>shannon</dt><dd><p>Shannon-Wiener diversity index. The Shannon index assumes
-   that individuals are randomly sampled from an infinite population and that
-   all taxa are represented in the sample (it does not reflect the
-   sample size). The main source of error arises from the failure to include
-   all taxa in the sample: this error increases as the proportion of species
-   discovered in the sample declines (Peet 1974, Magurran 1988). The
-   maximum likelihood estimator (MLE) is used for the relative abundance,
-   this is known to be negatively biased by sample size.</p></dd>
-  <dt>simpson</dt><dd><p>Simpson dominance index for finite sample. The Simpson index
-   expresses the probability that two individuals randomly picked from a
-   finite sample belong to two different types. It can be interpreted as the
-   weighted mean of the proportional abundances. This metric is a true
-   probability value, it ranges from <code>0</code> (perfectly uneven) to <code>1</code>
-   (perfectly even).</p></dd>
- 
+are available (see Magurran 1988 for details):</p><dl>
+<dt><code>berger</code></dt><dd><p>Berger-Parker dominance index. The Berger-Parker index
+expresses the proportional importance of the most abundant type. This
+metric is highly biased by sample size and richness, moreover it does not
+make use of all the information available from sample.</p></dd>
+<dt><code>brillouin</code></dt><dd><p>Brillouin diversity index. The Brillouin index describes
+a known collection: it does not assume random sampling in an infinite
+population. Pielou (1975) and Laxton (1978) argues for the use of the
+Brillouin index in all circumstances, especially in preference to the
+Shannon index.</p></dd>
+<dt><code>mcintosh</code></dt><dd><p>McIntosh dominance index. The McIntosh index expresses
+the heterogeneity of a sample in geometric terms. It describes the sample
+as a point of a \(S\)-dimensional hypervolume and uses the Euclidean
+distance of this point from the origin.</p></dd>
+<dt><code>shannon</code></dt><dd><p>Shannon-Wiener diversity index. The Shannon index assumes
+that individuals are randomly sampled from an infinite population and that
+all taxa are represented in the sample (it does not reflect the
+sample size). The main source of error arises from the failure to include
+all taxa in the sample: this error increases as the proportion of species
+discovered in the sample declines (Peet 1974, Magurran 1988). The
+maximum likelihood estimator (MLE) is used for the relative abundance,
+this is known to be negatively biased by sample size.</p></dd>
+<dt><code>simpson</code></dt><dd><p>Simpson dominance index for finite sample. The Simpson
+index expresses the probability that two individuals randomly picked from
+a finite sample belong to two different types. It can be interpreted as
+the weighted mean of the proportional abundances. This metric is a true
+probability value, it ranges from \(0\) (perfectly uneven) to \(1\)
+(perfectly even).</p></dd>
+
 </dl>
 
-<p>The <code>berger</code>, <code>mcintosh</code> and <code>simpson</code> methods return a
- <em>dominance</em> index, not the reciprocal or inverse form usually adopted,
- so that an increase in the value of the index accompanies a decrease in
- diversity.</p>
+<p>The <code>berger</code>, <code>mcintosh</code> and <code>simpson</code> methods return a <em>dominance</em> index,
+not the reciprocal or inverse form usually adopted, so that an increase in
+the value of the index accompanies a decrease in diversity.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Ramanujan approximation is used for \(x!\) computation if \(x &gt; 170\).</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Berger, W. H. &amp; Parker, F. L. (1970). Diversity of Planktonic Foraminifera
- in Deep-Sea Sediments. <em>Science</em>, 168(3937), 1345-1347.
- doi: <a href='https://doi.org/10.1126/science.168.3937.1345'>10.1126/science.168.3937.1345</a>
+in Deep-Sea Sediments. <em>Science</em>, 168(3937), 1345-1347.
+doi: <a href='https://doi.org/10.1126/science.168.3937.1345'>10.1126/science.168.3937.1345</a>
 .</p>
 <p>Brillouin, L. (1956). <em>Science and information theory</em>. New York:
- Academic Press.</p>
+Academic Press.</p>
 <p>Kintigh, K. W. (1984). Measuring Archaeological Diversity by Comparison
- with Simulated Assemblages. <em>American Antiquity</em>, 49(1), 44-54.
- doi: <a href='https://doi.org/10.2307/280511'>10.2307/280511</a>
+with Simulated Assemblages. <em>American Antiquity</em>, 49(1), 44-54.
+doi: <a href='https://doi.org/10.2307/280511'>10.2307/280511</a>
 .</p>
 <p>Kintigh, K. W. (1989). Sample Size, Significance, and Measures of
- Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
- in Archaeology</em>. New Directions in Archaeology. Cambridge:
- Cambridge University Press, p. 25-36.</p>
+Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
+in Archaeology</em>. New Directions in Archaeology. Cambridge:
+Cambridge University Press, p. 25-36.</p>
 <p>Laxton, R. R. (1978). The measure of diversity. <em>Journal of Theoretical
- Biology</em>, 70(1), 51-67.
- doi: <a href='https://doi.org/10.1016/0022-5193(78)90302-8'>10.1016/0022-5193(78)90302-8</a>
+Biology</em>, 70(1), 51-67.
+doi: <a href='https://doi.org/10.1016/0022-5193(78)90302-8'>10.1016/0022-5193(78)90302-8</a>
 .</p>
 <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
- Princeton, NJ: Princeton University Press.
- doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press.
+doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
 .</p>
 <p>McIntosh, R. P. (1967). An Index of Diversity and the Relation of Certain
- Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
- doi: <a href='https://doi.org/10.2307/1932674'>10.2307/1932674</a>
+Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
+doi: <a href='https://doi.org/10.2307/1932674'>10.2307/1932674</a>
 .</p>
-<p>Peet, R. K. (1974). The Measurement of Species Diversity. <em>Annual
- Review of Ecology and Systematics</em>, 5(1), 285-307.
- doi: <a href='https://doi.org/10.1146/annurev.es.05.110174.001441'>10.1146/annurev.es.05.110174.001441</a>
+<p>Peet, R. K. (1974). The Measurement of Species Diversity. <em>Annual Review of
+Ecology and Systematics</em>, 5(1), 285-307.
+doi: <a href='https://doi.org/10.1146/annurev.es.05.110174.001441'>10.1146/annurev.es.05.110174.001441</a>
 .</p>
 <p>Pielou, E. C. (1975). <em>Ecological Diversity</em>. New York: Wiley.
- doi: <a href='https://doi.org/10.4319/lo.1977.22.1.0174b'>10.4319/lo.1977.22.1.0174b</a></p>
+doi: <a href='https://doi.org/10.4319/lo.1977.22.1.0174b'>10.4319/lo.1977.22.1.0174b</a></p>
 <p>Shannon, C. E. (1948). A Mathematical Theory of Communication. <em>The
- Bell System Technical Journal</em>, 27, 379-423.
- doi: <a href='https://doi.org/10.1002/j.1538-7305.1948.tb01338.x'>10.1002/j.1538-7305.1948.tb01338.x</a>
+Bell System Technical Journal</em>, 27, 379-423.
+doi: <a href='https://doi.org/10.1002/j.1538-7305.1948.tb01338.x'>10.1002/j.1538-7305.1948.tb01338.x</a>
 .</p>
 <p>Simpson, E. H. (1949). Measurement of Diversity. <em>Nature</em>, 163(4148),
- 688-688. doi: <a href='https://doi.org/10.1038/163688a0'>10.1038/163688a0</a>
+688-688. doi: <a href='https://doi.org/10.1038/163688a0'>10.1038/163688a0</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='plot_diversity.html'>plot_diversity</a>, <a href='similarity.html'>similarity</a>, <a href='turnover-index.html'>turnover</a></p>
+    <div class='dont-index'><p><code><a href='plot_diversity.html'>plot_diversity()</a></code>, <code><a href='similarity.html'>similarity()</a></code>, <code><a href='turnover-index.html'>turnover()</a></code></p>
 <p>Other diversity: 
 <code><a href='richness-index.html'>richness-index</a></code>,
 <code><a href='similarity.html'>similarity</a>()</code>,
@@ -478,18 +489,18 @@ displayed?</p></td>
 <span class='co'>## Bootstrap resampling</span>
 <span class='op'>(</span><span class='va'>boot_h</span> <span class='op'>&lt;-</span> <span class='fu'>bootstrap_heterogeneity</span><span class='op'>(</span><span class='va'>chevelon</span>, method <span class='op'>=</span> <span class='st'>"shannon"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;             min      mean       max        Q5       Q95
-#&gt; P610s 0.6559757 1.4217738 1.9085353 1.0547209 1.7671950
-#&gt; P610e 0.0000000 0.9829383 1.3862944 0.5623351 1.3208883
-#&gt; P625  0.0000000 0.5266198 0.6931472 0.0000000 0.6931472
+#&gt; P610s 0.6559757 1.4361161 1.9085353 1.0906875 1.7347645
+#&gt; P610e 0.0000000 1.0079936 1.3862944 0.5623351 1.3208883
+#&gt; P625  0.0000000 0.5377102 0.6931472 0.0000000 0.6931472
 #&gt; P630  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
 #&gt; P307  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
-#&gt; P631  0.4505612 1.4751503 1.9072840 1.0975595 1.8200760
-#&gt; P623  0.0000000 0.6552635 1.0986123 0.0000000 1.0986123
-#&gt; P624  1.0789922 1.6280739 1.9085353 1.3337360 1.8711604
-#&gt; P626s 0.9746702 1.5997919 1.9056849 1.3698324 1.8005937
-#&gt; P626e 1.6536757 1.8740800 2.0336751 1.7634515 1.9755950
-#&gt; P627  0.0000000 0.7066917 1.0397208 0.0000000 1.0397208
-#&gt; P628  0.8239592 1.5349087 1.9072840 1.1988493 1.8200760</div><div class='input'>
+#&gt; P631  0.5660857 1.4562427 1.9072840 1.0751393 1.7503357
+#&gt; P623  0.0000000 0.6692668 1.0986123 0.0000000 1.0986123
+#&gt; P624  0.8953327 1.6215123 1.9085353 1.3576962 1.8468891
+#&gt; P626s 1.1439185 1.5921019 1.9056849 1.3698324 1.7838582
+#&gt; P626e 1.6095505 1.8735682 2.0536247 1.7594879 1.9751450
+#&gt; P627  0.0000000 0.7154290 1.0397208 0.0000000 1.0397208
+#&gt; P628  0.8876943 1.5335935 1.9072840 1.1988493 1.8636800</div><div class='input'>
 <span class='co'>## Jackknife resampling</span>
 <span class='op'>(</span><span class='va'>jack_h</span> <span class='op'>&lt;-</span> <span class='fu'>jackknife_heterogeneity</span><span class='op'>(</span><span class='va'>chevelon</span>, method <span class='op'>=</span> <span class='st'>"shannon"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;            mean       bias     error

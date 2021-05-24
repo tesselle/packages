@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Diversity Test — test_diversity" />
 <meta property="og:description" content="Compares Shannon diversity between samples." />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -205,27 +207,26 @@
     <tr>
       <th>adjust</th>
       <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the method for
-adjusting \(p\) values (see <code><a href='https://rdrr.io/r/stats/p.adjust.html'>p.adjust</a></code>).</p></td>
+adjusting \(p\) values (see <code><a href='https://rdrr.io/r/stats/p.adjust.html'>stats::p.adjust()</a></code>).</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> matrix.</p>
+    <p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> <code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This test produces two sided pairwise comparisons: it returns a matrix of
- adjusted \(p\) values.</p>
+adjusted \(p\) values.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
- Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other statistics: 
-<code><a href='independance.html'>independance</a></code>,
-<code><a href='test_fit.html'>test_fit</a>()</code></p></div>
+<code><a href='independance.html'>independance</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

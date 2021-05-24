@@ -3,10 +3,9 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   bibliography: bibliography.html
-  dating: dating.html
   diversity: diversity.html
   seriation: seriation.html
-last_built: 2021-05-09T14:40Z
+last_built: 2021-05-24T19:30Z
 urls:
   reference: https://tabula.tesselle.org/reference
   article: https://tabula.tesselle.org/articles

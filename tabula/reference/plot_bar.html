@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Bar Plot — plot_bar" />
 <meta property="og:description" content="Plots a Bertin, Ford (battleship curve) or Dice-Leraas diagram." />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -212,70 +214,68 @@
     </tr>
     <tr>
       <th>threshold</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/function.html'>function</a></code> that takes a numeric vector as
-argument and returns a numeric threshold value (see below).
-If <code>NULL</code> (the default), no threshold is computed.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/function.html'>function</a></code> that takes a numeric vector as argument and
+returns a numeric threshold value (see below). If <code>NULL</code> (the default), no
+threshold is computed.</p></td>
     </tr>
     <tr>
       <th>scale</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/function.html'>function</a></code> used to scale each variable,
-that takes a numeric vector as argument and returns a numeric vector.
-If <code>NULL</code> (the default), no scaling is performed.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/function.html'>function</a></code> used to scale each variable, that takes a numeric
+vector as argument and returns a numeric vector. If <code>NULL</code> (the default), no
+scaling is performed.</p></td>
     </tr>
     <tr>
       <th>EPPM</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the EPPM be drawn (see
-below)?</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the EPPM be drawn (see below)?</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></code> object.</p>
+    <p>A <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>If <code>EPPM</code> is <code>TRUE</code> and if a relative abundance is greater than
- the mean percentage of the type, the exceeding part is highlighted.</p>
+the mean percentage of the type, the exceeding part is highlighted.</p>
     <h2 class="hasAnchor" id="bertin-matrix"><a class="anchor" href="#bertin-matrix"></a>Bertin Matrix</h2>
 
     
 
 <p>As de Falguerolles <em>et al.</em> (1997) points out:
- "In abstract terms, a Bertin matrix is a matrix
- of  displays. [...] To fix ideas, think of a data matrix, variable by case,
- with real valued variables. For each variable, draw a bar chart of variable
- value by case. High-light all bars representing a value above some sample
- threshold for that variable."</p>
+"In abstract terms, a Bertin matrix is a matrix
+of  displays. <a href='https://rdrr.io/r/base/dots.html'>...</a> To fix ideas, think of a data matrix, variable by case,
+with real valued variables. For each variable, draw a bar chart of variable
+value by case. High-light all bars representing a value above some sample
+threshold for that variable."</p>
     <h2 class="hasAnchor" id="eppm"><a class="anchor" href="#eppm"></a>EPPM</h2>
 
     
 
 <p>This positive difference from the column mean percentage (in french "écart
- positif au pourcentage moyen", EPPM) represents a deviation from the
- situation of statistical independence. As independence can be interpreted as
- the absence of relationships between types and the chronological order of
- the assemblages, <code>EPPM</code> is a useful graphical tool to explore
- significance of relationship between rows and columns related to
- seriation (Desachy 2004).</p>
+positif au pourcentage moyen", EPPM) represents a deviation from the
+situation of statistical independence. As independence can be interpreted as
+the absence of relationships between types and the chronological order of
+the assemblages, <code>EPPM</code> is a useful graphical tool to explore significance
+of relationship between rows and columns related to seriation (Desachy
+2004).</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Bertin, J. (1977). <em>La graphique et le traitement graphique de
- l'information</em>. Paris: Flammarion. Nouvelle Bibliothèque Scientifique.</p>
+l'information</em>. Paris: Flammarion. Nouvelle Bibliothèque Scientifique.</p>
 <p>de Falguerolles, A., Friedrich, F. &amp; Sawitzki, G. (1997). A Tribute to J.
- Bertin's Graphical Data Analysis. In W. Badilla &amp; F. Faulbaum (eds.),
- <em>SoftStat '97: Advances in Statistical Software 6</em>. Stuttgart: Lucius
- &amp; Lucius, p. 11-20.</p>
+Bertin's Graphical Data Analysis. In W. Badilla &amp; F. Faulbaum (eds.),
+<em>SoftStat '97: Advances in Statistical Software 6</em>. Stuttgart: Lucius
+&amp; Lucius, p. 11-20.</p>
 <p>Desachy, B. (2004). Le sériographe EPPM: un outil informatisé de sériation
- graphique pour tableaux de comptages. <em>Revue archéologique de
- Picardie</em>, 3(1), 39-56. doi: <a href='https://doi.org/10.3406/pica.2004.2396'>10.3406/pica.2004.2396</a>
+graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
+3(1), 39-56. doi: <a href='https://doi.org/10.3406/pica.2004.2396'>10.3406/pica.2004.2396</a>
 .</p>
 <p>Ford, J. A. (1962). <em>A quantitative method for deriving cultural
- chronology</em>. Washington, DC: Pan American Union. Technical manual 1.</p>
+chronology</em>. Washington, DC: Pan American Union. Technical manual 1.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='independance.html'>eppm</a></p>
+    <div class='dont-index'><p><code><a href='independance.html'>eppm()</a></code></p>
 <p>Other plot: 
-<code><a href='plot_date.html'>plot_date</a>()</code>,
 <code><a href='plot_diversity.html'>plot_diversity</a></code>,
 <code><a href='plot_line.html'>plot_line</a></code>,
 <code><a href='plot_matrix.html'>plot_matrix</a></code>,

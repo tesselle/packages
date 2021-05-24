@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Independance — independance" />
 <meta property="og:description" content="Independance" />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -201,7 +203,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>object</th>
-      <td><p>A CountMatrix object.</p></td>
+      <td><p>A <code>CountMatrix</code> object.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -211,7 +213,7 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> matrix.</p>
+    <p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> <code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Computes for each cell of a numeric matrix one of the following statistic.</p>
@@ -220,36 +222,35 @@
     
 
 <p>This positive difference from the column mean percentage (in french "écart
- positif au pourcentage moyen", EPPM) represents a deviation from the
- situation of statistical independence. As independence can be interpreted as
- the absence of relationships between types and the chronological order of
- the assemblages, <code>EPPM</code> is a useful graphical tool to explore
- significance of relationship between rows and columns related to
- seriation (Desachy 2004).</p>
+positif au pourcentage moyen", EPPM) represents a deviation from the
+situation of statistical independence. As independence can be interpreted as
+the absence of relationships between types and the chronological order of
+the assemblages, <code>EPPM</code> is a useful graphical tool to explore significance
+of relationship between rows and columns related to seriation (Desachy
+2004).</p>
     <h2 class="hasAnchor" id="pvi"><a class="anchor" href="#pvi"></a>PVI</h2>
 
     
 
 <p><code>PVI</code> is calculated for each cell as the percentage to the column
- theoretical independence value: <code>PVI</code> greater than \(1\) represent
- positive deviations from the independence, whereas <code>PVI</code> smaller than
- \(1\) represent negative deviations (Desachy 2004).</p>
+theoretical independence value: <code>PVI</code> greater than \(1\) represent
+positive deviations from the independence, whereas <code>PVI</code> smaller than
+\(1\) represent negative deviations (Desachy 2004).</p>
 <p>The <code>PVI</code> matrix allows to explore deviations from independence
- (an intuitive graphical approach to \(\chi^2\)),
- in such a way that a high-contrast matrix has quite significant deviations,
- with a low risk of being due to randomness (Desachy 2004).</p>
+(an intuitive graphical approach to \(\chi^2\)),
+in such a way that a high-contrast matrix has quite significant deviations,
+with a low risk of being due to randomness (Desachy 2004).</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Desachy, B. (2004). Le sériographe EPPM: un outil informatisé de sériation
- graphique pour tableaux de comptages. <em>Revue archéologique de
- Picardie</em>, 3(1), 39-56. doi: <a href='https://doi.org/10.3406/pica.2004.2396'>10.3406/pica.2004.2396</a>
+graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
+3(1), 39-56. doi: <a href='https://doi.org/10.3406/pica.2004.2396'>10.3406/pica.2004.2396</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='plot_bar.html'>plot_ford</a>, <a href='plot_matrix.html'>plot_heatmap</a>, <a href='seriation.html'>seriate_rank</a></p>
+    <div class='dont-index'><p><code><a href='plot_bar.html'>plot_ford()</a></code>, <code><a href='plot_matrix.html'>plot_heatmap()</a></code>, <code><a href='seriation.html'>seriate_rank()</a></code></p>
 <p>Other statistics: 
-<code><a href='test_diversity.html'>test_diversity</a>()</code>,
-<code><a href='test_fit.html'>test_fit</a>()</code></p></div>
+<code><a href='test_diversity.html'>test_diversity</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

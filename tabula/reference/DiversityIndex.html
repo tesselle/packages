@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Diversity Index — DiversityIndex" />
 <meta property="og:description" content="An S4 class to represent a diversity measure." />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -199,8 +201,8 @@
 
 <dt><code>size</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the sample sizes.</p></dd>
 
-<dt><code>simulation</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> matrix giving the diversity
-measures for the simulated assemblage.</p></dd>
+<dt><code>simulation</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> matrix giving the diversity measures for the
+simulated assemblage.</p></dd>
 
 <dt><code>method</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the method used.</p></dd>
 
@@ -210,18 +212,15 @@ measures for the simulated assemblage.</p></dd>
     
 
 <p>In the code snippets below, <code>x</code> is a <code>DiversityIndex</code> object.</p><dl>
-  <dt><code>x[[i]]</code></dt><dd><p>Extracts informations from a slot selected by
-  subscript <code>i</code>. <code>i</code> is a length-one <code><a href='https://rdrr.io/r/base/character.html'>character</a></code>
-  vector. Returns the corresponding slot values.</p></dd>
- 
+<dt><code>x[[i]]</code></dt><dd><p>Extracts information from a slot selected by subscript <code>i</code>.
+<code>i</code> is a length-one <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector. Returns the corresponding slot
+values.</p></dd>
+
 </dl>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other class: 
-<code><a href='DateEvent-class.html'>DateEvent-class</a></code>,
-<code><a href='DateMCD-class.html'>DateMCD-class</a></code>,
-<code><a href='IncrementTest-class.html'>IncrementTest-class</a></code>,
 <code><a href='PermutationOrder-class.html'>PermutationOrder-class</a></code>,
 <code><a href='RefineCA-class.html'>RefineCA-class</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>

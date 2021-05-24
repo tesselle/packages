@@ -18,8 +18,7 @@
       "<link id=\"css\" rel=\"stylesheet\" href=\"https://bootswatch.com/3/flatly/bootstrap.css\" onload=\"document.documentElement.style.display = ''\">"
     );
   }
-</script><title>Analysis, Seriation and Visualization of Archaeological
-    Count Data • tabula</title>
+</script><title>Analysis, Seriation and Visualization of Archaeological Count Data • tabula</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -35,19 +34,16 @@
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Analysis, Seriation and Visualization of Archaeological
-    Count Data">
-<meta property="og:description" content="An easy way to examine archaeological count data. This package 
-    provides a convenient and reproducible toolkit for relative and absolute 
-    dating and analysis of (chronological) patterns. It includes functions for 
-    matrix seriation (reciprocal ranking, CA-based seriation), chronological 
-    modeling and dating of archaeological assemblages and/or objects. 
-    Beyond these, the package provides several tests and measures of diversity: 
-    heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), 
-    richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), 
-    turnover and similarity (Brainerd-Robinson, etc.). 
-    The package make it easy to visualize count data and statistical thresholds: 
-    rank vs abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.">
+<script src="pkgdown.js"></script><script src="extra.js"></script><meta property="og:title" content="Analysis, Seriation and Visualization of Archaeological Count Data">
+<meta property="og:description" content="An easy way to examine archaeological count data. This
+    package provides a convenient and reproducible toolkit for relative
+    dating by matrix seriation (reciprocal ranking, CA-based seriation).
+    It also provides several tests and measures of diversity:
+    heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.),
+    richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and
+    similarity (Brainerd-Robinson, etc.). The package make it easy to
+    visualize count data and statistical thresholds: rank vs abundance
+    plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.">
 <meta property="og:image" content="https://tabula.tesselle.org/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
@@ -70,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -145,7 +141,7 @@
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
-<p>An easy way to examine archaeological count data. <strong>tabula</strong> provides a convenient and reproducible toolkit for relative and absolute dating and analysis of (chronological) patterns. It includes functions for matrix seriation (reciprocal ranking, CA-based seriation), chronological modeling and dating of archaeological assemblages and/or objects. Beyond these, the package provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). The package make it easy to visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.</p>
+<p>An easy way to examine archaeological count data. <strong>tabula</strong> provides a convenient and reproducible toolkit for relative dating by matrix seriation (reciprocal ranking, CA-based seriation). This package provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). The package make it easy to visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#&gt; </span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#&gt; To cite tabula in publications use:</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co">#&gt; </span></span>
@@ -182,7 +178,7 @@
 <a href="#usage" class="anchor"></a>Usage</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Load packages</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tabula.tesselle.org">tabula</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula">tabula</a></span><span class="op">)</span>
 
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://khroma.tesselle.org">khroma</a></span><span class="op">)</span> <span class="co"># Color scales</span>
@@ -250,39 +246,11 @@
   <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TRUE"</span> <span class="op">=</span> <span class="st">"black"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-permute-incidence-1.png"><img src="reference/figures/README-permute-incidence-2.png"></p>
 </div>
-<div id="dating" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dating" class="anchor"></a>Dating</h3>
-<p>This package provides an implementation of the chronological modeling method developed by Bellanger and Husi (<a href="https://doi.org/10.1016/j.jas.2011.06.031">2012</a>). This method is slightly modified here and allows the construction of different probability density curves of archaeological assemblage dates (<em>event</em>, <em>activity</em> and <em>tempo</em>). Note that this implementation is experimental (see <code><a href="articles/dating.html">vignette("dating")</a></code>).</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Coerce dataset to abundance (count) matrix</span>
-<span class="va">zuni_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://arkhe.tesselle.org/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span>
-<span class="co">## Assume that some assemblages are reliably dated (this is NOT a real example)</span>
-<span class="co">## The names of the vector entries must match the names of the assemblages</span>
-<span class="va">zuni_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  LZ0569 <span class="op">=</span> <span class="fl">1097</span>, LZ0279 <span class="op">=</span> <span class="fl">1119</span>, CS16 <span class="op">=</span> <span class="fl">1328</span>, LZ0066 <span class="op">=</span> <span class="fl">1111</span>,
-  LZ0852 <span class="op">=</span> <span class="fl">1216</span>, LZ1209 <span class="op">=</span> <span class="fl">1251</span>, CS144 <span class="op">=</span> <span class="fl">1262</span>, LZ0563 <span class="op">=</span> <span class="fl">1206</span>,
-  LZ0329 <span class="op">=</span> <span class="fl">1076</span>, LZ0005Q <span class="op">=</span> <span class="fl">859</span>, LZ0322 <span class="op">=</span> <span class="fl">1109</span>, LZ0067 <span class="op">=</span> <span class="fl">863</span>,
-  LZ0578 <span class="op">=</span> <span class="fl">1180</span>, LZ0227 <span class="op">=</span> <span class="fl">1104</span>, LZ0610 <span class="op">=</span> <span class="fl">1074</span>
-<span class="op">)</span>
-
-<span class="co">## Model the event date for each assemblage</span>
-<span class="va">event</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/event.html">date_event</a></span><span class="op">(</span><span class="va">zuni_counts</span>, dates <span class="op">=</span> <span class="va">zuni_dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span><span class="op">)</span>
-
-<span class="co">## Plot activity and tempo distributions</span>
-<span class="fu"><a href="reference/plot_date.html">plot_date</a></span><span class="op">(</span><span class="va">event</span>, type <span class="op">=</span> <span class="st">"activity"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Activity plot"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu"><a href="reference/plot_date.html">plot_date</a></span><span class="op">(</span><span class="va">event</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Tempo plot"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-date-1.png"><img src="reference/figures/README-date-2.png"></p>
-</div>
 <div id="diversity" class="section level3">
 <h3 class="hasAnchor">
 <a href="#diversity" class="anchor"></a>Diversity</h3>
 <p><em>Diversity</em> can be measured according to several indices (referred to as indices of <em>heterogeneity</em> – see <code><a href="articles/diversity.html">vignette("diversity")</a></code>). Corresponding <em>evenness</em> (i.e. a measure of how evenly individuals are distributed across the sample) can also be computed, as well as <em>richness</em> and <em>rarefaction</em>.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mississippi</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://arkhe.tesselle.org/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="reference/heterogeneity-index.html">index_heterogeneity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
@@ -308,7 +276,7 @@
 <span class="co">#&gt; Holden Lake  360 0.7307620</span>
 <span class="co">#&gt; 13-N-15     1300 1.1270126</span>
 <span class="co">#&gt; 12-N-3       983 1.0270291</span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span>
 <span class="va">chevelon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://arkhe.tesselle.org/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">chevelon</span><span class="op">)</span>
 
@@ -324,7 +292,7 @@
 <p><img src="reference/figures/README-sample-size-1.png"><img src="reference/figures/README-sample-size-2.png"></p>
 <p>Several methods can be used to ascertain the degree of <em>turnover</em> in taxa composition along a gradient on qualitative (presence/absence) data. It assumes that the order of the matrix rows (from <em>1</em> to <em>n</em>) follows the progression along the gradient/transect.</p>
 <p>Diversity can also be measured by addressing <em>similarity</em> between pairs of sites:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Calculate the Brainerd-Robinson index</span>
 <span class="co">## Plot the similarity matrix</span>
 <span class="va">mississippi</span> <span class="op">%&gt;%</span>

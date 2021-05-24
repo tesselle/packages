@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Turnover — turnover-index" />
 <meta property="og:description" content="Returns the degree of turnover in taxa composition along a gradient or
@@ -113,7 +115,7 @@ transect." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -231,41 +233,42 @@ simplified to a matrix?</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>If <code>simplify</code> is <code>FALSE</code>, returns a list (default), else returns
- a matrix.</p>
+    <p>If <code>simplify</code> is <code>FALSE</code>, returns a <code><a href='https://rdrr.io/r/base/list.html'>list</a></code> (default), else returns a
+<code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The following methods can be used to ascertain the degree of <em>turnover</em>
- in taxa composition along a gradient (\(\beta\)-diversity) on qualitative
- (presence/absence) data. This assumes that the order of the matrix rows
- (from 1 to \(n\)) follows the progression along the gradient/transect.</p>
-<p></p><dl>
-  <dt>whittaker</dt><dd><p>Whittaker measure.</p></dd>
-  <dt>cody</dt><dd><p>Cody measure.</p></dd>
-  <dt>routledge1</dt><dd><p>Routledge first measure.</p></dd>
-  <dt>routledge2</dt><dd><p>Routledge second measure.</p></dd>
-  <dt>routledge3</dt><dd><p>Routledge third measure. This is the exponential form of
-  the second measure.</p></dd>
-  <dt>wilson</dt><dd><p>Wilson measure.</p></dd>
- 
+in taxa composition along a gradient (\(\beta\)-diversity) on qualitative
+(presence/absence) data. This assumes that the order of the matrix rows
+(from \(1\) to \(n\)) follows the progression along the
+gradient/transect.</p>
+<dl>
+<dt><code>whittaker</code></dt><dd><p>Whittaker measure.</p></dd>
+<dt><code>cody</code></dt><dd><p>Cody measure.</p></dd>
+<dt><code>routledge1</code></dt><dd><p>Routledge first measure.</p></dd>
+<dt><code>routledge2</code></dt><dd><p>Routledge second measure.</p></dd>
+<dt><code>routledge3</code></dt><dd><p>Routledge third measure. This is the exponential form
+of the second measure.</p></dd>
+<dt><code>wilson</code></dt><dd><p>Wilson measure.</p></dd>
+
 </dl>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Cody, M. L. (1975). Towards a theory of continental species diversity: Bird
- distributions over Mediterranean habitat gradients. <em>In</em> M. L. Cody &amp;
- J. M. Diamond (Eds.), <em>Ecology and Evolution of Communities</em>.
- Cambridge, MA: Harvard University Press, p. 214-257.</p>
+distributions over Mediterranean habitat gradients. <em>In</em> M. L. Cody &amp;
+J. M. Diamond (Eds.), <em>Ecology and Evolution of Communities</em>.
+Cambridge, MA: Harvard University Press, p. 214-257.</p>
 <p>Routledge, R. D. (1977). On Whittaker's Components of Diversity.
- <em>Ecology</em>, 58(5), 1120-1127. doi: <a href='https://doi.org/10.2307/1936932'>10.2307/1936932</a>
+<em>Ecology</em>, 58(5), 1120-1127. doi: <a href='https://doi.org/10.2307/1936932'>10.2307/1936932</a>
 .</p>
 <p>Whittaker, R. H. (1960). Vegetation of the Siskiyou Mountains, Oregon and
- California. <em>Ecological Monographs</em>, 30(3), 279-338.
- doi: <a href='https://doi.org/10.2307/1943563'>10.2307/1943563</a>
+California. <em>Ecological Monographs</em>, 30(3), 279-338.
+doi: <a href='https://doi.org/10.2307/1943563'>10.2307/1943563</a>
 .</p>
 <p>Wilson, M. V., &amp; Shmida, A. (1984). Measuring Beta Diversity with
- Presence-Absence Data. <em>The Journal of Ecology</em>, 72(3), 1055-1064.
- doi: <a href='https://doi.org/10.2307/2259551'>10.2307/2259551</a>
+Presence-Absence Data. <em>The Journal of Ecology</em>, 72(3), 1055-1064.
+doi: <a href='https://doi.org/10.2307/2259551'>10.2307/2259551</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 

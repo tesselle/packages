@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Bootstrap Estimation — stats_bootstrap" />
 <meta property="og:description" content="Bootstrap Estimation" />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -203,7 +205,7 @@ and returns a single numeric value.</p></td>
     <tr>
       <th>probs</th>
       <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector of probabilities with values in
-\([0,1]\) (see <code><a href='https://rdrr.io/r/stats/quantile.html'>quantile</a></code>).</p></td>
+\([0,1]\) (see <code><a href='https://rdrr.io/r/stats/quantile.html'>stats::quantile()</a></code>).</p></td>
     </tr>
     <tr>
       <th>n</th>
@@ -223,12 +225,12 @@ from <code>x</code> before the quantiles are computed?</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>numeric</code> vector with the following elements:</p><dl>
-  <dt>min</dt><dd><p>Minimum value.</p></dd>
-  <dt>mean</dt><dd><p>Mean value.</p></dd>
-  <dt>max</dt><dd><p>Maximum value.</p></dd>
-  <dt>Q*</dt><dd><p>Sample quantile to * probability.</p></dd>
- 
+    <p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector with the following elements:</p><dl>
+<dt><code>min</code></dt><dd><p>Minimum value.</p></dd>
+<dt><code>mean</code></dt><dd><p>Mean value.</p></dd>
+<dt><code>max</code></dt><dd><p>Maximum value.</p></dd>
+<dt><code>Q*</code></dt><dd><p>Sample quantile to * probability.</p></dd>
+
 </dl>
 
 

@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Similarity — similarity" />
 <meta property="og:description" content="Similarity" />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -218,50 +220,51 @@ used (see details). Any unambiguous substring can be given.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>similarity</code> returns a <code><a href='https://rdrr.io/r/stats/dist.html'>dist</a></code> object.</p>
+    <p><code>similarity()</code> returns a <a href='https://rdrr.io/r/stats/dist.html'>stats::dist</a> object.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>\(\beta\)-diversity can be measured by addressing <em>similarity</em>
- between pairs of samples/cases (Brainerd-Robinson, Jaccard, Morisita-Horn
- and Sorenson indices). Similarity between pairs of taxa/types can be
- measured by assessing the degree of co-occurrence (binomial co-occurrence).</p>
+between pairs of samples/cases (Brainerd-Robinson, Jaccard, Morisita-Horn
+and Sorenson indices). Similarity between pairs of taxa/types can be
+measured by assessing the degree of co-occurrence (binomial co-occurrence).</p>
 <p>Jaccard, Morisita-Horn and Sorenson indices provide a scale of similarity
- from <code>0</code>-<code>1</code> where <code>1</code> is perfect similarity and <code>0</code> is
- no similarity. The Brainerd-Robinson index is scaled between <code>0</code> and
- <code>200</code>. The Binomial co-occurrence assessment approximates a Z-score.</p><dl>
-  <dt>binomial</dt><dd><p>Binomial co-occurrence assessment. This assesses the degree
-  of co-occurrence between taxa/types within a dataset. The strongest
-  associations are shown by large positive numbers, the strongest
-  segregations by large negative numbers.</p></dd>
-  <dt>brainerd</dt><dd><p>Brainerd-Robinson quantitative index. This is a city-block
-  metric of similarity between pairs of samples/cases.</p></dd>
-  <dt>bray</dt><dd><p>Sorenson quantitative index (Bray and Curtis modified version
-  of the Sorenson index).</p></dd>
-  <dt>jaccard</dt><dd><p>Jaccard qualitative index.</p></dd>
-  <dt>morisita</dt><dd><p>Morisita-Horn quantitative index.</p></dd>
-  <dt>sorenson</dt><dd><p>Sorenson qualitative index.</p></dd>
- 
+from \(0\)-\(1\) where \(1\) is perfect similarity and \(0\) is
+no similarity. The Brainerd-Robinson index is scaled between \(0\) and
+\(200\). The Binomial co-occurrence assessment approximates a Z-score.</p>
+<dl>
+<dt><code>binomial</code></dt><dd><p>Binomial co-occurrence assessment. This assesses the
+degree of co-occurrence between taxa/types within a dataset. The strongest
+associations are shown by large positive numbers, the strongest
+segregations by large negative numbers.</p></dd>
+<dt><code>brainerd</code></dt><dd><p>Brainerd-Robinson quantitative index. This is a
+city-block metric of similarity between pairs of samples/cases.</p></dd>
+<dt><code>bray</code></dt><dd><p>Sorenson quantitative index (Bray and Curtis modified version
+of the Sorenson index).</p></dd>
+<dt><code>jaccard</code></dt><dd><p>Jaccard qualitative index.</p></dd>
+<dt><code>morisita</code></dt><dd><p>Morisita-Horn quantitative index.</p></dd>
+<dt><code>sorenson</code></dt><dd><p>Sorenson qualitative index.</p></dd>
+
 </dl>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Brainerd, G. W. (1951). The Place of Chronological Ordering in
- Archaeological Analysis. <em>American Antiquity</em>, 16(04), 301-313.
- doi: <a href='https://doi.org/10.2307/276979'>10.2307/276979</a>
+Archaeological Analysis. <em>American Antiquity</em>, 16(04), 301-313.
+doi: <a href='https://doi.org/10.2307/276979'>10.2307/276979</a>
 .</p>
 <p>Bray, J. R. &amp; Curtis, J. T. (1957). An Ordination of the Upland Forest
- Communities of Southern Wisconsin. <em>Ecological Monographs</em>, 27(4),
- 325-349. doi: <a href='https://doi.org/10.2307/1942268'>10.2307/1942268</a>
+Communities of Southern Wisconsin. <em>Ecological Monographs</em>, 27(4),
+325-349. doi: <a href='https://doi.org/10.2307/1942268'>10.2307/1942268</a>
 .</p>
 <p>Kintigh, K. (2006). Ceramic Dating and Type Associations. In J. Hantman and
- R. Most (eds.), <em>Managing Archaeological Data: Essays in Honor of
- Sylvia W. Gaines</em>. Anthropological Research Paper, 57. Tempe, AZ: Arizona
- State University, p. 17-26.</p>
+R. Most (eds.), <em>Managing Archaeological Data: Essays in Honor of
+Sylvia W. Gaines</em>. Anthropological Research Paper, 57. Tempe, AZ: Arizona
+State University, p. 17-26.</p>
 <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
- Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
 .</p>
 <p>Robinson, W. S. (1951). A Method for Chronologically Ordering Archaeological
- Deposits. <em>American Antiquity</em>, 16(04), 293-301. doi: <a href='https://doi.org/10.2307/276978'>10.2307/276978</a>
+Deposits. <em>American Antiquity</em>, 16(04), 293-301. doi: <a href='https://doi.org/10.2307/276978'>10.2307/276978</a>
 .</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 

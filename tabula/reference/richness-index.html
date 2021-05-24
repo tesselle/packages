@@ -71,14 +71,20 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Richness and Rarefaction — richness-index" />
-<meta property="og:description" content="index_richness returns sample richness. index_composition
- returns asymptotic species richness.
-rarefaction returns Hurlbert's unbiased estimate of Sander's
- rarefaction.
-bootstrap_* and jackknife_* perform bootstrap/jackknife
- resampling." />
+<meta property="og:description" content="
+
+index_richness() returns sample richness. index_composition() returns
+asymptotic species richness.
+rarefaction() returns Hurlbert's unbiased estimate of Sander's
+rarefaction.
+bootstrap_*() and jackknife_*() perform bootstrap/jackknife
+resampling.
+
+" />
 <meta property="og:image" content="https://tabula.tesselle.org/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -117,7 +123,7 @@ bootstrap_* and jackknife_* perform bootstrap/jackknife
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -188,12 +194,16 @@ bootstrap_* and jackknife_* perform bootstrap/jackknife
     </div>
 
     <div class="ref-description">
-    <p><code>index_richness</code> returns sample richness. <code>index_composition</code>
- returns asymptotic species richness.</p>
-<p><code>rarefaction</code> returns Hurlbert's unbiased estimate of Sander's
- rarefaction.</p>
-<p><code>bootstrap_*</code> and <code>jackknife_*</code> perform bootstrap/jackknife
- resampling.</p>
+    
+<ul>
+<li><p><code>index_richness()</code> returns sample richness. <code>index_composition()</code> returns
+asymptotic species richness.</p></li>
+<li><p><code>rarefaction()</code> returns Hurlbert's unbiased estimate of Sander's
+rarefaction.</p></li>
+<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> perform bootstrap/jackknife
+resampling.</p></li>
+</ul>
+
     </div>
 
     <pre class="usage"><span class='fu'>index_richness</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
@@ -269,36 +279,33 @@ bootstrap_* and jackknife_* perform bootstrap/jackknife
     </tr>
     <tr>
       <th>sample</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the sub-sample
-size.</p></td>
+      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the sub-sample size.</p></td>
     </tr>
     <tr>
       <th>method</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string or vector of strings
-specifying the index to be computed (see details).
-Any unambiguous substring can be given.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string or vector of strings specifying the
+index to be computed (see details). Any unambiguous substring can be given.</p></td>
     </tr>
     <tr>
       <th>simplify</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the result be
-simplified to a matrix? The default value, <code>FALSE</code>, returns a list.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the result be simplified to a
+matrix? The default value, <code>FALSE</code>, returns a list.</p></td>
     </tr>
     <tr>
       <th>quantiles</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should sample quantiles
-be used as confidence interval? If <code>TRUE</code> (the default),
-sample quantiles are used as described in Kintigh (1989), else quantiles of
-the normal distribution are used.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should sample quantiles be used as
+confidence interval? If <code>TRUE</code> (the default), sample quantiles are used as
+described in Kintigh (1989), else quantiles of the normal distribution are
+used.</p></td>
     </tr>
     <tr>
       <th>level</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the
-confidence level.</p></td>
+      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the confidence level.</p></td>
     </tr>
     <tr>
       <th>step</th>
-      <td><p>A non-negative <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> giving the increment of the
-sample size. Only used if <code>simulate</code> is <code>TRUE</code>.</p></td>
+      <td><p>A non-negative <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> giving the increment of the sample
+size. Only used if <code>simulate</code> is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>n</th>
@@ -307,60 +314,62 @@ replications.</p></td>
     </tr>
     <tr>
       <th>progress</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a progress bar be
-displayed?</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should a progress bar be displayed?</p></td>
     </tr>
     <tr>
       <th>probs</th>
       <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector of probabilities with values in
-\([0,1]\) (see <code><a href='https://rdrr.io/r/stats/quantile.html'>quantile</a></code>).</p></td>
+\([0,1]\) (see <code><a href='https://rdrr.io/r/stats/quantile.html'>stats::quantile()</a></code>).</p></td>
     </tr>
     <tr>
       <th>unbiased</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. Should the bias-corrected
-estimator be used? Only used with "<code>chao1</code>" or "<code>chao2</code>"
-(improved) estimator.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. Should the bias-corrected estimator be
+used? Only used with "<code>chao1</code>" or "<code>chao2</code>" (improved) estimator.</p></td>
     </tr>
     <tr>
       <th>improved</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. Should the improved
-estimator be used? Only used with "<code>chao1</code>" or "<code>chao2</code>".</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. Should the improved estimator be used?
+Only used with "<code>chao1</code>" or "<code>chao2</code>".</p></td>
     </tr>
     <tr>
       <th>k</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the threshold
-between rare/infrequent and abundant/frequent species. Only used if
-<code>method</code> is "<code>ace</code>" or "<code>ice</code>".</p></td>
+      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the threshold between
+rare/infrequent and abundant/frequent species. Only used if <code>method</code> is
+"<code>ace</code>" or "<code>ice</code>".</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>index_richness</code>, <code>simulate_richness</code> and <code>index_composition</code>
- return a <a href='DiversityIndex.html'>DiversityIndex</a> object.</p>
-<p><code>bootstrap_*</code> and <code>jackknife_*</code> return a <code>data.frame</code>.</p>
-<p>If <code>simplify</code> is <code>FALSE</code>, then <code>rarefaction</code> returns a list
- (default), else return a matrix.</p>
+    
+<ul>
+<li><p><code>index_richness()</code>, <code>simulate_richness()</code> and <code>index_composition()</code> return a
+<code><a href='DiversityIndex.html'>DiversityIndex</a></code> object.</p></li>
+<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> return a <code><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></code>.</p></li>
+</ul>
+
+<p>If <code>simplify</code> is <code>FALSE</code>, then <code>rarefaction()</code> returns a <code><a href='https://rdrr.io/r/base/list.html'>list</a></code> (default),
+else return a <code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The number of different taxa, provides an instantly comprehensible
- expression of diversity. While the number of taxa within a sample
- is easy to ascertain, as a term, it makes little sense: some taxa
- may not have been seen, or there may not be a fixed number of taxa
- (e.g. in an open system; Peet 1974). As an alternative, <em>richness</em>
- (\(S\)) can be used for the concept of taxa number (McIntosh 1967).</p>
+expression of diversity. While the number of taxa within a sample
+is easy to ascertain, as a term, it makes little sense: some taxa
+may not have been seen, or there may not be a fixed number of taxa
+(e.g. in an open system; Peet 1974). As an alternative, <em>richness</em>
+(\(S\)) can be used for the concept of taxa number (McIntosh 1967).</p>
 <p>It is not always possible to ensure that all sample sizes are equal
- and the number of different taxa increases with sample size and
- sampling effort (Magurran 1988). Then, <em>rarefaction</em> (\(E(S)\)) is
- the number of taxa expected if all samples were of a standard size (i.e.
- taxa per fixed number of individuals). Rarefaction assumes that imbalances
- between taxa are due to sampling and not to differences in actual
- abundances.</p>
+and the number of different taxa increases with sample size and
+sampling effort (Magurran 1988). Then, <em>rarefaction</em> (\(E(S)\)) is
+the number of taxa expected if all samples were of a standard size (i.e.
+taxa per fixed number of individuals). Rarefaction assumes that imbalances
+between taxa are due to sampling and not to differences in actual
+abundances.</p>
 <p>The following richness measures are available for count data:</p><dl>
-  <dt>margalef</dt><dd><p>Margalef richness index.</p></dd>
-  <dt>menhinick</dt><dd><p>Menhinick richness index.</p></dd>
-  <dt>none</dt><dd><p>Returns the number of observed taxa/types.</p></dd>
- 
+<dt><code>margalef</code></dt><dd><p>Margalef richness index.</p></dd>
+<dt><code>menhinick</code></dt><dd><p>Menhinick richness index.</p></dd>
+<dt><code>none</code></dt><dd><p>Returns the number of observed taxa/types.</p></dd>
+
 </dl>
 
     <h2 class="hasAnchor" id="asymptotic-species-richness"><a class="anchor" href="#asymptotic-species-richness"></a>Asymptotic Species Richness</h2>
@@ -368,67 +377,67 @@ between rare/infrequent and abundant/frequent species. Only used if
     
 
 <p>The following measures are available for count data:</p><dl>
-  <dt>ace</dt><dd><p>Abundance-based Coverage Estimator.</p></dd>
-  <dt>chao1</dt><dd><p>(improved/unbiased) Chao1 estimator.</p></dd>
- 
+<dt><code>ace</code></dt><dd><p>Abundance-based Coverage Estimator.</p></dd>
+<dt><code>chao1</code></dt><dd><p>(improved/unbiased) Chao1 estimator.</p></dd>
+
 </dl>
 
 <p>The following measures are available for replicated incidence data:</p><dl>
-  <dt>ice</dt><dd><p>Incidence-based Coverage Estimator.</p></dd>
-  <dt>chao2</dt><dd><p>(improved/unbiased) Chao2 estimator.</p></dd>
- 
+<dt><code>ice</code></dt><dd><p>Incidence-based Coverage Estimator.</p></dd>
+<dt><code>chao2</code></dt><dd><p>(improved/unbiased) Chao2 estimator.</p></dd>
+
 </dl>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Chao, A. (1984). Nonparametric Estimation of the Number of Classes in a
- Population. <em>Scandinavian Journal of Statistics</em>, 11(4), 265-270.</p>
+Population. <em>Scandinavian Journal of Statistics</em>, 11(4), 265-270.</p>
 <p>Chao, A. (1987). Estimating the Population Size for Capture-Recapture Data
- with Unequal Catchability. <em>Biometrics</em> 43(4), 783-791.
- doi: <a href='https://doi.org/10.2307/2531532'>10.2307/2531532</a>
+with Unequal Catchability. <em>Biometrics</em> 43(4), 783-791.
+doi: <a href='https://doi.org/10.2307/2531532'>10.2307/2531532</a>
 .</p>
 <p>Chao, A. &amp; Chiu, C.-H. (2016). Species Richness: Estimation and Comparison.
- <em>In</em> Balakrishnan, N., Colton, T., Everitt, B., Piegorsch, B., Ruggeri,
- F. &amp; Teugels, J. L. (Eds.), <em>Wiley StatsRef: Statistics Reference Online</em>.
- Chichester, UK: John Wiley &amp; Sons, Ltd., 1-26.
- doi: <a href='https://doi.org/10.1002/9781118445112.stat03432.pub2'>10.1002/9781118445112.stat03432.pub2</a></p>
+<em>In</em> Balakrishnan, N., Colton, T., Everitt, B., Piegorsch, B., Ruggeri,
+F. &amp; Teugels, J. L. (Eds.), <em>Wiley StatsRef: Statistics Reference Online</em>.
+Chichester, UK: John Wiley &amp; Sons, Ltd., 1-26.
+doi: <a href='https://doi.org/10.1002/9781118445112.stat03432.pub2'>10.1002/9781118445112.stat03432.pub2</a></p>
 <p>Chao, A. &amp; Lee, S.-M. (1992). Estimating the Number of Classes via Sample
- Coverage. <em>Journal of the American Statistical Association</em>, 87(417),
- 210-217. doi: <a href='https://doi.org/10.1080/01621459.1992.10475194'>10.1080/01621459.1992.10475194</a>
+Coverage. <em>Journal of the American Statistical Association</em>, 87(417),
+210-217. doi: <a href='https://doi.org/10.1080/01621459.1992.10475194'>10.1080/01621459.1992.10475194</a>
 .</p>
 <p>Chiu, C.-H., Wang, Y.-T., Walther, B. A. &amp; Chao, A. (2014). An improved
- nonparametric lower bound of species richness via a modified good-turing
- frequency formula. <em>Biometrics</em>, 70(3), 671-682.
- doi: <a href='https://doi.org/10.1111/biom.12200'>10.1111/biom.12200</a>
+nonparametric lower bound of species richness via a modified good-turing
+frequency formula. <em>Biometrics</em>, 70(3), 671-682.
+doi: <a href='https://doi.org/10.1111/biom.12200'>10.1111/biom.12200</a>
 .</p>
 <p>Hurlbert, S. H. (1971). The Nonconcept of Species Diversity: A Critique and
- Alternative Parameters. <em>Ecology</em>, 52(4), 577-586.
- doi: <a href='https://doi.org/10.2307/1934145'>10.2307/1934145</a>
+Alternative Parameters. <em>Ecology</em>, 52(4), 577-586.
+doi: <a href='https://doi.org/10.2307/1934145'>10.2307/1934145</a>
 .</p>
 <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
- Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press. doi: <a href='https://doi.org/10.1007/978-94-015-7358-0'>10.1007/978-94-015-7358-0</a>
 .</p>
 <p>Kintigh, K. W. (1989). Sample Size, Significance, and Measures of
- Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
- in Archaeology</em>. New Directions in Archaeology. Cambridge:
- Cambridge University Press, p. 25-36.</p>
+Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
+in Archaeology</em>. New Directions in Archaeology. Cambridge:
+Cambridge University Press, p. 25-36.</p>
 <p>Magurran, A E. &amp; Brian J. McGill (2011). <em>Biological Diversity:
- Frontiers in Measurement and Assessment</em>. Oxford: Oxford University Press.</p>
+Frontiers in Measurement and Assessment</em>. Oxford: Oxford University Press.</p>
 <p>Margalef, R. (1958). Information Theory in Ecology. <em>General Systems</em>,
- 3, 36-71.</p>
+3, 36-71.</p>
 <p>Menhinick, E. F. (1964). A Comparison of Some Species-Individuals Diversity
- Indices Applied to Samples of Field Insects. <em>Ecology</em>, 45(4), 859-861.
- doi: <a href='https://doi.org/10.2307/1934933'>10.2307/1934933</a>
+Indices Applied to Samples of Field Insects. <em>Ecology</em>, 45(4), 859-861.
+doi: <a href='https://doi.org/10.2307/1934933'>10.2307/1934933</a>
 .</p>
 <p>McIntosh, R. P. (1967). An Index of Diversity and the Relation of Certain
- Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
- doi: <a href='https://doi.org/10.2307/1932674'>10.2307/1932674</a>
+Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
+doi: <a href='https://doi.org/10.2307/1932674'>10.2307/1932674</a>
 .</p>
 <p>Sander, H. L. (1968). Marine Benthic Diversity: A Comparative Study.
- <em>The American Naturalist</em>, 102(925), 243-282.</p>
+<em>The American Naturalist</em>, 102(925), 243-282.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='plot_diversity.html'>plot_diversity</a></p>
+    <div class='dont-index'><p><code><a href='plot_diversity.html'>plot_diversity()</a></code></p>
 <p>Other diversity: 
 <code><a href='heterogeneity-index.html'>heterogeneity-index</a></code>,
 <code><a href='similarity.html'>similarity</a>()</code>,

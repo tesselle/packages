@@ -71,6 +71,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Spot Plot — plot_spot" />
 <meta property="og:description" content="Plots a spot matrix." />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.1</span>
       </span>
     </div>
 
@@ -210,40 +212,38 @@
     </tr>
     <tr>
       <th>threshold</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/function.html'>function</a></code> that takes a numeric vector as
-argument and returns a numeric threshold value.
-If <code>NULL</code> (the default), no threshold is computed.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/function.html'>function</a></code> that takes a numeric vector as argument and
+returns a numeric threshold value. If <code>NULL</code> (the default), no threshold is
+computed.</p></td>
     </tr>
     <tr>
       <th>diag</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar indicating whether the diagonal of
-the matrix should be plotted.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar indicating whether the diagonal of the
+matrix should be plotted.</p></td>
     </tr>
     <tr>
       <th>upper</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar indicating whether the upper
-triangle of the matrix should be plotted.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar indicating whether the upper triangle of
+the matrix should be plotted.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></code> object.</p>
+    <p>A <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The spot matrix can be considered as a variant of the
- <a href='plot_bar.html'>Bertin diagram</a> where the data are first transformed to
- relative frequencies.</p>
+<a href='plot_bar.html'>Bertin diagram</a> where the data are first transformed to
+relative frequencies.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Adapted from Dan Gopstein's original
- <a href='https://dgopstein.github.io/articles/spot-matrix/'>idea</a>.
- Credit should be given to him.</p>
+<a href='https://dgopstein.github.io/articles/spot-matrix/'>idea</a>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other plot: 
 <code><a href='plot_bar.html'>plot_bar</a></code>,
-<code><a href='plot_date.html'>plot_date</a>()</code>,
 <code><a href='plot_diversity.html'>plot_diversity</a></code>,
 <code><a href='plot_line.html'>plot_line</a></code>,
 <code><a href='plot_matrix.html'>plot_matrix</a></code></p></div>
