@@ -1,0 +1,17 @@
+name: "tesselle"
+navbar:
+  title: "tesselle"
+  right:
+    - icon: fas fa-home
+      href: https://www.tesselle.org
+    - icon: fab fa-github
+      href: https://github.com/tesselle
+exclude: ["matomo.html", "CNAME"]
+output:
+  rmarkdown::html_document:
+    theme: readable
+    highlight: pygments
+    toc: true
+    toc_float: true
+    includes:
+      in_header: matomo.html
