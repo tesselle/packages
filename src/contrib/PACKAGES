@@ -35,12 +35,12 @@ MD5sum: 4161e509ed203f904afa6ea3668b79a1
 NeedsCompilation: no
 
 Package: tabula
-Version: 1.6.0
+Version: 1.6.1
 Depends: R (>= 3.3)
 Imports: arkhe (>= 0.3.0), dimensio, ggplot2, grDevices, methods,
         rlang, stats, utils
 Suggests: covr, folio, khroma, knitr, magrittr, rmarkdown, testthat (>=
         3.0.0), vdiffr
 License: GPL-3
-MD5sum: 8686f9eaf57fe9c3813146b0455d4509
+MD5sum: bef7936265912fbd3068887130e833d3
 NeedsCompilation: no
