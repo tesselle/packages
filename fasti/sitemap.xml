@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fasti.tesselle.org/index.html</loc>
+    <loc>https://packages.tesselle.org/fasti/index.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/DateEvent-class.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/DateEvent-class.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/DateMCD-class.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/DateMCD-class.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/IncrementTest-class.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/IncrementTest-class.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/date_mcd.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/date_mcd.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/event.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/event.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/fasti-package.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/fasti-package.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/plot_event.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/plot_event.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/plot_time.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/plot_time.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/reexports.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/reexports.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/stats_bootstrap.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/stats_bootstrap.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/stats_jackknife.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/stats_jackknife.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/subset.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/subset.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/reference/test_fit.html</loc>
+    <loc>https://packages.tesselle.org/fasti/reference/test_fit.html</loc>
   </url>
   <url>
-    <loc>https://fasti.tesselle.org/articles/fasti.html</loc>
+    <loc>https://packages.tesselle.org/fasti/articles/fasti.html</loc>
   </url>
 </urlset>
