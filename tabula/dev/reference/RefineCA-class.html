@@ -71,10 +71,12 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Partial Bootstrap CA — RefineCA-class" />
 <meta property="og:description" content="An S4 class to store partial bootstrap correspondence analysis results." />
-<meta property="og:image" content="https://tabula.tesselle.org/logo.png" />
+<meta property="og:image" content="https://packages.tesselle.org/tabula/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
@@ -112,7 +114,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tabula</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.6.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.6.1.9000</span>
       </span>
     </div>
 
@@ -193,25 +195,28 @@
     
 
 <dl>
-<dt><code>row_chull</code></dt><dd><p>A list of length three giving the vertices coordinates
-(<code>x</code>, <code>y</code>) of the samples convex hull and a identifier
-(<code>id</code>) to link each row to a sample.</p></dd>
+<dt><code>row_chull</code></dt><dd><p>A three columns <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> matrix giving the vertices
+coordinates (<code>x</code>, <code>y</code>) of the samples convex hull and a identifier (<code>id</code>) to
+link each row to a sample.</p></dd>
 
-<dt><code>column_chull</code></dt><dd><p>A list of length three giving the vertices coordinates
-(<code>x</code>, <code>y</code>) of the variables convex hull and a identifier
-(<code>id</code>) to link each row to a variable.</p></dd>
+<dt><code>row_lengths</code></dt><dd><p>A named <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the convex hull maximum
+dimension length of samples.</p></dd>
 
-<dt><code>row_lengths</code></dt><dd><p>A list of two named <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vectors giving the
-convex hull maximum dimension length of samples and variables, respectively.</p></dd>
+<dt><code>row_keep</code></dt><dd><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the subscript of the samples to
+be kept.</p></dd>
 
-<dt><code>column_lengths</code></dt><dd><p>A list of two named <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vectors giving the
-convex hull maximum dimension length of samples and variables, respectively.</p></dd>
+<dt><code>column_chull</code></dt><dd><p>A three columns <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> matrix giving the vertices
+coordinates (<code>x</code>, <code>y</code>) of the variables convex hull and a identifier (<code>id</code>)
+to link each row to a variable.</p></dd>
 
-<dt><code>cutoff</code></dt><dd><p>A length-two <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the cutoff
-value for samples and variables selection, respectively.</p></dd>
+<dt><code>column_lengths</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the convex hull maximum
+dimension length of variables.</p></dd>
 
-<dt><code>keep</code></dt><dd><p>A list of two <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vectors giving the subscript
-of the samples and variables to be kept, respectively.</p></dd>
+<dt><code>column_keep</code></dt><dd><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the subscript of the variables
+to be kept.</p></dd>
+
+<dt><code>cutoff</code></dt><dd><p>A length-two <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the cutoff value for
+samples and variables selection, respectively.</p></dd>
 
 </dl>
     <h2 class="hasAnchor" id="subset"><a class="anchor" href="#subset"></a>Subset</h2>
@@ -219,16 +224,6 @@ of the samples and variables to be kept, respectively.</p></dd>
     
 
 <p>In the code snippets below, <code>x</code> is a <code>RefineCA</code> object.</p><dl>
-<dt><code>x[i, j, drop]</code></dt><dd><p>Extracts information from a slot selected by
-subscript <code>i</code> thru <code>j</code> (see examples). <code>i</code> should be one of
-"<code>rows</code>" or "<code>columns</code>". Any unambiguous substring can be
-given. <code>j</code> is a <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code>, <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> or
-<code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector or empty (missing) or <code>NULL</code>.
-Numeric values are coerced to <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> as by
-<code><a href='https://rdrr.io/r/base/integer.html'>as.integer()</a></code> (and hence truncated towards zero). Character
-vectors will be matched to the name of the elements. An empty index
-(a comma separated blank) indicates that all entries in that dimension are
-selected.</p></dd>
 <dt><code>x[[i]]</code></dt><dd><p>Extracts information from a slot selected by subscript <code>i</code>.
 <code>i</code> is a length-one <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector. Returns the corresponding slot
 values.</p></dd>
@@ -237,7 +232,8 @@ values.</p></dd>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other class: 
+    <div class='dont-index'><p><code><a href='http://dimensio.tesselle.org/reference/CA-class.html'>dimensio::CA</a></code></p>
+<p>Other class: 
 <code><a href='DiversityIndex.html'>DiversityIndex</a></code>,
 <code><a href='PermutationOrder-class.html'>PermutationOrder-class</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>

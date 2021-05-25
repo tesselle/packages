@@ -5,8 +5,8 @@ articles:
   bibliography: bibliography.html
   diversity: diversity.html
   seriation: seriation.html
-last_built: 2021-05-21T13:16Z
+last_built: 2021-05-25T19:32Z
 urls:
-  reference: https://tabula.tesselle.org/reference
-  article: https://tabula.tesselle.org/articles
+  reference: https://packages.tesselle.org/tabula/reference
+  article: https://packages.tesselle.org/tabula/articles
 

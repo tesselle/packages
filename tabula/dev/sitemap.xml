@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tabula.tesselle.org/index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/index.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/DiversityIndex.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/DiversityIndex.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/PermutationOrder-class.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/PermutationOrder-class.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/RefineCA-class.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/RefineCA-class.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/heterogeneity-index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/heterogeneity-index.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/independance.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/independance.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/mutator.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/plot_bar.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_bar.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/plot_diversity.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_diversity.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/plot_line.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_line.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/plot_matrix.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_matrix.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/plot_spot.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_spot.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/reexports.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/reexports.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/richness-index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/richness-index.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/seriation.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/seriation.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/similarity-method.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/similarity-method.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/stats_bootstrap.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/stats_bootstrap.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/stats_jackknife.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/stats_jackknife.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/subset.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/subset.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/tabula-package.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/tabula-package.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/test_diversity.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/test_diversity.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/reference/turnover-index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/turnover-index.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/articles/bibliography.html</loc>
+    <loc>https://packages.tesselle.org/tabula/articles/bibliography.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/articles/diversity.html</loc>
+    <loc>https://packages.tesselle.org/tabula/articles/diversity.html</loc>
   </url>
   <url>
-    <loc>https://tabula.tesselle.org/articles/seriation.html</loc>
+    <loc>https://packages.tesselle.org/tabula/articles/seriation.html</loc>
   </url>
 </urlset>
