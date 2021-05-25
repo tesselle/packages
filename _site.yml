@@ -5,7 +5,7 @@ navbar:
     - icon: fas fa-home
       href: https://www.tesselle.org
     - icon: fab fa-github
-      href: https://github.com/tesselle
+      href: https://github.com/tesselle/packages
 exclude: ["matomo.html", "CNAME"]
 output:
   rmarkdown::html_document:
