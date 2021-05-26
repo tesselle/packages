@@ -4,6 +4,9 @@
     <loc>https://packages.tesselle.org/kairos/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/reference/AoristicSum-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/reference/DateEvent-class.html</loc>
   </url>
   <url>
@@ -13,10 +16,16 @@
     <loc>https://packages.tesselle.org/kairos/reference/IncrementTest-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/reference/aoristic.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/reference/date_mcd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/event.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/fit.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/kairos-package.html</loc>
@@ -38,9 +47,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/subset.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kairos/reference/test_fit.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/articles/kairos.html</loc>

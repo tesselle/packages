@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Extract or Replace Parts of an Object — subset • kairos</title>
+<title>Aoristic Sum — AoristicSum-class • kairos</title>
 
 
 <!-- jquery -->
@@ -67,8 +67,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Extract or Replace Parts of an Object — subset" />
-<meta property="og:description" content="Operators acting on objects to extract or replace parts." />
+<meta property="og:title" content="Aoristic Sum — AoristicSum-class" />
+<meta property="og:description" content="An S4 class to represent an aoristic analysis results." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
@@ -150,45 +150,61 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Extract or Replace Parts of an Object</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R'><code>R/AllGenerics.R</code></a>, <a href='https://github.com/tesselle/kairos/blob/master/R/subset.R'><code>R/subset.R</code></a></small>
-    <div class="hidden name"><code>subset.Rd</code></div>
+    <h1>Aoristic Sum</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllClasses.R'><code>R/AllClasses.R</code></a></small>
+    <div class="hidden name"><code>AoristicSum-class.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Operators acting on objects to extract or replace parts.</p>
+    <p>An S4 class to represent an aoristic analysis results.</p>
     </div>
 
-    <pre class="usage"># S4 method for AoristicSum,ANY,missing
-[[(x, i)
 
-# S4 method for DateMCD,ANY,missing
-[[(x, i)
 
-# S4 method for DateEvent,ANY,missing
-[[(x, i)
+    <h2 class="hasAnchor" id="slots"><a class="anchor" href="#slots"></a>Slots</h2>
 
-# S4 method for IncrementTest,ANY,missing
-[[(x, i)</pre>
+    
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>x</th>
-      <td><p>An object from which to extract element(s) or in which to replace
-element(s).</p></td>
-    </tr>
-    <tr>
-      <th>i</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying elements to extract.
-Any unambiguous substring can be given (see details).</p></td>
-    </tr>
-    </table>
+<dl>
+<dt><code>from</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector.</p></dd>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+<dt><code>to</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector.</p></dd>
 
-    <p>A subsetted object.</p>
+<dt><code>weights</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector.</p></dd>
+
+<dt><code>groups</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector.</p></dd>
+
+<dt><code>dates</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector.</p></dd>
+
+<dt><code>sum</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector.</p></dd>
+
+</dl>
+    <h2 class="hasAnchor" id="subset"><a class="anchor" href="#subset"></a>Subset</h2>
+
+    
+
+<p>In the code snippets below, <code>x</code> is an <code>AoristicSum</code> object.</p><dl>
+<dt><code>x[[i]]</code></dt><dd><p>Extracts information from a slot selected by subscript <code>i</code>.
+<code>i</code> is a length-one <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector. Returns the corresponding slot
+values.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="coerce"><a class="anchor" href="#coerce"></a>Coerce</h2>
+
+    
+
+<p>In the code snippets below, <code>x</code> is an <code>AoristicSum</code> object.</p><dl>
+<dt><code><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame(x)</a></code></dt><dd><p>Coerces to a <code><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></code>.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other classes: 
+<code><a href='DateEvent-class.html'>DateEvent-class</a></code>,
+<code><a href='DateMCD-class.html'>DateMCD-class</a></code>,
+<code><a href='IncrementTest-class.html'>IncrementTest-class</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

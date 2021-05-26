@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Extract or Replace Parts of an Object — subset • kairos</title>
+<title>Frequency Increment Test — fit • kairos</title>
 
 
 <!-- jquery -->
@@ -67,8 +67,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Extract or Replace Parts of an Object — subset" />
-<meta property="og:description" content="Operators acting on objects to extract or replace parts." />
+<meta property="og:title" content="Frequency Increment Test — fit" />
+<meta property="og:description" content="Frequency Increment Test" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
@@ -150,49 +150,82 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Extract or Replace Parts of an Object</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R'><code>R/AllGenerics.R</code></a>, <a href='https://github.com/tesselle/kairos/blob/master/R/subset.R'><code>R/subset.R</code></a></small>
-    <div class="hidden name"><code>subset.Rd</code></div>
+    <h1>Frequency Increment Test</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R'><code>R/AllGenerics.R</code></a>, <a href='https://github.com/tesselle/kairos/blob/master/R/test_fit.R'><code>R/test_fit.R</code></a></small>
+    <div class="hidden name"><code>fit.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Operators acting on objects to extract or replace parts.</p>
+    <p>Frequency Increment Test</p>
     </div>
 
-    <pre class="usage"># S4 method for AoristicSum,ANY,missing
-[[(x, i)
+    <pre class="usage"><span class='fu'>test_fit</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
 
-# S4 method for DateMCD,ANY,missing
-[[(x, i)
-
-# S4 method for DateEvent,ANY,missing
-[[(x, i)
-
-# S4 method for IncrementTest,ANY,missing
-[[(x, i)</pre>
+<span class='co'># S4 method for CountMatrix</span>
+<span class='fu'>test_fit</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>dates</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>An object from which to extract element(s) or in which to replace
-element(s).</p></td>
+      <th>object</th>
+      <td><p>A \(m \times p\) matrix of count data.</p></td>
     </tr>
     <tr>
-      <th>i</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying elements to extract.
-Any unambiguous substring can be given (see details).</p></td>
+      <th>...</th>
+      <td><p>Currently not used.</p></td>
+    </tr>
+    <tr>
+      <th>dates</th>
+      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector of dates.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A subsetted object.</p>
+    <p>An <code><a href='IncrementTest-class.html'>IncrementTest</a></code> object.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The Frequency Increment Test (FIT) rejects neutrality if the distribution
+of normalized variant frequency increments exhibits a mean that deviates
+significantly from zero.</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Feder, A. F., Kryazhimskiy, S. &amp; Plotkin, J. B. (2014). Identifying
+Signatures of Selection in Genetic Time Series. <em>Genetics</em>, 196(2),
+509-522. doi: <a href='https://doi.org/10.1534/genetics.113.158220'>10.1534/genetics.113.158220</a>
+.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='plot_time.html'>plot_time()</a></code></p>
+<p>Other chronological analysis: 
+<code><a href='aoristic.html'>aoristic</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"merzbach"</span>, package <span class='op'>=</span> <span class='st'>"folio"</span><span class='op'>)</span>
+
+<span class='co'>## Coerce the merzbach dataset to a count matrix</span>
+<span class='co'>## Keep only decoration types that have a maximum frequency of at least 50</span>
+<span class='va'>keep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span>X <span class='op'>=</span> <span class='va'>merzbach</span>, MARGIN <span class='op'>=</span> <span class='fl'>2</span>, FUN <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&gt;=</span> <span class='fl'>50</span><span class='op'>)</span>
+<span class='va'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://arkhe.tesselle.org/reference/coerce.html'>as_count</a></span><span class='op'>(</span><span class='va'>merzbach</span><span class='op'>[</span>, <span class='va'>keep</span><span class='op'>]</span><span class='op'>)</span>
+
+<span class='co'>## Group by phase</span>
+<span class='co'>## We use the row names as time coordinates (roman numerals)</span>
+<span class='va'>dates</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'>utils</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/roman.html'>as.roman</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>counts</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'>## Plot abundance vs time</span>
+<span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>counts</span>, <span class='va'>dates</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='img'><img src='fit-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>## Frequency Increment Test</span>
+<span class='va'>freq</span> <span class='op'>&lt;-</span> <span class='fu'>test_fit</span><span class='op'>(</span><span class='va'>counts</span>, <span class='va'>dates</span><span class='op'>)</span>
+
+<span class='co'>## Plot time vs abundance and highlight selection</span>
+<span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>freq</span><span class='op'>)</span>
+</div><div class='img'><img src='fit-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>freq</span>, roll <span class='op'>=</span> <span class='cn'>TRUE</span>, window <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
+</div><div class='img'><img src='fit-3.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
