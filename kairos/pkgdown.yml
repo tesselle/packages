@@ -2,8 +2,8 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  fasti: fasti.html
-last_built: 2021-05-26T12:24Z
+  kairos: kairos.html
+last_built: 2021-05-26T13:53Z
 urls:
   reference: https://packages.tesselle.org/kairos/reference
   article: https://packages.tesselle.org/kairos/articles
