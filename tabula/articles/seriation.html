@@ -87,9 +87,6 @@
       <a href="../articles/seriation.html">Seriation Methods</a>
     </li>
     <li>
-      <a href="../articles/dating.html">Dating Methods</a>
-    </li>
-    <li>
       <a href="../articles/bibliography.html">Bibliography</a>
     </li>
   </ul>
@@ -119,13 +116,13 @@
 
       
 
-      </header><script src="seriation_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="seriation_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Seriation</h1>
                         <h4 class="author">N. Frerebeau</h4>
             
-            <h4 class="date">2021-05-25</h4>
+            <h4 class="date">2021-05-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/master/vignettes/seriation.Rmd"><code>vignettes/seriation.Rmd</code></a></small>
       <div class="hidden name"><code>seriation.Rmd</code></div>
@@ -197,7 +194,7 @@
   <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Rearranged matrix"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TRUE"</span> <span class="op">=</span> <span class="st">"black"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="seriation_files/figure-html/reciprocal-1.png" width="336"><img src="seriation_files/figure-html/reciprocal-2.png" width="336"></p>
-<p>The positive difference from the column mean percentage (in french “écart positif au pourcentage moyen”, EPPM) represents a deviation from the situation of statistical independence <span class="citation">(Desachy 2004)</span>. As independence can be interpreted as the absence of relationships between types and the chronological order of the assemblages, EPPM is a useful graphical tool to explore significance of relationship between rows and columns related to seriation <span class="citation">(Desachy 2004)</span>.</p>
+<p>The positive difference from the column mean percentage (in french “écart positif au pourcentage moyen,” EPPM) represents a deviation from the situation of statistical independence <span class="citation">(Desachy 2004)</span>. As independence can be interpreted as the absence of relationships between types and the chronological order of the assemblages, EPPM is a useful graphical tool to explore significance of relationship between rows and columns related to seriation <span class="citation">(Desachy 2004)</span>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Replicates Desachy 2004 results</span>
 <span class="co">## Coerce dataset to an abundance matrix</span>
@@ -331,18 +328,18 @@
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h1>
-<div id="refs" class="references">
-<div id="ref-desachy2004">
-<p>Desachy, Bruno. 2004. “Le Sériographe EPPM: Un Outil Informatisé de Sériation Graphique Pour Tableaux de Comptages.” <em>Revue Archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396">https://doi.org/10.3406/pica.2004.2396</a>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-desachy2004" class="csl-entry">
+Desachy, Bruno. 2004. <span>“Le sériographe <span>EPPM</span>: Un Outil Informatisé de sériation Graphique Pour Tableaux de Comptages.”</span> <em>Revue Archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396">https://doi.org/10.3406/pica.2004.2396</a>.
 </div>
-<div id="ref-dunnell1970">
-<p>Dunnell, Robert C. 1970. “Seriation Method and Its Evaluation.” <em>American Antiquity</em> 35 (3): 305–19. <a href="https://doi.org/10.2307/278341">https://doi.org/10.2307/278341</a>.</p>
+<div id="ref-dunnell1970" class="csl-entry">
+Dunnell, Robert C. 1970. <span>“Seriation Method and Its Evaluation.”</span> <em>American Antiquity</em> 35 (3): 305–19. <a href="https://doi.org/10.2307/278341">https://doi.org/10.2307/278341</a>.
 </div>
-<div id="ref-ihm2005">
-<p>Ihm, Peter. 2005. “A Contribution to the History of Seriation in Archaeology.” In <em>Classification – the Ubiquitous Challenge</em>, edited by Claus Weihs and Wolfgang Gaul, 307–16. Berlin Heidelberg: Springer. <a href="https://doi.org/10.1007/3-540-28084-7_34">https://doi.org/10.1007/3-540-28084-7_34</a>.</p>
+<div id="ref-ihm2005" class="csl-entry">
+Ihm, Peter. 2005. <span>“A Contribution to the History of Seriation in Archaeology.”</span> In <em>Classification – the Ubiquitous Challenge</em>, edited by Claus Weihs and Wolfgang Gaul, 307–16. Berlin Heidelberg: Springer. <a href="https://doi.org/10.1007/3-540-28084-7_34">https://doi.org/10.1007/3-540-28084-7_34</a>.
 </div>
-<div id="ref-peeples2012">
-<p>Peeples, Matthew A., and Gregson Schachner. 2012. “Refining Correspondence Analysis-Based Ceramic Seriation of Regional Data Sets.” <em>Journal of Archaeological Science</em> 39 (8): 2818–27. <a href="https://doi.org/10.1016/j.jas.2012.04.040">https://doi.org/10.1016/j.jas.2012.04.040</a>.</p>
+<div id="ref-peeples2012" class="csl-entry">
+Peeples, Matthew A., and Gregson Schachner. 2012. <span>“Refining Correspondence Analysis-Based Ceramic Seriation of Regional Data Sets.”</span> <em>Journal of Archaeological Science</em> 39 (8): 2818–27. <a href="https://doi.org/10.1016/j.jas.2012.04.040">https://doi.org/10.1016/j.jas.2012.04.040</a>.
 </div>
 </div>
 </div>

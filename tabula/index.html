@@ -95,9 +95,6 @@
       <a href="articles/seriation.html">Seriation Methods</a>
     </li>
     <li>
-      <a href="articles/dating.html">Dating Methods</a>
-    </li>
-    <li>
       <a href="articles/bibliography.html">Bibliography</a>
     </li>
   </ul>
@@ -142,25 +139,25 @@
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
 <p>An easy way to examine archaeological count data. <strong>tabula</strong> provides a convenient and reproducible toolkit for relative dating by matrix seriation (reciprocal ranking, CA-based seriation). This package provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). The package make it easy to visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#&gt; </span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co">#&gt; To cite tabula in publications use:</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#&gt; </span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#&gt;   Frerebeau, Nicolas (2019). tabula: An R Package for Analysis,</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#&gt;   Seriation, and Visualization of Archaeological Count Data. Journal of</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#&gt;   Open Source Software, 4(44), 1821. DOI 10.21105/joss.01821.</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#&gt; </span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt; </span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt;   @Article{,</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt;     title = {{tabula}: An R Package for Analysis, Seriation, and Visualization of Archaeological Count Data},</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#&gt;     author = {Nicolas Frerebeau},</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt;     year = {2019},</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#&gt;     journal = {Journal of Open Source Software},</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt;     volume = {4},</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="co">#&gt;     number = {44},</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#&gt;     page = {1821},</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#&gt;     doi = {10.21105/joss.01821},</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="co">#&gt;   }</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; To cite tabula in publications use:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Frerebeau, Nicolas (2019). tabula: An R Package for Analysis,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Seriation, and Visualization of Archaeological Count Data. Journal of</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Open Source Software, 4(44), 1821. DOI 10.21105/joss.01821.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   @Article{,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     title = {{tabula}: An R Package for Analysis, Seriation, and Visualization of Archaeological Count Data},</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     author = {Nicolas Frerebeau},</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     year = {2019},</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     journal = {Journal of Open Source Software},</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     volume = {4},</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     number = {44},</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     page = {1821},</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     doi = {10.21105/joss.01821},</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   }</span></span></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">

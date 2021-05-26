@@ -87,9 +87,6 @@
       <a href="../articles/seriation.html">Seriation Methods</a>
     </li>
     <li>
-      <a href="../articles/dating.html">Dating Methods</a>
-    </li>
-    <li>
       <a href="../articles/bibliography.html">Bibliography</a>
     </li>
   </ul>
@@ -119,13 +116,13 @@
 
       
 
-      </header><script src="diversity_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="diversity_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Diversity Measures</h1>
                         <h4 class="author">N. Frerebeau</h4>
             
-            <h4 class="date">2021-05-25</h4>
+            <h4 class="date">2021-05-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/master/vignettes/diversity.Rmd"><code>vignettes/diversity.Rmd</code></a></small>
       <div class="hidden name"><code>diversity.Rmd</code></div>
@@ -164,7 +161,7 @@
 <div id="richness-and-rarefaction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#richness-and-rarefaction" class="anchor"></a>Richness and Rarefaction</h2>
-<p>The number of different taxa, provides an instantly comprehensible expression of diversity. While the number of taxa within a sample is easy to ascertain, as a term, it makes little sense: some taxa may not have been seen, or there may not be a fixed number of taxa <span class="citation">(e.g. in an open system; Peet 1974)</span>. As an alternative, <em>richness</em> (<span class="math inline">\(R\)</span>) can be used for the concept of taxa number <span class="citation">(McIntosh 1967)</span>. Richness refers to the variety of taxa/species/types present in an assemblage or community <span class="citation">(Bobrowsky and Ball 1989)</span> as “the number of species present in a collection containing a specified number of individuals” <span class="citation">(Hurlbert 1971)</span>.</p>
+<p>The number of different taxa, provides an instantly comprehensible expression of diversity. While the number of taxa within a sample is easy to ascertain, as a term, it makes little sense: some taxa may not have been seen, or there may not be a fixed number of taxa [e.g. in an open system; <span class="citation">Peet (1974)</span>]. As an alternative, <em>richness</em> (<span class="math inline">\(R\)</span>) can be used for the concept of taxa number <span class="citation">(McIntosh 1967)</span>. Richness refers to the variety of taxa/species/types present in an assemblage or community <span class="citation">(Bobrowsky and Ball 1989)</span> as “the number of species present in a collection containing a specified number of individuals” <span class="citation">(Hurlbert 1971)</span>.</p>
 <p>It is not always possible to ensure that all sample sizes are equal and the number of different taxa increases with sample size and sampling effort <span class="citation">(Magurran 1988)</span>. Then, <em>rarefaction</em> (<span class="math inline">\(\hat{S}\)</span>) is the number of taxa expected if all samples were of a standard size <span class="math inline">\(n\)</span> (i.e. taxa per fixed number of individuals). Rarefaction assumes that imbalances between taxa are due to sampling and not to differences in actual abundances.</p>
 <div id="definitions" class="section level3">
 <h3 class="hasAnchor">
@@ -385,7 +382,7 @@
 <h3 class="hasAnchor">
 <a href="#definitions-1" class="anchor"></a>Definitions</h3>
 <p><em>Diversity</em> measurement assumes that all individuals in a specific taxa are equivalent and that all types are equally different from each other <span class="citation">(Peet 1974)</span>. A measure of diversity can be achieved by using indices built on the relative abundance of taxa. These indices (sometimes referred to as non-parametric indices) benefit from not making assumptions about the underlying distribution of taxa abundance: they only take relative abundances of the species that are present and species richness into account. <span class="citation">Peet (1974)</span> refers to them as indices of <em>heterogeneity</em> (<span class="math inline">\(H\)</span>).</p>
-<p>Diversity indices focus on one aspect of the taxa abundance and emphasize either <em>richness</em> (weighting towards uncommon taxa) or dominance <span class="citation">(weighting towards abundant taxa; Magurran 1988)</span>.</p>
+<p>Diversity indices focus on one aspect of the taxa abundance and emphasize either <em>richness</em> (weighting towards uncommon taxa) or dominance [weighting towards abundant taxa; <span class="citation">Magurran (1988)</span>].</p>
 <p><em>Evenness</em> (<span class="math inline">\(E\)</span>) is a measure of how evenly individuals are distributed across the sample.</p>
 <div id="information-theory-index" class="section level4">
 <h4 class="hasAnchor">
@@ -680,7 +677,7 @@
 <tbody><tr class="odd">
 <td align="left"><span class="math display">\[ C_{Bi} = \frac{o_i - N \times p}{\sqrt{N \times p \times (1 - p)}} \]</span></td>
 <td align="left">
-<span class="citation">Kintigh (2006)</span> *</td>
+<span class="citation">K. Kintigh (2006)</span> *</td>
 </tr></tbody>
 </table>
 <p>Where:</p>
@@ -725,7 +722,7 @@
 <div id="sample-size-and-significance" class="section level1">
 <h1 class="hasAnchor">
 <a href="#sample-size-and-significance" class="anchor"></a>Sample Size and Significance</h1>
-<p><span class="citation">Kintigh (1989)</span></p>
+<p><span class="citation">K. W. Kintigh (1989)</span></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span>
 <span class="va">chevelon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://arkhe.tesselle.org/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">chevelon</span><span class="op">)</span>
@@ -756,123 +753,123 @@
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h1>
-<div id="refs" class="references">
-<div id="ref-berger1970">
-<p>Berger, W. H., and F. L. Parker. 1970. “Diversity of Planktonic Foraminifera in Deep Sea Sediments.” <em>Science</em> 168 (3937): 1345–7. <a href="https://doi.org/10.1126/science.168.3937.1345">https://doi.org/10.1126/science.168.3937.1345</a>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-berger1970" class="csl-entry">
+Berger, W. H., and F. L. Parker. 1970. <span>“Diversity of Planktonic Foraminifera in Deep Sea Sediments.”</span> <em>Science</em> 168 (3937): 1345–47. <a href="https://doi.org/10.1126/science.168.3937.1345">https://doi.org/10.1126/science.168.3937.1345</a>.
 </div>
-<div id="ref-bobrowsky1989">
-<p>Bobrowsky, Peter, T., and Bruce F. Ball. 1989. “The Theory and Mechanics of Ecological Diversity in Archaeology.” In <em>Quantifying Diversity in Archaeology</em>, edited by Robert D. Leonard and George T. Jones, 4–12. New Directions in Archaeology. Cambridge: Cambridge University Press.</p>
+<div id="ref-bobrowsky1989" class="csl-entry">
+Bobrowsky, Peter, T., and Bruce F. Ball. 1989. <span>“The Theory and Mechanics of Ecological Diversity in Archaeology.”</span> In <em>Quantifying Diversity in Archaeology</em>, edited by Robert D. Leonard and George T. Jones, 4–12. New Directions in Archaeology. Cambridge: Cambridge University Press.
 </div>
-<div id="ref-bowman1971">
-<p>Bowman, K. O., K. Hutcheson, E. P. Odum, and L. R. Shenton. 1971. “Comments on the Distribution of Indices of Diversity.” In <em>Statistical Ecology</em>, edited by E. C. Patil, E. C. Pielou, and W. E. Waters, 3:315–66. University Park, PA: Pennsylvania State University Press.</p>
+<div id="ref-bowman1971" class="csl-entry">
+Bowman, K. O., K. Hutcheson, E. P. Odum, and L. R. Shenton. 1971. <span>“Comments on the Distribution of Indices of Diversity.”</span> In <em>Statistical Ecology</em>, edited by E. C. Patil, E. C. Pielou, and W. E. Waters, 3:315–66. University Park, <span>PA</span>: Pennsylvania State University Press.
 </div>
-<div id="ref-brainerd1951">
-<p>Brainerd, George W. 1951. “The Place of Chronological Ordering in Archaeological Analysis.” <em>American Antiquity</em> 16 (4): 301–13. <a href="https://doi.org/10.2307/276979">https://doi.org/10.2307/276979</a>.</p>
+<div id="ref-brainerd1951" class="csl-entry">
+Brainerd, George W. 1951. <span>“The Place of Chronological Ordering in Archaeological Analysis.”</span> <em>American Antiquity</em> 16 (4): 301–13. <a href="https://doi.org/10.2307/276979">https://doi.org/10.2307/276979</a>.
 </div>
-<div id="ref-bray1957">
-<p>Bray, J. Roger, and J. T. Curtis. 1957. “An Ordination of the Upland Forest Communities of Southern Wisconsin.” <em>Ecological Monographs</em> 27 (4): 325–49. <a href="https://doi.org/10.2307/1942268">https://doi.org/10.2307/1942268</a>.</p>
+<div id="ref-bray1957" class="csl-entry">
+Bray, J. Roger, and J. T. Curtis. 1957. <span>“An Ordination of the Upland Forest Communities of Southern Wisconsin.”</span> <em>Ecological Monographs</em> 27 (4): 325–49. <a href="https://doi.org/10.2307/1942268">https://doi.org/10.2307/1942268</a>.
 </div>
-<div id="ref-brillouin1956">
-<p>Brillouin, Leon. 1956. <em>Science and Information Theory</em>. New York: Academic Press.</p>
+<div id="ref-brillouin1956" class="csl-entry">
+Brillouin, Leon. 1956. <em>Science and Information Theory</em>. New York: Academic Press.
 </div>
-<div id="ref-decaprariis1976">
-<p>Caprariis, Pascal de, Richard H. Lindemann, and Catharine M. Collins. 1976. “A Method for Determining Optimum Sample Size in Species Diversity Studies.” <em>Journal of the International Association for Mathematical Geology</em> 8 (5): 575–81. <a href="https://doi.org/10.1007/BF01042995">https://doi.org/10.1007/BF01042995</a>.</p>
+<div id="ref-decaprariis1976" class="csl-entry">
+Caprariis, Pascal de, Richard H. Lindemann, and Catharine M. Collins. 1976. <span>“A Method for Determining Optimum Sample Size in Species Diversity Studies.”</span> <em>Journal of the International Association for Mathematical Geology</em> 8 (5): 575–81. <a href="https://doi.org/10.1007/BF01042995">https://doi.org/10.1007/BF01042995</a>.
 </div>
-<div id="ref-chao1984">
-<p>Chao, Anne. 1984. “Nonparametric Estimation of the Number of Classes in a Population.” <em>Scandinavian Journal of Statistics</em> 11 (4): 265–70.</p>
+<div id="ref-chao1984" class="csl-entry">
+Chao, Anne. 1984. <span>“Nonparametric Estimation of the Number of Classes in a Population.”</span> <em>Scandinavian Journal of Statistics</em> 11 (4): 265–70.
 </div>
-<div id="ref-chao1987">
-<p>———. 1987. “Estimating the Population Size for Capture Recapture Data with Unequal Catchability.” <em>Biometrics</em> 43 (4): 783–91. <a href="https://doi.org/10.2307/2531532">https://doi.org/10.2307/2531532</a>.</p>
+<div id="ref-chao1987" class="csl-entry">
+———. 1987. <span>“Estimating the Population Size for Capture Recapture Data with Unequal Catchability.”</span> <em>Biometrics</em> 43 (4): 783–91. <a href="https://doi.org/10.2307/2531532">https://doi.org/10.2307/2531532</a>.
 </div>
-<div id="ref-chao2016">
-<p>Chao, Anne, and Chun-Huo Chiu. 2016. “Species Richness: Estimation and Comparison.” In <em>Wiley StatsRef: Statistics Reference Online</em>, edited by N. Balakrishnan, Theodore Colton, Brian Everitt, Walter Piegorsch, Fabrizio Ruggeri, and Jozef L. Teugels, 1–26. Chichester, UK: John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2">https://doi.org/10.1002/9781118445112.stat03432.pub2</a>.</p>
+<div id="ref-chao2016" class="csl-entry">
+Chao, Anne, and Chun-Huo Chiu. 2016. <span>“Species Richness: Estimation and Comparison.”</span> In <em>Wiley <span>StatsRef</span>: Statistics Reference Online</em>, edited by N. Balakrishnan, Theodore Colton, Brian Everitt, Walter Piegorsch, Fabrizio Ruggeri, and Jozef L. Teugels, 1–26. Chichester, <span>UK</span>: John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2">https://doi.org/10.1002/9781118445112.stat03432.pub2</a>.
 </div>
-<div id="ref-chao1992">
-<p>Chao, Anne, and Shen-Ming Lee. 1992. “Estimating the Number of Classes via Sample Coverage.” <em>Journal of the American Statistical Association</em> 87 (417): 210–17. <a href="https://doi.org/10.1080/01621459.1992.10475194">https://doi.org/10.1080/01621459.1992.10475194</a>.</p>
+<div id="ref-chao1992" class="csl-entry">
+Chao, Anne, and Shen-Ming Lee. 1992. <span>“Estimating the Number of Classes via Sample Coverage.”</span> <em>Journal of the American Statistical Association</em> 87 (417): 210–17. <a href="https://doi.org/10.1080/01621459.1992.10475194">https://doi.org/10.1080/01621459.1992.10475194</a>.
 </div>
-<div id="ref-chiu2014">
-<p>Chiu, Chun-Huo, Yi-Ting Wang, Bruno A. Walther, and Anne Chao. 2014. “An Improved Nonparametric Lower Bound of Species Richness via a Modified Good-Turing Frequency Formula.” <em>Biometrics</em> 70 (3): 671–82. <a href="https://doi.org/10.1111/biom.12200">https://doi.org/10.1111/biom.12200</a>.</p>
+<div id="ref-chiu2014" class="csl-entry">
+Chiu, Chun-Huo, Yi-Ting Wang, Bruno A. Walther, and Anne Chao. 2014. <span>“An Improved Nonparametric Lower Bound of Species Richness via a Modified Good-Turing Frequency Formula.”</span> <em>Biometrics</em> 70 (3): 671–82. <a href="https://doi.org/10.1111/biom.12200">https://doi.org/10.1111/biom.12200</a>.
 </div>
-<div id="ref-cody1975">
-<p>Cody, M. L. 1975. “Towards a Theory of Continental Species Diversity: Bird Distributions over Mediterranean Habitat Gradients.” In <em>Ecology and Evolution of Communities</em>, edited by M. L. Cody and J. M. Diamond, 214–57. Cambridge, MA: Harvard University Press.</p>
+<div id="ref-cody1975" class="csl-entry">
+Cody, M. L. 1975. <span>“Towards a Theory of Continental Species Diversity: Bird Distributions over Mediterranean Habitat Gradients.”</span> In <em>Ecology and Evolution of Communities</em>, edited by M. L. Cody and J. M. Diamond, 214–57. Cambridge, <span>MA</span>: Harvard University Press.
 </div>
-<div id="ref-fisher1943">
-<p>Fisher, R. A., A. Steven Corbet, and C. B. Williams. 1943. “The Relation Between the Number of Species and the Number of Individuals in a Random Sample of an Animal Population.” <em>The Journal of Animal Ecology</em> 12 (1): 42. <a href="https://doi.org/10.2307/1411">https://doi.org/10.2307/1411</a>.</p>
+<div id="ref-fisher1943" class="csl-entry">
+Fisher, R. A., A. Steven Corbet, and C. B. Williams. 1943. <span>“The Relation Between the Number of Species and the Number of Individuals in a Random Sample of an Animal Population.”</span> <em>The Journal of Animal Ecology</em> 12 (1): 42. <a href="https://doi.org/10.2307/1411">https://doi.org/10.2307/1411</a>.
 </div>
-<div id="ref-gleason1922">
-<p>Gleason, Henry Allan. 1922. “On the Relation Between Species and Area.” <em>Ecology</em> 3 (2): 158–62. <a href="https://doi.org/10.2307/1929150">https://doi.org/10.2307/1929150</a>.</p>
+<div id="ref-gleason1922" class="csl-entry">
+Gleason, Henry Allan. 1922. <span>“On the Relation Between Species and Area.”</span> <em>Ecology</em> 3 (2): 158–62. <a href="https://doi.org/10.2307/1929150">https://doi.org/10.2307/1929150</a>.
 </div>
-<div id="ref-hurlbert1971">
-<p>Hurlbert, Stuart H. 1971. “The Nonconcept of Species Diversity: A Critique and Alternative Parameters.” <em>Ecology</em> 52 (4): 577–86. <a href="https://doi.org/10.2307/1934145">https://doi.org/10.2307/1934145</a>.</p>
+<div id="ref-hurlbert1971" class="csl-entry">
+Hurlbert, Stuart H. 1971. <span>“The Nonconcept of Species Diversity: A Critique and Alternative Parameters.”</span> <em>Ecology</em> 52 (4): 577–86. <a href="https://doi.org/10.2307/1934145">https://doi.org/10.2307/1934145</a>.
 </div>
-<div id="ref-hutcheson1970">
-<p>Hutcheson, K. 1970. “A Test for Comparing Diversity Based on the Shannon Formula.” <em>Journal of Theoretical Biology</em> 29 (1): 151–54. <a href="https://doi.org/10.1016/0022-5193(70)90124-4">https://doi.org/10.1016/0022-5193(70)90124-4</a>.</p>
+<div id="ref-hutcheson1970" class="csl-entry">
+Hutcheson, K. 1970. <span>“A Test for Comparing Diversity Based on the Shannon Formula.”</span> <em>Journal of Theoretical Biology</em> 29 (1): 151–54. <a href="https://doi.org/10.1016/0022-5193(70)90124-4">https://doi.org/10.1016/0022-5193(70)90124-4</a>.
 </div>
-<div id="ref-kilburn1966">
-<p>Kilburn, Paul D. 1966. “Analysis of the Species-Area Relation.” <em>Ecology</em> 47 (5): 831–43. <a href="https://doi.org/10.2307/1934269">https://doi.org/10.2307/1934269</a>.</p>
+<div id="ref-kilburn1966" class="csl-entry">
+Kilburn, Paul D. 1966. <span>“Analysis of the Species-Area Relation.”</span> <em>Ecology</em> 47 (5): 831–43. <a href="https://doi.org/10.2307/1934269">https://doi.org/10.2307/1934269</a>.
 </div>
-<div id="ref-kintigh2006">
-<p>Kintigh, Keith. 2006. “Ceramic Dating and Type Associations.” In <em>Managing Archaeological Data: Essays in Honor of Sylvia W. Gaines</em>, edited by Jeffrey Hantman and Rachel Most, 17–26. Anthropological Research Paper 57. Tempe, AZ: Arizona State University. <a href="https://doi.org/10.6067/XCV8J38QSS">https://doi.org/10.6067/XCV8J38QSS</a>.</p>
+<div id="ref-kintigh2006" class="csl-entry">
+Kintigh, Keith. 2006. <span>“Ceramic Dating and Type Associations.”</span> In <em>Managing Archaeological Data: Essays in Honor of Sylvia w. Gaines</em>, edited by Jeffrey Hantman and Rachel Most, 17–26. Anthropological Research Paper 57. Tempe, <span>AZ</span>: Arizona State University. <a href="https://doi.org/10.6067/XCV8J38QSS">https://doi.org/10.6067/XCV8J38QSS</a>.
 </div>
-<div id="ref-kintigh1989">
-<p>Kintigh, Keith W. 1989. “Sample Size, Significance, and Measures of Diversity.” In <em>Quantifying Diversity in Archaeology</em>, edited by Robert D. Leonard and George T. Jones, 25–36. New Directions in Archaeology. Cambridge: Cambridge University Press.</p>
+<div id="ref-kintigh1989" class="csl-entry">
+Kintigh, Keith W. 1989. <span>“Sample Size, Significance, and Measures of Diversity.”</span> In <em>Quantifying Diversity in Archaeology</em>, edited by Robert D. Leonard and George T. Jones, 25–36. New Directions in Archaeology. Cambridge: Cambridge University Press.
 </div>
-<div id="ref-laxton1978">
-<p>Laxton, R. R. 1978. “The Measure of Diversity.” <em>Journal of Theoretical Biology</em> 70 (1): 51–67. <a href="https://doi.org/10.1016/0022-5193(78)90302-8">https://doi.org/10.1016/0022-5193(78)90302-8</a>.</p>
+<div id="ref-laxton1978" class="csl-entry">
+Laxton, R. R. 1978. <span>“The Measure of Diversity.”</span> <em>Journal of Theoretical Biology</em> 70 (1): 51–67. <a href="https://doi.org/10.1016/0022-5193(78)90302-8">https://doi.org/10.1016/0022-5193(78)90302-8</a>.
 </div>
-<div id="ref-macarthur1965">
-<p>Macarthur, Robert H. 1965. “Patterns of Species Diversity.” <em>Biological Reviews</em> 40 (4): 510–33. <a href="https://doi.org/10.1111/j.1469-185X.1965.tb00815.x">https://doi.org/10.1111/j.1469-185X.1965.tb00815.x</a>.</p>
+<div id="ref-macarthur1965" class="csl-entry">
+Macarthur, Robert H. 1965. <span>“Patterns of Species Diversity.”</span> <em>Biological Reviews</em> 40 (4): 510–33. <a href="https://doi.org/10.1111/j.1469-185X.1965.tb00815.x">https://doi.org/10.1111/j.1469-185X.1965.tb00815.x</a>.
 </div>
-<div id="ref-magurran1988">
-<p>Magurran, Anne E. 1988. <em>Ecological Diversity and Its Measurement</em>. Princeton, NJ: Princeton University Press.</p>
+<div id="ref-magurran1988" class="csl-entry">
+Magurran, Anne E. 1988. <em>Ecological Diversity and Its Measurement</em>. Princeton, <span>NJ</span>: Princeton University Press.
 </div>
-<div id="ref-margalef1958">
-<p>Margalef, R. 1958. “Information Theory in Ecology.” <em>General Systems</em> 3: 36–71.</p>
+<div id="ref-margalef1958" class="csl-entry">
+Margalef, R. 1958. <span>“Information Theory in Ecology.”</span> <em>General Systems</em> 3: 36–71.
 </div>
-<div id="ref-mcintosh1967">
-<p>McIntosh, Robert P. 1967. “An Index of Diversity and the Relation of Certain Concepts to Diversity.” <em>Ecology</em> 48 (3): 392–404. <a href="https://doi.org/10.2307/1932674">https://doi.org/10.2307/1932674</a>.</p>
+<div id="ref-mcintosh1967" class="csl-entry">
+McIntosh, Robert P. 1967. <span>“An Index of Diversity and the Relation of Certain Concepts to Diversity.”</span> <em>Ecology</em> 48 (3): 392–404. <a href="https://doi.org/10.2307/1932674">https://doi.org/10.2307/1932674</a>.
 </div>
-<div id="ref-menhinick1964">
-<p>Menhinick, Edward F. 1964. “A Comparison of Some Species-Individuals Diversity Indices Applied to Samples of Field Insects.” <em>Ecology</em> 45 (4): 859–61. <a href="https://doi.org/10.2307/1934933">https://doi.org/10.2307/1934933</a>.</p>
+<div id="ref-menhinick1964" class="csl-entry">
+Menhinick, Edward F. 1964. <span>“A Comparison of Some Species-Individuals Diversity Indices Applied to Samples of Field Insects.”</span> <em>Ecology</em> 45 (4): 859–61. <a href="https://doi.org/10.2307/1934933">https://doi.org/10.2307/1934933</a>.
 </div>
-<div id="ref-odum1960">
-<p>Odum, H. T., J. E. Cantlon, and L. S. Kornicker. 1960. “An Organizational Hierarchy Postulate for the Interpretation of Species-Individual Distributions, Species Entropy, Ecosystem Evolution, and the Meaning of a Species-Variety Index.” <em>Ecology</em> 41 (2): 395–95. <a href="https://doi.org/10.2307/1930248">https://doi.org/10.2307/1930248</a>.</p>
+<div id="ref-odum1960" class="csl-entry">
+Odum, H. T., J. E. Cantlon, and L. S. Kornicker. 1960. <span>“An Organizational Hierarchy Postulate for the Interpretation of Species-Individual Distributions, Species Entropy, Ecosystem Evolution, and the Meaning of a Species-Variety Index.”</span> <em>Ecology</em> 41 (2): 395–95. <a href="https://doi.org/10.2307/1930248">https://doi.org/10.2307/1930248</a>.
 </div>
-<div id="ref-peet1974">
-<p>Peet, R. K. 1974. “The Measurement of Species Diversity.” <em>Annual Review of Ecology and Systematics</em> 5 (1): 285–307. <a href="https://doi.org/10.1146/annurev.es.05.110174.001441">https://doi.org/10.1146/annurev.es.05.110174.001441</a>.</p>
+<div id="ref-peet1974" class="csl-entry">
+Peet, R. K. 1974. <span>“The Measurement of Species Diversity.”</span> <em>Annual Review of Ecology and Systematics</em> 5 (1): 285–307. <a href="https://doi.org/10.1146/annurev.es.05.110174.001441">https://doi.org/10.1146/annurev.es.05.110174.001441</a>.
 </div>
-<div id="ref-pielou1975">
-<p>Pielou, E. C. 1975. <em>Ecological Diversity</em>. New York: Wiley.</p>
+<div id="ref-pielou1975" class="csl-entry">
+Pielou, E. C. 1975. <em>Ecological Diversity</em>. New York: Wiley.
 </div>
-<div id="ref-preston1948">
-<p>Preston, F. W. 1948. “The Commonness, and Rarity, of Species.” <em>Ecology</em> 29 (3): 254–83. <a href="https://doi.org/10.2307/1930989">https://doi.org/10.2307/1930989</a>.</p>
+<div id="ref-preston1948" class="csl-entry">
+Preston, F. W. 1948. <span>“The Commonness, and Rarity, of Species.”</span> <em>Ecology</em> 29 (3): 254–83. <a href="https://doi.org/10.2307/1930989">https://doi.org/10.2307/1930989</a>.
 </div>
-<div id="ref-preston1962">
-<p>———. 1962a. “The Canonical Distribution of Commonness and Rarity: Part I.” <em>Ecology</em> 43 (2): 185. <a href="https://doi.org/10.2307/1931976">https://doi.org/10.2307/1931976</a>.</p>
+<div id="ref-preston1962" class="csl-entry">
+———. 1962a. <span>“The Canonical Distribution of Commonness and Rarity: Part i.”</span> <em>Ecology</em> 43 (2): 185. <a href="https://doi.org/10.2307/1931976">https://doi.org/10.2307/1931976</a>.
 </div>
-<div id="ref-preston1962a">
-<p>———. 1962b. “The Canonical Distribution of Commonness and Rarity: Part Ii.” <em>Ecology</em> 43 (3): 410–32. <a href="https://doi.org/10.2307/1933371">https://doi.org/10.2307/1933371</a>.</p>
+<div id="ref-preston1962a" class="csl-entry">
+———. 1962b. <span>“The Canonical Distribution of Commonness and Rarity: Part Ii.”</span> <em>Ecology</em> 43 (3): 410–32. <a href="https://doi.org/10.2307/1933371">https://doi.org/10.2307/1933371</a>.
 </div>
-<div id="ref-robinson1951">
-<p>Robinson, W. S. 1951. “A Method for Chronologically Ordering Archaeological Deposits.” <em>American Antiquity</em> 16 (4): 293–301. <a href="https://doi.org/10.2307/276978">https://doi.org/10.2307/276978</a>.</p>
+<div id="ref-robinson1951" class="csl-entry">
+Robinson, W. S. 1951. <span>“A Method for Chronologically Ordering Archaeological Deposits.”</span> <em>American Antiquity</em> 16 (4): 293–301. <a href="https://doi.org/10.2307/276978">https://doi.org/10.2307/276978</a>.
 </div>
-<div id="ref-routledge1977">
-<p>Routledge, R. D. 1977. “On Whittaker’s Components of Diversity.” <em>Ecology</em> 58 (5): 1120–7. <a href="https://doi.org/10.2307/1936932">https://doi.org/10.2307/1936932</a>.</p>
+<div id="ref-routledge1977" class="csl-entry">
+Routledge, R. D. 1977. <span>“On Whittaker’s Components of Diversity.”</span> <em>Ecology</em> 58 (5): 1120–27. <a href="https://doi.org/10.2307/1936932">https://doi.org/10.2307/1936932</a>.
 </div>
-<div id="ref-sander1968">
-<p>Sander, Howard L. 1968. “Marine Benthic Diversity: A Comparative Study.” <em>The American Naturalist</em> 102 (925): 243–82. <a href="https://www.jstor.org/stable/2459027">https://www.jstor.org/stable/2459027</a>.</p>
+<div id="ref-sander1968" class="csl-entry">
+Sander, Howard L. 1968. <span>“Marine Benthic Diversity: A Comparative Study.”</span> <em>The American Naturalist</em> 102 (925): 243–82. <a href="https://www.jstor.org/stable/2459027">https://www.jstor.org/stable/2459027</a>.
 </div>
-<div id="ref-shannon1948">
-<p>Shannon, C. E. 1948. “A Mathematical Theory of Communication.” <em>The Bell System Technical Journal</em> 27: 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>.</p>
+<div id="ref-shannon1948" class="csl-entry">
+Shannon, C. E. 1948. <span>“A Mathematical Theory of Communication.”</span> <em>The Bell System Technical Journal</em> 27: 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>.
 </div>
-<div id="ref-simpson1949">
-<p>Simpson, E. H. 1949. “Measurement of Diversity.” <em>Nature</em> 163 (4148): 688–88. <a href="https://doi.org/10.1038/163688a0">https://doi.org/10.1038/163688a0</a>.</p>
+<div id="ref-simpson1949" class="csl-entry">
+Simpson, E. H. 1949. <span>“Measurement of Diversity.”</span> <em>Nature</em> 163 (4148): 688–88. <a href="https://doi.org/10.1038/163688a0">https://doi.org/10.1038/163688a0</a>.
 </div>
-<div id="ref-whittaker1960">
-<p>Whittaker, R. H. 1960. “Vegetation of the Siskiyou Mountains, Oregon and California.” <em>Ecological Monographs</em> 30 (3): 279–338. <a href="https://doi.org/10.2307/1943563">https://doi.org/10.2307/1943563</a>.</p>
+<div id="ref-whittaker1960" class="csl-entry">
+Whittaker, R. H. 1960. <span>“Vegetation of the Siskiyou Mountains, Oregon and California.”</span> <em>Ecological Monographs</em> 30 (3): 279–338. <a href="https://doi.org/10.2307/1943563">https://doi.org/10.2307/1943563</a>.
 </div>
-<div id="ref-wilson1984">
-<p>Wilson, M. V., and A. Shmida. 1984. “Measuring Beta Diversity with Presence-Absence Data.” <em>The Journal of Ecology</em> 72 (3): 1055–64. <a href="https://doi.org/10.2307/2259551">https://doi.org/10.2307/2259551</a>.</p>
+<div id="ref-wilson1984" class="csl-entry">
+Wilson, M. V., and A. Shmida. 1984. <span>“Measuring Beta Diversity with Presence-Absence Data.”</span> <em>The Journal of Ecology</em> 72 (3): 1055–64. <a href="https://doi.org/10.2307/2259551">https://doi.org/10.2307/2259551</a>.
 </div>
 </div>
 </div>
