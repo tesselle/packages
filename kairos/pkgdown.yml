@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   kairos: kairos.html
-last_built: 2021-05-27T14:24Z
+last_built: 2021-05-27T14:33Z
 urls:
   reference: https://packages.tesselle.org/kairos/reference
   article: https://packages.tesselle.org/kairos/articles
