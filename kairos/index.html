@@ -19,6 +19,12 @@
     );
   }
 </script><title>Analysis of Chronological Patterns from Archaeological Count Data • kairos</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- Flatly Theme - Light  --><link id="css-light" rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
 <!-- Darkly Theme - Dark --><link id="css-dark" rel="stylesheet" href="https://bootswatch.com/3/darkly/bootstrap.css" media="(prefers-color-scheme: dark)">
 <!-- preferably CSS --><link rel="stylesheet" href="preferably.css">
@@ -34,6 +40,7 @@
     and dating of archaeological assemblages from count data. It allows to
     compute time point estimates (e.g. Mean Ceramic Date) and density
     estimates of the occupation and duration of an archaeological site.">
+<meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
 <meta name="twitter:site" content="@nfrerebeau">
@@ -97,9 +104,10 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="kairos" class="section level1">
+<div id="kairos-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#kairos" class="anchor"></a>kairos</h1></div>
+<a href="#kairos-" class="anchor"></a>kairos <img width="120px" src="reference/figures/logo.png" align="right">
+</h1></div>
 <!-- badges: start -->
 
 <p><a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public."></a> <!-- badges: end --></p>
@@ -119,43 +127,6 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"tesselle/kairos"</span><span class="op">)</span></code></pre></div>
-</div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Load packages</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span></code></pre></div>
-<p><strong>kairos</strong> uses a set of S4 classes that represent different special types of matrix. Please refer to the documentation of the <a href="https://github.com/tesselle/arkhe"><strong>arkhe</strong></a> package where these classes are defined.</p>
-<p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
-<p>This package provides an implementation of the chronological modeling method developed by Bellanger and Husi (<a href="https://doi.org/10.1016/j.jas.2011.06.031">2012</a>). This method is slightly modified here and allows the construction of different probability density curves of archaeological assemblage dates (<em>event</em>, <em>activity</em> and <em>tempo</em>). Note that this implementation is experimental (see <code>vignette("dating")</code>).</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Coerce dataset to abundance (count) matrix</span>
-<span class="va">zuni_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://arkhe.tesselle.org/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span>
-<span class="co">## Assume that some assemblages are reliably dated (this is NOT a real example)</span>
-<span class="co">## The names of the vector entries must match the names of the assemblages</span>
-<span class="va">zuni_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  LZ0569 <span class="op">=</span> <span class="fl">1097</span>, LZ0279 <span class="op">=</span> <span class="fl">1119</span>, CS16 <span class="op">=</span> <span class="fl">1328</span>, LZ0066 <span class="op">=</span> <span class="fl">1111</span>,
-  LZ0852 <span class="op">=</span> <span class="fl">1216</span>, LZ1209 <span class="op">=</span> <span class="fl">1251</span>, CS144 <span class="op">=</span> <span class="fl">1262</span>, LZ0563 <span class="op">=</span> <span class="fl">1206</span>,
-  LZ0329 <span class="op">=</span> <span class="fl">1076</span>, LZ0005Q <span class="op">=</span> <span class="fl">859</span>, LZ0322 <span class="op">=</span> <span class="fl">1109</span>, LZ0067 <span class="op">=</span> <span class="fl">863</span>,
-  LZ0578 <span class="op">=</span> <span class="fl">1180</span>, LZ0227 <span class="op">=</span> <span class="fl">1104</span>, LZ0610 <span class="op">=</span> <span class="fl">1074</span>
-<span class="op">)</span>
-
-<span class="co">## Model the event date for each assemblage</span>
-<span class="va">event</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/event.html">date_event</a></span><span class="op">(</span><span class="va">zuni_counts</span>, dates <span class="op">=</span> <span class="va">zuni_dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span><span class="op">)</span>
-
-<span class="co">## Plot activity and tempo distributions</span>
-<span class="fu"><a href="reference/plot_event.html">plot_event</a></span><span class="op">(</span><span class="va">event</span>, type <span class="op">=</span> <span class="st">"activity"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Activity plot"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu"><a href="reference/plot_event.html">plot_event</a></span><span class="op">(</span><span class="va">event</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Tempo plot"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-date-1.png"><img src="reference/figures/README-date-2.png"></p>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">

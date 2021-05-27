@@ -19,6 +19,12 @@
     );
   }
 </script><title>Manual • kairos</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- Flatly Theme - Light  --><link id="css-light" rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
 <!-- Darkly Theme - Dark --><link id="css-dark" rel="stylesheet" href="https://bootswatch.com/3/darkly/bootstrap.css" media="(prefers-color-scheme: dark)">
 <!-- preferably CSS --><link rel="stylesheet" href="../preferably.css">
@@ -30,6 +36,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><script src="../extra.js"></script><meta property="og:title" content="Manual">
 <meta property="og:description" content="kairos">
+<meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
 <meta name="twitter:site" content="@nfrerebeau">
@@ -97,7 +104,7 @@
       <h1 data-toc-skip>Manual</h1>
                         <h4 class="author">N. Frerebeau</h4>
             
-            <h4 class="date">2021-05-26</h4>
+            <h4 class="date">2021-05-27</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/vignettes/kairos.Rmd"><code>vignettes/kairos.Rmd</code></a></small>
       <div class="hidden name"><code>kairos.Rmd</code></div>
@@ -377,12 +384,12 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">bootstrap_event</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span>
 <span class="co">#&gt;              min      mean       max        Q5       Q95</span>
-<span class="co">#&gt; LZ1105 1142.3539 1172.3360 1198.2262 1153.7389 1196.2964</span>
-<span class="co">#&gt; LZ1103 1080.5701 1140.2207 1200.9144 1106.4670 1171.2792</span>
-<span class="co">#&gt; LZ1100 1095.5036 1152.0098 1226.9408 1102.8394 1213.5755</span>
-<span class="co">#&gt; LZ1099 1089.0998 1097.5665 1109.3813 1089.7746 1105.8421</span>
-<span class="co">#&gt; LZ1097  863.7093 1086.2197 1187.4601  939.8510 1145.7251</span>
-<span class="co">#&gt; LZ1096  725.8462  833.1062  952.7848  725.8462  924.4175</span></code></pre></div>
+<span class="co">#&gt; LZ1105 1134.4961 1168.8082 1197.8089 1148.1325 1190.8728</span>
+<span class="co">#&gt; LZ1103 1082.8319 1149.2885 1198.1509 1106.3384 1188.5411</span>
+<span class="co">#&gt; LZ1100 1094.7989 1165.2010 1232.6091 1097.0620 1220.7883</span>
+<span class="co">#&gt; LZ1099 1089.2531 1098.3437 1108.4795 1091.8755 1106.2556</span>
+<span class="co">#&gt; LZ1097  979.5491 1079.3487 1171.7002  996.5124 1149.9042</span>
+<span class="co">#&gt; LZ1096  725.8462  823.3519  964.1317  725.8462  936.5524</span></code></pre></div>
 </div>
 </div>
 <div id="references" class="section level1 unnumbered">
