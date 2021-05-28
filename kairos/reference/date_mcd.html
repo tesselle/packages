@@ -132,6 +132,18 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/bibliography.html">Bibliography</a>
+    </li>
+  </ul>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -272,13 +284,13 @@ New York: Academic Press.</p>
 <span class='co'>## Bootstrap resampling</span>
 <span class='va'>boot</span> <span class='op'>&lt;-</span> <span class='fu'>bootstrap_mcd</span><span class='op'>(</span><span class='va'>mc_dates</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>boot</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;              min      mean       max       Q5       Q95
-#&gt; LZ1105 1125.0000 1161.1458 1209.3750 1130.938 1191.4844
-#&gt; LZ1103 1069.5946 1128.0631 1176.6892 1082.111 1173.1757
-#&gt; LZ1100 1094.6429 1156.5476 1214.2857 1111.518 1192.8571
-#&gt; LZ1099 1081.2500 1089.2708 1096.8750 1082.656 1096.8750
-#&gt; LZ1097  982.8125 1088.0729 1175.0000 1005.078 1158.1250
-#&gt; LZ1096  737.5000  839.3452  996.4286  737.500  944.6429</div><div class='input'>
+</div><div class='output co'>#&gt;             min      mean       max        Q5      Q95
+#&gt; LZ1105 1131.250 1160.1042 1196.8750 1141.3281 1190.234
+#&gt; LZ1103 1076.351 1135.2590 1175.6757 1090.2703 1173.514
+#&gt; LZ1100 1073.214 1158.3333 1201.7857 1104.6429 1199.107
+#&gt; LZ1099 1081.250 1091.1458 1100.0000 1084.3750 1096.875
+#&gt; LZ1097  918.750 1092.9167 1193.7500  972.5000 1175.000
+#&gt; LZ1096  737.500  858.3333  996.4286  760.8036  973.125</div><div class='input'>
 <span class='co'>## Jackknife resampling</span>
 <span class='va'>jack</span> <span class='op'>&lt;-</span> <span class='fu'>jackknife_mcd</span><span class='op'>(</span><span class='va'>mc_dates</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>jack</span><span class='op'>)</span>

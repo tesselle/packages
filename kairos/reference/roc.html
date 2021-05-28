@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Aoristic Analysis — aoristic • kairos</title>
+<title>Rate of Change — roc • kairos</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,8 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Aoristic Analysis — aoristic" />
-<meta property="og:description" content="Computes the aoristic sum." />
+<meta property="og:title" content="Rate of Change — roc" />
+<meta property="og:description" content="Computes the rate of change from an aoristic analysis." />
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -170,111 +170,59 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Aoristic Analysis</h1>
+    <h1>Rate of Change</h1>
     <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R'><code>R/AllGenerics.R</code></a>, <a href='https://github.com/tesselle/kairos/blob/master/R/sum_aoristic.R'><code>R/sum_aoristic.R</code></a></small>
-    <div class="hidden name"><code>aoristic.Rd</code></div>
+    <div class="hidden name"><code>roc.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Computes the aoristic sum.</p>
+    <p>Computes the rate of change from an aoristic analysis.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span>, <span class='va'>...</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>rate_roc</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='co'># S4 method for numeric,numeric</span>
-<span class='fu'>sum_aoristic</span><span class='op'>(</span>
-  <span class='va'>x</span>,
-  <span class='va'>y</span>,
-  step <span class='op'>=</span> <span class='fl'>1</span>,
-  start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,
-  stop <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>y</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,
-  weight <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  groups <span class='op'>=</span> <span class='cn'>NULL</span>
-<span class='op'>)</span>
-
-<span class='co'># S4 method for list,missing</span>
-<span class='fu'>sum_aoristic</span><span class='op'>(</span>
-  <span class='va'>x</span>,
-  step <span class='op'>=</span> <span class='fl'>1</span>,
-  start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>$</span><span class='va'>from</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,
-  stop <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>$</span><span class='va'>to</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,
-  weight <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  groups <span class='op'>=</span> <span class='cn'>NULL</span>
-<span class='op'>)</span></pre>
+<span class='co'># S4 method for AoristicSum</span>
+<span class='fu'>rate_roc</span><span class='op'>(</span><span class='va'>object</span>, n <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector. If <code>y</code> is missing, must be a <code><a href='https://rdrr.io/r/base/list.html'>list</a></code> (or a
-<code><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></code>) with <code>numeric</code> components (columns) <code>from</code> and <code>to</code>.</p></td>
-    </tr>
-    <tr>
-      <th>y</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector. If missing, an attempt is made to interpret
-<code>x</code> in a suitable way.</p></td>
+      <th>object</th>
+      <td><p>An <code><a href='AoristicSum-class.html'>AoristicSum</a></code> object.</p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>Currently not used.</p></td>
     </tr>
     <tr>
-      <th>step</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the step size, i.e. the
-width of each time step in the time series (in years AD; defaults to
-\(1\)).</p></td>
-    </tr>
-    <tr>
-      <th>start</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the beginning of the time
-window (in years AD).</p></td>
-    </tr>
-    <tr>
-      <th>stop</th>
-      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the end of the time
-window (in years AD).</p></td>
-    </tr>
-    <tr>
-      <th>weight</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: . Defaults to <code>FALSE</code> (the aoristic sum
-is the number of elements within a time step).</p></td>
-    </tr>
-    <tr>
-      <th>groups</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/factor.html'>factor</a></code> vector in the sense that <code><a href='https://rdrr.io/r/base/factor.html'>as.factor(groups)</a></code>
-defines the grouping. If <code>x</code> is a <code>list</code> (or a <code>data.frame</code>), <code>groups</code> can
-be a length-one vector giving the index of the grouping component (column)
-of <code>x</code>.</p></td>
+      <th>n</th>
+      <td><p>A non-negative <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> giving the number of replications (see
+details).</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An <a href='AoristicSum-class.html'>AoristicSum</a> object.</p>
+    <p>A <a href='RateOfChange-class.html'>RateOfChange</a> object.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>Crema, E. R. (2012). Modelling Temporal Uncertainty in Archaeological
+    <p>Baxter, M. J. &amp; Cool, H. E. M. (2016). Reinventing the Wheel? Modelling
+Temporal Uncertainty with Applications to Brooch Distributions in Roman
+Britain. <em>Journal of Archaeological Science</em>, 66: 120-27.
+doi: <a href='https://doi.org/10.1016/j.jas.2015.12.007'>10.1016/j.jas.2015.12.007</a>
+.</p>
+<p>Crema, E. R. (2012). Modelling Temporal Uncertainty in Archaeological
 Analysis. <em>Journal of Archaeological Method and Theory</em>, 19(3): 440-61.
 doi: <a href='https://doi.org/10.1007/s10816-011-9122-3'>10.1007/s10816-011-9122-3</a>
 .</p>
-<p>Johnson, I. (2004). Aoristic Analysis: Seeds of a New Approach to Mapping
-Archaeological Distributions through Time. <em>In</em> Ausserer, K. F., Börner, W.,
-Goriany, M. &amp; Karlhuber-Vöckl, L. (ed.), <em>Enter the Past - The E-Way into
-the Four Dimensions of Cultural Heritage</em>, Oxford: Archaeopress, p. 448-52.
-BAR International Series 1227.
-doi: <a href='https://doi.org/10.15496/publikation-2085'>10.15496/publikation-2085</a></p>
-<p>Ratcliffe, J. H. (2000). Aoristic Analysis: The Spatial Interpretation of
-Unspecific Temporal Events. <em>International Journal of Geographical
-Information Science</em>, 14(7): 669-79. doi: <a href='https://doi.org/10.1080/136588100424963'>10.1080/136588100424963</a>
-.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='roc.html'>rate_roc()</a></code>, <code><a href='plot_time.html'>plot_time()</a></code></p>
+    <div class='dont-index'><p><code><a href='aoristic.html'>sum_aoristic()</a></code>, <code><a href='plot_time.html'>plot_time()</a></code></p>
 <p>Other chronological analysis: 
+<code><a href='aoristic.html'>aoristic</a></code>,
 <code><a href='apportion.html'>apportion</a>()</code>,
-<code><a href='fit.html'>fit</a></code>,
-<code><a href='roc.html'>roc</a></code></p></div>
+<code><a href='fit.html'>fit</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>
@@ -312,20 +260,20 @@ Information Science</em>, 14(7): 669-79. doi: <a href='https://doi.org/10.1080/1
 <span class='va'>span</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>span</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'>## Calculate aoristic sum (normal)</span>
-<span class='va'>aorist_raw</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='va'>aorist_raw</span> <span class='op'>&lt;-</span> <span class='fu'><a href='aoristic.html'>sum_aoristic</a></span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>aorist_raw</span><span class='op'>)</span>
-</div><div class='img'><img src='aoristic-1.png' alt='' width='700' height='433' /></div><div class='input'>
+</div><div class='img'><img src='roc-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Calculate aoristic sum (weights)</span>
-<span class='va'>aorist_weigth</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>aorist_weigth</span> <span class='op'>&lt;-</span> <span class='fu'><a href='aoristic.html'>sum_aoristic</a></span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span><span class='op'>)</span>
-</div><div class='img'><img src='aoristic-2.png' alt='' width='700' height='433' /></div><div class='input'>
+</div><div class='img'><img src='roc-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Rate of change</span>
-<span class='va'>aorist_roc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='roc.html'>rate_roc</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
+<span class='va'>aorist_roc</span> <span class='op'>&lt;-</span> <span class='fu'>rate_roc</span><span class='op'>(</span><span class='va'>aorist_weigth</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
 <span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>aorist_roc</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>
     axis.text.x <span class='op'>=</span> <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>angle <span class='op'>=</span> <span class='fl'>90</span>, hjust <span class='op'>=</span> <span class='fl'>1</span>, vjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>
   <span class='op'>)</span>
-</div><div class='img'><img src='aoristic-3.png' alt='' width='700' height='433' /></div></pre>
+</div><div class='img'><img src='roc-3.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

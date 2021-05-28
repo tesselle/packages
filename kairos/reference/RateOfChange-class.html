@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Objects exported from other packages — reexports • kairos</title>
+<title>Rate of Change — RateOfChange-class • kairos</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,13 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Objects exported from other packages — reexports" />
-<meta property="og:description" content="These objects are imported from other packages. Follow the links
-below to see their documentation.
-
-  arkheCountMatrix, as_count, as_features, as_long, remove_NA, remove_empty, remove_zero, replace_NA
-
-" />
+<meta property="og:title" content="Rate of Change — RateOfChange-class" />
+<meta property="og:description" content="An S4 class to represent rates of change from an aoristic analysis." />
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -175,22 +170,58 @@ below to see their documentation.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Objects exported from other packages</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/reexport.R'><code>R/reexport.R</code></a></small>
-    <div class="hidden name"><code>reexports.Rd</code></div>
+    <h1>Rate of Change</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllClasses.R'><code>R/AllClasses.R</code></a></small>
+    <div class="hidden name"><code>RateOfChange-class.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>These objects are imported from other packages. Follow the links
-below to see their documentation.</p>
-<dl>
-  <dt>arkhe</dt><dd><p><code><a href='https://arkhe.tesselle.org/reference/CountMatrix-class.html'>CountMatrix</a></code>, <code><a href='https://arkhe.tesselle.org/reference/coerce.html'>as_count</a></code>, <code><a href='https://arkhe.tesselle.org/reference/coerce.html'>as_features</a></code>, <code><a href='https://arkhe.tesselle.org/reference/coerce.html'>as_long</a></code>, <code><a href='https://arkhe.tesselle.org/reference/remove.html'>remove_NA</a></code>, <code><a href='https://arkhe.tesselle.org/reference/remove.html'>remove_empty</a></code>, <code><a href='https://arkhe.tesselle.org/reference/remove.html'>remove_zero</a></code>, <code><a href='https://arkhe.tesselle.org/reference/replace.html'>replace_NA</a></code></p></dd>
-
-</dl>
+    <p>An S4 class to represent rates of change from an aoristic analysis.</p>
     </div>
 
 
 
+    <h2 class="hasAnchor" id="slots"><a class="anchor" href="#slots"></a>Slots</h2>
+
+    
+
+<dl>
+<dt><code>blocks</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector giving the time-blocks.</p></dd>
+
+<dt><code>rates</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> <code><a href='https://rdrr.io/r/base/array.html'>array</a></code> giving the rates of change.</p></dd>
+
+</dl>
+    <h2 class="hasAnchor" id="subset"><a class="anchor" href="#subset"></a>Subset</h2>
+
+    
+
+<p>In the code snippets below, <code>x</code> is an <code>RateOfChange</code> object.</p><dl>
+<dt><code>x[[i]]</code></dt><dd><p>Extracts information from a slot selected by subscript <code>i</code>.
+<code>i</code> is a length-one <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector. Returns the corresponding slot
+values.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="coerce"><a class="anchor" href="#coerce"></a>Coerce</h2>
+
+    
+
+<p>In the code snippets below, <code>x</code> is an <code>RateOfChange</code> object.</p><dl>
+<dt><code><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame(x)</a></code></dt><dd><p>Coerces to a <code><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></code>.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other classes: 
+<code><a href='AoristicSum-class.html'>AoristicSum-class</a></code>,
+<code><a href='CountApportion-class.html'>CountApportion-class</a></code>,
+<code><a href='DateEvent-class.html'>DateEvent-class</a></code>,
+<code><a href='DateMCD-class.html'>DateMCD-class</a></code>,
+<code><a href='IncrementTest-class.html'>IncrementTest-class</a></code></p></div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>N. Frerebeau</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
