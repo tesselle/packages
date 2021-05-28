@@ -295,11 +295,11 @@ Information Science</em>, 14(7): 669-79. doi: <a href='https://doi.org/10.1080/1
 <span class='va'>span</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>span</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'>## Calculate aoristic sum (normal)</span>
-<span class='va'>aorist_raw</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>25</span>, weight <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='va'>aorist_raw</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>aorist_raw</span><span class='op'>)</span>
 </div><div class='img'><img src='aoristic-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Calculate aoristic sum (weights)</span>
-<span class='va'>aorist_weigth</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>25</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>aorist_weigth</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span><span class='op'>)</span>
 </div><div class='img'><img src='aoristic-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
