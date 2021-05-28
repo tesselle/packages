@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Aoristic Sum — CountApportion-class • kairos</title>
+<title>Count Apportioning — CountApportion-class • kairos</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,7 +74,7 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Aoristic Sum — CountApportion-class" />
+<meta property="og:title" content="Count Apportioning — CountApportion-class" />
 <meta property="og:description" content="An S4 class to represent an artifact apportioning results." />
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -158,7 +158,7 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Aoristic Sum</h1>
+    <h1>Count Apportioning</h1>
     <small class="dont-index">Source: <a href='https://github.com/tesselle/kairos/blob/master/R/AllClasses.R'><code>R/AllClasses.R</code></a></small>
     <div class="hidden name"><code>CountApportion-class.Rd</code></div>
     </div>
@@ -177,8 +177,20 @@
 <dt><code>p</code></dt><dd><p>An <code><a href='https://rdrr.io/r/base/array.html'>array</a></code> giving the probability of apportioning an artifact type
 to a given period.</p></dd>
 
-<dt><code>a</code></dt><dd><p>An <code><a href='https://rdrr.io/r/base/array.html'>array</a></code> giving the apportioning of artifact types per site and
-per period.</p></dd>
+<dt><code>apportion</code></dt><dd><p>An <code><a href='https://rdrr.io/r/base/array.html'>array</a></code> giving the apportioning of artifact types per
+site and per period.</p></dd>
+
+<dt><code>method</code></dt><dd><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the distribution used for
+apportioning (type popularity curve).</p></dd>
+
+<dt><code>from</code></dt><dd><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the beginning of the
+period of interest (in years AD).</p></dd>
+
+<dt><code>to</code></dt><dd><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector giving the end of the period of
+interest (in years AD).</p></dd>
+
+<dt><code>step</code></dt><dd><p>A length-one <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> vector giving the step size, i.e. the
+width of each time step for apportioning (in years AD).</p></dd>
 
 </dl>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
