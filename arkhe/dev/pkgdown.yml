@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   arkhe: arkhe.html
-last_built: 2021-06-06T16:33Z
+last_built: 2021-06-06T16:52Z
 urls:
   reference: https://packages.tesselle.org/arkhe/reference
   article: https://packages.tesselle.org/arkhe/articles
