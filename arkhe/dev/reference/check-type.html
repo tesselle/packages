@@ -76,8 +76,8 @@
 
 <meta property="og:title" content="Check Data Types — check-type" />
 <meta property="og:description" content="Check Data Types" />
-<meta property="og:image" content="https://arkhe.tesselle.org/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -170,9 +170,9 @@
     <p>Check Data Types</p>
     </div>
 
-    <pre class="usage"><span class='fu'>check_type</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>expected</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>assert_type</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>expected</span><span class='op'>)</span>
 
-<span class='fu'>check_scalar</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>expected</span>, strict <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
+<span class='fu'>assert_scalar</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>expected</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -187,24 +187,18 @@
 type. It must be one of "<code>list</code>", "<code>atomic</code>", "<code>vector</code>", "<code>numeric</code>",
 "<code>integer</code>", "<code>double</code>", "<code>character</code>" or "<code>logical</code>".</p></td>
     </tr>
-    <tr>
-      <th>strict</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should length-zero object be
-tested?</p></td>
-    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Throw an error, if any.</p>
+    <p>Throws an error, if any, and returns <code>x</code> invisibly otherwise.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other check: 
+    <div class='dont-index'><p>Other validation methods: 
 <code><a href='check-attribute.html'>check-attribute</a></code>,
-<code><a href='check-graph.html'>check-graph</a></code>,
-<code><a href='check-matrix.html'>check-matrix</a></code>,
 <code><a href='check-missing.html'>check-missing</a></code>,
-<code><a href='check-numeric.html'>check-numeric</a></code></p></div>
+<code><a href='check-numeric.html'>check-numeric</a></code>,
+<code><a href='validate.html'>validate</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

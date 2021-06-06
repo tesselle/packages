@@ -75,8 +75,8 @@
   <script src="../extra.js"></script>
 
 <meta property="og:title" content="Function reference" />
-<meta property="og:image" content="https://arkhe.tesselle.org/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -241,7 +241,7 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="subset.html">`[`(<i>&lt;AbundanceMatrix&gt;</i>)</a></code> <code><a href="subset.html">`[`(<i>&lt;CompositionMatrix&gt;</i>)</a></code> <code><a href="subset.html">`[&lt;-`(<i>&lt;AbundanceMatrix&gt;</i>)</a></code> <code><a href="subset.html">`[[&lt;-`(<i>&lt;AbundanceMatrix&gt;</i>)</a></code> </p>
+          <p><code><a href="subset.html">`[`(<i>&lt;AbundanceMatrix&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="subset.html">`[`(<i>&lt;CompositionMatrix&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="subset.html">`[&lt;-`(<i>&lt;AbundanceMatrix&gt;</i>)</a></code> <code><a href="subset.html">`[[&lt;-`(<i>&lt;AbundanceMatrix&gt;</i>)</a></code> </p>
         </td>
         <td><p>Extract or Replace Parts of an Object</p></td>
       </tr>
@@ -260,13 +260,13 @@
       <tr>
         
         <td>
-          <p><code><a href="remove.html">remove_NA()</a></code> <code><a href="remove.html">remove_empty()</a></code> <code><a href="remove.html">remove_zero()</a></code> </p>
+          <p><code><a href="remove.html">remove_NA()</a></code> <code><a href="remove.html">remove_Inf()</a></code> <code><a href="remove.html">remove_empty()</a></code> <code><a href="remove.html">remove_zero()</a></code> </p>
         </td>
         <td><p>Data Cleaning</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="replace.html">replace_NA()</a></code> </p>
+          <p><code><a href="replace.html">replace_NA()</a></code> <code><a href="replace.html">replace_Inf()</a></code> <code><a href="replace.html">replace_zero()</a></code> </p>
         </td>
         <td><p>Data Replacement</p></td>
       </tr>
@@ -291,7 +291,7 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="predicate-numeric.html">is_missing()</a></code> <code><a href="predicate-numeric.html">is_zero()</a></code> <code><a href="predicate-numeric.html">is_odd()</a></code> <code><a href="predicate-numeric.html">is_even()</a></code> <code><a href="predicate-numeric.html">is_positive()</a></code> <code><a href="predicate-numeric.html">is_negative()</a></code> <code><a href="predicate-numeric.html">is_whole()</a></code> </p>
+          <p><code><a href="predicate-numeric.html">is_zero()</a></code> <code><a href="predicate-numeric.html">is_odd()</a></code> <code><a href="predicate-numeric.html">is_even()</a></code> <code><a href="predicate-numeric.html">is_positive()</a></code> <code><a href="predicate-numeric.html">is_negative()</a></code> <code><a href="predicate-numeric.html">is_whole()</a></code> </p>
         </td>
         <td><p>Numeric Predicates</p></td>
       </tr><tr>
@@ -315,7 +315,7 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="predicate-utils.html">is_empty()</a></code> <code><a href="predicate-utils.html">is_named()</a></code> </p>
+          <p><code><a href="predicate-utils.html">has_length()</a></code> <code><a href="predicate-utils.html">has_names()</a></code> <code><a href="predicate-utils.html">has_missing()</a></code> <code><a href="predicate-utils.html">has_infinite()</a></code> <code><a href="predicate-utils.html">is_empty()</a></code> </p>
         </td>
         <td><p>Utility Predicates</p></td>
       </tr>
