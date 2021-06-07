@@ -75,9 +75,9 @@
   <script src="../extra.js"></script>
 
 <meta property="og:title" content="Event Plot — plot_event" />
-<meta property="og:description" content="Produces an activity or tempo plot." />
+<meta property="og:description" content="Produces an activity or a tempo plot." />
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -176,26 +176,28 @@
     </div>
 
     <div class="ref-description">
-    <p>Produces an activity or tempo plot.</p>
+    <p>Produces an activity or a tempo plot.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>plot_event</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
-
-<span class='co'># S4 method for DateEvent</span>
-<span class='fu'>plot_event</span><span class='op'>(</span>
+    <pre class="usage"><span class='co'># S4 method for DateEvent</span>
+<span class='fu'>autoplot</span><span class='op'>(</span>
   <span class='va'>object</span>,
+  <span class='va'>...</span>,
   type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"activity"</span>, <span class='st'>"tempo"</span><span class='op'>)</span>,
   event <span class='op'>=</span> <span class='cn'>FALSE</span>,
   select <span class='op'>=</span> <span class='fl'>1</span>,
   n <span class='op'>=</span> <span class='fl'>500</span>
-<span class='op'>)</span></pre>
+<span class='op'>)</span>
+
+<span class='co'># S4 method for DateEvent,missing</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"activity"</span>, <span class='st'>"tempo"</span><span class='op'>)</span>, event <span class='op'>=</span> <span class='cn'>FALSE</span>, select <span class='op'>=</span> <span class='fl'>1</span>, n <span class='op'>=</span> <span class='fl'>500</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>object</th>
-      <td><p>An object of class <a href='DateEvent-class.html'>DateEvent</a> to be plotted.</p></td>
+      <th>object, x</th>
+      <td><p>A <a href='DateEvent-class.html'>DateEvent</a> object.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -226,7 +228,13 @@ length of the vector of quantiles for density computation.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p>
+    
+<ul>
+<li><p><code>autoplot()</code> returns a <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p></li>
+<li><p><code><a href='https://rdrr.io/r/graphics/plot.default.html'>plot()</a></code> is called it for its side-effects: it results in a graphic being
+displayed (invisibly returns <code>x</code>).</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="event-and-acccumulation-dates"><a class="anchor" href="#event-and-acccumulation-dates"></a>Event and Acccumulation Dates</h2>
 
     

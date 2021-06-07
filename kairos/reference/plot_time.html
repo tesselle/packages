@@ -77,7 +77,7 @@
 <meta property="og:title" content="Abundance vs Time Plot — plot_time" />
 <meta property="og:description" content="Produces an abundance vs time diagram." />
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -179,37 +179,49 @@
     <p>Produces an abundance <em>vs</em> time diagram.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>dates</span>, <span class='va'>...</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='co'># S4 method for CountMatrix,numeric</span>
+<span class='co'># S4 method for CountMatrix</span>
 <span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>dates</span>, facet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 
-<span class='co'># S4 method for AoristicSum,ANY</span>
-<span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='co'># S4 method for AoristicSum</span>
+<span class='fu'>autoplot</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 
-<span class='co'># S4 method for RateOfChange,ANY</span>
-<span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='co'># S4 method for AoristicSum,missing</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># S4 method for RateOfChange</span>
+<span class='fu'>autoplot</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># S4 method for RateOfChange,missing</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># S4 method for DateMCD</span>
+<span class='fu'>autoplot</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span>, facet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 
 <span class='co'># S4 method for DateMCD,missing</span>
-<span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, facet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, facet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># S4 method for IncrementTest</span>
+<span class='fu'>autoplot</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>...</span>, level <span class='op'>=</span> <span class='fl'>0.95</span>, roll <span class='op'>=</span> <span class='cn'>FALSE</span>, window <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
 
 <span class='co'># S4 method for IncrementTest,missing</span>
-<span class='fu'>plot_time</span><span class='op'>(</span><span class='va'>object</span>, level <span class='op'>=</span> <span class='fl'>0.95</span>, roll <span class='op'>=</span> <span class='cn'>FALSE</span>, window <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span></pre>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, level <span class='op'>=</span> <span class='fl'>0.95</span>, roll <span class='op'>=</span> <span class='cn'>FALSE</span>, window <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>object</th>
-      <td><p>A <a href='https://arkhe.tesselle.org/reference/CountMatrix-class.html'>arkhe::CountMatrix</a> object.</p></td>
-    </tr>
-    <tr>
-      <th>dates</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector of dates.</p></td>
+      <th>object, x</th>
+      <td><p>An object to be plotted.</p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>Currently not used.</p></td>
+    </tr>
+    <tr>
+      <th>dates</th>
+      <td><p>A <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector of dates.</p></td>
     </tr>
     <tr>
       <th>facet</th>
@@ -235,7 +247,14 @@ window. Only used if <code>roll</code> is <code>TRUE</code>.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p>
+    
+<ul>
+<li><p><code>plot_time()</code> returns a <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p></li>
+<li><p><code>autoplot()</code> returns a <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p></li>
+<li><p><code><a href='https://rdrr.io/r/graphics/plot.default.html'>plot()</a></code> is called it for its side-effects: it results in a graphic being
+displayed (invisibly returns <code>x</code>).</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Displaying FIT results on an abundance <em>vs</em> time diagram is adapted from Ben
@@ -255,7 +274,7 @@ selection. If so, shading highlights the data points where
 
     <div class='dont-index'><p><code><a href='date_mcd.html'>date_mcd()</a></code>, <code><a href='aoristic.html'>sum_aoristic()</a></code>, <code><a href='fit.html'>test_fit()</a></code></p>
 <p>Other plotting methods: 
-<code><a href='plot_event.html'>plot_event</a>()</code></p></div>
+<code><a href='plot_event.html'>plot_event</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

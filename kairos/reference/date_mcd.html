@@ -77,7 +77,7 @@
 <meta property="og:title" content="Mean Ceramic Date — date_mcd" />
 <meta property="og:description" content="Estimates the Mean Ceramic Date of an assemblage." />
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -279,7 +279,7 @@ New York: Academic Press.</p>
 <span class='va'>mc_dates</span> <span class='op'>&lt;-</span> <span class='fu'>date_mcd</span><span class='op'>(</span><span class='va'>counts</span>, dates <span class='op'>=</span> <span class='va'>mid</span><span class='op'>)</span>
 
 <span class='co'>## Plot</span>
-<span class='fu'><a href='plot_time.html'>plot_time</a></span><span class='op'>(</span><span class='va'>mc_dates</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>mc_dates</span><span class='op'>)</span>
 </div><div class='img'><img src='date_mcd-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Bootstrap resampling</span>
 <span class='va'>boot</span> <span class='op'>&lt;-</span> <span class='fu'>bootstrap_mcd</span><span class='op'>(</span><span class='va'>mc_dates</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
