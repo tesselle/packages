@@ -4,8 +4,8 @@ pkgdown_sha: ~
 articles:
   crameri: crameri.html
   tol: tol.html
-last_built: 2021-05-24T17:37Z
+last_built: 2021-06-09T15:13Z
 urls:
-  reference: https://khroma.tesselle.org/reference
-  article: https://khroma.tesselle.org/articles
+  reference: https://packages.tesselle.org/khroma/reference
+  article: https://packages.tesselle.org/khroma/articles
 
