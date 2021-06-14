@@ -25,13 +25,13 @@ MD5sum: c16116a1186e79c1512f81f217ed38bc
 NeedsCompilation: no
 
 Package: khroma
-Version: 1.5.0
+Version: 1.6.0
 Depends: R (>= 3.3)
-Imports: ggplot2, grDevices, grid, scales, spacesXYZ
-Suggests: covr, crayon, fansi, knitr, rmarkdown, testthat (>= 3.0.0),
-        vdiffr
-License: GPL-3
-MD5sum: 4161e509ed203f904afa6ea3668b79a1
+Imports: grDevices, grid, stats, utils
+Suggests: covr, crayon, fansi, ggplot2, knitr, rmarkdown, scales,
+        spacesXYZ, testthat (>= 3.0.0), vdiffr
+License: GPL (>= 3)
+MD5sum: 764938ac6ba6a8cc5697baa84883dbe4
 NeedsCompilation: no
 
 Package: tabula
