@@ -156,33 +156,96 @@
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Load packages</span>
+<code class="sourceCode R"><span class="co">## Load packages</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/">khroma</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></code></pre></div>
-<div id="colour-palettes-and-scales" class="section level3">
+
+<span class="co">## Install extra packages (if needed)</span>
+<span class="co"># install.packages(c("ggplot2", "spacesXYZ"))</span></code></pre></div>
+<details><p><summary><strong>Available palettes</strong> (click to expand) </summary></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Get a table of available palettes</span>
+<span class="fu"><a href="reference/info.html">info</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt;             palette        type max missing</span>
+<span class="co">#&gt; 1              broc   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 2              cork   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 3               vik   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 4            lisbon   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 5            tofino   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 6            berlin   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 7              roma   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 8               bam   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 9            vanimo   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 10           oleron   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 11           bukavu   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 12              fes   diverging 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 13            devon  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 14          lajolla  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 15           bamako  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 16            davos  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 17           bilbao  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 18             nuuk  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 19             oslo  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 20            grayC  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 21           hawaii  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 22            lapaz  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 23            tokyo  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 24             buda  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 25            acton  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 26            turku  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 27            imola  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 28           batlow  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 29          batlowW  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 30          batlowK  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 31            brocO  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 32            corkO  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 33             vikO  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 34            romaO  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 35             bamO  sequential 256    &lt;NA&gt;</span>
+<span class="co">#&gt; 36           bright qualitative   7    &lt;NA&gt;</span>
+<span class="co">#&gt; 37         contrast qualitative   3    &lt;NA&gt;</span>
+<span class="co">#&gt; 38          vibrant qualitative   7    &lt;NA&gt;</span>
+<span class="co">#&gt; 39            muted qualitative   9 #DDDDDD</span>
+<span class="co">#&gt; 40             pale qualitative   6    &lt;NA&gt;</span>
+<span class="co">#&gt; 41             dark qualitative   6    &lt;NA&gt;</span>
+<span class="co">#&gt; 42            light qualitative   9    &lt;NA&gt;</span>
+<span class="co">#&gt; 43           sunset   diverging  11 #FFFFFF</span>
+<span class="co">#&gt; 44             BuRd   diverging   9 #FFEE99</span>
+<span class="co">#&gt; 45             PRGn   diverging   9 #FFEE99</span>
+<span class="co">#&gt; 46           YlOrBr  sequential   9 #888888</span>
+<span class="co">#&gt; 47       iridescent  sequential  23 #999999</span>
+<span class="co">#&gt; 48 discrete rainbow  sequential  23 #777777</span>
+<span class="co">#&gt; 49   smooth rainbow  sequential  34 #666666</span>
+<span class="co">#&gt; 50        okabe ito qualitative   8    &lt;NA&gt;</span>
+<span class="co">#&gt; 51     stratigraphy qualitative 175    &lt;NA&gt;</span>
+<span class="co">#&gt; 52             soil qualitative  24    &lt;NA&gt;</span>
+<span class="co">#&gt; 53             land qualitative  14    &lt;NA&gt;</span></code></pre></div>
+</details><div id="colour-palettes-and-scales" class="section level3">
 <h3 class="hasAnchor">
 <a href="#colour-palettes-and-scales" class="anchor"></a>Colour palettes and scales</h3>
 <p><code><a href="reference/colour.html">colour()</a></code> returns a palette function that when called with a single integer argument returns a vector of colours.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Paul Tol's bright colour scheme</span>
 <span class="va">bright</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span></code></pre></div>
 <p>If <a href="https://github.com/r-lib/crayon"><strong>crayon</strong></a> is installed on your machine and if the <code>crayon.enabled</code> option is set to <code>TRUE</code> with <code><a href="https://rdrr.io/r/base/options.html">options()</a></code>, colours will be nicely printed in the console.</p>
 <p><img src="https://github.com/nfrerebeau/khroma/raw/master/man/figures/README-crayon.png"></p>
 <p>You can disable this feature by setting the <code>crayon.enabled</code> option to <code>FALSE</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>crayon.enabled <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 <span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span>
 <span class="co">#&gt;      blue       red     green    yellow      cyan    purple      grey </span>
 <span class="co">#&gt; "#4477AA" "#EE6677" "#228833" "#CCBB44" "#66CCEE" "#AA3377" "#BBBBBB" </span>
 <span class="co">#&gt; attr(,"missing")</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Show the colour palette</span>
 <span class="fu"><a href="reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-show-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Use with ggplot2</span>
-<span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">mpg</span>, package <span class="op">=</span> <span class="st">"ggplot2"</span><span class="op">)</span>
+
+<span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="reference/scale_tol_discrete.html">scale_colour_bright</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-usage-ggplot2-1.png" style="display: block; margin: auto;"></p>
@@ -193,7 +256,7 @@
 <div id="test-how-well-the-colours-are-identifiable" class="section level4">
 <h4 class="hasAnchor">
 <a href="#test-how-well-the-colours-are-identifiable" class="anchor"></a>Test how well the colours are identifiable</h4>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Okabe &amp; Ito's colour scheme</span>
 <span class="va">okabe</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"okabe ito"</span><span class="op">)</span>
 
@@ -204,7 +267,7 @@
 <div id="compute-cielab-distance-metric" class="section level4">
 <h4 class="hasAnchor">
 <a href="#compute-cielab-distance-metric" class="anchor"></a>Compute CIELAB distance metric</h4>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">DeltaE</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/compare.html">compare</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">DeltaE</span>, <span class="fl">2</span><span class="op">)</span>
 <span class="co">#&gt;                black orange sky blue bluish green yellow  blue vermilion</span>
@@ -219,10 +282,10 @@
 <div id="simulate-colour-blindness" class="section level4">
 <h4 class="hasAnchor">
 <a href="#simulate-colour-blindness" class="anchor"></a>Simulate colour-blindness</h4>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/plot.html">plot_scheme_colourblind</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-usage-colourblind3-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># ggplot2 default colour scheme</span>
 <span class="co"># (equally spaced hues around the colour wheel)</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span>
@@ -263,6 +326,10 @@
 <h2 class="hasAnchor">
 <a href="#contributing" class="anchor"></a>Contributing</h2>
 <p>Please note that the <strong>khroma</strong> project is released with a <a href="https://www.tesselle.org/conduct.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+</div>
+<div id="references" class="section level2">
+<h2 class="hasAnchor">
+<a href="#references" class="anchor"></a>References</h2>
 <p>[1] Okabe, M. &amp; Ito, K. (2008). <em>Color Universal Design (CUD): How to Make Figures and Presentations That Are Friendly to Colorblind People</em>. URL: <a href="https://jfly.uni-koeln.de/color/" class="uri">https://jfly.uni-koeln.de/color/</a>.</p>
 <p>[2] Tol, P. (2018). <em>Colour Schemes</em>. SRON. Technical Note No. SRON/EPS/TN/09-002. URL: <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf" class="uri">https://personal.sron.nl/~pault/data/colourschemes.pdf</a>.</p>
 <p>[3] Crameri, F. (2018). Geodynamic diagnostics, scientific visualisation and StagLab 3.0. <em>Geosci. Model Dev.</em>, 11, 2541-2562. <a href="https://doi.org/10.5194/gmd-11-2541-2018" class="uri">https://doi.org/10.5194/gmd-11-2541-2018</a></p>
