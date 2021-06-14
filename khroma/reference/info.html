@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>AVHRR Global Land Cover Classification Colour Scheme for ggplot2 — scale_colour_land • khroma</title>
+<title>Informations — info • khroma</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,9 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="AVHRR Global Land Cover Classification Colour Scheme for ggplot2 — scale_colour_land" />
-<meta property="og:description" content="Provides the AVHRR Global Land Cover classification as modified by
-Paul Tol (colorblind safe)." />
+<meta property="og:title" content="Informations — info" />
+<meta property="og:description" content="Returns information about the available palettes." />
 <meta property="og:image" content="https://packages.tesselle.org/khroma/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -174,85 +173,94 @@ Paul Tol (colorblind safe)." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>AVHRR Global Land Cover Classification Colour Scheme for <span class="pkg">ggplot2</span></h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/khroma/blob/master/R/scale_colour_science.R'><code>R/scale_colour_science.R</code></a></small>
-    <div class="hidden name"><code>scale_land.Rd</code></div>
+    <h1>Informations</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/khroma/blob/master/R/colour.R'><code>R/colour.R</code></a></small>
+    <div class="hidden name"><code>info.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Provides the AVHRR Global Land Cover classification as modified by
-Paul Tol (colorblind safe).</p>
+    <p>Returns information about the available palettes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>scale_colour_land</span><span class='op'>(</span><span class='va'>...</span>, lang <span class='op'>=</span> <span class='st'>"en"</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>info</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-<span class='fu'>scale_color_land</span><span class='op'>(</span><span class='va'>...</span>, lang <span class='op'>=</span> <span class='st'>"en"</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
-
-<span class='fu'>scale_fill_land</span><span class='op'>(</span><span class='va'>...</span>, lang <span class='op'>=</span> <span class='st'>"en"</span>, aesthetics <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span></pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>...</th>
-      <td><p>Arguments passed on to <code><a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale()</a></code>.</p></td>
-    </tr>
-    <tr>
-      <th>lang</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the language for the
-color names (see details). It must be one of "<code>en</code>" (english, the
-default) or "<code>fr</code>" (french).</p></td>
-    </tr>
-    <tr>
-      <th>aesthetics</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string or vector of character
-strings listing the name(s) of the aesthetic(s) that this scale works with.</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>discrete</a> scale.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <p>A <code><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></code> with the following columns:</p><dl>
+<dt><code>palette</code></dt><dd><p>Names of palette.</p></dd>
+<dt><code>type</code></dt><dd><p>Types of palettes: sequential, diverging or qualitative.</p></dd>
+<dt><code>max</code></dt><dd><p>Maximum number of colors that are contained in each
+palette. Only relevant for qualitative palettes.</p></dd>
+<dt><code>missing</code></dt><dd><p>The hexadecimal color value for mapping missing values.</p></dd>
 
-    <p>Values will be matched based on the soil names.</p>
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+</dl>
 
-    <p>Tol, P. (2018). <em>Colour Schemes.</em> SRON. Technical Note No.
-SRON/EPS/TN/09-002, issue 3.1.
-URL: <a href='https://personal.sron.nl/~pault/data/colourschemes.pdf'>https://personal.sron.nl/~pault/data/colourschemes.pdf</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other themed colour schemes: 
-<code><a href='scale_colour_soil.html'>scale_colour_soil</a>()</code>,
-<code><a href='scale_colour_stratigraphy.html'>scale_colour_stratigraphy</a>()</code></p>
-<p>Other qualitative colour schemes: 
-<code><a href='scale_colour_soil.html'>scale_colour_soil</a>()</code>,
-<code><a href='scale_colour_stratigraphy.html'>scale_colour_stratigraphy</a>()</code>,
-<code><a href='scale_okabeito_discrete.html'>scale_okabeito_discrete</a></code>,
-<code><a href='scale_tol_discrete.html'>scale_tol_discrete</a></code></p></div>
+    <div class='dont-index'><p>Other colour palettes: 
+<code><a href='colour.html'>colour</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
-
-<span class='va'>land</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
-  name <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-    <span class='st'>"water"</span>, <span class='st'>"evergreen needleleaf forest"</span>, <span class='st'>"deciduous needleleaf forest"</span>,
-    <span class='st'>"mixed forest"</span>, <span class='st'>"evergreen broadleaf forest"</span>, <span class='st'>"deciduous broadleaf forest"</span>,
-    <span class='st'>"woodland"</span>, <span class='st'>"wooded grassland"</span>, <span class='st'>"grassland"</span>, <span class='st'>"cropland"</span>, <span class='st'>"closed shrubland"</span>,
-    <span class='st'>"open shrubland"</span>, <span class='st'>"bare ground"</span>, <span class='st'>"urban and built"</span>
-  <span class='op'>)</span>
-<span class='op'>)</span>
-
-<span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>land</span>, <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>name</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_tile.html'>geom_rect</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>xmin <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>14</span><span class='op'>)</span>, xmax <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>14</span><span class='op'>)</span>,
-                         ymin <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>14</span>, ymax <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>14</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_reverse</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>scale_fill_land</span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"land"</span><span class='op'>)</span>
-</div><div class='img'><img src='scale_land-1.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"><div class='input'><span class='co'>## Get a table of available palettes</span>
+<span class='fu'>info</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;             palette        type max missing
+#&gt; 1              broc   diverging 256    &lt;NA&gt;
+#&gt; 2              cork   diverging 256    &lt;NA&gt;
+#&gt; 3               vik   diverging 256    &lt;NA&gt;
+#&gt; 4            lisbon   diverging 256    &lt;NA&gt;
+#&gt; 5            tofino   diverging 256    &lt;NA&gt;
+#&gt; 6            berlin   diverging 256    &lt;NA&gt;
+#&gt; 7              roma   diverging 256    &lt;NA&gt;
+#&gt; 8               bam   diverging 256    &lt;NA&gt;
+#&gt; 9            vanimo   diverging 256    &lt;NA&gt;
+#&gt; 10           oleron   diverging 256    &lt;NA&gt;
+#&gt; 11           bukavu   diverging 256    &lt;NA&gt;
+#&gt; 12              fes   diverging 256    &lt;NA&gt;
+#&gt; 13            devon  sequential 256    &lt;NA&gt;
+#&gt; 14          lajolla  sequential 256    &lt;NA&gt;
+#&gt; 15           bamako  sequential 256    &lt;NA&gt;
+#&gt; 16            davos  sequential 256    &lt;NA&gt;
+#&gt; 17           bilbao  sequential 256    &lt;NA&gt;
+#&gt; 18             nuuk  sequential 256    &lt;NA&gt;
+#&gt; 19             oslo  sequential 256    &lt;NA&gt;
+#&gt; 20            grayC  sequential 256    &lt;NA&gt;
+#&gt; 21           hawaii  sequential 256    &lt;NA&gt;
+#&gt; 22            lapaz  sequential 256    &lt;NA&gt;
+#&gt; 23            tokyo  sequential 256    &lt;NA&gt;
+#&gt; 24             buda  sequential 256    &lt;NA&gt;
+#&gt; 25            acton  sequential 256    &lt;NA&gt;
+#&gt; 26            turku  sequential 256    &lt;NA&gt;
+#&gt; 27            imola  sequential 256    &lt;NA&gt;
+#&gt; 28           batlow  sequential 256    &lt;NA&gt;
+#&gt; 29          batlowW  sequential 256    &lt;NA&gt;
+#&gt; 30          batlowK  sequential 256    &lt;NA&gt;
+#&gt; 31            brocO  sequential 256    &lt;NA&gt;
+#&gt; 32            corkO  sequential 256    &lt;NA&gt;
+#&gt; 33             vikO  sequential 256    &lt;NA&gt;
+#&gt; 34            romaO  sequential 256    &lt;NA&gt;
+#&gt; 35             bamO  sequential 256    &lt;NA&gt;
+#&gt; 36           bright qualitative   7    &lt;NA&gt;
+#&gt; 37         contrast qualitative   3    &lt;NA&gt;
+#&gt; 38          vibrant qualitative   7    &lt;NA&gt;
+#&gt; 39            muted qualitative   9 #DDDDDD
+#&gt; 40             pale qualitative   6    &lt;NA&gt;
+#&gt; 41             dark qualitative   6    &lt;NA&gt;
+#&gt; 42            light qualitative   9    &lt;NA&gt;
+#&gt; 43           sunset   diverging  11 #FFFFFF
+#&gt; 44             BuRd   diverging   9 #FFEE99
+#&gt; 45             PRGn   diverging   9 #FFEE99
+#&gt; 46           YlOrBr  sequential   9 #888888
+#&gt; 47       iridescent  sequential  23 #999999
+#&gt; 48 discrete rainbow  sequential  23 #777777
+#&gt; 49   smooth rainbow  sequential  34 #666666
+#&gt; 50        okabe ito qualitative   8    &lt;NA&gt;
+#&gt; 51     stratigraphy qualitative 175    &lt;NA&gt;
+#&gt; 52             soil qualitative  24    &lt;NA&gt;
+#&gt; 53             land qualitative  14    &lt;NA&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

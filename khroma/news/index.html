@@ -75,8 +75,8 @@
   <script src="../extra.js"></script>
 
 <meta property="og:title" content="Changelog" />
-<meta property="og:image" content="https://khroma.tesselle.org/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://packages.tesselle.org/khroma/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -113,7 +113,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">khroma</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
       </span>
     </div>
 
@@ -176,13 +176,33 @@
       <small>Source: <a href='https://github.com/tesselle/khroma/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="khroma-150" class="section level1">
-<h1 class="page-header" data-toc-text="1.5.0">
-<a href="#khroma-150" class="anchor"></a>khroma 1.5.0<small> 2021-04-23 </small>
+    <div id="khroma-160" class="section level1">
+<h1 class="page-header" data-toc-text="1.6.0">
+<a href="#khroma-160" class="anchor"></a>khroma 1.6.0<small> Unreleased </small>
 </h1>
 <div id="new-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-functions" class="anchor"></a>New functions</h2>
+<ul>
+<li>Add <code><a href="../reference/info.html">info()</a></code> to get a table of all available palettes.</li>
+</ul>
+</div>
+<div id="internals" class="section level2">
+<h2 class="hasAnchor">
+<a href="#internals" class="anchor"></a>Internals</h2>
+<ul>
+<li>Move <strong>ggplot2</strong>, <strong>scales</strong> and <strong>spacesXYZ</strong> from Imports to Suggests (<a href='https://github.com/tesselle/khroma/issues/8'>#8</a>).</li>
+</ul>
+</div>
+</div>
+    <div id="khroma-150" class="section level1">
+<h1 class="page-header" data-toc-text="1.5.0">
+<a href="#khroma-150" class="anchor"></a>khroma 1.5.0<small> 2021-04-23 </small>
+</h1>
+<p><a href="https://doi.org/10.5281/zenodo.4723613"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4723613.svg" alt="DOI"></a></p>
+<div id="new-functions-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#new-functions-1" class="anchor"></a>New functions</h2>
 <ul>
 <li>Add Fabio Crameri’s <em>Scientific colour</em> schemes (35 new colour schemes).</li>
 <li>Add <strong>ggplot2</strong> scale functions:
@@ -216,9 +236,9 @@
 <a href="#khroma-140" class="anchor"></a>khroma 1.4.0<small> 2020-10-05 </small>
 </h1>
 <p><a href="https://doi.org/10.5281/zenodo.4067906"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4067906.svg" alt="DOI"></a></p>
-<div id="new-functions-1" class="section level2">
+<div id="new-functions-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-functions-1" class="anchor"></a>New functions</h2>
+<a href="#new-functions-2" class="anchor"></a>New functions</h2>
 <ul>
 <li>Add a <code><a href="../reference/compare.html">compare()</a></code> function to compute CIELAB distance metric.</li>
 <li>Add a <code><a href="../reference/plot.html">plot()</a></code> function.</li>
@@ -243,9 +263,9 @@
 <code>scale_*_YlOrBr()</code>, <code>scale_*_iridescent()</code> and <code>scale_*_smoothrainbow()</code> gained a new argument to be used with discrete data (<a href='https://github.com/tesselle/khroma/issues/3'>#3</a>).</li>
 </ul>
 </div>
-<div id="internals" class="section level2">
+<div id="internals-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#internals" class="anchor"></a>Internals</h2>
+<a href="#internals-1" class="anchor"></a>Internals</h2>
 <ul>
 <li>Move <strong>ggplot2</strong> and <strong>scales</strong> from Suggests to Imports.</li>
 </ul>
@@ -266,9 +286,9 @@
 <li>Use <strong>crayon</strong> if installed to nicely print colours in the console.</li>
 </ul>
 </div>
-<div id="internals-1" class="section level2">
+<div id="internals-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#internals-1" class="anchor"></a>Internals</h2>
+<a href="#internals-2" class="anchor"></a>Internals</h2>
 <ul>
 <li>Move <strong>ggplot2</strong> and <strong>scales</strong> from Imports to Suggests.</li>
 </ul>
@@ -279,9 +299,9 @@
 <a href="#khroma-120" class="anchor"></a>khroma 1.2.0<small> 2019-08-19 </small>
 </h1>
 <p><a href="https://doi.org/10.5281/zenodo.3371615"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3371615.svg" alt="DOI"></a></p>
-<div id="new-functions-2" class="section level2">
+<div id="new-functions-3" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-functions-2" class="anchor"></a>New functions</h2>
+<a href="#new-functions-3" class="anchor"></a>New functions</h2>
 <ul>
 <li>Add the <code><a href="../reference/convert.html">convert()</a></code> function to simulate colour-blind vision.</li>
 <li>Add the <code><a href="../reference/plot.html">plot_scheme()</a></code> function shows colours in a plot.</li>
@@ -295,9 +315,9 @@
 <li>Fix the argument (number of levels) of the palette function returned by <code><a href="../reference/colour.html">colour()</a></code>.</li>
 </ul>
 </div>
-<div id="internals-2" class="section level2">
+<div id="internals-3" class="section level2">
 <h2 class="hasAnchor">
-<a href="#internals-2" class="anchor"></a>Internals</h2>
+<a href="#internals-3" class="anchor"></a>Internals</h2>
 <ul>
 <li>Add a vignette for Paul Tol’s colour schemes.</li>
 </ul>
@@ -308,9 +328,9 @@
 <a href="#khroma-113" class="anchor"></a>khroma 1.1.3<small> 2019-06-05 </small>
 </h1>
 <p><a href="https://doi.org/10.5281/zenodo.3239344"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3239344.svg" alt="DOI"></a></p>
-<div id="new-functions-3" class="section level2">
+<div id="new-functions-4" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-functions-3" class="anchor"></a>New functions</h2>
+<a href="#new-functions-4" class="anchor"></a>New functions</h2>
 <ul>
 <li>Add three <strong>ggplot2</strong> scale functions: <code>scale_*_pale()</code>, <code>scale_*_dark()</code> and <code>scale_*_discreterainbow()</code>.</li>
 </ul>
@@ -323,9 +343,9 @@
 <li>Fix the <code>missing</code> attribute of the palette function returned by <code><a href="../reference/colour.html">colour()</a></code> (bug introduced in v1.1.2).</li>
 </ul>
 </div>
-<div id="internals-3" class="section level2">
+<div id="internals-4" class="section level2">
 <h2 class="hasAnchor">
-<a href="#internals-3" class="anchor"></a>Internals</h2>
+<a href="#internals-4" class="anchor"></a>Internals</h2>
 <ul>
 <li>The documentation is expanded with several remarks on the use of Paul Tol’s colour schemes.</li>
 </ul>
@@ -336,9 +356,9 @@
 <a href="#khroma-112" class="anchor"></a>khroma 1.1.2<small> 2019-06-02 </small>
 </h1>
 <p><a href="https://doi.org/10.5281/zenodo.3237015"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3237015.svg" alt="DOI"></a></p>
-<div id="new-functions-4" class="section level2">
+<div id="new-functions-5" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-functions-4" class="anchor"></a>New functions</h2>
+<a href="#new-functions-5" class="anchor"></a>New functions</h2>
 <ul>
 <li>Add three <strong>ggplot2</strong> scale functions: <code>scale_*_contrast()</code>, <code>scale_*_iridescent()</code> and <code>scale_*_land()</code>.</li>
 </ul>
@@ -366,9 +386,9 @@
 <li>Colour schemes can be reversed (a bug made the <code>reverse</code> argument inoperative).</li>
 </ul>
 </div>
-<div id="internals-4" class="section level2">
+<div id="internals-5" class="section level2">
 <h2 class="hasAnchor">
-<a href="#internals-4" class="anchor"></a>Internals</h2>
+<a href="#internals-5" class="anchor"></a>Internals</h2>
 <ul>
 <li>Reduce required R version to 3.1.</li>
 </ul>
@@ -379,9 +399,9 @@
 <a href="#khroma-110" class="anchor"></a>khroma 1.1.0<small> 2019-02-24 </small>
 </h1>
 <p><a href="https://doi.org/10.5281/zenodo.2577258"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2577258.svg" alt="DOI"></a></p>
-<div id="new-functions-5" class="section level2">
+<div id="new-functions-6" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-functions-5" class="anchor"></a>New functions</h2>
+<a href="#new-functions-6" class="anchor"></a>New functions</h2>
 <ul>
 <li>Add specific <strong>ggplot2</strong> scale functions for Paul Tol’s colour schemes: <code>scale_*_bright()</code>, <code>scale_*_vibrant()</code>, <code>scale_*_muted()</code>, <code>scale_*_light()</code>, <code>scale_*_rainbow()</code> (qualitative), <code>scale_*_sunset()</code>, <code>scale_*_BuRd()</code>, <code>scale_*_PRGn()</code> (diverging), <code>scale_*_YlOrBr()</code>, <code>scale_*_smoothrainbow()</code> (sequential).</li>
 </ul>
