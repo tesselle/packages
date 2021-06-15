@@ -31,13 +31,13 @@
     <loc>https://packages.tesselle.org/arkhe/reference/check-attribute.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/check-data.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/check-graph.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/check-matrix.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/check-missing.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/check-numeric.html</loc>

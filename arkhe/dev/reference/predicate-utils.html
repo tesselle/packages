@@ -80,7 +80,9 @@
 is_empty() checks is an object is empty (any zero-length dimensions).
 has_length() checks how long is an object.
 has_names() checks if an object is named.
-has_missing() checks if an object contains missing values.
+has_duplicates() checks if an object has duplicated elements.
+has_missing() and has_infinite() check if an object contains missing
+or infinite values.
 
 " />
 <meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
@@ -179,7 +181,9 @@ has_missing() checks if an object contains missing values.
 <li><p><code>is_empty()</code> checks is an object is empty (any zero-length dimensions).</p></li>
 <li><p><code>has_length()</code> checks how long is an object.</p></li>
 <li><p><code>has_names()</code> checks if an object is named.</p></li>
-<li><p><code>has_missing()</code> checks if an object contains missing values.</p></li>
+<li><p><code>has_duplicates()</code> checks if an object has duplicated elements.</p></li>
+<li><p><code>has_missing()</code> and <code>has_infinite()</code> check if an object contains missing
+or infinite values.</p></li>
 </ul>
 
     </div>
@@ -187,6 +191,8 @@ has_missing() checks if an object contains missing values.
     <pre class="usage"><span class='fu'>has_length</span><span class='op'>(</span><span class='va'>x</span>, n <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
 <span class='fu'>has_names</span><span class='op'>(</span><span class='va'>x</span>, names <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>has_duplicates</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
 <span class='fu'>has_missing</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
