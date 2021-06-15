@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -45,5 +46,5 @@ jobs:
           cp -r _site/* _docs
           cd _docs
           git add -A
-          git commit -m 'Render website' || echo "nothing to commit"
+          git commit -m 'Render website' || echo "Nothing to commit"
           git push origin HEAD:gh-pages
