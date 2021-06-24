@@ -4,6 +4,8 @@ navbar:
   right:
     - icon: fas fa-home
       href: https://www.tesselle.org
+    - icon: fas fa-download
+      href: https://tesselle.r-universe.dev
     - icon: fab fa-github
       href: https://github.com/tesselle/packages
 exclude: ["matomo.html", "CNAME"]
