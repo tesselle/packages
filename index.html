@@ -454,24 +454,29 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">tesselle</h1>
+<h3 class="subtitle">R packages &amp; archaeology</h3>
 
 </div>
 
 
-<p>This is a repository holding R packages of the <a href="https://www.tesselle.org/">tesselle</a> project. Most of the packages are distributed on <a href="https://cran.r-project.org/">CRAN</a>, but some data packages are too large and can only be installed from this repository.</p>
+<p>Most of the R packages of the <a href="https://www.tesselle.org/">tesselle</a> project are distributed on <a href="https://cran.r-project.org/">CRAN</a>, but some data packages are too large and can only be installed from our universe: <a href="https://tesselle.r-universe.dev">tesselle.r-universe.dev</a>.</p>
 <p>If available, CRAN releases must be regarded as the preferred source.</p>
 <div id="download-tesselle-packages" class="section level2">
 <h2>Download tesselle packages</h2>
 <p>If you want to install a package, simply use <code>install.packages()</code> with the additional repository:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>repos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;https://packages.tesselle.org&quot;</span>, <span class="kw">getOption</span>(<span class="st">&quot;repos&quot;</span>))</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">install.packages</span>(<span class="st">&quot;tabula&quot;</span>, <span class="dt">repos =</span> repos, <span class="dt">type =</span> <span class="st">&quot;source&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">## Enable this universe</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">options</span>(<span class="dt">repos =</span> <span class="kw">c</span>(<span class="dt">tesselle =</span> <span class="st">&#39;https://tesselle.r-universe.dev&#39;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>                  <span class="dt">CRAN =</span> <span class="st">&#39;https://cloud.r-project.org&#39;</span>))</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">## Install some packages</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">install.packages</span>(<span class="st">&quot;tabula&quot;</span>)</span></code></pre></div>
 </div>
 <div id="use-the-repository" class="section level2">
 <h2>Use the repository</h2>
 <p>You can use this repository in your R package (always prefer the CRAN release if available). To do so, prepare the <code>DESCRIPTION</code> file of your R package:</p>
 <ul>
 <li>List the package under <code>Suggests:</code></li>
-<li>Add the line <code>Additional_repositories: https://packages.tesselle.org</code></li>
+<li>Add the line <code>Additional_repositories: https://tesselle.r-universe.dev</code></li>
 <li>Test your package with <code>R CMD check --as-cran</code></li>
 </ul>
 </div>
@@ -488,34 +493,40 @@ div.tocify {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://packages.tesselle.org/arkhe" title="Read the doc">arkhe</a></td>
-<td align="left">0.3.1</td>
+<td align="left"><a href="https://packages.tesselle.org/dimensio" title="Read the doc">dimensio</a></td>
+<td align="left">0.2.1.9000</td>
 <td align="left">R (&gt;= 3.3)</td>
 <td align="left">GPL (&gt;= 3)</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://packages.tesselle.org/dimensio" title="Read the doc">dimensio</a></td>
-<td align="left">0.2.1</td>
+<td align="left"><a href="https://packages.tesselle.org/tabula" title="Read the doc">tabula</a></td>
+<td align="left">1.6.1.9000</td>
 <td align="left">R (&gt;= 3.3)</td>
-<td align="left">GPL (&gt;= 3)</td>
+<td align="left">GPL-3</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://packages.tesselle.org/folio" title="Read the doc">folio</a></td>
-<td align="left">1.0.0</td>
-<td align="left">R (&gt;= 2.10)</td>
-<td align="left">GPL (&gt;= 3)</td>
+<td align="left"><a href="https://packages.tesselle.org/kairos" title="Read the doc">kairos</a></td>
+<td align="left">0.0.0.9000</td>
+<td align="left">R (&gt;= 3.4)</td>
+<td align="left">GPL-3</td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://packages.tesselle.org/khroma" title="Read the doc">khroma</a></td>
-<td align="left">1.6.0</td>
+<td align="left">1.6.0.9000</td>
 <td align="left">R (&gt;= 3.3)</td>
 <td align="left">GPL (&gt;= 3)</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://packages.tesselle.org/tabula" title="Read the doc">tabula</a></td>
-<td align="left">1.6.1</td>
+<td align="left"><a href="https://packages.tesselle.org/arkhe" title="Read the doc">arkhe</a></td>
+<td align="left">0.3.1.9000</td>
 <td align="left">R (&gt;= 3.3)</td>
-<td align="left">GPL-3</td>
+<td align="left">GPL (&gt;= 3)</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://packages.tesselle.org/folio" title="Read the doc">folio</a></td>
+<td align="left">1.0.0.9000</td>
+<td align="left">R (&gt;= 2.10)</td>
+<td align="left">GPL (&gt;= 3)</td>
 </tr>
 </tbody>
 </table>
@@ -559,6 +570,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
