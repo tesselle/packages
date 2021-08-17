@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Data Matrix — DataMatrix • arkhe</title>
+<title>Class Diagnostic — check_class • arkhe</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,8 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Data Matrix — DataMatrix" />
-<meta property="og:description" content="S4 classes that represent a \(m \times p\) matrix." />
+<meta property="og:title" content="Class Diagnostic — check_class" />
+<meta property="og:description" content="Class Diagnostic" />
 <meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -161,29 +161,34 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Data Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/arkhe/blob/master/R/AllClasses.R'><code>R/AllClasses.R</code></a></small>
-    <div class="hidden name"><code>DataMatrix.Rd</code></div>
+    <h1>Class Diagnostic</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/arkhe/blob/master/R/validate.R'><code>R/validate.R</code></a></small>
+    <div class="hidden name"><code>check_class.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>S4 classes that represent a \(m \times p\) matrix.</p>
+    <p>Class Diagnostic</p>
     </div>
 
+    <pre class="usage"><span class='fu'>check_class</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>conditions</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>object</th>
+      <td><p>An object to which error messages are related.</p></td>
+    </tr>
+    <tr>
+      <th>conditions</th>
+      <td><p>A <code><a href='https://rdrr.io/r/base/list.html'>list</a></code> of condition messages.</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>These classes inherit from <code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other classes: 
-<code><a href='CompositionMatrix-class.html'>CompositionMatrix-class</a></code>,
-<code><a href='CountMatrix-class.html'>CountMatrix-class</a></code>,
-<code><a href='IncidenceMatrix-class.html'>IncidenceMatrix-class</a></code>,
-<code><a href='OccurrenceMatrix-class.html'>OccurrenceMatrix-class</a></code>,
-<code><a href='StratigraphicMatrix-class.html'>StratigraphicMatrix-class</a></code>,
-<code><a href='coerce.html'>coerce</a>()</code></p></div>
+    <p>Throw an error if <code>conditions</code> is of non-zero length, invisibly returns
+<code>TRUE</code> if not.</p>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

@@ -77,15 +77,16 @@
 <meta property="og:title" content="Utility Predicates — predicate-utils" />
 <meta property="og:description" content="
 
-is_empty() checks if a vector or list is empty.
-is_missing() checks if a vector or list contains missing values.
-is_named() checks if an object is named.
-is_uuid() checks if a string is a canonically formatted UUID that is
-version 1 through 5 and is the appropriate Variant as per RFC4122.
+is_empty() checks is an object is empty (any zero-length dimensions).
+has_length() checks how long is an object.
+has_names() checks if an object is named.
+has_duplicates() checks if an object has duplicated elements.
+has_missing() and has_infinite() check if an object contains missing
+or infinite values.
 
 " />
-<meta property="og:image" content="https://arkhe.tesselle.org/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -122,7 +123,7 @@ version 1 through 5 and is the appropriate Variant as per RFC4122.
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">arkhe</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
       </span>
     </div>
 
@@ -177,25 +178,45 @@ version 1 through 5 and is the appropriate Variant as per RFC4122.
     <div class="ref-description">
     
 <ul>
-<li><p><code>is_empty()</code> checks if a vector or list is empty.</p></li>
-<li><p><code><a href='predicate-numeric.html'>is_missing()</a></code> checks if a vector or list contains missing values.</p></li>
-<li><p><code>is_named()</code> checks if an object is named.</p></li>
-<li><p><code>is_uuid()</code> checks if a string is a canonically formatted UUID that is
-version 1 through 5 and is the appropriate Variant as per RFC4122.</p></li>
+<li><p><code>is_empty()</code> checks is an object is empty (any zero-length dimensions).</p></li>
+<li><p><code>has_length()</code> checks how long is an object.</p></li>
+<li><p><code>has_names()</code> checks if an object is named.</p></li>
+<li><p><code>has_duplicates()</code> checks if an object has duplicated elements.</p></li>
+<li><p><code>has_missing()</code> and <code>has_infinite()</code> check if an object contains missing
+or infinite values.</p></li>
 </ul>
 
     </div>
 
-    <pre class="usage"><span class='fu'>is_empty</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>has_length</span><span class='op'>(</span><span class='va'>x</span>, n <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>is_named</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
+<span class='fu'>has_names</span><span class='op'>(</span><span class='va'>x</span>, names <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>has_duplicates</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+
+<span class='fu'>has_missing</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+
+<span class='fu'>has_infinite</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+
+<span class='fu'>is_empty</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>An object to be tested.</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/vector.html'>vector</a></code> to be tested.</p></td>
+    </tr>
+    <tr>
+      <th>n</th>
+      <td><p>A length-one <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector specifying the length to test <code>x</code>
+with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has length greater than zero, and
+<code>FALSE</code> otherwise.</p></td>
+    </tr>
+    <tr>
+      <th>names</th>
+      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> vector specifying the names to test <code>x</code>
+with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has names, and <code>FALSE</code> otherwise.</p></td>
     </tr>
     </table>
 

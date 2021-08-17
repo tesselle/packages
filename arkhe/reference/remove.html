@@ -75,9 +75,10 @@
   <script src="../extra.js"></script>
 
 <meta property="og:title" content="Data Cleaning — remove" />
-<meta property="og:description" content="Removes empty row/column or row/column with missing values or zeros." />
-<meta property="og:image" content="https://arkhe.tesselle.org/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:description" content="Removes empty row/column or row/column with missing/
+infinite values or zeros." />
+<meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -114,7 +115,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">arkhe</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
       </span>
     </div>
 
@@ -167,17 +168,23 @@
     </div>
 
     <div class="ref-description">
-    <p>Removes empty row/column or row/column with missing values or zeros.</p>
+    <p>Removes empty row/column or row/column with <code><a href='https://rdrr.io/r/base/NA.html'>missing</a></code>/
+<code><a href='https://rdrr.io/r/base/is.finite.html'>infinite</a></code> values or zeros.</p>
     </div>
 
     <pre class="usage"><span class='fu'>remove_NA</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='fu'>remove_Inf</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>remove_empty</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>remove_zero</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='co'># S4 method for matrix</span>
-<span class='fu'>remove_NA</span><span class='op'>(</span><span class='va'>x</span>, margin <span class='op'>=</span> <span class='fl'>1</span>, finite <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='fu'>remove_NA</span><span class='op'>(</span><span class='va'>x</span>, margin <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+
+<span class='co'># S4 method for matrix</span>
+<span class='fu'>remove_Inf</span><span class='op'>(</span><span class='va'>x</span>, margin <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
 
 <span class='co'># S4 method for matrix</span>
 <span class='fu'>remove_zero</span><span class='op'>(</span><span class='va'>x</span>, margin <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
@@ -201,11 +208,6 @@
       <td><p>An <code><a href='https://rdrr.io/r/base/integer.html'>integer</a></code> giving the subscript which the
 cleaning will be applied over (<code>1</code> indicates rows, <code>2</code> indicates
 columns).</p></td>
-    </tr>
-    <tr>
-      <th>finite</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should non-<code><a href='https://rdrr.io/r/base/is.finite.html'>finite</a></code> values also be
-removed?</p></td>
     </tr>
     </table>
 

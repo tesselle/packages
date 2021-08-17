@@ -79,11 +79,12 @@
 
 throw_error() stops execution of the current expression and executes an
 error action.
-catch_conditions() handles unusual conditions.
+throw_warning() generates a warning message.
+catch_conditions() and catch_message() handles unusual conditions.
 
 " />
-<meta property="og:image" content="https://arkhe.tesselle.org/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
 <meta name="twitter:site" content="@nfrerebeau" />
 
@@ -120,7 +121,7 @@ catch_conditions() handles unusual conditions.
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">arkhe</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
       </span>
     </div>
 
@@ -177,7 +178,8 @@ catch_conditions() handles unusual conditions.
 <ul>
 <li><p><code>throw_error()</code> stops execution of the current expression and executes an
 error action.</p></li>
-<li><p><code>catch_conditions()</code> handles unusual conditions.</p></li>
+<li><p><code>throw_warning()</code> generates a warning message.</p></li>
+<li><p><code>catch_conditions()</code> and <code>catch_message()</code> handles unusual conditions.</p></li>
 </ul>
 
     </div>
@@ -185,6 +187,8 @@ error action.</p></li>
     <pre class="usage"><span class='fu'>throw_error</span><span class='op'>(</span><span class='va'>.subclass</span>, <span class='va'>message</span>, call <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>throw_warning</span><span class='op'>(</span><span class='va'>.subclass</span>, <span class='va'>message</span>, call <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='fu'>catch_message</span><span class='op'>(</span><span class='va'>expr</span><span class='op'>)</span>
 
 <span class='fu'>catch_conditions</span><span class='op'>(</span><span class='va'>expr</span><span class='op'>)</span></pre>
 

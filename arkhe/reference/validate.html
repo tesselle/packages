@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Data Matrix — DataMatrix • arkhe</title>
+<title>Validate a Condition — validate • arkhe</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,8 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Data Matrix — DataMatrix" />
-<meta property="og:description" content="S4 classes that represent a \(m \times p\) matrix." />
+<meta property="og:title" content="Validate a Condition — validate" />
+<meta property="og:description" content="Validate a Condition" />
 <meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -161,29 +161,36 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Data Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/arkhe/blob/master/R/AllClasses.R'><code>R/AllClasses.R</code></a></small>
-    <div class="hidden name"><code>DataMatrix.Rd</code></div>
+    <h1>Validate a Condition</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/arkhe/blob/master/R/check.R'><code>R/check.R</code></a></small>
+    <div class="hidden name"><code>validate.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>S4 classes that represent a \(m \times p\) matrix.</p>
+    <p>Validate a Condition</p>
     </div>
 
+    <pre class="usage"><span class='fu'>validate</span><span class='op'>(</span><span class='va'>expr</span>, empty <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>expr</th>
+      <td><p>An object to be evaluated.</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>These classes inherit from <code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
+    <p>Returns <code>NULL</code> on success, otherwise returns the error as a string.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other classes: 
-<code><a href='CompositionMatrix-class.html'>CompositionMatrix-class</a></code>,
-<code><a href='CountMatrix-class.html'>CountMatrix-class</a></code>,
-<code><a href='IncidenceMatrix-class.html'>IncidenceMatrix-class</a></code>,
-<code><a href='OccurrenceMatrix-class.html'>OccurrenceMatrix-class</a></code>,
-<code><a href='StratigraphicMatrix-class.html'>StratigraphicMatrix-class</a></code>,
-<code><a href='coerce.html'>coerce</a>()</code></p></div>
+    <div class='dont-index'><p>Other validation methods: 
+<code><a href='check-attribute.html'>check-attribute</a></code>,
+<code><a href='check-data.html'>check-data</a></code>,
+<code><a href='check-numeric.html'>check-numeric</a></code>,
+<code><a href='check-type.html'>check-type</a></code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>

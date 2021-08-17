@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Data Matrix — DataMatrix • arkhe</title>
+<title>Check Data — check-data • arkhe</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,8 +74,14 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Data Matrix — DataMatrix" />
-<meta property="og:description" content="S4 classes that represent a \(m \times p\) matrix." />
+<meta property="og:title" content="Check Data — check-data" />
+<meta property="og:description" content="
+
+assert_missing() and assert_infinite() check if an object contains any
+missing (NA, NaN) or infinite (Inf) value.
+assert_unique() checks if an object contains duplicated elements.``
+
+" />
 <meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -161,29 +167,46 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Data Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tesselle/arkhe/blob/master/R/AllClasses.R'><code>R/AllClasses.R</code></a></small>
-    <div class="hidden name"><code>DataMatrix.Rd</code></div>
+    <h1>Check Data</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tesselle/arkhe/blob/master/R/check.R'><code>R/check.R</code></a></small>
+    <div class="hidden name"><code>check-data.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>S4 classes that represent a \(m \times p\) matrix.</p>
+    
+<ul>
+<li><p><code>assert_missing()</code> and <code>assert_infinite()</code> check if an object contains any
+missing (<code>NA</code>, <code>NaN</code>) or infinite (<code>Inf</code>) value.</p></li>
+<li><p><code>assert_unique()</code> checks if an object contains duplicated elements.``</p></li>
+</ul>
+
     </div>
 
+    <pre class="usage"><span class='fu'>assert_missing</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
+<span class='fu'>assert_infinite</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+<span class='fu'>assert_unique</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>expected</span><span class='op'>)</span></pre>
 
-    <p>These classes inherit from <code><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></code>.</p>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>An object to be checked.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Throws an error, if any, and returns <code>x</code> invisibly otherwise.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other classes: 
-<code><a href='CompositionMatrix-class.html'>CompositionMatrix-class</a></code>,
-<code><a href='CountMatrix-class.html'>CountMatrix-class</a></code>,
-<code><a href='IncidenceMatrix-class.html'>IncidenceMatrix-class</a></code>,
-<code><a href='OccurrenceMatrix-class.html'>OccurrenceMatrix-class</a></code>,
-<code><a href='StratigraphicMatrix-class.html'>StratigraphicMatrix-class</a></code>,
-<code><a href='coerce.html'>coerce</a>()</code></p></div>
+    <div class='dont-index'><p>Other validation methods: 
+<code><a href='check-attribute.html'>check-attribute</a></code>,
+<code><a href='check-numeric.html'>check-numeric</a></code>,
+<code><a href='check-type.html'>check-type</a></code>,
+<code><a href='validate.html'>validate</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>N. Frerebeau</p>
