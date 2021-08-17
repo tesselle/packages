@@ -199,7 +199,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>object</th>
-      <td><p>A <a href='https://arkhe.tesselle.org/reference/CountMatrix-class.html'>arkhe::CountMatrix</a> or a <a href='DateEvent-class.html'>DateEvent</a> object.</p></td>
+      <td><p>A <a href='https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html'>arkhe::CountMatrix</a> or a <a href='DateEvent-class.html'>DateEvent</a> object.</p></td>
     </tr>
     <tr>
       <th>dates</th>
@@ -260,7 +260,7 @@ New York: Academic Press.</p>
     <pre class="examples"><div class='input'><span class='co'>## Mean Ceramic Date</span>
 <span class='co'>## Coerce the zuni dataset to an abundance (count) matrix</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"zuni"</span>, package <span class='op'>=</span> <span class='st'>"folio"</span><span class='op'>)</span>
-<span class='va'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://arkhe.tesselle.org/reference/coerce.html'>as_count</a></span><span class='op'>(</span><span class='va'>zuni</span><span class='op'>)</span>
+<span class='va'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://packages.tesselle.org/arkhe/reference/coerce.html'>as_count</a></span><span class='op'>(</span><span class='va'>zuni</span><span class='op'>)</span>
 
 <span class='co'>## Set the start and end dates for each ceramic type</span>
 <span class='va'>dates</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
@@ -284,13 +284,13 @@ New York: Academic Press.</p>
 <span class='co'>## Bootstrap resampling</span>
 <span class='va'>boot</span> <span class='op'>&lt;-</span> <span class='fu'>bootstrap_mcd</span><span class='op'>(</span><span class='va'>mc_dates</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>boot</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;             min      mean       max        Q5      Q95
-#&gt; LZ1105 1131.250 1160.1042 1196.8750 1141.3281 1190.234
-#&gt; LZ1103 1076.351 1135.2590 1175.6757 1090.2703 1173.514
-#&gt; LZ1100 1073.214 1158.3333 1201.7857 1104.6429 1199.107
-#&gt; LZ1099 1081.250 1091.1458 1100.0000 1084.3750 1096.875
-#&gt; LZ1097  918.750 1092.9167 1193.7500  972.5000 1175.000
-#&gt; LZ1096  737.500  858.3333  996.4286  760.8036  973.125</div><div class='input'>
+</div><div class='output co'>#&gt;              min      mean       max        Q5       Q95
+#&gt; LZ1105 1121.8750 1161.8750 1196.8750 1130.4688 1186.7969
+#&gt; LZ1103 1078.0405 1141.8356 1185.1351 1092.2635 1178.2264
+#&gt; LZ1100 1074.1071 1146.3393 1197.3214 1101.6518 1189.8661
+#&gt; LZ1099 1084.3750 1092.0833 1100.0000 1084.3750 1096.8750
+#&gt; LZ1097  982.8125 1087.6562 1193.7500 1005.0781 1166.5625
+#&gt; LZ1096  737.5000  820.3571  944.6429  760.8036  944.6429</div><div class='input'>
 <span class='co'>## Jackknife resampling</span>
 <span class='va'>jack</span> <span class='op'>&lt;-</span> <span class='fu'>jackknife_mcd</span><span class='op'>(</span><span class='va'>mc_dates</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>jack</span><span class='op'>)</span>

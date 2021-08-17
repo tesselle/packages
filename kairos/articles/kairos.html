@@ -116,7 +116,7 @@
       <h1 data-toc-skip>Manual</h1>
                         <h4 class="author">N. Frerebeau</h4>
             
-            <h4 class="date">2021-06-24</h4>
+            <h4 class="date">2021-08-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/vignettes/kairos.Rmd"><code>vignettes/kairos.Rmd</code></a></small>
       <div class="hidden name"><code>kairos.Rmd</code></div>
@@ -128,8 +128,7 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Load packages</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span> <span class="co"># Pipes</span></code></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></code></pre></div>
 <div id="not-all-dates-are-created-equal" class="section level1">
 <h1 class="hasAnchor">
 <a href="#not-all-dates-are-created-equal" class="anchor"></a>Not All Dates Are Created Equal</h1>
@@ -179,7 +178,7 @@ t^{MCD}_i = \sum_{j = 1}^{p} t_j \times \frac{x_{ij}}{x_{i \cdot}}
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Coerce the zuni dataset to an abundance (count) matrix</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span>
-<span class="va">zuni_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://arkhe.tesselle.org/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span>
+<span class="va">zuni_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span>
 
 <span class="co">## Set the start and end dates for each ceramic type</span>
 <span class="va">zuni_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
@@ -197,9 +196,7 @@ t^{MCD}_i = \sum_{j = 1}^{p} t_j \times \frac{x_{ij}}{x_{i \cdot}}
 <span class="co">## Calculate MCD</span>
 <span class="va">zuni_mcd</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/date_mcd.html">date_mcd</a></span><span class="op">(</span><span class="va">zuni_counts</span>, dates <span class="op">=</span> <span class="va">zuni_mid</span><span class="op">)</span>
 
-<span class="va">zuni_mcd</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="va">zuni_mcd</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt;             date</span>
 <span class="co">#&gt; LZ1105 1162.5000</span>
 <span class="co">#&gt; LZ1103 1137.8378</span>
@@ -368,14 +365,12 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="co">#&gt; LZ1096  874.8204     0</span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Activity plot</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></code></pre></div>
 <p><img src="kairos_files/figure-html/event-plot-1.png" width="700"></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="co">## Tempo plot</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></code></pre></div>
 <p><img src="kairos_files/figure-html/event-plot-2.png" width="700"></p>
 <p>Resampling methods can be used to check the stability of the resulting model. If <code><a href="../reference/event.html">jackknife_event()</a></code> is used, one type/fabric is removed at a time and all statistics are recalculated. In this way, one can assess whether certain type/fabric has a substantial influence on the date estimate. If <code><a href="../reference/event.html">bootstrap_event()</a></code> is used, a large number of new bootstrap assemblages is created, with the same sample size, by resampling the original assemblage with replacement. Then, examination of the bootstrap statistics makes it possible to pinpoint assemblages that require further investigation.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -397,12 +392,12 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">bootstrap_event</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span>
 <span class="co">#&gt;              min      mean      max        Q5       Q95</span>
-<span class="co">#&gt; LZ1105 1139.2794 1166.4590 1203.185 1140.3325 1194.1914</span>
-<span class="co">#&gt; LZ1103 1089.9951 1141.4154 1215.323 1100.9717 1189.5091</span>
-<span class="co">#&gt; LZ1100 1073.4452 1159.9952 1220.562 1119.2763 1207.9739</span>
-<span class="co">#&gt; LZ1099 1089.0742 1098.6583 1108.295 1089.9733 1107.3055</span>
-<span class="co">#&gt; LZ1097  949.1786 1080.3728 1171.700  994.7415 1151.1611</span>
-<span class="co">#&gt; LZ1096  725.8462  876.2981 1023.703  755.6319  990.6079</span></code></pre></div>
+<span class="co">#&gt; LZ1105 1117.4065 1169.0913 1197.873 1135.2004 1194.9402</span>
+<span class="co">#&gt; LZ1103 1077.4042 1138.8693 1170.780 1100.7217 1167.6822</span>
+<span class="co">#&gt; LZ1100 1117.0885 1161.6975 1233.885 1124.3775 1201.4819</span>
+<span class="co">#&gt; LZ1099 1089.2531 1100.1921 1112.821 1092.2467 1107.6270</span>
+<span class="co">#&gt; LZ1097  851.4483 1066.9023 1176.859  982.4225 1169.5089</span>
+<span class="co">#&gt; LZ1096  725.8462  853.1367 1023.703  725.8462  978.6936</span></code></pre></div>
 </div>
 </div>
 <div id="references" class="section level1 unnumbered">

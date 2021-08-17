@@ -241,7 +241,7 @@ doi: <a href='https://doi.org/10.1007/s10816-011-9122-3'>10.1007/s10816-011-9122
   PINER <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1275</span>, <span class='fl'>1325</span><span class='op'>)</span>, HESH <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1275</span>, <span class='fl'>1450</span><span class='op'>)</span>, KWAK <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1275</span>, <span class='fl'>1450</span><span class='op'>)</span>
 <span class='op'>)</span>
 
-<span class='co'>## Keep only assemblages that have a sample size of at least 50</span>
+<span class='co'>## Keep only assemblages that have a sample size of at least 10</span>
 <span class='va'>keep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span>X <span class='op'>=</span> <span class='va'>zuni</span>, MARGIN <span class='op'>=</span> <span class='fl'>1</span>, FUN <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&gt;=</span> <span class='fl'>10</span><span class='op'>)</span>
 
 <span class='co'>## Calculate date ranges for each assemblage</span>
@@ -267,10 +267,15 @@ doi: <a href='https://doi.org/10.1007/s10816-011-9122-3'>10.1007/s10816-011-9122
 <span class='va'>aorist_weigth</span> <span class='op'>&lt;-</span> <span class='fu'><a href='aoristic.html'>sum_aoristic</a></span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span><span class='op'>)</span>
 </div><div class='img'><img src='roc-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>## Calculate aoristic sum (weights) with groups</span>
+<span class='va'>groups</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, size <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>span</span><span class='op'>)</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>aorist_groups</span> <span class='op'>&lt;-</span> <span class='fu'><a href='aoristic.html'>sum_aoristic</a></span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span>, groups <span class='op'>=</span> <span class='va'>groups</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Computing by group is not implemented yet and will be ignored.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_groups</span><span class='op'>)</span>
+</div><div class='img'><img src='roc-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Rate of change</span>
 <span class='va'>aorist_roc</span> <span class='op'>&lt;-</span> <span class='fu'>rate_roc</span><span class='op'>(</span><span class='va'>aorist_weigth</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_roc</span><span class='op'>)</span>
-</div><div class='img'><img src='roc-3.png' alt='' width='700' height='433' /></div></pre>
+</div><div class='img'><img src='roc-4.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

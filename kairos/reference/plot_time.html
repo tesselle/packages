@@ -249,8 +249,8 @@ window. Only used if <code>roll</code> is <code>TRUE</code>.</p></td>
 
     
 <ul>
-<li><p><code>plot_time()</code> returns a <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p></li>
-<li><p><code>autoplot()</code> returns a <a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot2::ggplot</a> object.</p></li>
+<li><p><code>plot_time()</code> returns a <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></code> object.</p></li>
+<li><p><code>autoplot()</code> returns a <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></code> object.</p></li>
 <li><p><code><a href='https://rdrr.io/r/graphics/plot.default.html'>plot()</a></code> is called it for its side-effects: it results in a graphic being
 displayed (invisibly returns <code>x</code>).</p></li>
 </ul>
@@ -285,7 +285,7 @@ selection. If so, shading highlights the data points where
 <span class='co'>## Coerce the merzbach dataset to a count matrix</span>
 <span class='co'>## Keep only decoration types that have a maximum frequency of at least 50</span>
 <span class='va'>keep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span>X <span class='op'>=</span> <span class='va'>merzbach</span>, MARGIN <span class='op'>=</span> <span class='fl'>2</span>, FUN <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&gt;=</span> <span class='fl'>50</span><span class='op'>)</span>
-<span class='va'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://arkhe.tesselle.org/reference/coerce.html'>as_count</a></span><span class='op'>(</span><span class='va'>merzbach</span><span class='op'>[</span>, <span class='va'>keep</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://packages.tesselle.org/arkhe/reference/coerce.html'>as_count</a></span><span class='op'>(</span><span class='va'>merzbach</span><span class='op'>[</span>, <span class='va'>keep</span><span class='op'>]</span><span class='op'>)</span>
 
 <span class='co'>## Group by phase</span>
 <span class='co'>## We use the row names as time coordinates (roman numerals)</span>
