@@ -3,8 +3,8 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   bibliography: bibliography.html
-last_built: 2021-05-24T17:33Z
+last_built: 2021-08-18T10:25Z
 urls:
-  reference: https://nexus.tesselle.org/reference
-  article: https://nexus.tesselle.org/articles
+  reference: https://packages.tesselle.org/nexus/reference
+  article: https://packages.tesselle.org/nexus/articles
 

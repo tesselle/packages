@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nexus.tesselle.org/index.html</loc>
+    <loc>https://packages.tesselle.org/nexus/index.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/LogRatio.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/LogRatio.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/OutlierIndex-class.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/OutlierIndex-class.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/mutator.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/nexus-package.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/nexus-package.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/outliers.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/outliers.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/reexports.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/subset.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/subset.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/reference/transform.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/transform.html</loc>
   </url>
   <url>
-    <loc>https://nexus.tesselle.org/articles/bibliography.html</loc>
+    <loc>https://packages.tesselle.org/nexus/articles/bibliography.html</loc>
   </url>
 </urlset>
