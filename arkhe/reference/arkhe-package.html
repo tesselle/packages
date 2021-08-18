@@ -207,9 +207,11 @@ A collection of classes that represent
     
 
 <p><code>arkhe</code> uses the following <code><a href='https://rdrr.io/r/base/options.html'>options()</a></code> to configure behavior:</p><ul>
-<li><p><code>arkhe.autodetect</code>: a <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar.</p></li>
+<li><p><code>arkhe.autodetect</code>: a <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. Try to automatically assign
+values to the corresponding slot of a <code>*Matrix</code> object when coercing a
+<code>data.frame</code>? Defaults to <code>TRUE</code>.</p></li>
 <li><p><code>arkhe.verbose</code>: a <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. Should <span style="R">R</span> report extra information
-on progress?</p></li>
+on progress? Defaults to <code>TRUE</code>.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
