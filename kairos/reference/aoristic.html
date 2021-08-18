@@ -319,15 +319,19 @@ Information Science</em>, 14(7): 669-79. doi: <a href='https://doi.org/10.1080/1
 <span class='va'>aorist_weigth</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span><span class='op'>)</span>
 </div><div class='img'><img src='aoristic-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'>## Calculate aoristic sum (weights) with groups</span>
+<span class='co'>## Calculate aoristic sum (weights) by group</span>
 <span class='va'>groups</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, size <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>span</span><span class='op'>)</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='va'>aorist_groups</span> <span class='op'>&lt;-</span> <span class='fu'>sum_aoristic</span><span class='op'>(</span><span class='va'>span</span>, step <span class='op'>=</span> <span class='fl'>50</span>, weight <span class='op'>=</span> <span class='cn'>TRUE</span>, groups <span class='op'>=</span> <span class='va'>groups</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='message'>Computing by group is not implemented yet and will be ignored.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_groups</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_groups</span>, facet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 </div><div class='img'><img src='aoristic-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Rate of change</span>
-<span class='va'>aorist_roc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='roc.html'>rate_roc</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>aorist_roc</span><span class='op'>)</span>
-</div><div class='img'><img src='aoristic-4.png' alt='' width='700' height='433' /></div></pre>
+<span class='va'>roc_weigth</span> <span class='op'>&lt;-</span> <span class='fu'><a href='roc.html'>rate_roc</a></span><span class='op'>(</span><span class='va'>aorist_weigth</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>roc_weigth</span><span class='op'>)</span>
+</div><div class='img'><img src='aoristic-4.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>## Rate of change by group</span>
+<span class='va'>roc_groups</span> <span class='op'>&lt;-</span> <span class='fu'><a href='roc.html'>rate_roc</a></span><span class='op'>(</span><span class='va'>aorist_groups</span>, n <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>roc_groups</span>, facet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+</div><div class='img'><img src='aoristic-5.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
