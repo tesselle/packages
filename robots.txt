@@ -1,1 +1,1 @@
-Sitemap: http://packages.tesselle.org/sitemapindex.xml
+Sitemap: https://packages.tesselle.org/sitemapindex.xml
