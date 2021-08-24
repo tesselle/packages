@@ -8,7 +8,7 @@ navbar:
       href: https://tesselle.r-universe.dev
     - icon: fab fa-github
       href: https://github.com/tesselle/packages
-exclude: ["matomo.html", "CNAME"]
+exclude: ["extra.html", "CNAME"]
 output:
   rmarkdown::html_document:
     theme: readable
@@ -16,4 +16,4 @@ output:
     toc: true
     toc_float: true
     includes:
-      in_header: matomo.html
+      in_header: extra.html
