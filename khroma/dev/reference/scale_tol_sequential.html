@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Paul Tol's Sequential Color Schemes for ggplot2 — scale_tol_sequential • khroma</title>
+<title>Paul Tol's Sequential Colour Schemes for ggplot2 — scale_tol_sequential • khroma</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,8 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Paul Tol's Sequential Color Schemes for ggplot2 — scale_tol_sequential" />
-<meta property="og:description" content="Provides sequential color scales from Paul Tol's Colour Schemes." />
+<meta property="og:title" content="Paul Tol's Sequential Colour Schemes for ggplot2 — scale_tol_sequential" />
+<meta property="og:description" content="Provides sequential colour scales from Paul Tol's Colour Schemes." />
 <meta property="og:image" content="https://packages.tesselle.org/khroma/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -173,13 +173,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Paul Tol's Sequential Color Schemes for <span class="pkg">ggplot2</span></h1>
+    <h1>Paul Tol's Sequential Colour Schemes for <span class="pkg">ggplot2</span></h1>
     <small class="dont-index">Source: <a href='https://github.com/tesselle/khroma/blob/master/R/scale_colour_tol.R'><code>R/scale_colour_tol.R</code></a></small>
     <div class="hidden name"><code>scale_tol_sequential.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Provides sequential color scales from Paul Tol's <em>Colour Schemes</em>.</p>
+    <p>Provides sequential colour scales from Paul Tol's <em>Colour Schemes</em>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>scale_colour_YlOrBr</span><span class='op'>(</span>
@@ -275,13 +275,13 @@ vector of colors be reversed?</p></td>
     <tr>
       <th>range</th>
       <td><p>A length-two <code><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></code> vector specifying the
-fraction of the scheme's color domain to keep.</p></td>
+fraction of the scheme's colour domain to keep.</p></td>
     </tr>
     <tr>
       <th>discrete</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the color scheme be
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the colour scheme be
 used as a discrete scale? If <code>TRUE</code>, it is a departure from Paul Tol's
-recommendations and likely a very poor use of color.</p></td>
+recommendations and likely a very poor use of colour.</p></td>
     </tr>
     <tr>
       <th>aesthetics</th>
@@ -295,10 +295,10 @@ strings listing the name(s) of the aesthetic(s) that this scale works with.</p><
     <p>A <a href='https://ggplot2.tidyverse.org/reference/continuous_scale.html'>continuous</a> scale.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>If more colors than defined are needed from a given scheme, the color
+    <p>If more colors than defined are needed from a given scheme, the colour
 coordinates are linearly interpolated to provide a continuous version of the
 scheme, with the exception of the <code>discrete rainbow</code> scheme (see below).</p>
-<p>Note that the default color for <code>NA</code> can be overridden by passing
+<p>Note that the default colour for <code>NA</code> can be overridden by passing
 a value to <code><a href='https://ggplot2.tidyverse.org/reference/continuous_scale.html'>ggplot2::continuous_scale()</a></code>.</p>
 <table class='table'>
 <tr><td><strong>Palette</strong></td><td><strong>Max. colors</strong></td><td><strong>NA value</strong></td></tr>
@@ -309,7 +309,7 @@ a value to <code><a href='https://ggplot2.tidyverse.org/reference/continuous_sca
 </table>
 
 
-    <h2 class="hasAnchor" id="rainbow-color-scheme"><a class="anchor" href="#rainbow-color-scheme"></a>Rainbow color scheme</h2>
+    <h2 class="hasAnchor" id="rainbow-colour-scheme"><a class="anchor" href="#rainbow-colour-scheme"></a>Rainbow colour scheme</h2>
 
     
 
@@ -325,8 +325,8 @@ the rainbow.</p></li>
 schemes that are reasonably clear in colour-blind vision. To remain
 colour-blind safe, these two schemes must comply with the following
 conditions:</p><dl>
-<dt>discrete rainbow</dt><dd><p>This scheme must not be interpolated.</p></dd>
-<dt>smooth rainbow</dt><dd><p>This scheme does not have to be used over the full
+<dt><code>discrete rainbow</code></dt><dd><p>This scheme must not be interpolated.</p></dd>
+<dt><code>smooth rainbow</code></dt><dd><p>This scheme does not have to be used over the full
 range.</p></dd>
 
 </dl>

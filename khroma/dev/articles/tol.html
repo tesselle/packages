@@ -120,7 +120,7 @@
       <h1 data-toc-skip>Paul Tol’s Colour Schemes</h1>
                         <h4 class="author">N. Frerebeau</h4>
             
-            <h4 class="date">2021-08-18</h4>
+            <h4 class="date">2021-08-24</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/khroma/blob/master/vignettes/tol.Rmd"><code>vignettes/tol.Rmd</code></a></small>
       <div class="hidden name"><code>tol.Rmd</code></div>
@@ -134,14 +134,14 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<p><span class="citation">Tol (2018)</span> offers carefully chosen schemes, ready for each type of data, with colours that are:</p>
+<p><span class="citation">Tol (2021)</span> offers carefully chosen schemes, ready for each type of data, with colours that are:</p>
 <ul>
 <li>Distinct for all people, including colour-blind readers,</li>
 <li>Distinct from black and white,</li>
 <li>Distinct on screen and paper,</li>
 <li>Matching well together.</li>
 </ul>
-<p>All the scales presented in Paul Tol’s technical note (issue 3.1, 2018-09-23) are implemented here, for use with base R <strong>graphics</strong> or <a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a>.</p>
+<p>All the scales presented in Paul Tol’s technical note (issue 3.2, 2021-08-18) are implemented here, for use with base R <strong>graphics</strong> or <a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a>.</p>
 </div>
 <div id="qualitative-data" class="section level1">
 <h1 class="hasAnchor">
@@ -157,31 +157,35 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">bright</td>
+<td align="left"><code>bright</code></td>
 <td align="right">7</td>
 </tr>
 <tr class="even">
-<td align="left">contrast</td>
+<td align="left"><code>high contrast</code></td>
 <td align="right">3</td>
 </tr>
 <tr class="odd">
-<td align="left">vibrant</td>
+<td align="left"><code>vibrant</code></td>
 <td align="right">7</td>
 </tr>
 <tr class="even">
-<td align="left">muted</td>
+<td align="left"><code>muted</code></td>
 <td align="right">9</td>
 </tr>
 <tr class="odd">
-<td align="left">pale</td>
-<td align="right">6</td>
+<td align="left"><code>medium contrast</code></td>
+<td align="right">3</td>
 </tr>
 <tr class="even">
-<td align="left">dark</td>
+<td align="left"><code>pale</code></td>
 <td align="right">6</td>
 </tr>
 <tr class="odd">
-<td align="left">light</td>
+<td align="left"><code>dark</code></td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left"><code>light</code></td>
 <td align="right">9</td>
 </tr>
 </tbody>
@@ -195,14 +199,14 @@
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_quali_bright-1.png" width="672" style="display: block; margin: auto;"></p>
 </div>
-<div id="contrast" class="section level2">
+<div id="high-contrast" class="section level2">
 <h2 class="hasAnchor">
-<a href="#contrast" class="anchor"></a><em>contrast</em>
+<a href="#high-contrast" class="anchor"></a><em>high contrast</em>
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">contrast</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"contrast"</span><span class="op">)</span>
-<span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">contrast</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
-<p><img src="tol_files/figure-html/tol_quali_contrast-1.png" width="672" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span class="va">highcontrast</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span>
+<span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">highcontrast</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
+<p><img src="tol_files/figure-html/tol_quali_highcontrast-1.png" width="672" style="display: block; margin: auto;"></p>
 </div>
 <div id="vibrant" class="section level2">
 <h2 class="hasAnchor">
@@ -222,14 +226,14 @@
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">muted</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_quali_muted-1.png" width="672" style="display: block; margin: auto;"></p>
 </div>
-<div id="light" class="section level2">
+<div id="medium-contrast" class="section level2">
 <h2 class="hasAnchor">
-<a href="#light" class="anchor"></a><em>light</em>
+<a href="#medium-contrast" class="anchor"></a><em>medium contrast</em>
 </h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">light</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"light"</span><span class="op">)</span>
-<span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">light</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
-<p><img src="tol_files/figure-html/tol_quali_light-1.png" width="672" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span class="va">mediumcontrast</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"medium contrast"</span><span class="op">)</span>
+<span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">mediumcontrast</span><span class="op">(</span><span class="fl">6</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
+<p><img src="tol_files/figure-html/tol_quali_mediumcontrast-1.png" width="672" style="display: block; margin: auto;"></p>
 </div>
 <div id="pale-and-dark" class="section level2">
 <h2 class="hasAnchor">
@@ -245,6 +249,15 @@
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">dark</span><span class="op">(</span><span class="fl">6</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_quali_pale_dark-2.png" width="672" style="display: block; margin: auto;"></p>
 </div>
+<div id="light" class="section level2">
+<h2 class="hasAnchor">
+<a href="#light" class="anchor"></a><em>light</em>
+</h2>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">light</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"light"</span><span class="op">)</span>
+<span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">light</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, names <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
+<p><img src="tol_files/figure-html/tol_quali_light-1.png" width="672" style="display: block; margin: auto;"></p>
+</div>
 </div>
 <div id="diverging-data" class="section level1">
 <h1 class="hasAnchor">
@@ -258,17 +271,17 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">sunset</td>
+<td align="left"><code>sunset</code></td>
 <td align="right">11</td>
 <td align="right">#FFFFFF</td>
 </tr>
 <tr class="even">
-<td align="left">BuRd</td>
+<td align="left"><code>BuRd</code></td>
 <td align="right">9</td>
 <td align="right">#FFEE99</td>
 </tr>
 <tr class="odd">
-<td align="left">PRGn</td>
+<td align="left"><code>PRGn</code></td>
 <td align="right">9</td>
 <td align="right">#FFEE99</td>
 </tr>
@@ -278,7 +291,7 @@
 <h2 class="hasAnchor">
 <a href="#sunset" class="anchor"></a><em>sunset</em>
 </h2>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">sunset</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"sunset"</span><span class="op">)</span>
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">sunset</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_div_sunset-1.png" width="672" style="display: block; margin: auto;"></p>
@@ -287,7 +300,7 @@
 <h2 class="hasAnchor">
 <a href="#burd" class="anchor"></a><em>BuRd</em>
 </h2>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">BuRd</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"BuRd"</span><span class="op">)</span>
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">BuRd</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_div_BuRd-1.png" width="672" style="display: block; margin: auto;"></p>
@@ -296,7 +309,7 @@
 <h2 class="hasAnchor">
 <a href="#prgn" class="anchor"></a><em>PRGn</em>
 </h2>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">PRGn</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"PRGn"</span><span class="op">)</span>
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">PRGn</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_div_PRGn-1.png" width="672" style="display: block; margin: auto;"></p>
@@ -314,22 +327,22 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">YlOrBr</td>
+<td align="left"><code>YlOrBr</code></td>
 <td align="right">9</td>
 <td align="right">#888888</td>
 </tr>
 <tr class="even">
-<td align="left">iridescent</td>
+<td align="left"><code>iridescent</code></td>
 <td align="right">23</td>
 <td align="right">#999999</td>
 </tr>
 <tr class="odd">
-<td align="left">discrete rainbow</td>
+<td align="left"><code>discrete rainbow</code></td>
 <td align="right">23</td>
 <td align="right">#777777</td>
 </tr>
 <tr class="even">
-<td align="left">smooth rainbow</td>
+<td align="left"><code>smooth rainbow</code></td>
 <td align="right">34</td>
 <td align="right">#666666</td>
 </tr>
@@ -339,7 +352,7 @@
 <h2 class="hasAnchor">
 <a href="#ylorbr" class="anchor"></a><em>YlOrBr</em>
 </h2>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">YlOrBr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span>
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">YlOrBr</span><span class="op">(</span><span class="fl">9</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_seq_YlOrBr-1.png" width="672" style="display: block; margin: auto;"></p>
@@ -348,7 +361,7 @@
 <h2 class="hasAnchor">
 <a href="#iridescent" class="anchor"></a><em>iridescent</em>
 </h2>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">iridescent</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span>
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">iridescent</span><span class="op">(</span><span class="fl">23</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_seq_iridescent-1.png" width="672" style="display: block; margin: auto;"></p>
@@ -357,7 +370,7 @@
 <h2 class="hasAnchor">
 <a href="#rainbow" class="anchor"></a><em>rainbow</em>
 </h2>
-<p>As a general rule, ordered data should not be represented using a rainbow scheme. There are three main arguments against such use <span class="citation">(Tol 2018)</span>:</p>
+<p>As a general rule, ordered data should not be represented using a rainbow scheme. There are three main arguments against such use <span class="citation">(Tol 2021)</span>:</p>
 <ul>
 <li>The spectral order of visible light carries no inherent magnitude message.</li>
 <li>Some bands of almost constant hue with sharp transitions between them, can be perceived as jumps in the data.</li>
@@ -369,10 +382,10 @@
 <dd>This scheme must not be interpolated.
 </dd>
 <dt><em>smooth rainbow</em></dt>
-<dd>This scheme does not have to be used over the full range <span class="citation">(Tol 2018 suggests starting at purple)</span>.
+<dd>This scheme does not have to be used over the full range <span class="citation">(Tol 2021 suggests starting at purple)</span>.
 </dd>
 </dl>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">discrete_rainbow</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"discrete rainbow"</span><span class="op">)</span>
 <span class="fu"><a href="../reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">discrete_rainbow</span><span class="op">(</span><span class="fl">14</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span>, size <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_seq_rainbow-1.png" width="672" style="display: block; margin: auto;"></p>
@@ -381,13 +394,13 @@
 <li>Start off-white instead of purple if the lowest data value occurs often;</li>
 <li>End at red instead of brown the highest data value occurs often.</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">smooth_rainbow</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"smooth rainbow"</span><span class="op">)</span>
 
 <span class="co"># Start at purple instead of off-white</span>
 <span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="fu">smooth_rainbow</span><span class="op">(</span><span class="fl">256</span>, range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_seq_adjust-1.png" width="672" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># End at red instead of brown</span>
 <span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="fu">smooth_rainbow</span><span class="op">(</span><span class="fl">256</span>, range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.9</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="tol_files/figure-html/tol_seq_adjust-2.png" width="672" style="display: block; margin: auto;"></p>
@@ -428,8 +441,8 @@ Diagnostic maps for the YlOrBr, iridescent, discrete rainbow and smooth rainbow 
 <h1 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h1>
 <div id="refs" class="references">
-<div id="ref-tol2018">
-<p>Tol, Paul. 2018. “Colour Schemes.” Technical note SRON/EPS/TN/09-002 3.1. SRON. <a href="https://personal.sron.nl/~pault/">https://personal.sron.nl/~pault/</a>.</p>
+<div id="ref-tol2021">
+<p>Tol, Paul. 2021. “Colour Schemes.” Technical note SRON/EPS/TN/09-002 3.2. SRON. <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf">https://personal.sron.nl/~pault/data/colourschemes.pdf</a>.</p>
 </div>
 </div>
 </div>

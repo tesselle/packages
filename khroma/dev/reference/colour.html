@@ -75,7 +75,7 @@
   <script src="../extra.js"></script>
 
 <meta property="og:title" content="Color Palette — colour" />
-<meta property="og:description" content="Provides qualitative, diverging and sequential color schemes." />
+<meta property="og:description" content="Provides qualitative, diverging and sequential colour schemes." />
 <meta property="og:image" content="https://packages.tesselle.org/khroma/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -179,7 +179,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Provides qualitative, diverging and sequential color schemes.</p>
+    <p>Provides qualitative, diverging and sequential colour schemes.</p>
     </div>
 
     <pre class="usage"><span class='fu'>colour</span><span class='op'>(</span><span class='va'>palette</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, names <span class='op'>=</span> <span class='cn'>TRUE</span>, lang <span class='op'>=</span> <span class='st'>"en"</span>, force <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span>
@@ -196,23 +196,23 @@ used (see below).</p></td>
     </tr>
     <tr>
       <th>reverse</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the resulting vector of colors
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the resulting vector of colours
 should be reversed?</p></td>
     </tr>
     <tr>
       <th>names</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the names of the colors should be
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar: should the names of the colours should be
 kept in the resulting vector?</p></td>
     </tr>
     <tr>
       <th>lang</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the language for the color
-names. It must be one of "<code>en</code>" (english, the default) or "<code>fr</code>" (french).</p></td>
+      <td><p>A <code><a href='https://rdrr.io/r/base/character.html'>character</a></code> string specifying the language for the colour
+names. It must be one of "<code>en</code>" (English, the default) or "<code>fr</code>" (French).</p></td>
     </tr>
     <tr>
       <th>force</th>
-      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. If <code>TRUE</code>, forces the color scheme to be
-interpolated. It should not be used routinely with qualitative color
+      <td><p>A <code><a href='https://rdrr.io/r/base/logical.html'>logical</a></code> scalar. If <code>TRUE</code>, forces the colour scheme to be
+interpolated. It should not be used routinely with qualitative colour
 schemes, as they are designed to be used as is to remain colorblind-safe.</p></td>
     </tr>
     <tr>
@@ -244,35 +244,35 @@ Only relevant for non-interpolated color schemes.</p></dd>
 the colour range can be limited with an additional argument. <code>range</code> allows
 to remove a fraction of the colour domain (before being interpolated; see
 examples).</p>
-    <h2 class="hasAnchor" id="paul-tol-s-color-schemes"><a class="anchor" href="#paul-tol-s-color-schemes"></a>Paul Tol's Color Schemes</h2>
+    <h2 class="hasAnchor" id="paul-tol-s-colour-schemes"><a class="anchor" href="#paul-tol-s-colour-schemes"></a>Paul Tol's Colour Schemes</h2>
 
     
 
 <p>The following palettes are available. The maximum number of supported
-colors is in brackets, this value is only relevant for the qualitative
-color schemes (divergent and sequential schemes are linearly interpolated).</p><dl>
-<dt>Qualitative data</dt><dd><p>bright (7), contrast (3), vibrant (7), muted (9),
-pale (6), dark (6), light (9).</p></dd>
-<dt>Diverging data</dt><dd><p>sunset (11), BuRd (9), PRGn (9).</p></dd>
-<dt>Sequential data</dt><dd><p>YlOrBr (9), iridescent (23), discrete rainbow (23),
-smooth rainbow (34).</p></dd>
+colours is in brackets, this value is only relevant for the qualitative
+colour schemes (divergent and sequential schemes are linearly interpolated).</p><dl>
+<dt>Qualitative data</dt><dd><p><code>bright</code> (7), <code>high contrast</code> (3), <code>vibrant</code> (7),
+<code>muted</code> (9), <code>medium contrast</code> (6), <code>pale</code> (6), <code>dark</code> (6), <code>light</code> (9).</p></dd>
+<dt>Diverging data</dt><dd><p><code>sunset</code> (11), <code>BuRd</code> (9), <code>PRGn</code> (9).</p></dd>
+<dt>Sequential data</dt><dd><p><code>YlOrBr</code> (9), <code>iridescent</code> (23), <code>discrete rainbow</code>
+(23), <code>smooth rainbow</code> (34).</p></dd>
 
 </dl>
 
-    <h2 class="hasAnchor" id="qualitative-color-schemes"><a class="anchor" href="#qualitative-color-schemes"></a>Qualitative color schemes</h2>
+    <h2 class="hasAnchor" id="qualitative-colour-schemes"><a class="anchor" href="#qualitative-colour-schemes"></a>Qualitative colour schemes</h2>
 
     
 
-<p>According to Paul Tol's technical note, the <code>bright</code>, <code>contrast</code>,
-<code>vibrant</code> and <code>muted</code> color schemes are colorblind safe.</p>
-<p>The <code>light</code> color scheme is reasonably distinct for both normal or
-colorblind vision and is intended to fill labeled cells.</p>
+<p>According to Paul Tol's technical note, the <code>bright</code>, <code>high contrast</code>,
+<code>vibrant</code> and <code>muted</code> colour schemes are colourblind safe. The <code>medium contrast</code> colour scheme is designed for situations needing colour pairs.</p>
+<p>The <code>light</code> colour scheme is reasonably distinct for both normal or
+colourblind vision and is intended to fill labeled cells.</p>
 <p>The <code>pale</code> and <code>dark</code> schemes are not very distinct in either normal or
-colorblind vision and should be used as a text background or to highlight
+colourblind vision and should be used as a text background or to highlight
 a cell in a table.</p>
 <p>Refer to the original document for details about the recommended uses (see
 references).</p>
-    <h2 class="hasAnchor" id="rainbow-color-scheme"><a class="anchor" href="#rainbow-color-scheme"></a>Rainbow color scheme</h2>
+    <h2 class="hasAnchor" id="rainbow-colour-scheme"><a class="anchor" href="#rainbow-colour-scheme"></a>Rainbow colour scheme</h2>
 
     
 
@@ -288,8 +288,8 @@ the rainbow.</p></li>
 schemes that are reasonably clear in colour-blind vision. To remain
 colour-blind safe, these two schemes must comply with the following
 conditions:</p><dl>
-<dt>discrete rainbow</dt><dd><p>This scheme must not be interpolated.</p></dd>
-<dt>smooth rainbow</dt><dd><p>This scheme does not have to be used over the full
+<dt><code>discrete rainbow</code></dt><dd><p>This scheme must not be interpolated.</p></dd>
+<dt><code>smooth rainbow</code></dt><dd><p>This scheme does not have to be used over the full
 range.</p></dd>
 
 </dl>
@@ -299,7 +299,7 @@ range.</p></dd>
     
 
 <p>The following (qualitative) colour scheme is available:</p><dl>
-<dt>okabe ito</dt><dd><p>Up to 8 colours.</p></dd>
+<dt><code>okabe ito</code></dt><dd><p>Up to 8 colours.</p></dd>
 
 </dl>
 
@@ -308,9 +308,10 @@ range.</p></dd>
     
 
 <p>The following (qualitative) color schemes are available:</p><dl>
-<dt>stratigraphy</dt><dd><p>International Chronostratigraphic Chart (175 colours).</p></dd>
-<dt>land</dt><dd><p>AVHRR Global Land Cover Classification (14 colours).</p></dd>
-<dt>soil</dt><dd><p>FAO Reference Soil Groups (24 colours).</p></dd>
+<dt><code>stratigraphy</code></dt><dd><p>International Chronostratigraphic Chart (175
+colours).</p></dd>
+<dt><code>land</code></dt><dd><p>AVHRR Global Land Cover Classification (14 colours).</p></dd>
+<dt><code>soil</code></dt><dd><p>FAO Reference Soil Groups (24 colours).</p></dd>
 
 </dl>
 
@@ -322,8 +323,8 @@ of the European Communities. 128 pp. ISBN: 92-894-8120-X.</p>
 <p>Okabe, M. &amp; Ito, K. (2008). <em>Color Universal Design (CUD): How to Make
 Figures and Presentations That Are Friendly to Colorblind People</em>.
 URL: <a href='https://jfly.uni-koeln.de/color/'>https://jfly.uni-koeln.de/color/</a>.</p>
-<p>Tol, P. (2018). <em>Colour Schemes</em>. SRON. Technical Note No.
-SRON/EPS/TN/09-002, issue 3.1.
+<p>Tol, P. (2021). <em>Colour Schemes</em>. SRON. Technical Note No.
+SRON/EPS/TN/09-002, issue 3.2.
 URL: <a href='https://personal.sron.nl/~pault/data/colourschemes.pdf'>https://personal.sron.nl/~pault/data/colourschemes.pdf</a></p>
 <p><a href='https://www.ccgm.org'>Commission for the Geological Map of the World</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -342,35 +343,36 @@ URL: <a href='https://personal.sron.nl/~pault/data/colourschemes.pdf'>https://pe
 <span class='co'>## Paul Tol's colour schemes</span>
 <span class='co'>### Qualitative data</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"bright"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>7</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"contrast"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"high contrast"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='colour-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"vibrant"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>7</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"pale"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"dark"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-6.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"muted"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-7.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"light"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-8.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### Diverging data</span>
+</div><div class='img'><img src='colour-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"muted"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"medium contrast"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-6.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"pale"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-7.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"dark"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-8.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"light"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-9.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### Diverging data</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"sunset"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>11</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-9.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"BuRd"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-10.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"PRGn"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-11.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### Sequential data</span>
+</div><div class='img'><img src='colour-10.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"BuRd"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-11.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"PRGn"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-12.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### Sequential data</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"YlOrBr"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-12.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"iridescent"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>23</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-13.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"discrete rainbow"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>14</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-14.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"discrete rainbow"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>23</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-15.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"smooth rainbow"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>34</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-16.png' alt='' width='700' height='433' /></div><div class='input'>
+</div><div class='img'><img src='colour-13.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"iridescent"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>23</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-14.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"discrete rainbow"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>14</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-15.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"discrete rainbow"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>23</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-16.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"smooth rainbow"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>34</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='colour-17.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Scientific colour schemes</span>
 <span class='co'>### Geologic timescale</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"stratigraphy"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>175</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-17.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### AVHRR global land cover classification</span>
+</div><div class='img'><img src='colour-18.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### AVHRR global land cover classification</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"land"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>14</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-18.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### FAO soil reference groups</span>
+</div><div class='img'><img src='colour-19.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>### FAO soil reference groups</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>colour</span><span class='op'>(</span><span class='st'>"soil"</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>24</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-19.png' alt='' width='700' height='433' /></div><div class='input'>
+</div><div class='img'><img src='colour-20.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Adjust colour levels</span>
 <span class='va'>PRGn</span> <span class='op'>&lt;-</span> <span class='fu'>colour</span><span class='op'>(</span><span class='st'>"PRGn"</span><span class='op'>)</span>
 <span class='fu'><a href='plot.html'>plot_scheme</a></span><span class='op'>(</span><span class='fu'>PRGn</span><span class='op'>(</span><span class='fl'>9</span>, range <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='colour-20.png' alt='' width='700' height='433' /></div></pre>
+</div><div class='img'><img src='colour-21.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

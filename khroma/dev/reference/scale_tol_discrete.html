@@ -22,7 +22,7 @@
   }
 </script>
 
-<title>Paul Tol's Discrete Color Schemes for ggplot2 — scale_tol_discrete • khroma</title>
+<title>Paul Tol's Discrete Colour Schemes for ggplot2 — scale_tol_discrete • khroma</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -74,8 +74,8 @@
   
   <script src="../extra.js"></script>
 
-<meta property="og:title" content="Paul Tol's Discrete Color Schemes for ggplot2 — scale_tol_discrete" />
-<meta property="og:description" content="Provides qualitative color scales from Paul Tol's Colour Schemes." />
+<meta property="og:title" content="Paul Tol's Discrete Colour Schemes for ggplot2 — scale_tol_discrete" />
+<meta property="og:description" content="Provides qualitative colour scales from Paul Tol's Colour Schemes." />
 <meta property="og:image" content="https://packages.tesselle.org/khroma/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@nfrerebeau" />
@@ -173,13 +173,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Paul Tol's Discrete Color Schemes for <span class="pkg">ggplot2</span></h1>
+    <h1>Paul Tol's Discrete Colour Schemes for <span class="pkg">ggplot2</span></h1>
     <small class="dont-index">Source: <a href='https://github.com/tesselle/khroma/blob/master/R/scale_colour_tol.R'><code>R/scale_colour_tol.R</code></a></small>
     <div class="hidden name"><code>scale_tol_discrete.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Provides qualitative color scales from Paul Tol's <em>Colour Schemes</em>.</p>
+    <p>Provides qualitative colour scales from Paul Tol's <em>Colour Schemes</em>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>scale_colour_bright</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
@@ -194,6 +194,12 @@
 
 <span class='fu'>scale_fill_contrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span>
 
+<span class='fu'>scale_colour_highcontrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
+
+<span class='fu'>scale_color_highcontrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
+
+<span class='fu'>scale_fill_highcontrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span>
+
 <span class='fu'>scale_colour_vibrant</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
 
 <span class='fu'>scale_color_vibrant</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
@@ -205,6 +211,12 @@
 <span class='fu'>scale_color_muted</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
 
 <span class='fu'>scale_fill_muted</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span>
+
+<span class='fu'>scale_colour_mediumcontrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
+
+<span class='fu'>scale_color_mediumcontrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
+
+<span class='fu'>scale_fill_mediumcontrast</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span>
 
 <span class='fu'>scale_colour_pale</span><span class='op'>(</span><span class='va'>...</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span>, aesthetics <span class='op'>=</span> <span class='st'>"colour"</span><span class='op'>)</span>
 
@@ -248,37 +260,38 @@ strings listing the name(s) of the aesthetic(s) that this scale works with.</p><
     <p>A <a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>discrete</a> scale.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The qualitative color schemes are used as given (no interpolation):
+    <p>The qualitative colour schemes are used as given (no interpolation):
 colors are picked up to the maximum number of supported values.</p>
 <table class='table'>
 <tr><td><strong>Palette</strong></td><td><strong>Max.</strong></td></tr>
 <tr><td><code>bright</code></td><td>7</td></tr>
-<tr><td><code>contrast</code></td><td>3</td></tr>
+<tr><td><code>high contrast</code></td><td>3</td></tr>
 <tr><td><code>vibrant</code></td><td>7</td></tr>
 <tr><td><code>muted</code></td><td>9</td></tr>
+<tr><td><code>medium contrast</code></td><td>6</td></tr>
 <tr><td><code>pale</code></td><td>6</td></tr>
 <tr><td><code>dark</code></td><td>6</td></tr>
 <tr><td><code>light</code></td><td>9</td></tr>
 </table>
 
 
-    <h2 class="hasAnchor" id="qualitative-color-schemes"><a class="anchor" href="#qualitative-color-schemes"></a>Qualitative color schemes</h2>
+    <h2 class="hasAnchor" id="qualitative-colour-schemes"><a class="anchor" href="#qualitative-colour-schemes"></a>Qualitative colour schemes</h2>
 
     
 
-<p>According to Paul Tol's technical note, the <code>bright</code>, <code>contrast</code>,
-<code>vibrant</code> and <code>muted</code> color schemes are colorblind safe.</p>
-<p>The <code>light</code> color scheme is reasonably distinct for both normal or
-colorblind vision and is intended to fill labeled cells.</p>
+<p>According to Paul Tol's technical note, the <code>bright</code>, <code>high contrast</code>,
+<code>vibrant</code> and <code>muted</code> colour schemes are colourblind safe. The <code>medium contrast</code> colour scheme is designed for situations needing colour pairs.</p>
+<p>The <code>light</code> colour scheme is reasonably distinct for both normal or
+colourblind vision and is intended to fill labeled cells.</p>
 <p>The <code>pale</code> and <code>dark</code> schemes are not very distinct in either normal or
-colorblind vision and should be used as a text background or to highlight
+colourblind vision and should be used as a text background or to highlight
 a cell in a table.</p>
 <p>Refer to the original document for details about the recommended uses (see
 references).</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>Tol, P. (2018). <em>Colour Schemes</em>. SRON. Technical Note No.
-SRON/EPS/TN/09-002, issue 3.1.
+    <p>Tol, P. (2021). <em>Colour Schemes</em>. SRON. Technical Note No.
+SRON/EPS/TN/09-002, issue 3.2.
 URL: <a href='https://personal.sron.nl/~pault/data/colourschemes.pdf'>https://personal.sron.nl/~pault/data/colourschemes.pdf</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
