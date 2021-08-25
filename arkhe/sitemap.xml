@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://packages.tesselle.org/arkhe/404.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/articles/arkhe.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/authors.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/pull_request_template.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/AbundanceMatrix-class.html</loc>
@@ -55,6 +82,9 @@
     <loc>https://packages.tesselle.org/arkhe/reference/conditions.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/index.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/mutator.html</loc>
   </url>
   <url>
@@ -89,8 +119,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/validate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/articles/arkhe.html</loc>
   </url>
 </urlset>
