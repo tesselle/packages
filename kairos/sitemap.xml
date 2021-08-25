@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://packages.tesselle.org/kairos/404.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/articles/bibliography.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/articles/kairos.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/authors.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/pull_request_template.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/AoristicSum-class.html</loc>
@@ -37,6 +64,9 @@
     <loc>https://packages.tesselle.org/kairos/reference/fit.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/reference/index.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/reference/kairos-package.html</loc>
   </url>
   <url>
@@ -59,11 +89,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/subset.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kairos/articles/bibliography.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kairos/articles/kairos.html</loc>
   </url>
 </urlset>
