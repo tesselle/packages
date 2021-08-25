@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://packages.tesselle.org/tekton/404.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tekton/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tekton/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tekton/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tekton/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tekton/reference/test.html</loc>
+  </url>
+</urlset>
