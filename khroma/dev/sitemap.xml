@@ -1,63 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://packages.tesselle.org/khroma/index.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/colour.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/compare.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/convert.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/articles/crameri.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/info.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/khroma-package.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/articles/tol.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/plot.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/authors.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_cyclic.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_diverging.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/news/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_mutlisequential.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_sequential.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/colour.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_land.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/compare.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_okabeito_discrete.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/convert.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_soil.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_stratigraphy.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/info.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_tol_discrete.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/khroma-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_tol_diverging.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/plot.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_tol_sequential.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_crameri_cyclic.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/articles/crameri.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_crameri_diverging.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/articles/tol.html</loc>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_crameri_mutlisequential.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_crameri_sequential.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_land.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_okabeito_discrete.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_soil.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_stratigraphy.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_tol_discrete.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_tol_diverging.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_tol_sequential.html</loc>
   </url>
 </urlset>
