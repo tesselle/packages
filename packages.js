@@ -3,19 +3,6 @@
 (function($) {
   $(function() {
 
-    /* Search marking --------------------------*/
-    var url = new URL(window.location.href);
-    var toMark = url.searchParams.get("q");
-    var mark = new Mark("div.col-md-9");
-    if (toMark) {
-      mark.mark(toMark, {
-        accuracy: {
-          value: "complementary",
-          limiters: [",", ".", ":", "/"],
-        }
-      });
-    }
-
     /* Search --------------------------*/
     /* Adapted from https://github.com/rstudio/bookdown/blob/2d692ba4b61f1e466c92e78fd712b0ab08c11d31/inst/resources/bs4_book/bs4_book.js#L25 */
     // Initialise search index on focus
@@ -74,11 +61,11 @@
       templates: {
         suggestion: (s) => {
           if (s.title == s.what) {
-            return `${s.dir} >	<div class="search-details"> ${s.title}</div>`;
+            return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div>`;
           } else if (s.previous_headings == "") {
-            return `${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
+            return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
           } else {
-            return `${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
+            return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
           }
         },
       },
