@@ -14,11 +14,10 @@ if (!all(installed)) {
 repo <- utils::contrib.url("https://tesselle.r-universe.dev")
 pkg <- utils::available.packages(contriburl = repo)
 pkg <- as.data.frame(pkg)
-
-url <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
+url_pkg <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
 
 ## Build sitemap index
-loc <- paste0(url, "/sitemap.xml")
+loc <- paste0(url_pkg, "/sitemap.xml")
 map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", loc)
 cat(
   '<?xml version="1.0" encoding="UTF-8"?>',
@@ -35,14 +34,15 @@ cat(
 
 ## Build search index
 sea <- list()
-for (i in seq_along(url)) {
-  path <- url[[i]]
+for (i in seq_along(url_pkg)) {
+  path <- url_pkg[[i]]
   tmp <- try(
     expr = rjson::fromJSON(file = paste0(path, "/search.json")), 
     silent = TRUE
   )
   if (!inherits(tmp, "try-error")) {
     for (j in seq_along(tmp)) {
+      tmp[[j]]$package <- pkg$Package[[i]]
       tmp[[j]]$path <- paste0(path, tmp[[j]]$path) # Absolute path
     }
     sea <- c(sea, tmp)
@@ -51,19 +51,32 @@ for (i in seq_along(url)) {
 writeLines(rjson::toJSON(sea), "search.json")
 ```
 
-## Search the doc
+[**tesselle**](https://www.tesselle.org/) is a collection of [R](https://www.r-project.org/) packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology. The **tesselle** packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.
 
 <form role="search">
+<div class="form-group">
+<label for="search-input">Search in the documentation</label>
 <input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/search.json" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+</div>
 </form>
 
-## Packages
+---
 
 ```{r, echo=FALSE}
-info <- pkg[order(pkg$Package), c("Package", "Version", "Depends", "License")]
-url <- "<a href=\"https://packages.tesselle.org/%s\" title=\"Read the doc\">%s</a>"
-info$Package <- sprintf(url, info$Package, info$Package)
-rownames(info) <- NULL
+url_doc <- "<a href=\"%s\" title=\"Read the doc\">%s</a>"
+url_badge_version <- "<img src=\"http://www.r-pkg.org/badges/version/%s\">"
+url_badge_status <- "<img src=\"https://cranchecks.info/badges/worst/%s\">"
 
-knitr::kable(info, escape = FALSE)
+info <- pkg[order(pkg$Package), c("Package", "Version", "Depends", "License")]
+cran_version <- sprintf(url_badge_version, info$Package)
+cran_status <- sprintf(url_badge_status, info$Package)
+
+# [![CRAN Version](http://www.r-pkg.org/badges/version/tabula)](https://cran.r-project.org/package=tabula)
+
+data <- data.frame(
+  Package = sprintf(url_doc, url_pkg, info$Package),
+  Version = cran_version,
+  Status = cran_status
+)
+knitr::kable(data, row.names = FALSE, escape = FALSE)
 ```

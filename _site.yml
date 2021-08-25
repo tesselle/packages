@@ -11,9 +11,9 @@ navbar:
 exclude: ["extra.html", "CNAME"]
 output:
   rmarkdown::html_document:
-    theme: readable
     highlight: pygments
     toc: false
     toc_float: true
+    css: "packages.css"
     includes:
       in_header: extra.html

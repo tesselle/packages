@@ -3,19 +3,6 @@
 (function($) {
   $(function() {
 
-    /* Search marking --------------------------*/
-    var url = new URL(window.location.href);
-    var toMark = url.searchParams.get("q");
-    var mark = new Mark("div.col-md-9");
-    if (toMark) {
-      mark.mark(toMark, {
-        accuracy: {
-          value: "complementary",
-          limiters: [",", ".", ":", "/"],
-        }
-      });
-    }
-
     /* Search --------------------------*/
     /* Adapted from https://github.com/rstudio/bookdown/blob/2d692ba4b61f1e466c92e78fd712b0ab08c11d31/inst/resources/bs4_book/bs4_book.js#L25 */
     // Initialise search index on focus
@@ -62,27 +49,36 @@
           .filter((x) => x.score <= 0.75)
           .map((x) => x.item);
         if (items.length === 0) {
-          items = [{dir:"Sorry 😿",previous_headings:"",title:"No results found.",what:"No results found.",path:window.location.href}];
+          items = [
+            {
+              package:"tesselle",
+              dir:"Sorry 😿",
+              previous_headings:"",
+              title:"No results found.",
+              what:"No results found.",
+              path:window.location.href
+            }
+          ];
         }
       }
       callback(items);
     }
     $("#search-input").autocomplete(options, [
-    {
-      name: "content",
-      source: searchFuse,
-      templates: {
-        suggestion: (s) => {
-          if (s.title == s.what) {
-            return `${s.dir} >	<div class="search-details"> ${s.title}</div>`;
-          } else if (s.previous_headings == "") {
-            return `${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
-          } else {
-            return `${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
-          }
+      {
+        name: "content",
+        source: searchFuse,
+        templates: {
+          suggestion: (s) => {
+            if (s.title == s.what) {
+              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div>`;
+            } else if (s.previous_headings == "") {
+              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
+            } else {
+              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
+            }
+          },
         },
       },
-    },
     ]).on('autocomplete:selected', function(event, s) {
       window.location.href = s.path + "?q=" + q + "#" + s.id;
     });
