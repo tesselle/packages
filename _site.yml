@@ -1,6 +1,6 @@
 name: "tesselle"
 navbar:
-  title: "tesselle"
+  title: "R packages & archaeology"
   right:
     - icon: fas fa-home
       href: https://www.tesselle.org
@@ -13,7 +13,7 @@ output:
   rmarkdown::html_document:
     theme: readable
     highlight: pygments
-    toc: true
+    toc: false
     toc_float: true
     includes:
       in_header: extra.html

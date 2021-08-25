@@ -1,42 +1,68 @@
 ---
 title: "tesselle"
-subtitle: "R packages & archaeology"
 ---
 
-Most of the R packages of the [tesselle](https://www.tesselle.org/) project are distributed on [CRAN](https://cran.r-project.org/), but some data packages are too large and can only be installed from our universe: [tesselle.r-universe.dev](https://tesselle.r-universe.dev).
+```{r, include=FALSE}
+## Install missing packages (if any)
+pkg <- c("rjson")
+installed <- vapply(X = pkg, FUN = requireNamespace, FUN.VALUE = logical(1))
+if (!all(installed)) {
+  utils::install.packages(pkg[!installed])
+}
 
-If available, CRAN releases must be regarded as the preferred source.
+## Get packages info
+repo <- utils::contrib.url("https://tesselle.r-universe.dev")
+pkg <- utils::available.packages(contriburl = repo)
+pkg <- as.data.frame(pkg)
 
-## Download tesselle packages
+url <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
 
-If you want to install a package, simply use `install.packages()` with the additional repository:
+## Build sitemap index
+loc <- paste0(url, "/sitemap.xml")
+map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", loc)
+cat(
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '  <sitemap>',
+  '    <loc>https://packages.tesselle.org/sitemap.xml</loc>',
+  '  </sitemap>',
+  map,
+  '</sitemapindex>',
+  file = "sitemapindex.xml",
+  sep = "\n",
+  append = FALSE
+)
 
-```{r, eval=FALSE}
-## Enable this universe
-options(repos = c(tesselle = 'https://tesselle.r-universe.dev',
-                  CRAN = 'https://cloud.r-project.org'))
-
-## Install some packages
-install.packages("tabula")
+## Build search index
+sea <- list()
+for (i in seq_along(url)) {
+  path <- url[[i]]
+  tmp <- try(
+    expr = rjson::fromJSON(file = paste0(path, "/search.json")), 
+    silent = TRUE
+  )
+  if (!inherits(tmp, "try-error")) {
+    for (j in seq_along(tmp)) {
+      tmp[[j]]$path <- paste0(path, tmp[[j]]$path) # Absolute path
+    }
+    sea <- c(sea, tmp)
+  }
+}
+writeLines(rjson::toJSON(sea), "search.json")
 ```
 
-## Use the repository
+## Search the doc
 
-You can use this repository in your R package (always prefer the CRAN release if available). To do so, prepare the `DESCRIPTION` file of your R package:
-
-* List the package under `Suggests:`
-* Add the line `Additional_repositories: https://tesselle.r-universe.dev`
-* Test your package with `R CMD check --as-cran`
+<form role="search">
+<input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/search.json" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+</form>
 
 ## Packages
 
 ```{r, echo=FALSE}
-repo <- utils::contrib.url("https://tesselle.r-universe.dev")
-pkg <- utils::available.packages(contriburl = repo)
-
-info <- as.data.frame(pkg[, c("Package", "Version", "Depends", "License")])
-info$Package <- sprintf("<a href=\"https://packages.tesselle.org/%s\" title=\"Read the doc\">%s</a>", 
-                        info$Package, info$Package)
+info <- pkg[order(pkg$Package), c("Package", "Version", "Depends", "License")]
+url <- "<a href=\"https://packages.tesselle.org/%s\" title=\"Read the doc\">%s</a>"
+info$Package <- sprintf(url, info$Package, info$Package)
 rownames(info) <- NULL
 
 knitr::kable(info, escape = FALSE)
