@@ -3,6 +3,9 @@ form {
 }
 
 /* from https://github.com/r-lib/pkgdown/blob/51268b0d9cb0588d7a6404a2b8ef4ee19c435e89/inst/assets/BS4/pkgdown.css */
+.algolia-autocomplete {
+  width: 100%;
+}
 .algolia-autocomplete .aa-hint {
   color: #999;
 }

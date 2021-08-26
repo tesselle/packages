@@ -49,27 +49,36 @@
           .filter((x) => x.score <= 0.75)
           .map((x) => x.item);
         if (items.length === 0) {
-          items = [{dir:"Sorry 😿",previous_headings:"",title:"No results found.",what:"No results found.",path:window.location.href}];
+          items = [
+            {
+              package:"tesselle",
+              dir:"Sorry 😿",
+              previous_headings:"",
+              title:"No results found.",
+              what:"No results found.",
+              path:window.location.href
+            }
+          ];
         }
       }
       callback(items);
     }
     $("#search-input").autocomplete(options, [
-    {
-      name: "content",
-      source: searchFuse,
-      templates: {
-        suggestion: (s) => {
-          if (s.title == s.what) {
-            return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div>`;
-          } else if (s.previous_headings == "") {
-            return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
-          } else {
-            return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
-          }
+      {
+        name: "content",
+        source: searchFuse,
+        templates: {
+          suggestion: (s) => {
+            if (s.title == s.what) {
+              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div>`;
+            } else if (s.previous_headings == "") {
+              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
+            } else {
+              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
+            }
+          },
         },
       },
-    },
     ]).on('autocomplete:selected', function(event, s) {
       window.location.href = s.path + "?q=" + q + "#" + s.id;
     });
