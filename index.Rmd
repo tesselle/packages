@@ -1,14 +1,34 @@
 ---
-title: "tesselle"
+title: "R packages & archaeology"
 ---
 
 ```{r, include=FALSE}
 ## Install missing packages (if any)
-pkg <- c("rjson")
-installed <- vapply(X = pkg, FUN = requireNamespace, FUN.VALUE = logical(1))
+pkg <- c("metathis", "rjson")
+installed <- vapply(
+  X = pkg,
+  FUN = requireNamespace,
+  FUN.VALUE = logical(1), 
+  quietly = TRUE
+)
 if (!all(installed)) {
   utils::install.packages(pkg[!installed])
 }
+
+metathis::meta() |>
+  metathis::meta_description(
+    "A collection of R packages for research and teaching in archaeology."
+  ) |> 
+  metathis::meta_name("github-repo" = "tesselle/packages") |> 
+  metathis::meta_viewport() |> 
+  metathis::meta_social(
+    title = "R packages & archaeology",
+    url = "https://packages.tesselle.org/",
+    image = "https://www.tesselle.org/images/tesselle.png",
+    image_alt = "tesselle hex sticker",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@nfrerebeau"
+  )
 
 ## Get packages info
 repo <- utils::contrib.url("https://tesselle.r-universe.dev")
@@ -66,17 +86,24 @@ writeLines(rjson::toJSON(sea), "search.json")
 url_doc <- "<a href=\"%s\" title=\"Read the doc\">%s</a>"
 url_badge_version <- "<img src=\"http://www.r-pkg.org/badges/version/%s\">"
 url_badge_status <- "<img src=\"https://cranchecks.info/badges/worst/%s\">"
+url_badge_universe <- "<img src=\"https://tesselle.r-universe.dev/badges/%s\">"
 
-info <- pkg[order(pkg$Package), c("Package", "Version", "Depends", "License")]
+az <- order(pkg$Package)
+info <- pkg[az, c("Package", "Version", "Depends", "License")]
 cran_version <- sprintf(url_badge_version, info$Package)
 cran_status <- sprintf(url_badge_status, info$Package)
-
-# [![CRAN Version](http://www.r-pkg.org/badges/version/tabula)](https://cran.r-project.org/package=tabula)
+universe_version <- sprintf(url_badge_universe, info$Package)
 
 data <- data.frame(
-  Package = sprintf(url_doc, url_pkg, info$Package),
-  Version = cran_version,
-  Status = cran_status
+  Package = sprintf(url_doc, url_pkg[az], info$Package),
+  version = cran_version,
+  status = cran_status,
+  universe = universe_version
 )
-knitr::kable(data, row.names = FALSE, escape = FALSE)
+knitr::kable(
+  x = data, 
+  row.names = FALSE, 
+  col.names = c("Package", "CRAN version", "CRAN status", "R-universe"),
+  escape = FALSE
+)
 ```

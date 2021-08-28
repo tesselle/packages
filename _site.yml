@@ -1,6 +1,6 @@
 name: "tesselle"
 navbar:
-  title: "R packages & archaeology"
+  title: "tesselle"
   right:
     - icon: fas fa-home
       href: https://www.tesselle.org
