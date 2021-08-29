@@ -144,20 +144,20 @@ according to the class of <code>from</code>).</p>
 <span class="r-in"><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu">as_count</span><span class="op">(</span><span class="va">A0</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Coerce to relative frequencies</span></span>
-<span class="r-in"><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu">as_composition</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">B0</span> <span class="op">&lt;-</span> <span class="fu">as_composition</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span>
 <span class="r-in"><span class="co">## (use get_totals() to retrieve these values)</span></span>
 <span class="r-in"><span class="co">## This allows to restore the source data</span></span>
-<span class="r-in"><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu">as_count</span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu">as_count</span><span class="op">(</span><span class="va">B0</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">A1</span> <span class="op">==</span> <span class="va">A2</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Coerce to presence/absence</span></span>
-<span class="r-in"><span class="va">C</span> <span class="op">&lt;-</span> <span class="fu">as_incidence</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">C0</span> <span class="op">&lt;-</span> <span class="fu">as_incidence</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Coerce to a co-occurrence matrix</span></span>
-<span class="r-in"><span class="va">D</span> <span class="op">&lt;-</span> <span class="fu">as_occurrence</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">D0</span> <span class="op">&lt;-</span> <span class="fu">as_occurrence</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Coerce to an S3 matrix or data.frame</span></span>
 <span class="r-in"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
@@ -173,11 +173,6 @@ according to the class of <code>from</code>).</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row4    7    7    0    9    9</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row5    6    6    2    8    2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row6    6    3    1    3    5</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## Collection of features</span></span>
-<span class="r-in"><span class="co"># set_dates(A1) &lt;- matrix(sample(0:10, 20, TRUE), nrow = 10, ncol = 2)</span></span>
-<span class="r-in"><span class="co"># set_coordinates(A1) &lt;- matrix(sample(0:10, 30, TRUE), nrow = 10, ncol = 3)</span></span>
-<span class="r-in"><span class="co"># as_features(A1)</span></span>
 </code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

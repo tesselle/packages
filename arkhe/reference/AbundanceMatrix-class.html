@@ -59,6 +59,10 @@
 
 <dt><code>groups</code></dt><dd><p>A <code><a href="https://rdrr.io/r/base/character.html">character</a></code> vector.</p></dd>
 
+<dt><code>dates_from</code></dt><dd><p>An <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector.</p></dd>
+
+<dt><code>dates_to</code></dt><dd><p>An <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector.</p></dd>
+
 </dl></div>
     <div class="ref-section section level2" id="section-get-and-set">
     <h2 class="hasAnchor" id="get-and-set"><a class="anchor" href="#get-and-set" aria-hidden="true"></a>Get and set</h2>
@@ -69,6 +73,11 @@
 the sample names of <code>x</code>.</p></dd>
 <dt><code>get_groups(x)</code> and <code>set_groups(x) &lt;- value</code></dt><dd><p>Get or set
 the groups of <code>x</code>.</p></dd>
+<dt><code>get_dates(x)</code> and <code>set_dates(x) &lt;- value</code></dt><dd><p>Get or set
+the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>from</code> (TPQ)
+and <code>to</code> (TAQ) or a <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of
+<code>value</code> are coerced to <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated
+towards zero).</p></dd>
 
 </dl></div>
     <div class="ref-section section level2" id="section-author">

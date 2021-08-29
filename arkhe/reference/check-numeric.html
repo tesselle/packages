@@ -51,16 +51,17 @@
     <div id="ref-usage" class="ref-usage section level2 sourceCode">
     <pre class="sourceCode r"><code><span class="fu">assert_numeric</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="fu">assert_trend</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span>, <span class="va">...</span><span class="op">)</span></code></pre>
+<span class="fu">assert_trend</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span>, <span class="va">...</span><span class="op">)</span>
+
+<span class="fu">assert_relation</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">expected</span>, <span class="va">...</span><span class="op">)</span></code></pre>
     </div>
 
     <h2>Arguments</h2>
-    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-x">x</dt>
+    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-x, y">x, y</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> object to be checked.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-expected">expected</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/character.html">character</a></code> string specifying the expected
-value. It must be one of "<code>positive</code>", "<code>whole</code>", "<code>odd</code>", "<code>even</code>",
-"<code>constant</code>", "<code>decreasing</code>" or "<code>increasing</code>".</p></dd>
+value (see details).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>Extra parameters to be passed to internal methods.</p></dd>
     </dl><div class="ref-section section level2" id="section-value">
@@ -68,6 +69,14 @@ value. It must be one of "<code>positive</code>", "<code>whole</code>", "<code>o
 
     <p>Throws an error, if any, and returns <code>x</code> invisibly otherwise.</p>
     </div>
+    <div class="ref-section section level2" id="section-details">
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details" aria-hidden="true"></a>Details</h2>
+
+    <p>Possible values for <code>expected</code>:</p><dl><dt><code>assert_numeric()</code></dt><dd><p>"<code>positive</code>", "<code>whole</code>", "<code>odd</code>" or "<code>even</code>"</p></dd>
+<dt><code>assert_trend()</code></dt><dd><p>"<code>constant</code>", "<code>decreasing</code>" or "<code>increasing</code>"</p></dd>
+<dt><code>assert_relation()</code></dt><dd><p>"<code>smaller</code>" or "<code>greater</code>"</p></dd>
+
+</dl></div>
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 

@@ -59,6 +59,12 @@
 
 <span class="fu">set_samples</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
 
+<span class="fu">has_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="fu">get_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+
 <span class="fu">get_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
 <span class="fu">set_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
@@ -72,6 +78,12 @@
 <span class="co"># S4 method for AbundanceMatrix</span>
 <span class="fu">get_samples</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
+<span class="co"># S4 method for AbundanceMatrix</span>
+<span class="fu">has_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="co"># S4 method for AbundanceMatrix</span>
+<span class="fu">get_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
 <span class="co"># S4 method for CompositionMatrix</span>
 <span class="fu">get_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
@@ -84,21 +96,49 @@
 <span class="co"># S4 method for AbundanceMatrix</span>
 <span class="fu">set_samples</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
 
+<span class="co"># S4 method for AbundanceMatrix,`NULL`</span>
+<span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+
+<span class="co"># S4 method for AbundanceMatrix,numeric</span>
+<span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+
+<span class="co"># S4 method for AbundanceMatrix,list</span>
+<span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+
 <span class="co"># S4 method for CompositionMatrix</span>
 <span class="fu">set_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span></code></pre>
     </div>
 
     <h2>Arguments</h2>
     <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-x">x</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>An object from which to get or set element(s) (typically a
-<code>*Matrix</code> object).</p></dd>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>An object from which to get or set element(s) (typically an
+<code><a href="AbundanceMatrix-class.html">AbundanceMatrix</a></code> object).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-value">value</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A possible value for the element(s) of <code>x</code>.</p></dd>
     </dl><div class="ref-section section level2" id="section-value">
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value" aria-hidden="true"></a>Value</h2>
 
-    <p>An object of the same sort as <code>x</code> with the new values assigned.</p>
-    </div>
+    
+<ul><li><p><code>set_*()</code> returns an object of the same sort as <code>x</code> with the new values
+assigned.</p></li>
+<li><p><code>get_*()</code> returns the part of <code>x</code>.</p></li>
+<li><p><code>has_*()</code> returns a <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar.</p></li>
+</ul></div>
+    <div class="ref-section section level2" id="section-details">
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details" aria-hidden="true"></a>Details</h2>
+
+    
+<dl><dt><code>get_samples(x)</code> and <code>get_samples(x) &lt;- value</code></dt><dd><p>Get or set
+the sample names of <code>x</code>.</p></dd>
+<dt><code>get_groups(x)</code> and <code>set_groups(x) &lt;- value</code></dt><dd><p>Get or set
+the groups of <code>x</code>.</p></dd>
+<dt><code>get_dates(x)</code> and <code>set_dates(x) &lt;- value</code></dt><dd><p>Get or set
+the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>from</code> (TPQ)
+and <code>to</code> (TAQ) or a <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of
+<code>value</code> are coerced to <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated
+towards zero).</p></dd>
+
+</dl></div>
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
@@ -112,136 +152,55 @@
     </div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples" aria-hidden="true"></a>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create an incidence (presence/absence) matrix</span></span>
-<span class="r-in"><span class="co">## Data will be coerced with as.logical()</span></span>
-<span class="r-in"><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu"><a href="IncidenceMatrix-class.html">IncidenceMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, <span class="fl">100</span>, <span class="cn">TRUE</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
-<span class="r-in"><span class="co">## Create a count data matrix</span></span>
-<span class="r-in"><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="CountMatrix-class.html">CountMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
+    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create a data.frame</span></span>
+<span class="r-in"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">50</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="co">## Access</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the matrix dimensions</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 20  5</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/row.html">row</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the row indexes</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1,]    1    1    1    1    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [2,]    2    2    2    2    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [3,]    3    3    3    3    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [4,]    4    4    4    4    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [5,]    5    5    5    5    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6,]    6    6    6    6    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7,]    7    7    7    7    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8,]    8    8    8    8    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9,]    9    9    9    9    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [10,]   10   10   10   10   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [11,]   11   11   11   11   11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [12,]   12   12   12   12   12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13,]   13   13   13   13   13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [14,]   14   14   14   14   14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15,]   15   15   15   15   15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16,]   16   16   16   16   16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [17,]   17   17   17   17   17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [18,]   18   18   18   18   18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19,]   19   19   19   19   19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20,]   20   20   20   20   20</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/col.html">col</a></span><span class="op">(</span><span class="va">B</span>, as.factor <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># Get the column indexes</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [3,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [4,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [5,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [10,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [11,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [12,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [14,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [17,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [18,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20,] col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Levels: col1 col2 col3 col4 col5</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the number of rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 20</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the number of columns</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/dimnames.html">dimnames</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the dimension names</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "row1"  "row2"  "row3"  "row4"  "row5"  "row6"  "row7"  "row8"  "row9" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [10] "row10" "row11" "row12" "row13" "row14" "row15" "row16" "row17" "row18"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19] "row19" "row20"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "col1" "col2" "col3" "col4" "col5"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span><span class="op">]</span> <span class="co"># Set the row names</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the rownames</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20] "T"</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">letters</span><span class="op">[</span><span class="fl">21</span><span class="op">:</span><span class="fl">25</span><span class="op">]</span> <span class="co"># Set the column names</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span> <span class="co"># Get the column names</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "u" "v" "w" "x" "y"</span>
+<span class="r-in"><span class="co">## Coerce to a count matrix</span></span>
+<span class="r-in"><span class="va">Z</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_count</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="co">## Subset</span></span>
-<span class="r-in"><span class="va">B</span><span class="op">[[</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="co"># Get the first value</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10</span>
-<span class="r-in"><span class="va">B</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="co"># Get the first value</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10</span>
-<span class="r-in"><span class="va">B</span><span class="op">[</span>, <span class="op">]</span> <span class="co"># Get all values</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 20 x 5&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    u  v  w  x  y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A 10  9 10  3  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B 10  8  1 10  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> C  8  2  3  0  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> D  8  6  8  3  5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E  7  6 10  8  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F 10  4  8  8  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> G  3  5  3  2  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> H  7  7  3  3  2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I  1  6  7  8  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> J  6  5  2  5  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> K  4  9  4  5  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L  3  7  6  8 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> M  6  1  4  8  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> N  3  1  9  3  8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> O  6  4  5  7  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P  0  4  6  5 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Q  0  9 10 10  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R  7  2  9  7  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S 10  4  9  2  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T  2 10  2  6  7</span>
-<span class="r-in"><span class="va">B</span><span class="op">[</span><span class="fl">1</span>, , drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span> <span class="co"># Get the first row</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 1 x 5&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    u v  w x y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A 10 9 10 3 9</span>
-<span class="r-in"><span class="va">B</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span> <span class="co"># Get the first three column</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 20 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    u  v  w</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A 10  9 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B 10  8  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> C  8  2  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> D  8  6  8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E  7  6 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F 10  4  8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> G  3  5  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> H  7  7  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I  1  6  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> J  6  5  2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> K  4  9  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L  3  7  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> M  6  1  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> N  3  1  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> O  6  4  5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P  0  4  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Q  0  9 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R  7  2  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S 10  4  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T  2 10  2</span>
+<span class="r-in"><span class="co">## Set/get groups</span></span>
+<span class="r-in"><span class="fu">set_samples</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_samples</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "a" "a" "b" "b" "c" "c" "d" "d" "e" "e"</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Set/get groups</span></span>
+<span class="r-in"><span class="fu">set_groups</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_groups</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A" "A" "A" "A" "A" "B" "B" "B" "B" "B"</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Get/get dates</span></span>
+<span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span class="r-in">  from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span class="r-in">  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="op">)</span></span>
+<span class="r-in"><span class="fu">set_dates</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">dates</span></span>
+<span class="r-in"><span class="fu">get_dates</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    from   to</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  1338 1473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  1370 1490</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  1311 1473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  1312 1471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  1348 1488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  1306 1486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  1388 1470</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  1391 1491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  1348 1486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 1399 1461</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Collection of features</span></span>
+<span class="r-in"><span class="fu"><a href="coerce.html">as_features</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    V1 V2 V3 V4 V5 samples group from   to</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   6  7  5  8  4       a     A 1338 1473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   2  2  9  1  7       a     A 1370 1490</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   7  6 10  5  9       b     A 1311 1473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   2  6  7  7  3       b     A 1312 1471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   5  7  4  4  6       c     A 1348 1488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   5  7  0  2 10       c     B 1306 1486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   7  3  1  9  3       d     B 1388 1470</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   2  8  0 10  9       d     B 1391 1491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   4  5  2  8  5       e     B 1348 1486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  3  1  5  6  0       e     B 1399 1461</span>
 </code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

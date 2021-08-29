@@ -51,7 +51,7 @@
     <div id="ref-usage" class="ref-usage section level2 sourceCode">
     <pre class="sourceCode r"><code><span class="fu">assert_empty</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
-<span class="fu">assert_length</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span><span class="op">)</span>
+<span class="fu">assert_length</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span>, empty <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
 <span class="fu">assert_lengths</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span><span class="op">)</span>
 
@@ -67,6 +67,8 @@
       <dd class="col-sm-9" id="ref-arguments desc"><p>An object to be checked.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-expected">expected</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>An appropriate expected value.</p></dd>
+    <dt class="col-sm-3 section level2" id="pkg-arg-empty">empty</dt>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: should empty objects be ignored?</p></dd>
     </dl><div class="ref-section section level2" id="section-value">
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value" aria-hidden="true"></a>Value</h2>
 
