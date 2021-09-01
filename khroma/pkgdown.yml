@@ -4,7 +4,7 @@ pkgdown_sha: 705ff7c650bb1c7d46d35e72f27ad093689e2f29
 articles:
   crameri: crameri.html
   tol: tol.html
-last_built: 2021-09-01T17:44Z
+last_built: 2021-09-01T17:55Z
 urls:
   reference: https://packages.tesselle.org/khroma/reference
   article: https://packages.tesselle.org/khroma/articles
