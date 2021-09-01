@@ -184,7 +184,7 @@
 <li>
 <code>groups</code> to group data by site/area.</li>
 <li>
-<code>dates_from</code> and <code>dates_to</code> to specify the chronology of an assemblage.</li>
+<code>tqp</code> and <code>taq</code> to specify the chronology of an assemblage.</li>
 </ul>
 <p>The way chronological information is handled is somewhat opinionated:</p>
 <ul>
@@ -196,8 +196,8 @@
 <code class="sourceCode R"><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
-<span class="va">Y</span><span class="op">$</span><span class="va">from</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TPQ</span>
-<span class="va">Y</span><span class="op">$</span><span class="va">to</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TAQ</span>
+<span class="va">Y</span><span class="op">$</span><span class="va">tpq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TPQ</span>
+<span class="va">Y</span><span class="op">$</span><span class="va">taq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TAQ</span>
 
 <span class="co">## Coerce to a count matrix</span>
 <span class="va">Z</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span>
@@ -212,22 +212,22 @@
 
 <span class="co">## Get dates</span>
 <span class="fu"><a href="reference/mutator.html">get_dates</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
-<span class="co">#&gt;    from   to</span>
-<span class="co">#&gt; 1  1357 1457</span>
-<span class="co">#&gt; 2  1313 1498</span>
-<span class="co">#&gt; 3  1390 1482</span>
-<span class="co">#&gt; 4  1366 1472</span>
-<span class="co">#&gt; 5  1376 1478</span>
-<span class="co">#&gt; 6  1391 1466</span>
-<span class="co">#&gt; 7  1319 1483</span>
-<span class="co">#&gt; 8  1341 1482</span>
-<span class="co">#&gt; 9  1341 1461</span>
-<span class="co">#&gt; 10 1368 1498</span>
-<span class="co">#&gt; 11 1391 1486</span>
-<span class="co">#&gt; 12 1325 1483</span>
-<span class="co">#&gt; 13 1347 1455</span>
-<span class="co">#&gt; 14 1335 1477</span>
-<span class="co">#&gt; 15 1396 1497</span></code></pre></div>
+<span class="co">#&gt;     tpq  taq</span>
+<span class="co">#&gt; 1  1347 1455</span>
+<span class="co">#&gt; 2  1360 1490</span>
+<span class="co">#&gt; 3  1387 1453</span>
+<span class="co">#&gt; 4  1315 1463</span>
+<span class="co">#&gt; 5  1388 1482</span>
+<span class="co">#&gt; 6  1392 1476</span>
+<span class="co">#&gt; 7  1379 1471</span>
+<span class="co">#&gt; 8  1344 1464</span>
+<span class="co">#&gt; 9  1347 1454</span>
+<span class="co">#&gt; 10 1333 1490</span>
+<span class="co">#&gt; 11 1387 1473</span>
+<span class="co">#&gt; 12 1318 1463</span>
+<span class="co">#&gt; 13 1382 1462</span>
+<span class="co">#&gt; 14 1364 1461</span>
+<span class="co">#&gt; 15 1303 1491</span></code></pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">

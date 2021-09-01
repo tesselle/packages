@@ -61,9 +61,9 @@
 
 <dt><code>totals</code></dt><dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the absolute row sums.</p></dd>
 
-<dt><code>dates_from</code></dt><dd><p>An <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector.</p></dd>
+<dt><code>tpq</code></dt><dd><p>An <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector specifying the TPQ of each row.</p></dd>
 
-<dt><code>dates_to</code></dt><dd><p>An <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector.</p></dd>
+<dt><code>taq</code></dt><dd><p>An <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector specifying the TAQ of each row.</p></dd>
 
 </dl></div>
     <div class="ref-section section level2" id="section-get-and-set">
@@ -76,12 +76,23 @@ the sample names of <code>x</code>.</p></dd>
 <dt><code>get_groups(x)</code> and <code>set_groups(x) &lt;- value</code></dt><dd><p>Get or set
 the groups of <code>x</code>.</p></dd>
 <dt><code>get_dates(x)</code> and <code>set_dates(x) &lt;- value</code></dt><dd><p>Get or set
-the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>from</code> (TPQ)
-and <code>to</code> (TAQ) or a <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of
-<code>value</code> are coerced to <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated
-towards zero).</p></dd>
+the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>tpq</code> (TPQ -
+<em>terminus post quem</em>) and <code>taq</code> (TAQ - <em>terminus ante quem</em>) or a
+<code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of <code>value</code> are coerced to
+<code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated towards zero).</p></dd>
 
 </dl></div>
+    <div class="ref-section section level2" id="section-chronology">
+    <h2 class="hasAnchor" id="chronology"><a class="anchor" href="#chronology" aria-hidden="true"></a>Chronology</h2>
+
+    
+
+<p>The way chronological information is handled is somewhat opinionated:</p><ul><li><p>Sub-annual precision is overkill/meaningless in most situations: dates are
+assumed to be expressed in years CE and are stored as <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> (values
+are coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p></li>
+<li><p>A date range (i.e. TPQ/TAQ) is expected, although it is possible to
+specify a point estimate.</p></li>
+</ul></div>
     <div class="ref-section section level2" id="section-author">
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>
 

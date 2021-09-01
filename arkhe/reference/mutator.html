@@ -133,10 +133,10 @@ the sample names of <code>x</code>.</p></dd>
 <dt><code>get_groups(x)</code> and <code>set_groups(x) &lt;- value</code></dt><dd><p>Get or set
 the groups of <code>x</code>.</p></dd>
 <dt><code>get_dates(x)</code> and <code>set_dates(x) &lt;- value</code></dt><dd><p>Get or set
-the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>from</code> (TPQ)
-and <code>to</code> (TAQ) or a <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of
-<code>value</code> are coerced to <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated
-towards zero).</p></dd>
+the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>tpq</code> (TPQ -
+<em>terminus post quem</em>) and <code>taq</code> (TAQ - <em>terminus ante quem</em>) or a
+<code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of <code>value</code> are coerced to
+<code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated towards zero).</p></dd>
 
 </dl></div>
     <div class="ref-section section level2" id="section-see-also">
@@ -171,12 +171,12 @@ towards zero).</p></dd>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Get/get dates</span></span>
 <span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
-<span class="r-in">  from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span class="r-in">  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in">  tpq <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span class="r-in">  taq <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-in"><span class="fu">set_dates</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">dates</span></span>
 <span class="r-in"><span class="fu">get_dates</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    from   to</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     tpq  taq</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1338 1473</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  1370 1490</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  1311 1473</span>
@@ -190,7 +190,7 @@ towards zero).</p></dd>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Collection of features</span></span>
 <span class="r-in"><span class="fu"><a href="coerce.html">as_features</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    V1 V2 V3 V4 V5 samples group from   to</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    V1 V2 V3 V4 V5 samples group  tpq  taq</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1   6  7  5  8  4       a     A 1338 1473</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2   2  2  9  1  7       a     A 1370 1490</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3   7  6 10  5  9       b     A 1311 1473</span>
