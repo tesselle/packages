@@ -86,9 +86,9 @@
 
     
     
-<div id="definitions" class="section level1">
-<h1 class="hasAnchor">
-<a href="#definitions" class="anchor" aria-hidden="true"></a>Definitions</h1>
+<div id="definitions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#definitions" class="anchor" aria-hidden="true"></a>Definitions</h2>
 <p>The <strong>arkhe</strong> package provides a set of S4 classes for archaeological data matrices. These new classes represent different special types of matrix.</p>
 <ul>
 <li>Integer matrix:
@@ -121,12 +121,12 @@
 UML class diagram of the S4 classes structure.
 </p>
 </div>
-<div id="numeric-matrix" class="section level2">
-<h2 class="hasAnchor">
-<a href="#numeric-matrix" class="anchor" aria-hidden="true"></a>Numeric matrix</h2>
-<div id="absolute-frequency-matrix-countmatrix" class="section level3">
+<div id="numeric-matrix" class="section level3">
 <h3 class="hasAnchor">
-<a href="#absolute-frequency-matrix-countmatrix" class="anchor" aria-hidden="true"></a>Absolute frequency matrix (<code>CountMatrix</code>)</h3>
+<a href="#numeric-matrix" class="anchor" aria-hidden="true"></a>Numeric matrix</h3>
+<div id="absolute-frequency-matrix-countmatrix" class="section level4">
+<h4 class="hasAnchor">
+<a href="#absolute-frequency-matrix-countmatrix" class="anchor" aria-hidden="true"></a>Absolute frequency matrix (<code>CountMatrix</code>)</h4>
 <p>We denote the <span class="math inline">\(m \times p\)</span> count matrix by <span class="math inline">\(A = \left[ a_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and column sums:</p>
 <p><span class="math display">\[\begin{align}
  a_{i \cdot} = \sum_{j = 1}^{p} a_{ij} &amp;&amp;
@@ -135,9 +135,9 @@ UML class diagram of the S4 classes structure.
  \forall a_{ij} \in \mathbb{N}
 \end{align}\]</span></p>
 </div>
-<div id="relative-frequency-matrix-compositionmatrix" class="section level3">
-<h3 class="hasAnchor">
-<a href="#relative-frequency-matrix-compositionmatrix" class="anchor" aria-hidden="true"></a>Relative frequency matrix (<code>CompositionMatrix</code>)</h3>
+<div id="relative-frequency-matrix-compositionmatrix" class="section level4">
+<h4 class="hasAnchor">
+<a href="#relative-frequency-matrix-compositionmatrix" class="anchor" aria-hidden="true"></a>Relative frequency matrix (<code>CompositionMatrix</code>)</h4>
 <p>A frequency matrix represents relative abundances.</p>
 <p>We denote the <span class="math inline">\(m \times p\)</span> frequency matrix by <span class="math inline">\(B = \left[ b_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and column sums:</p>
 <p><span class="math display">\[\begin{align}
@@ -147,9 +147,9 @@ UML class diagram of the S4 classes structure.
  \forall b_{ij} \in \left[ 0,1 \right]
 \end{align}\]</span></p>
 </div>
-<div id="co-occurrence-matrix-occurrencematrix" class="section level3">
-<h3 class="hasAnchor">
-<a href="#co-occurrence-matrix-occurrencematrix" class="anchor" aria-hidden="true"></a>Co-occurrence matrix (<code>OccurrenceMatrix</code>)</h3>
+<div id="co-occurrence-matrix-occurrencematrix" class="section level4">
+<h4 class="hasAnchor">
+<a href="#co-occurrence-matrix-occurrencematrix" class="anchor" aria-hidden="true"></a>Co-occurrence matrix (<code>OccurrenceMatrix</code>)</h4>
 <p>A co-occurrence matrix is a symmetric matrix with zeros on its main diagonal, which works out how many times each pairs of taxa occur together in at least one sample.</p>
 <p>The <span class="math inline">\(p \times p\)</span> co-occurrence matrix <span class="math inline">\(D = \left[ d_{i,j} \right] ~\forall i,j \in \left[ 1,p \right]\)</span> is defined over an <span class="math inline">\(m \times p\)</span> abundance matrix <span class="math inline">\(A = \left[ a_{x,y} \right] ~\forall x \in \left[ 1,m \right], y \in \left[ 1,p \right]\)</span> as:</p>
 <p><span class="math display">\[ d_{i,j} = \sum_{x = 1}^{m} \bigcap_{y = i}^{j} a_{xy} \]</span></p>
@@ -162,12 +162,12 @@ UML class diagram of the S4 classes structure.
 \end{align}\]</span></p>
 </div>
 </div>
-<div id="logical-matrix" class="section level2">
-<h2 class="hasAnchor">
-<a href="#logical-matrix" class="anchor" aria-hidden="true"></a>Logical matrix</h2>
-<div id="incidence-matrix-incidencematrix" class="section level3">
+<div id="logical-matrix" class="section level3">
 <h3 class="hasAnchor">
-<a href="#incidence-matrix-incidencematrix" class="anchor" aria-hidden="true"></a>Incidence matrix (<code>IncidenceMatrix</code>)</h3>
+<a href="#logical-matrix" class="anchor" aria-hidden="true"></a>Logical matrix</h3>
+<div id="incidence-matrix-incidencematrix" class="section level4">
+<h4 class="hasAnchor">
+<a href="#incidence-matrix-incidencematrix" class="anchor" aria-hidden="true"></a>Incidence matrix (<code>IncidenceMatrix</code>)</h4>
 <p>We denote the <span class="math inline">\(m \times p\)</span> incidence matrix by <span class="math inline">\(C = \left[ c_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and column sums:</p>
 <p><span class="math display">\[\begin{align}
  c_{i \cdot} = \sum_{j = 1}^{p} c_{ij} &amp;&amp;
@@ -178,20 +178,20 @@ UML class diagram of the S4 classes structure.
 </div>
 </div>
 </div>
-<div id="usage" class="section level1">
-<h1 class="hasAnchor">
-<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h1>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Load packages</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/arkhe/">arkhe</a></span><span class="op">)</span></code></pre></div>
-<div id="create" class="section level2">
+<div id="usage" class="section level2">
 <h2 class="hasAnchor">
-<a href="#create" class="anchor" aria-hidden="true"></a>Create</h2>
+<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h2>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Load packages</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/arkhe/">arkhe</a></span><span class="op">)</span></code></pre></div>
+<div id="create" class="section level3">
+<h3 class="hasAnchor">
+<a href="#create" class="anchor" aria-hidden="true"></a>Create</h3>
 <p>These new classes are of simple use, on the same way as the base <code>matrix</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span>
-<span class="co">## Create a count data matrix</span>
-<span class="co">## Data are rounded to zero decimal places, then coerced with as.integer</span>
+<span class="co">### Create a count data matrix</span>
+<span class="co">### Data are rounded to zero decimal places, then coerced with as.integer</span>
 <span class="fu"><a href="../reference/CountMatrix-class.html">CountMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>,
             nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; &lt;CountMatrix: 10 x 10&gt;</span>
@@ -207,8 +207,8 @@ UML class diagram of the S4 classes structure.
 <span class="co">#&gt; row9    10    7    8    0   10    9    4    9    8     8</span>
 <span class="co">#&gt; row10    5    9    8    4    8    6   10    6    5     9</span>
 
-<span class="co">## Create an incidence (presence/absence) matrix</span>
-<span class="co">## Data are coerced to logical as by as.logical</span>
+<span class="co">### Create an incidence (presence/absence) matrix</span>
+<span class="co">### Data are coerced to logical as by as.logical</span>
 <span class="fu"><a href="../reference/IncidenceMatrix-class.html">IncidenceMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>,
                 nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; &lt;IncidenceMatrix: 10 x 10&gt;</span>
@@ -224,31 +224,31 @@ UML class diagram of the S4 classes structure.
 <span class="co">#&gt; row9  FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE</span>
 <span class="co">#&gt; row10  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE</span></code></pre></div>
 </div>
-<div id="coerce" class="section level2">
-<h2 class="hasAnchor">
-<a href="#coerce" class="anchor" aria-hidden="true"></a>Coerce</h2>
+<div id="coerce" class="section level3">
+<h3 class="hasAnchor">
+<a href="#coerce" class="anchor" aria-hidden="true"></a>Coerce</h3>
 <p><strong>arkhe</strong> uses coercing mechanisms (with validation methods) for data type conversions:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Create a count matrix</span>
+<code class="sourceCode R"><span class="co">### Create a count matrix</span>
 <span class="va">A0</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
 
-<span class="co">## Coerce to absolute frequencies</span>
+<span class="co">### Coerce to absolute frequencies</span>
 <span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">A0</span><span class="op">)</span>
 
-<span class="co">## Coerce to relative frequencies</span>
+<span class="co">### Coerce to relative frequencies</span>
 <span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span>
 
-<span class="co">## Row sums are internally stored before coercing to a frequency matrix</span>
-<span class="co">## (use get_totals() to get these values)</span>
-<span class="co">## This allows to restore the source data</span>
+<span class="co">### Row sums are internally stored before coercing to a frequency matrix</span>
+<span class="co">### (use get_totals() to get these values)</span>
+<span class="co">### This allows to restore the source data</span>
 <span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/all.html" class="external-link">all</a></span><span class="op">(</span><span class="va">A1</span> <span class="op">==</span> <span class="va">A2</span><span class="op">)</span>
 <span class="co">#&gt; [1] TRUE</span>
 
-<span class="co">## Coerce to presence/absence</span>
+<span class="co">### Coerce to presence/absence</span>
 <span class="va">C</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_incidence</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span>
 
-<span class="co">## Coerce to a co-occurrence matrix</span>
+<span class="co">### Coerce to a co-occurrence matrix</span>
 <span class="va">D</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_occurrence</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
