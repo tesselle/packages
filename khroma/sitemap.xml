@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://packages.tesselle.org/khroma/404.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/articles/crameri.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/articles/tol.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/authors.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/khroma/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/pull_request_template.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/colour.html</loc>
@@ -11,6 +41,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/convert.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/index.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/info.html</loc>
@@ -53,11 +86,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_sequential.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/articles/crameri.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/articles/tol.html</loc>
   </url>
 </urlset>
