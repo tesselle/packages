@@ -54,7 +54,7 @@
     <div id="ref-usage" class="ref-usage section level2 sourceCode">
     <pre class="sourceCode r"><code><span class="fu">apportion</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for CountMatrix</span>
+<span class="co"># S4 method for matrix</span>
 <span class="fu">apportion</span><span class="op">(</span>
   <span class="va">object</span>,
   <span class="va">s0</span>,
@@ -63,6 +63,19 @@
   <span class="va">t1</span>,
   from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">s0</span><span class="op">)</span>,
   to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">s1</span><span class="op">)</span>,
+  step <span class="op">=</span> <span class="fl">25</span>,
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"uniform"</span>, <span class="st">"truncated"</span><span class="op">)</span>,
+  z <span class="op">=</span> <span class="fl">2</span>,
+  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html">getOption</a></span><span class="op">(</span><span class="st">"kairos.progress"</span><span class="op">)</span>
+<span class="op">)</span>
+
+<span class="co"># S4 method for CountMatrix</span>
+<span class="fu">apportion</span><span class="op">(</span>
+  <span class="va">object</span>,
+  <span class="va">t0</span>,
+  <span class="va">t1</span>,
+  from <span class="op">=</span> <span class="cn">NULL</span>,
+  to <span class="op">=</span> <span class="cn">NULL</span>,
   step <span class="op">=</span> <span class="fl">25</span>,
   method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"uniform"</span>, <span class="st">"truncated"</span><span class="op">)</span>,
   z <span class="op">=</span> <span class="fl">2</span>,
@@ -77,25 +90,25 @@
       <dd class="col-sm-9" id="ref-arguments desc"><p>Currently not used.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-s0">s0</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-\(m\) <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the site beginning dates
-(in years AD).</p></dd>
+(in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-s1">s1</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-\(m\) <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the site end dates
-(in years AD).</p></dd>
+(in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-t0">t0</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the type end dates
-(in years AD).</p></dd>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the type beginning dates
+(in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-t1">t1</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the type end dates
-(in years AD).</p></dd>
+(in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-from">from</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the beginning of the
-period of interest (in years AD).</p></dd>
+period of interest (in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-to">to</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the end of the period of
-interest (in years AD).</p></dd>
+interest (in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-step">step</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector giving the step size, i.e. the
-width of each time step for apportioning (in years AD; defaults to
+width of each time step for apportioning (in years CE; defaults to
 \(25\)).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-method">method</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/character.html">character</a></code> string specifying the distribution to be used
@@ -120,7 +133,7 @@ doi: <a href="https://doi.org/10.1016/j.jas.2011.12.022">10.1016/j.jas.2011.12.0
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
     <div class="dont-index"><p>Other chronological analysis: 
-<code><a href="aoristic.html">aoristic</a></code>,
+<code><a href="aoristic.html">aoristic</a>()</code>,
 <code><a href="fit.html">fit</a></code>,
 <code><a href="roc.html">roc</a></code></p></div>
     </div>

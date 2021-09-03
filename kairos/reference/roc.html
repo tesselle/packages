@@ -87,9 +87,9 @@ doi: <a href="https://doi.org/10.1007/s10816-011-9122-3">10.1007/s10816-011-9122
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
-    <div class="dont-index"><p><code><a href="aoristic.html">sum_aoristic()</a></code>, <code><a href="plot_time.html">plot_time()</a></code></p>
+    <div class="dont-index"><p><code><a href="aoristic.html">aoristic()</a></code>, <code><a href="plot_time.html">plot_time()</a></code></p>
 <p>Other chronological analysis: 
-<code><a href="aoristic.html">aoristic</a></code>,
+<code><a href="aoristic.html">aoristic</a>()</code>,
 <code><a href="apportion.html">apportion</a>()</code>,
 <code><a href="fit.html">fit</a></code></p></div>
     </div>
@@ -132,18 +132,18 @@ doi: <a href="https://doi.org/10.1007/s10816-011-9122-3">10.1007/s10816-011-9122
 <span class="r-in"><span class="va">span</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">span</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (normal)</span></span>
-<span class="r-in"><span class="va">aorist_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">sum_aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aorist_raw</span><span class="op">)</span></span>
 <span class="r-plt"><img src="roc-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights)</span></span>
-<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">sum_aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aorist_weigth</span><span class="op">)</span></span>
 <span class="r-plt"><img src="roc-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights) by group</span></span>
 <span class="r-in"><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>, times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">90</span>, <span class="fl">139</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">sum_aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>, groups <span class="op">=</span> <span class="va">groups</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>, groups <span class="op">=</span> <span class="va">groups</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span><span class="op">)</span></span>
 <span class="r-plt"><img src="roc-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>

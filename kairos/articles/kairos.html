@@ -80,7 +80,7 @@
       <h1 class="display-4" data-toc-skip>Manual</h1>
                         <h4 data-toc-skip class="author">N. Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2021-09-01</h4>
+            <h4 data-toc-skip class="date">2021-09-03</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/vignettes/kairos.Rmd" class="external-link"><code>vignettes/kairos.Rmd</code></a></small>
       <div class="d-none name"><code>kairos.Rmd</code></div>
@@ -93,9 +93,9 @@
 <code class="sourceCode R"><span class="co">## Load packages</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></code></pre></div>
-<div id="not-all-dates-are-created-equal" class="section level1">
-<h1 class="hasAnchor">
-<a href="#not-all-dates-are-created-equal" class="anchor" aria-hidden="true"></a>Not All Dates Are Created Equal</h1>
+<div id="not-all-dates-are-created-equal" class="section level2">
+<h2 class="hasAnchor">
+<a href="#not-all-dates-are-created-equal" class="anchor" aria-hidden="true"></a>Not All Dates Are Created Equal</h2>
 <p>This vignette presents different methods for dating archaeological assemblages using artifact count data. Here, dating refers to “the placement in time of events relative to one another or to any established scale of temporal measurement” <span class="citation">(Dean 1978)</span>. This involves distinguishing between <em>relative</em> (that provide only a chronological sequence of events) and <em>absolute</em> dating methods (that yield a calendric indication and may provide the duration of an event) <span class="citation">(O’Brien and Lyman 2002)</span>. Strictly speaking, there is no absolute dating given how dates are produced and given that any date refers to a scale. The distinction between absolute and relative time can be rephrased more clearly as quantifiable <em>vs</em> non-quantifiable <span class="citation">(O’Brien and Lyman 2002)</span>: absolute dates “are expressed as points on standard scales of time measurement” <span class="citation">(Dean 1978)</span>.</p>
 <p>We will keep here the distinction between a date an age as formulated by <span class="citation">Colman, Pierce, and Birkeland (1987)</span>: “a <em>date</em> is a specific point in time, whereas an <em>age</em> is an interval of time measured back from the present.” Dealing with dates in archaeology can be tricky if one does not take into account the sources of the chronological information. In most cases, a date represents a <em>terminus</em> for a given archaeological assemblage. That is, a date before (<em>terminus ante-quem</em>) or after (<em>terminus post-quem</em>) which the formation process of the assemblage took place. This in mind, one obvious question that should underlie any investigation is what does the date represent?</p>
 <p>First, let’s be more formal:</p>
@@ -120,25 +120,25 @@
 \]</span></p>
 <p>Note that all <span class="math inline">\(x_{ij}\)</span> are assumed to be error-free.</p>
 </div>
-<div id="mean-ceramic-date" class="section level1">
-<h1 class="hasAnchor">
-<a href="#mean-ceramic-date" class="anchor" aria-hidden="true"></a>Mean Ceramic Date</h1>
-<div id="definition" class="section level2">
+<div id="mean-ceramic-date" class="section level2">
 <h2 class="hasAnchor">
-<a href="#definition" class="anchor" aria-hidden="true"></a>Definition</h2>
+<a href="#mean-ceramic-date" class="anchor" aria-hidden="true"></a>Mean Ceramic Date</h2>
+<div id="definition" class="section level3">
+<h3 class="hasAnchor">
+<a href="#definition" class="anchor" aria-hidden="true"></a>Definition</h3>
 <p>The Mean Ceramic Date (MCD) is a point estimate of the occupation of an archaeological site <span class="citation">(South 1977)</span>. The MCD is estimated as the weighted mean of the date midpoints of the ceramic types <span class="math inline">\(t_j\)</span> (based on absolute dates or the known production interval) found in a given assemblage. The weights are the conditional frequencies of the respective types in the assemblage.</p>
 <p>The MCD is defined as: <span class="math display">\[ 
 t^{MCD}_i = \sum_{j = 1}^{p} t_j \times \frac{x_{ij}}{x_{i \cdot}}
 \]</span></p>
 </div>
-<div id="limitation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#limitation" class="anchor" aria-hidden="true"></a>Limitation</h2>
+<div id="limitation" class="section level3">
+<h3 class="hasAnchor">
+<a href="#limitation" class="anchor" aria-hidden="true"></a>Limitation</h3>
 <p>The MCD is a point estimate: knowing the mid-date of an assemblage and not knowing the time span of accumulation might be short sighted. <strong>MCD offers a rough indication of the chronological position of an assemblage, but does not tell if an assemblage represents ten or 100 years.</strong></p>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h2>
+<div id="usage" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h3>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Coerce the zuni dataset to an abundance (count) matrix</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span>
@@ -170,17 +170,17 @@ t^{MCD}_i = \sum_{j = 1}^{p} t_j \times \frac{x_{ij}}{x_{i \cdot}}
 <span class="co">#&gt; LZ1096  LZ1096  841.0714</span></code></pre></div>
 </div>
 </div>
-<div id="event-accumulation-date" class="section level1">
-<h1 class="hasAnchor">
-<a href="#event-accumulation-date" class="anchor" aria-hidden="true"></a>Event &amp; Accumulation Date</h1>
-<div id="definition-1" class="section level2">
+<div id="event-accumulation-date" class="section level2">
 <h2 class="hasAnchor">
-<a href="#definition-1" class="anchor" aria-hidden="true"></a>Definition</h2>
+<a href="#event-accumulation-date" class="anchor" aria-hidden="true"></a>Event &amp; Accumulation Date</h2>
+<div id="definition-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#definition-1" class="anchor" aria-hidden="true"></a>Definition</h3>
 <p>Event and accumulation dates are density estimates of the occupation and duration of an archaeological site <span class="citation">(Bellanger, Husi, and Tomassone 2006; Bellanger, Tomassone, and Husi 2008; Bellanger and Husi 2012)</span>.</p>
 <p>The event date is an estimation of the <em>terminus post-quem</em> of an archaeological assemblage. The accumulation date represents the “chronological profile” of the assemblage. According to <span class="citation">Bellanger and Husi (2012)</span>, accumulation date can be interpreted “at best […] as a formation process reflecting the duration or succession of events on the scale of archaeological time, and at worst, as imprecise dating due to contamination of the context by residual or intrusive material.” In other words, accumulation dates estimate occurrence of archaeological events and rhythms of the long term.</p>
-<div id="event-date" class="section level3">
-<h3 class="hasAnchor">
-<a href="#event-date" class="anchor" aria-hidden="true"></a>Event Date</h3>
+<div id="event-date" class="section level4">
+<h4 class="hasAnchor">
+<a href="#event-date" class="anchor" aria-hidden="true"></a>Event Date</h4>
 <p>Event dates are estimated by fitting a Gaussian multiple linear regression model on the factors resulting from a correspondence analysis - somewhat similar to the idea introduced by <span class="citation">Poblome and Groenen (2003)</span>. This model results from the known dates of a selection of reliable contexts and allows to predict the event dates of the remaining assemblages.</p>
 <p>First, a correspondence analysis (CA) is carried out to summarize the information in the count matrix <span class="math inline">\(X\)</span>. The correspondence analysis of <span class="math inline">\(X\)</span> provides the coordinates of the <span class="math inline">\(m\)</span> rows along the <span class="math inline">\(q\)</span> factorial components, denoted <span class="math inline">\(f_{ik} ~\forall i \in \left[ 1,m \right], k \in \left[ 1,q \right]\)</span>.</p>
 <p>Then, assuming that <span class="math inline">\(n\)</span> assemblages are reliably dated by another source, a Gaussian multiple linear regression model is fitted on the factorial components for the <span class="math inline">\(n\)</span> dated assemblages:</p>
@@ -222,9 +222,9 @@ F =
 t^E_i \sim \mathcal{N}(\widehat{t^E_i},\widehat{V_i})
 \]</span></p>
 </div>
-<div id="accumulation-date" class="section level3">
-<h3 class="hasAnchor">
-<a href="#accumulation-date" class="anchor" aria-hidden="true"></a>Accumulation Date</h3>
+<div id="accumulation-date" class="section level4">
+<h4 class="hasAnchor">
+<a href="#accumulation-date" class="anchor" aria-hidden="true"></a>Accumulation Date</h4>
 <p>As row (assemblages) and columns (types) CA coordinates are linked together through the so-called transition formulae, event dates for each type <span class="math inline">\(t^E_j\)</span> can be predicted following the same procedure as above.</p>
 <p>Then, the accumulation date <span class="math inline">\(t^A_i\)</span> is defined as the weighted mean of the event date of the ceramic types found in a given assemblage. The weights are the conditional frequencies of the respective types in the assemblage (akin to the MCD).</p>
 <p>The accumulation date is estimated as: <span class="math display">\[ 
@@ -237,9 +237,9 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <p>Interestingly, the integral of the accumulation date offers an estimates of the cumulative occurrence of archaeological events, which is close enough to the definition of the <em>tempo plot</em> introduced by <span class="citation">Dye (2016)</span>.</p>
 </div>
 </div>
-<div id="limitation-1" class="section level2">
-<h2 class="hasAnchor">
-<a href="#limitation-1" class="anchor" aria-hidden="true"></a>Limitation</h2>
+<div id="limitation-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#limitation-1" class="anchor" aria-hidden="true"></a>Limitation</h3>
 <p>Event and accumulation dates estimation relies on the same conditions and assumptions as the matrix seriation problem. <span class="citation">Dunnell (1970)</span> summarizes these conditions and assumptions as follows.</p>
 <p>The homogeneity conditions state that all the groups included in a seriation must:</p>
 <ul>
@@ -255,9 +255,9 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <p>Theses assumptions create a distributional model and ordering is accomplished by arranging the matrix so that the class distributions approximate the required pattern. The resulting order is inferred to be chronological.</p>
 <p>Predicted dates have to be interpreted with care: these dates are highly dependent on the range of the known dates and the fit of the regression.</p>
 </div>
-<div id="usage-1" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage-1" class="anchor" aria-hidden="true"></a>Usage</h2>
+<div id="usage-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage-1" class="anchor" aria-hidden="true"></a>Usage</h3>
 <p>This package provides an implementation of the chronological modeling method developed by <span class="citation">Bellanger and Husi (2012)</span>. This method is slightly modified here and allows the construction of different probability density curves of archaeological assemblage dates (<em>event</em>, <em>activity</em> and <em>tempo</em>).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Bellanger et al. did not publish the data supporting their demonstration: </span>
@@ -356,17 +356,17 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">bootstrap_event</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span>
 <span class="co">#&gt;              min      mean       max        Q5       Q95</span>
-<span class="co">#&gt; LZ1105 1121.7166 1164.9512 1193.6599 1141.3192 1190.5219</span>
-<span class="co">#&gt; LZ1103 1098.8197 1146.4451 1192.9482 1109.3411 1180.4137</span>
-<span class="co">#&gt; LZ1100 1072.5116 1148.9882 1197.8966 1076.8593 1182.6193</span>
-<span class="co">#&gt; LZ1099 1089.0742 1100.6956 1115.4522 1090.8469 1107.5608</span>
-<span class="co">#&gt; LZ1097  937.2335 1071.5045 1161.2789  983.6243 1150.7312</span>
-<span class="co">#&gt; LZ1096  725.8462  815.4372  990.6079  725.8462  960.8222</span></code></pre></div>
+<span class="co">#&gt; LZ1105 1135.7178 1168.6286 1205.3360 1145.4286 1195.7288</span>
+<span class="co">#&gt; LZ1103 1098.1318 1144.5908 1182.6539 1103.6971 1173.8368</span>
+<span class="co">#&gt; LZ1100 1080.2402 1159.8443 1238.1007 1107.0801 1231.9862</span>
+<span class="co">#&gt; LZ1099 1088.9847 1099.5597 1122.9887 1090.8448 1107.2065</span>
+<span class="co">#&gt; LZ1097  958.9267 1084.6588 1254.5051  975.2979 1182.4423</span>
+<span class="co">#&gt; LZ1096  725.8462  849.6655  964.1317  751.3768  940.0195</span></code></pre></div>
 </div>
 </div>
-<div id="references" class="section level1 unnumbered">
-<h1 class="hasAnchor">
-<a href="#references" class="anchor" aria-hidden="true"></a>References</h1>
+<div id="references" class="section level2 unnumbered">
+<h2 class="hasAnchor">
+<a href="#references" class="anchor" aria-hidden="true"></a>References</h2>
 <div id="refs" class="references">
 <div id="ref-bellanger2006">
 <p>Bellanger, L., Ph. Husi, and R. Tomassone. 2006. “Une Approche Statistique Pour La Datation de Contextes Archéologiques.” <em>Revue de Statistique Appliquée</em> 54 (2): 65–81. <a href="https://doi.org/10.1111/j.1475-4754.2006.00249.x" class="external-link">https://doi.org/10.1111/j.1475-4754.2006.00249.x</a>.</p>

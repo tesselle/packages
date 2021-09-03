@@ -52,10 +52,10 @@
     </div>
 
     <div id="ref-usage" class="ref-usage section level2 sourceCode">
-    <pre class="sourceCode r"><code><span class="fu">sum_aoristic</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span>
+    <pre class="sourceCode r"><code><span class="fu">aoristic</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric,numeric</span>
-<span class="fu">sum_aoristic</span><span class="op">(</span>
+<span class="fu">aoristic</span><span class="op">(</span>
   <span class="va">x</span>,
   <span class="va">y</span>,
   step <span class="op">=</span> <span class="fl">1</span>,
@@ -66,7 +66,7 @@
 <span class="op">)</span>
 
 <span class="co"># S4 method for list,missing</span>
-<span class="fu">sum_aoristic</span><span class="op">(</span>
+<span class="fu">aoristic</span><span class="op">(</span>
   <span class="va">x</span>,
   step <span class="op">=</span> <span class="fl">1</span>,
   start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">$</span><span class="va">from</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,
@@ -87,14 +87,14 @@
       <dd class="col-sm-9" id="ref-arguments desc"><p>Currently not used.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-step">step</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> vector giving the step size, i.e. the
-width of each time step in the time series (in years AD; defaults to
+width of each time step in the time series (in years CE; defaults to
 \(1\)).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-start">start</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the beginning of the time
-window (in years AD).</p></dd>
+window (in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-stop">stop</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the end of the time
-window (in years AD).</p></dd>
+window (in years CE).</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-weight">weight</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: . Defaults to <code>FALSE</code> (the aoristic sum
 is the number of elements within a time step).</p></dd>
@@ -174,18 +174,18 @@ Information Science</em>, 14(7): 669-79. doi: <a href="https://doi.org/10.1080/1
 <span class="r-in"><span class="va">span</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">span</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (normal)</span></span>
-<span class="r-in"><span class="va">aorist_raw</span> <span class="op">&lt;-</span> <span class="fu">sum_aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_raw</span> <span class="op">&lt;-</span> <span class="fu">aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aorist_raw</span><span class="op">)</span></span>
 <span class="r-plt"><img src="aoristic-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights)</span></span>
-<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu">sum_aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu">aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aorist_weigth</span><span class="op">)</span></span>
 <span class="r-plt"><img src="aoristic-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights) by group</span></span>
 <span class="r-in"><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>, times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">90</span>, <span class="fl">139</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu">sum_aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>, groups <span class="op">=</span> <span class="va">groups</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu">aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>, groups <span class="op">=</span> <span class="va">groups</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span><span class="op">)</span></span>
 <span class="r-plt"><img src="aoristic-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
