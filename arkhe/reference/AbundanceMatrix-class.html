@@ -82,14 +82,29 @@ the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://
 <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated towards zero).</p></dd>
 
 </dl></div>
+    <div class="ref-section section level2" id="section-abundance-matrix">
+    <h2 class="hasAnchor" id="abundance-matrix"><a class="anchor" href="#abundance-matrix" aria-hidden="true"></a>Abundance Matrix</h2>
+
+    
+
+<p>The <code>CountMatrix</code>, <code>CompositionMatrix</code> and <code>IncidenceMatrix</code> classes have
+special slots:</p><ul><li><p><code>samples</code> for replicated measurements/observation,</p></li>
+<li><p><code>groups</code> to group data by site/area,</p></li>
+<li><p><code>tqp</code> and <code>taq</code> to specify the chronology of an assemblage.</p></li>
+</ul><p>When coercing a <code>data.frame</code> to a <code>*Matrix</code> object, an attempt is made to
+automatically assign values to these slots by mapping column names (case
+insensitive, plural insensitive). This behavior can be disabled by setting
+<code>options(arkhe.autodetect = FALSE)</code> or overrided by explicitly specifying
+the columns to be used in <code>as_*()</code>.</p>
+    </div>
     <div class="ref-section section level2" id="section-chronology">
     <h2 class="hasAnchor" id="chronology"><a class="anchor" href="#chronology" aria-hidden="true"></a>Chronology</h2>
 
     
 
 <p>The way chronological information is handled is somewhat opinionated:</p><ul><li><p>Sub-annual precision is overkill/meaningless in most situations: dates are
-assumed to be expressed in years CE and are stored as <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> (values
-are coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p></li>
+assumed to be expressed in years CE and are stored as integers (values are
+coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p></li>
 <li><p>A date range (i.e. TPQ/TAQ) is expected, although it is possible to
 specify a point estimate.</p></li>
 </ul></div>
