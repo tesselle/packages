@@ -55,7 +55,7 @@ accumulation dates of an assemblage.
   <div class="col-md-9 contents">
     <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
     <h1 class="display-4">Event and Accumulation Dates</h1>
-    <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/date_event.R"><code>R/date_event.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/refine_event.R"><code>R/refine_event.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/event_date.R"><code>R/event_date.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/event_resample.R"><code>R/event_resample.R</code></a></small>
     <div class="d-none name"><code>event.Rd</code></div>
     </div>
 
@@ -73,10 +73,6 @@ accumulation dates of an assemblage.</p></li>
 
 <span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="fu">bootstrap_event</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">jackknife_event</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
 <span class="co"># S4 method for CountMatrix,numeric</span>
 <span class="fu">date_event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span>
 
@@ -93,16 +89,11 @@ accumulation dates of an assemblage.</p></li>
 <span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
 
 <span class="co"># S4 method for DateEvent</span>
-<span class="fu">jackknife_event</span><span class="op">(</span>
-  <span class="va">object</span>,
-  level <span class="op">=</span> <span class="fl">0.95</span>,
-  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html">getOption</a></span><span class="op">(</span><span class="st">"kairos.progress"</span><span class="op">)</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
+<span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, level <span class="op">=</span> <span class="fl">0.95</span>, progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html">getOption</a></span><span class="op">(</span><span class="st">"kairos.progress"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for DateEvent</span>
-<span class="fu">bootstrap_event</span><span class="op">(</span>
-  <span class="va">object</span>,
+<span class="fu">bootstrap</span><span class="op">(</span>
+  <span class="va">x</span>,
   level <span class="op">=</span> <span class="fl">0.95</span>,
   probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span>,
   n <span class="op">=</span> <span class="fl">1000</span>,
@@ -112,7 +103,7 @@ accumulation dates of an assemblage.</p></li>
     </div>
 
     <h2>Arguments</h2>
-    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object">object</dt>
+    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object, x">object, x</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html">arkhe::CountMatrix</a> or a <a href="DateEvent-class.html">DateEvent</a> object.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-dates">dates</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector of dates. If named, the names must match
@@ -146,8 +137,8 @@ replications.</p></dd>
 
     
 <ul><li><p><code>date_event()</code> returns a <a href="DateEvent-class.html">DateEvent</a> object.</p></li>
-<li><p><code>predict_event()</code>, <code>predict_accumulation()</code>, <code>bootstrap_event()</code>
-and <code>jackknife_event()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></code>.</p></li>
+<li><p><code>predict_event()</code>, <code>predict_accumulation()</code>, <code>bootstrap()</code>
+and <code>jackknife()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></code>.</p></li>
 </ul></div>
     <div class="ref-section section level2" id="section-details">
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details" aria-hidden="true"></a>Details</h2>
@@ -167,7 +158,7 @@ accumulation dates estimate occurrence of archaeological events and rhythms
 of the long term.</p>
 <p>This method relies on strong archaeological and statistical assumptions.
 Use it only if you know what you are doing (see references below and the
-vignette: <code>utils::vignette("dating")</code>).</p>
+vignette: <code><a href="../articles/kairos.html">utils::vignette("kairos")</a></code>).</p>
     </div>
     <div class="ref-section section level2" id="section-note">
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note" aria-hidden="true"></a>Note</h2>
@@ -182,7 +173,7 @@ release.</p>
 
     
 
-<p>If <code>jackknife_event()</code> is used, one type/fabric is removed at a
+<p>If <code>jackknife()</code> is used, one type/fabric is removed at a
 time and all statistics are recalculated. In this way, one can assess
 whether certain type/fabric has a substantial influence on the date
 estimate.
@@ -192,7 +183,7 @@ with the following columns:</p><dl><dt><code>mean</code></dt><dd><p>The jackknif
 <dt><code>bias</code></dt><dd><p>The jackknife estimate of bias.</p></dd>
 <dt><code>error</code></dt><dd><p>The standard error of predicted means.</p></dd>
 
-</dl><p>If <code>bootstrap_event</code> is used, a large number of new bootstrap assemblages is
+</dl><p>If <code>bootstrap()</code> is used, a large number of new bootstrap assemblages is
 created, with the same sample size, by resampling each of the original
 assemblage with replacement. Then, examination of the bootstrap statistics
 makes it possible to pinpoint assemblages that require further
@@ -233,11 +224,9 @@ for Seriation of Sagalassos Tablewares. In Doerr, M. &amp; Apostolis, S. (eds.),
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
-    <div class="dont-index"><p><code><a href="plot_event.html">plot_event()</a></code></p>
+    <div class="dont-index"><p><a href="https://rdrr.io/r/graphics/plot.default.html">plot_event</a></p>
 <p>Other dating methods: 
-<code><a href="date_mcd.html">date_mcd</a>()</code>,
-<code><a href="plot_event.html">plot_event</a></code>,
-<code><a href="plot_mcd.html">plot_mcd</a></code></p></div>
+<code><a href="date_mcd.html">date_mcd</a>()</code></p></div>
     </div>
     <div class="ref-section section level2" id="section-author">
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>
