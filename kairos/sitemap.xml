@@ -73,7 +73,16 @@
     <loc>https://packages.tesselle.org/kairos/reference/mutators.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/reference/plot_aoristic.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/reference/plot_event.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/plot_fit.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/plot_mcd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/plot_time.html</loc>

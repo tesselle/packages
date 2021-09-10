@@ -43,7 +43,7 @@
   <div class="col-md-9 contents">
     <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
     <h1 class="display-4">Frequency Increment Test</h1>
-    <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/test_fit.R"><code>R/test_fit.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/fit.R"><code>R/fit.R</code></a></small>
     <div class="d-none name"><code>fit.Rd</code></div>
     </div>
 
@@ -52,19 +52,22 @@
     </div>
 
     <div id="ref-usage" class="ref-usage section level2 sourceCode">
-    <pre class="sourceCode r"><code><span class="fu">test_fit</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
+    <pre class="sourceCode r"><code><span class="fu">fit</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">test_fit</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span></code></pre>
+<span class="co"># S4 method for CountMatrix,missing</span>
+<span class="fu">fit</span><span class="op">(</span><span class="va">object</span><span class="op">)</span>
+
+<span class="co"># S4 method for CountMatrix,numeric</span>
+<span class="fu">fit</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span></code></pre>
     </div>
 
     <h2>Arguments</h2>
     <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object">object</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html">arkhe::CountMatrix</a> object.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>Currently not used.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-dates">dates</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector of dates.</p></dd>
+    <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>Currently not used.</p></dd>
     </dl><div class="ref-section section level2" id="section-value">
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value" aria-hidden="true"></a>Value</h2>
 
@@ -88,11 +91,13 @@ Signatures of Selection in Genetic Time Series. <em>Genetics</em>, 196(2):
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
-    <div class="dont-index"><p><code><a href="plot_time.html">plot_time()</a></code></p>
+    <div class="dont-index"><p><a href="https://rdrr.io/r/graphics/plot.default.html">plot_fit</a></p>
 <p>Other chronological analysis: 
 <code><a href="aoristic.html">aoristic</a>()</code>,
 <code><a href="apportion.html">apportion</a>()</code>,
-<code><a href="roc.html">roc</a></code></p></div>
+<code><a href="plot_aoristic.html">plot_aoristic</a></code>,
+<code><a href="plot_fit.html">plot_fit</a></code>,
+<code><a href="roc.html">roc</a>()</code></p></div>
     </div>
     <div class="ref-section section level2" id="section-author">
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>
@@ -112,18 +117,14 @@ Signatures of Selection in Genetic Time Series. <em>Genetics</em>, 196(2):
 <span class="r-in"><span class="co">## We use the row names as time coordinates (roman numerals)</span></span>
 <span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/roman.html">as.roman</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="co">## Plot abundance vs time</span></span>
-<span class="r-in"><span class="fu"><a href="plot_time.html">plot_time</a></span><span class="op">(</span><span class="va">counts</span>, <span class="va">dates</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-plt"><img src="fit-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
 <span class="r-in"><span class="co">## Frequency Increment Test</span></span>
-<span class="r-in"><span class="va">freq</span> <span class="op">&lt;-</span> <span class="fu">test_fit</span><span class="op">(</span><span class="va">counts</span>, <span class="va">dates</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">freq</span> <span class="op">&lt;-</span> <span class="fu">fit</span><span class="op">(</span><span class="va">counts</span>, <span class="va">dates</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot time vs abundance and highlight selection</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">freq</span><span class="op">)</span></span>
-<span class="r-plt"><img src="fit-2.png" alt="" width="700" height="433"></span>
+<span class="r-plt"><img src="fit-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">freq</span>, roll <span class="op">=</span> <span class="cn">TRUE</span>, window <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
-<span class="r-plt"><img src="fit-3.png" alt="" width="700" height="433"></span>
+<span class="r-plt"><img src="fit-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

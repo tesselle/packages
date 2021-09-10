@@ -52,97 +52,38 @@
     </div>
 
     <div id="ref-usage" class="ref-usage section level2 sourceCode">
-    <pre class="sourceCode r"><code><span class="fu">plot_time</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
+    <pre class="sourceCode r"><code><span class="fu">plot_time</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">plot_time</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="co"># S4 method for CountMatrix,missing</span>
+<span class="fu">plot_time</span><span class="op">(</span><span class="va">object</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
-<span class="co"># S4 method for AoristicSum</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="co"># S4 method for AoristicSum,missing</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="co"># S4 method for RateOfChange</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="co"># S4 method for RateOfChange,missing</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="co"># S4 method for DateMCD</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span>, select <span class="op">=</span> <span class="cn">NULL</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
-
-<span class="co"># S4 method for DateMCD,missing</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span>, select <span class="op">=</span> <span class="cn">NULL</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
-
-<span class="co"># S4 method for IncrementTest</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span>, level <span class="op">=</span> <span class="fl">0.95</span>, roll <span class="op">=</span> <span class="cn">FALSE</span>, window <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
-
-<span class="co"># S4 method for IncrementTest,missing</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">x</span>, level <span class="op">=</span> <span class="fl">0.95</span>, roll <span class="op">=</span> <span class="cn">FALSE</span>, window <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></code></pre>
+<span class="co"># S4 method for CountMatrix,numeric</span>
+<span class="fu">plot_time</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre>
     </div>
 
     <h2>Arguments</h2>
-    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object, x">object, x</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>An object to be plotted.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>Currently not used.</p></dd>
+    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object">object</dt>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>A CountMatrix object.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-dates">dates</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector of dates.</p></dd>
+    <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>Currently not used.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-facet">facet</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: should a matrix of panels defined by
 type/taxon be drawn?</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-select">select</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> or <code><a href="https://rdrr.io/r/base/character.html">character</a></code> vector giving the selection of
-the assemblage that are drawn.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-decreasing">decreasing</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: TODO.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-n">n</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> giving the number of bootstrap
-replications.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-level">level</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the
-confidence level.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-roll">roll</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: should each time series be
-subsetted to look for episodes of selection?</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-window">window</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>An odd <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> giving the size of the rolling
-window. Only used if <code>roll</code> is <code>TRUE</code>.</p></dd>
     </dl><div class="ref-section section level2" id="section-value">
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value" aria-hidden="true"></a>Value</h2>
 
-    
-<ul><li><p><code>plot_time()</code> returns a <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></code> object.</p></li>
-<li><p><code>autoplot()</code> returns a <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></code> object.</p></li>
-<li><p><code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> is called it for its side-effects: it results in a graphic being
-displayed (invisibly returns <code>x</code>).</p></li>
-</ul></div>
-    <div class="ref-section section level2" id="section-note">
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note" aria-hidden="true"></a>Note</h2>
-
-    <p>Displaying FIT results on an abundance <em>vs</em> time diagram is adapted from Ben
-Marwick's original <a href="https://github.com/benmarwick/signatselect/">idea</a>.</p>
-    </div>
-    <div class="ref-section section level2" id="section-detection-of-selective-processes">
-    <h2 class="hasAnchor" id="detection-of-selective-processes"><a class="anchor" href="#detection-of-selective-processes" aria-hidden="true"></a>Detection of Selective Processes</h2>
-
-    
-
-<p>Results of the frequency increment test can be displayed on an abundance
-<em>vs</em> time diagram aid in the detection and quantification of selective
-processes in the archaeological record. If <code>roll</code> is <code>TRUE</code>, each time
-series is subsetted according to <code>window</code> to see if episodes of selection
-can be identified among decoration types that might not show overall
-selection. If so, shading highlights the data points where
-<code><a href="fit.html">test_fit()</a></code> identifies selection.</p>
+    <p>A <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></code> object.</p>
     </div>
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
-    <div class="dont-index"><p><code><a href="date_mcd.html">date_mcd()</a></code>, <code><a href="aoristic.html">aoristic()</a></code>, <code><a href="fit.html">test_fit()</a></code></p>
-<p>Other plotting methods: 
-<code><a href="plot_event.html">plot_event</a></code></p></div>
+    <div class="dont-index"><p>Other plotting methods: 
+<code><a href="plot_aoristic.html">plot_aoristic</a></code>,
+<code><a href="plot_event.html">plot_event</a></code>,
+<code><a href="plot_fit.html">plot_fit</a></code>,
+<code><a href="plot_mcd.html">plot_mcd</a></code></p></div>
     </div>
     <div class="ref-section section level2" id="section-author">
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>

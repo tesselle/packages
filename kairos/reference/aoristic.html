@@ -129,11 +129,13 @@ Information Science</em>, 14(7): 669-79. doi: <a href="https://doi.org/10.1080/1
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
-    <div class="dont-index"><p><code><a href="roc.html">rate_roc()</a></code>, <code><a href="plot_time.html">plot_time()</a></code></p>
+    <div class="dont-index"><p><code><a href="roc.html">roc()</a></code>, <a href="https://rdrr.io/r/graphics/plot.default.html">plot_aoristic</a></p>
 <p>Other chronological analysis: 
 <code><a href="apportion.html">apportion</a>()</code>,
-<code><a href="fit.html">fit</a></code>,
-<code><a href="roc.html">roc</a></code></p></div>
+<code><a href="fit.html">fit</a>()</code>,
+<code><a href="plot_aoristic.html">plot_aoristic</a></code>,
+<code><a href="plot_fit.html">plot_fit</a></code>,
+<code><a href="roc.html">roc</a>()</code></p></div>
     </div>
     <div class="ref-section section level2" id="section-author">
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>
@@ -190,12 +192,12 @@ Information Science</em>, 14(7): 669-79. doi: <a href="https://doi.org/10.1080/1
 <span class="r-plt"><img src="aoristic-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change</span></span>
-<span class="r-in"><span class="va">roc_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">rate_roc</a></span><span class="op">(</span><span class="va">aorist_weigth</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">roc_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weigth</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">roc_weigth</span><span class="op">)</span></span>
 <span class="r-plt"><img src="aoristic-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change by group</span></span>
-<span class="r-in"><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">rate_roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">roc_groups</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-plt"><img src="aoristic-5.png" alt="" width="700" height="433"></span>
 </code></pre></div>

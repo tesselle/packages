@@ -80,7 +80,7 @@
       <h1 class="display-4" data-toc-skip>Manual</h1>
                         <h4 data-toc-skip class="author">N. Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2021-09-06</h4>
+            <h4 data-toc-skip class="date">2021-09-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/vignettes/kairos.Rmd" class="external-link"><code>vignettes/kairos.Rmd</code></a></small>
       <div class="d-none name"><code>kairos.Rmd</code></div>
@@ -305,7 +305,6 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="co">#&gt;   (405 observations deleted due to missingness)</span>
 <span class="co">#&gt; Multiple R-squared:  0.9997, Adjusted R-squared:  0.9992 </span>
 <span class="co">#&gt; F-statistic:  1979 on 9 and 5 DF,  p-value: 2.456e-08</span>
-
 <span class="co">## Estimate event dates</span>
 <span class="va">event</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_event</a></span><span class="op">(</span><span class="va">model</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">event</span><span class="op">)</span>
@@ -316,7 +315,6 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="co">#&gt; LZ1099 1099.2725 1092.1529 1106.3921 2.769655</span>
 <span class="co">#&gt; LZ1097 1088.3559 1079.8561 1096.8557 3.306570</span>
 <span class="co">#&gt; LZ1096  839.3155  829.2385  849.3925 3.920110</span>
-
 <span class="co">## Estimate accumulation dates</span>
 <span class="va">acc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_accumulation</a></span><span class="op">(</span><span class="va">model</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">acc</span><span class="op">)</span>
@@ -332,8 +330,7 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></code></pre></div>
 <p><img src="kairos_files/figure-html/event-plot-1.png" width="700"></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="co">## Tempo plot</span>
+<code class="sourceCode R"><span class="co">## Tempo plot</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></code></pre></div>
 <p><img src="kairos_files/figure-html/event-plot-2.png" width="700"></p>
 <p>Resampling methods can be used to check the stability of the resulting model. If <code><a href="../reference/event.html">jackknife_event()</a></code> is used, one type/fabric is removed at a time and all statistics are recalculated. In this way, one can assess whether certain type/fabric has a substantial influence on the date estimate. If <code><a href="../reference/event.html">bootstrap_event()</a></code> is used, a large number of new bootstrap assemblages is created, with the same sample size, by resampling the original assemblage with replacement. Then, examination of the bootstrap statistics makes it possible to pinpoint assemblages that require further investigation.</p>
@@ -351,17 +348,16 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="co">#&gt; LZ1099 1088.8060 1081.6863 1095.9256 2.769655  -177.9309</span>
 <span class="co">#&gt; LZ1097  807.1626  798.6628  815.6624 3.306570 -4780.2864</span>
 <span class="co">#&gt; LZ1096  929.9436  919.8666  940.0206 3.920110  1540.6777</span>
-
 <span class="co">## Bootstrap of assemblages</span>
 <span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">bootstrap_event</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span>
-<span class="co">#&gt;              min      mean       max        Q5       Q95</span>
-<span class="co">#&gt; LZ1105 1143.1735 1172.1743 1218.7175 1146.4409 1205.2792</span>
-<span class="co">#&gt; LZ1103 1076.8734 1137.2025 1199.9941 1101.5722 1171.5984</span>
-<span class="co">#&gt; LZ1100 1071.5873 1153.1727 1244.9748 1103.6683 1207.6885</span>
-<span class="co">#&gt; LZ1099 1089.1338 1098.8930 1110.4448 1090.0455 1109.3953</span>
-<span class="co">#&gt; LZ1097  904.1878 1071.9972 1199.3018  926.1032 1172.6588</span>
-<span class="co">#&gt; LZ1096  725.8462  826.5416  952.7848  725.8462  946.4809</span></code></pre></div>
+<span class="co">#&gt;              min      mean      max        Q5      Q95</span>
+<span class="co">#&gt; LZ1105 1140.2022 1174.0515 1197.922 1147.8783 1197.426</span>
+<span class="co">#&gt; LZ1103 1069.1484 1138.0042 1180.420 1091.3138 1171.956</span>
+<span class="co">#&gt; LZ1100 1072.1563 1164.2583 1221.008 1100.4504 1215.808</span>
+<span class="co">#&gt; LZ1099 1088.8953 1098.9190 1112.821 1090.2471 1109.312</span>
+<span class="co">#&gt; LZ1097 1000.0663 1091.6535 1226.903 1005.9385 1181.400</span>
+<span class="co">#&gt; LZ1096  725.8462  862.0409 1122.989  745.7033 1001.364</span></code></pre></div>
 </div>
 </div>
 <div id="references" class="section level2 unnumbered">
