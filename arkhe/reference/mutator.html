@@ -65,6 +65,12 @@
 
 <span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
 
+<span class="fu">has_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="fu">get_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="fu">set_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+
 <span class="fu">get_tpq</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
 <span class="fu">set_tpq</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
@@ -93,6 +99,12 @@
 <span class="fu">get_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
 <span class="co"># S4 method for AbundanceMatrix</span>
+<span class="fu">has_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="co"># S4 method for AbundanceMatrix</span>
+<span class="fu">get_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="co"># S4 method for AbundanceMatrix</span>
 <span class="fu">get_tpq</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
 <span class="co"># S4 method for AbundanceMatrix</span>
@@ -116,8 +128,11 @@
 <span class="co"># S4 method for AbundanceMatrix,numeric</span>
 <span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
 
+<span class="co"># S4 method for AbundanceMatrix,`NULL`</span>
+<span class="fu">set_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+
 <span class="co"># S4 method for AbundanceMatrix,list</span>
-<span class="fu">set_dates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
+<span class="fu">set_terminus</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
 
 <span class="co"># S4 method for AbundanceMatrix,`NULL`</span>
 <span class="fu">set_tpq</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span>
@@ -158,11 +173,11 @@ assigned.</p></li>
 the sample names of <code>x</code>.</p></dd>
 <dt><code>get_groups(x)</code> and <code>set_groups(x) &lt;- value</code></dt><dd><p>Get or set
 the groups of <code>x</code>.</p></dd>
-<dt><code>get_dates(x)</code> and <code>set_dates(x) &lt;- value</code></dt><dd><p>Get or set
-the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>tpq</code> (TPQ -
-<em>terminus post quem</em>) and <code>taq</code> (TAQ - <em>terminus ante quem</em>) or a
-<code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector (point estimate). The elements of <code>value</code> are coerced to
-<code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> (hence truncated towards zero).</p></dd>
+<dt><code>get_dates(x)</code> and <code>set_dates(x) &lt;- value</code></dt><dd><p>Get or set the dates of
+<code>x</code>.</p></dd>
+<dt><code>get_terminus(x)</code> and <code>set_terminus(x) &lt;- value</code></dt><dd><p>Get or set
+the chronology of <code>x</code>. <code>value</code> must be a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> with components <code>tpq</code>
+(TPQ - <em>terminus post quem</em>) and <code>taq</code> (TAQ - <em>terminus ante quem</em>).</p></dd>
 <dt><code>get_tpq(x)</code> and <code>set_tpq(x) &lt;- value</code>,
 <code>get_taq(x)</code> and <code>set_taq(x) &lt;- value</code></dt><dd><p>Get or set the TPQ/TAQ of <code>x</code>.</p></dd>
 
@@ -172,12 +187,11 @@ the dates of <code>x</code>. <code>value</code> can be a <code><a href="https://
 
     
 
-<p>The way chronological information is handled is somewhat opinionated:</p><ul><li><p>Sub-annual precision is overkill/meaningless in most situations: dates are
+<p>The way chronological information is handled is somewhat opinionated.
+Sub-annual precision is overkill/meaningless in most situations: dates are
 assumed to be expressed in years CE and are stored as integers (values are
-coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p></li>
-<li><p>A date range (i.e. TPQ/TAQ) is expected, although it is possible to
-specify a point estimate.</p></li>
-</ul></div>
+coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p>
+    </div>
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
@@ -208,13 +222,13 @@ specify a point estimate.</p></li>
 <span class="r-in"><span class="fu">get_groups</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A" "A" "A" "A" "A" "B" "B" "B" "B" "B"</span>
 <span class="r-in"></span>
-<span class="r-in"><span class="co">## Get/get dates</span></span>
-<span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span class="r-in"><span class="co">## Get/get TPQ/TAQ</span></span>
+<span class="r-in"><span class="va">chrono</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
 <span class="r-in">  tpq <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span class="r-in">  taq <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">)</span></span>
-<span class="r-in"><span class="fu">set_dates</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">dates</span></span>
-<span class="r-in"><span class="fu">get_dates</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">set_terminus</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">chrono</span></span>
+<span class="r-in"><span class="fu">get_terminus</span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        tpq  taq</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row1  1338 1473</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row2  1370 1490</span>
@@ -229,17 +243,17 @@ specify a point estimate.</p></li>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Collection of features</span></span>
 <span class="r-in"><span class="fu"><a href="coerce.html">as_features</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       V1 V2 V3 V4 V5 samples group  tpq  taq</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1   6  7  5  8  4       a     A 1338 1473</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2   2  2  9  1  7       a     A 1370 1490</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3   7  6 10  5  9       b     A 1311 1473</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4   2  6  7  7  3       b     A 1312 1471</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5   5  7  4  4  6       c     A 1348 1488</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row6   5  7  0  2 10       c     B 1306 1486</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row7   7  3  1  9  3       d     B 1388 1470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row8   2  8  0 10  9       d     B 1391 1491</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row9   4  5  2  8  5       e     B 1348 1486</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row10  3  1  5  6  0       e     B 1399 1461</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       V1 V2 V3 V4 V5 samples group dates  tpq  taq</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1   6  7  5  8  4       a     A    NA 1338 1473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2   2  2  9  1  7       a     A    NA 1370 1490</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3   7  6 10  5  9       b     A    NA 1311 1473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4   2  6  7  7  3       b     A    NA 1312 1471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5   5  7  4  4  6       c     A    NA 1348 1488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row6   5  7  0  2 10       c     B    NA 1306 1486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row7   7  3  1  9  3       d     B    NA 1388 1470</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row8   2  8  0 10  9       d     B    NA 1391 1491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row9   4  5  2  8  5       e     B    NA 1348 1486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row10  3  1  5  6  0       e     B    NA 1399 1461</span>
 </code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

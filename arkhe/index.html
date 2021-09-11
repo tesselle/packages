@@ -184,18 +184,17 @@
 <li>
 <code>groups</code> to group data by site/area,</li>
 <li>
+<code>dates</code> to specify the date point estimate of an assemblage,</li>
+<li>
 <code>tqp</code> and <code>taq</code> to specify the chronology of an assemblage.</li>
 </ul>
-<p>The way chronological information is handled is somewhat opinionated:</p>
-<ul>
-<li>Sub-annual precision is overkill/meaningless in most situations: dates are assumed to be expressed in years CE and are stored as integers (values are coerced with <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer()</a></code> and hence truncated towards zero).</li>
-<li>A date range (i.e. <abbr title="terminus post quem">TPQ</abbr>/<abbr title="terminus ante quem">TAQ</abbr>) is expected, although it is possible to specify a point estimate.</li>
-</ul>
+<p>The way chronological information is handled is somewhat opinionated. Sub-annual precision is overkill/meaningless in most situations: dates are assumed to be expressed in years CE and are stored as integers (values are coerced with <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer()</a></code> and hence truncated towards zero).</p>
 <p>When coercing a <code>data.frame</code> to a <code>*Matrix</code> object, an attempt is made to automatically assign values to these slots by mapping column names. This behavior can be disabled by setting <code>options(arkhe.autodetect = FALSE)</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="va">Y</span><span class="op">$</span><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1400</span><span class="op">:</span><span class="fl">1451</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">tpq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TPQ</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">taq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TAQ</span>
 
@@ -212,22 +211,26 @@
 
 <span class="co">## Get dates</span>
 <span class="fu"><a href="reference/mutator.html">get_dates</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
+<span class="co">#&gt;  [1] 1425 1446 1422 1430 1403 1448 1407 1411 1437 1446 1430 1449 1406 1435 1418</span>
+
+<span class="co">## Get chronology</span>
+<span class="fu"><a href="reference/mutator.html">get_terminus</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
 <span class="co">#&gt;        tpq  taq</span>
-<span class="co">#&gt; row1  1350 1456</span>
-<span class="co">#&gt; row2  1302 1451</span>
-<span class="co">#&gt; row3  1357 1483</span>
-<span class="co">#&gt; row4  1398 1475</span>
-<span class="co">#&gt; row5  1345 1485</span>
-<span class="co">#&gt; row6  1397 1484</span>
-<span class="co">#&gt; row7  1303 1471</span>
-<span class="co">#&gt; row8  1340 1462</span>
-<span class="co">#&gt; row9  1394 1476</span>
-<span class="co">#&gt; row10 1304 1478</span>
-<span class="co">#&gt; row11 1363 1466</span>
-<span class="co">#&gt; row12 1318 1478</span>
-<span class="co">#&gt; row13 1334 1471</span>
-<span class="co">#&gt; row14 1362 1491</span>
-<span class="co">#&gt; row15 1400 1491</span></code></pre></div>
+<span class="co">#&gt; row1  1316 1458</span>
+<span class="co">#&gt; row2  1390 1464</span>
+<span class="co">#&gt; row3  1368 1470</span>
+<span class="co">#&gt; row4  1310 1476</span>
+<span class="co">#&gt; row5  1368 1496</span>
+<span class="co">#&gt; row6  1357 1464</span>
+<span class="co">#&gt; row7  1311 1451</span>
+<span class="co">#&gt; row8  1382 1500</span>
+<span class="co">#&gt; row9  1380 1498</span>
+<span class="co">#&gt; row10 1306 1477</span>
+<span class="co">#&gt; row11 1379 1485</span>
+<span class="co">#&gt; row12 1316 1464</span>
+<span class="co">#&gt; row13 1359 1496</span>
+<span class="co">#&gt; row14 1323 1459</span>
+<span class="co">#&gt; row15 1372 1452</span></code></pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">

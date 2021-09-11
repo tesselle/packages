@@ -127,6 +127,7 @@ according to the class of <code>from</code>).</p>
 <p>The <code>CountMatrix</code>, <code>CompositionMatrix</code> and <code>IncidenceMatrix</code> classes have
 special slots:</p><ul><li><p><code>samples</code> for replicated measurements/observation,</p></li>
 <li><p><code>groups</code> to group data by site/area,</p></li>
+<li><p><code>dates</code> to specify the date point estimate of an assemblage,</p></li>
 <li><p><code>tqp</code> and <code>taq</code> to specify the chronology of an assemblage.</p></li>
 </ul><p>When coercing a <code>data.frame</code> to a <code>*Matrix</code> object, an attempt is made to
 automatically assign values to these slots by mapping column names (case
@@ -139,12 +140,11 @@ the columns to be used in <code>as_*()</code>.</p>
 
     
 
-<p>The way chronological information is handled is somewhat opinionated:</p><ul><li><p>Sub-annual precision is overkill/meaningless in most situations: dates are
+<p>The way chronological information is handled is somewhat opinionated.
+Sub-annual precision is overkill/meaningless in most situations: dates are
 assumed to be expressed in years CE and are stored as integers (values are
-coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p></li>
-<li><p>A date range (i.e. TPQ/TAQ) is expected, although it is possible to
-specify a point estimate.</p></li>
-</ul></div>
+coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code> and hence truncated towards zero).</p>
+    </div>
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
