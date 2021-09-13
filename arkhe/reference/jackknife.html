@@ -52,7 +52,10 @@
     <pre class="sourceCode r"><code><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric</span>
-<span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, <span class="va">do</span>, <span class="va">...</span><span class="op">)</span></code></pre>
+<span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, <span class="va">do</span>, <span class="va">...</span><span class="op">)</span>
+
+<span class="co"># S4 method for JackknifeVector</span>
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></code></pre>
     </div>
 
     <h2>Arguments</h2>
@@ -63,12 +66,16 @@
     <dt class="col-sm-3 section level2" id="pkg-arg-do">do</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/function.html">function</a></code> that takes <code>x</code> as an argument and returns a single
 numeric value.</p></dd>
+    <dt class="col-sm-3 section level2" id="pkg-arg-object">object</dt>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code>JackknifeVector</code> object.</p></dd>
     </dl><div class="ref-section section level2" id="section-value">
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value" aria-hidden="true"></a>Value</h2>
 
-    <p>A <code>numeric</code> vector with the following elements:</p><dl><dt><code>mean</code></dt><dd><p>The jackknife estimate of mean.</p></dd>
-<dt><code>bias</code></dt><dd><p>The jackknife estimate of bias.</p></dd>
-<dt><code>error</code></dt><dd><p>he jackknife estimate of standard error.</p></dd>
+    <p><code>jackknife()</code> returns a <code>JackknifeVector</code> object (i.e. a <code>numeric</code>
+vector of the <code>n</code> leave-one-out values of <code>do</code>).</p>
+<p><code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> returns a named <code>numeric</code> vector with the following elements:</p><dl><dt><code>mean</code></dt><dd><p>The jackknife estimate of mean of <code>do</code>.</p></dd>
+<dt><code>bias</code></dt><dd><p>The jackknife estimate of bias of <code>do</code>.</p></dd>
+<dt><code>error</code></dt><dd><p>he jackknife estimate of standard error of <code>do</code>.</p></dd>
 
 </dl></div>
     <div class="ref-section section level2" id="section-see-also">
@@ -83,6 +90,28 @@ numeric value.</p></dd>
     <p>N. Frerebeau</p>
     </div>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples" aria-hidden="true"></a>Examples</h2>
+    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Jackknife</span></span>
+<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          mean          bias         error </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -1.892041e-01  5.273559e-16  2.006535e-01 </span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Random samples from x with replacement</span></span>
+<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span> <span class="co"># numeric</span></span>
+<span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        min       mean        max      lower      upper        Q25        Q75 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.8601900 -0.2671661  0.3124201 -0.3098880 -0.2244441 -0.4013131 -0.1210926 </span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Sample observations from a multinomial distribution</span></span>
+<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># integer</span></span>
+<span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      min     mean      max    lower    upper      Q25      Q75 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45.00000 49.47500 55.00000 49.12321 49.82679 48.50000 50.50000 </span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="sticky-top">
