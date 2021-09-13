@@ -91,7 +91,7 @@
     <loc>https://packages.tesselle.org/arkhe/reference/jackknife.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/reference/mutators.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/predicate-graph.html</loc>
@@ -122,6 +122,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/subset.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/summary.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/validate.html</loc>

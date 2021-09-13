@@ -192,8 +192,8 @@
 <p>When coercing a <code>data.frame</code> to a <code>*Matrix</code> object, an attempt is made to automatically assign values to these slots by mapping column names. This behavior can be disabled by setting <code>options(arkhe.autodetect = FALSE)</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
-<span class="va">Y</span><span class="op">$</span><span class="va">samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
-<span class="va">Y</span><span class="op">$</span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="va">Y</span><span class="op">$</span><span class="va">samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span><span class="op">)</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span>
+<span class="va">Y</span><span class="op">$</span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span><span class="op">)</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1400</span><span class="op">:</span><span class="fl">1451</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">tpq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TPQ</span>
 <span class="va">Y</span><span class="op">$</span><span class="va">taq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TAQ</span>
@@ -202,35 +202,65 @@
 <span class="va">Z</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span>
 
 <span class="co">## Get groups</span>
-<span class="fu"><a href="reference/mutator.html">get_samples</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
-<span class="co">#&gt;  [1] "a" "a" "a" "b" "b" "b" "c" "c" "c" "d" "d" "d" "e" "e" "e"</span>
+<span class="fu"><a href="reference/mutators.html">get_samples</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
+<span class="co">#&gt;  [1] "d" "e" "a" "c" "b" "e" "e" "b" "a" "b" "c" "b" "a" "a" "d"</span>
 
 <span class="co">## Get groups</span>
-<span class="fu"><a href="reference/mutator.html">get_groups</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
-<span class="co">#&gt;  [1] "A" "A" "A" "A" "A" "B" "B" "B" "B" "B" "C" "C" "C" "C" "C"</span>
+<span class="fu"><a href="reference/mutators.html">get_groups</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
+<span class="co">#&gt;  [1] "A" "D" "A" "E" "D" "C" "C" "A" "C" "B" "C" "B" "D" "D" "A"</span>
 
 <span class="co">## Get dates</span>
-<span class="fu"><a href="reference/mutator.html">get_dates</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
-<span class="co">#&gt;  [1] 1425 1446 1422 1430 1403 1448 1407 1411 1437 1446 1430 1449 1406 1435 1418</span>
+<span class="fu"><a href="reference/mutators.html">get_dates</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
+<span class="co">#&gt;  [1] 1428 1400 1430 1413 1421 1421 1451 1418 1442 1413 1401 1435 1447 1412 1405</span>
 
 <span class="co">## Get chronology</span>
-<span class="fu"><a href="reference/mutator.html">get_terminus</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
+<span class="fu"><a href="reference/mutators.html">get_terminus</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
 <span class="co">#&gt;        tpq  taq</span>
-<span class="co">#&gt; row1  1316 1458</span>
-<span class="co">#&gt; row2  1390 1464</span>
-<span class="co">#&gt; row3  1368 1470</span>
-<span class="co">#&gt; row4  1310 1476</span>
-<span class="co">#&gt; row5  1368 1496</span>
-<span class="co">#&gt; row6  1357 1464</span>
-<span class="co">#&gt; row7  1311 1451</span>
-<span class="co">#&gt; row8  1382 1500</span>
-<span class="co">#&gt; row9  1380 1498</span>
-<span class="co">#&gt; row10 1306 1477</span>
-<span class="co">#&gt; row11 1379 1485</span>
-<span class="co">#&gt; row12 1316 1464</span>
-<span class="co">#&gt; row13 1359 1496</span>
-<span class="co">#&gt; row14 1323 1459</span>
-<span class="co">#&gt; row15 1372 1452</span></code></pre></div>
+<span class="co">#&gt; row1  1382 1497</span>
+<span class="co">#&gt; row2  1332 1456</span>
+<span class="co">#&gt; row3  1322 1468</span>
+<span class="co">#&gt; row4  1373 1490</span>
+<span class="co">#&gt; row5  1383 1480</span>
+<span class="co">#&gt; row6  1352 1490</span>
+<span class="co">#&gt; row7  1329 1499</span>
+<span class="co">#&gt; row8  1374 1487</span>
+<span class="co">#&gt; row9  1357 1486</span>
+<span class="co">#&gt; row10 1398 1495</span>
+<span class="co">#&gt; row11 1348 1467</span>
+<span class="co">#&gt; row12 1338 1463</span>
+<span class="co">#&gt; row13 1354 1477</span>
+<span class="co">#&gt; row14 1306 1470</span>
+<span class="co">#&gt; row15 1361 1486</span>
+
+<span class="co">## Summarize</span>
+<span class="fu"><a href="reference/summary.html">summary</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span>
+<span class="co">#&gt; &lt;AbundanceSummary: 15 x 5&gt;</span>
+<span class="co">#&gt; A ------------------------------------------------------------------------------</span>
+<span class="co">#&gt; * Observations: 4</span>
+<span class="co">#&gt; * Variables: 5</span>
+<span class="co">#&gt; * Replicated measurements: TRUE</span>
+<span class="co">#&gt; * Chronology: 1322 - 1497 (year CE)</span>
+<span class="co">#&gt; B ------------------------------------------------------------------------------</span>
+<span class="co">#&gt; * Observations: 2</span>
+<span class="co">#&gt; * Variables: 5</span>
+<span class="co">#&gt; * Replicated measurements: TRUE</span>
+<span class="co">#&gt; * Chronology: 1338 - 1495 (year CE)</span>
+<span class="co">#&gt; C ------------------------------------------------------------------------------</span>
+<span class="co">#&gt; * Observations: 4</span>
+<span class="co">#&gt; * Variables: 5</span>
+<span class="co">#&gt; * Replicated measurements: TRUE</span>
+<span class="co">#&gt; * Chronology: 1329 - 1499 (year CE)</span>
+<span class="co">#&gt; D ------------------------------------------------------------------------------</span>
+<span class="co">#&gt; * Observations: 4</span>
+<span class="co">#&gt; * Variables: 5</span>
+<span class="co">#&gt; * Replicated measurements: TRUE</span>
+<span class="co">#&gt; * Chronology: 1306 - 1480 (year CE)</span>
+<span class="co">#&gt; E ------------------------------------------------------------------------------</span>
+<span class="co">#&gt; * Observation: 1</span>
+<span class="co">#&gt; * Variables: 5</span>
+<span class="co">#&gt; * Replicated measurements: FALSE</span>
+<span class="co">#&gt; * Chronology: 1373 - 1490 (year CE)</span>
+<span class="co">#&gt; --------------------------------------------------------------------------------</span></code></pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">
@@ -290,6 +320,7 @@
 <ul class="list-unstyled">
 <li><a href="https://github.com/tesselle/arkhe/actions" class="external-link"><img src="https://github.com/tesselle/arkhe/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://codecov.io/gh/tesselle/arkhe" class="external-link"><img src="https://codecov.io/gh/tesselle/arkhe/branch/master/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://www.codefactor.io/repository/github/tesselle/arkhe/overview/master" class="external-link"><img src="https://www.codefactor.io/repository/github/tesselle/arkhe/badge/master" alt="CodeFactor"></a></li>
 </ul>
 </div>
 

@@ -41,7 +41,7 @@
     <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
     <h1 class="display-4">Get or Set Parts of an Object</h1>
     <small class="dont-index">Source: <a href="https://github.com/tesselle/arkhe/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/arkhe/blob/master/R/mutators.R"><code>R/mutators.R</code></a></small>
-    <div class="d-none name"><code>mutator.Rd</code></div>
+    <div class="d-none name"><code>mutators.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
@@ -196,7 +196,8 @@ coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
 
     <div class="dont-index"><p>Other mutators: 
-<code><a href="subset.html">subset</a>()</code></p></div>
+<code><a href="subset.html">subset</a>()</code>,
+<code><a href="summary.html">summary</a>()</code></p></div>
     </div>
     <div class="ref-section section level2" id="section-author">
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>
@@ -254,6 +255,21 @@ coerced with <code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a
 <span class="r-out co"><span class="r-pr">#&gt;</span> row8   1  9  9  7  3       d     B    NA 1337 1451</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row9   4  9  9  3  7       e     B    NA 1365 1460</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row10  4  4  1  4 10       e     B    NA 1360 1486</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Summarize data</span></span>
+<span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;AbundanceSummary: 10 x 5&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A ------------------------------------------------------------------------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Observations: 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Variables: 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Replicated measurements: TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Chronology: 1321 - 1499 (year CE)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B ------------------------------------------------------------------------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Observations: 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Variables: 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Replicated measurements: TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Chronology: 1337 - 1486 (year CE)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> --------------------------------------------------------------------------------</span>
 </code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
