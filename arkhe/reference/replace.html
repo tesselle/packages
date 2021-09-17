@@ -25,7 +25,7 @@
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="/search.json" id="search-input" placeholder="Search..." autocomplete="off"></form>
+        <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search..." autocomplete="off"></form>
 
       <ul class="navbar-nav ml-1"><li class="nav-item">
   <a class="nav-link" href="https://github.com/tesselle/arkhe/" aria-label="github">
@@ -93,51 +93,51 @@
 <span class="r-in"><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">0L</span></span>
 <span class="r-in"><span class="co">## Remove row with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="remove.html">remove_zero</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 3 rows were removed:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row2 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row4 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row5 (n=1)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 2 x 5&gt;</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2 rows were removed:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row1 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row5 (n=2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 3 x 5&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1    8    6    1    4   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    2    8    8    6    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    2    3    9    5    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3    2    5    4    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    5    2    4    5   10</span>
 <span class="r-in"><span class="co">## Remove column with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="remove.html">remove_zero</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 2 columns were removed:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col1 (n=2)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col5 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col3 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col4 (n=2)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 5 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      col2 col3 col4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1    6    1    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2    9    2    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    8    8    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4    2    9    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5    5    7    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col2 col5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1    8   10    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    2    3    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3    2    5   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    5    2   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5    5    4    3</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Add NA</span></span>
 <span class="r-in"><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span>
 <span class="r-in"><span class="co">## Remove row with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="remove.html">remove_NA</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 3 rows were removed:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row2 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row4 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row5 (n=1)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 2 x 5&gt;</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2 rows were removed:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row1 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row5 (n=2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 3 x 5&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1    8    6    1    4   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    2    8    8    6    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    2    3    9    5    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3    2    5    4    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    5    2    4    5   10</span>
 <span class="r-in"><span class="co">## Remove column with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="remove.html">remove_NA</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 2 columns were removed:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col1 (n=2)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col5 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col3 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col4 (n=2)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 5 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      col2 col3 col4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1    6    1    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2    9    2    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    8    8    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4    2    9    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5    5    7    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col2 col5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1    8   10    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    2    3    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3    2    5   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    5    2   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5    5    4    3</span>
 </code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

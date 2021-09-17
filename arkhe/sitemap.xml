@@ -55,9 +55,6 @@
     <loc>https://packages.tesselle.org/arkhe/reference/arkhe-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/bootstrap.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/check-attribute.html</loc>
   </url>
   <url>
@@ -86,9 +83,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/jackknife.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/mutators.html</loc>
