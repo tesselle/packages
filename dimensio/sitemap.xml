@@ -1,57 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://dimensio.tesselle.org/index.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/404.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/CA-class.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/MultivariateAnalysis.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/MultivariateBootstrap.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/LICENSE.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/MultivariateResults.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/authors.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/MultivariateSummary.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/index.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/PCA-class.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/news/index.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/bootstrap.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/ca.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/CA-class.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/dimensio-package.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/MultivariateAnalysis.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/MultivariateBootstrap.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/pca.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/MultivariateResults.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/plot_contributions.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/MultivariateSummary.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/plot_coordinates.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/PCA-class.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/plot_eigenvalues.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/bootstrap.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/predict.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/ca.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/subset.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/dimensio-package.html</loc>
   </url>
   <url>
-    <loc>http://dimensio.tesselle.org/reference/summary.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/jackknife.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/mutator.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/pca.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/plot_contributions.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/plot_coordinates.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/plot_eigenvalues.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/predict.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/subset.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/summary.html</loc>
   </url>
 </urlset>
