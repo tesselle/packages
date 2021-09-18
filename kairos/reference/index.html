@@ -16,7 +16,7 @@
 <link href="../deps/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet">
 <link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet">
-<script src="../deps/bs3compat-0.2.5.1/tabs.js"></script><script src="../deps/bs3compat-0.2.5.1/bs3compat.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/bs3compat-0.3.0/transition.js"></script><script src="../deps/bs3compat-0.3.0/tabs.js"></script><script src="../deps/bs3compat-0.3.0/bs3compat.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <link href="../syntax-highlighting.css" rel="stylesheet">
@@ -58,7 +58,7 @@
 </li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="/search.json" id="search-input" placeholder="Search..." autocomplete="off">
+        <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search..." autocomplete="off">
 </form>
 
       <ul class="navbar-nav ml-1">
@@ -93,15 +93,15 @@
 <tbody>
 <tr>
 <td>
-          <p><code><a href="date_mcd.html">date_mcd()</a></code> <code><a href="date_mcd.html">bootstrap(<i>&lt;DateMCD&gt;</i>)</a></code> <code><a href="date_mcd.html">jackknife(<i>&lt;DateMCD&gt;</i>)</a></code> </p>
+          <p><code><a href="event.html">event()</a></code> <code><a href="event.html">predict_event()</a></code> <code><a href="event.html">predict_accumulation()</a></code> <code><a href="event.html">jackknife(<i>&lt;EventDate&gt;</i>)</a></code> <code><a href="event.html">bootstrap(<i>&lt;EventDate&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Mean Ceramic Date</p></td>
+        <td><p>Event and Accumulation Dates</p></td>
       </tr>
 <tr>
 <td>
-          <p><code><a href="event.html">date_event()</a></code> <code><a href="event.html">predict_event()</a></code> <code><a href="event.html">predict_accumulation()</a></code> <code><a href="event.html">jackknife(<i>&lt;DateEvent&gt;</i>)</a></code> <code><a href="event.html">bootstrap(<i>&lt;DateEvent&gt;</i>)</a></code> </p>
+          <p><code><a href="mcd.html">mcd()</a></code> <code><a href="mcd.html">bootstrap(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="mcd.html">jackknife(<i>&lt;MeanDate&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Event and Accumulation Dates</p></td>
+        <td><p>Mean Ceramic Date</p></td>
       </tr>
 </tbody>
 <tbody><tr>
@@ -153,7 +153,7 @@
       </tr>
 <tr>
 <td>
-          <p><code><a href="plot_event.html">autoplot(<i>&lt;DateEvent&gt;</i>)</a></code> <code><a href="plot_event.html">plot(<i>&lt;DateEvent&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
+          <p><code><a href="plot_event.html">autoplot(<i>&lt;EventDate&gt;</i>)</a></code> <code><a href="plot_event.html">plot(<i>&lt;EventDate&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
         </td>
         <td><p>Event Plot</p></td>
       </tr>
@@ -165,7 +165,7 @@
       </tr>
 <tr>
 <td>
-          <p><code><a href="plot_mcd.html">autoplot(<i>&lt;DateMCD&gt;</i>)</a></code> <code><a href="plot_mcd.html">plot(<i>&lt;DateMCD&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
+          <p><code><a href="plot_mcd.html">autoplot(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="plot_mcd.html">plot(<i>&lt;MeanDate&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
         </td>
         <td><p>MCD Plot</p></td>
       </tr>
@@ -198,21 +198,21 @@
       </tr>
 <tr>
 <td>
-          <p><code><a href="DateEvent-class.html">DateEvent-class</a></code> </p>
+          <p><code><a href="EventDate-class.html">EventDate-class</a></code> </p>
         </td>
         <td><p>Date Model</p></td>
-      </tr>
-<tr>
-<td>
-          <p><code><a href="DateMCD-class.html">DateMCD-class</a></code> </p>
-        </td>
-        <td><p>Mean Ceramic Date</p></td>
       </tr>
 <tr>
 <td>
           <p><code><a href="IncrementTest-class.html">IncrementTest-class</a></code> </p>
         </td>
         <td><p>Frequency Increment Test</p></td>
+      </tr>
+<tr>
+<td>
+          <p><code><a href="MeanDate-class.html">MeanDate-class</a></code> </p>
+        </td>
+        <td><p>Mean Ceramic Date</p></td>
       </tr>
 <tr>
 <td>
@@ -231,7 +231,7 @@
 <tbody>
 <tr>
 <td>
-          <p><code><a href="mutators.html">get_mcd()</a></code> <code><a href="mutators.html">get_model()</a></code> <code><a href="mutators.html">get_weights()</a></code> <code><a href="mutators.html">get_dates(<i>&lt;AoristicSum&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;DateEvent&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;RateOfChange&gt;</i>)</a></code> <code><a href="mutators.html">get_groups(<i>&lt;AoristicSum&gt;</i>)</a></code> </p>
+          <p><code><a href="mutators.html">get_model()</a></code> <code><a href="mutators.html">get_weights()</a></code> <code><a href="mutators.html">get_dates(<i>&lt;AoristicSum&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;EventDate&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;RateOfChange&gt;</i>)</a></code> <code><a href="mutators.html">get_groups(<i>&lt;AoristicSum&gt;</i>)</a></code> </p>
         </td>
         <td><p>Get or Set Parts of an Object</p></td>
       </tr>

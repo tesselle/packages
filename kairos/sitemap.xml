@@ -37,13 +37,13 @@
     <loc>https://packages.tesselle.org/kairos/reference/CountApportion-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/reference/DateEvent-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kairos/reference/DateMCD-class.html</loc>
+    <loc>https://packages.tesselle.org/kairos/reference/EventDate-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/IncrementTest-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/MeanDate-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/RateOfChange-class.html</loc>
@@ -53,9 +53,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/apportion.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kairos/reference/date_mcd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/event.html</loc>
@@ -68,6 +65,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/kairos-package.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/mcd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/mutators.html</loc>
