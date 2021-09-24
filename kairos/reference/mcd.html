@@ -70,7 +70,7 @@
 <span class="fu">jackknife</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></code></pre>
     </div>
 
-    <h2>Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments" aria-hidden="true"></a>Arguments</h2>
     <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object">object</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>A <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html">arkhe::CountMatrix</a> or a <a href="MeanDate-class.html">MeanDate</a> object.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-dates">dates</dt>
@@ -155,6 +155,9 @@ New York: Academic Press.</p>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate MCD</span></span>
 <span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu">mcd</span><span class="op">(</span><span class="va">counts</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    LZ1105    LZ1103    LZ1100    LZ1099    LZ1097    LZ1096 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1162.5000 1137.8378 1154.4643 1090.6250 1092.1875  841.0714 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">mc_dates</span>, select <span class="op">=</span> <span class="fl">100</span><span class="op">:</span><span class="fl">125</span><span class="op">)</span></span>
