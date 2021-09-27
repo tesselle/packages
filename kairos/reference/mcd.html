@@ -12,7 +12,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <button type="button" id="version-badge" class="badge badge-danger d-none d-lg-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Unreleased version">0.0.0.9000</button>
+    <button type="button" id="version-badge" class="badge badge-default d-none d-lg-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Released version">1.0.0</button>
 
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto ml-3"><li class="nav-item">
@@ -26,6 +26,9 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search..." autocomplete="off"></form>
@@ -167,19 +170,19 @@ New York: Academic Press.</p>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             min      mean       max     lower     upper       Q25       Q50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1125.000 1159.6875 1193.7500 1152.9294 1166.4456 1146.4844 1159.3750</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1059.797 1139.8874 1184.1216 1129.1274 1150.6474 1128.7162 1140.8784</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1046.429 1151.0417 1221.4286 1138.0231 1164.0603 1133.2589 1161.6071</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1084.375 1089.3750 1100.0000 1087.8551 1090.8949 1087.5000 1087.5000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097  937.500 1097.9688 1175.0000 1078.4964 1117.4411 1073.4375 1101.5625</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  737.500  858.3333  944.6429  834.8783  881.7884  841.0714  841.0714</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1134.375 1163.1250 1201.5625 1157.5380 1168.7120 1154.6875 1162.5000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1102.027 1144.3243 1180.7432 1137.0175 1151.6312 1131.0811 1143.4122</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1086.607 1157.1131 1205.3571 1144.6632 1169.5630 1140.6250 1169.1964</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1081.250 1089.6875 1100.0000 1087.9499 1091.4251 1087.5000 1089.0625</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097  956.250 1093.6979 1193.7500 1072.0187 1115.3771 1046.8750 1105.4688</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  737.500  839.3452  892.8571  822.9031  855.7873  841.0714  841.0714</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              Q75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1174.6094</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1159.1216</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1172.0982</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1173.0469</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1158.6149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1179.9107</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1090.6250</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1137.5000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  892.8571</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  879.9107</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
