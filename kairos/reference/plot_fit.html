@@ -41,7 +41,7 @@
 </nav><div class="container template-reference-topic">
 <div class="row">
   <div class="col-md-9 contents">
-    <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
+    <img src="../logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
     <h1 class="display-4">Detection of Selective Processes</h1>
     <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/plot.R"><code>R/plot.R</code></a></small>
     <div class="d-none name"><code>plot_fit.Rd</code></div>
@@ -124,10 +124,10 @@ Marwick's <a href="https://github.com/benmarwick/signatselect/">original idea</a
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Group by phase</span></span>
 <span class="r-in"><span class="co">## We use the row names as time coordinates (roman numerals)</span></span>
-<span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/roman.html">as.roman</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">set_dates</span><span class="op">(</span><span class="va">counts</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/roman.html">as.roman</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Frequency Increment Test</span></span>
-<span class="r-in"><span class="va">freq</span> <span class="op">&lt;-</span> <span class="fu"><a href="fit.html">fit</a></span><span class="op">(</span><span class="va">counts</span>, <span class="va">dates</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">freq</span> <span class="op">&lt;-</span> <span class="fu"><a href="fit.html">fit</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot time vs abundance and highlight selection</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">freq</span><span class="op">)</span></span>

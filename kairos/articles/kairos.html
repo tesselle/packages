@@ -76,11 +76,11 @@
 </nav><div class="container template-article">
 <script src="kairos_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
-    <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
+    <img src="../logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
       <h1 class="display-4" data-toc-skip>Manual</h1>
                         <h4 data-toc-skip class="author">N. Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2021-09-24</h4>
+            <h4 data-toc-skip class="date">2021-09-27</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/vignettes/kairos.Rmd" class="external-link"><code>vignettes/kairos.Rmd</code></a></small>
       <div class="d-none name"><code>kairos.Rmd</code></div>
@@ -310,7 +310,7 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="co">#&gt; LZ1097 1088.3559 1079.8561 1096.8557 3.306570</span>
 <span class="co">#&gt; LZ1096  839.3155  829.2385  849.3925 3.920110</span>
 <span class="co">## Estimate accumulation dates</span>
-<span class="va">acc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_accumulation</a></span><span class="op">(</span><span class="va">model</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
+<span class="va">acc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_accumulation</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">acc</span><span class="op">)</span>
 <span class="co">#&gt;    LZ1105    LZ1103    LZ1100    LZ1099    LZ1097    LZ1096 </span>
 <span class="co">#&gt; 1170.0050 1139.6745 1157.5166 1086.8919 1092.1504  874.8204</span></code></pre></div>
@@ -340,13 +340,13 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="co">## Bootstrap of assemblages</span>
 <span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span>
-<span class="co">#&gt;              min      mean       max        Q5      Q95</span>
-<span class="co">#&gt; LZ1105 1136.4140 1167.8341 1197.9592 1148.2900 1195.317</span>
-<span class="co">#&gt; LZ1103 1044.7865 1137.5774 1206.2786 1077.5043 1183.280</span>
-<span class="co">#&gt; LZ1100 1104.9346 1168.0091 1230.4476 1126.1091 1220.660</span>
-<span class="co">#&gt; LZ1099 1089.0486 1098.2670 1112.1744 1090.1172 1105.915</span>
-<span class="co">#&gt; LZ1097 1024.5399 1096.3579 1163.8016 1041.2697 1144.928</span>
-<span class="co">#&gt; LZ1096  725.8462  821.5548  946.4809  725.8462  906.546</span></code></pre></div>
+<span class="co">#&gt;              min      mean      max        Q5      Q95</span>
+<span class="co">#&gt; LZ1105 1137.1274 1168.1130 1204.157 1145.1170 1189.781</span>
+<span class="co">#&gt; LZ1103 1074.6602 1142.5580 1198.417 1091.3000 1179.923</span>
+<span class="co">#&gt; LZ1100 1075.5026 1158.8414 1208.071 1125.3483 1201.696</span>
+<span class="co">#&gt; LZ1099 1094.1885 1100.3839 1110.343 1094.2885 1109.015</span>
+<span class="co">#&gt; LZ1097  907.3707 1104.7708 1213.103  994.6580 1201.452</span>
+<span class="co">#&gt; LZ1096  725.8462  848.1566 1043.560  725.8462 1017.320</span></code></pre></div>
 </div>
 </div>
 <div id="references" class="section level2 unnumbered">

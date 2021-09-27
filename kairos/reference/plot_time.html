@@ -41,7 +41,7 @@
 </nav><div class="container template-reference-topic">
 <div class="row">
   <div class="col-md-9 contents">
-    <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
+    <img src="../logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
     <h1 class="display-4">Abundance vs Time Plot</h1>
     <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/master/R/plot.R"><code>R/plot.R</code></a></small>
     <div class="d-none name"><code>plot_time.Rd</code></div>
@@ -99,14 +99,14 @@ type/taxon be drawn?</p></dd>
 <span class="r-in"><span class="va">keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">merzbach</span>, MARGIN <span class="op">=</span> <span class="fl">2</span>, FUN <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&gt;=</span> <span class="fl">50</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">merzbach</span><span class="op">[</span>, <span class="va">keep</span><span class="op">]</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="co">## Group by phase</span></span>
+<span class="r-in"><span class="co">## Set dates</span></span>
 <span class="r-in"><span class="co">## We use the row names as time coordinates (roman numerals)</span></span>
-<span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/roman.html">as.roman</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">set_dates</span><span class="op">(</span><span class="va">counts</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/roman.html">as.roman</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot abundance vs time</span></span>
-<span class="r-in"><span class="fu">plot_time</span><span class="op">(</span><span class="va">counts</span>, <span class="va">dates</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">plot_time</span><span class="op">(</span><span class="va">counts</span><span class="op">)</span></span>
 <span class="r-plt"><img src="plot_time-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">plot_time</span><span class="op">(</span><span class="va">counts</span>, <span class="va">dates</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">plot_time</span><span class="op">(</span><span class="va">counts</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-plt"><img src="plot_time-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
   </div>
