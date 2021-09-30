@@ -4,7 +4,7 @@ pkgdown_sha: 632889250b23aae88d6b3adcc0afd48160cb17ca
 articles:
   bibliography: bibliography.html
   kairos: kairos.html
-last_built: 2021-09-29T11:58Z
+last_built: 2021-09-30T12:03Z
 urls:
   reference: https://packages.tesselle.org/kairos/reference
   article: https://packages.tesselle.org/kairos/articles
