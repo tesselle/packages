@@ -85,17 +85,47 @@
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Install ArchaeoPhases</span>
+<span class="co"># install.packages("ArchaeoPhases")</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/fasti/">fasti</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ArchaeoPhases</span><span class="op">)</span></code></pre></div>
 <p>The <code>inst/</code> directory contains:</p>
 <ul>
 <li>
-<a href="http://www.chronomodel.fr" class="external-link">ChronoModel</a> v2.0.18 project[1] and output files (in the <code>chronomodel/</code> subdirectory).</li>
+<a href="http://www.chronomodel.fr" class="external-link">ChronoModel</a> v2.0.18 project files and output files (in the <code>chronomodel/</code> subdirectory).</li>
 <li>
 <a href="https://c14.arch.ox.ac.uk/oxcal.html" class="external-link">OxCal</a> v4.4.4 script and output files (in the <code>oxcal/</code> subdirectory).</li>
 <li>
 <a href="https://bcal.shef.ac.uk" class="external-link">BCal</a> output files (in the <code>bcal/</code> subdirectory).</li>
 </ul>
-<p>This package allows to replicate Bosch <em>et al.</em> (2015) results with OxCal and ChronoModel.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="section level3">
+<h3 id="chronomodel">ChronoModel<a class="anchor" aria-label="anchor" href="#chronomodel"></a>
+</h3>
+<p>This package allows to replicate the following results:</p>
+<ul>
+<li>
+<code>ksarakil</code>: chronology of Ksâr’Akil (Lebanon) – Bosch <em>et al.</em>
+<ol start="2015" style="list-style-type: decimal"><li>
+</li></ol>
+</li>
+<li>
+<code>lezoux</code>: chronology of a potter’s kiln from Lezoux (France) – Menessier-Jouannet <em>et al.</em> (1995)</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Import ChronoModel output</span>
+<span class="va">lezoux_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"chronomodel/lezoux/Chain_all_Events.csv"</span>, 
+                           package <span class="op">=</span> <span class="st">"fasti"</span><span class="op">)</span>
+<span class="va">lezoux_event</span> <span class="op">&lt;-</span> <span class="fu">read_chronomodel_events</span><span class="op">(</span><span class="va">lezoux_path</span>, sep <span class="op">=</span> <span class="st">";"</span>, dec <span class="op">=</span> <span class="st">","</span><span class="op">)</span>
+
+<span class="co">## Plot MCMC sample</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">lezoux_event</span>, interval <span class="op">=</span> <span class="st">"hpdi"</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="oxcal">OxCal<a class="anchor" aria-label="anchor" href="#oxcal"></a>
+</h3>
+<p>This package allows to replicate Bosch <em>et al.</em> (2015) results with OxCal (and ChronoModel).</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Install and load oxcAAR</span>
 <span class="co"># install.packages("oxcAAR")</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">oxcAAR</span><span class="op">)</span>
@@ -116,16 +146,17 @@
 <span class="va">path_mcmc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/basename.html" class="external-link">dirname</a></span><span class="op">(</span><span class="va">ksarakil_file</span><span class="op">)</span>, <span class="st">"/MCMC_Sample.csv"</span><span class="op">)</span>
 <span class="va">mcmc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">path_mcmc</span>, header <span class="op">=</span> <span class="cn">TRUE</span>, sep <span class="op">=</span> <span class="st">","</span>, dec <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></code></pre></div>
 </div>
+</div>
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<p>Bosch, M. D., Mannino, M. A., Prendergast, A. L., O’Connell, T. C., Demarchi, B., Taylor, S. M., Niven, L., van der Plicht, J. and Hublin, J.-J. (2015). New Chronology for Ksâr ’Akil (Lebanon) Supports Levantine Route of Modern Human Dispersal into Europe. <em>Proceedings of the National Academy of Sciences</em>, 112(25): 7683-8. DOI: <a href="https://doi.org/10.1073/pnas.1501529112" class="external-link">10.1073/pnas.1501529112</a>.</p>
+<p>Bosch, M. D., Mannino, M. A., Prendergast, A. L., O’Connell, T. C., Demarchi, B., Taylor, S. M., Niven, L., van der Plicht, J. and Hublin, J.-J. (2015). New Chronology for Ksâr’Akil (Lebanon) Supports Levantine Route of Modern Human Dispersal into Europe. <em>Proceedings of the National Academy of Sciences</em>, 112(25): 7683-8. DOI: <a href="https://doi.org/10.1073/pnas.1501529112" class="external-link">10.1073/pnas.1501529112</a>.</p>
+<p>Menessier-Jouannet, C., Bucur IIiana, E. J., Lanos P., Miallier D. (1995). Convergence de la typologie de céramiques et de trois méthodes chronométriques pour la datation d’un four de potier à Lezoux (Puy-de-Dôme). <em>Revue d’Archéométrie</em>, 19: 37-47. DOI: <a href="https://doi.org/10.3406/arsci.1995.926" class="external-link">10.3406/arsci.1995.926</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
 </h2>
 <p>Please note that the <strong>fasti</strong> project is released with a <a href="https://www.tesselle.org/conduct.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
-<p>[1] To keep the package to a reasonable size, the ChronoModel files (<code>.chr</code>) are ignored when the package is built (only the output files are bundled). If you want to run the model on your machine, you must download the source package.</p>
 </div>
 </div>
   </div>
