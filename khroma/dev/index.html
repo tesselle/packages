@@ -107,7 +107,16 @@
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p>Color blindness affects a large number of individuals. When communicating scientific results colour palettes must therefore be carefully chosen to be accessible to all readers.</p>
-<p>This R package provides an implementation of Okabe and Ito[1], Paul Tol[2] and Fabio Crameri[3] colour schemes. These schemes are ready for each type of data (qualitative, diverging or sequential), with colours that are distinct for all people, including colour-blind readers. This package also provides tools to simulate colour-blindness and to test how well the colours of any palette are identifiable. To simulate colour-blindness in production-ready R figures you may also be interested in the <a href="https://github.com/clauswilke/colorblindr" class="external-link"><strong>colorblindr</strong></a> package.</p>
+<p>This R package provides an implementation of Okabe and Ito (2008), Tol (2021) and Crameri (2018) colour schemes. These schemes are ready for each type of data (qualitative, diverging or sequential), with colours that are distinct for all people, including colour-blind readers. This package also provides tools to simulate colour-blindness and to test how well the colours of any palette are identifiable. To simulate colour-blindness in production-ready R figures you may also be interested in the <a href="https://github.com/clauswilke/colorblindr" class="external-link"><strong>colorblindr</strong></a> package.</p>
+<p>Tol (2021) and Crameri (2018) offer carefully chosen schemes, ready for each type of data, with colours that are:</p>
+<ul>
+<li>Distinct for all people, including colour-blind readers,</li>
+<li>Distinct from black and white,</li>
+<li>Distinct on screen and paper,</li>
+<li>Matching well together,</li>
+<li>Citable and reproducible.</li>
+</ul>
+<p>See <code><a href="articles/tol.html">vignette("tol")</a></code> and <code><a href="articles/crameri.html">vignette("crameri")</a></code> for a more complete overview.</p>
 <p>For specific uses, several scientific thematic schemes (geologic timescale, land cover, FAO soils, etc.) are implemented, but these colour schemes may not be colour-blind safe.</p>
 <p>All these colour schemes are implemented for use with base R or <a href="https://github.com/tidyverse/ggplot2" class="external-link"><strong>ggplot2</strong></a>.</p>
 </div>
@@ -229,12 +238,18 @@
 
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span>
 <span class="fu"><a href="reference/plot.html">plot_map</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-usage-colourblind1-1.png" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/README-usage-map-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## BuRd sequential colour scheme</span>
+<span class="va">BuRd</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"BuRd"</span><span class="op">)</span>
+
+<span class="fu"><a href="reference/plot.html">plot_tiles</a></span><span class="op">(</span><span class="fu">BuRd</span><span class="op">(</span><span class="fl">128</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">256</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-usage-tiles-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="compute-cielab-distance-metric">Compute CIELAB distance metric<a class="anchor" aria-label="anchor" href="#compute-cielab-distance-metric"></a>
 </h4>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">DeltaE</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/compare.html">compare</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">DeltaE</span>, <span class="fl">2</span><span class="op">)</span>
 <span class="co">#&gt;                black orange sky blue bluish green yellow  blue vermilion</span>
@@ -249,44 +264,16 @@
 <div class="section level4">
 <h4 id="simulate-colour-blindness">Simulate colour-blindness<a class="anchor" aria-label="anchor" href="#simulate-colour-blindness"></a>
 </h4>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/plot.html">plot_scheme_colourblind</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-usage-colourblind3-1.png" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/plot.html">plot_scheme_colourblind</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-usage-colourblind2-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## ggplot2 default colour scheme</span>
 <span class="co">## (equally spaced hues around the colour wheel)</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span>
 <span class="fu"><a href="reference/plot.html">plot_scheme_colourblind</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-usage-colourblind3-2.png" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/README-usage-colourblind2-2.png" style="display: block; margin: auto;"></p>
 </div>
-</div>
-</div>
-<div class="section level2">
-<h2 id="colour-schemes">Colour Schemes<a class="anchor" aria-label="anchor" href="#colour-schemes"></a>
-</h2>
-<div class="section level3">
-<h3 id="colour-schemes-1">Colour Schemes<a class="anchor" aria-label="anchor" href="#colour-schemes-1"></a>
-</h3>
-<p>Paul Tol and Fabio Crameri offer carefully chosen schemes, ready for each type of data, with colours that are:</p>
-<ul>
-<li>Distinct for all people, including colour-blind readers,</li>
-<li>Distinct from black and white,</li>
-<li>Distinct on screen and paper,</li>
-<li>Matching well together,</li>
-<li>Citable &amp; reproducible.</li>
-</ul>
-<p>See <code><a href="articles/tol.html">vignette("tol")</a></code> and <code><a href="articles/crameri.html">vignette("crameri")</a></code> for a more complete overview.</p>
-</div>
-<div class="section level3">
-<h3 id="scientific-colour-schemes">Scientific colour schemes<a class="anchor" aria-label="anchor" href="#scientific-colour-schemes"></a>
-</h3>
-<p>The following scientific colour schemes are available:</p>
-<ul>
-<li>International Chronostratigraphic Chart;</li>
-<li>AVHRR Global Land Cover Classification;</li>
-<li>FAO Soil Reference Groups.</li>
-</ul>
-<p>More will be added in future releases (<a href="https://github.com/tesselle/khroma/issues" class="external-link">suggestions are welcome</a>).</p>
 </div>
 </div>
 <div class="section level2">
@@ -297,9 +284,17 @@
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<p>[1] Okabe, M. &amp; Ito, K. (2008). <em>Color Universal Design (CUD): How to Make Figures and Presentations That Are Friendly to Colorblind People</em>. URL: <a href="https://jfly.uni-koeln.de/color/" class="external-link uri">https://jfly.uni-koeln.de/color/</a>.</p>
-<p>[2] Tol, P. (2021). <em>Colour Schemes</em>. SRON. Technical Note No. SRON/EPS/TN/09-002. URL: <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf" class="external-link uri">https://personal.sron.nl/~pault/data/colourschemes.pdf</a>.</p>
-<p>[3] Crameri, F. (2018). Geodynamic diagnostics, scientific visualisation and StagLab 3.0. <em>Geosci. Model Dev.</em>, 11, 2541-2562. <a href="https://doi.org/10.5194/gmd-11-2541-2018" class="external-link uri">https://doi.org/10.5194/gmd-11-2541-2018</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-crameri2018" class="csl-entry">
+<p>Crameri, Fabio. 2018. “Geodynamic Diagnostics, Scientific Visualisation and StagLab 3.0.” <em>Geoscientific Model Development</em> 11 (6): 2541–62. <a href="https://doi.org/10.5194/gmd-11-2541-2018" class="external-link uri">https://doi.org/10.5194/gmd-11-2541-2018</a>.</p>
+</div>
+<div id="ref-okabe2008" class="csl-entry">
+<p>Okabe, Masataka, and Key Ito. 2008. “Color Universal Design (CUD): How to Make Figures and Presentations That Are Friendly to Colorblind People.” <em>J*FLY</em>. <a href="https://jfly.uni-koeln.de/color/" class="external-link uri">https://jfly.uni-koeln.de/color/</a>.</p>
+</div>
+<div id="ref-tol2021" class="csl-entry">
+<p>Tol, Paul. 2021. “Colour Schemes.” Technical note SRON/EPS/TN/09-002 3.2. SRON. <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf" class="external-link uri">https://personal.sron.nl/~pault/data/colourschemes.pdf</a>.</p>
+</div>
+</div>
 </div>
 </div>
   </div>
@@ -348,7 +343,7 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/tesselle/khroma/actions" class="external-link"><img src="https://github.com/tesselle/khroma/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://github.com/tesselle/khroma/actions" class="external-link"><img src="https://github.com/tesselle/khroma/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://codecov.io/gh/tesselle/khroma" class="external-link"><img src="https://codecov.io/gh/tesselle/khroma/branch/master/graph/badge.svg" alt="codecov"></a></li>
 </ul>
 </div>

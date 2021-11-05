@@ -3,7 +3,8 @@
 
 plot() allows to quickly display a color scheme returned by colour().
 plot_scheme() shows colors in a plot.
-plot_map() produces a diagnostic map for a given color scheme.
+plot_map() and plot_tiles() produce a diagnostic map for a given color
+scheme.
 plot_scheme_colorblind() shows colors in a plot with different types
 of simulated color blindness.
 
@@ -11,7 +12,8 @@ of simulated color blindness.
 
 plot() allows to quickly display a color scheme returned by colour().
 plot_scheme() shows colors in a plot.
-plot_map() produces a diagnostic map for a given color scheme.
+plot_map() and plot_tiles() produce a diagnostic map for a given color
+scheme.
 plot_scheme_colorblind() shows colors in a plot with different types
 of simulated color blindness.
 
@@ -69,7 +71,8 @@ of simulated color blindness.
     
 <ul><li><p><code>plot()</code> allows to quickly display a color scheme returned by <code><a href="colour.html">colour()</a></code>.</p></li>
 <li><p><code>plot_scheme()</code> shows colors in a plot.</p></li>
-<li><p><code>plot_map()</code> produces a diagnostic map for a given color scheme.</p></li>
+<li><p><code>plot_map()</code> and <code>plot_tiles()</code> produce a diagnostic map for a given color
+scheme.</p></li>
 <li><p><code>plot_scheme_colorblind()</code> shows colors in a plot with different types
 of simulated color blindness.</p></li>
 </ul></div>
@@ -82,6 +85,8 @@ of simulated color blindness.</p></li>
 <span class="fu">plot_scheme</span><span class="op">(</span><span class="va">x</span>, colours <span class="op">=</span> <span class="cn">FALSE</span>, names <span class="op">=</span> <span class="cn">FALSE</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 
 <span class="fu">plot_map</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="fu">plot_tiles</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">512</span><span class="op">)</span>
 
 <span class="fu">plot_scheme_colourblind</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
@@ -96,15 +101,18 @@ of simulated color blindness.</p></li>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
 <dt>colours</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the hexadecimal
-representation of the colors be displayed?</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the hexadecimal representation of
+the colors be displayed?</p></dd>
 <dt>names</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the name of the colors
-be displayed?</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the name of the colors be
+displayed?</p></dd>
 <dt>size</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the amount by which
-plotting text should be magnified relative to the default.
-Works the same as <code>cex</code> parameter of <code><a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphics::par()</a></code>.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the amount by which plotting text
+should be magnified relative to the default. Works the same as <code>cex</code>
+parameter of <code><a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphics::par()</a></code>.</p></dd>
+<dt>n</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the size of the grid (defaults to
+\(512\)).</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -145,9 +153,17 @@ Works the same as <code>cex</code> parameter of <code><a href="https://rdrr.io/r
 <span class="r-in"><span class="fu">plot_map</span><span class="op">(</span><span class="fu"><a href="colour.html">colour</a></span><span class="op">(</span><span class="st">"discrete rainbow"</span><span class="op">)</span><span class="op">(</span><span class="fl">14</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot-10.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="co">## Plot diagnostic images</span></span>
+<span class="r-in"><span class="fu">plot_tiles</span><span class="op">(</span><span class="fu"><a href="colour.html">colour</a></span><span class="op">(</span><span class="st">"discrete rainbow"</span><span class="op">)</span><span class="op">(</span><span class="fl">14</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">256</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="plot-11.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span class="fu">plot_tiles</span><span class="op">(</span><span class="fu"><a href="colour.html">colour</a></span><span class="op">(</span><span class="st">"discrete rainbow"</span><span class="op">)</span><span class="op">(</span><span class="fl">23</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">256</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="plot-12.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span class="fu">plot_tiles</span><span class="op">(</span><span class="fu"><a href="colour.html">colour</a></span><span class="op">(</span><span class="st">"smooth rainbow"</span><span class="op">)</span><span class="op">(</span><span class="fl">256</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">256</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="plot-13.png" alt="" width="700" height="433"></span>
+<span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot simulated color blindness</span></span>
 <span class="r-in"><span class="fu">plot_scheme_colorblind</span><span class="op">(</span><span class="fu"><a href="colour.html">colour</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="plot-11.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="plot-14.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </div>
