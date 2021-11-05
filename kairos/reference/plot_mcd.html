@@ -132,13 +132,13 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         min      mean  max     lower     upper     Q25    Q50     Q75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1148 1168.7000 1205 1162.3995 1175.0005 1155.00 1163.0 1179.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1074 1128.8333 1190 1118.0774 1139.5893 1110.00 1129.0 1152.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1096 1155.0667 1212 1143.7586 1166.3748 1141.25 1158.5 1172.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1084 1090.5333 1097 1089.1614 1091.9053 1088.75 1091.0 1093.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097  983 1102.2000 1175 1084.2998 1120.1002 1073.00 1100.0 1138.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  841.1333  945  816.7601  865.5066  789.00  841.0  893.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         min     mean  max     lower     upper  Q25    Q50     Q75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1117 1167.333 1192 1161.5841 1173.0825 1162 1166.0 1177.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1073 1134.200 1182 1123.1702 1145.2298 1117 1130.5 1157.75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1085 1150.500 1213 1139.6432 1161.3568 1131 1154.5 1169.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1078 1090.833 1097 1089.0303 1092.6364 1088 1091.0 1094.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1002 1098.600 1175 1080.6043 1116.5957 1066 1111.0 1136.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  834.100  996  809.8578  858.3422  789  841.0  841.00</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
