@@ -59,6 +59,9 @@
     <h2>Usage</h2>
     <pre class="sourceCode r"><code><span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, <span class="va">...</span><span class="op">)</span>
 
+<span class="co"># S4 method for numeric,numeric</span>
+<span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+
 <span class="co"># S4 method for CountMatrix,numeric</span>
 <span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span>
 
@@ -79,11 +82,15 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">arkhe::CountMatrix</a> or a <a href="MeanDate-class.html">MeanDate</a> object.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector, a <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">arkhe::CountMatrix</a> or a
+<a href="MeanDate-class.html">MeanDate</a> object.</p></dd>
 <dt>dates</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates.</p></dd>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
+<dt>na.rm</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should missing values (including <code>NaN</code>) be
+removed?</p></dd>
 <dt>level</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.
 Must be a single number between \(0\) and \(1\). If <code>NULL</code>, no
@@ -103,7 +110,7 @@ replications.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <ul><li><p><code>mcd()</code> returns a <a href="MeanDate-class.html">MeanDate</a> object.</p></li>
+    <ul><li><p><code>mcd()</code> returns a single <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value or a <a href="MeanDate-class.html">MeanDate</a> object.</p></li>
 <li><p><code>bootstrap()</code> and <code>jackknife()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
 </ul></div>
     <div class="section level2">
@@ -160,8 +167,8 @@ New York: Academic Press.</p>
 <span class="r-in"><span class="co">## Calculate MCD</span></span>
 <span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu">mcd</span><span class="op">(</span><span class="va">counts</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    LZ1105    LZ1103    LZ1100    LZ1099    LZ1097    LZ1096 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1162.5000 1137.8378 1154.4643 1090.6250 1092.1875  841.0714 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1162   1138   1154   1091   1092    841 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">mc_dates</span>, select <span class="op">=</span> <span class="fl">100</span><span class="op">:</span><span class="fl">125</span><span class="op">)</span></span>
@@ -170,31 +177,24 @@ New York: Academic Press.</p>
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             min      mean       max     lower     upper       Q25       Q50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1118.750 1160.5729 1209.3750 1153.3493 1167.7966 1150.7812 1160.1562</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1101.689 1150.5856 1213.1757 1140.6034 1160.5677 1131.1655 1146.2838</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1085.714 1159.2262 1201.7857 1148.8236 1169.6288 1145.7589 1162.9464</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1081.250 1090.5208 1096.8750 1089.1339 1091.9077 1087.5000 1090.6250</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097  918.750 1089.6875 1175.0000 1068.7845 1110.5905 1065.6250 1105.4688</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  737.500  842.7976  996.4286  812.1247  873.4705  789.2857  841.0714</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              Q75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1169.9219</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1171.3682</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1178.5714</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1093.7500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1126.9531</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  879.9107</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         min      mean  max     lower     upper     Q25    Q50     Q75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1122 1169.8333 1209 1162.3260 1177.3407 1156.75 1174.0 1183.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1083 1129.6333 1191 1121.1153 1138.1514 1118.00 1130.5 1143.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1106 1156.0000 1192 1146.4311 1165.5689 1132.25 1160.5 1177.75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1084 1090.8000 1100 1089.3409 1092.2591 1088.00 1091.0 1094.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097  964 1096.5667 1194 1074.4244 1118.7089 1066.00 1092.0 1138.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  851.4333  996  829.0537  873.8129  802.00  841.0  893.00</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             mean       bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1162.4206  -1.349206  28.22921</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1137.4923  -5.874698  68.74235</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1153.8196 -10.959746  50.11661</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1090.7242   1.686508  10.14794</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1091.6749  -8.713624  71.14024</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  849.7024 146.726190 268.67089</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             mean        bias      error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1162.0556   0.9444444  27.537909</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1137.5556  -7.5555556  68.762698</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1153.6111  -6.6111111  50.237614</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1091.0556   0.9444444   9.860289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1091.6111  -6.6111111  70.898489</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  849.6667 147.3333333 268.508845</span>
 </code></pre></div>
     </div>
   </div>

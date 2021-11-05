@@ -128,6 +128,7 @@
 <code class="sourceCode R"><span class="co">## Load packages</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># datasets</span></code></pre></div>
+<p><strong>kairos</strong> only supports dates expressed in CE years (BCE years must be given as negative numbers). <strong>All results are rounded to zero decimal places</strong> (sub-annual precision does not make sense in most situations). This may affect the results of the calculations, especially with resampling methods. You can change this behavior with <code>options(kairos.precision = 2)</code> (for two decimal places).</p>
 <p><strong>kairos</strong> uses a set of S4 classes that represent different special types of matrix. Please refer to the documentation of the <a href="https://github.com/tesselle/arkhe" class="external-link"><strong>arkhe</strong></a> package where these classes are defined.</p>
 <p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
