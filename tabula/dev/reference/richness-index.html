@@ -8,7 +8,7 @@ rarefaction.
 bootstrap_*() and jackknife_*() perform bootstrap/jackknife
 resampling.
 
-"><title>Richness and Rarefaction — richness-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet"><script src="../deps/bs3compat-0.2.5.1/tabs.js"></script><script src="../deps/bs3compat-0.2.5.1/bs3compat.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet"><link href="../syntax-highlighting.css" rel="stylesheet"><script src="../pkgdown.js"></script><meta property="og:title" content="Richness and Rarefaction — richness-index"><meta property="og:description" content="
+"><title>Richness and Rarefaction — richness-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Richness and Rarefaction — richness-index"><meta property="og:description" content="
 
 index_richness() returns sample richness. index_composition() returns
 asymptotic species richness.
@@ -20,20 +20,21 @@ resampling.
 "><meta property="og:image" content="https://packages.tesselle.org/tabula/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@nfrerebeau"><meta name="twitter:site" content="@nfrerebeau"><meta name="robots" content="noindex"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script></head><body data-spy="scroll" data-target="#toc" data-headroom>
+<![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript></head><body>
+    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
     
 
-      <nav class="navbar fixed-top navbar-default navbar-expand-lg bg-light"><div class="container">
-    <a class="navbar-brand mb-0 h1" href="../index.html">tabula</a>
+    <nav class="navbar fixed-top navbar-default navbar-expand-lg bg-light"><div class="container">
+    <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.6.1.9000</small>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <button type="button" id="version-badge" class="badge badge-danger d-none d-lg-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="In-development version">1.6.1.9000</button>
-
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto ml-3"><li class="nav-item">
+    <div id="navbar" class="collapse navbar-collapse ms-2">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
   <a class="nav-link" href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
@@ -43,7 +44,7 @@ resampling.
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/diversity.html">Diversity Measures</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
@@ -54,23 +55,23 @@ resampling.
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="/dev/search.json" id="search-input" placeholder="Search..." autocomplete="off"></form>
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
-      <ul class="navbar-nav ml-1"><li class="nav-item">
-  <a class="nav-link" href="https://github.com/tesselle/tabula">
+      <ul class="navbar-nav"><li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/tesselle/tabula">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul></div>
   </div>
-</nav><div class="container template-reference-topic">
+</nav><div class="container template-reference-topic" id="container">
 <div class="row">
   <div class="col-md-9 contents">
-    <img src="../package-logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
-    <h1 class="display-4">Richness and Rarefaction</h1>
-    <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/master/R/AllGenerics.R"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/master/R/index_rarefaction.R"><code>R/index_rarefaction.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/master/R/index_richness.R"><code>R/index_richness.R</code></a></small>
-    <div class="d-none name"><code>richness-index.Rd</code></div>
+    <div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Richness and Rarefaction</h1>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_rarefaction.R" class="external-link"><code>R/index_rarefaction.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_richness.R" class="external-link"><code>R/index_richness.R</code></a></small>
+      <div class="d-none name"><code>richness-index.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
@@ -83,7 +84,8 @@ rarefaction.</p></li>
 resampling.</p></li>
 </ul></div>
 
-    <div id="ref-usage" class="ref-usage section level2 sourceCode">
+    <div class="ref-usage section level2 sourceCode">
+    <h2>Usage</h2>
     <pre class="sourceCode r"><code><span class="fu">index_richness</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="fu">simulate_richness</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
@@ -97,39 +99,39 @@ resampling.</p></li>
 <span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
-<span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, <span class="va">sample</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"hurlbert"</span><span class="op">)</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span>
+<span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, <span class="va">sample</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hurlbert"</span><span class="op">)</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
-<span class="fu">index_richness</span><span class="op">(</span><span class="va">object</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
+<span class="fu">index_richness</span><span class="op">(</span><span class="va">object</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
 <span class="fu">simulate_richness</span><span class="op">(</span>
   <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>,
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>,
   quantiles <span class="op">=</span> <span class="cn">TRUE</span>,
   level <span class="op">=</span> <span class="fl">0.8</span>,
   step <span class="op">=</span> <span class="fl">1</span>,
   n <span class="op">=</span> <span class="fl">1000</span>,
-  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html">getOption</a></span><span class="op">(</span><span class="st">"tabula.progress"</span><span class="op">)</span>,
+  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"tabula.progress"</span><span class="op">)</span>,
   <span class="va">...</span>
 <span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
 <span class="fu">bootstrap_richness</span><span class="op">(</span>
   <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>,
-  probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span>,
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>,
+  probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span>,
   n <span class="op">=</span> <span class="fl">1000</span>,
   <span class="va">...</span>
 <span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
-<span class="fu">jackknife_richness</span><span class="op">(</span><span class="va">object</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
+<span class="fu">jackknife_richness</span><span class="op">(</span><span class="va">object</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"margalef"</span>, <span class="st">"menhinick"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
 <span class="fu">index_composition</span><span class="op">(</span>
   <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"chao1"</span>, <span class="st">"ace"</span><span class="op">)</span>,
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"chao1"</span>, <span class="st">"ace"</span><span class="op">)</span>,
   unbiased <span class="op">=</span> <span class="cn">FALSE</span>,
   improved <span class="op">=</span> <span class="cn">FALSE</span>,
   k <span class="op">=</span> <span class="fl">10</span>
@@ -138,67 +140,67 @@ resampling.</p></li>
 <span class="co"># S4 method for IncidenceMatrix</span>
 <span class="fu">index_composition</span><span class="op">(</span>
   <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"chao2"</span>, <span class="st">"ice"</span><span class="op">)</span>,
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"chao2"</span>, <span class="st">"ice"</span><span class="op">)</span>,
   unbiased <span class="op">=</span> <span class="cn">FALSE</span>,
   improved <span class="op">=</span> <span class="cn">FALSE</span>,
   k <span class="op">=</span> <span class="fl">10</span>
 <span class="op">)</span></code></pre>
     </div>
 
-    <h2>Arguments</h2>
-    <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-object">object</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A \(m \times p\) matrix of count data.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>Further arguments to be passed to internal methods.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-sample">sample</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the sub-sample size.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-method">method</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/character.html">character</a></code> string or vector of strings specifying the
+    <div id="ref-sections">
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
+    <dl><dt>object</dt>
+<dd><p>A \(m \times p\) matrix of count data.</p></dd>
+<dt>...</dt>
+<dd><p>Further arguments to be passed to internal methods.</p></dd>
+<dt>sample</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the sub-sample size.</p></dd>
+<dt>method</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string or vector of strings specifying the
 index to be computed (see details). Any unambiguous substring can be given.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-simplify">simplify</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: should the result be simplified to a
+<dt>simplify</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the result be simplified to a
 matrix? The default value, <code>FALSE</code>, returns a list.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-quantiles">quantiles</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: should sample quantiles be used as
+<dt>quantiles</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should sample quantiles be used as
 confidence interval? If <code>TRUE</code> (the default), sample quantiles are used as
 described in Kintigh (1989), else quantiles of the normal distribution are
 used.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-level">level</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the confidence level.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-step">step</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> giving the increment of the sample
+<dt>level</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
+<dt>step</dt>
+<dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the increment of the sample
 size. Only used if <code>simulate</code> is <code>TRUE</code>.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-n">n</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html">integer</a></code> giving the number of bootstrap
+<dt>n</dt>
+<dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
 replications.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-progress">progress</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar: should a progress bar be displayed?</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-probs">probs</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector of probabilities with values in
-\([0,1]\) (see <code><a href="https://rdrr.io/r/stats/quantile.html">stats::quantile()</a></code>).</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-unbiased">unbiased</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar. Should the bias-corrected estimator be
+<dt>progress</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a progress bar be displayed?</p></dd>
+<dt>probs</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of probabilities with values in
+\([0,1]\) (see <code><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">stats::quantile()</a></code>).</p></dd>
+<dt>unbiased</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar. Should the bias-corrected estimator be
 used? Only used with "<code>chao1</code>" or "<code>chao2</code>" (improved) estimator.</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-improved">improved</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A <code><a href="https://rdrr.io/r/base/logical.html">logical</a></code> scalar. Should the improved estimator be used?
+<dt>improved</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar. Should the improved estimator be used?
 Only used with "<code>chao1</code>" or "<code>chao2</code>".</p></dd>
-    <dt class="col-sm-3 section level2" id="pkg-arg-k">k</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html">numeric</a></code> vector giving the threshold between
+<dt>k</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the threshold between
 rare/infrequent and abundant/frequent species. Only used if <code>method</code> is
 "<code>ace</code>" or "<code>ice</code>".</p></dd>
-    </dl><div class="ref-section section level2" id="section-value">
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value" aria-hidden="true"></a>Value</h2>
-
-    
-<ul><li><p><code>index_richness()</code>, <code>simulate_richness()</code> and <code>index_composition()</code> return a
+</dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <ul><li><p><code>index_richness()</code>, <code>simulate_richness()</code> and <code>index_composition()</code> return a
 <code><a href="DiversityIndex.html">DiversityIndex</a></code> object.</p></li>
-<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></code>.</p></li>
-</ul><p>If <code>simplify</code> is <code>FALSE</code>, then <code>rarefaction()</code> returns a <code><a href="https://rdrr.io/r/base/list.html">list</a></code> (default),
-else return a <code><a href="https://rdrr.io/r/base/matrix.html">matrix</a></code>.</p>
+<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
+</ul><p>If <code>simplify</code> is <code>FALSE</code>, then <code>rarefaction()</code> returns a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> (default),
+else return a <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code>.</p>
     </div>
-    <div class="ref-section section level2" id="section-details">
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details" aria-hidden="true"></a>Details</h2>
-
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The number of different taxa, provides an instantly comprehensible
 expression of diversity. While the number of taxa within a sample
 is easy to ascertain, as a term, it makes little sense: some taxa
@@ -212,52 +214,64 @@ the number of taxa expected if all samples were of a standard size (i.e.
 taxa per fixed number of individuals). Rarefaction assumes that imbalances
 between taxa are due to sampling and not to differences in actual
 abundances.</p>
-<p>The following richness measures are available for count data:</p><dl><dt><code>margalef</code></dt><dd><p>Margalef richness index.</p></dd>
-<dt><code>menhinick</code></dt><dd><p>Menhinick richness index.</p></dd>
-<dt><code>none</code></dt><dd><p>Returns the number of observed taxa/types.</p></dd>
+<p>The following richness measures are available for count data:</p><dl><dt><code>margalef</code></dt>
+<dd><p>Margalef richness index.</p></dd>
+
+<dt><code>menhinick</code></dt>
+<dd><p>Menhinick richness index.</p></dd>
+
+<dt><code>none</code></dt>
+<dd><p>Returns the number of observed taxa/types.</p></dd>
+
 
 </dl></div>
-    <div class="ref-section section level2" id="section-asymptotic-species-richness">
-    <h2 class="hasAnchor" id="asymptotic-species-richness"><a class="anchor" href="#asymptotic-species-richness" aria-hidden="true"></a>Asymptotic Species Richness</h2>
-
+    <div class="section level2">
+    <h2 id="asymptotic-species-richness">Asymptotic Species Richness<a class="anchor" aria-label="anchor" href="#asymptotic-species-richness"></a></h2>
     
 
-<p>The following measures are available for count data:</p><dl><dt><code>ace</code></dt><dd><p>Abundance-based Coverage Estimator.</p></dd>
-<dt><code>chao1</code></dt><dd><p>(improved/unbiased) Chao1 estimator.</p></dd>
+<p>The following measures are available for count data:</p><dl><dt><code>ace</code></dt>
+<dd><p>Abundance-based Coverage Estimator.</p></dd>
 
-</dl><p>The following measures are available for replicated incidence data:</p><dl><dt><code>ice</code></dt><dd><p>Incidence-based Coverage Estimator.</p></dd>
-<dt><code>chao2</code></dt><dd><p>(improved/unbiased) Chao2 estimator.</p></dd>
+<dt><code>chao1</code></dt>
+<dd><p>(improved/unbiased) Chao1 estimator.</p></dd>
+
+
+</dl><p>The following measures are available for replicated incidence data:</p><dl><dt><code>ice</code></dt>
+<dd><p>Incidence-based Coverage Estimator.</p></dd>
+
+<dt><code>chao2</code></dt>
+<dd><p>(improved/unbiased) Chao2 estimator.</p></dd>
+
 
 </dl></div>
-    <div class="ref-section section level2" id="section-references">
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references" aria-hidden="true"></a>References</h2>
-
+    <div class="section level2">
+    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Chao, A. (1984). Nonparametric Estimation of the Number of Classes in a
 Population. <em>Scandinavian Journal of Statistics</em>, 11(4), 265-270.</p>
 <p>Chao, A. (1987). Estimating the Population Size for Capture-Recapture Data
 with Unequal Catchability. <em>Biometrics</em> 43(4), 783-791.
-doi: <a href="https://doi.org/10.2307/2531532">10.2307/2531532</a>
+doi: <a href="https://doi.org/10.2307/2531532" class="external-link">10.2307/2531532</a>
 .</p>
 <p>Chao, A. &amp; Chiu, C.-H. (2016). Species Richness: Estimation and Comparison.
 <em>In</em> Balakrishnan, N., Colton, T., Everitt, B., Piegorsch, B., Ruggeri,
 F. &amp; Teugels, J. L. (Eds.), <em>Wiley StatsRef: Statistics Reference Online</em>.
 Chichester, UK: John Wiley &amp; Sons, Ltd., 1-26.
-doi: <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2">10.1002/9781118445112.stat03432.pub2</a></p>
+doi: <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2" class="external-link">10.1002/9781118445112.stat03432.pub2</a></p>
 <p>Chao, A. &amp; Lee, S.-M. (1992). Estimating the Number of Classes via Sample
 Coverage. <em>Journal of the American Statistical Association</em>, 87(417),
-210-217. doi: <a href="https://doi.org/10.1080/01621459.1992.10475194">10.1080/01621459.1992.10475194</a>
+210-217. doi: <a href="https://doi.org/10.1080/01621459.1992.10475194" class="external-link">10.1080/01621459.1992.10475194</a>
 .</p>
 <p>Chiu, C.-H., Wang, Y.-T., Walther, B. A. &amp; Chao, A. (2014). An improved
 nonparametric lower bound of species richness via a modified good-turing
 frequency formula. <em>Biometrics</em>, 70(3), 671-682.
-doi: <a href="https://doi.org/10.1111/biom.12200">10.1111/biom.12200</a>
+doi: <a href="https://doi.org/10.1111/biom.12200" class="external-link">10.1111/biom.12200</a>
 .</p>
 <p>Hurlbert, S. H. (1971). The Nonconcept of Species Diversity: A Critique and
 Alternative Parameters. <em>Ecology</em>, 52(4), 577-586.
-doi: <a href="https://doi.org/10.2307/1934145">10.2307/1934145</a>
+doi: <a href="https://doi.org/10.2307/1934145" class="external-link">10.2307/1934145</a>
 .</p>
 <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
-Princeton, NJ: Princeton University Press. doi: <a href="https://doi.org/10.1007/978-94-015-7358-0">10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press. doi: <a href="https://doi.org/10.1007/978-94-015-7358-0" class="external-link">10.1007/978-94-015-7358-0</a>
 .</p>
 <p>Kintigh, K. W. (1989). Sample Size, Significance, and Measures of
 Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
@@ -269,37 +283,37 @@ Frontiers in Measurement and Assessment</em>. Oxford: Oxford University Press.</
 3, 36-71.</p>
 <p>Menhinick, E. F. (1964). A Comparison of Some Species-Individuals Diversity
 Indices Applied to Samples of Field Insects. <em>Ecology</em>, 45(4), 859-861.
-doi: <a href="https://doi.org/10.2307/1934933">10.2307/1934933</a>
+doi: <a href="https://doi.org/10.2307/1934933" class="external-link">10.2307/1934933</a>
 .</p>
 <p>McIntosh, R. P. (1967). An Index of Diversity and the Relation of Certain
 Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
-doi: <a href="https://doi.org/10.2307/1932674">10.2307/1932674</a>
+doi: <a href="https://doi.org/10.2307/1932674" class="external-link">10.2307/1932674</a>
 .</p>
 <p>Sander, H. L. (1968). Marine Benthic Diversity: A Comparative Study.
 <em>The American Naturalist</em>, 102(925), 243-282.</p>
     </div>
-    <div class="ref-section section level2" id="section-see-also">
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
-
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><code><a href="plot_diversity.html">plot_diversity()</a></code></p>
 <p>Other diversity: 
 <code><a href="heterogeneity-index.html">heterogeneity-index</a></code>,
 <code><a href="similarity-method.html">similarity</a>()</code>,
 <code><a href="turnover-index.html">turnover-index</a></code></p></div>
     </div>
-    <div class="ref-section section level2" id="section-author">
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author" aria-hidden="true"></a>Author</h2>
-
+    <div class="section level2">
+    <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>N. Frerebeau</p>
     </div>
+    </div>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples" aria-hidden="true"></a>Examples</h2>
+    <div id="examples">
+    <h2>Examples</h2>
     <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Richness</span></span>
 <span class="r-in"><span class="co">## Margalef and Menhinick index</span></span>
 <span class="r-in"><span class="co">## Data from Magurran 1988, p. 128-129</span></span>
-<span class="r-in"><span class="va">trap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/arkhe/man/CountMatrix-class.html">CountMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">9</span>, <span class="fl">3</span>, <span class="fl">0</span>, <span class="fl">4</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>,</span>
+<span class="r-in"><span class="va">trap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">CountMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">9</span>, <span class="fl">3</span>, <span class="fl">0</span>, <span class="fl">4</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>,</span>
 <span class="r-in">                             <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">0</span>, <span class="fl">5</span>, <span class="fl">3</span>, <span class="fl">0</span><span class="op">)</span>,</span>
-<span class="r-in">                    nrow <span class="op">=</span> <span class="fl">2</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span>, dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span>, <span class="cn">NULL</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in">                    nrow <span class="op">=</span> <span class="fl">2</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span>, dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span>, <span class="cn">NULL</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">index_richness</span><span class="op">(</span><span class="va">trap</span>, method <span class="op">=</span> <span class="st">"margalef"</span><span class="op">)</span> <span class="co"># 2.55 1.88</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;RichnessIndex: margalef&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   size    index</span>
@@ -314,20 +328,20 @@ doi: <a href="https://doi.org/10.2307/1932674">10.2307/1932674</a>
 <span class="r-in"><span class="co">## Asymptotic species richness</span></span>
 <span class="r-in"><span class="co">## Chao1-type estimators</span></span>
 <span class="r-in"><span class="co">## Data from Chao &amp; Chiu 2016</span></span>
-<span class="r-in"><span class="va">brazil</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/arkhe/man/CountMatrix-class.html">CountMatrix</a></span><span class="op">(</span></span>
-<span class="r-in">  data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">21</span>, <span class="fl">23</span>, <span class="fl">25</span>, <span class="fl">27</span>, <span class="fl">28</span>, <span class="fl">30</span>, <span class="fl">32</span>, <span class="fl">34</span><span class="op">:</span><span class="fl">37</span>, <span class="fl">41</span>,</span>
+<span class="r-in"><span class="va">brazil</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">CountMatrix</a></span><span class="op">(</span></span>
+<span class="r-in">  data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">21</span>, <span class="fl">23</span>, <span class="fl">25</span>, <span class="fl">27</span>, <span class="fl">28</span>, <span class="fl">30</span>, <span class="fl">32</span>, <span class="fl">34</span><span class="op">:</span><span class="fl">37</span>, <span class="fl">41</span>,</span>
 <span class="r-in">                   <span class="fl">45</span>, <span class="fl">46</span>, <span class="fl">49</span>, <span class="fl">52</span>, <span class="fl">89</span>, <span class="fl">110</span>, <span class="fl">123</span>, <span class="fl">140</span><span class="op">)</span>,</span>
-<span class="r-in">             times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">113</span>, <span class="fl">50</span>, <span class="fl">39</span>, <span class="fl">29</span>, <span class="fl">15</span>, <span class="fl">11</span>, <span class="fl">13</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">6</span>, <span class="fl">3</span>, <span class="fl">4</span>,</span>
+<span class="r-in">             times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">113</span>, <span class="fl">50</span>, <span class="fl">39</span>, <span class="fl">29</span>, <span class="fl">15</span>, <span class="fl">11</span>, <span class="fl">13</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">6</span>, <span class="fl">3</span>, <span class="fl">4</span>,</span>
 <span class="r-in">                       <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">2</span>, <span class="fl">5</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>,</span>
 <span class="r-in">                       <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
 <span class="r-in">  nrow <span class="op">=</span> <span class="fl">1</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="fu">index_composition</span><span class="op">(</span><span class="va">brazil</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"chao1"</span><span class="op">)</span>, unbiased <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="co"># 461.625</span></span>
+<span class="r-in"><span class="fu">index_composition</span><span class="op">(</span><span class="va">brazil</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"chao1"</span><span class="op">)</span>, unbiased <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="co"># 461.625</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionIndex: chao1&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      size    index</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row1 1978 461.6254</span>
-<span class="r-in"><span class="fu">index_composition</span><span class="op">(</span><span class="va">brazil</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ace"</span><span class="op">)</span>, k <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="co"># 445.822</span></span>
+<span class="r-in"><span class="fu">index_composition</span><span class="op">(</span><span class="va">brazil</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ace"</span><span class="op">)</span>, k <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="co"># 445.822</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionIndex: ace&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      size    index</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> row1 1978 445.8224</span>
@@ -337,19 +351,17 @@ doi: <a href="https://doi.org/10.2307/1932674">10.2307/1932674</a>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        A        B </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6.556735       NA </span>
 </code></pre></div>
+    </div>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="sticky-top">
-    <nav id="toc"><h2 data-toc-skip>Contents</h2>
-
+  <div class="col-md-3" id="pkgdown-sidebar">
+    <nav id="toc"><h2>On this page</h2>
     </nav></div>
-  </div>
 </div>
 
 
-      <footer><div class="pkgdown-footer-left">
+    <footer><div class="pkgdown-footer-left">
 <p>
-  tabula is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tabula">tesselle.org</a>.
+  tabula is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tabula" class="external-link">tesselle.org</a>.
 </p>
 </div>
 
@@ -357,11 +369,11 @@ doi: <a href="https://doi.org/10.2307/1932674">10.2307/1932674</a>
 <p>
   </p><p>Developed by Nicolas Frerebeau.</p>
 
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 
 </div>
 
-      </footer></div>
+    </footer></div>
 
   
 
