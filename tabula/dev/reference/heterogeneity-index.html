@@ -20,7 +20,7 @@ resampling.
     <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-default navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.6.1.9000</small>
@@ -30,13 +30,7 @@ resampling.
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-2">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
@@ -54,7 +48,7 @@ resampling.
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/tesselle/tabula">
+  <a class="external-link nav-link" href="https://github.com/tesselle/tabula/" aria-label="github">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -362,18 +356,18 @@ doi: <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="externa
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
 <span class="r-in"><span class="op">(</span><span class="va">boot_h</span> <span class="op">&lt;-</span> <span class="fu">bootstrap_heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             min      mean       max        Q5       Q95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.5982696 1.4251122 1.9085353 1.0537149 1.7721394</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 1.0048528 1.3862944 0.5623351 1.3208883</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.5390439 0.6931472 0.0000000 0.6931472</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.6559757 1.4092314 1.8711604 0.9922820 1.7298201</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9859925 1.3862944 0.5623351 1.3208883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.5562688 0.6931472 0.0000000 0.6931472</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.7214637 1.4645013 1.9072840 1.0975595 1.7917595</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6779334 1.0986123 0.0000000 1.0986123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.8953327 1.6218059 1.9085353 1.3337360 1.8468891</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.1390158 1.5931852 1.9284722 1.3713289 1.7886401</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.6566981 1.8734713 2.0613437 1.7606986 1.9780781</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.7353927 1.0397208 0.0000000 1.0397208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.5660857 1.5245002 1.9072840 1.1988493 1.8200760</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.6791933 1.4576212 1.9072840 1.0775563 1.7917595</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6550891 1.0986123 0.0000000 1.0986123</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.6931472 1.6284725 1.9459101 1.3337360 1.8468891</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.1569876 1.5930825 1.9284722 1.3713792 1.8005937</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.6383634 1.8667780 2.0416764 1.7552445 1.9710946</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.7311947 1.0397208 0.0000000 1.0397208</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.8239592 1.5302002 1.9072840 1.1437084 1.8200760</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="op">(</span><span class="va">jack_h</span> <span class="op">&lt;-</span> <span class="fu">jackknife_heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span>
