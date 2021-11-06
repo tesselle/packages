@@ -2,18 +2,8 @@
 title: "R packages & archaeology"
 ---
 
-```{r, include=FALSE}
-## Install missing packages (if any)
-pkg <- c("metathis", "rjson")
-installed <- vapply(
-  X = pkg,
-  FUN = requireNamespace,
-  FUN.VALUE = logical(1), 
-  quietly = TRUE
-)
-if (!all(installed)) {
-  utils::install.packages(pkg[!installed])
-}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 
 metathis::meta() |>
   metathis::meta_description(
@@ -82,7 +72,7 @@ writeLines(rjson::toJSON(sea), "search.json")
 
 ---
 
-```{r, echo=FALSE}
+```{r}
 url_doc <- "<a href=\"%s\" title=\"Read the doc\">%s</a>"
 url_badge_version <- "<img src=\"http://www.r-pkg.org/badges/version/%s\">"
 url_badge_status <- "<img src=\"https://cranchecks.info/badges/worst/%s\">"

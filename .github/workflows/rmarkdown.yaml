@@ -1,50 +1,35 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/master/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
 
 name: rmarkdown
 
 jobs:
-  bookdown:
-    name: Render-Website
-
+  rmarkdown:
     runs-on: macOS-latest
-
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
     steps:
       - uses: actions/checkout@v2
 
-      - uses: r-lib/actions/setup-r@v1
-
       - uses: r-lib/actions/setup-pandoc@v1
 
-      - name: Configure git
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "actions-user"
-          git branch gh-pages 2>/dev/null
-          git remote set-branches origin gh-pages
-          git fetch origin gh-pages
-          git worktree add --track -B gh-pages _docs origin/gh-pages
+      - uses: r-lib/actions/setup-r@v1
 
       - name: Install rmarkdown
-        run: Rscript -e 'install.packages(c("rmarkdown", "distill"))'
+        run: Rscript -e 'install.packages(c("rmarkdown", "metathis", "rjson"))'
 
-      - name: Render HTML
-        run: Rscript -e 'rmarkdown::render_site()'
-
-      - name: Deploy
-        if: success()
+      - name: Build site
         run: |
-          cp CNAME _docs/CNAME
-          cp .nojekyll _docs/.nojekyll
-          cp -r _site/* _docs
-          cd _docs
-          git add -A
-          git commit -m 'Render website' || echo "Nothing to commit"
-          git push origin HEAD:gh-pages
+          Rscript -e 'rmarkdown::render_site()'
+          cp CNAME _site/CNAME
+          cp .nojekyll _site/.nojekyll
+
+      - name: Deploy to GitHub pages 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: _site
+          clean: false
