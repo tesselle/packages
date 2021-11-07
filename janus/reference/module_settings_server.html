@@ -48,18 +48,15 @@
 
     <div class="ref-usage section level2 sourceCode">
     <h2>Usage</h2>
-    <pre class="sourceCode r"><code><span class="fu">module_settings_server</span><span class="op">(</span><span class="va">input</span>, <span class="va">output</span>, <span class="va">session</span>, <span class="va">user_settings</span><span class="op">)</span></code></pre>
+    <pre class="sourceCode r"><code><span class="fu">module_settings_server</span><span class="op">(</span><span class="va">id</span>, <span class="va">user_settings</span><span class="op">)</span></code></pre>
     </div>
 
     <div id="ref-sections">
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>input</dt>
-<dd><p>provided by <span class="pkg">Shiny</span>.</p></dd>
-<dt>output</dt>
-<dd><p>provided by <span class="pkg">Shiny</span>.</p></dd>
-<dt>session</dt>
-<dd><p>provided by <span class="pkg">Shiny</span>.</p></dd>
+    <dl><dt>id</dt>
+<dd><p>An ID string that corresponds with the ID used to call the module's
+UI function.</p></dd>
 <dt>user_settings</dt>
 <dd><p>A <code><a href="https://rdrr.io/pkg/shiny/man/reactiveValues.html" class="external-link">shiny::reactiveValues()</a></code> list.</p></dd>
 </dl></div>
@@ -70,8 +67,7 @@
 <code><a href="module_ca_server.html">module_ca_server</a>()</code>,
 <code><a href="module_footer_server.html">module_footer_server</a>()</code>,
 <code><a href="module_import_server.html">module_import_server</a>()</code>,
-<code><a href="module_seriate_server.html">module_seriate_server</a>()</code>,
-<code><a href="module_visualize_server.html">module_visualize_server</a>()</code></p></div>
+<code><a href="module_seriate_server.html">module_seriate_server</a>()</code></p></div>
     </div>
     </div>
 
