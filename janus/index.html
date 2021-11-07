@@ -96,7 +96,11 @@
 <h2 id="deploy">Deploy<a class="anchor" aria-label="anchor" href="#deploy"></a>
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Assuming rsconnect is properly configured</span>
+<code class="sourceCode R"><span class="co">## Set repositories</span>
+<span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>tesselle <span class="op">=</span> <span class="st">"https://tesselle.r-universe.dev"</span>,
+                  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span><span class="op">)</span>
+
+<span class="co">## Assuming rsconnect is properly configured</span>
 <span class="fu"><a href="reference/deploy.html">deploy</a></span><span class="op">(</span><span class="st">"seriate"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
