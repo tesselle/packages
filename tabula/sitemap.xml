@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://packages.tesselle.org/tabula/404.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/articles/bibliography.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/articles/diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/articles/seriation.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/authors.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/paper.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/pull_request_template.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/DiversityIndex.html</loc>
@@ -17,6 +53,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/independance.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/mutator.html</loc>
@@ -65,14 +104,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/turnover-index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/articles/bibliography.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/articles/diversity.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/articles/seriation.html</loc>
   </url>
 </urlset>
