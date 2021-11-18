@@ -31,9 +31,6 @@
     <loc>https://packages.tesselle.org/khroma/dev/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/dev/reference/build_scale.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/khroma/dev/reference/colour.html</loc>
   </url>
   <url>
@@ -71,6 +68,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/dev/reference/scale_okabeito_discrete.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/dev/reference/scale_picker.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/dev/reference/scale_soil.html</loc>

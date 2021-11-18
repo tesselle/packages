@@ -79,8 +79,8 @@ palette. Only relevant for qualitative palettes.</p></dd>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other colour palettes: 
-<code><a href="build_scale.html">build_scale</a>()</code>,
-<code><a href="colour.html">colour</a>()</code></p></div>
+<code><a href="colour.html">colour</a>()</code>,
+<code><a href="scale_picker.html">scale_picker</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -92,61 +92,61 @@ palette. Only relevant for qualitative palettes.</p></dd>
     <h2>Examples</h2>
     <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Get a table of available palettes</span></span>
 <span class="r-in"><span class="fu">info</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             palette        type max missing</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1              broc   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2              cork   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3               vik   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            lisbon   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            tofino   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            berlin   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7              roma   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8               bam   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9            vanimo   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10           oleron   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11           bukavu   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12              fes   diverging 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13            devon  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14          lajolla  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15           bamako  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16            davos  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17           bilbao  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18             nuuk  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19             oslo  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20            grayC  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           hawaii  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22            lapaz  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23            tokyo  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24             buda  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25            acton  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26            turku  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27            imola  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           batlow  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29          batlowW  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30          batlowK  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31            brocO  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32            corkO  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33             vikO  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34            romaO  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35             bamO  sequential 256    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           bright qualitative   7    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37    high contrast qualitative   3    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38          vibrant qualitative   7    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39            muted qualitative   9 #DDDDDD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40  medium contrast qualitative   6    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41             pale qualitative   6    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42             dark qualitative   6    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43            light qualitative   9    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44           sunset   diverging  11 #FFFFFF</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45             BuRd   diverging   9 #FFEE99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46             PRGn   diverging   9 #FFEE99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47           YlOrBr  sequential   9 #888888</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48       iridescent  sequential  23 #999999</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49 discrete rainbow  sequential  23 #777777</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50   smooth rainbow  sequential  34 #666666</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51        okabe ito qualitative   8    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52     stratigraphy qualitative 175    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53             soil qualitative  24    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54             land qualitative  14    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            palette        type max missing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1             broc   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2             cork   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3              vik   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4           lisbon   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5           tofino   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6           berlin   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7             roma   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8              bam   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9           vanimo   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10          oleron   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11          bukavu   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12             fes   diverging 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13           devon  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14         lajolla  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15          bamako  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16           davos  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17          bilbao  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18            nuuk  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19            oslo  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20           grayC  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21          hawaii  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22           lapaz  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23           tokyo  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24            buda  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25           acton  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26           turku  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27           imola  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28          batlow  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29         batlowW  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30         batlowK  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31           brocO  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32           corkO  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33            vikO  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34           romaO  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35            bamO  sequential 256    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36          bright qualitative   7    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37    highcontrast qualitative   3    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38         vibrant qualitative   7    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39           muted qualitative   9 #DDDDDD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  mediumcontrast qualitative   6    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41            pale qualitative   6    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42            dark qualitative   6    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43           light qualitative   9    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44          sunset   diverging  11 #FFFFFF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45            BuRd   diverging   9 #FFEE99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46            PRGn   diverging   9 #FFEE99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47          YlOrBr  sequential   9 #888888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48      iridescent  sequential  23 #999999</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 discreterainbow  sequential  23 #777777</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50   smoothrainbow  sequential  34 #666666</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51        okabeito qualitative   8    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52    stratigraphy qualitative 175    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53            soil qualitative  24    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54            land qualitative  14    &lt;NA&gt;</span>
 </code></pre></div>
     </div>
   </div>
