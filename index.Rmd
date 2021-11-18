@@ -53,7 +53,6 @@ for (i in seq_along(url_pkg)) {
   if (!inherits(tmp, "try-error")) {
     for (j in seq_along(tmp)) {
       tmp[[j]]$package <- pkg$Package[[i]]
-      tmp[[j]]$path <- paste0(path, tmp[[j]]$path) # Absolute path
     }
     sea <- c(sea, tmp)
   }
