@@ -71,7 +71,7 @@
 <span class="op">)</span>
 
 <span class="co"># S4 method for list,missing</span>
-<span class="fu">aoristic</span><span class="op">(</span><span class="va">x</span>, step <span class="op">=</span> <span class="fl">1</span>, start <span class="op">=</span> <span class="cn">NULL</span>, stop <span class="op">=</span> <span class="cn">NULL</span>, weight <span class="op">=</span> <span class="cn">FALSE</span>, groups <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre>
+<span class="fu">aoristic</span><span class="op">(</span><span class="va">x</span>, step <span class="op">=</span> <span class="fl">1</span>, start <span class="op">=</span> <span class="cn">NULL</span>, stop <span class="op">=</span> <span class="cn">NULL</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>, groups <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre>
     </div>
 
     <div id="ref-sections">
@@ -97,8 +97,8 @@ window (in years CE).</p></dd>
 window (in years CE).</p></dd>
 <dt>weight</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the aoristic sum be weighted by
-the length of periods. Defaults to <code>FALSE</code> (the aoristic sum
-is the number of elements within a time step).</p></dd>
+the length of periods (default). If <code>FALSE</code> the aoristic sum is the number
+of elements within a time block.</p></dd>
 <dt>groups</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></code> vector in the sense that <code>as.factor(groups)</code>
 defines the grouping. If <code>x</code> is a <code>list</code> (or a <code>data.frame</code>), <code>groups</code> can
@@ -138,6 +138,11 @@ doi: <a href="https://doi.org/10.15496/publikation-2085" class="external-link">1
 Temporal Categorizations in Archaeology</em>. Presented at the Human History and
 Digital Future (CAA 2018), Tubingen, March 21.
 <a href="https://www.youtube.com/watch?v=bUBukex30QI" class="external-link">https://www.youtube.com/watch?v=bUBukex30QI</a>.</p>
+<p>Palmisano, A., Bevan, A. &amp; Shennan, S. (2017). Comparing Archaeological
+Proxies for Long-Term Population Patterns: An Example from Central Italy.
+<em>Journal of Archaeological Science</em>, 87: 59-72.
+doi: <a href="https://doi.org/10.1016/j.jas.2017.10.001" class="external-link">10.1016/j.jas.2017.10.001</a>
+.</p>
 <p>Ratcliffe, J. H. (2000). Aoristic Analysis: The Spatial Interpretation of
 Unspecific Temporal Events. <em>International Journal of Geographical
 Information Science</em>, 14(7): 669-79. doi: <a href="https://doi.org/10.1080/136588100424963" class="external-link">10.1080/136588100424963</a>
@@ -200,8 +205,8 @@ Criminology</em>, 18(1): 23-43. doi: <a href="https://doi.org/10.1023/A:10132408
 <span class="r-plt img"><img src="aoristic-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights)</span></span>
-<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu">aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weigth</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_weighted</span> <span class="op">&lt;-</span> <span class="fu">aoristic</span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weighted</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="aoristic-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights) by group</span></span>
@@ -211,13 +216,13 @@ Criminology</em>, 18(1): 23-43. doi: <a href="https://doi.org/10.1023/A:10132408
 <span class="r-plt img"><img src="aoristic-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change</span></span>
-<span class="r-in"><span class="va">roc_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weigth</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weigth</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">roc_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weighted</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weighted</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="aoristic-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change by group</span></span>
 <span class="r-in"><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="aoristic-5.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

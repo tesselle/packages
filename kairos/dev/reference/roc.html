@@ -143,8 +143,8 @@ doi: <a href="https://doi.org/10.1007/s10816-011-9122-3" class="external-link">1
 <span class="r-plt img"><img src="roc-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights)</span></span>
-<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weigth</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weighted</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="roc-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights) by group</span></span>
@@ -154,13 +154,13 @@ doi: <a href="https://doi.org/10.1007/s10816-011-9122-3" class="external-link">1
 <span class="r-plt img"><img src="roc-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change</span></span>
-<span class="r-in"><span class="va">roc_weigth</span> <span class="op">&lt;-</span> <span class="fu">roc</span><span class="op">(</span><span class="va">aorist_weigth</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weigth</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">roc_weighted</span> <span class="op">&lt;-</span> <span class="fu">roc</span><span class="op">(</span><span class="va">aorist_weighted</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weighted</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="roc-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change by group</span></span>
 <span class="r-in"><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu">roc</span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="roc-5.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

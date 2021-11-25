@@ -64,10 +64,10 @@
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, facet <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for RateOfChange</span>
-<span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span>, level <span class="op">=</span> <span class="fl">0.95</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 
 <span class="co"># S4 method for RateOfChange,missing</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, facet <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></code></pre>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, level <span class="op">=</span> <span class="fl">0.95</span>, facet <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></code></pre>
     </div>
 
     <div id="ref-sections">
@@ -80,6 +80,8 @@
 <dt>facet</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a matrix of panels defined by
 groups be drawn?</p></dd>
+<dt>level</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -141,8 +143,8 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-plt img"><img src="plot_aoristic-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights)</span></span>
-<span class="r-in"><span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weigth</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">aorist_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weighted</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot_aoristic-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate aoristic sum (weights) by group</span></span>
@@ -152,13 +154,13 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-plt img"><img src="plot_aoristic-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change</span></span>
-<span class="r-in"><span class="va">roc_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weigth</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weigth</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">roc_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weighted</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weighted</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot_aoristic-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Rate of change by group</span></span>
 <span class="r-in"><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot_aoristic-5.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
