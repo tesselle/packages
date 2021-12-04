@@ -48,14 +48,16 @@
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
 </head>
 <body>
-    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
     <a class="navbar-brand me-2" href="index.html">tabula</a>
 
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.6.1.9000</small>
 
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -90,12 +92,12 @@
 </li>
       </ul>
 </div>
-  </div>
-</nav><div class="container template-home" id="container">
-<div class="row">
-  <div class="contents col-md-9">
 
-<div class="section level1">
+    
+  </div>
+</nav><div class="container template-home">
+<div class="row">
+  <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
 <img src="logo.png" class="logo" alt=""><h1 id="tabula-">tabula <a class="anchor" aria-label="anchor" href="#tabula-"></a>
 </h1>
@@ -109,7 +111,7 @@
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p>An easy way to examine archaeological count data. <strong>tabula</strong> provides a convenient and reproducible toolkit for relative dating by matrix seriation (reciprocal ranking, CA-based seriation). This package provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). The package make it easy to visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.</p>
-<p><a href="https://github.com/tesselle/kairos" class="external-link"><strong>kairos</strong></a> is a companion package to <strong>tabula</strong> that provides functions for chronological modeling and dating of archaeological assemblages from count data.</p>
+<p><a href="https://www.tesselle.org/kairos/" class="external-link"><strong>kairos</strong></a> is a companion package to <strong>tabula</strong> that provides functions for chronological modeling and dating of archaeological assemblages from count data.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>To cite tabula <span class="cf">in</span> publications use<span class="op">:</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span>Frerebeau, <span class="kw">Nicolas</span> (<span class="dv">2019</span>). tabula<span class="op">:</span><span class="st"> </span>An R Package <span class="cf">for</span> Analysis,</span>
@@ -138,7 +140,7 @@
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"tesselle/tabula"</span><span class="op">)</span></code></pre></div>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tesselle/tabula"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
@@ -278,10 +280,7 @@
 </div>
 
 
-  </div>
-
-  <div class="col-md-3" id="pkgdown-sidebar">
-<div class="links">
+  </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=tabula" class="external-link">View on CRAN</a></li>
@@ -309,7 +308,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html">Citing tabula</a></li>
+<li><a href="authors.html#citation">Citing tabula</a></li>
 </ul>
 </div>
 
@@ -329,23 +328,17 @@
 </ul>
 </div>
 
-  </div>
+  </aside>
 </div>
 
 
     <footer><div class="pkgdown-footer-left">
-<p>
-  tabula is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tabula" class="external-link">tesselle.org</a>.
-</p>
+<p>tabula is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tabula" class="external-link">tesselle.org</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p>
-  </p>
-<p>Developed by Nicolas Frerebeau.</p>
-
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
-
+<p></p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
     </footer>
