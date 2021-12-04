@@ -26,14 +26,16 @@
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
 </head>
 <body>
-    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
     <a class="navbar-brand me-2" href="index.html">tekton</a>
 
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
 
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -57,11 +59,12 @@
 </li>
       </ul>
 </div>
+
+    
   </div>
-</nav><div class="container template-home" id="container">
+</nav><div class="container template-home">
 <div class="row">
-  <div class="contents col-md-9">
-<div class="section level1">
+  <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="tekton">tekton<a class="anchor" aria-label="anchor" href="#tekton"></a>
 </h1></div>
 <!-- badges: start -->
@@ -88,10 +91,7 @@
 <p>To work properly, <code>tekton</code> requires the assets and templates in <code>inst/pkgdown/assets/</code>. Because of this, you should not set <code>default_assets: false</code> in your <code>_pkgdown.yaml</code>.</p>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3" id="pkgdown-sidebar">
-<div class="links">
+  </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/tesselle/tekton/" class="external-link">Browse source code</a></li>
@@ -108,6 +108,13 @@
 </div>
 
 
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing tekton</a></li>
+</ul>
+</div>
+
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
@@ -123,23 +130,17 @@
 </ul>
 </div>
 
-  </div>
+  </aside>
 </div>
 
 
     <footer><div class="pkgdown-footer-left">
-<p>
-  tekton is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tekton" class="external-link">tesselle.org</a>.
-</p>
+<p>tekton is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tekton" class="external-link">tesselle.org</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p>
-  </p>
-<p>Developed by Nicolas Frerebeau.</p>
-
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
-
+<p></p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
     </footer>

@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 1.9000.9000.9000
-pkgdown_sha: 838c5035262d1d755645e2e146a30debdcc9053e
+pkgdown: 2.0.1
+pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-05T14:51Z
+last_built: 2021-12-04T12:23Z
 urls:
   reference: https://packages.tesselle.org/tekton/reference
   article: https://packages.tesselle.org/tekton/articles
