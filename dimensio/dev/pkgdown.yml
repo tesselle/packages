@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 1.9000.9000.9000
-pkgdown_sha: 8122179c440692487eda000d6542d7734a37d36d
+pkgdown: 2.0.1
+pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-05T21:22Z
+last_built: 2021-12-04T16:24Z
 urls:
   reference: https://packages.tesselle.org/dimensio/reference
   article: https://packages.tesselle.org/dimensio/articles

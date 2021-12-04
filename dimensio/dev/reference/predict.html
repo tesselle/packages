@@ -3,14 +3,16 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript></head><body>
-    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.2.2.9000</small>
 
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,11 +34,12 @@
   </a>
 </li>
       </ul></div>
+
+    
   </div>
-</nav><div class="container template-reference-topic" id="container">
+</nav><div class="container template-reference-topic">
 <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Predict New Coordinates</h1>
       <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/ca.R" class="external-link"><code>R/ca.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/pca.R" class="external-link"><code>R/pca.R</code></a></small>
       <div class="d-none name"><code>predict.Rd</code></div>
@@ -46,16 +49,15 @@
     <p>Predict the projection of new individuals/rows or variables/columns.</p>
     </div>
 
-    <div class="ref-usage section level2 sourceCode">
-    <h2>Usage</h2>
-    <pre class="sourceCode r"><code><span class="co"># S4 method for CA</span>
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for CA</span>
 <span class="fu">predict</span><span class="op">(</span><span class="va">object</span>, <span class="va">newdata</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 
 <span class="co"># S4 method for PCA</span>
-<span class="fu">predict</span><span class="op">(</span><span class="va">object</span>, <span class="va">newdata</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre>
+<span class="fu">predict</span><span class="op">(</span><span class="va">object</span>, <span class="va">newdata</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
     </div>
 
-    <div id="ref-sections">
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
@@ -82,11 +84,10 @@ indicates variables/columns.</p></dd>
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>N. Frerebeau</p>
     </div>
-    </div>
 
-    <div id="examples">
-    <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create a matrix</span></span>
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create a matrix</span></span>
 <span class="r-in"><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute correspondence analysis</span></span>
@@ -95,73 +96,64 @@ indicates variables/columns.</p></dd>
 <span class="r-in"><span class="co">## Predict new row coordinates</span></span>
 <span class="r-in"><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">120</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span>, ncol <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">predict</span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              F1          F2           F3          F4           F5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   0.267994785  0.09011690  0.256844220 -0.26163224  0.238842308</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   0.061558824  0.33078163  0.073378757  0.20152066  0.107181691</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  -0.154779814  0.10118948  0.020724586  0.39017791  0.181382567</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   0.093911965 -0.07483380 -0.120691187  0.21700290  0.152515884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  -0.060347213  0.08788627  0.245842525 -0.34633770  0.104069058</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6   0.397058758  0.11178714 -0.081555540 -0.13500497  0.007562646</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   0.193737710  0.39255483  0.210255802 -0.03001959 -0.075849066</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   0.382038670 -0.10171437 -0.017545490  0.22374437  0.091868811</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   0.111907535  0.03760580  0.187263693  0.26657439  0.134533564</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10  0.007062839  0.51263011  0.258413791  0.33784831  0.131290928</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11  0.170933097  0.17657487  0.191164723  0.39032793 -0.104732978</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12  0.121043933 -0.02521390 -0.147048842  0.02452740  0.131982041</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13  0.209996877  0.39550803 -0.325124481 -0.10772716  0.278574087</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 -0.032215906 -0.24075043 -0.046357325  0.19217252 -0.031122208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15  0.204197356  0.43849901  0.002781791 -0.14836980  0.044048566</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 -0.078411443  0.17500773 -0.006049356 -0.09364484 -0.424324989</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17  0.293383644  0.38132713 -0.005274845  0.17619183 -0.074659534</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18  0.268344173  0.09677766  0.129618563  0.21105198 -0.075216177</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19  0.235965004  0.38686472 -0.053964215 -0.53822404 -0.021318817</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20 -0.013496084 -0.24821313 -0.165354551  0.21473209  0.478841652</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             F1           F2          F3          F4            F5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  -0.02640365  0.035491007  0.19284928 -0.23177375  0.4005794216</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   0.20004775 -0.008291659  0.34957394  0.27493755  0.0102008784</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   0.32464408  0.033488714  0.12400855 -0.20633665 -0.2389189221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   0.25599571  0.395509376  0.22080468  0.02851697  0.0813555377</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   0.19881406  0.053222375 -0.37866591 -0.21500759 -0.3176163227</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   0.20002505  0.182098599 -0.17112141 -0.36209518 -0.1733463130</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  -0.20514630 -0.237661226 -0.03120658 -0.18337503  0.0160723615</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   0.22036296  0.244052741  0.06992233 -0.16788788 -0.2236300414</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  -0.31594878 -0.223674256 -0.15955167 -0.11177713 -0.5211195704</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  0.29235805 -0.148407005  0.01954966  0.08745011 -0.2477958294</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 -0.15829136  0.002529895 -0.05294313  0.15310756  0.0510894118</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  0.16631892  0.229461184  0.18938897 -0.07514404  0.0009939458</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  0.30623402  0.227325172 -0.25795083 -0.01608618  0.0458067512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  0.09738461  0.221112863  0.04285272  0.11632445 -0.1455934974</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  0.10140598 -0.095293947  0.43403514 -0.17785268  0.2026041535</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  0.17552432 -0.244449152  0.15037190  0.29693670 -0.4799529561</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 -0.03680025  0.139888888  0.22736733 -0.41075057  0.0582798461</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  0.57464997  0.080711818 -0.18331773 -0.11302851 -0.0253971195</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  0.40717607 -0.147284903 -0.02331840  0.05030273 -0.1005405799</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20  0.30327013 -0.158312657 -0.03291092 -0.25049690  0.2409484510</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Predict new column coordinates</span></span>
 <span class="r-in"><span class="va">Z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">140</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">7</span>, ncol <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">predict</span><span class="op">(</span><span class="va">X</span>, <span class="va">Z</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              F1           F2            F3          F4           F5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  -0.251429945  0.055368585 -0.1493566768  0.08022749  0.191138833</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  -0.273989859 -0.563903460  0.1921261406 -0.20203259 -0.149349797</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3   0.432245798  0.155853920  0.1740768499  0.25887576  0.184814932</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   0.064887305 -0.408482612 -0.0402767793  0.03325490 -0.267695442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  -0.031500248 -0.007404090  0.0009661808  0.14002416  0.120394956</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  -0.020954045 -0.143466329 -0.0750601444  0.26180298  0.187871185</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  -0.006945737 -0.096211268  0.0493935328  0.23082774  0.461470870</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   0.340725398  0.109308008  0.0786478291 -0.27843420  0.550385655</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  -0.164500331 -0.400611945  0.1206051754  0.19699761  0.125247615</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10  0.101560256 -0.280840888 -0.0865059372  0.23751574 -0.124381651</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 -0.030693065  0.107482532  0.0869761167  0.20114749  0.009936329</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 -0.330849259 -0.432923364  0.3532718917 -0.07450786 -0.093069625</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 -0.386162925 -0.304420246  0.2488227386 -0.07941765 -0.170936643</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14  0.378706392 -0.001624922 -0.2232911980  0.02087857  0.316062041</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15 -0.061886584  0.195375426  0.1732116892  0.11851161 -0.122887502</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 -0.153764160 -0.452633049  0.0815430857  0.49420646  0.526307469</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17  0.030180275  0.230288023 -0.1233307069  0.26690399  0.046211596</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 -0.089089579 -0.248522293 -0.0414201155 -0.15259047  0.287441243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 -0.058466914 -0.405105060  0.2623405725  0.19952570  0.036850650</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20  0.427190283 -0.320813364  0.3876138794  0.02023173 -0.020420339</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              F1           F2           F3           F4           F5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   0.041609663 -0.077910469  0.265484660  0.321963262  0.264402573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  -0.137630028  0.137819092 -0.589600643  0.007571247  0.098277838</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  -0.143032015  0.120349466  0.003714648  0.125206852  0.070743107</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  -0.387453538 -0.060854504  0.364899144 -0.169451652  0.589415287</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  -0.075002683 -0.018605306 -0.027563856 -0.309232253  0.261667560</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  -0.266855599 -0.131850678 -0.355226128  0.199605799  0.198154626</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  -0.029762933  0.069902807  0.136013202  0.244354494 -0.004788472</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   0.077486936 -0.002934064  0.139470827  0.185524609  0.257531087</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  -0.013322039  0.137073966  0.137827258  0.297485226  0.068145938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  0.002573231  0.248656963  0.366528929 -0.053735066  0.264249024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 -0.420248192  0.629701615 -0.443874299  0.400160173 -0.086174942</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  0.147365494  0.027378814 -0.031274234  0.098416849  0.542475690</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 -0.130777355  0.285188635 -0.058431601  0.068694981 -0.334937697</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  0.098003779  0.291289567  0.109496495 -0.527150207  0.003234729</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 -0.200062997  0.127836707  0.075051357 -0.332200708  0.198262234</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 -0.230225668 -0.199207016 -0.092654833  0.261258860 -0.037629376</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17  0.336120737  0.132972709 -0.044755849  0.212387595 -0.084329185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 -0.292566927  0.119177170 -0.148992557 -0.008527427 -0.312781717</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  0.122539725  0.141061763 -0.042828251 -0.031923451  0.046306055</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 -0.299089501  0.156172127  0.248515425  0.169469647 -0.287550403</span>
 </code></pre></div>
     </div>
-  </div>
-  <div class="col-md-3" id="pkgdown-sidebar">
-    <nav id="toc"><h2>On this page</h2>
-    </nav></div>
-</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">
-<p>
-  dimensio is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=dimensio" class="external-link">tesselle.org</a>.
-</p>
+<p>dimensio is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=dimensio" class="external-link">tesselle.org</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p>
-  </p><p>Developed by Nicolas Frerebeau.</p>
-
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
-
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
     </footer></div>
