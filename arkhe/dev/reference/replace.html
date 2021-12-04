@@ -3,14 +3,16 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript></head><body>
-    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.4.0.9000</small>
 
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,11 +37,12 @@
   </a>
 </li>
       </ul></div>
+
+    
   </div>
-</nav><div class="container template-reference-topic" id="container">
+</nav><div class="container template-reference-topic">
 <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Data Replacement</h1>
       <small class="dont-index">Source: <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/clean.R" class="external-link"><code>R/clean.R</code></a></small>
       <div class="d-none name"><code>replace.Rd</code></div>
@@ -49,9 +52,9 @@
     <p>Replaces <code><a href="https://rdrr.io/r/base/NA.html" class="external-link">missing</a></code> or <code><a href="https://rdrr.io/r/base/is.finite.html" class="external-link">infinite</a></code> values or zeros.</p>
     </div>
 
-    <div class="ref-usage section level2 sourceCode">
-    <h2>Usage</h2>
-    <pre class="sourceCode r"><code><span class="fu">replace_NA</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span>
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">replace_NA</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="fu">replace_Inf</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span>
 
@@ -64,10 +67,9 @@
 <span class="fu">replace_Inf</span><span class="op">(</span><span class="va">x</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>
 
 <span class="co"># S4 method for matrix</span>
-<span class="fu">replace_zero</span><span class="op">(</span><span class="va">x</span>, <span class="va">value</span><span class="op">)</span></code></pre>
+<span class="fu">replace_zero</span><span class="op">(</span><span class="va">x</span>, <span class="va">value</span><span class="op">)</span></code></pre></div>
     </div>
 
-    <div id="ref-sections">
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
@@ -86,11 +88,10 @@
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>N. Frerebeau</p>
     </div>
-    </div>
 
-    <div id="examples">
-    <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create a count data matrix</span></span>
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create a count data matrix</span></span>
 <span class="r-in"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="CountMatrix-class.html">CountMatrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">25</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">5</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">k</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">25</span>, <span class="fl">3</span>, <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-in"></span>
@@ -100,24 +101,24 @@
 <span class="r-in"><span class="fu"><a href="remove.html">remove_zero</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 3 rows were removed:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> * row1 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row2 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row4 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row3 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row5 (n=1)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 2 x 5&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    6    1    2    2    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5    7    1    7    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    7    2    3    4    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    6    1    6    4   10</span>
 <span class="r-in"><span class="co">## Remove column with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="remove.html">remove_zero</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 2 columns were removed:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col2 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col3 (n=2)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col1 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col2 (n=2)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 5 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1    2    4    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2    1    5   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    6    2    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4    6   10   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5    7    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      col3 col4 col5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1    5    2    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    3    4    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3    8    9    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    6    4   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5    6    6    1</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Add NA</span></span>
 <span class="r-in"><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span>
@@ -125,45 +126,36 @@
 <span class="r-in"><span class="fu"><a href="remove.html">remove_NA</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 3 rows were removed:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> * row1 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row2 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * row4 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row3 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * row5 (n=1)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 2 x 5&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col2 col3 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    6    1    2    2    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5    7    1    7    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    7    2    3    4    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    6    1    6    4   10</span>
 <span class="r-in"><span class="co">## Remove column with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="remove.html">remove_NA</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 2 columns were removed:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col2 (n=1)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> * col3 (n=2)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col1 (n=1)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> * col2 (n=2)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 5 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      col1 col4 col5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1    2    4    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2    1    5   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3    6    2    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4    6   10   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5    7    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      col3 col4 col5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1    5    2    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2    3    4    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3    8    9    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4    6    4   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5    6    6    1</span>
 </code></pre></div>
     </div>
-  </div>
-  <div class="col-md-3" id="pkgdown-sidebar">
-    <nav id="toc"><h2>On this page</h2>
-    </nav></div>
-</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">
-<p>
-  arkhe is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=arkhe" class="external-link">tesselle.org</a>.
-</p>
+<p>arkhe is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=arkhe" class="external-link">tesselle.org</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p>
-  </p><p>Developed by Nicolas Frerebeau.</p>
-
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
-
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
     </footer></div>
