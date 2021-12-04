@@ -2,13 +2,13 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    branches: [main, master]
+    branches: [main, gh-pages]
 
 name: rmarkdown
 
 jobs:
   rmarkdown:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -17,15 +17,13 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
 
       - uses: r-lib/actions/setup-r@v1
+        with:
+          use-public-rspm: true
 
-      - name: Install rmarkdown
-        run: Rscript -e 'install.packages(c("rmarkdown", "metathis", "rjson"))'
+      - uses: r-lib/actions/setup-r-dependencies@v1
 
       - name: Build site
-        run: |
-          Rscript -e 'rmarkdown::render_site()'
-          cp CNAME _site/CNAME
-          cp .nojekyll _site/.nojekyll
+        run: Rscript -e 'rmarkdown::render_site()'
 
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4

@@ -8,7 +8,8 @@ navbar:
       href: https://tesselle.r-universe.dev
     - icon: fab fa-github
       href: https://github.com/tesselle/packages
-exclude: ["extra.html", "CNAME"]
+exclude: ["DESCRIPTION","extra.html"]
+include: ["CNAME", ".nojekyll"]
 output:
   rmarkdown::html_document:
     highlight: pygments
