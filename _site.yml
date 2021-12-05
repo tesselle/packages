@@ -1,20 +1,14 @@
 name: "tesselle"
-navbar:
-  title: "tesselle"
-  right:
-    - icon: fas fa-home
-      href: https://www.tesselle.org
-    - icon: fas fa-download
-      href: https://tesselle.r-universe.dev
-    - icon: fab fa-github
-      href: https://github.com/tesselle/packages
 exclude: ["DESCRIPTION","extra.html"]
 include: ["CNAME", ".nojekyll"]
 output:
-  rmarkdown::html_document:
-    highlight: pygments
-    toc: false
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    navbar:
+      - { title: "Homepage", icon: "fa-home", href: "https://www.tesselle.org", align: right }
+      - { title: "R-universe", icon: "fa-download", href: "https://tesselle.r-universe.dev", align: right }
+    source_code: https://github.com/tesselle/packages
+    orientation: columns
+    vertical_layout: fill
     css: "packages.css"
     includes:
       in_header: extra.html

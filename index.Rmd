@@ -3,8 +3,6 @@ title: "R packages & archaeology"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
 metathis::meta() |>
   metathis::meta_description(
     "A collection of R packages for research and teaching in archaeology."
@@ -60,7 +58,15 @@ for (i in seq_along(url_pkg)) {
 writeLines(rjson::toJSON(sea), "search.json")
 ```
 
-[**tesselle**](https://www.tesselle.org/) is a collection of [R](https://www.r-project.org/) packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology. The **tesselle** packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.
+Sidebar {.sidebar}
+--------------------------------------------------------------------------------
+
+[**tesselle**](https://www.tesselle.org/) is a collection of [R](https://www.r-project.org/) packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.
+
+The **tesselle** packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.
+
+Column
+--------------------------------------------------------------------------------
 
 <form role="search">
 <div class="form-group">
@@ -69,9 +75,9 @@ writeLines(rjson::toJSON(sea), "search.json")
 </div>
 </form>
 
----
+### Read the documentation
 
-```{r}
+```{r table}
 url_doc <- "<a href=\"%s\" title=\"Read the doc\">%s</a>"
 url_badge_version <- "<img src=\"http://www.r-pkg.org/badges/version/%s\">"
 url_badge_status <- "<img src=\"https://cranchecks.info/badges/worst/%s\">"
