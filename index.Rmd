@@ -61,7 +61,7 @@ az <- order(pkg$Package)
 info <- pkg[az, c("Package", "Version", "Depends", "License")]
 ```
 
-Sidebar {.sidebar}
+tesselle {.sidebar}
 --------------------------------------------------------------------------------
 
 [**tesselle**](https://www.tesselle.org/) is a collection of [R](https://www.r-project.org/) packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.
@@ -131,4 +131,52 @@ knitr::kable(
   col.names = c("Package", "OK", "Note", "Warning", "Error", "Fail"),
   escape = FALSE
 )
+```
+
+Column {data-width=350}
+--------------------------------------------------------------------------------
+
+### CRAN check
+
+```{r check}
+check <- colSums(status_table[, -c(1, 2)])
+worst <- max(which(check > 0))
+cap <- c("OK", "Note", "Warning", "Error", "Fail")
+col <- c("success", "info", "warning", "danger", "danger")
+flexdashboard::valueBox(cap[worst], icon = "fab fa-r-project", 
+                        href = "#cran-check-status", color = col[worst])
+```
+
+### Issues
+
+```{r issues}
+issues <- vapply(
+  X = info$Package,
+  FUN = function(x) {
+    api <- sprintf("https://api.github.com/repos/tesselle/%s/issues", x)
+    doc <- try(rjson::fromJSON(file = api), silent = TRUE)
+    if (inherits(doc, "try-error")) return(0)
+    length(doc)
+  },
+  FUN.VALUE = numeric(1)
+)
+flexdashboard::valueBox(sum(issues), icon = "fab fa-github", href = NULL, 
+                        color = ifelse(sum(issues) > 0, "warning", "primary"))
+```
+
+### Pull requests
+
+```{r pulls}
+pulls <- vapply(
+  X = info$Package,
+  FUN = function(x) {
+    api <- sprintf("https://api.github.com/repos/tesselle/%s/pulls", x)
+    doc <- try(rjson::fromJSON(file = api), silent = TRUE)
+    if (inherits(doc, "try-error")) return(0)
+    length(doc)
+  },
+  FUN.VALUE = numeric(1)
+)
+flexdashboard::valueBox(sum(pulls), icon = "fab fa-github", href = NULL, 
+                        color = ifelse(sum(pulls) > 0, "warning", "primary"))
 ```
