@@ -56,6 +56,9 @@ for (i in seq_along(url_pkg)) {
   }
 }
 writeLines(rjson::toJSON(sea), "search.json")
+
+az <- order(pkg$Package)
+info <- pkg[az, c("Package", "Version", "Depends", "License")]
 ```
 
 Sidebar {.sidebar}
@@ -65,7 +68,7 @@ Sidebar {.sidebar}
 
 The **tesselle** packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.
 
-Column
+Column {.tabset}
 --------------------------------------------------------------------------------
 
 <form role="search">
@@ -77,28 +80,55 @@ Column
 
 ### Read the documentation
 
-```{r table}
-url_doc <- "<a href=\"%s\" title=\"Read the doc\">%s</a>"
-url_badge_version <- "<img src=\"http://www.r-pkg.org/badges/version/%s\">"
-url_badge_status <- "<img src=\"https://cranchecks.info/badges/worst/%s\">"
-url_badge_universe <- "<img src=\"https://tesselle.r-universe.dev/badges/%s\">"
+```{r doc}
+url_doc <- "<a href=\"%s\" title=\"Read the doc of %s (stable)\">%s</a>"
+url_dev <- "<a href=\"%s/dev\" title=\"Read the doc of %s (dev)\">%s</a>"
 
-az <- order(pkg$Package)
-info <- pkg[az, c("Package", "Version", "Depends", "License")]
-cran_version <- sprintf(url_badge_version, info$Package)
-cran_status <- sprintf(url_badge_status, info$Package)
-universe_version <- sprintf(url_badge_universe, info$Package)
+version_stable <- sub(".9[0-9]{3}", "", info$Version)
+version_stable[version_stable == "0.0.0"] <- "no stable release"
+link_doc <- sprintf(url_doc, url_pkg[az], info$Package, version_stable)
+link_dev <- sprintf(url_dev, url_pkg[az], info$Package, info$Version)
 
 data <- data.frame(
-  Package = sprintf(url_doc, url_pkg[az], info$Package),
-  version = cran_version,
-  status = cran_status,
-  universe = universe_version
+  Package = info$Package,
+  Stable = link_doc,
+  Development = link_dev
 )
 knitr::kable(
   x = data, 
+  row.names = FALSE,
+  escape = FALSE
+)
+```
+
+### CRAN check status
+
+```{r status}
+az <- order(pkg$Package)
+info <- pkg[az, c("Package", "Version", "Depends", "License")]
+
+## Get CRAN status
+status <- lapply(
+  X = info$Package,
+  FUN = function(x) {
+    api <- sprintf("https://cranchecks.info/pkgs/%s", x)
+    doc <- try(rjson::fromJSON(file = api), silent = TRUE)
+    if (inherits(doc, "try-error")) return(NULL)
+    
+    url <- doc$data$url
+    chk <- doc$data$summary
+    
+    url_chk <- "<a href=\"%s\" title=\"CRAN check results for %s\">%s</a>"
+    link_chk <- sprintf(url_chk, url, x, x)
+    cbind.data.frame(link_chk, chk)
+  }
+)
+status_table <- do.call(rbind, status)
+
+knitr::kable(
+  x = status_table[, -2], 
   row.names = FALSE, 
-  col.names = c("Package", "CRAN version", "CRAN status", "R-universe"),
+  col.names = c("Package", "OK", "Note", "Warning", "Error", "Fail"),
   escape = FALSE
 )
 ```
