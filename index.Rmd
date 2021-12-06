@@ -68,6 +68,8 @@ tesselle {.sidebar}
 
 The **tesselle** packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.
 
+Last update: `r Sys.Date()`.
+
 Column {.tabset}
 --------------------------------------------------------------------------------
 
