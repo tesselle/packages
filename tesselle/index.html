@@ -99,7 +99,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>The <a href="https://www.tesselle.org/" class="external-link">tesselle</a> suite is a collection of packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology. The tesselle packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages. These packages can be used to explore and analyze common data types in archaeology: count data, compositional data and chronological data..</p>
+<p>The <a href="https://www.tesselle.org/" class="external-link">tesselle</a> suite is a collection of packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology. The tesselle packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages. These packages can be used to explore and analyze common data types in archaeology: <a href="https://packages.tesselle.org/tabula/" class="external-link">count data</a>, <a href="https://packages.tesselle.org/nexus/" class="external-link">compositional data</a> and <a href="https://packages.tesselle.org/kairos/" class="external-link">chronological data</a>.</p>
 <p>The <strong>tesselle</strong> package is designed to make it easy to install and load key packages from the tesselle suite in a single step.</p>
 </div>
 <div class="section level2">
@@ -116,11 +116,14 @@
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p><code><a href="https://github.com/tesselle/tesselle" class="external-link">library(tesselle)</a></code> will load the core tesselle packages:</p>
+<p><code><a href="https://github.com/tesselle/tesselle" class="external-link">library(tesselle)</a></code> will load the core packages:</p>
 <ul>
-<li><a href="https://packages.tesselle.org/tabula" class="external-link"><strong>tabula</strong></a></li>
-<li><a href="https://packages.tesselle.org/kairos" class="external-link"><strong>kairos</strong></a></li>
-<li><a href="https://packages.tesselle.org/khroma" class="external-link"><strong>khroma</strong></a></li>
+<li>
+<a href="https://packages.tesselle.org/tabula/" class="external-link"><strong>tabula</strong></a>: analysis, seriation and visualization of archaeological count data;</li>
+<li>
+<a href="https://packages.tesselle.org/kairos/" class="external-link"><strong>kairos</strong></a>: analysis of chronological patterns from archaeological count data;</li>
+<li>
+<a href="https://packages.tesselle.org/khroma/" class="external-link"><strong>khroma</strong></a>: colour schemes for scientific data visualization.</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tesselle/tesselle" class="external-link">tesselle</a></span><span class="op">)</span>
@@ -178,7 +181,7 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/tesselle/tesselle/actions" class="external-link"><img src="https://github.com/tesselle/tesselle/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://codecov.io/gh/tesselle/tesselle" class="external-link"><img src="https://codecov.io/gh/tesselle/tesselle/branch/main/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://app.codecov.io/gh/tesselle/tesselle" class="external-link"><img src="https://codecov.io/gh/tesselle/tesselle/branch/main/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://www.codefactor.io/repository/github/tesselle/tesselle/overview/main" class="external-link"><img src="https://www.codefactor.io/repository/github/tesselle/tesselle/badge/main" alt="CodeFactor"></a></li>
 </ul>
 </div>
