@@ -164,17 +164,15 @@ Paris: Dunod, 2006.</p>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span> <span class="co"># numeric</span></span>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
 <span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         min        mean         max       lower       upper         Q25 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.84511897 -0.19961099  0.39177658 -0.24090810 -0.15831388 -0.35729322 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         Q75 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.05160461 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        min       mean        max      lower      upper        Q25        Q75 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.5513971 -0.2265232  0.1135029 -0.2539695 -0.1990769 -0.3070494 -0.1453175 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Sample observations from a multinomial distribution</span></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># integer</span></span>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      min     mean      max    lower    upper      Q25      Q75 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45.00000 48.29000 52.00000 47.98391 48.59609 47.37500 49.50000 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47.50000 52.24000 55.50000 51.92422 52.55578 51.00000 53.12500 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Partial bootstrap on CA</span></span>
 <span class="r-in"><span class="co">## Data from Lebart et al. 2006, p. 170-172</span></span>
@@ -203,483 +201,483 @@ Paris: Dunod, 2006.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5077013 -0.15444644  0.02477267</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.3043472  0.02187363 -0.01661733</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1146520  0.26366429  0.01874729</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5135586 -0.09005884 -0.02502936</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4968409 -0.04052014 -0.03448478</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2801690  0.20991548 -0.08570937</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1915258  0.47303899  0.05672297</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6681489 -0.04706335  0.09370971</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5233264 -0.04205119  0.04260241</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2211525  0.27793694  0.01701262</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1880552  0.40626553 -0.02499597</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6095548 -0.04685637  0.01916072</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4266518 -0.08965565  0.01612008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1342900  0.14072659 -0.18957888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1902645  0.41381118 -0.02292729</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5993245 -0.05458878 -0.00108376</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.48407204 -0.09493717  0.11488649</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.27791491  0.13956514 -0.10575707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.04487157  0.38601303  0.09557824</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.47635992 -0.07787599 -0.02560302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.50527923 -0.10880017  0.05160920</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.28601734  0.16528556 -0.21062051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.09873293  0.41035293  0.24913979</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.60452358 -0.01664752  0.02504948</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5423483 -0.09668502  0.03506874</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1317872  0.05966462 -0.11620343</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2857121  0.11032212  0.05290112</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5996933 -0.15451531  0.04228445</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4954443 -0.06264414  0.01338949</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2743768  0.05372142 -0.16906055</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2201216  0.43043519  0.27186302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4737709 -0.06126353  0.06875306</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5074126 -0.170960785  0.02708741</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1613490  0.002735191 -0.19741369</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1788392  0.290978234  0.11170104</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5353949 -0.068550919  0.03079907</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4785781 -0.22411964  0.02433008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1187314  0.27249073 -0.03024807</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1164296  0.43053511  0.18204483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6291912 -0.09128479  0.02233978</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 6</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4663073 -0.004889912 -0.09019426</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1590119 -0.019755819 -0.16533978</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2968888  0.323481874  0.16527662</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6744911 -0.164495077  0.02861369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5078252 -0.04102762  0.06874547</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1230552  0.09780219 -0.11043461</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1671452  0.60015320  0.56604576</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6870312  0.02339697  0.11180070</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5168126 -0.05634775  0.01915216</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2110392  0.12394881 -0.13857843</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.4354343  0.21877365  0.29541895</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5770701 -0.11042990 -0.01099194</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.51189928 -0.04501766  0.028384753</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.31921420  0.22260054 -0.066571295</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.05672785  0.28218536 -0.283326965</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.54927232 -0.07269472  0.003922112</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 8</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.420573713 -0.13809023 -0.06317438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.098357747  0.08499718 -0.09556259</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.003120034  0.15019084  0.08258815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.467084315 -0.09098305 -0.02086035</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5383825 -0.20287009  0.073645619</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.3656142  0.14344170 -0.117080228</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.3113755  0.39336768 -0.082046866</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5532826 -0.09154363  0.005212133</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 9</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5252547 -0.2078016  0.08444685</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1127726  0.1757376 -0.21108320</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1235912  0.4937517  0.21990780</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6160889 -0.1261826  0.01768220</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4886783 -0.001307766 -0.07175611</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1442102  0.296500137 -0.21460999</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1907226  0.557960934  0.10661186</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5855256 -0.076942869 -0.03069651</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5137350 -0.14643624 -0.03334595</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1864346  0.20492077 -0.34682949</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1659575  0.21236664 -0.01140338</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6022988 -0.07411281 -0.05924919</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5143124 -0.094541388  0.13561883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2841814  0.249033864 -0.12938756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1025561  0.502291077  0.16009193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4443887 -0.004232189 -0.02911958</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4706670 -0.05992366 -0.02119276</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2305428 -0.01348830  0.10364316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.3558562  0.36105602  0.07518865</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5855862 -0.01374382  0.03723084</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.55231194 -0.2581747  0.11602764</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.17238176  0.1742198 -0.25507409</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.05766812  0.1005296 -0.18748527</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.68315232 -0.1091198  0.06008005</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.52586908 -0.09719696 -0.063184434</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.17779283  0.19961460 -0.220608117</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.05578711  0.34242607 -0.031109698</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.59690231 -0.01735807 -0.001988831</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4545648  0.00751877 -0.06010826</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2357174  0.27527322 -0.16388842</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.0382763  0.38303264  0.07677478</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6014437 -0.12646372  0.03458661</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 13</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5039301 -0.1569923 -0.12206735</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2702839  0.1804447 -0.13735589</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1104154  0.1365295 -0.01347761</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5402320 -0.1100214  0.05499144</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2            F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4700825 -0.08142334  0.0049320566</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2515297  0.14386093 -0.0360870827</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1145290  0.22828078  0.2511933718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5419223 -0.10750104 -0.0006808738</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5346684 -0.07632751  0.078949391</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1663025  0.15264233 -0.073088020</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.3624578  0.18097160 -0.001523614</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5964919 -0.06253570  0.035286216</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5343218 -0.14652139  0.046857581</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1961443  0.05525988  0.018576513</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1642068  0.29359199  0.006815422</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5169950 -0.09129082 -0.046587497</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 15</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4966095 -0.09956173 -0.041280411</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2003535  0.20653508 -0.137554284</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2894692  0.53506333  0.348165869</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4350211 -0.02839869 -0.004723729</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5181599 -0.2082055  0.125672234</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2394027  0.1765941 -0.149003801</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1664211  0.1678250  0.002383024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6369644 -0.1733670  0.031740956</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1         F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.52007862 -0.1162012  0.009481053</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.09511963  0.1953476 -0.216958799</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.09294555  0.2286998 -0.156679449</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.65026039 -0.0544436 -0.033495822</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4995219 -0.018118054  0.06886520</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.3871333  0.168166619 -0.09159875</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.0915638  0.271941656  0.16359099</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5566087  0.008611832  0.03284469</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 17</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.40444396  0.04282525 -0.03802769</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.21727840  0.13374810  0.02533140</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.07780134  0.48587483  0.09530891</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.57321528 -0.07363262 -0.06331367</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2         F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.49560397 -0.08958042 0.02124663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.21605482  0.14936315 0.01398777</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.03792371  0.40342426 0.28317595</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.66280894 -0.07338752 0.04194923</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1            F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4521726  0.0003206244  0.01383999</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.3417519  0.3646272975  0.03704767</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2355603  0.2319760832  0.11690528</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4329349 -0.0107685077 -0.02162404</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5063867 -0.11129252  0.06136288</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1786158  0.25948802 -0.16069921</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2096213  0.35650565  0.03092348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5962728 -0.03636342  0.03077159</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 19</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.48434379 -0.08546717  0.02243814</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.08729659  0.06043057 -0.24817311</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.17402566  0.55482138  0.39181090</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.49535184 -0.07943782  0.04994829</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4722995 -0.10358887 -0.03592057</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2457857  0.19896146 -0.06533668</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2707471  0.37943749 -0.05915964</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.3037658  0.03886311 -0.16988001</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.49444367 -0.08031872  0.14384556</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.28388511 -0.11552400  0.03324864</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.09475733  0.30720989  0.07141586</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.53671084 -0.14551089 -0.01464892</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.3968674 -0.02113082 -0.10163432</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2664539  0.22388959 -0.36791876</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1137417  0.30431192  0.01229836</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5330735 -0.02388479  0.08693941</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5410880 -0.20139236  0.07585410</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2977527  0.04756503 -0.08215475</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1656023  0.24747921 -0.13798584</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5959872 -0.14209630 -0.01927764</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5142415 -0.20147680 -0.03580960</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1614675  0.28064614 -0.13868540</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1329746  0.43497052  0.07973258</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4984402 -0.09704152 -0.07472603</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.47594603 -0.09335223  0.05427500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.24432113  0.05419775 -0.15347616</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.07310867  0.29648895  0.15566038</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.45591984 -0.07346889 -0.06684326</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.50199731 -0.11941160  0.012276199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.32135814 -0.08652371 -0.005533253</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.09343504  0.24511623 -0.012088451</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.48233881 -0.10897452  0.083188745</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 23</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4977164 -0.001910996 -0.01704522</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2459982  0.037532262 -0.27915807</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1135984  0.590575781  0.15496350</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5022353 -0.041858259 -0.05392309</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5063608 -0.20189570  0.01815830</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1990184  0.30297308 -0.04461261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1368976  0.35598442  0.20222171</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4367196 -0.07462164  0.04315444</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 24</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4737617 -0.07031904  0.11316459</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1872094  0.18034582 -0.02272769</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1729801  0.28231804  0.19784807</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6222235 -0.14560266 -0.06660004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4656598 -0.1464057 -0.00686596</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2164907  0.2731396 -0.06514263</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1586176  0.2205339 -0.06825168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6612424 -0.1110803  0.04296612</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 25</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5151358  0.03618042  0.01661705</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2087467 -0.02199052 -0.06480957</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2220917  0.23443398 -0.05813428</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5130207 -0.11800949 -0.04662323</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.49175020 -0.03554677 -0.111346975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.10275958  0.17709523 -0.199828225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert     -0.01271032  0.25078139 -0.003267128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.55077929 -0.05778111 -0.103824950</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 26</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4964846 -0.05285162 -0.01548429</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.3497546  0.04857006 -0.18999331</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1098688  0.53679239  0.21800038</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5281162 -0.04154744  0.03150356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.49726317 -0.11633750  0.003577148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.15663524  0.23494492 -0.087567341</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert     -0.04337431  0.36987134  0.040765420</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.58803058 -0.02735104  0.034038865</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 27</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4665882 -0.03922937 -0.01920277</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2508332 -0.07100091 -0.08222183</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1232252  0.33428002 -0.12895484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6180239 -0.07837896  0.07795129</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.45476114 -0.06607246 -0.094070271</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.07745407  0.24723342 -0.001522229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.18696197  0.19056501  0.035341403</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.62871984 -0.07295266 -0.050086284</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 28</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.4575018 -0.1013067  0.05673312</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1729085  0.1283944 -0.19599611</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1971931  0.2564488  0.14172112</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.6685862 -0.1286810  0.05508366</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.55666875 -0.1549199  0.02823233</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.06938401  0.2769595 -0.26627861</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.27283738  0.2991760  0.27496736</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.47951271 -0.1061164 -0.05738948</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 29</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5119817 -0.015848906  0.09245812</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2257418  0.001038964 -0.24875962</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.2517815  0.340129903 -0.03098272</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5099794 -0.061598380 -0.05378348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5389254 -0.27419032 -0.02987881</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.2258271  0.03922894 -0.12298783</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1229234  0.32547954  0.11642078</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.4931448 -0.06385428 -0.04511109</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 30</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1         F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.45582381 -0.1145110 -0.04635153</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.39340576  0.1223885 -0.07278946</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.01538259  0.4267457  0.23028497</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.43324092 -0.1113363 -0.07498559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> marron   -0.5312066 -0.1001550  0.02764545</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> noisette -0.1679850  0.1533494 -0.08249576</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vert      0.1616451  0.3717303  0.24085748</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bleu      0.5199715 -0.1395455  0.10521657</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span class="fu"><a href="mutator.html">get_replications</a></span><span class="op">(</span><span class="va">Y</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4949946 -0.11799923 -0.05687954</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1165184  0.04709251 -0.03679084</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1004513  0.31666165  0.04500496</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8410349 -0.08659199  0.02122871</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.59269891 -0.27204877  0.007852403</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.27281028  0.04681004 -0.002172651</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.07894285  0.31193899  0.098088424</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.91046920 -0.10867858  0.052481630</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.6473556 -0.30670379  0.05887947</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2276625  0.01760299  0.02717809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.2165018  0.24644217 -0.01008596</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8893920 -0.07384002  0.01107583</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.59663951 -0.31518789  0.069082406</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.16170474  0.06547917 -0.020619830</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.09568452  0.27202671  0.169957965</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.73789742 -0.08217788  0.003462903</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5238992 -0.25198041  0.08374839</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1208101 -0.01873539 -0.03595609</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.2038157  0.19757300  0.14422817</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8215105 -0.18977826  0.01042247</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.6722810 -0.27229639  0.14893530</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2670570 -0.06685766 -0.07957773</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1326102  0.16561042  0.15924910</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8750771 -0.20363343  0.01772279</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4267002 -0.22736053  0.036894553</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1617761 -0.03848368 -0.103324485</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1912738  0.06606381 -0.001953791</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8968416 -0.09262391 -0.075499116</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.44080207 -0.14841907 -0.01139760</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.21371308  0.07253944 -0.09943133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.03550838  0.41751186  0.30373907</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.80193880  0.07894975  0.11453392</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.44397545 -0.19146791  0.099344864</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.07780453  0.05773759 -0.001031806</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.09412326  0.32362843  0.316105262</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.83040541 -0.01807367  0.045427439</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.56746420 -0.2535260  0.11515772</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.16416613  0.0387354 -0.08483334</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.03139334  0.5370875 -0.05586640</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.76855654 -0.1082736 -0.05868684</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 6</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4752906 -0.15504221 -0.01235788</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2802964  0.01054158 -0.01480371</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.2026007  0.36025134  0.35012729</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8134629  0.04276305  0.03977342</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5759453 -0.15372011  0.06638289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1806496 -0.05234133 -0.15630344</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.0620854  0.32812748  0.25824293</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8783074 -0.11191292 -0.06920610</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4724611 -0.15771126  0.07626157</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1591382 -0.01751818 -0.09689354</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1575830  0.36453867  0.19847412</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8428983  0.13353158  0.15202549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.44163968 -0.2550011  0.009631931</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.03437326  0.1489022  0.085702965</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.10025730  0.1704124 -0.017817128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.96966902 -0.1823600  0.048389341</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 8</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.38532718 -0.11436410  0.12940828</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.12536907 -0.01455875 -0.00223762</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.02280047  0.28708341  0.06373170</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.70700750 -0.09612812 -0.06208020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.54753857 -0.3425506 -0.01580713</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.07088389  0.0990347  0.00787293</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.02587502  0.3516112  0.11746743</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.90995830 -0.0568574  0.16221455</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 9</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5889697 -0.30281370  0.17017502</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1932057  0.08117817 -0.08190996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.0942654  0.54406224  0.27773199</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.7909632 -0.04626449 -0.02620249</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5273692 -0.39199947  0.10806708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1626601 -0.02809348 -0.06711148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1358804  0.33392208  0.11022104</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.9157005 -0.14530349 -0.03999555</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2         F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.62084123 -0.30362712 0.26134388</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.15975851  0.00196655 0.01499513</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.09917993  0.22532265 0.19765794</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.89074783 -0.09395719 0.06827573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5784176 -0.25454316  0.06633064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1106519  0.07867519 -0.11933827</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1275282  0.35497775  0.10121385</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8299634 -0.07856896  0.05536390</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.58548687 -0.19309606 -0.10421006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.19425257 -0.04894135  0.06894142</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.04469869  0.22766038  0.13079459</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.79640643  0.01857760  0.06674917</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1         F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.6194985 -0.2495996  0.14073623</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2114464  0.1975855 -0.18902804</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1375554  0.1407045 -0.17317934</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8341036 -0.1324184 -0.08543657</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2         F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5921501 -0.22934421 0.17999390</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1610455  0.10671596 0.05370402</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.0117453  0.35615839 0.19251264</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.9110653 -0.06622843 0.01823544</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4116441 -0.22430509  0.07717900</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2201247  0.02831498 -0.08138473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1894939  0.30188537  0.01618851</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8947725 -0.20746209 -0.02547889</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 13</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2         F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.3348331 -0.16193530 0.14176400</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1330726  0.03808057 0.06100826</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.1154433  0.30440809 0.03023577</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.9253079 -0.10235249 0.08596753</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4046455 -0.04333794  0.03514153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1377127  0.02174883 -0.09827104</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1241763  0.40782474  0.04116631</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8197239 -0.05931764  0.03160987</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5693502 -0.24839994  0.059828287</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1734614  0.04427922 -0.037146761</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1715697  0.13856991  0.007411331</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8426132  0.05759808  0.052010723</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.53234455 -0.18867796  0.005517542</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.09873327  0.02976044  0.024497595</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.14348834  0.33223669  0.084524031</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.83258143 -0.01170232 -0.005895072</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 15</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.46793899 -0.30660989  0.07402599</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.14151525 -0.09302593 -0.07820910</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.02509038  0.39030894  0.17125802</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.83997687 -0.03128584  0.04899991</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5163777 -0.24237766  0.10358194</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1564821  0.08166781 -0.11748283</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.2267366  0.24557530 -0.05278090</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8494555 -0.14158647  0.01553918</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.6416671 -0.28069289  0.19918676</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1232680  0.09472380  0.02494771</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1139045  0.18410670  0.06609347</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8745548 -0.09738592 -0.03952058</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.48318379 -0.04148297 -0.01736949</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.09889756  0.06885155 -0.13361032</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.04492404  0.22275668  0.02967480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.94854826 -0.15808658  0.08831282</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 17</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4730791 -0.07746198 -0.14271977</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1030794  0.05395556 -0.02376196</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1759788  0.44983902  0.10121084</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.7849645 -0.10628298 -0.03207839</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5636659 -0.08611450  0.07687446</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2370838  0.02937827 -0.01580499</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1134973  0.47490608  0.15868144</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8317807 -0.08237761 -0.01346469</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4135009 -0.144073655  0.07071800</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.0755811  0.003920382 -0.01083378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1085759  0.292611163 -0.06020973</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8402464 -0.002888473  0.19870624</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.59922543 -0.32243102  0.123487752</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.16292227  0.03906659 -0.084685748</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.08872457  0.21934736  0.007324563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.85286612 -0.10605186 -0.000924499</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 19</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.36082722 -0.25386199  0.08226668</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.10560604 -0.01673544 -0.12547072</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.05624272  0.40372682  0.37939315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.81325831 -0.05608731 -0.04658923</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.56795655 -0.276891586 -0.04356517</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.02607463 -0.008921548 -0.04491184</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.05985666  0.313750345 -0.04866088</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.74113333  0.048811590  0.08068146</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.43129922 -0.09484441 -0.11123527</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.05174682  0.03520513 -0.03100665</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.23271216  0.22729754  0.20964121</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.83479021 -0.12175167 -0.02616464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.40621518 -0.23812614  0.11264511</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.23377642  0.08431617 -0.11761991</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.02862494  0.16997076  0.09701370</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.80210101 -0.15907429  0.07108569</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5486370 -0.21266126 -0.05724288</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1275960  0.06959664 -0.09614576</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.2024761  0.22361525 -0.06716605</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8911316 -0.15569177 -0.01701404</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.57188450 -0.32359253  0.161653144</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.15040018  0.03231398 -0.005517225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.07578767  0.59690153  0.096270049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.80768318 -0.03244748  0.024497874</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2            F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4930024 -0.11750752 -3.242286e-05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1257561  0.03573156 -1.455819e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1804902  0.27903495  1.304158e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.7654857 -0.07864320 -2.705580e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.42588402 -0.12637937 -0.08040199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.20720144  0.03686945  0.01005777</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.07575059  0.16708763  0.12349757</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.83299148 -0.09070656  0.01060690</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 23</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2            F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.50778804 -0.27544163 -0.0006641823</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.10309972 -0.02521512 -0.0669448434</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.07933859  0.26065831  0.3604109980</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.92692669 -0.16261839 -0.0193943489</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.429003553 -0.22855922  0.12555614</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.144193729  0.04396478 -0.07019129</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.008980427  0.50144763 -0.02727208</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.784751572 -0.01336707  0.04307175</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 24</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5162064 -0.09317246  0.04278714</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1050715  0.07939237 -0.11123186</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.3009190  0.46372135  0.04618542</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.7767773 -0.01086928  0.01354785</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5295646 -0.21008775  0.11278127</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1833138  0.13556901  0.02086187</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1077644  0.37929143 -0.08297452</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8113060 -0.06337545  0.07058767</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 25</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.37937884 -0.14401397 -0.10615495</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.05332767  0.01978268 -0.02369265</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.23777978  0.12077154  0.13535762</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.90367178 -0.03977063 -0.02221691</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5369188 -0.14360603  0.23964367</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1428582  0.02511217  0.07650986</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1415312  0.33963835  0.21323621</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8712755 -0.07346265 -0.03620212</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 26</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.44078178 -0.194183299 -0.02711336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.11602921  0.005288757 -0.05862436</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.04165565  0.338226461  0.30759547</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.94598609 -0.173670615  0.05589874</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5490216 -0.25372342  0.12327074</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1523089 -0.02117028 -0.04869329</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.0189157  0.20330619 -0.03596923</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8828647 -0.24208431 -0.11218509</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 27</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4306775658 -0.16819006 -0.113843346</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1301460822  0.09480554  0.049946913</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.0006719645  0.13761186  0.200185964</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8796065857 -0.14093948 -0.008009609</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1            F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5734908 -0.1307679903  0.05285589</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.2097141  0.0206665511 -0.07507213</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1963413  0.3805453640 -0.24167375</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.7414199  0.0008124745 -0.09777576</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 28</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1           F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4926520 -0.238863254  0.13196982</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1788415  0.001029153 -0.06440155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1381842  0.197921453  0.16331027</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8278239 -0.142428209  0.01404124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2          F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.5050929 -0.31971389  0.23883374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1423565 -0.01289670 -0.16935324</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1470608  0.40217121  0.07552330</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8297251  0.04805687 -0.02872387</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 29</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2          F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.47367291 -0.17842746 -0.08174050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.02050997  0.18956385 -0.08044335</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.11377782  0.28001910  0.31913109</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.84072733  0.08044839  0.08348823</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1           F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.51606001 -0.196506577  0.055839675</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.07723371 -0.006013988 -0.041895825</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux     0.14301315  0.460882233  0.148864353</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.85722496 -0.087894418 -0.001393031</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , 30</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 F1          F2           F3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.4396568 -0.12064350 -0.009648215</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.1463032 -0.02039915 -0.059829519</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.1305735  0.51685354  0.147466214</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.8320067 -0.18305545  0.087014106</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  F1          F2           F3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> brun    -0.39199683 -0.20562793  0.082352500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> chatain -0.22404812  0.04025555 -0.050761391</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> roux    -0.08660588  0.41098261  0.166909451</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blond    0.84403054  0.01123001  0.004460793</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span class="co"># }</span></span>
 <span class="r-in"></span>
