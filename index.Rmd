@@ -122,13 +122,13 @@ status <- lapply(
     
     url_chk <- "<a href=\"%s\" title=\"CRAN check results for %s\">%s</a>"
     link_chk <- sprintf(url_chk, url, x, x)
-    cbind.data.frame(link_chk, chk)
+    cbind.data.frame(link = link_chk, package = x, url = url, chk)
   }
 )
 status_table <- do.call(rbind, status)
 
 knitr::kable(
-  x = status_table[, -2], 
+  x = status_table[, -c(2, 3, 4)], 
   row.names = FALSE, 
   col.names = c("Package", "OK", "Note", "Warning", "Error", "Fail"),
   escape = FALSE
@@ -138,47 +138,21 @@ knitr::kable(
 Column {data-width=350}
 --------------------------------------------------------------------------------
 
-### CRAN check
-
-```{r check}
-check <- colSums(status_table[, -c(1, 2)])
-worst <- max(which(check > 0))
-cap <- c("OK", "Note", "Warning", "Error", "Fail")
+```{r check, include=FALSE}
+cap <- c("OK", "note", "warning", "error", "fail")
 col <- c("success", "info", "warning", "danger", "danger")
-flexdashboard::valueBox(cap[worst], icon = "fab fa-r-project", 
-                        href = "#cran-check-status", color = col[worst])
-```
 
-### Issues
-
-```{r issues}
-issues <- vapply(
-  X = info$Package,
-  FUN = function(x) {
-    api <- sprintf("https://api.github.com/repos/tesselle/%s/issues", x)
-    doc <- try(rjson::fromJSON(file = api), silent = TRUE)
-    if (inherits(doc, "try-error")) return(0)
-    length(doc)
-  },
-  FUN.VALUE = numeric(1)
+worst <- apply(
+  X = status_table[, -c(1, 2, 3, 4)],
+  MARGIN = 1,
+  FUN = function(x) max(which(x > 0))
 )
-flexdashboard::valueBox(sum(issues), icon = "fab fa-github", href = NULL, 
-                        color = ifelse(sum(issues) > 0, "warning", "primary"))
+
+check <- vector(mode = "character", length = length(worst))
+for (i in seq_along(worst)) {
+  j <- worst[i]
+  check[[i]] <- knitr::knit_expand("_boxes.Rmd")
+}
 ```
 
-### Pull requests
-
-```{r pulls}
-pulls <- vapply(
-  X = info$Package,
-  FUN = function(x) {
-    api <- sprintf("https://api.github.com/repos/tesselle/%s/pulls", x)
-    doc <- try(rjson::fromJSON(file = api), silent = TRUE)
-    if (inherits(doc, "try-error")) return(0)
-    length(doc)
-  },
-  FUN.VALUE = numeric(1)
-)
-flexdashboard::valueBox(sum(pulls), icon = "fab fa-github", href = NULL, 
-                        color = ifelse(sum(pulls) > 0, "warning", "primary"))
-```
+`r paste(knitr::knit_child(text = paste(check, collapse = '\n\n')), collapse = "")`
