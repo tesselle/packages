@@ -135,6 +135,45 @@ knitr::kable(
 )
 ```
 
+### CRAN downloads
+
+```{r downloads-month, fig.width=7, fig.cap="CRAN downloads per month."}
+source("downloads.R") # Get RStudio CRAN mirror data
+
+downloads_month |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = month, y = adjusted_downloads, colour = package) +
+  ggplot2::geom_point() +
+  ggplot2::geom_line() +
+  ggplot2::facet_wrap(. ~ package, scales = "free_x") +
+  ggplot2::scale_y_continuous(name = "Downloads per month", limits = c(0, NA)) +
+  ggplot2::labs(caption = "RStudio CRAN mirror (adjusted)") +
+  ggplot2::theme_bw() +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, vjust = 1),
+    axis.title.x = ggplot2::element_blank(),
+    legend.position = "none"
+  ) +
+  khroma::scale_colour_bright()
+```
+
+```{r downloads-sum, eval=FALSE, fig.cap="Cumulative CRAN downloads per month."}
+downloads_month |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = month, y = total_downloads, colour = package) +
+  ggplot2::geom_point() +
+  ggplot2::geom_line() +
+  ggplot2::scale_y_continuous(name = "Cumulative downloads", 
+                              limits = c(0, NA)) +
+  ggplot2::labs(caption = "RStudio CRAN mirror (adjusted)") +
+  ggplot2::theme_bw() +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, vjust = 1),
+    axis.title.x = ggplot2::element_blank()
+  ) +
+  khroma::scale_colour_bright()
+```
+
 Column {data-width=350}
 --------------------------------------------------------------------------------
 
