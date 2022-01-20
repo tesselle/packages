@@ -65,7 +65,13 @@ Paul Tol (colorblind safe).</p>
 
 <span class="fu">scale_color_land</span><span class="op">(</span><span class="va">...</span>, lang <span class="op">=</span> <span class="st">"en"</span>, aesthetics <span class="op">=</span> <span class="st">"colour"</span><span class="op">)</span>
 
-<span class="fu">scale_fill_land</span><span class="op">(</span><span class="va">...</span>, lang <span class="op">=</span> <span class="st">"en"</span>, aesthetics <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></code></pre></div>
+<span class="fu">scale_fill_land</span><span class="op">(</span><span class="va">...</span>, lang <span class="op">=</span> <span class="st">"en"</span>, aesthetics <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span>
+
+<span class="fu">scale_edge_colour_land</span><span class="op">(</span><span class="va">...</span>, lang <span class="op">=</span> <span class="st">"en"</span><span class="op">)</span>
+
+<span class="fu">scale_edge_color_land</span><span class="op">(</span><span class="va">...</span>, lang <span class="op">=</span> <span class="st">"en"</span><span class="op">)</span>
+
+<span class="fu">scale_edge_fill_land</span><span class="op">(</span><span class="va">...</span>, lang <span class="op">=</span> <span class="st">"en"</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -75,7 +81,8 @@ Paul Tol (colorblind safe).</p>
 <dt>lang</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the language for the
 color names (see details). It must be one of "<code>en</code>" (english, the
-default) or "<code>fr</code>" (french).</p></dd>
+default), "<code>fr</code>" (french) or <code>NULL</code>. If not <code>NULL</code>, the values will be
+matched based on the color names.</p></dd>
 <dt>aesthetics</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string or vector of character
 strings listing the name(s) of the aesthetic(s) that this scale works with.</p></dd>
@@ -86,7 +93,7 @@ strings listing the name(s) of the aesthetic(s) that this scale works with.</p><
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Values will be matched based on the soil names.</p>
+    <p>Values will be matched based on the land classification names.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -102,8 +109,8 @@ URL: <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf" class="ext
 <p>Other qualitative colour schemes: 
 <code><a href="scale_soil.html">scale_colour_soil</a>()</code>,
 <code><a href="scale_stratigraphy.html">scale_colour_stratigraphy</a>()</code>,
-<code><a href="scale_okabeito_discrete.html">scale_okabeito_discrete</a></code>,
-<code><a href="scale_tol_discrete.html">scale_tol_discrete</a></code></p></div>
+<code><a href="scale_tol_discrete.html">scale_edge_colour_okabeito</a>()</code>,
+<code><a href="scale_okabeito_discrete.html">scale_okabeito_discrete</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
