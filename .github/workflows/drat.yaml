@@ -1,5 +1,4 @@
 # https://github.com/r-hyperspec/hySpc.chondro/blob/develop/.github/workflows/drat--insert-package.yaml
-
 on:
   workflow_call:
     inputs:
@@ -54,10 +53,6 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-r-dependencies@v1
-        with:
-          extra-packages: drat
-
       - name: Download package
         uses: actions/download-artifact@v2
         with:
@@ -77,6 +72,7 @@ jobs:
 
       - name: Insert package
         run: |
+          install.packages("drat")
           targz <- list.files(path = "build", pattern = "\\.tar\\.gz", full.names = TRUE)
           drat::insertPackage(file = targz, repodir = "tmp", action = "archive", location = "gh-pages")
         shell: Rscript {0}
