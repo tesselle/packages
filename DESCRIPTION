@@ -17,11 +17,14 @@ Imports:
     adjustedcranlogs,
     dplyr,
     flexdashboard,
+    ggraph,
     ggplot2,
     khroma,
     lubridate,
     metathis,
-    rjson
+    miniCRAN,
+    rjson,
+    tidygraph
 Suggests:
     knitr,
     rmarkdown
