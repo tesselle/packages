@@ -31,19 +31,21 @@
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
 </head>
 <body>
-    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.1</small>
 
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="active nav-item">
   <a class="nav-link" href="../articles/kairos.html">Get started</a>
@@ -74,15 +76,19 @@
 </li>
       </ul>
 </div>
+
+    
   </div>
-</nav><div class="container template-article" id="container">
+</nav><div class="container template-article">
+
+
+
 <script src="kairos_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
+  <main id="main"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Manual</h1>
                         <h4 data-toc-skip class="author">N. Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2021-11-06</h4>
+            <h4 data-toc-skip class="date">2022-03-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/kairos.Rmd" class="external-link"><code>vignettes/kairos.Rmd</code></a></small>
       <div class="d-none name"><code>kairos.Rmd</code></div>
@@ -346,12 +352,12 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 <span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span>
 <span class="co">#&gt;         min      mean  max      Q5     Q95</span>
-<span class="co">#&gt; LZ1105 1143 1167.6333 1192 1148.45 1188.10</span>
-<span class="co">#&gt; LZ1103 1077 1144.0000 1201 1097.05 1178.95</span>
-<span class="co">#&gt; LZ1100 1093 1159.5667 1229 1106.05 1204.25</span>
-<span class="co">#&gt; LZ1099 1089 1098.2333 1108 1089.00 1107.10</span>
-<span class="co">#&gt; LZ1097  914 1088.0333 1185 1005.35 1164.35</span>
-<span class="co">#&gt; LZ1096  726  812.6333 1024  726.00  906.45</span></code></pre></div>
+<span class="co">#&gt; LZ1105 1129 1169.4333 1201 1149.80 1192.10</span>
+<span class="co">#&gt; LZ1103 1073 1138.2000 1193 1085.90 1176.65</span>
+<span class="co">#&gt; LZ1100 1104 1163.0000 1225 1115.15 1213.40</span>
+<span class="co">#&gt; LZ1099 1089 1098.8966 1109 1092.80 1107.20</span>
+<span class="co">#&gt; LZ1097  911 1069.8667 1158  956.10 1149.45</span>
+<span class="co">#&gt; LZ1096  726  839.8333 1057  726.00  924.00</span></code></pre></div>
 </div>
 </div>
 <div class="section level2 unnumbered">
@@ -359,7 +365,7 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 </h2>
 <div id="refs" class="references">
 <div id="ref-bellanger2006">
-<p>Bellanger, L., Ph. Husi, and R. Tomassone. 2006. “Une Approche Statistique Pour La Datation de Contextes Archéologiques.” <em>Revue de Statistique Appliquée</em> 54 (2): 65–81. <a href="https://doi.org/10.1111/j.1475-4754.2006.00249.x" class="external-link">https://doi.org/10.1111/j.1475-4754.2006.00249.x</a>.</p>
+<p>Bellanger, L., Ph. Husi, and R. Tomassone. 2006. “Une approche statistique pour la datation de contextes archéologiques.” <em>Revue de statistique appliquée</em> 54 (2): 65–81. <a href="https://doi.org/10.1111/j.1475-4754.2006.00249.x" class="external-link">https://doi.org/10.1111/j.1475-4754.2006.00249.x</a>.</p>
 </div>
 <div id="ref-bellanger2012">
 <p>Bellanger, Lise, and Philippe Husi. 2012. “Statistical Tool for Dating and Interpreting Archaeological Contexts Using Pottery.” <em>Journal of Archaeological Science</em> 39 (4): 777–90. <a href="https://doi.org/10.1016/j.jas.2011.06.031" class="external-link">https://doi.org/10.1016/j.jas.2011.06.031</a>.</p>
@@ -390,29 +396,19 @@ t^A_i \sim \frac{x_{ij}}{x_{i \cdot}} \mathcal{N}(\widehat{t^E_j},\widehat{V_j}^
 </div>
 </div>
 </div>
-  </div>
- <div class="col-md-3" id="pkgdown-sidebar">
-        <nav id="toc"><h2>On this page</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-<p>
-  kairos is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=kairos" class="external-link">tesselle.org</a>.
-</p>
+<p>kairos is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=kairos" class="external-link">tesselle.org</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p>
-  </p>
-<p>Developed by Nicolas Frerebeau.</p>
-
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
-
+<p></p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
     </footer>
