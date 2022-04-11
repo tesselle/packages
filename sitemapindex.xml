@@ -4,6 +4,15 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/dimensio/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/tabula/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -23,14 +32,5 @@
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/kairos/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/dimensio/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
