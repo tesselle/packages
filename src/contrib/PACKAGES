@@ -55,3 +55,13 @@ Suggests: covr, folio, khroma, knitr, magrittr, rmarkdown, testthat (>=
 License: GPL-3
 MD5sum: bef7936265912fbd3068887130e833d3
 NeedsCompilation: no
+
+Package: tesselle
+Version: 1.0.0
+Depends: R (>= 3.3)
+Imports: arkhe (>= 0.4.0), dimensio (>= 0.2.2), folio (>= 1.0.0),
+        kairos (>= 1.0.0), khroma (>= 1.8.0), tabula (>= 1.6.1)
+Suggests: covr
+License: GPL (>= 3)
+MD5sum: 918f8eb2ec0203cf430631b88fb917dd
+NeedsCompilation: no
