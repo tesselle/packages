@@ -59,18 +59,26 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for DiversityIndex,missing</span>
-<span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for DiversityIndex</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html" class="external-link">autoplot</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
-<dd><p>A <code><a href="DiversityIndex.html">DiversityIndex</a></code> object to be plotted.</p></dd>
+<dd><p>A <a href="DiversityIndex.html">DiversityIndex</a> object to be plotted.</p></dd>
+<dt>...</dt>
+<dd><p>Currently not used.</p></dd>
 </dl></div>
     <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <ul><li><p><code><a href="https://ggplot2.tidyverse.org/reference/autoplot.html" class="external-link">autoplot()</a></code> returns a <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></code> object.</p></li>
+<li><p><code><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot()</a></code> is called it for its side-effects: it results in a graphic being
+displayed (invisibly returns <code>x</code>).</p></li>
+</ul></div>
+    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="heterogeneity-index.html">index_heterogeneity()</a></code>, <code><a href="heterogeneity-index.html">index_evenness()</a></code>, <code><a href="richness-index.html">index_richness()</a></code></p>
+    <div class="dont-index"><p><code><a href="heterogeneity.html">index_heterogeneity()</a></code>, <code><a href="heterogeneity.html">index_evenness()</a></code>, <code><a href="richness.html">index_richness()</a></code></p>
 <p>Other plot: 
 <code><a href="plot_bar.html">plot_bar</a></code>,
 <code><a href="plot_line.html">plot_line</a></code>,
@@ -91,12 +99,13 @@
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Assemblage diversity size comparison</span></span>
 <span class="r-in"><span class="co">## Warning: this may take a few seconds!</span></span>
-<span class="r-in"><span class="va">sim_evenness</span> <span class="op">&lt;-</span> <span class="fu"><a href="heterogeneity-index.html">simulate_evenness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim_evenness</span><span class="op">)</span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Removed 2 rows containing missing values (geom_point).</span>
+<span class="r-in"><span class="va">idx_heterogeneity</span> <span class="op">&lt;-</span> <span class="fu"><a href="heterogeneity.html">index_heterogeneity</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">sim_heterogeneity</span> <span class="op">&lt;-</span> <span class="fu"><a href="simulate.html">simulate</a></span><span class="op">(</span><span class="va">idx_heterogeneity</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim_heterogeneity</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot_diversity-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="va">sim_richness</span> <span class="op">&lt;-</span> <span class="fu"><a href="richness-index.html">simulate_richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">idx_richness</span> <span class="op">&lt;-</span> <span class="fu"><a href="richness.html">index_richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">sim_richness</span> <span class="op">&lt;-</span> <span class="fu"><a href="simulate.html">simulate</a></span><span class="op">(</span><span class="va">idx_richness</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim_richness</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot_diversity-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="co"># }</span></span>

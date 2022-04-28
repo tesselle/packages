@@ -46,7 +46,10 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/RefineCA-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/heterogeneity-index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/deprecate.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/heterogeneity.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/independance.html</loc>
@@ -76,13 +79,19 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/reexports.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/richness-index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/resample.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/richness.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/seriation.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/similarity-method.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/simulate.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/stats_bootstrap.html</loc>
@@ -100,6 +109,6 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/test_diversity.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/turnover-index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/turnover.html</loc>
   </url>
 </urlset>

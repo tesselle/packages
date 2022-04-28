@@ -3,15 +3,11 @@
 
 index_heterogeneity() returns an heterogeneity or dominance index.
 index_evenness() returns an evenness measure.
-bootstrap_*() and jackknife_*() perform bootstrap/jackknife
-resampling.
 
-"><title>Heterogeneity and Evenness — heterogeneity-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.1/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Heterogeneity and Evenness — heterogeneity-index"><meta property="og:description" content="
+"><title>Heterogeneity and Evenness — heterogeneity • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.1/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Heterogeneity and Evenness — heterogeneity"><meta property="og:description" content="
 
 index_heterogeneity() returns an heterogeneity or dominance index.
 index_evenness() returns an evenness measure.
-bootstrap_*() and jackknife_*() perform bootstrap/jackknife
-resampling.
 
 "><meta property="og:image" content="https://packages.tesselle.org/tabula/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@nfrerebeau"><meta name="twitter:site" content="@nfrerebeau"><meta name="robots" content="noindex"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -64,103 +60,31 @@ resampling.
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Heterogeneity and Evenness</h1>
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_heterogeneity.R" class="external-link"><code>R/index_heterogeneity.R</code></a></small>
-      <div class="d-none name"><code>heterogeneity-index.Rd</code></div>
+      <div class="d-none name"><code>heterogeneity.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
     
 <ul><li><p><code>index_heterogeneity()</code> returns an heterogeneity or dominance index.</p></li>
 <li><p><code>index_evenness()</code> returns an evenness measure.</p></li>
-<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> perform bootstrap/jackknife
-resampling.</p></li>
 </ul></div>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">index_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="fu">simulate_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">bootstrap_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">jackknife_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
 <span class="fu">index_evenness</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">simulate_evenness</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">bootstrap_evenness</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">jackknife_evenness</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
 <span class="fu">index_heterogeneity</span><span class="op">(</span>
   <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">simulate_heterogeneity</span><span class="op">(</span>
-  <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  quantiles <span class="op">=</span> <span class="cn">TRUE</span>,
-  level <span class="op">=</span> <span class="fl">0.8</span>,
-  step <span class="op">=</span> <span class="fl">1</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>,
-  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"tabula.progress"</span><span class="op">)</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">bootstrap_heterogeneity</span><span class="op">(</span>
-  <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">jackknife_heterogeneity</span><span class="op">(</span>
-  <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  <span class="va">...</span>
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>
 <span class="op">)</span>
 
 <span class="co"># S4 method for CountMatrix</span>
 <span class="fu">index_evenness</span><span class="op">(</span>
   <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"shannon"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">simulate_evenness</span><span class="op">(</span>
-  <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"shannon"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  quantiles <span class="op">=</span> <span class="cn">TRUE</span>,
-  level <span class="op">=</span> <span class="fl">0.8</span>,
-  step <span class="op">=</span> <span class="fl">1</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>,
-  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"tabula.progress"</span><span class="op">)</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">bootstrap_evenness</span><span class="op">(</span>
-  <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="co"># S4 method for CountMatrix</span>
-<span class="fu">jackknife_evenness</span><span class="op">(</span>
-  <span class="va">object</span>,
-  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"berger"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"shannon"</span>, <span class="st">"simpson"</span><span class="op">)</span>,
-  <span class="va">...</span>
+  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"shannon"</span>, <span class="st">"brillouin"</span>, <span class="st">"mcintosh"</span>, <span class="st">"simpson"</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
@@ -168,37 +92,17 @@ resampling.</p></li>
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
 <dd><p>A \(m \times p\) matrix of count data (typically
-a <code>CountMatrix</code> object).</p></dd>
+a CountMatrix object).</p></dd>
 <dt>...</dt>
-<dd><p>Further arguments to be passed to internal methods.</p></dd>
+<dd><p>Currently not used.</p></dd>
 <dt>method</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the index to be computed
 (see details). Any unambiguous substring can be given.</p></dd>
-<dt>quantiles</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should sample quantiles be used as
-confidence interval? If <code>TRUE</code> (the default), sample quantiles are used as
-described in Kintigh (1989), else quantiles of the normal distribution are
-used.</p></dd>
-<dt>level</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
-<dt>step</dt>
-<dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the increment of the
-sample size. Only used if <code>simulate</code> is <code>TRUE</code>.</p></dd>
-<dt>n</dt>
-<dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
-replications.</p></dd>
-<dt>progress</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a progress bar be displayed?</p></dd>
-<dt>probs</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of probabilities with values in
-\([0,1]\) (see <code><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">stats::quantile()</a></code>).</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <ul><li><p><code>index_heterogeneity()</code>, <code>index_evenness()</code> and <code>simulate_evenness()</code>
-return a <code><a href="DiversityIndex.html">DiversityIndex</a></code> object.</p></li>
-<li><p><code>bootstrap_*()</code> and <code>jackknife_*()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
-</ul></div>
+    <p>Returns a <a href="DiversityIndex.html">DiversityIndex</a> object.</p>
+    </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p><em>Diversity</em> measurement assumes that all individuals in a specific
@@ -269,10 +173,6 @@ in Deep-Sea Sediments. <em>Science</em>, 168(3937), 1345-1347.
 .</p>
 <p>Brillouin, L. (1956). <em>Science and information theory</em>. New York:
 Academic Press.</p>
-<p>Kintigh, K. W. (1984). Measuring Archaeological Diversity by Comparison
-with Simulated Assemblages. <em>American Antiquity</em>, 49(1), 44-54.
-<a href="https://doi.org/10.2307/280511" class="external-link">doi:10.2307/280511</a>
-.</p>
 <p>Kintigh, K. W. (1989). Sample Size, Significance, and Measures of
 Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
 in Archaeology</em>. New Directions in Archaeology. Cambridge:
@@ -305,11 +205,13 @@ Bell System Technical Journal</em>, 27, 379-423.
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="plot_diversity.html">plot_diversity()</a></code>, <code><a href="similarity-method.html">similarity()</a></code>, <code><a href="turnover-index.html">turnover()</a></code></p>
+    <div class="dont-index"><p><code><a href="plot_diversity.html">plot_diversity()</a></code>, <code><a href="similarity-method.html">similarity()</a></code>, <code><a href="turnover.html">turnover()</a></code></p>
 <p>Other diversity: 
-<code><a href="richness-index.html">richness-index</a></code>,
+<code><a href="resample.html">resample</a></code>,
+<code><a href="richness.html">richness</a></code>,
 <code><a href="similarity-method.html">similarity</a>()</code>,
-<code><a href="turnover-index.html">turnover-index</a></code></p></div>
+<code><a href="simulate.html">simulate</a>()</code>,
+<code><a href="turnover.html">turnover</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -355,36 +257,53 @@ Bell System Technical Journal</em>, 27, 379-423.
 <span class="r-out co"><span class="r-pr">#&gt;</span> P628    12 0.9353340</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
-<span class="r-in"><span class="op">(</span><span class="va">boot_h</span> <span class="op">&lt;-</span> <span class="fu">bootstrap_heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             min      mean       max        Q5       Q95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.5982696 1.4149280 1.9085353 0.9943537 1.7478681</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9784871 1.3862944 0.5623351 1.3208883</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.5356052 0.6931472 0.0000000 0.6931472</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.7214637 1.4683974 1.9072840 1.0751393 1.7917595</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6675838 1.0986123 0.0000000 1.0986123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.0346012 1.6211683 1.9085353 1.3316643 1.8711604</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.0231689 1.5996558 1.8882224 1.3566174 1.8044926</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.6384991 1.8712012 2.0309218 1.7525938 1.9681827</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.7237332 1.0397208 0.0000000 1.0397208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.7214637 1.5300249 1.9072840 1.1988493 1.8200760</span>
+<span class="r-in"><span class="fu">bootstrap</span><span class="op">(</span><span class="va">index_e</span><span class="op">)</span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no non-missing arguments to min; returning Inf</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no non-missing arguments to max; returning -Inf</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no non-missing arguments to min; returning Inf</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no non-missing arguments to max; returning -Inf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             min      mean       max     lower     upper       Q25       Q50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.6178267 0.8690602 1.0000000 0.8653436 0.8727767 0.8274096 0.8757609</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.5435644 0.8646185 1.0000000        NA        NA 0.8194484 0.8868595</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.8112781 0.8901788 1.0000000        NA        NA 0.8112781 0.8112781</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P630        Inf       NaN      -Inf        NA        NA        NA        NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P307        Inf       NaN      -Inf        NA        NA        NA        NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.6037594 0.8920630 1.0000000 0.8884185 0.8957075 0.8592975 0.8979445</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.9182958 0.9377670 1.0000000        NA        NA 0.9182958 0.9182958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.7608203 0.9234225 0.9931223 0.9210697 0.9257753 0.9014358 0.9310256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 0.6742019 0.8845876 0.9934151 0.8818167 0.8873586 0.8585519 0.8846512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 0.7441955 0.8701027 0.9557285 0.8682550 0.8719503 0.8529775 0.8714502</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.8112781 0.9115961 1.0000000        NA        NA 0.8112781 0.9463946</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.6826062 0.9133762 1.0000000 0.9104871 0.9162653 0.8848617 0.9155385</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             Q75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.9101663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.9463946</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625  1.0000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P630         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P307         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.9355245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.9182958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.9546444</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 0.9155791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 0.8894922</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  1.0000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.9445681</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
-<span class="r-in"><span class="op">(</span><span class="va">jack_h</span> <span class="op">&lt;-</span> <span class="fu">jackknife_heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            mean       bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.5680395 -0.9012101 0.2056978</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 1.1096729 -0.9300118 0.3968560</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.5545177 -1.2476649 0.8317766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.6463856 -0.9159291 0.2108823</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.9769728 -1.0947558 0.5574224</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.7643489 -0.9613033 0.2126469</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.6152716 -0.9489415 0.2242804</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.8080769 -0.9312771 0.1429090</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.9244221 -1.0376881 0.5301829</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.7148123 -0.9473731 0.2085352</span>
+<span class="r-in"><span class="fu">jackknife</span><span class="op">(</span><span class="va">index_e</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            mean          bias        error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.8530134 -3.832613e-02 3.467900e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.8725916 -2.167581e-02 1.055074e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625        NaN           NaN          NaN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P630        NaN           NaN          NaN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P307        NaN           NaN          NaN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.8956783 -2.426312e-02 3.790426e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  1.0000000  9.992007e-16 3.330669e-16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.9598834 -1.532543e-02 1.972936e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 0.8786773 -5.033240e-02 4.931785e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 0.8645734 -4.870273e-02 4.770957e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.9461354 -2.333001e-03 6.329892e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.9329141 -2.177978e-02 1.598781e-02</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
