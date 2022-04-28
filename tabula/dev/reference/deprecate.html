@@ -59,7 +59,18 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">simulate_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">plot_heatmap</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
+
+<span class="co"># S4 method for matrix</span>
+<span class="fu">plot_heatmap</span><span class="op">(</span><span class="va">object</span>, diag <span class="op">=</span> <span class="cn">TRUE</span>, upper <span class="op">=</span> <span class="cn">TRUE</span>, lower <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+
+<span class="co"># S4 method for dist</span>
+<span class="fu">plot_heatmap</span><span class="op">(</span><span class="va">object</span>, diag <span class="op">=</span> <span class="cn">FALSE</span>, upper <span class="op">=</span> <span class="cn">FALSE</span>, lower <span class="op">=</span> <span class="op">!</span><span class="va">upper</span><span class="op">)</span>
+
+<span class="co"># S4 method for OccurrenceMatrix</span>
+<span class="fu">plot_heatmap</span><span class="op">(</span><span class="va">object</span>, diag <span class="op">=</span> <span class="cn">FALSE</span>, upper <span class="op">=</span> <span class="cn">FALSE</span>, lower <span class="op">=</span> <span class="op">!</span><span class="va">upper</span>, <span class="va">...</span><span class="op">)</span>
+
+<span class="fu">simulate_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="fu">bootstrap_heterogeneity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
@@ -165,6 +176,15 @@
 a CountMatrix object).</p></dd>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
+<dt>diag</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar indicating whether the diagonal of the
+matrix should be plotted. Only used if <code>object</code> is a symmetric matrix.</p></dd>
+<dt>upper</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar indicating whether the upper triangle of
+the matrix should be plotted. Only used if <code>object</code> is a symmetric matrix.</p></dd>
+<dt>lower</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar indicating whether the lower triangle of
+the matrix should be plotted. Only used if <code>object</code> is a symmetric matrix.</p></dd>
 <dt>method</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the index to be computed
 (see details). Any unambiguous substring can be given.</p></dd>
