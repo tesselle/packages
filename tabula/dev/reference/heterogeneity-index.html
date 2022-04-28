@@ -6,7 +6,7 @@ index_evenness() returns an evenness measure.
 bootstrap_*() and jackknife_*() perform bootstrap/jackknife
 resampling.
 
-"><title>Heterogeneity and Evenness — heterogeneity-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Heterogeneity and Evenness — heterogeneity-index"><meta property="og:description" content="
+"><title>Heterogeneity and Evenness — heterogeneity-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.1/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Heterogeneity and Evenness — heterogeneity-index"><meta property="og:description" content="
 
 index_heterogeneity() returns an heterogeneity or dominance index.
 index_evenness() returns an evenness measure.
@@ -31,7 +31,7 @@ resampling.
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
@@ -265,13 +265,13 @@ the value of the index accompanies a decrease in diversity.</p>
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Berger, W. H. &amp; Parker, F. L. (1970). Diversity of Planktonic Foraminifera
 in Deep-Sea Sediments. <em>Science</em>, 168(3937), 1345-1347.
-doi: <a href="https://doi.org/10.1126/science.168.3937.1345" class="external-link">10.1126/science.168.3937.1345</a>
+<a href="https://doi.org/10.1126/science.168.3937.1345" class="external-link">doi:10.1126/science.168.3937.1345</a>
 .</p>
 <p>Brillouin, L. (1956). <em>Science and information theory</em>. New York:
 Academic Press.</p>
 <p>Kintigh, K. W. (1984). Measuring Archaeological Diversity by Comparison
 with Simulated Assemblages. <em>American Antiquity</em>, 49(1), 44-54.
-doi: <a href="https://doi.org/10.2307/280511" class="external-link">10.2307/280511</a>
+<a href="https://doi.org/10.2307/280511" class="external-link">doi:10.2307/280511</a>
 .</p>
 <p>Kintigh, K. W. (1989). Sample Size, Significance, and Measures of
 Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
@@ -279,28 +279,28 @@ in Archaeology</em>. New Directions in Archaeology. Cambridge:
 Cambridge University Press, p. 25-36.</p>
 <p>Laxton, R. R. (1978). The measure of diversity. <em>Journal of Theoretical
 Biology</em>, 70(1), 51-67.
-doi: <a href="https://doi.org/10.1016/0022-5193(78)90302-8" class="external-link">10.1016/0022-5193(78)90302-8</a>
+<a href="https://doi.org/10.1016/0022-5193%2878%2990302-8" class="external-link">doi:10.1016/0022-5193(78)90302-8</a>
 .</p>
 <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
 Princeton, NJ: Princeton University Press.
-doi: <a href="https://doi.org/10.1007/978-94-015-7358-0" class="external-link">10.1007/978-94-015-7358-0</a>
+<a href="https://doi.org/10.1007/978-94-015-7358-0" class="external-link">doi:10.1007/978-94-015-7358-0</a>
 .</p>
 <p>McIntosh, R. P. (1967). An Index of Diversity and the Relation of Certain
 Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
-doi: <a href="https://doi.org/10.2307/1932674" class="external-link">10.2307/1932674</a>
+<a href="https://doi.org/10.2307/1932674" class="external-link">doi:10.2307/1932674</a>
 .</p>
 <p>Peet, R. K. (1974). The Measurement of Species Diversity. <em>Annual Review of
 Ecology and Systematics</em>, 5(1), 285-307.
-doi: <a href="https://doi.org/10.1146/annurev.es.05.110174.001441" class="external-link">10.1146/annurev.es.05.110174.001441</a>
+<a href="https://doi.org/10.1146/annurev.es.05.110174.001441" class="external-link">doi:10.1146/annurev.es.05.110174.001441</a>
 .</p>
 <p>Pielou, E. C. (1975). <em>Ecological Diversity</em>. New York: Wiley.
-doi: <a href="https://doi.org/10.4319/lo.1977.22.1.0174b" class="external-link">10.4319/lo.1977.22.1.0174b</a></p>
+<a href="https://doi.org/10.4319/lo.1977.22.1.0174b" class="external-link">doi:10.4319/lo.1977.22.1.0174b</a></p>
 <p>Shannon, C. E. (1948). A Mathematical Theory of Communication. <em>The
 Bell System Technical Journal</em>, 27, 379-423.
-doi: <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="external-link">10.1002/j.1538-7305.1948.tb01338.x</a>
+<a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="external-link">doi:10.1002/j.1538-7305.1948.tb01338.x</a>
 .</p>
 <p>Simpson, E. H. (1949). Measurement of Diversity. <em>Nature</em>, 163(4148),
-688-688. doi: <a href="https://doi.org/10.1038/163688a0" class="external-link">10.1038/163688a0</a>
+688-688. <a href="https://doi.org/10.1038/163688a0" class="external-link">doi:10.1038/163688a0</a>
 .</p>
     </div>
     <div class="section level2">
@@ -357,18 +357,18 @@ doi: <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="externa
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
 <span class="r-in"><span class="op">(</span><span class="va">boot_h</span> <span class="op">&lt;-</span> <span class="fu">bootstrap_heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             min      mean       max        Q5       Q95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.6559757 1.4301404 1.9085353 1.0906875 1.7298201</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9886347 1.3862944 0.5623351 1.3208883</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.5444582 0.6931472 0.0000000 0.6931472</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.5982696 1.4149280 1.9085353 0.9943537 1.7478681</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9784871 1.3862944 0.5623351 1.3208883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.5356052 0.6931472 0.0000000 0.6931472</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.5660857 1.4599467 1.9072840 1.0751393 1.7917595</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6736523 1.0986123 0.0000000 1.0986123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.0547209 1.6280940 1.9085353 1.3337360 1.8468891</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.0905995 1.5934026 1.8828976 1.3567636 1.7875803</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.6329619 1.8714404 2.0715766 1.7600428 1.9701200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.7340981 1.0397208 0.0000000 1.0397208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.8239592 1.5313428 1.9072840 1.2342679 1.8200760</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.7214637 1.4683974 1.9072840 1.0751393 1.7917595</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6675838 1.0986123 0.0000000 1.0986123</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.0346012 1.6211683 1.9085353 1.3316643 1.8711604</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.0231689 1.5996558 1.8882224 1.3566174 1.8044926</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.6384991 1.8712012 2.0309218 1.7525938 1.9681827</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.7237332 1.0397208 0.0000000 1.0397208</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.7214637 1.5300249 1.9072840 1.1988493 1.8200760</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="op">(</span><span class="va">jack_h</span> <span class="op">&lt;-</span> <span class="fu">jackknife_heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span>
@@ -396,7 +396,7 @@ doi: <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="externa
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
     </footer></div>

@@ -8,7 +8,7 @@ rarefaction.
 bootstrap_*() and jackknife_*() perform bootstrap/jackknife
 resampling.
 
-"><title>Richness and Rarefaction — richness-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Richness and Rarefaction — richness-index"><meta property="og:description" content="
+"><title>Richness and Rarefaction — richness-index • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet"><link href="../deps/_Ubuntu-0.4.1/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Richness and Rarefaction — richness-index"><meta property="og:description" content="
 
 index_richness() returns sample richness. index_composition() returns
 asymptotic species richness.
@@ -35,7 +35,7 @@ resampling.
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
@@ -246,28 +246,28 @@ abundances.</p>
 Population. <em>Scandinavian Journal of Statistics</em>, 11(4), 265-270.</p>
 <p>Chao, A. (1987). Estimating the Population Size for Capture-Recapture Data
 with Unequal Catchability. <em>Biometrics</em> 43(4), 783-791.
-doi: <a href="https://doi.org/10.2307/2531532" class="external-link">10.2307/2531532</a>
+<a href="https://doi.org/10.2307/2531532" class="external-link">doi:10.2307/2531532</a>
 .</p>
 <p>Chao, A. &amp; Chiu, C.-H. (2016). Species Richness: Estimation and Comparison.
 <em>In</em> Balakrishnan, N., Colton, T., Everitt, B., Piegorsch, B., Ruggeri,
 F. &amp; Teugels, J. L. (Eds.), <em>Wiley StatsRef: Statistics Reference Online</em>.
 Chichester, UK: John Wiley &amp; Sons, Ltd., 1-26.
-doi: <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2" class="external-link">10.1002/9781118445112.stat03432.pub2</a></p>
+<a href="https://doi.org/10.1002/9781118445112.stat03432.pub2" class="external-link">doi:10.1002/9781118445112.stat03432.pub2</a></p>
 <p>Chao, A. &amp; Lee, S.-M. (1992). Estimating the Number of Classes via Sample
 Coverage. <em>Journal of the American Statistical Association</em>, 87(417),
-210-217. doi: <a href="https://doi.org/10.1080/01621459.1992.10475194" class="external-link">10.1080/01621459.1992.10475194</a>
+210-217. <a href="https://doi.org/10.1080/01621459.1992.10475194" class="external-link">doi:10.1080/01621459.1992.10475194</a>
 .</p>
 <p>Chiu, C.-H., Wang, Y.-T., Walther, B. A. &amp; Chao, A. (2014). An improved
 nonparametric lower bound of species richness via a modified good-turing
 frequency formula. <em>Biometrics</em>, 70(3), 671-682.
-doi: <a href="https://doi.org/10.1111/biom.12200" class="external-link">10.1111/biom.12200</a>
+<a href="https://doi.org/10.1111/biom.12200" class="external-link">doi:10.1111/biom.12200</a>
 .</p>
 <p>Hurlbert, S. H. (1971). The Nonconcept of Species Diversity: A Critique and
 Alternative Parameters. <em>Ecology</em>, 52(4), 577-586.
-doi: <a href="https://doi.org/10.2307/1934145" class="external-link">10.2307/1934145</a>
+<a href="https://doi.org/10.2307/1934145" class="external-link">doi:10.2307/1934145</a>
 .</p>
 <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
-Princeton, NJ: Princeton University Press. doi: <a href="https://doi.org/10.1007/978-94-015-7358-0" class="external-link">10.1007/978-94-015-7358-0</a>
+Princeton, NJ: Princeton University Press. <a href="https://doi.org/10.1007/978-94-015-7358-0" class="external-link">doi:10.1007/978-94-015-7358-0</a>
 .</p>
 <p>Kintigh, K. W. (1989). Sample Size, Significance, and Measures of
 Diversity. In Leonard, R. D. and Jones, G. T., <em>Quantifying Diversity
@@ -279,11 +279,11 @@ Frontiers in Measurement and Assessment</em>. Oxford: Oxford University Press.</
 3, 36-71.</p>
 <p>Menhinick, E. F. (1964). A Comparison of Some Species-Individuals Diversity
 Indices Applied to Samples of Field Insects. <em>Ecology</em>, 45(4), 859-861.
-doi: <a href="https://doi.org/10.2307/1934933" class="external-link">10.2307/1934933</a>
+<a href="https://doi.org/10.2307/1934933" class="external-link">doi:10.2307/1934933</a>
 .</p>
 <p>McIntosh, R. P. (1967). An Index of Diversity and the Relation of Certain
 Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
-doi: <a href="https://doi.org/10.2307/1932674" class="external-link">10.2307/1932674</a>
+<a href="https://doi.org/10.2307/1932674" class="external-link">doi:10.2307/1932674</a>
 .</p>
 <p>Sander, H. L. (1968). Marine Benthic Diversity: A Comparative Study.
 <em>The American Naturalist</em>, 102(925), 243-282.</p>
@@ -356,7 +356,7 @@ doi: <a href="https://doi.org/10.2307/1932674" class="external-link">10.2307/193
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
     </footer></div>

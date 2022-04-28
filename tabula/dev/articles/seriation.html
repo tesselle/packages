@@ -15,8 +15,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet">
-<link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet">
+<link href="../deps/_Ubuntu-0.4.1/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Seriation">
@@ -46,7 +46,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
@@ -80,12 +80,16 @@
     
   </div>
 </nav><div class="container template-article">
-<script src="seriation_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+
+
+
+<div class="row">
   <main id="main"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Seriation</h1>
                         <h4 data-toc-skip class="author">N. Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2021-12-04</h4>
+            <h4 data-toc-skip class="date">2022-04-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/vignettes/seriation.Rmd" class="external-link"><code>vignettes/seriation.Rmd</code></a></small>
       <div class="d-none name"><code>seriation.Rmd</code></div>
@@ -99,9 +103,9 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/dimensio/" class="external-link">dimensio</a></span><span class="op">)</span> <span class="co"># Multivariate analysis</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span></code></pre></div>
-<div class="section level1">
-<h1 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h1>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
 <p>The matrix seriation problem in archaeology is based on three conditions and two assumptions, which <span class="citation">Dunnell (1970)</span> summarizes as follows.</p>
 <p>The homogeneity conditions state that all the groups included in a seriation must:</p>
 <ul>
@@ -116,9 +120,9 @@
 </ul>
 <p>Theses assumptions create a distributional model and ordering is accomplished by arranging the matrix so that the class distributions approximate the required pattern. The resulting order is <em>inferred</em> to be chronological.</p>
 </div>
-<div class="section level1">
-<h1 id="reciprocal-ranking">Reciprocal ranking<a class="anchor" aria-label="anchor" href="#reciprocal-ranking"></a>
-</h1>
+<div class="section level2">
+<h2 id="reciprocal-ranking">Reciprocal ranking<a class="anchor" aria-label="anchor" href="#reciprocal-ranking"></a>
+</h2>
 <p>Reciprocal ranking iteratively rearrange rows and/or columns according to their weighted rank in the data matrix until convergence <span class="citation">(Ihm 2005)</span>.</p>
 <p>For a given incidence matrix <span class="math inline">\(C\)</span>:</p>
 <ul>
@@ -186,12 +190,12 @@
   <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_discrete.html" class="external-link">scale_fill_bright</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="seriation_files/figure-html/average-2.png" width="672"></p>
 </div>
-<div class="section level1">
-<h1 id="correspondence-analysis">correspondence analysis<a class="anchor" aria-label="anchor" href="#correspondence-analysis"></a>
-</h1>
 <div class="section level2">
-<h2 id="seriation">Seriation<a class="anchor" aria-label="anchor" href="#seriation"></a>
+<h2 id="correspondence-analysis">correspondence analysis<a class="anchor" aria-label="anchor" href="#correspondence-analysis"></a>
 </h2>
+<div class="section level3">
+<h3 id="seriation">Seriation<a class="anchor" aria-label="anchor" href="#seriation"></a>
+</h3>
 <p>Correspondence Analysis (CA) is an effective method for the seriation of archaeological assemblages. The order of the rows and columns is given by the coordinates along one dimension of the CA space, assumed to account for temporal variation. The direction of temporal change within the correspondence analysis space is arbitrary: additional information is needed to determine the actual order in time.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Coerce dataset to an count matrix</span>
@@ -222,9 +226,9 @@
   <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="seriation_files/figure-html/ca-seriation-1.png" width="672"></p>
 </div>
-<div class="section level2">
-<h2 id="refining">Refining<a class="anchor" aria-label="anchor" href="#refining"></a>
-</h2>
+<div class="section level3">
+<h3 id="refining">Refining<a class="anchor" aria-label="anchor" href="#refining"></a>
+</h3>
 <p><span class="citation">Peeples and Schachner (2012)</span> propose a procedure to identify samples that are subject to sampling error or samples that have underlying structural relationships and might be influencing the ordering along the CA space. This relies on a partial bootstrap approach to CA-based seriation where each sample is replicated <code>n</code> times. The maximum dimension length of the convex hull around the sample point cloud allows to remove samples for a given <code>cutoff</code> value.</p>
 <p>According to <span class="citation">Peeples and Schachner (2012)</span>, “[this] point removal procedure [results in] a reduced dataset where the position of individuals within the CA are highly stable and which produces an ordering consistend with the assumptions of frequency seriation.”</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -287,21 +291,21 @@
 <p><img src="seriation_files/figure-html/refine-3.png" width="700"></p>
 </div>
 </div>
-<div class="section level1 unnumbered">
-<h1 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
-</h1>
-<div id="refs" class="references">
-<div id="ref-desachy2004">
-<p>Desachy, Bruno. 2004. “Le Sériographe EPPM: Un Outil Informatisé de Sériation Graphique Pour Tableaux de Comptages.” <em>Revue Archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">https://doi.org/10.3406/pica.2004.2396</a>.</p>
+<div class="section level2">
+<h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-desachy2004" class="csl-entry">
+Desachy, Bruno. 2004. <span>“Le Sériographe <span>EPPM</span>: Un Outil Informatisé de Sériation Graphique Pour Tableaux de Comptages.”</span> <em>Revue Archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">https://doi.org/10.3406/pica.2004.2396</a>.
 </div>
-<div id="ref-dunnell1970">
-<p>Dunnell, Robert C. 1970. “Seriation Method and Its Evaluation.” <em>American Antiquity</em> 35 (3): 305–19. <a href="https://doi.org/10.2307/278341" class="external-link">https://doi.org/10.2307/278341</a>.</p>
+<div id="ref-dunnell1970" class="csl-entry">
+Dunnell, Robert C. 1970. <span>“Seriation Method and Its Evaluation.”</span> <em>American Antiquity</em> 35 (3): 305–19. <a href="https://doi.org/10.2307/278341" class="external-link">https://doi.org/10.2307/278341</a>.
 </div>
-<div id="ref-ihm2005">
-<p>Ihm, Peter. 2005. “A Contribution to the History of Seriation in Archaeology.” In <em>Classification – the Ubiquitous Challenge</em>, edited by Claus Weihs and Wolfgang Gaul, 307–16. Berlin Heidelberg: Springer. <a href="https://doi.org/10.1007/3-540-28084-7_34" class="external-link">https://doi.org/10.1007/3-540-28084-7_34</a>.</p>
+<div id="ref-ihm2005" class="csl-entry">
+Ihm, Peter. 2005. <span>“A Contribution to the History of Seriation in Archaeology.”</span> In <em>Classification – the Ubiquitous Challenge</em>, edited by Claus Weihs and Wolfgang Gaul, 307–16. Berlin Heidelberg: Springer. <a href="https://doi.org/10.1007/3-540-28084-7_34" class="external-link">https://doi.org/10.1007/3-540-28084-7_34</a>.
 </div>
-<div id="ref-peeples2012">
-<p>Peeples, Matthew A., and Gregson Schachner. 2012. “Refining Correspondence Analysis-Based Ceramic Seriation of Regional Data Sets.” <em>Journal of Archaeological Science</em> 39 (8): 2818–27. <a href="https://doi.org/10.1016/j.jas.2012.04.040" class="external-link">https://doi.org/10.1016/j.jas.2012.04.040</a>.</p>
+<div id="ref-peeples2012" class="csl-entry">
+Peeples, Matthew A., and Gregson Schachner. 2012. <span>“Refining Correspondence Analysis-Based Ceramic Seriation of Regional Data Sets.”</span> <em>Journal of Archaeological Science</em> 39 (8): 2818–27. <a href="https://doi.org/10.1016/j.jas.2012.04.040" class="external-link">https://doi.org/10.1016/j.jas.2012.04.040</a>.
 </div>
 </div>
 </div>
@@ -317,7 +321,7 @@
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
     </footer>
