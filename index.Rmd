@@ -177,7 +177,7 @@ downloads_month |>
 ### Dependencies
 
 ```{r pkg-dep, fig.cap="Dependency graph of the tesselle packages (CRAN only)."}
-tesselle <- c("arkhe", "dimensio", "folio", "kairos", "khroma", "tabula")
+tesselle <- c("arkhe", "dimensio", "folio", "kairos", "khroma", "tabula", "tesselle")
 dep <- miniCRAN::makeDepGraph(tesselle, suggests = FALSE, enhances = FALSE,
                               includeBasePkgs = FALSE)
 

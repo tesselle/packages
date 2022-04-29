@@ -1,5 +1,5 @@
 # Set CRAN package list
-tesselle <- c("arkhe", "dimensio", "folio", "kairos", "khroma", "tabula")
+tesselle <- c("arkhe", "dimensio", "folio", "kairos", "khroma", "tabula", "tesselle")
 
 # Get RStudio CRAN mirror data
 if (!file.exists("downloads.RData")) {
@@ -24,7 +24,8 @@ if (Sys.Date() - from >= 0) {
         (package == "gamma" & date >= "2020-09-17") |
         (package == "folio" & date >= "2021-02-11") |
         (package == "dimensio" & date >= "2021-04-21") |
-        (package == "kairos" & date >= "2021-11-07")
+        (package == "kairos" & date >= "2021-11-07") |
+        (package == "tesselle" & date >= "2022-04-27")
     )
 
   ## Downloads per month
