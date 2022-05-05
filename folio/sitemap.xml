@@ -7,9 +7,6 @@
     <loc>https://packages.tesselle.org/folio/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/folio/CODING_STYLE.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/folio/CONTRIBUTING.html</loc>
   </url>
   <url>
@@ -76,10 +73,19 @@
     <loc>https://packages.tesselle.org/folio/reference/mississippi.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/folio/reference/ngrip2004.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/folio/reference/nydal1996.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/folio/reference/spratt2016.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/folio/reference/stratigraphy.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/folio/reference/verre.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/folio/reference/zuni.html</loc>

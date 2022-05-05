@@ -1,8 +1,8 @@
-pandoc: '2.15'
-pkgdown: 1.9000.9000.9000
-pkgdown_sha: e72fc30f333dc4f50f3f9d1f274fc29d67e34974
+pandoc: 2.14.2
+pkgdown: 2.0.3
+pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-18T12:53Z
+last_built: 2022-05-05T14:52Z
 urls:
   reference: https://packages.tesselle.org/folio/reference
   article: https://packages.tesselle.org/folio/articles
