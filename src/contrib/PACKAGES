@@ -18,10 +18,10 @@ MD5sum: 43f3e985766a2fe9be18c069f446dbb9
 NeedsCompilation: no
 
 Package: folio
-Version: 1.0.0
+Version: 1.1.0
 Depends: R (>= 2.10)
 License: GPL (>= 3)
-MD5sum: c16116a1186e79c1512f81f217ed38bc
+MD5sum: f878349c09bda9f15a68db5c17bec5d8
 NeedsCompilation: no
 
 Package: kairos
