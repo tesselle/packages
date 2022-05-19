@@ -72,7 +72,7 @@
 
 <span class="fu">is_ordered</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
-<span class="co"># S4 method for MCMC</span>
+<span class="co"># S4 method for EventsMCMC</span>
 <span class="fu">as_phases</span><span class="op">(</span>
   <span class="va">from</span>,
   start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">1</span>, to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">from</span><span class="op">)</span>, by <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>,
@@ -103,10 +103,10 @@
   iteration <span class="op">=</span> <span class="cn">NULL</span>
 <span class="op">)</span>
 
-<span class="co"># S4 method for MCMC,missing</span>
+<span class="co"># S4 method for EventsMCMC,missing</span>
 <span class="fu">phase</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
-<span class="co"># S4 method for MCMC,list</span>
+<span class="co"># S4 method for EventsMCMC,list</span>
 <span class="fu">phase</span><span class="op">(</span><span class="va">x</span>, <span class="va">groups</span>, ordered <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
 <span class="co"># S4 method for PhasesMCMC,character</span>
@@ -131,7 +131,7 @@
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
 <dt>from</dt>
-<dd><p>A <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or an <code><a href="MCMC.html">MCMC</a></code>.</p></dd>
+<dd><p>A <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or an <code><a href="MCMC.html">EventsMCMC</a></code>.</p></dd>
 <dt>value</dt>
 <dd><p>A possible value for the element(s) of <code>x</code>.</p></dd>
 <dt>start</dt>

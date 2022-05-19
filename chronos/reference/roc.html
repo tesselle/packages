@@ -62,8 +62,8 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">roc</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for MCMC</span>
-<span class="fu">roc</span><span class="op">(</span><span class="va">object</span>, from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span>, to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span><span class="op">)</span>
+<span class="co"># S4 method for EventsMCMC</span>
+<span class="fu">roc</span><span class="op">(</span><span class="va">object</span>, from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span>, to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span>, resolution <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
 
 <span class="co"># S4 method for CumulativeEvents</span>
 <span class="fu">roc</span><span class="op">(</span><span class="va">object</span><span class="op">)</span>
@@ -81,7 +81,7 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>An <code><a href="MCMC.html">MCMC</a></code>, a <code><a href="CumulativeEvents.html">CumulativeEvents</a></code> or an
+<dd><p>An <code><a href="MCMC.html">EventsMCMC</a></code>, a <code><a href="CumulativeEvents.html">CumulativeEvents</a></code> or an
 <code><a href="ActivityEvents.html">ActivityEvents</a></code> object.</p></dd>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
@@ -91,6 +91,11 @@ estimate for (in years).</p></dd>
 <dt>to</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the latest date to estimate
 for (in years).</p></dd>
+<dt>resolution</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the temporal
+resolution (in years) at which densities are to be estimated.
+If <code>NULL</code> (the default), equally spaced points will be used (according to
+<code>options("chronos.grid")</code>).</p></dd>
 <dt>colour</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the colour of the segments.</p></dd>
 <dt>x</dt>
@@ -107,7 +112,6 @@ displayed (invisibly returns <code>x</code>).</p></li>
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other event tools: 
 <code><a href="activity.html">activity</a>()</code>,
-<code><a href="lapse.html">lapse</a>()</code>,
 <code><a href="occurrence.html">occurrence</a>()</code>,
 <code><a href="tempo.html">tempo</a>()</code></p></div>
     </div>
@@ -119,7 +123,7 @@ displayed (invisibly returns <code>x</code>).</p></li>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Coerce to MCMC</span></span>
-<span class="r-in"><span class="va">eve</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_mcmc</a></span><span class="op">(</span><span class="va">events</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">eve</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_events</a></span><span class="op">(</span><span class="va">events</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">eve</span> <span class="op">&lt;-</span> <span class="va">eve</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Tempo plot</span></span>

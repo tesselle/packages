@@ -109,6 +109,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/occurrence.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/older.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/phase.html</loc>
   </url>
   <url>
@@ -143,9 +146,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/tempo.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/test_older.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/transition.html</loc>

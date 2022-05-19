@@ -62,17 +62,17 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">apportion</span><span class="op">(</span><span class="va">object</span>, <span class="va">from</span>, <span class="va">to</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for MCMC,numeric,numeric</span>
+<span class="co"># S4 method for EventsMCMC,numeric,numeric</span>
 <span class="fu">apportion</span><span class="op">(</span><span class="va">object</span>, <span class="va">from</span>, <span class="va">to</span>, groups <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
 
-<span class="co"># S4 method for MCMC,list,missing</span>
+<span class="co"># S4 method for EventsMCMC,list,missing</span>
 <span class="fu">apportion</span><span class="op">(</span><span class="va">object</span>, <span class="va">from</span>, groups <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>An <code><a href="MCMC.html">MCMC</a></code> object.</p></dd>
+<dd><p>An <code><a href="MCMC.html">EventsMCMC</a></code> object.</p></dd>
 <dt>from</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector. If <code>to</code> is missing, must be a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> (or
 a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>) with <code>numeric</code> components (columns) <code>from</code> and <code>to</code>.</p></dd>
@@ -94,7 +94,8 @@ can be a length-one vector giving the index of the grouping component
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other tests: 
-<code><a href="test_older.html">test_older</a>()</code></p></div>
+<code><a href="lapse.html">lapse</a>()</code>,
+<code><a href="older.html">older</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
