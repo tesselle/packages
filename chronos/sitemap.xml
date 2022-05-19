@@ -49,6 +49,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/PhasesMCMC.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/ProxyRecord.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/RateOfChange.html</loc>
   </url>
   <url>
@@ -113,6 +116,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/proxy.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/read_bcal.html</loc>
