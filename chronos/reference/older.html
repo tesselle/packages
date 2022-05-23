@@ -101,7 +101,7 @@ probability of the assumption: "event <code>x</code> is older than event <code>y
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other tests: 
 <code><a href="apportion.html">apportion</a>()</code>,
-<code><a href="lapse.html">lapse</a>()</code></p></div>
+<code><a href="hiatus.html">hiatus</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -116,19 +116,16 @@ probability of the assumption: "event <code>x</code> is older than event <code>y
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Test for anteriority</span></span>
 <span class="r-in"><span class="fu">older</span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Event.2 Event.1 Event.22 Event.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.2       NA       0   0.4925   0.0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.1       NA      NA   1.0000   0.9996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.22      NA      NA       NA   0.0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.12      NA      NA       NA       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     E21 E11    E22    E12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E21  NA   0 0.4925 0.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E11  NA  NA 1.0000 0.9996</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E22  NA  NA     NA 0.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E12  NA  NA     NA     NA</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Test for hiatus</span></span>
-<span class="r-in"><span class="fu"><a href="lapse.html">lapse</a></span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Event.2 Event.1 Event.22 Event.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.2       NA      NA       NA       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.1       NA      NA      469       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.22      NA      NA       NA       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.12      NA      NA       NA       NA</span>
+<span class="r-in"><span class="fu"><a href="hiatus.html">hiatus</a></span><span class="op">(</span><span class="va">eve</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span>, <span class="va">eve</span><span class="op">[</span>, <span class="fl">3</span><span class="op">]</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      lower      upper   duration </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -1603.7787  -803.1067   800.6721 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

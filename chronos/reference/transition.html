@@ -95,7 +95,6 @@ transition interval for each pair of successive phases (at a given <code>level</
     <div class="dont-index"><p>Other phase tools: 
 <code><a href="boundaries.html">boundaries</a>()</code>,
 <code><a href="duration.html">duration</a>()</code>,
-<code><a href="hiatus.html">hiatus</a>()</code>,
 <code><a href="phase.html">phase</a>()</code></p></div>
     </div>
     <div class="section level2">
@@ -119,19 +118,19 @@ transition interval for each pair of successive phases (at a given <code>level</
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute phase ranges</span></span>
 <span class="r-in"><span class="fu"><a href="boundaries.html">boundaries</a></span><span class="op">(</span><span class="va">pha</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   start   end</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B -1972 -1078</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A -1046  -202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       start        end</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B -1972.281 -1078.0925</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A -1046.091  -202.1504</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute phase transition</span></span>
 <span class="r-in"><span class="fu">transition</span><span class="op">(</span><span class="va">pha</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     start  end</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B-A -1409 -502</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        start       end</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B-A -1409.47 -501.6004</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute phase hiatus</span></span>
 <span class="r-in"><span class="fu"><a href="hiatus.html">hiatus</a></span><span class="op">(</span><span class="va">pha</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     start   end</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B-A -1063 -1046</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         start       end duration</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B-A -1062.599 -1046.091 16.50864</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute phase duration</span></span>
 <span class="r-in"><span class="va">dur</span> <span class="op">&lt;-</span> <span class="fu"><a href="duration.html">duration</a></span><span class="op">(</span><span class="va">pha</span><span class="op">)</span></span>

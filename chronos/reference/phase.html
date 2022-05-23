@@ -88,7 +88,7 @@
   stop <span class="op">=</span> <span class="va">start</span> <span class="op">+</span> <span class="fl">1</span>,
   names <span class="op">=</span> <span class="cn">NULL</span>,
   ordered <span class="op">=</span> <span class="cn">FALSE</span>,
-  BP <span class="op">=</span> <span class="cn">FALSE</span>,
+  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"BP"</span>, <span class="st">"CE"</span>, <span class="st">"b2k"</span><span class="op">)</span>,
   iteration <span class="op">=</span> <span class="cn">NULL</span>
 <span class="op">)</span>
 
@@ -99,7 +99,7 @@
   stop <span class="op">=</span> <span class="va">start</span> <span class="op">+</span> <span class="fl">1</span>,
   names <span class="op">=</span> <span class="cn">NULL</span>,
   ordered <span class="op">=</span> <span class="cn">FALSE</span>,
-  BP <span class="op">=</span> <span class="cn">FALSE</span>,
+  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"BP"</span>, <span class="st">"CE"</span>, <span class="st">"b2k"</span><span class="op">)</span>,
   iteration <span class="op">=</span> <span class="cn">NULL</span>
 <span class="op">)</span>
 
@@ -149,10 +149,9 @@ column, if any).</p></dd>
 <dt>ordered</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the <code>groups</code> be regarded as
 ordered (in the order given)?</p></dd>
-<dt>BP</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the data be converted from BP to
-BC/AD? This should not be <code>TRUE</code> unless you change the default settings in
-'OxCal' or 'ChronoModel'.</p></dd>
+<dt>calendar</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the chronological scale
+It must be one of "<code>BP</code>" (the default), "<code>CE</code>" or "<code>b2k</code>".</p></dd>
 <dt>iteration</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the index of the iteration column
 to be removed.</p></dd>
@@ -171,7 +170,6 @@ from <a href="https://chronomodel.com/" class="external-link">ChronoModel</a>.</
     <div class="dont-index"><p>Other phase tools: 
 <code><a href="boundaries.html">boundaries</a>()</code>,
 <code><a href="duration.html">duration</a>()</code>,
-<code><a href="hiatus.html">hiatus</a>()</code>,
 <code><a href="transition.html">transition</a>()</code></p></div>
     </div>
     <div class="section level2">
@@ -183,12 +181,13 @@ from <a href="https://chronomodel.com/" class="external-link">ChronoModel</a>.</
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Coerce to MCMC objects</span></span>
 <span class="r-in"><span class="co">## Events</span></span>
-<span class="r-in"><span class="op">(</span><span class="va">eve</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_events</a></span><span class="op">(</span><span class="va">events</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="op">(</span><span class="va">eve</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_events</a></span><span class="op">(</span><span class="va">events</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span>, calendar <span class="op">=</span> <span class="st">"CE"</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;EventsMCMC&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Number of events: 4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> - Calendar: BP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> - Calendar: CE</span>
 <span class="r-in"><span class="co">## Phases</span></span>
-<span class="r-in"><span class="op">(</span><span class="va">pha</span> <span class="op">&lt;-</span> <span class="fu">as_phases</span><span class="op">(</span><span class="va">phases</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span>, start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="op">(</span><span class="va">pha</span> <span class="op">&lt;-</span> <span class="fu">as_phases</span><span class="op">(</span><span class="va">phases</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span>, start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="st">"CE"</span>,</span>
+<span class="r-in">                  iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;PhasesMCMC&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Modelled phases: phase_1 phase_2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Calendar: CE</span>
@@ -199,16 +198,16 @@ from <a href="https://chronomodel.com/" class="external-link">ChronoModel</a>.</
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute min-max range by group</span></span>
 <span class="r-in"><span class="co">## Unless otherwise specified, the phases are assumed to be unordered</span></span>
-<span class="r-in"><span class="va">pha2</span> <span class="op">&lt;-</span> <span class="fu">phase</span><span class="op">(</span><span class="va">eve</span>, groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>, B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">pha2</span> <span class="op">&lt;-</span> <span class="fu">phase</span><span class="op">(</span><span class="va">eve</span>, groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>phase_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>, phase_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.html" class="external-link">all</a></span><span class="op">(</span><span class="va">pha</span> <span class="op">==</span> <span class="va">pha2</span><span class="op">)</span> <span class="co"># TRUE</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Set chronological order</span></span>
 <span class="r-in"><span class="co">## (from the oldest to the youngest phase)</span></span>
-<span class="r-in"><span class="fu">set_order</span><span class="op">(</span><span class="va">pha2</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"B"</span>, <span class="st">"A"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">set_order</span><span class="op">(</span><span class="va">pha2</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"phase_2"</span>, <span class="st">"phase_1"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">get_order</span><span class="op">(</span><span class="va">pha2</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "B" "A"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "phase_2" "phase_1"</span>
 <span class="r-in"><span class="fu">is_ordered</span><span class="op">(</span><span class="va">pha2</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 </code></pre></div>

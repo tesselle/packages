@@ -115,38 +115,38 @@ the HPD interval and associated probabilities.</p>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## CE</span></span>
 <span class="r-in"><span class="fu"><a href="credible.html">credible</a></span><span class="op">(</span><span class="va">eve</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># Credible interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1045.21 -202.337 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1979.81 -1613.59 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower   upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -809.057 -459.09 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1400.04 -1064.29 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CE"</span>
 <span class="r-in"><span class="fu">hpdi</span><span class="op">(</span><span class="va">eve</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># HPD interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          lower     upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1061.227 -193.7855 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          lower     upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1980.877 -1609.517 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower     upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -805.053 -451.8577 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          lower     upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1406.409 -1066.006 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -156,38 +156,38 @@ the HPD interval and associated probabilities.</p>
 <span class="r-in"><span class="co">## BP</span></span>
 <span class="r-in"><span class="va">eve_BP</span> <span class="op">&lt;-</span> <span class="fu"><a href="calendar.html">CE_to_BP</a></span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="credible.html">credible</a></span><span class="op">(</span><span class="va">eve_BP</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># Credible interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 2994.21 2151.337 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lower   upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3928.81 3562.59 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower   upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 2758.057 2408.09 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lower   upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3349.04 3013.29 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "BP"</span>
 <span class="r-in"><span class="fu">hpdi</span><span class="op">(</span><span class="va">eve_BP</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># HPD interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3010.227 2142.786 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3929.877 3558.517 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 2754.053 2400.858 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Event.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $E12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3355.409 3015.006 0.95</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>

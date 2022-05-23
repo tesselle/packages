@@ -58,14 +58,17 @@
 <div class="section level3">
 <h3 id="new-classes-and-methods-0-0-0-9000">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-0-0-0-9000"></a></h3>
 <ul><li><code><a href="../reference/apportion.html">apportion()</a></code></li>
+<li><code><a href="../reference/interpolate.html">interpolate()</a></code></li>
 <li>
 <code><a href="../reference/bind.html">bind()</a></code> allow to bind multiple <code>MCMC</code> objects.</li>
+<li><code><a href="../reference/proxy.html">proxy()</a></code></li>
+<li><code><a href="../reference/rec.html">rece()</a></code></li>
 <li>
 <code><a href="../reference/roc.html">roc()</a></code> allows to compute the rate of change from a tempo/activity plot (returns a <code>RateOfChange</code> object).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="enhancements-0-0-0-9000">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-0-0-0-9000"></a></h3>
-<ul><li>Support for both BP and CE time scales.</li></ul></div>
+<ul><li>Support for CE, BP and b2k time scales.</li></ul></div>
 <div class="section level3">
 <h3 id="bug-fixes--changes-0-0-0-9000">Bug fixes &amp; changes<a class="anchor" aria-label="anchor" href="#bug-fixes--changes-0-0-0-9000"></a></h3>
 <ul><li>Changement de l’estimation des intervalles HPD (<code>hdrcde::hdr()</code> -&gt; <code><a href="https://rdrr.io/r/stats/density.html" class="external-link">stats::density()</a></code>).</li></ul></div>
@@ -73,8 +76,14 @@
 <h3 id="breaking-changes-0-0-0-9000">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-0-0-0-9000"></a></h3>
 <ul><li>Full rewrite in S4.</li>
 <li>Remove the Shiny application.</li>
-</ul><table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr class="header"><th align="left">Old</th>
-<th align="left">New</th>
+</ul><table class="table"><thead><tr class="header"><th align="left">ArchaeoPhases 1.6</th>
+<th align="left">Chronos</th>
+</tr></thead><tbody><tr class="odd"><td align="left"><code>undated_sample()</code></td>
+<td align="left"><code><a href="../reference/interpolate.html">interpolate()</a></code></td>
+</tr><tr class="even"><td align="left"><code>undated_sample()</code></td>
+<td align="left"><code><a href="../reference/interpolate.html">interpolate()</a></code></td>
+</tr></tbody></table><table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr class="header"><th align="left">ArchaeoPhases 1.5</th>
+<th align="left">Chronos</th>
 </tr></thead><tbody><tr class="odd"><td align="left"><code>CreateMinMaxGroup()</code></td>
 <td align="left">
 <code>phase(&lt;MCMC&gt;)</code>, <code>as_phases(&lt;matrix&gt;)</code>
@@ -86,7 +95,7 @@
 </tr><tr class="odd"><td align="left">
 <code>DatesHiatus()</code>, <code>dates_hiatus()</code>
 </td>
-<td align="left"><code>lapse(&lt;numeric&gt;, &lt;numeric&gt;)</code></td>
+<td align="left"><code>hiatus(&lt;numeric&gt;, &lt;numeric&gt;)</code></td>
 </tr><tr class="even"><td align="left"><code>estimate_range()</code></td>
 <td align="left"><code>sensitivity(&lt;MCMC&gt;)</code></td>
 </tr><tr class="odd"><td align="left">

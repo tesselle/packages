@@ -103,7 +103,7 @@
     <loc>https://packages.tesselle.org/chronos/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/lapse.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/interpolate.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/mutator.html</loc>
@@ -136,7 +136,7 @@
     <loc>https://packages.tesselle.org/chronos/reference/read_oxcal.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/rece.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/rec.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/roc.html</loc>

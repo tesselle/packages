@@ -166,20 +166,20 @@ events.</p></li>
 <span class="r-in"><span class="co">## BP</span></span>
 <span class="r-in"><span class="va">eve_BP</span> <span class="op">&lt;-</span> <span class="fu"><a href="calendar.html">CE_to_BP</a></span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">eve_BP</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           mad mean  sd  min   q1 median   q3  max lower upper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.2  2849 2587 271 1954 2335   2607 2838 3298  2995  2151</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.1  3715 3734  99 2920 3668   3734 3806 3949  3930  3560</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.22 2651 2605  91 2016 2560   2621 2666 3178  2752  2399</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.12 3190 3185  86 2668 3130   3184 3238 3813  3350  3013</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      mad mean  sd  min   q1 median   q3  max lower upper</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E21 2849 2587 271 1954 2335   2607 2838 3298  2995  2151</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E11 3715 3734  99 2920 3668   3734 3806 3949  3930  3560</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E22 2651 2605  91 2016 2560   2621 2666 3178  2752  2399</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E12 3190 3185  86 2668 3130   3184 3238 3813  3350  3013</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## CE</span></span>
 <span class="r-in"><span class="va">eve_CE</span> <span class="op">&lt;-</span> <span class="fu"><a href="calendar.html">BP_to_CE</a></span><span class="op">(</span><span class="va">eve_BP</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">eve_CE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            mad  mean  sd   min    q1 median    q3  max lower upper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.2   -900  -638 271 -1349  -889   -658  -386   -5 -1046  -202</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.1  -1766 -1785  99 -2000 -1857  -1785 -1719 -971 -1981 -1611</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.22  -702  -656  91 -1229  -717   -672  -611  -67  -803  -450</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Event.12 -1241 -1236  86 -1864 -1289  -1235 -1181 -719 -1401 -1064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       mad  mean  sd   min    q1 median    q3  max lower upper</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E21  -900  -638 271 -1349  -889   -658  -386   -5 -1046  -202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E11 -1766 -1785  99 -2000 -1857  -1785 -1719 -971 -1981 -1611</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E22  -702  -656  91 -1229  -717   -672  -611  -67  -803  -450</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E12 -1241 -1236  86 -1864 -1289  -1235 -1181 -719 -1401 -1064</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot events</span></span>
 <span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">eve_CE</span>, interval <span class="op">=</span> <span class="st">"credible"</span>, level <span class="op">=</span> <span class="fl">0.68</span><span class="op">)</span></span>
