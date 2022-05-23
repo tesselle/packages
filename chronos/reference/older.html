@@ -116,16 +116,21 @@ probability of the assumption: "event <code>x</code> is older than event <code>y
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Test for anteriority</span></span>
 <span class="r-in"><span class="fu">older</span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     E21 E11    E22    E12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E21  NA   0 0.4925 0.0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E11  NA  NA 1.0000 0.9996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E22  NA  NA     NA 0.0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E12  NA  NA     NA     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        E1    E2     E3     E4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E1 0.0000 0e+00 0.4925 0.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E2 1.0000 0e+00 1.0000 0.9996</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E3 0.5075 0e+00 0.0000 0.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E4 1.0000 4e-04 1.0000 0.0000</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Test for hiatus</span></span>
-<span class="r-in"><span class="fu"><a href="hiatus.html">hiatus</a></span><span class="op">(</span><span class="va">eve</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span>, <span class="va">eve</span><span class="op">[</span>, <span class="fl">3</span><span class="op">]</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      lower      upper   duration </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -1603.7787  -803.1067   800.6721 </span>
+<span class="r-in"><span class="va">hia</span> <span class="op">&lt;-</span> <span class="fu"><a href="hiatus.html">hiatus</a></span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">hia</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           lower      upper  duration</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E2-E1 -1601.050 -1059.8006 541.24908</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E4-E1 -1062.599 -1045.3355  17.26366</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E2-E3 -1603.779  -803.1067 800.67205</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E4-E3 -1067.123  -793.8029 273.32032</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E2-E4 -1599.473 -1408.9400 190.53260</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
