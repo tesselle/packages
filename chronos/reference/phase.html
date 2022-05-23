@@ -186,7 +186,7 @@ from <a href="https://chronomodel.com/" class="external-link">ChronoModel</a>.</
 <span class="r-in"><span class="op">(</span><span class="va">eve</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_events</a></span><span class="op">(</span><span class="va">events</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;EventsMCMC&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Number of events: 4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> - Calendar: CE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> - Calendar: BP</span>
 <span class="r-in"><span class="co">## Phases</span></span>
 <span class="r-in"><span class="op">(</span><span class="va">pha</span> <span class="op">&lt;-</span> <span class="fu">as_phases</span><span class="op">(</span><span class="va">phases</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10000</span>, <span class="op">]</span>, start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;PhasesMCMC&gt;</span>
@@ -202,7 +202,7 @@ from <a href="https://chronomodel.com/" class="external-link">ChronoModel</a>.</
 <span class="r-in"><span class="va">pha2</span> <span class="op">&lt;-</span> <span class="fu">phase</span><span class="op">(</span><span class="va">eve</span>, groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>, B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.html" class="external-link">all</a></span><span class="op">(</span><span class="va">pha</span> <span class="op">==</span> <span class="va">pha2</span><span class="op">)</span> <span class="co"># TRUE</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Set chronological order</span></span>
 <span class="r-in"><span class="co">## (from the oldest to the youngest phase)</span></span>

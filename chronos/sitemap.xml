@@ -52,6 +52,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/ProxyRecord.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/RECE.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/RateOfChange.html</loc>
   </url>
   <url>
@@ -131,6 +134,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/read_oxcal.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/rece.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/roc.html</loc>
