@@ -134,10 +134,10 @@
 <code class="sourceCode R"><span class="co">## Read OxCal MCMC samples</span>
 <span class="va">output_oxcal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"oxcal/ksarakil/MCMC_Sample.csv"</span>, package <span class="op">=</span> <span class="st">"fasti"</span><span class="op">)</span>
 <span class="va">oxcal_mcmc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_oxcal.html">read_oxcal</a></span><span class="op">(</span><span class="va">output_oxcal</span><span class="op">)</span></code></pre></div>
-<p>The phase boundaries cannot be extracted automatically from Oxcal output. Use <code><a href="../reference/phase.html">as_phases()</a></code> to get the phase boundaries:</p>
+<p>The phase boundaries cannot be extracted automatically from Oxcal output. Use <code><a href="../reference/coerce.html">as_phases()</a></code> to get the phase boundaries:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Get phases boundaries from OxCal</span>
-<span class="va">oxcal_phases</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/phase.html">as_phases</a></span><span class="op">(</span><span class="va">oxcal_mcmc</span>,
+<span class="va">oxcal_phases</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_phases</a></span><span class="op">(</span><span class="va">oxcal_mcmc</span>,
                           start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">5</span>, <span class="fl">19</span>, <span class="fl">24</span><span class="op">)</span>,
                           stop <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">18</span>, <span class="fl">23</span>, <span class="fl">26</span><span class="op">)</span>,
                           names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"IUP"</span>, <span class="st">"Ahmarian"</span>, <span class="st">"UP"</span>, <span class="st">"EPI"</span><span class="op">)</span><span class="op">)</span>
@@ -162,10 +162,10 @@
 <code class="sourceCode R"><span class="co">## Read BCal MCMC samples</span>
 <span class="va">output_bcal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"bcal/output/rawmcmc.csv"</span>, package <span class="op">=</span> <span class="st">"fasti"</span><span class="op">)</span>
 <span class="va">bcal_mcmc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_bcal.html">read_bcal</a></span><span class="op">(</span><span class="va">output_bcal</span><span class="op">)</span></code></pre></div>
-<p>The group boundaries cannot be extracted automatically from BCal output. Use <code><a href="../reference/phase.html">as_phases()</a></code> to get the group boundaries:</p>
+<p>The group boundaries cannot be extracted automatically from BCal output. Use <code><a href="../reference/coerce.html">as_phases()</a></code> to get the group boundaries:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Get groups boundaries from BCal</span>
-<span class="va">bcal_phases</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/phase.html">as_phases</a></span><span class="op">(</span><span class="va">bcal_mcmc</span>,
+<span class="va">bcal_phases</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_phases</a></span><span class="op">(</span><span class="va">bcal_mcmc</span>,
                          start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">9</span>, <span class="fl">22</span><span class="op">)</span>,
                          stop <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">8</span>, <span class="fl">21</span>, <span class="fl">24</span><span class="op">)</span>,
                          names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"EPI"</span>, <span class="st">"UP"</span>, <span class="st">"Ahmarian"</span>, <span class="st">"IUP"</span><span class="op">)</span><span class="op">)</span>
