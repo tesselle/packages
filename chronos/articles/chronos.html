@@ -88,7 +88,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Manual</h1>
                         <h4 data-toc-skip class="author">A. Philippe, M.-A. Vibet</h4>
             
-            <h4 data-toc-skip class="date">2022-05-19</h4>
+            <h4 data-toc-skip class="date">2022-05-24</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/vignettes/chronos.Rmd" class="external-link"><code>vignettes/chronos.Rmd</code></a></small>
       <div class="d-none name"><code>chronos.Rmd</code></div>
@@ -263,11 +263,11 @@
 <p>The following code gives the endpoints of the time range of all groups of dates of Ksar Akil data at a given confidence level.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/boundaries.html">boundaries</a></span><span class="op">(</span><span class="va">chrono_groups</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
-<span class="co">#&gt;           start    end</span>
-<span class="co">#&gt; EPI      -28979 -26970</span>
-<span class="co">#&gt; UP       -38570 -29369</span>
-<span class="co">#&gt; Ahmarian -42168 -37433</span>
-<span class="co">#&gt; IUP      -43240 -41161</span></code></pre></div>
+<span class="co">#&gt;              lower     upper</span>
+<span class="co">#&gt; EPI      -28978.53 -26969.82</span>
+<span class="co">#&gt; UP       -38570.37 -29368.75</span>
+<span class="co">#&gt; Ahmarian -42168.47 -37433.31</span>
+<span class="co">#&gt; IUP      -43240.37 -41161.00</span></code></pre></div>
 <p>The time range interval of the group of dates is a way to summarize the estimation of its minimum, the estimation of its maximum and their uncertainties at the same time.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">chrono_groups</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
@@ -277,35 +277,77 @@
 <h3 id="succession-of-groups">Succession of groups<a class="anchor" aria-label="anchor" href="#succession-of-groups"></a>
 </h3>
 <p>We may also be interested in a succession of phases. This is actually the case of the succession of <em>IUP</em>, <em>Ahmarian</em>, <em>UP</em> and <em>EPI</em> that are in stratigraphic order. Hence, we can estimate the transition interval and, if it exists, the gap between these successive phases.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">set_order</span><span class="op">(</span><span class="va">chrono_groups</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"IUP"</span>, <span class="st">"Ahmarian"</span>, <span class="st">"UP"</span>, <span class="st">"EPI"</span><span class="op">)</span>
-<span class="fu"><a href="../reference/phase.html">get_order</a></span><span class="op">(</span><span class="va">chrono_groups</span><span class="op">)</span>
-<span class="co">#&gt; [1] "IUP"      "Ahmarian" "UP"       "EPI"</span></code></pre></div>
 <div class="section level4">
 <h4 id="transistions-between-successive-groups">Transistions between successive groups<a class="anchor" aria-label="anchor" href="#transistions-between-successive-groups"></a>
 </h4>
 <p>The transition interval between two successive phases is the shortest interval that covers the end of the oldest group of dates and the start of the youngest group of dates. The start and the end are estimated by the minimum and the maximum of the dates included in the group of dates. It gives an idea of the transition period between two successive group of dates. From a computational point of view this is equivalent to the time range calculated between the end of the oldest group of dates and the start of the youngest group of dates.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/transition.html">transition</a></span><span class="op">(</span><span class="va">chrono_groups</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
-<span class="co">#&gt;               start    end</span>
-<span class="co">#&gt; IUP-Ahmarian -43212 -40734</span>
-<span class="co">#&gt; Ahmarian-UP  -39118 -36741</span>
-<span class="co">#&gt; UP-EPI       -31480 -26905</span></code></pre></div>
+<span class="co">#&gt; An object of class "TimeRange"</span>
+<span class="co">#&gt; Slot "lower":</span>
+<span class="co">#&gt;                EPI        UP  Ahmarian IUP</span>
+<span class="co">#&gt; EPI             NA        NA        NA  NA</span>
+<span class="co">#&gt; UP       -31479.80        NA        NA  NA</span>
+<span class="co">#&gt; Ahmarian -39138.82 -39118.07        NA  NA</span>
+<span class="co">#&gt; IUP      -43487.53 -43395.89 -43212.31  NA</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "upper":</span>
+<span class="co">#&gt;                EPI        UP  Ahmarian IUP</span>
+<span class="co">#&gt; EPI             NA        NA        NA  NA</span>
+<span class="co">#&gt; UP       -26905.04        NA        NA  NA</span>
+<span class="co">#&gt; Ahmarian -27122.05 -36741.08        NA  NA</span>
+<span class="co">#&gt; IUP      -26866.99 -36480.26 -40733.77  NA</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "names":</span>
+<span class="co">#&gt;          EPI            UP            Ahmarian            IUP           </span>
+<span class="co">#&gt; EPI      "EPI-EPI"      "EPI-UP"      "EPI-Ahmarian"      "EPI-IUP"     </span>
+<span class="co">#&gt; UP       "UP-EPI"       "UP-UP"       "UP-Ahmarian"       "UP-IUP"      </span>
+<span class="co">#&gt; Ahmarian "Ahmarian-EPI" "Ahmarian-UP" "Ahmarian-Ahmarian" "Ahmarian-IUP"</span>
+<span class="co">#&gt; IUP      "IUP-EPI"      "IUP-UP"      "IUP-Ahmarian"      "IUP-IUP"     </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "calendar":</span>
+<span class="co">#&gt; [1] "CE"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "hash":</span>
+<span class="co">#&gt; [1] "496feac16967682860342e99fbd5189d"</span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="gap-between-successive-groups">Gap between successive groups<a class="anchor" aria-label="anchor" href="#gap-between-successive-groups"></a>
 </h4>
 <p>Successive phases may also be separated in time. Indeed there may exist a gap between them. This testing procedure check whether a gap exists between two successive groups of dates with fixed probability. If a gap exists, it is an interval that covers the end of one group of dates and the start of the successive one with fixed posterior probability.</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/hiatus.html">hiatus</a></span><span class="op">(</span><span class="va">chrono_groups</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
-<span class="co">#&gt;               start    end</span>
-<span class="co">#&gt; IUP-Ahmarian     NA     NA</span>
-<span class="co">#&gt; Ahmarian-UP      NA     NA</span>
-<span class="co">#&gt; UP-EPI       -29189 -28962</span></code></pre></div>
+<span class="co">#&gt; An object of class "TimeRange"</span>
+<span class="co">#&gt; Slot "lower":</span>
+<span class="co">#&gt;                EPI        UP Ahmarian IUP</span>
+<span class="co">#&gt; EPI             NA        NA       NA  NA</span>
+<span class="co">#&gt; UP       -29188.56        NA       NA  NA</span>
+<span class="co">#&gt; Ahmarian -37368.33        NA       NA  NA</span>
+<span class="co">#&gt; IUP      -41220.64 -41282.64       NA  NA</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "upper":</span>
+<span class="co">#&gt;                EPI        UP Ahmarian IUP</span>
+<span class="co">#&gt; EPI             NA        NA       NA  NA</span>
+<span class="co">#&gt; UP       -28961.79        NA       NA  NA</span>
+<span class="co">#&gt; Ahmarian -28884.37        NA       NA  NA</span>
+<span class="co">#&gt; IUP      -28814.70 -38421.49       NA  NA</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "names":</span>
+<span class="co">#&gt;          EPI            UP            Ahmarian            IUP           </span>
+<span class="co">#&gt; EPI      "EPI-EPI"      "EPI-UP"      "EPI-Ahmarian"      "EPI-IUP"     </span>
+<span class="co">#&gt; UP       "UP-EPI"       "UP-UP"       "UP-Ahmarian"       "UP-IUP"      </span>
+<span class="co">#&gt; Ahmarian "Ahmarian-EPI" "Ahmarian-UP" "Ahmarian-Ahmarian" "Ahmarian-IUP"</span>
+<span class="co">#&gt; IUP      "IUP-EPI"      "IUP-UP"      "IUP-Ahmarian"      "IUP-IUP"     </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "calendar":</span>
+<span class="co">#&gt; [1] "CE"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Slot "hash":</span>
+<span class="co">#&gt; [1] "496feac16967682860342e99fbd5189d"</span></code></pre></div>
 <p>At a confidence level of 95%, there is no gap between the succession of phases <em>IUP</em>, <em>Ahmarian</em> and <em>UP</em>, but there exists one of 203 years between phase <em>UP</em> and phase <em>EPI</em>.</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">chrono_groups</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
-<p><img src="figures/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">chrono_groups</span>, range <span class="op">=</span> <span class="st">"hiatus"</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+<p><img src="figures/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;"></p>
 </div>
 </div>
 </div>

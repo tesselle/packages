@@ -92,19 +92,12 @@
   <span class="va">...</span>,
   level <span class="op">=</span> <span class="fl">0.95</span>,
   decreasing <span class="op">=</span> <span class="cn">TRUE</span>,
-  succession <span class="op">=</span> <span class="fu"><a href="phase.html">is_ordered</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span>,
+  range <span class="op">=</span> <span class="cn">NULL</span>,
   facet <span class="op">=</span> <span class="cn">TRUE</span>
 <span class="op">)</span>
 
 <span class="co"># S4 method for PhasesMCMC,missing</span>
-<span class="fu">plot</span><span class="op">(</span>
-  <span class="va">x</span>,
-  level <span class="op">=</span> <span class="fl">0.95</span>,
-  decreasing <span class="op">=</span> <span class="cn">TRUE</span>,
-  succession <span class="op">=</span> <span class="fu"><a href="phase.html">is_ordered</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,
-  facet <span class="op">=</span> <span class="cn">TRUE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, level <span class="op">=</span> <span class="fl">0.95</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span>, range <span class="op">=</span> <span class="cn">NULL</span>, facet <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -129,9 +122,10 @@ given. If <code>NULL</code> (the default) no interval is computed.</p></dd>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
 <dt>decreasing</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the sort order be decreasing?</p></dd>
-<dt>succession</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should time ranges be plotted instead
-of densities?</p></dd>
+<dt>range</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the additional time range to
+be displayed. It must be one of "<code>hiatus</code>" or "<code>transition</code>". If <code>NULL</code> (the
+default), no additional time ranges are displayed.</p></dd>
 <dt>facet</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a matrix of panels defined by phase
 be drawn?</p></dd>
@@ -190,7 +184,7 @@ events.</p></li>
 <span class="r-plt img"><img src="plot-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Compute phases</span></span>
-<span class="r-in"><span class="va">pha</span> <span class="op">&lt;-</span> <span class="fu"><a href="phase.html">phase</a></span><span class="op">(</span><span class="va">eve</span>, groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span>, A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>, ordered <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">pha</span> <span class="op">&lt;-</span> <span class="fu"><a href="phase.html">phase</a></span><span class="op">(</span><span class="va">eve</span>, groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span>, A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">pha</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $B</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            mad  mean  sd   min    q1 median    q3   max lower upper</span>
@@ -206,10 +200,12 @@ events.</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot phases</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">pha</span>, succession <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">pha</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">pha</span>, succession <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">pha</span>, range <span class="op">=</span> <span class="st">"hiatus"</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot-4.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">pha</span>, range <span class="op">=</span> <span class="st">"transition"</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="plot-5.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
