@@ -90,14 +90,23 @@
 <span class="fu">autoplot</span><span class="op">(</span>
   <span class="va">object</span>,
   <span class="va">...</span>,
+  select <span class="op">=</span> <span class="cn">NULL</span>,
   level <span class="op">=</span> <span class="fl">0.95</span>,
-  decreasing <span class="op">=</span> <span class="cn">TRUE</span>,
   range <span class="op">=</span> <span class="cn">NULL</span>,
+  decreasing <span class="op">=</span> <span class="cn">TRUE</span>,
   facet <span class="op">=</span> <span class="cn">TRUE</span>
 <span class="op">)</span>
 
 <span class="co"># S4 method for PhasesMCMC,missing</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, level <span class="op">=</span> <span class="fl">0.95</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span>, range <span class="op">=</span> <span class="cn">NULL</span>, facet <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+<span class="fu">plot</span><span class="op">(</span>
+  <span class="va">x</span>,
+  select <span class="op">=</span> <span class="cn">NULL</span>,
+  level <span class="op">=</span> <span class="fl">0.95</span>,
+  range <span class="op">=</span> <span class="cn">NULL</span>,
+  decreasing <span class="op">=</span> <span class="cn">TRUE</span>,
+  facet <span class="op">=</span> <span class="cn">TRUE</span>,
+  <span class="va">...</span>
+<span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -206,6 +215,7 @@ events.</p></li>
 <span class="r-plt img"><img src="plot-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">pha</span>, range <span class="op">=</span> <span class="st">"transition"</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="plot-5.png" alt="" width="700" height="433"></span>
+<span class="r-in"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
