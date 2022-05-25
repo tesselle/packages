@@ -37,6 +37,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/ActivityEvents.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/AgeDepthModel.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/CumulativeEvents.html</loc>
   </url>
   <url>
@@ -71,6 +74,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/boundaries.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/bury.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/calendar.html</loc>

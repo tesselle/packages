@@ -63,7 +63,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric</span>
-<span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, BP <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span>
+<span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, CE <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for MCMC</span>
 <span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
@@ -78,10 +78,8 @@ output of the MCMC algorithm for the parameter.</p></dd>
 <dd><p>Extra arguments to be passed to <code><a href="https://rdrr.io/r/stats/density.html" class="external-link">stats::density()</a></code>.</p></dd>
 <dt>level</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
-<dt>BP</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the data be converted from BP to
-BC/AD? This should not be <code>TRUE</code> unless you change the default settings in
-'OxCal' or 'ChronoModel'.</p></dd>
+<dt>CE</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: are the data expressed in BC/AD years?</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>

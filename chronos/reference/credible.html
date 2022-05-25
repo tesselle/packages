@@ -66,7 +66,7 @@ for a single parameter.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">credible</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric</span>
-<span class="fu">credible</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, BP <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span>
+<span class="fu">credible</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, CE <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for MCMC</span>
 <span class="fu">credible</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
@@ -81,10 +81,8 @@ output of the MCMC algorithm for the parameter.</p></dd>
 <dd><p>Currently not used.</p></dd>
 <dt>level</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
-<dt>BP</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the data be converted from BP to
-BC/AD? This should not be <code>TRUE</code> unless you change the default settings in
-'OxCal' or 'ChronoModel'.</p></dd>
+<dt>CE</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: are the data expressed in BC/AD years?</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -93,10 +91,10 @@ the credible interval and associated probabilities.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>A \((100 \times level)\)\<!-- % credible interval is an interval -->
+    <p>A \((100 \times level)\) % credible interval is an interval
 that keeps \(N \times (1 - level)\) elements of the
 sample outside the interval.</p>
-<p>The \((100 \times level)\)\<!-- % credible interval is the -->
+<p>The \((100 \times level)\) % credible interval is the
 shortest of all those intervals.</p>
 <p>For instance, the 95% credible interval is the central portion of the
 posterior distribution that contains 95% of the values.</p>
