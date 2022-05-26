@@ -100,7 +100,7 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p><strong>chronos</strong> provides a list of functions for the statistical analysis of archaeological dates and groups of dates. It is based on the post-processing of the Markov Chains whose stationary distribution is the posterior distribution of a series of dates. Such MCMC output can be simulated by different applications as for instance <a href="https://chronomodel.com/" class="external-link">ChronoModel</a> <span class="citation">(Lanos et al. 2020)</span>, <a href="https://c14.arch.ox.ac.uk/oxcal.html" class="external-link">Oxcal</a> <span class="citation">(Bronk Ramsey 2009)</span> or <a href="https://bcal.shef.ac.uk/" class="external-link">BCal</a> <span class="citation">(Buck, Christen, and James 1999)</span>. The only requirement is to have a CSV file containing a sample from the posterior distribution.</p>
+<p><strong>chronos</strong> provides a list of functions for the statistical analysis of archaeological dates and groups of dates. It is based on the post-processing of the Markov Chains whose stationary distribution is the posterior distribution of a series of dates. Such MCMC output can be simulated by different applications as for instance <a href="https://chronomodel.com/" class="external-link">ChronoModel</a> <span class="citation">(<span class="citeproc-not-found" data-reference-id="lanos2020"><strong>???</strong></span>)</span>, <a href="https://c14.arch.ox.ac.uk/oxcal.html" class="external-link">Oxcal</a> <span class="citation">(Bronk Ramsey 2009)</span> or <a href="https://bcal.shef.ac.uk/" class="external-link">BCal</a> <span class="citation">(<span class="citeproc-not-found" data-reference-id="buck1999"><strong>???</strong></span>)</span>. The only requirement is to have a CSV file containing a sample from the posterior distribution.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Load packages</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/chronos/">chronos</a></span><span class="op">)</span>
@@ -216,7 +216,7 @@
 <div class="section level3">
 <h3 id="tempo-plot">Tempo Plot<a class="anchor" aria-label="anchor" href="#tempo-plot"></a>
 </h3>
-<p>The tempo plot has been introduced by <span class="citation">Dye (2016)</span>. See <span class="citation">Philippe and Vibet (2020)</span> for more statistical details.</p>
+<p>The tempo plot has been introduced by <span class="citation">(<span class="citeproc-not-found" data-reference-id="dye2016"><strong>???</strong></span>)</span>. See <span class="citation">Philippe and Vibet (2020)</span> for more statistical details.</p>
 <p>The tempo plot is one way to measure change over time: it estimates the cumulative occurrence of archaeological events in a Bayesian calibration. The tempo plot yields a graphic where the slope of the plot directly reflects the pace of change: a period of rapid change yields a steep slope and a period of slow change yields a gentle slope. When there is no change, the plot is horizontal. When change is instantaneous, the plot is vertical.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Warning: this may take a few seconds</span>
@@ -357,25 +357,16 @@
 </h2>
 <div id="refs" class="references">
 <div id="ref-bosch2015">
-<p>Bosch, M. D., M. A. Mannino, A. L. Prendergast, T. C. O’Connell, B. Demarchi, S. M. Taylor, L. Niven, J. van der Plicht, and J.-J. Hublin. 2015. “New Chronology for Ksâr ’Akil (Lebanon) Supports Levantine Route of Modern Human Dispersal into Europe.” <em>Proceedings of the National Academy of Sciences</em> 112 (25): 7683–8. <a href="https://doi.org/10.1073/pnas.1501529112" class="external-link">https://doi.org/10.1073/pnas.1501529112</a>.</p>
+<p>Bosch, Marjolein D., Marcello A. Mannino, Amy L. Prendergast, Tamsin C. O’Connell, Beatrice Demarchi, Sheila M. Taylor, Laura Niven, Johannes van der Plicht, and Jean-Jacques Hublin. 2015. “New Chronology for Ksâr ‘Akil (Lebanon) Supports Levantine Route of Modern Human Dispersal into Europe.” <em>Proceedings of the National Academy of Sciences</em> 112 (25): 7683–8. <a href="https://doi.org/10.1073/pnas.1501529112" class="external-link">https://doi.org/10.1073/pnas.1501529112</a>.</p>
 </div>
 <div id="ref-bronkramsey2009">
-<p>Bronk Ramsey, C. 2009. “Bayesian Analysis of Radiocarbon Dates.” <em>Radiocarbon</em> 51 (1): 337–60. <a href="https://doi.org/10.1017/S0033822200033865" class="external-link">https://doi.org/10.1017/S0033822200033865</a>.</p>
-</div>
-<div id="ref-buck1999">
-<p>Buck, C. E., J. A. Christen, and G. E. James. 1999. “BCal: An on-Line Bayesian Radiocarbon Calibration Tool.” <em>Internet Archaeology</em> 7. <a href="https://doi.org/10.11141/ia.7.1" class="external-link">https://doi.org/10.11141/ia.7.1</a>.</p>
-</div>
-<div id="ref-dye2016">
-<p>Dye, T. S. 2016. “Long-Term Rhythms in the Development of Hawaiian Social Stratification.” <em>Journal of Archaeological Science</em> 71: 1–9. <a href="https://doi.org/10.1016/j.jas.2016.05.006" class="external-link">https://doi.org/10.1016/j.jas.2016.05.006</a>.</p>
-</div>
-<div id="ref-lanos2020">
-<p>Lanos, Ph., A. Philippe, H. Lanos, and Ph. Dufresne. 2020. <em>Chronomodel: Chronological Modeling of Archaeological Data Using Bayesian Statistics</em>. <a href="https://www.chronomodel.fr" class="external-link">https://www.chronomodel.fr</a>.</p>
+<p>Bronk Ramsey, Christopher. 2009. “Bayesian Analysis of Radiocarbon Dates.” <em>Radiocarbon</em> 51 (1): 337–60. <a href="https://doi.org/10.1017/S0033822200033865" class="external-link">https://doi.org/10.1017/S0033822200033865</a>.</p>
 </div>
 <div id="ref-philippe2020">
-<p>Philippe, A., and M.-A. Vibet. 2020. “Analysis of Archaeological Phases Using the R Package Archaeophases.” <em>Journal of Statistical Software, Code Snippets</em> 93 (1): 1–25. <a href="https://doi.org/10.18637/jss.v093.c01" class="external-link">https://doi.org/10.18637/jss.v093.c01</a>.</p>
+<p>Philippe, Anne, and Marie-Anne Vibet. 2020. “Analysis of Archaeological Phases Using the R Package ArchaeoPhases.” <em>Journal of Statistical Software</em> 93 (Code Snippet 1). <a href="https://doi.org/10.18637/jss.v093.c01" class="external-link">https://doi.org/10.18637/jss.v093.c01</a>.</p>
 </div>
 <div id="ref-robert2010">
-<p>Robert, C. P., and G. Casella. 2010. <em>Introducing Monte Carlo Methods with R</em>. Use R! New York: Springer.</p>
+<p>Robert, Christian P., and George Casella. 2010. <em>Introducing Monte Carlo Methods with R</em>. Use R! New York: Springer.</p>
 </div>
 </div>
 </div>

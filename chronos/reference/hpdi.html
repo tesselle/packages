@@ -67,7 +67,7 @@
 <span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, CE <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for MCMC</span>
-<span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+<span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -81,11 +81,15 @@ output of the MCMC algorithm for the parameter.</p></dd>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
 <dt>CE</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: are the data expressed in BC/AD years?</p></dd>
+<dt>simplify</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the results should be
+simplified?</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> of <code>numeric</code><code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> giving the lower and upper boundaries of
-the HPD interval and associated probabilities.</p>
+    <p>If <code>simplify</code> is <code>TRUE</code> (the default), returns a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> giving the
+lower and upper boundaries of the HPD interval and associated
+probabilities. Else, returns a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> of <code>numeric</code><code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code>.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -114,84 +118,33 @@ the HPD interval and associated probabilities.</p>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## CE</span></span>
 <span class="r-in"><span class="fu"><a href="credible.html">credible</a></span><span class="op">(</span><span class="va">eve</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># Credible interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1045.21 -202.337 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1979.81 -1613.59 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower   upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -809.057 -459.09 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1400.04 -1064.29 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CE"</span>
-<span class="r-in"><span class="fu">hpdi</span><span class="op">(</span><span class="va">eve</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># HPD interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          lower     upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1061.227 -193.7855 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          lower     upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1980.877 -1609.517 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower     upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -805.053 -451.8577 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          lower     upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -1406.409 -1066.006 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name     lower     upper    p</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   E1 -1045.210  -202.337 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   E2 -1979.810 -1613.590 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   E3  -809.057  -459.090 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   E4 -1400.040 -1064.290 0.95</span>
+<span class="r-in"><span class="fu">hpdi</span><span class="op">(</span><span class="va">eve</span>, level <span class="op">=</span> <span class="fl">0.68</span><span class="op">)</span> <span class="co"># HPD interval</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name      lower      upper    p</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   E1 -1009.3026  -774.1160 0.35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   E1  -490.0595  -257.9273 0.33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   E2 -1891.7506 -1690.3908 0.68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   E3  -757.2008  -604.5292 0.68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   E4 -1311.7275 -1149.4158 0.68</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## BP</span></span>
 <span class="r-in"><span class="va">eve_BP</span> <span class="op">&lt;-</span> <span class="fu"><a href="calendar.html">CE_to_BP</a></span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="credible.html">credible</a></span><span class="op">(</span><span class="va">eve_BP</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># Credible interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 2994.21 2151.337 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        lower   upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3928.81 3562.59 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower   upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 2758.057 2408.09 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        lower   upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3349.04 3013.29 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "BP"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name    lower    upper    p</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   E1 2994.210 2151.337 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   E2 3928.810 3562.590 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   E3 2758.057 2408.090 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   E4 3349.040 3013.290 0.95</span>
 <span class="r-in"><span class="fu">hpdi</span><span class="op">(</span><span class="va">eve_BP</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span> <span class="co"># HPD interval</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3010.227 2142.786 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3929.877 3558.517 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 2754.053 2400.858 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $E4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         lower    upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 3355.409 3015.006 0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "BP"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name    lower    upper    p</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   E1 3010.227 2142.786 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   E2 3929.877 3558.517 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   E3 2754.053 2400.858 0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   E4 3355.409 3015.006 0.95</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
