@@ -64,7 +64,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rece</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for EventsMCMC</span>
-<span class="fu">rece</span><span class="op">(</span><span class="va">object</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span>
+<span class="fu">rece</span><span class="op">(</span><span class="va">object</span>, resolution <span class="op">=</span> <span class="fl">1</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span>
 
 <span class="co"># S4 method for RECE</span>
 <span class="fu">autoplot</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
@@ -79,6 +79,10 @@
 <dd><p>An <code><a href="MCMC.html">EventsMCMC</a></code> object.</p></dd>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
+<dt>resolution</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the temporal
+resolution. It should be a power of ten, eg. \(1\) (the default; annual
+resolution) or \(10\) (decennial resolution).</p></dd>
 <dt>n</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of item to choose randomly.</p></dd>
 <dt>x, y</dt>
