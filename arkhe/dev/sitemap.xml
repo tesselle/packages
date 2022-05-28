@@ -82,6 +82,9 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/jackknife.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/mutators.html</loc>
   </url>
   <url>
@@ -110,6 +113,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/replace.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/resample.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/subset.html</loc>
