@@ -66,7 +66,10 @@
 <span class="co"># S4 method for numeric,numeric</span>
 <span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
-<span class="co"># S4 method for CountMatrix,numeric</span>
+<span class="co"># S4 method for data.frame,numeric</span>
+<span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+
+<span class="co"># S4 method for matrix,numeric</span>
 <span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span>
 
 <span class="co"># S4 method for MeanDate</span>
@@ -85,10 +88,11 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector, a <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">arkhe::CountMatrix</a> or a
-<a href="MeanDate-class.html">MeanDate</a> object.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector, an \(m \times p\) <code>numeric</code>
+<code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
 <dt>dates</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates expressed in CE years (BCE years
+must be given as negative numbers).</p></dd>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
 <dt>na.rm</dt>
@@ -131,6 +135,12 @@ upper and lower boundaries of the confidence interval associated with each
 MCD are then returned.</p>
     </div>
     <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    <p>All results are rounded to zero decimal places (sub-annual precision does
+not make sense in most situations). You can change this behavior with
+<code>options(kairos.precision = x)</code> (for <code>x</code> decimal places).</p>
+    </div>
+    <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>South, S. A. (1977). <em>Method and Theory in Historical Archaeology</em>.
 New York: Academic Press.</p>
@@ -151,7 +161,6 @@ New York: Academic Press.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Mean Ceramic Date</span></span>
 <span class="r-in"><span class="co">## Coerce the zuni dataset to an abundance (count) matrix</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Set the start and end dates for each ceramic type</span></span>
 <span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -167,7 +176,7 @@ New York: Academic Press.</p>
 <span class="r-in"><span class="va">mid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">vapply</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">dates</span>, FUN <span class="op">=</span> <span class="va">mean</span>, FUN.VALUE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate MCD</span></span>
-<span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu">mcd</span><span class="op">(</span><span class="va">counts</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu">mcd</span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1162   1138   1154   1091   1092    841 </span>
@@ -179,13 +188,13 @@ New York: Academic Press.</p>
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         min      mean  max     lower     upper     Q25    Q50     Q75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1130 1157.7000 1200 1151.4755 1163.9245 1145.00 1158.0 1166.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1076 1135.0000 1184 1124.8769 1145.1231 1119.75 1139.5 1151.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1085 1162.6000 1221 1151.7623 1173.4377 1143.50 1162.0 1184.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1084 1091.7667 1100 1090.4268 1093.1065 1088.00 1091.0 1094.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1020 1108.0000 1194 1090.2119 1125.7881 1073.00 1101.5 1138.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  829.0333  945  808.3114  849.7553  789.00  841.0  841.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         min   mean  max     lower     upper     Q25    Q50     Q75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1136 1163.1 1183 1157.5093 1168.6907 1153.00 1162.0 1177.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1062 1131.0 1192 1119.3188 1142.6812 1114.25 1129.0 1153.75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1104 1151.0 1208 1141.3785 1160.6215 1134.75 1150.5 1163.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1081 1089.9 1097 1088.4948 1091.3052 1088.00 1091.0 1093.25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1002 1104.3 1194 1083.7171 1124.8829 1066.00 1115.0 1151.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  858.4  996  832.8286  883.9714  841.00  841.0  893.00</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>

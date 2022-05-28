@@ -82,19 +82,22 @@ accumulation dates of an assemblage.</p></li>
 
 <span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for CountMatrix,numeric</span>
+<span class="co"># S4 method for data.frame,numeric</span>
+<span class="fu">event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span>
+
+<span class="co"># S4 method for matrix,numeric</span>
 <span class="fu">event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for EventDate,missing</span>
 <span class="fu">predict_event</span><span class="op">(</span><span class="va">object</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
 
-<span class="co"># S4 method for EventDate,CountMatrix</span>
+<span class="co"># S4 method for EventDate,matrix</span>
 <span class="fu">predict_event</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>
 
 <span class="co"># S4 method for EventDate,missing</span>
 <span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span><span class="op">)</span>
 
-<span class="co"># S4 method for EventDate,CountMatrix</span>
+<span class="co"># S4 method for EventDate,matrix</span>
 <span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span><span class="op">)</span>
 
 <span class="co"># S4 method for EventDate</span>
@@ -114,15 +117,17 @@ accumulation dates of an assemblage.</p></li>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">arkhe::CountMatrix</a> or a <a href="EventDate-class.html">EventDate</a> object.</p></dd>
+<dd><p>An \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a
+<code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
 <dt>dates</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates. If named, the names must match
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates expressed in CE years (BCE years
+must be given as negative numbers). If named, the names must match
 the row names of <code>object</code>.</p></dd>
 <dt>...</dt>
 <dd><p>Further arguments to be passed to internal methods.</p></dd>
 <dt>data</dt>
-<dd><p>A <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">arkhe::CountMatrix</a> object for which to predict event
-and accumulation dates.</p></dd>
+<dd><p>A <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data
+(absolute frequencies)for which to predict event and accumulation dates.</p></dd>
 <dt>cutoff</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the cumulative percentage of variance
 used to select CA factorial components for linear model fitting (see
@@ -170,7 +175,10 @@ of the long term.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>Bellanger <em>et al.</em> did not publish the data supporting their demonstration:
+    <p>All results are rounded to zero decimal places (sub-annual precision does
+not make sense in most situations). You can change this behavior with
+<code>options(kairos.precision = x)</code> (for <code>x</code> decimal places).</p>
+<p>Bellanger <em>et al.</em> did not publish the data supporting their demonstration:
 no replication of their results is possible. This implementation must be
 considered <strong>experimental</strong> and subject to major changes in a future
 release.</p>

@@ -63,7 +63,7 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">apportion</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
-<span class="co"># S4 method for matrix</span>
+<span class="co"># S4 method for data.frame</span>
 <span class="fu">apportion</span><span class="op">(</span>
   <span class="va">object</span>,
   <span class="va">s0</span>,
@@ -78,13 +78,15 @@
   progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"kairos.progress"</span><span class="op">)</span>
 <span class="op">)</span>
 
-<span class="co"># S4 method for CountMatrix</span>
+<span class="co"># S4 method for matrix</span>
 <span class="fu">apportion</span><span class="op">(</span>
   <span class="va">object</span>,
+  <span class="va">s0</span>,
+  <span class="va">s1</span>,
   <span class="va">t0</span>,
   <span class="va">t1</span>,
-  from <span class="op">=</span> <span class="cn">NULL</span>,
-  to <span class="op">=</span> <span class="cn">NULL</span>,
+  from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">s0</span><span class="op">)</span>,
+  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">s1</span><span class="op">)</span>,
   step <span class="op">=</span> <span class="fl">25</span>,
   method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"uniform"</span>, <span class="st">"truncated"</span><span class="op">)</span>,
   z <span class="op">=</span> <span class="fl">2</span>,
@@ -95,21 +97,22 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>An \(m \times p\) <a href="https://packages.tesselle.org/arkhe/reference/CountMatrix-class.html" class="external-link">arkhe::CountMatrix</a> object.</p></dd>
+<dd><p>An \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a
+<code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
 <dt>s0</dt>
 <dd><p>A length-\(m\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the site beginning dates
-(in years CE).</p></dd>
+expressed in CE years (BCE years must be given as negative numbers).</p></dd>
 <dt>s1</dt>
 <dd><p>A length-\(m\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the site end dates
-(in years CE).</p></dd>
+expressed in CE years (BCE years must be given as negative numbers).</p></dd>
 <dt>t0</dt>
 <dd><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the type beginning dates
-(in years CE).</p></dd>
+expressed in CE years (BCE years must be given as negative numbers).</p></dd>
 <dt>t1</dt>
 <dd><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the type end dates
-(in years CE).</p></dd>
+expressed in CE years (BCE years must be given as negative numbers).</p></dd>
 <dt>from</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the beginning of the
 period of interest (in years CE).</p></dd>

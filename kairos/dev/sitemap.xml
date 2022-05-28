@@ -55,6 +55,9 @@
     <loc>https://packages.tesselle.org/kairos/dev/reference/RateOfChange-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/RefineCA-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/aoristic.html</loc>
   </url>
   <url>
@@ -92,9 +95,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/plot_time.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kairos/dev/reference/reexports.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/roc.html</loc>

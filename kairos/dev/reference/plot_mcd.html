@@ -106,7 +106,6 @@ displayed (invisibly returns <code>x</code>).</p></li>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Mean Ceramic Date</span></span>
 <span class="r-in"><span class="co">## Coerce the zuni dataset to an abundance (count) matrix</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Set the start and end dates for each ceramic type</span></span>
 <span class="r-in"><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -122,7 +121,7 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-in"><span class="va">mid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">vapply</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">dates</span>, FUN <span class="op">=</span> <span class="va">mean</span>, FUN.VALUE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate MCD</span></span>
-<span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="mcd.html">mcd</a></span><span class="op">(</span><span class="va">counts</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="mcd.html">mcd</a></span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1162   1138   1154   1091   1092    841 </span>
@@ -134,13 +133,13 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
 <span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         min     mean  max     lower     upper     Q25    Q50     Q75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1122 1159.200 1202 1151.2314 1167.1686 1142.00 1157.5 1172.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1062 1132.533 1190 1122.1774 1142.8892 1117.25 1134.0 1149.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1080 1156.200 1225 1144.1487 1168.2513 1131.50 1157.0 1170.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1081 1091.567 1100 1089.8466 1093.2867 1088.00 1094.0 1094.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1009 1114.533 1212 1095.8734 1133.1933 1077.75 1124.5 1156.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  842.800  945  821.5263  864.0737  789.00  841.0  893.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         min      mean  max    lower     upper     Q25    Q50     Q75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1122 1154.0000 1208 1147.684 1160.3164 1147.00 1152.0 1163.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1093 1136.2667 1181 1127.065 1145.4687 1122.00 1136.0 1154.75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1083 1149.2667 1214 1136.412 1162.1216 1129.50 1145.5 1175.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1081 1091.1000 1097 1089.548 1092.6516 1088.00 1091.0 1094.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097  983 1075.8667 1175 1056.070 1095.6631 1032.75 1082.5 1111.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  834.1667  996  811.062  857.2713  789.00  841.0  893.00</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
 <span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
