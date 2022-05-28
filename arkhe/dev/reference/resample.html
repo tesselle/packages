@@ -57,7 +57,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">resample</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric</span>
-<span class="fu">resample</span><span class="op">(</span><span class="va">object</span>, <span class="va">do</span>, <span class="va">n</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+<span class="fu">resample</span><span class="op">(</span><span class="va">object</span>, <span class="va">do</span>, <span class="va">n</span>, <span class="va">...</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -72,10 +72,14 @@ and returns a single numeric value.</p></dd>
 <dt>n</dt>
 <dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
 replications.</p></dd>
+<dt>f</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> that takes a single numeric vector (the result of
+<code>do</code>) as argument.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Returns a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the <code>n</code> values of <code>do</code></p>
+    <p>If <code>f</code> is <code>NULL</code>, returns a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the <code>n</code> values of
+<code>do</code>. Else, returns the result of <code>f</code> applied to the <code>n</code> values of <code>do</code>.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -90,18 +94,27 @@ replications.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Sample observations from a multinomial distribution</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># integer</span></span>
-<span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    41.5    45.5    46.5    46.8    48.0    52.0 </span>
+<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">50</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># integer</span></span>
+<span class="r-in"><span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 56.0 62.0 57.0 62.5 60.0 52.0 59.5 54.0 60.0 58.5 56.0 60.0 58.0 57.0 56.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 58.0 58.0 57.0 60.0 60.5 59.5 59.0 55.0 56.0 54.5 58.0 62.5 56.5 55.5 59.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 63.0 56.5 55.5 56.0 58.0 58.0 55.0 59.5 58.5 59.0 60.0 58.0 56.5 61.5 61.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] 61.0 55.0 58.5 56.5 60.0 56.5 56.5 56.5 55.5 59.0 61.0 57.5 59.0 59.5 55.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 56.5 60.5 59.5 59.0 54.5 59.0 59.5 58.5 60.5 58.5 62.5 58.0 58.0 62.0 54.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] 62.5 58.0 58.0 59.5 59.5 57.0 57.0 57.0 60.5 58.0 59.0 59.5 57.5 60.5 59.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 55.0 61.0 63.0 59.0 55.0 57.0 59.5 60.0 55.0 56.5</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Estimate the 25th, 50th and 95th percentiles</span></span>
+<span class="r-in"><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span></span>
+<span class="r-in"><span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">median</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   25%   50%   75% </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57.00 58.25 59.50 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife</span></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu"><a href="jackknife.html">jackknife</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
-<span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.005461  0.047143  0.079199  0.094245  0.141962  0.239276 </span>
+<span class="r-in"><span class="fu"><a href="jackknife.html">jackknife</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          mean          bias         error </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -2.906295e-03  8.239937e-18  2.450523e-01 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

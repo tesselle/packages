@@ -57,7 +57,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">jackknife</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric</span>
-<span class="fu">jackknife</span><span class="op">(</span><span class="va">object</span>, <span class="va">do</span>, summary <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+<span class="fu">jackknife</span><span class="op">(</span><span class="va">object</span>, <span class="va">do</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -69,15 +69,10 @@
 <dt>do</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> that takes <code>object</code> as an argument and returns a
 single numeric value.</p></dd>
-<dt>summary</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should summary statistics be returned
-instead of jackknifed values?</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Returns a <code>numeric</code> vector giving the <code>n</code> leave-one-out values of <code>do</code>.
-If <code>summary</code> is <code>TRUE</code>, returns a named <code>numeric</code> vector with the following
-elements:</p><dl><dt><code>mean</code></dt>
+    <p>Returns a named <code>numeric</code> vector with the following elements:</p><dl><dt><code>mean</code></dt>
 <dd><p>The jackknife estimate of mean of <code>do</code>.</p></dd>
 
 <dt><code>bias</code></dt>
@@ -101,18 +96,27 @@ elements:</p><dl><dt><code>mean</code></dt>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Sample observations from a multinomial distribution</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># integer</span></span>
-<span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="resample.html">resample</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   48.00   51.50   52.50   52.51   54.00   57.00 </span>
+<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">50</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># integer</span></span>
+<span class="r-in"><span class="fu"><a href="resample.html">resample</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 55.5 49.0 52.0 54.5 56.0 53.5 54.5 52.0 56.5 51.5 50.5 56.0 55.5 54.5 52.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 60.0 53.5 55.5 51.0 50.5 54.5 56.0 61.5 56.0 50.0 57.5 56.5 55.0 59.0 56.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 54.5 53.5 55.0 55.0 56.5 60.0 56.0 53.0 56.5 58.5 54.0 54.5 51.0 52.0 56.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] 57.0 49.5 54.5 53.5 54.5 54.5 54.5 55.0 54.5 56.5 56.0 56.5 60.0 58.0 54.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 52.5 57.0 52.5 56.0 51.0 53.5 57.0 60.5 55.0 53.5 55.0 56.5 55.5 55.0 60.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] 52.5 54.5 54.0 56.5 54.0 56.5 54.5 51.0 55.0 50.5 59.0 61.5 49.0 56.0 57.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 56.5 49.5 51.5 55.5 51.5 56.5 62.5 60.0 52.0 53.5</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Estimate the 25th, 50th and 95th percentiles</span></span>
+<span class="r-in"><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span></span>
+<span class="r-in"><span class="fu"><a href="resample.html">resample</a></span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">median</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    25%    50%    75% </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52.375 54.500 56.000 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife</span></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
-<span class="r-in"><span class="fu"><a href="summary.html">summary</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 0.06818 0.09589 0.11156 0.12006 0.14816 0.17652 </span>
+<span class="r-in"><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       mean       bias      error </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.06900992 0.00000000 0.20244669 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
