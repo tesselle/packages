@@ -55,6 +55,9 @@
     <loc>https://packages.tesselle.org/arkhe/reference/arkhe-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/assign.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/check-attribute.html</loc>
   </url>
   <url>
@@ -82,7 +85,19 @@
     <loc>https://packages.tesselle.org/arkhe/reference/conditions.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/confidence.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/count.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/detect.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/jackknife.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/mutators.html</loc>
