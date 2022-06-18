@@ -25,14 +25,14 @@ MD5sum: f878349c09bda9f15a68db5c17bec5d8
 NeedsCompilation: no
 
 Package: kairos
-Version: 1.0.1
+Version: 1.1.0
 Depends: R (>= 3.4)
-Imports: arkhe (>= 0.4.0), dimensio (>= 0.2.2), extraDistr, ggplot2,
-        Hmisc, methods, rlang, stats, utils
-Suggests: covr, folio, knitr, rmarkdown, testthat (>= 3.0.0), vdiffr
-        (>= 1.0.0)
+Imports: arkhe (>= 0.5.0), boot, dimensio (>= 0.2.2), extraDistr,
+        ggplot2, Hmisc, methods, rlang, stats, utils
+Suggests: covr, folio, khroma, knitr, rmarkdown, testthat (>= 3.0.0),
+        vdiffr (>= 1.0.0)
 License: GPL (>= 3)
-MD5sum: b8de5cd30cb20d24ca34fcce15a27cf0
+MD5sum: 9447cacb87b03d0301870ce6bde3b303
 NeedsCompilation: no
 
 Package: khroma
