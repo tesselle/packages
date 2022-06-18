@@ -36,13 +36,13 @@ MD5sum: 9447cacb87b03d0301870ce6bde3b303
 NeedsCompilation: no
 
 Package: khroma
-Version: 1.8.0
+Version: 1.9.0
 Depends: R (>= 3.3)
-Imports: grDevices, grid, stats, utils
+Imports: graphics, grDevices, grid, stats, utils
 Suggests: covr, crayon, fansi, ggplot2, ggraph, knitr, rmarkdown,
         scales, spacesXYZ, testthat (>= 3.0.0), vdiffr (>= 1.0.0)
 License: GPL (>= 3)
-MD5sum: 723b7ee4f0e3cdf7ecffd4033b1c6a5b
+MD5sum: 56ac93a60f9e7ccd258b6e0f671d88f8
 NeedsCompilation: no
 
 Package: tabula
