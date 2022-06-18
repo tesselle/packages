@@ -79,11 +79,12 @@
 
 
 <div class="row">
-  <main id="main"><div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Manual</h1>
-                        <h4 data-toc-skip class="author">N. Frerebeau</h4>
+                        <h4 data-toc-skip class="author">N.
+Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2022-06-11</h4>
+            <h4 data-toc-skip class="date">2022-06-18</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/arkhe/blob/HEAD/vignettes/arkhe.Rmd" class="external-link"><code>vignettes/arkhe.Rmd</code></a></small>
       <div class="d-none name"><code>arkhe.Rmd</code></div>
@@ -94,20 +95,24 @@
 <div class="section level2">
 <h2 id="definitions">Definitions<a class="anchor" aria-label="anchor" href="#definitions"></a>
 </h2>
-<p>The <strong>arkhe</strong> package provides a set of S4 classes for archaeological data matrices. These new classes represent different special types of matrix.</p>
+<p>The <strong>arkhe</strong> package provides a set of S4 classes for
+archaeological data matrices. These new classes represent different
+special types of matrix.</p>
 <ul>
 <li>Integer matrix:
 <ul>
 <li>
 <code>CountMatrix</code> represents absolute frequency data,</li>
 <li>
-<code>OccurrenceMatrix</code> represents a co-occurrence matrix,</li>
+<code>OccurrenceMatrix</code> represents a co-occurrence
+matrix,</li>
 </ul>
 </li>
 <li>Numeric matrix:
 <ul>
 <li>
-<code>CompositionMatrix</code> represents relative frequency data,</li>
+<code>CompositionMatrix</code> represents relative frequency
+data,</li>
 </ul>
 </li>
 <li>Logical matrix:
@@ -115,12 +120,18 @@
 <li>
 <code>IncidenceMatrix</code> represents presence/absence data,</li>
 <li>
-<code>StratigraphicMatrix</code> represents stratigraphic relationships.</li>
+<code>StratigraphicMatrix</code> represents stratigraphic
+relationships.</li>
 </ul>
 </li>
 </ul>
-<p><em>It assumes that you keep your data tidy</em>: each variable (taxon/type) must be saved in its own column and each observation (assemblage/sample) must be saved in its own row. Note that missing values are not allowed.</p>
-<p>The internal structure of S4 classes implemented in <strong>arkhe</strong> is depicted in the UML class diagram in the following figure.</p>
+<p><em>It assumes that you keep your data tidy</em>: each variable
+(taxon/type) must be saved in its own column and each observation
+(assemblage/sample) must be saved in its own row. Note that missing
+values are not allowed.</p>
+<p>The internal structure of S4 classes implemented in
+<strong>arkhe</strong> is depicted in the UML class diagram in the
+following figure.</p>
 <div class="figure">
 <img src="uml-1.png" alt="UML class diagram of the S4 classes structure." width="75%"><p class="caption">
 UML class diagram of the S4 classes structure.
@@ -132,37 +143,50 @@ UML class diagram of the S4 classes structure.
 <div class="section level4">
 <h4 id="absolute-frequency-matrix-countmatrix">Absolute frequency matrix (<code>CountMatrix</code>)<a class="anchor" aria-label="anchor" href="#absolute-frequency-matrix-countmatrix"></a>
 </h4>
-<p>We denote the <span class="math inline">\(m \times p\)</span> count matrix by <span class="math inline">\(A = \left[ a_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and column sums:</p>
+<p>We denote the <span class="math inline">\(m \times p\)</span> count
+matrix by <span class="math inline">\(A = \left[ a_{ij} \right] ~\forall
+i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and
+column sums:</p>
 <p><span class="math display">\[\begin{align}
- a_{i \cdot} = \sum_{j = 1}^{p} a_{ij} &amp;&amp;
- a_{\cdot j} = \sum_{i = 1}^{m} a_{ij} &amp;&amp;
- a_{\cdot \cdot} = \sum_{i = 1}^{m} \sum_{j = 1}^{p} a_{ij} &amp;&amp;
- \forall a_{ij} \in \mathbb{N}
+a_{i \cdot} = \sum_{j = 1}^{p} a_{ij} &amp;&amp;
+a_{\cdot j} = \sum_{i = 1}^{m} a_{ij} &amp;&amp;
+a_{\cdot \cdot} = \sum_{i = 1}^{m} \sum_{j = 1}^{p} a_{ij} &amp;&amp;
+\forall a_{ij} \in \mathbb{N}
 \end{align}\]</span></p>
 </div>
 <div class="section level4">
 <h4 id="relative-frequency-matrix-compositionmatrix">Relative frequency matrix (<code>CompositionMatrix</code>)<a class="anchor" aria-label="anchor" href="#relative-frequency-matrix-compositionmatrix"></a>
 </h4>
 <p>A frequency matrix represents relative abundances.</p>
-<p>We denote the <span class="math inline">\(m \times p\)</span> frequency matrix by <span class="math inline">\(B = \left[ b_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and column sums:</p>
+<p>We denote the <span class="math inline">\(m \times p\)</span>
+frequency matrix by <span class="math inline">\(B = \left[ b_{ij}
+\right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p
+\right]\)</span> with row and column sums:</p>
 <p><span class="math display">\[\begin{align}
- b_{i \cdot} = \sum_{j = 1}^{p} b_{ij} = 1 &amp;&amp;
- b_{\cdot j} = \sum_{i = 1}^{m} b_{ij} &amp;&amp;
- b_{\cdot \cdot} = \sum_{i = 1}^{m} \sum_{j = 1}^{p} b_{ij} &amp;&amp;
- \forall b_{ij} \in \left[ 0,1 \right]
+b_{i \cdot} = \sum_{j = 1}^{p} b_{ij} = 1 &amp;&amp;
+b_{\cdot j} = \sum_{i = 1}^{m} b_{ij} &amp;&amp;
+b_{\cdot \cdot} = \sum_{i = 1}^{m} \sum_{j = 1}^{p} b_{ij} &amp;&amp;
+\forall b_{ij} \in \left[ 0,1 \right]
 \end{align}\]</span></p>
 </div>
 <div class="section level4">
 <h4 id="co-occurrence-matrix-occurrencematrix">Co-occurrence matrix (<code>OccurrenceMatrix</code>)<a class="anchor" aria-label="anchor" href="#co-occurrence-matrix-occurrencematrix"></a>
 </h4>
-<p>A co-occurrence matrix is a symmetric matrix with zeros on its main diagonal, which works out how many times each pairs of taxa occur together in at least one sample.</p>
-<p>The <span class="math inline">\(p \times p\)</span> co-occurrence matrix <span class="math inline">\(D = \left[ d_{i,j} \right] ~\forall i,j \in \left[ 1,p \right]\)</span> is defined over an <span class="math inline">\(m \times p\)</span> abundance matrix <span class="math inline">\(A = \left[ a_{x,y} \right] ~\forall x \in \left[ 1,m \right], y \in \left[ 1,p \right]\)</span> as:</p>
-<p><span class="math display">\[ d_{i,j} = \sum_{x = 1}^{m} \bigcap_{y = i}^{j} a_{xy} \]</span></p>
+<p>A co-occurrence matrix is a symmetric matrix with zeros on its main
+diagonal, which works out how many times each pairs of taxa occur
+together in at least one sample.</p>
+<p>The <span class="math inline">\(p \times p\)</span> co-occurrence
+matrix <span class="math inline">\(D = \left[ d_{i,j} \right] ~\forall
+i,j \in \left[ 1,p \right]\)</span> is defined over an <span class="math inline">\(m \times p\)</span> abundance matrix <span class="math inline">\(A = \left[ a_{x,y} \right] ~\forall x \in \left[
+1,m \right], y \in \left[ 1,p \right]\)</span> as:</p>
+<p><span class="math display">\[ d_{i,j} = \sum_{x = 1}^{m} \bigcap_{y =
+i}^{j} a_{xy} \]</span></p>
 <p>with row and column sums:</p>
 <p><span class="math display">\[\begin{align}
   d_{i \cdot} = \sum_{j \geqslant i}^{p} d_{ij} &amp;&amp;
   d_{\cdot j} = \sum_{i \leqslant j}^{p} d_{ij} &amp;&amp;
-  d_{\cdot \cdot} = \sum_{i = 1}^{p} \sum_{j \geqslant i}^{p} d_{ij} &amp;&amp;
+  d_{\cdot \cdot} = \sum_{i = 1}^{p} \sum_{j \geqslant i}^{p} d_{ij}
+&amp;&amp;
   \forall d_{ij} \in \mathbb{N}
 \end{align}\]</span></p>
 </div>
@@ -173,12 +197,15 @@ UML class diagram of the S4 classes structure.
 <div class="section level4">
 <h4 id="incidence-matrix-incidencematrix">Incidence matrix (<code>IncidenceMatrix</code>)<a class="anchor" aria-label="anchor" href="#incidence-matrix-incidencematrix"></a>
 </h4>
-<p>We denote the <span class="math inline">\(m \times p\)</span> incidence matrix by <span class="math inline">\(C = \left[ c_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> with row and column sums:</p>
+<p>We denote the <span class="math inline">\(m \times p\)</span>
+incidence matrix by <span class="math inline">\(C = \left[ c_{ij}
+\right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p
+\right]\)</span> with row and column sums:</p>
 <p><span class="math display">\[\begin{align}
- c_{i \cdot} = \sum_{j = 1}^{p} c_{ij} &amp;&amp;
- c_{\cdot j} = \sum_{i = 1}^{m} c_{ij} &amp;&amp;
- c_{\cdot \cdot} = \sum_{i = 1}^{m} \sum_{j = 1}^{p} c_{ij} &amp;&amp;
- \forall c_{ij} \in \lbrace 0,1 \rbrace
+c_{i \cdot} = \sum_{j = 1}^{p} c_{ij} &amp;&amp;
+c_{\cdot j} = \sum_{i = 1}^{m} c_{ij} &amp;&amp;
+c_{\cdot \cdot} = \sum_{i = 1}^{m} \sum_{j = 1}^{p} c_{ij} &amp;&amp;
+\forall c_{ij} \in \lbrace 0,1 \rbrace
 \end{align}\]</span></p>
 </div>
 </div>
@@ -192,7 +219,8 @@ UML class diagram of the S4 classes structure.
 <div class="section level3">
 <h3 id="create">Create<a class="anchor" aria-label="anchor" href="#create"></a>
 </h3>
-<p>These new classes are of simple use, on the same way as the base <code>matrix</code>:</p>
+<p>These new classes are of simple use, on the same way as the base
+<code>matrix</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span>
 <span class="co">### Create a count data matrix</span>
@@ -232,7 +260,8 @@ UML class diagram of the S4 classes structure.
 <div class="section level3">
 <h3 id="coerce">Coerce<a class="anchor" aria-label="anchor" href="#coerce"></a>
 </h3>
-<p><strong>arkhe</strong> uses coercing mechanisms (with validation methods) for data type conversions:</p>
+<p><strong>arkhe</strong> uses coercing mechanisms (with validation
+methods) for data type conversions:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">### Create a count matrix</span>
 <span class="va">A0</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
@@ -269,7 +298,7 @@ UML class diagram of the S4 classes structure.
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer>

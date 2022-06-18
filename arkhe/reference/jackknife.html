@@ -64,15 +64,22 @@
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Extra arguments passed to <code>do</code>.</p></dd>
+
+
 <dt>do</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> that takes <code>object</code> as an argument and returns a
 single numeric value.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Returns a named <code>numeric</code> vector with the following elements:</p><dl><dt><code>mean</code></dt>
+    
+
+<p>Returns a named <code>numeric</code> vector with the following elements:</p><dl><dt><code>mean</code></dt>
 <dd><p>The jackknife estimate of mean of <code>do</code>.</p></dd>
 
 <dt><code>bias</code></dt>
@@ -98,8 +105,8 @@ single numeric value.</p></dd>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Jackknife</span></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          mean          bias         error </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -1.353696e-01  5.273559e-16  2.373207e-01 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      mean      bias     error </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.1733892 0.0000000 0.1673439 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -111,7 +118,7 @@ single numeric value.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

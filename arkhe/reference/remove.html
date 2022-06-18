@@ -84,21 +84,32 @@
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>An object (should be a <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>).</p></dd>
+
+
 <dt>f</dt>
 <dd><p>A predicate <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code>.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
+
+
 <dt>margin</dt>
 <dd><p>A vector giving the subscripts which the function will be
 applied over (<code>1</code> indicates rows, <code>2</code> indicates columns).</p></dd>
+
+
 <dt>negate</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the negation of <code>f</code> be used
 instead of <code>f</code>?</p></dd>
+
+
 <dt>all</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar. If <code>TRUE</code>, only the rows/columns whose
 values all meet the condition defined by <code>f</code> are considered. If <code>FALSE</code>
 (the default), only rows/columns where at least one value validates the
 condition defined by <code>f</code> are considered.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -133,49 +144,48 @@ A row/column is empty if it contains only <code>NA</code>, zeros (if of type
 <span class="r-in"><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span>
 <span class="r-in"><span class="va">X</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    6    7    9    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    4   NA    5    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    1    1   10    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    3    1   NA   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    2    3    2    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    5    1    1   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    3    5    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   NA    2   10    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    4    6   NA    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]   NA    8    1    8    1</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Count missing values in rows</span></span>
 <span class="r-in"><span class="fu"><a href="count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 0 2 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 1 1 1</span>
 <span class="r-in"><span class="co">## Count non-missing values in columns</span></span>
 <span class="r-in"><span class="fu"><a href="count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5 5 4 4 4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3 5 5 4 5</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Find row with NA</span></span>
 <span class="r-in"><span class="fu"><a href="detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE FALSE  TRUE FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE FALSE  TRUE  TRUE  TRUE</span>
 <span class="r-in"><span class="co">## Find column without any NA</span></span>
 <span class="r-in"><span class="fu"><a href="detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE  TRUE FALSE FALSE FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE  TRUE FALSE  TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Remove row with any NA</span></span>
 <span class="r-in"><span class="fu">compact</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    6    7    9    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    1    1   10    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    2    2    3    2    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    5    1    1   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    3    5    8</span>
 <span class="r-in"><span class="co">## Remove column with any NA</span></span>
 <span class="r-in"><span class="fu">compact</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5    1   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    7    3    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    2   10   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    6    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    1    1</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Replace NA with zeros</span></span>
 <span class="r-in"><span class="fu"><a href="replace.html">replace_NA</a></span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    6    7    9    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    4    0    5    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    1    1   10    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    3    1    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    2    3    2    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    5    1    1   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    3    5    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    2   10    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    4    6    0    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    0    8    1    8    1</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -187,7 +197,7 @@ A row/column is empty if it contains only <code>NA</code>, zeros (if of type
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

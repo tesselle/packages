@@ -66,19 +66,28 @@ times a given datum occurs in a dataset).</p>
 <dd><p>an optional data vector (including a list or
     <code><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></code> vector).  Non-atomic classed <span style="R">R</span> objects are
     coerced by <code><a href="https://rdrr.io/r/base/vector.html" class="external-link">as.vector</a></code> and all attributes discarded.</p></dd>
+
+
 <dt>nrow</dt>
 <dd><p>the desired number of rows.</p></dd>
+
+
 <dt>ncol</dt>
 <dd><p>the desired number of columns.</p></dd>
+
+
 <dt>byrow</dt>
 <dd><p>logical. If <code>FALSE</code> (the default) the matrix is
     filled by columns, otherwise the matrix is filled by rows.</p></dd>
+
+
 <dt>dimnames</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/dimnames.html" class="external-link">dimnames</a></code> attribute for the matrix:
     <code>NULL</code> or a <code>list</code> of length 2 giving the row and column
     names respectively.  An empty list is treated as <code>NULL</code>, and a
     list of length one as row names.  The list can be named, and the
     list names will be used as names for the dimensions.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -181,53 +190,53 @@ times a given datum occurs in a dataset).</p>
 <span class="r-in"><span class="va">B</span><span class="op">[</span>, <span class="op">]</span> <span class="co"># Get all values</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 20 x 5&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    u  v  w  x  y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A  3  2  9  2  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B  3  3  7  3  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> C  2 10  2  8  5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> D  3  0  5 10  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E  2  5  0  5  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F  1  7 10 10  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> G  8  9  1  4  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> H 10  6  2  3  5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I  8  0  4  6  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> J 10  7  4  6  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> K  0  2  4  4  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L  1  9  7  4  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> M  5  7  0  4  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> N 10  9  7  1  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> O  4  1  7  5  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P  6 10  3  3 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Q  0  9  1  3  8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R  3  0  0  0  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S  3  5 10  3  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T  8  9  8  1  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A  3  5  7  9 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B  6  2  0  2  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C 10  6  2  0  7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> D  8  0  9  7  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E  8  7  3  1  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F  8  3  2  1  0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> G  3  5  1  7  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> H  0  2  9  3  0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> I  0  3  9  5 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> J  2  6  7  0  4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> K  8 10  0  0  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> L  6  6  0 10  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> M 10  0  6  2  4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> N 10  2  7  6  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> O  0  4 10  8  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P  0  6  2  8  5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Q  5  8  8  9 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> R  1 10  3  8  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S  1  5  3  3  8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T  4  0  8  8  8</span>
 <span class="r-in"><span class="va">B</span><span class="op">[</span><span class="fl">1</span>, , drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span> <span class="co"># Get the first row</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 1 x 5&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   u v w x y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A 3 2 9 2 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   u v w x  y</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A 3 5 7 9 10</span>
 <span class="r-in"><span class="va">B</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span> <span class="co"># Get the first three column</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CountMatrix: 20 x 3&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    u  v  w</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A  3  2  9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B  3  3  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> C  2 10  2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> D  3  0  5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> E  2  5  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F  1  7 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> G  8  9  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> H 10  6  2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I  8  0  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> J 10  7  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> K  0  2  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> L  1  9  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> M  5  7  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> N 10  9  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> O  4  1  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P  6 10  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Q  0  9  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R  3  0  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S  3  5 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T  8  9  8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A  3  5  7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B  6  2  0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C 10  6  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> D  8  0  9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E  8  7  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F  8  3  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> G  3  5  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> H  0  2  9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> I  0  3  9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> J  2  6  7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> K  8 10  0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> L  6  6  0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> M 10  0  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> N 10  2  7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> O  0  4 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P  0  6  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Q  5  8  8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> R  1 10  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S  1  5  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T  4  0  8</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -239,7 +248,7 @@ times a given datum occurs in a dataset).</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

@@ -1,10 +1,11 @@
-pandoc: 2.7.3
-pkgdown: 2.0.2
-pkgdown_sha: ~
+pandoc: 2.17.1.1
+pkgdown: 2.0.4.9000
+pkgdown_sha: 5203a63f002405e99b8510debe809ff3d9f18b02
 articles:
   bibliography: bibliography.html
-  kairos: kairos.html
-last_built: 2022-03-12T14:28Z
+  dating: dating.html
+  seriation: seriation.html
+last_built: 2022-06-18T11:08Z
 urls:
   reference: https://packages.tesselle.org/kairos/reference
   article: https://packages.tesselle.org/kairos/articles

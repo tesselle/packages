@@ -16,10 +16,13 @@
     <loc>https://packages.tesselle.org/kairos/articles/bibliography.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/articles/dating.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/articles/kairos.html</loc>
+    <loc>https://packages.tesselle.org/kairos/articles/seriation.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/authors.html</loc>
@@ -49,7 +52,13 @@
     <loc>https://packages.tesselle.org/kairos/reference/MeanDate-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/reference/PermutationOrder-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/reference/RateOfChange-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/RefineCA-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/aoristic.html</loc>
@@ -91,12 +100,12 @@
     <loc>https://packages.tesselle.org/kairos/reference/plot_time.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/reference/reexports.html</loc>
+    <loc>https://packages.tesselle.org/kairos/reference/resample.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/roc.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/reference/subset.html</loc>
+    <loc>https://packages.tesselle.org/kairos/reference/seriation.html</loc>
   </url>
 </urlset>
