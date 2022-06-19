@@ -15,11 +15,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet">
-<link href="../deps/_Ubuntu-0.4.0/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet">
+<link href="../deps/_Ubuntu-0.4.1/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><script src="../extra.js"></script><meta property="og:title" content="Diversity Measures">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Diversity Measures">
 <meta property="og:description" content="tabula">
 <meta property="og:image" content="https://packages.tesselle.org/tabula/logo.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -31,19 +31,21 @@
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/matomo.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
 </head>
 <body>
-    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dernière version publiée">1.6.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.7.0</small>
 
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
@@ -52,7 +54,6 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/diversity.html">Diversity Measures</a>
-    <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -73,16 +74,21 @@
 </li>
       </ul>
 </div>
+
+    
   </div>
-</nav><div class="container template-article" id="container">
+</nav><div class="container template-article">
+
+
+
 
 <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Diversity Measures</h1>
-                        <h4 data-toc-skip class="author">N. Frerebeau</h4>
+                        <h4 data-toc-skip class="author">N.
+Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2021-11-18</h4>
+            <h4 data-toc-skip class="date">2022-06-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/vignettes/diversity.Rmd" class="external-link"><code>vignettes/diversity.Rmd</code></a></small>
       <div class="d-none name"><code>diversity.Rmd</code></div>
@@ -93,68 +99,99 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Load packages</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://folio.tesselle.org" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span></code></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></code></pre></div>
 <!-- Vérifier Banning 2000 -->
 <p>Thereafter, we denote by:</p>
 <ul>
 <li>
-<span class="math inline">\(S\)</span> the total number of taxa recorded,</li>
+<span class="math inline">\(S\)</span> the total number of taxa
+recorded,</li>
 <li>
 <span class="math inline">\(i\)</span> the rank of the taxon</li>
 <li>
-<span class="math inline">\(N_i\)</span> the number of individuals in the <span class="math inline">\(i\)</span>-th taxon,</li>
+<span class="math inline">\(N_i\)</span> the number of individuals
+in the <span class="math inline">\(i\)</span>-th taxon,</li>
 <li>
-<span class="math inline">\(N = \sum N_i\)</span> the total number of individuals,</li>
+<span class="math inline">\(N = \sum N_i\)</span> the total number
+of individuals,</li>
 <li>
-<span class="math inline">\(p_i\)</span> the relative proportion of the <span class="math inline">\(i\)</span>-th taxon in the population,</li>
+<span class="math inline">\(p_i\)</span> the relative proportion of
+the <span class="math inline">\(i\)</span>-th taxon in the
+population,</li>
 <li>
-<span class="math inline">\(s_k\)</span> the number of taxa with <span class="math inline">\(k\)</span> individuals,</li>
+<span class="math inline">\(s_k\)</span> the number of taxa with
+<span class="math inline">\(k\)</span> individuals,</li>
 <li>
 <span class="math inline">\(q_i\)</span> the incidence of the <span class="math inline">\(i\)</span>-th taxon.</li>
 </ul>
-<p>Diversity in ecology describes complex interspecific interactions between and within communities under a variety of environmental conditions <span class="citation">(Bobrowsky and Ball 1989)</span>. This concept covers different components, allowing different aspects of interspecific interactions to be measured.</p>
-<div class="section level1">
-<h1 id="alpha-diversity">
-<span class="math inline">\(\alpha\)</span>-diversity<a class="anchor" aria-label="anchor" href="#alpha-diversity"></a>
-</h1>
+<p>Diversity in ecology describes complex interspecific interactions
+between and within communities under a variety of environmental
+conditions <span class="citation">(Bobrowsky and Ball 1989)</span>. This
+concept covers different components, allowing different aspects of
+interspecific interactions to be measured.</p>
 <div class="section level2">
-<h2 id="richness-and-rarefaction">Richness and Rarefaction<a class="anchor" aria-label="anchor" href="#richness-and-rarefaction"></a>
+<h2 id="alpha-diversity">
+<span class="math inline">\(\alpha\)</span>-diversity<a class="anchor" aria-label="anchor" href="#alpha-diversity"></a>
 </h2>
-<p>The number of different taxa, provides an instantly comprehensible expression of diversity. While the number of taxa within a sample is easy to ascertain, as a term, it makes little sense: some taxa may not have been seen, or there may not be a fixed number of taxa [e.g. in an open system; <span class="citation">Peet (1974)</span>]. As an alternative, <em>richness</em> (<span class="math inline">\(R\)</span>) can be used for the concept of taxa number <span class="citation">(McIntosh 1967)</span>. Richness refers to the variety of taxa/species/types present in an assemblage or community <span class="citation">(Bobrowsky and Ball 1989)</span> as “the number of species present in a collection containing a specified number of individuals” <span class="citation">(Hurlbert 1971)</span>.</p>
-<p>It is not always possible to ensure that all sample sizes are equal and the number of different taxa increases with sample size and sampling effort <span class="citation">(Magurran 1988)</span>. Then, <em>rarefaction</em> (<span class="math inline">\(\hat{S}\)</span>) is the number of taxa expected if all samples were of a standard size <span class="math inline">\(n\)</span> (i.e. taxa per fixed number of individuals). Rarefaction assumes that imbalances between taxa are due to sampling and not to differences in actual abundances.</p>
 <div class="section level3">
-<h3 id="definitions">Definitions<a class="anchor" aria-label="anchor" href="#definitions"></a>
+<h3 id="richness-and-rarefaction">Richness and Rarefaction<a class="anchor" aria-label="anchor" href="#richness-and-rarefaction"></a>
 </h3>
+<p>The number of different taxa, provides an instantly comprehensible
+expression of diversity. While the number of taxa within a sample is
+easy to ascertain, as a term, it makes little sense: some taxa may not
+have been seen, or there may not be a fixed number of taxa [e.g. in an
+open system; <span class="citation">Peet (1974)</span>]. As an
+alternative, <em>richness</em> (<span class="math inline">\(R\)</span>)
+can be used for the concept of taxa number <span class="citation">(McIntosh 1967)</span>. Richness refers to the variety
+of taxa/species/types present in an assemblage or community <span class="citation">(Bobrowsky and Ball 1989)</span> as “the number of
+species present in a collection containing a specified number of
+individuals” <span class="citation">(Hurlbert 1971)</span>.</p>
+<p>It is not always possible to ensure that all sample sizes are equal
+and the number of different taxa increases with sample size and sampling
+effort <span class="citation">(Magurran 1988)</span>. Then,
+<em>rarefaction</em> (<span class="math inline">\(\hat{S}\)</span>) is
+the number of taxa expected if all samples were of a standard size <span class="math inline">\(n\)</span> (i.e. taxa per fixed number of
+individuals). Rarefaction assumes that imbalances between taxa are due
+to sampling and not to differences in actual abundances.</p>
+<div class="section level4">
+<h4 id="definitions">Definitions<a class="anchor" aria-label="anchor" href="#definitions"></a>
+</h4>
 <table class="table">
-<caption>Richness measures <span class="citation">(Bobrowsky and Ball 1989)</span>. *: implemented.</caption>
+<caption>Richness measures <span class="citation">(Bobrowsky and Ball
+1989)</span>. *: implemented.</caption>
 <thead><tr class="header">
 <th align="left">Measure</th>
 <th align="left">Reference</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math display">\[ R_{1} = \frac{S - 1}{\ln N} \]</span></td>
+<td align="left"><span class="math display">\[ R_{1} = \frac{S - 1}{\ln
+N} \]</span></td>
 <td align="left">
 <span class="citation">Margalef (1958)</span> *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ R_{2} = \frac{S}{\log N} \]</span></td>
-<td align="left"><span class="citation">Odum, Cantlon, and Kornicker (1960)</span></td>
+<td align="left"><span class="math display">\[ R_{2} = \frac{S}{\log N}
+\]</span></td>
+<td align="left"><span class="citation">Odum, Cantlon, and Kornicker
+(1960)</span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ R_{3} = \frac{S}{\sqrt{N}} \]</span></td>
+<td align="left"><span class="math display">\[ R_{3} =
+\frac{S}{\sqrt{N}} \]</span></td>
 <td align="left">
 <span class="citation">Menhinick (1964)</span> *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ R_{4} = \frac{S}{\log A} \]</span></td>
+<td align="left"><span class="math display">\[ R_{4} = \frac{S}{\log A}
+\]</span></td>
 <td align="left"><span class="citation">Gleason (1922)</span></td>
 </tr>
 </tbody>
 </table>
 <table class="table">
-<caption>Rarefaction measures <span class="citation">(Bobrowsky and Ball 1989)</span>. *: implemented.</caption>
+<caption>Rarefaction measures <span class="citation">(Bobrowsky and Ball
+1989)</span>. *: implemented.</caption>
 <colgroup>
 <col width="68%">
 <col width="31%">
@@ -165,33 +202,42 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \hat{S}_{1} = \alpha - \left[ \ln \left( 1 - x \right) \right] \]</span></td>
-<td align="left"><span class="citation">Fisher, Corbet, and Williams (1943)</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{1} = \alpha -
+\left[ \ln \left( 1 - x \right) \right] \]</span></td>
+<td align="left"><span class="citation">Fisher, Corbet, and Williams
+(1943)</span></td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ \hat{S}_{2} = y_{0} \hat{\sigma} \sqrt{2 \pi} \]</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{2} = y_{0}
+\hat{\sigma} \sqrt{2 \pi} \]</span></td>
 <td align="left"><span class="citation">Preston (1948)</span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \hat{S}_{3} = 2.07 \left( \frac{N}{m} \right)^{0.262} \]</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{3} = 2.07 \left(
+\frac{N}{m} \right)^{0.262} \]</span></td>
 <td align="left">
 <span class="citation">Preston (1962a)</span>, <span class="citation">Preston (1962b)</span>
 </td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ \hat{S}_{4} = 2.07 \left( \frac{N}{m} \right)^{0.262} A^{0.262} \]</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{4} = 2.07 \left(
+\frac{N}{m} \right)^{0.262} A^{0.262} \]</span></td>
 <td align="left"><span class="citation">Macarthur (1965)</span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \hat{S}_{5} = k A^{d} \]</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{5} = k A^{d}
+\]</span></td>
 <td align="left"><span class="citation">Kilburn (1966)</span></td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ \hat{S}_{6} = \frac{a N}{1 + b N} \]</span></td>
-<td align="left"><span class="citation">Caprariis, Lindemann, and Collins (1976)</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{6} = \frac{a
+N}{1 + b N} \]</span></td>
+<td align="left"><span class="citation">de Caprariis, Lindemann, and
+Collins (1976)</span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \hat{S}_{7} = \sum_{i = 1}^{S} 1 - \frac{{N - N_i} \choose n}{N \choose n} \]</span></td>
+<td align="left"><span class="math display">\[ \hat{S}_{7} = \sum_{i =
+1}^{S} 1 - \frac{{N - N_i} \choose n}{N \choose n} \]</span></td>
 <td align="left">
 <span class="citation">Hurlbert (1971)</span>, <span class="citation">Sander (1968)</span> *</td>
 </tr>
@@ -200,316 +246,318 @@
 <p>Where:</p>
 <ul>
 <li>
-<span class="math inline">\(S\)</span> is the number of observed species/types,</li>
+<span class="math inline">\(S\)</span> is the number of observed
+species/types,</li>
 <li>
-<span class="math inline">\(N_i\)</span> is the number of individuals in the <span class="math inline">\(i\)</span>-th species/type,</li>
+<span class="math inline">\(N_i\)</span> is the number of
+individuals in the <span class="math inline">\(i\)</span>-th
+species/type,</li>
 <li>
-<span class="math inline">\(N = \sum_{i = 1}^{S} N_i\)</span> is the total number of individuals,</li>
+<span class="math inline">\(N = \sum_{i = 1}^{S} N_i\)</span> is the
+total number of individuals,</li>
 <li>
-<span class="math inline">\(A\)</span> is the area of the isolate or collection.</li>
+<span class="math inline">\(A\)</span> is the area of the isolate or
+collection.</li>
 <li>
-<span class="math inline">\(m\)</span> is the number of individuals in the rarest species/type.</li>
+<span class="math inline">\(m\)</span> is the number of individuals
+in the rarest species/type.</li>
 <li>
-<span class="math inline">\(\alpha\)</span> is the Fisher’s slope constant,</li>
+<span class="math inline">\(\alpha\)</span> is the Fisher’s slope
+constant,</li>
 <li>
-<span class="math inline">\(y_{0}\)</span> is the number of species/types in the modal class interval,</li>
+<span class="math inline">\(y_{0}\)</span> is the number of
+species/types in the modal class interval,</li>
 <li>
-<span class="math inline">\(\hat{\sigma}\)</span> is the estimate of the standard deviation,</li>
+<span class="math inline">\(\hat{\sigma}\)</span> is the estimate of
+the standard deviation,</li>
 <li>
 <span class="math inline">\(n\)</span> is the sub-sample size,</li>
 <li>
-<span class="math inline">\(R\)</span> is the constant of rate increment,</li>
+<span class="math inline">\(R\)</span> is the constant of rate
+increment,</li>
 <li>
-<span class="math inline">\(\hat{S}\)</span> is the number of expected or predicted species/types,</li>
+<span class="math inline">\(\hat{S}\)</span> is the number of
+expected or predicted species/types,</li>
 <li>
-<span class="math inline">\(k\)</span>, <span class="math inline">\(d\)</span>, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are empirically derived coefficients of regression.</li>
+<span class="math inline">\(k\)</span>, <span class="math inline">\(d\)</span>, <span class="math inline">\(a\)</span>
+and <span class="math inline">\(b\)</span> are empirically derived
+coefficients of regression.</li>
 </ul>
-<div class="section level4">
-<h4 id="chao1-estimator-chao1984">Chao1 estimator <span class="citation">(Chao 1984)</span><a class="anchor" aria-label="anchor" href="#chao1-estimator-chao1984"></a>
-</h4>
-<p><span class="math display">\[ \hat{S}_{Chao1} = 
+<div class="section level5">
+<h5 id="chao1-estimator-chao1984">Chao1 estimator <span class="citation">(Chao 1984)</span><a class="anchor" aria-label="anchor" href="#chao1-estimator-chao1984"></a>
+</h5>
+<p><span class="math display">\[ \hat{S}_{Chao1} =
 \begin{cases}
   S + \frac{N - 1}{N} \frac{s_1^2}{2 s_2} &amp; s_2 &gt; 0 \\
   S + \frac{N - 1}{N} \frac{s_1 (s_1 - 1)}{2} &amp; s_2 = 0
 \end{cases}
 \]</span></p>
-<p>In the special case of homogeneous case, a bias-corrected estimator is:</p>
-<p><span class="math display">\[ \hat{S}_{bcChao1} = S + \frac{N - 1}{N} \frac{s_1 (s_1 - 1)}{2 s_2 + 1}\]</span></p>
-<p>The improved Chao1 estimator makes use of the additional information of tripletons and quadrupletons <span class="citation">(Chiu et al. 2014)</span>:</p>
-<p><span class="math display">\[ \hat{S}_{iChao1} = \hat{S}_{Chao1} + \frac{N - 3}{4 N} \frac{s_3}{s_4} \times \max\left(s_1 - \frac{N - 3}{N - 1} \frac{s_2 s_3}{2 s_4} , 0\right)\]</span></p>
+<p>In the special case of homogeneous case, a bias-corrected estimator
+is:</p>
+<p><span class="math display">\[ \hat{S}_{bcChao1} = S + \frac{N - 1}{N}
+\frac{s_1 (s_1 - 1)}{2 s_2 + 1}\]</span></p>
+<p>The improved Chao1 estimator makes use of the additional information
+of tripletons and quadrupletons <span class="citation">(Chiu et al.
+2014)</span>:</p>
+<p><span class="math display">\[ \hat{S}_{iChao1} = \hat{S}_{Chao1} +
+\frac{N - 3}{4 N} \frac{s_3}{s_4} \times \max\left(s_1 - \frac{N - 3}{N
+- 1} \frac{s_2 s_3}{2 s_4} , 0\right)\]</span></p>
 </div>
-<div class="section level4">
-<h4 id="abundance-based-coverage-estimator-chao1992">Abundance-based Coverage Estimator <span class="citation">(Chao and Lee 1992)</span><a class="anchor" aria-label="anchor" href="#abundance-based-coverage-estimator-chao1992"></a>
-</h4>
-<p><span class="math display">\[ \hat{S}_{ACE} = \hat{S}_{abun} + \frac{\hat{S}_{rare}}{\hat{C}_{rare}} + \frac{s_1}{\hat{C}_{rare}} \times \hat{\gamma}^2_{rare} \]</span></p>
-<p>Where <span class="math inline">\(\hat{S}_{rare} = \sum_{i = 1}^{k} s_i\)</span> is the number of rare taxa, <span class="math inline">\(\hat{S}_{abun} = \sum_{i &gt; k}^{N} s_i\)</span> is the number of abundant taxa (for a given cut-off value <span class="math inline">\(k\)</span>), <span class="math inline">\(\hat{C}_{rare} = 1 - \frac{s_1}{N_{rare}}\)</span> is the Turing’s coverage estimate and:</p>
-<p><span class="math display">\[ \hat{\gamma}^2_{rare} = \max\left[\frac{\hat{S}_{rare}}{\hat{C}_{rare}} \frac{\sum_{i = 1}^{k} i(i - 1)s_i}{\left(\sum_{i = 1}^{k} is_i\right)\left(\sum_{i = 1}^{k} is_i - 1\right)} - 1, 0\right]  \]</span></p>
+<div class="section level5">
+<h5 id="abundance-based-coverage-estimator-chao1992">Abundance-based Coverage Estimator <span class="citation">(Chao and
+Lee 1992)</span><a class="anchor" aria-label="anchor" href="#abundance-based-coverage-estimator-chao1992"></a>
+</h5>
+<p><span class="math display">\[ \hat{S}_{ACE} = \hat{S}_{abun} +
+\frac{\hat{S}_{rare}}{\hat{C}_{rare}} + \frac{s_1}{\hat{C}_{rare}}
+\times \hat{\gamma}^2_{rare} \]</span></p>
+<p>Where <span class="math inline">\(\hat{S}_{rare} = \sum_{i = 1}^{k}
+s_i\)</span> is the number of rare taxa, <span class="math inline">\(\hat{S}_{abun} = \sum_{i &gt; k}^{N} s_i\)</span>
+is the number of abundant taxa (for a given cut-off value <span class="math inline">\(k\)</span>), <span class="math inline">\(\hat{C}_{rare} = 1 - \frac{s_1}{N_{rare}}\)</span>
+is the Turing’s coverage estimate and:</p>
+<p><span class="math display">\[ \hat{\gamma}^2_{rare} =
+\max\left[\frac{\hat{S}_{rare}}{\hat{C}_{rare}} \frac{\sum_{i = 1}^{k}
+i(i - 1)s_i}{\left(\sum_{i = 1}^{k} is_i\right)\left(\sum_{i = 1}^{k}
+is_i - 1\right)} - 1, 0\right]  \]</span></p>
 </div>
-<div class="section level4">
-<h4 id="chao2-estimator-chao1987">Chao2 estimator <span class="citation">(Chao 1987)</span><a class="anchor" aria-label="anchor" href="#chao2-estimator-chao1987"></a>
-</h4>
-<p>For replicated incidence data (i.e. a <span class="math inline">\(m \times p\)</span> logical matrix), the Chao2 estimator is:</p>
-<p><span class="math display">\[ \hat{S}_{Chao2} = 
+<div class="section level5">
+<h5 id="chao2-estimator-chao1987">Chao2 estimator <span class="citation">(Chao 1987)</span><a class="anchor" aria-label="anchor" href="#chao2-estimator-chao1987"></a>
+</h5>
+<p>For replicated incidence data (i.e. a <span class="math inline">\(m
+\times p\)</span> logical matrix), the Chao2 estimator is:</p>
+<p><span class="math display">\[ \hat{S}_{Chao2} =
 \begin{cases}
   S + \frac{m - 1}{m} \frac{q_1^2}{2 q_2} &amp; q_2 &gt; 0 \\
   S + \frac{m - 1}{m} \frac{q_1 (q_1 - 1)}{2} &amp; q_2 = 0
 \end{cases}
 \]</span></p>
-<p>Improved Chao2 estimator <span class="citation">(Chiu et al. 2014)</span>:</p>
-<p><span class="math display">\[ \hat{S}_{iChao2} = \hat{S}_{Chao2} + \frac{m - 3}{4 m} \frac{q_3}{q_4} \times \max\left(q_1 - \frac{m - 3}{m - 1} \frac{q_2 q_3}{2 q_4} , 0\right)\]</span></p>
+<p>Improved Chao2 estimator <span class="citation">(Chiu et al.
+2014)</span>:</p>
+<p><span class="math display">\[ \hat{S}_{iChao2} = \hat{S}_{Chao2} +
+\frac{m - 3}{4 m} \frac{q_3}{q_4} \times \max\left(q_1 - \frac{m - 3}{m
+- 1} \frac{q_2 q_3}{2 q_4} , 0\right)\]</span></p>
+</div>
+<div class="section level5">
+<h5 id="incidence-based-coverage-estimator-chao2016">Incidence-based Coverage Estimator <span class="citation">(Chao and
+Chiu 2016)</span><a class="anchor" aria-label="anchor" href="#incidence-based-coverage-estimator-chao2016"></a>
+</h5>
+<p><span class="math display">\[ \hat{S}_{ICE} = \hat{S}_{freq} +
+\frac{\hat{S}_{infreq}}{\hat{C}_{infreq}} + \frac{q_1}{\hat{C}_{infreq}}
+\times \hat{\gamma}^2_{infreq} \]</span></p>
+<p>Where <span class="math inline">\(\hat{S}_{infreq} = \sum_{i = 1}^{k}
+q_i\)</span> is the number of infrequent taxa, <span class="math inline">\(\hat{S}_{freq} = \sum_{i &gt; k}^{N} q_i\)</span>
+is the number of frequent taxa (for a given cut-off value <span class="math inline">\(k\)</span>), <span class="math inline">\(\hat{C}_{infreq} = 1 - \frac{Q_1}{\sum_{i = 1}^{k}
+iq_i}\)</span> is the Turing’s coverage estimate and:</p>
+<p><span class="math display">\[ \hat{\gamma}^2_{infreq} =
+\max\left[\frac{\hat{S}_{infreq}}{\hat{C}_{infreq}}
+\frac{m_{infreq}}{m_{infreq} - 1} \frac{\sum_{i = 1}^{k} i(i -
+1)q_i}{\left(\sum_{i = 1}^{k} iq_i\right)\left(\sum_{i = 1}^{k} iq_i -
+1\right)} - 1, 0\right]  \]</span></p>
+<p>Where <span class="math inline">\(m_{infreq}\)</span> is the number
+of sampling units that include at least one infrequent species.</p>
+</div>
 </div>
 <div class="section level4">
-<h4 id="incidence-based-coverage-estimator-chao2016">Incidence-based Coverage Estimator <span class="citation">(Chao and Chiu 2016)</span><a class="anchor" aria-label="anchor" href="#incidence-based-coverage-estimator-chao2016"></a>
+<h4 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h4>
-<p><span class="math display">\[ \hat{S}_{ICE} = \hat{S}_{freq} + \frac{\hat{S}_{infreq}}{\hat{C}_{infreq}} + \frac{q_1}{\hat{C}_{infreq}} \times \hat{\gamma}^2_{infreq} \]</span></p>
-<p>Where <span class="math inline">\(\hat{S}_{infreq} = \sum_{i = 1}^{k} q_i\)</span> is the number of infrequent taxa, <span class="math inline">\(\hat{S}_{freq} = \sum_{i &gt; k}^{N} q_i\)</span> is the number of frequent taxa (for a given cut-off value <span class="math inline">\(k\)</span>), <span class="math inline">\(\hat{C}_{infreq} = 1 - \frac{Q_1}{\sum_{i = 1}^{k} iq_i}\)</span> is the Turing’s coverage estimate and:</p>
-<p><span class="math display">\[ \hat{\gamma}^2_{infreq} = \max\left[\frac{\hat{S}_{infreq}}{\hat{C}_{infreq}} \frac{m_{infreq}}{m_{infreq} - 1} \frac{\sum_{i = 1}^{k} i(i - 1)q_i}{\left(\sum_{i = 1}^{k} iq_i\right)\left(\sum_{i = 1}^{k} iq_i - 1\right)} - 1, 0\right]  \]</span></p>
-<p>Where <span class="math inline">\(m_{infreq}\)</span> is the number of sampling units that include at least one infrequent species.</p>
-</div>
-</div>
-<div class="section level3">
-<h3 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h3>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/richness-index.html">index_richness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"margalef"</span><span class="op">)</span>
-<span class="co">#&gt; &lt;RichnessIndex: margalef&gt;</span>
-<span class="co">#&gt;             size     index</span>
-<span class="co">#&gt; 10-P-1       153 0.5963696</span>
-<span class="co">#&gt; 11-N-9       758 0.4524421</span>
-<span class="co">#&gt; 11-N-1      1303 0.6971143</span>
-<span class="co">#&gt; 11-O-10      638 0.6193544</span>
-<span class="co">#&gt; 11-N-4      1266 0.5599404</span>
-<span class="co">#&gt; 13-N-5        79 0.4577237</span>
-<span class="co">#&gt; 13-N-4       241 0.7292886</span>
-<span class="co">#&gt; 13-N-16      171 0.7779583</span>
-<span class="co">#&gt; 13-O-11      128 1.0304965</span>
-<span class="co">#&gt; 13-O-10      226 0.9224182</span>
-<span class="co">#&gt; 13-P-1       360 1.1892416</span>
-<span class="co">#&gt; 13-P-8       192 1.1412278</span>
-<span class="co">#&gt; 13-P-10       91 1.5518107</span>
-<span class="co">#&gt; 13-O-7      1233 1.2645413</span>
-<span class="co">#&gt; 13-O-5      1709 1.2090820</span>
-<span class="co">#&gt; 13-N-21      614 1.0903435</span>
-<span class="co">#&gt; 12-O-5       424 1.1570758</span>
-<span class="co">#&gt; Holden Lake  360 1.1892416</span>
-<span class="co">#&gt; 13-N-15     1300 1.2552092</span>
-<span class="co">#&gt; 12-N-3       983 1.0158754</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/richness.html">richness</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"margalef"</span><span class="op">)</span>
+<span class="co">#&gt;  [1] 0.5963696 0.4524421 0.6971143 0.6193544 0.5599404 0.4577237 0.7292886</span>
+<span class="co">#&gt;  [8] 0.7779583 1.0304965 0.9224182 1.1892416 1.1412278 1.5518107 1.2645413</span>
+<span class="co">#&gt; [15] 1.2090820 1.0903435 1.1570758 1.1892416 1.2552092 1.0158754</span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/richness-index.html">index_composition</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"chao1"</span><span class="op">)</span>
-<span class="co">#&gt; &lt;CompositionIndex: chao1&gt;</span>
-<span class="co">#&gt;             size     index</span>
-<span class="co">#&gt; 10-P-1       153  4.000000</span>
-<span class="co">#&gt; 11-N-9       758  4.000000</span>
-<span class="co">#&gt; 11-N-1      1303  6.000000</span>
-<span class="co">#&gt; 11-O-10      638  5.000000</span>
-<span class="co">#&gt; 11-N-4      1266  5.000000</span>
-<span class="co">#&gt; 13-N-5        79  3.000000</span>
-<span class="co">#&gt; 13-N-4       241  5.000000</span>
-<span class="co">#&gt; 13-N-16      171  5.000000</span>
-<span class="co">#&gt; 13-O-11      128  7.984375</span>
-<span class="co">#&gt; 13-O-10      226  6.000000</span>
-<span class="co">#&gt; 13-P-1       360  8.000000</span>
-<span class="co">#&gt; 13-P-8       192  7.000000</span>
-<span class="co">#&gt; 13-P-10       91  8.494505</span>
-<span class="co">#&gt; 13-O-7      1233 10.000000</span>
-<span class="co">#&gt; 13-O-5      1709 10.000000</span>
-<span class="co">#&gt; 13-N-21      614  8.998371</span>
-<span class="co">#&gt; 12-O-5       424  8.498821</span>
-<span class="co">#&gt; Holden Lake  360  8.249306</span>
-<span class="co">#&gt; 13-N-15     1300 10.000000</span>
-<span class="co">#&gt; 12-N-3       983  8.499491</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/richness-index.html">rarefaction</a></span><span class="op">(</span>sample <span class="op">=</span> <span class="fl">10</span>, method <span class="op">=</span> <span class="st">"hurlbert"</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt;   10-P-1   11-N-9   11-N-1  11-O-10   11-N-4   13-N-5 </span>
-<span class="co">#&gt; 3.261646 2.337695 2.707545 2.359147 2.232354 2.793632</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/richness.html">composition</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"chao1"</span><span class="op">)</span>
+<span class="co">#&gt;  [1]  4.000000  4.000000  6.000000  5.000000  5.000000  3.000000  5.000000</span>
+<span class="co">#&gt;  [8]  5.000000  7.984375  6.000000  8.000000  7.000000  8.494505 10.000000</span>
+<span class="co">#&gt; [15] 10.000000  8.998371  8.498821  8.249306 10.000000  8.499491</span></code></pre></div>
 </div>
 </div>
-<div class="section level2">
-<h2 id="heterogeneity-and-evenness">Heterogeneity and Evenness<a class="anchor" aria-label="anchor" href="#heterogeneity-and-evenness"></a>
-</h2>
 <div class="section level3">
-<h3 id="definitions-1">Definitions<a class="anchor" aria-label="anchor" href="#definitions-1"></a>
+<h3 id="heterogeneity-and-evenness">Heterogeneity and Evenness<a class="anchor" aria-label="anchor" href="#heterogeneity-and-evenness"></a>
 </h3>
-<p><em>Diversity</em> measurement assumes that all individuals in a specific taxa are equivalent and that all types are equally different from each other <span class="citation">(Peet 1974)</span>. A measure of diversity can be achieved by using indices built on the relative abundance of taxa. These indices (sometimes referred to as non-parametric indices) benefit from not making assumptions about the underlying distribution of taxa abundance: they only take relative abundances of the species that are present and species richness into account. <span class="citation">Peet (1974)</span> refers to them as indices of <em>heterogeneity</em> (<span class="math inline">\(H\)</span>).</p>
-<p>Diversity indices focus on one aspect of the taxa abundance and emphasize either <em>richness</em> (weighting towards uncommon taxa) or dominance [weighting towards abundant taxa; <span class="citation">Magurran (1988)</span>].</p>
-<p><em>Evenness</em> (<span class="math inline">\(E\)</span>) is a measure of how evenly individuals are distributed across the sample.</p>
 <div class="section level4">
-<h4 id="information-theory-index">Information theory index<a class="anchor" aria-label="anchor" href="#information-theory-index"></a>
+<h4 id="definitions-1">Definitions<a class="anchor" aria-label="anchor" href="#definitions-1"></a>
 </h4>
+<p><em>Diversity</em> measurement assumes that all individuals in a
+specific taxa are equivalent and that all types are equally different
+from each other <span class="citation">(Peet 1974)</span>. A measure of
+diversity can be achieved by using indices built on the relative
+abundance of taxa. These indices (sometimes referred to as
+non-parametric indices) benefit from not making assumptions about the
+underlying distribution of taxa abundance: they only take relative
+abundances of the species that are present and species richness into
+account. <span class="citation">Peet (1974)</span> refers to them as
+indices of <em>heterogeneity</em> (<span class="math inline">\(H\)</span>).</p>
+<p>Diversity indices focus on one aspect of the taxa abundance and
+emphasize either <em>richness</em> (weighting towards uncommon taxa) or
+dominance [weighting towards abundant taxa; <span class="citation">Magurran (1988)</span>].</p>
+<p><em>Evenness</em> (<span class="math inline">\(E\)</span>) is a
+measure of how evenly individuals are distributed across the sample.</p>
 <div class="section level5">
-<h5 id="shannon-wiener-diversity-index">Shannon-Wiener diversity index<a class="anchor" aria-label="anchor" href="#shannon-wiener-diversity-index"></a>
+<h5 id="information-theory-index">Information theory index<a class="anchor" aria-label="anchor" href="#information-theory-index"></a>
 </h5>
-<p>The Shannon-Wiener index <span class="citation">(Shannon 1948)</span> assumes that individuals are randomly sampled from an infinite population and that all taxa are represented in the sample (it does not reflect the sample size). The main source of error arises from the failure to include all taxa in the sample: this error increases as the proportion of species discovered in the sample declines <span class="citation">(Peet 1974; Magurran 1988)</span>. The maximum likelihood estimator (MLE) is used for the relative abundance, this is known to be negatively biased by sample size.</p>
+<div class="section level6">
+<h6 id="shannon-wiener-diversity-index">Shannon-Wiener diversity index<a class="anchor" aria-label="anchor" href="#shannon-wiener-diversity-index"></a>
+</h6>
+<p>The Shannon-Wiener index <span class="citation">(Shannon 1948)</span>
+assumes that individuals are randomly sampled from an infinite
+population and that all taxa are represented in the sample (it does not
+reflect the sample size). The main source of error arises from the
+failure to include all taxa in the sample: this error increases as the
+proportion of species discovered in the sample declines <span class="citation">(Peet 1974; Magurran 1988)</span>. The maximum
+likelihood estimator (MLE) is used for the relative abundance, this is
+known to be negatively biased by sample size.</p>
 <p>Heterogeneity for an infinite sample:</p>
-<p><span class="math display">\[ H' = - \sum_{i = 1}^{S} p_i \ln p_i \]</span></p>
+<p><span class="math display">\[ H' = - \sum_{i = 1}^{S} p_i \ln p_i
+\]</span></p>
 <p>Heterogeneity for a finite sample:</p>
-<p><span class="math display">\[ H' = - \sum_{i = 1}^{S} \frac{n_i}{N} \ln \frac{n_i}{N} \]</span></p>
+<p><span class="math display">\[ H' = - \sum_{i = 1}^{S}
+\frac{n_i}{N} \ln \frac{n_i}{N} \]</span></p>
 <p>Evenness:</p>
-<p><span class="math display">\[ E = \frac{H}{H_{max}} = \frac{H'}{\ln S} = - \sum_{i = 1}^{S} p_i \log_S p_i \]</span></p>
-<p>When <span class="math inline">\(p_i\)</span> is unknown in the population, an estimate is given by <span class="math inline">\(\hat{p}_i =\frac{n_i}{N}\)</span> (maximum likelihood estimator - MLE). As the use of <span class="math inline">\(\hat{p}_i\)</span> results in a biased estimate, <span class="citation">Hutcheson (1970)</span> and <span class="citation">Bowman et al. (1971)</span> suggest the use of:</p>
-<p><span class="math display">\[ \hat{H}' = - \sum_{i = 1}^{S} \hat{p}_i \ln \hat{p}_i - \frac{S - 1}{N} + \frac{1 - \sum_{i = 1}^{S} \hat{p}_i^{-1}}{12N^2} + \frac{\sum_{i = 1}^{S} (\hat{p}_i^{-1} - \hat{p}_i^{-2})}{12N^3} + \cdots \]</span></p>
-<p>This error is rarely significant <span class="citation">(Peet 1974)</span>, so the unbiased form is not implemented here (for now).</p>
+<p><span class="math display">\[ E = \frac{H}{H_{max}} =
+\frac{H'}{\ln S} = - \sum_{i = 1}^{S} p_i \log_S p_i \]</span></p>
+<p>When <span class="math inline">\(p_i\)</span> is unknown in the
+population, an estimate is given by <span class="math inline">\(\hat{p}_i =\frac{n_i}{N}\)</span> (maximum
+likelihood estimator - MLE). As the use of <span class="math inline">\(\hat{p}_i\)</span> results in a biased estimate,
+<span class="citation">Hutcheson (1970)</span> and <span class="citation">Bowman et al. (1971)</span> suggest the use of:</p>
+<p><span class="math display">\[ \hat{H}' = - \sum_{i = 1}^{S}
+\hat{p}_i \ln \hat{p}_i - \frac{S - 1}{N} + \frac{1 - \sum_{i = 1}^{S}
+\hat{p}_i^{-1}}{12N^2} + \frac{\sum_{i = 1}^{S} (\hat{p}_i^{-1} -
+\hat{p}_i^{-2})}{12N^3} + \cdots \]</span></p>
+<p>This error is rarely significant <span class="citation">(Peet
+1974)</span>, so the unbiased form is not implemented here (for
+now).</p>
 </div>
-<div class="section level5">
-<h5 id="brillouin-diversity-index">Brillouin diversity index<a class="anchor" aria-label="anchor" href="#brillouin-diversity-index"></a>
-</h5>
-<p>The Brillouin index <span class="citation">(Brillouin 1956)</span> describes a known collection: it does not assume random sampling in an infinite population. <span class="citation">Pielou (1975)</span> and <span class="citation">Laxton (1978)</span> argues for the use of the Brillouin index in all circumstances, especially in preference to the Shannon index.</p>
+<div class="section level6">
+<h6 id="brillouin-diversity-index">Brillouin diversity index<a class="anchor" aria-label="anchor" href="#brillouin-diversity-index"></a>
+</h6>
+<p>The Brillouin index <span class="citation">(Brillouin 1956)</span>
+describes a known collection: it does not assume random sampling in an
+infinite population. <span class="citation">Pielou (1975)</span> and
+<span class="citation">Laxton (1978)</span> argues for the use of the
+Brillouin index in all circumstances, especially in preference to the
+Shannon index.</p>
 <p>Diversity:</p>
-<p><span class="math display">\[ H' = \frac{\ln (N!) - \sum_{i = 1}^{S} \ln (n_i!)}{N} \]</span></p>
+<p><span class="math display">\[ H' = \frac{\ln (N!) - \sum_{i =
+1}^{S} \ln (n_i!)}{N} \]</span></p>
 <p>Evenness:</p>
-<p><span class="math display">\[ E = \frac{H'}{H'_{max}} \]</span></p>
+<p><span class="math display">\[ E = \frac{H'}{H'_{max}}
+\]</span></p>
 <p>with:</p>
-<p><span class="math display">\[ H'_{max} = \frac{1}{N} \ln \frac{N!}{\left( \lfloor \frac{N}{S} \rfloor! \right)^{S - r} \left[ \left( \lfloor \frac{N}{S} \rfloor + 1 \right)! \right]^{r}} \]</span></p>
-<p>where: <span class="math inline">\(r = N - S \lfloor \frac{N}{S} \rfloor\)</span>.</p>
+<p><span class="math display">\[ H'_{max} = \frac{1}{N} \ln
+\frac{N!}{\left( \lfloor \frac{N}{S} \rfloor! \right)^{S - r} \left[
+\left( \lfloor \frac{N}{S} \rfloor + 1 \right)! \right]^{r}}
+\]</span></p>
+<p>where: <span class="math inline">\(r = N - S \lfloor \frac{N}{S}
+\rfloor\)</span>.</p>
 </div>
 </div>
-<div class="section level4">
-<h4 id="dominance-index">Dominance index<a class="anchor" aria-label="anchor" href="#dominance-index"></a>
-</h4>
-<p>The following methods return a <em>dominance</em> index, not the reciprocal or inverse form usually adopted, so that an increase in the value of the index accompanies a decrease in diversity.</p>
 <div class="section level5">
-<h5 id="simpson-index">Simpson index<a class="anchor" aria-label="anchor" href="#simpson-index"></a>
+<h5 id="dominance-index">Dominance index<a class="anchor" aria-label="anchor" href="#dominance-index"></a>
 </h5>
-<p>The Simpson index <span class="citation">(Simpson 1949)</span> expresses the probability that two individuals randomly picked from a finite sample belong to two different types. It can be interpreted as the weighted mean of the proportional abundances. This metric is a true probability value, it ranges from <span class="math inline">\(0\)</span> (perfectly uneven) to <span class="math inline">\(1\)</span> (perfectly even).</p>
+<p>The following methods return a <em>dominance</em> index, not the
+reciprocal or inverse form usually adopted, so that an increase in the
+value of the index accompanies a decrease in diversity.</p>
+<div class="section level6">
+<h6 id="simpson-index">Simpson index<a class="anchor" aria-label="anchor" href="#simpson-index"></a>
+</h6>
+<p>The Simpson index <span class="citation">(Simpson 1949)</span>
+expresses the probability that two individuals randomly picked from a
+finite sample belong to two different types. It can be interpreted as
+the weighted mean of the proportional abundances. This metric is a true
+probability value, it ranges from <span class="math inline">\(0\)</span>
+(perfectly uneven) to <span class="math inline">\(1\)</span> (perfectly
+even).</p>
 <p>Dominance for an infinite sample:</p>
-<p><span class="math display">\[ D = \sum_{i = 1}^{S} p_i^2 \]</span></p>
+<p><span class="math display">\[ D = \sum_{i = 1}^{S} p_i^2
+\]</span></p>
 <p>Dominance for a finite sample:</p>
-<p><span class="math display">\[ D = \sum_{i = 1}^{S} \frac{n_i \left( n_i - 1 \right)}{N \left( N - 1 \right)} \]</span></p>
+<p><span class="math display">\[ D = \sum_{i = 1}^{S} \frac{n_i \left(
+n_i - 1 \right)}{N \left( N - 1 \right)} \]</span></p>
 </div>
-<div class="section level5">
-<h5 id="mcintosh-index">McIntosh index<a class="anchor" aria-label="anchor" href="#mcintosh-index"></a>
-</h5>
-<p>The McIntosh index <span class="citation">(McIntosh 1967)</span> expresses the heterogeneity of a sample in geometric terms. It describes the sample as a point of a <span class="math inline">\(S\)</span>-dimensional hypervolume and uses the Euclidean distance of this point from the origin.</p>
+<div class="section level6">
+<h6 id="mcintosh-index">McIntosh index<a class="anchor" aria-label="anchor" href="#mcintosh-index"></a>
+</h6>
+<p>The McIntosh index <span class="citation">(McIntosh 1967)</span>
+expresses the heterogeneity of a sample in geometric terms. It describes
+the sample as a point of a <span class="math inline">\(S\)</span>-dimensional hypervolume and uses the
+Euclidean distance of this point from the origin.</p>
 <p>Dominance:</p>
-<p><span class="math display">\[ D = \frac{N - U}{N - \sqrt{N}} \]</span></p>
+<p><span class="math display">\[ D = \frac{N - U}{N - \sqrt{N}}
+\]</span></p>
 <p>Evenness:</p>
-<p><span class="math display">\[ E = \frac{N - U}{N - \frac{N}{\sqrt{S}}} \]</span></p>
-<p>where <span class="math inline">\(U\)</span> is the distance of the sample from the origin in an <span class="math inline">\(S\)</span> dimensional hypervolume:</p>
-<p><span class="math display">\[U = \sqrt{\sum_{i = 1}^{S} n_i^2}\]</span></p>
+<p><span class="math display">\[ E = \frac{N - U}{N -
+\frac{N}{\sqrt{S}}} \]</span></p>
+<p>where <span class="math inline">\(U\)</span> is the distance of the
+sample from the origin in an <span class="math inline">\(S\)</span>
+dimensional hypervolume:</p>
+<p><span class="math display">\[U = \sqrt{\sum_{i = 1}^{S}
+n_i^2}\]</span></p>
 </div>
-<div class="section level5">
-<h5 id="berger-parker-index">Berger-Parker index<a class="anchor" aria-label="anchor" href="#berger-parker-index"></a>
-</h5>
-<p>The Berger-Parker index <span class="citation">(Berger and Parker 1970)</span> expresses the proportional importance of the most abundant type. This metric is highly biased by sample size and richness, moreover it does not make use of all the information available from sample.</p>
+<div class="section level6">
+<h6 id="berger-parker-index">Berger-Parker index<a class="anchor" aria-label="anchor" href="#berger-parker-index"></a>
+</h6>
+<p>The Berger-Parker index <span class="citation">(Berger and Parker
+1970)</span> expresses the proportional importance of the most abundant
+type. This metric is highly biased by sample size and richness, moreover
+it does not make use of all the information available from sample.</p>
 <p>Dominance:</p>
 <p><span class="math display">\[ D = \frac{n_{max}}{N} \]</span></p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="usage-1">Usage<a class="anchor" aria-label="anchor" href="#usage-1"></a>
-</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/heterogeneity-index.html">index_heterogeneity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
-<span class="co">#&gt; &lt;HeterogeneityIndex: shannon&gt;</span>
-<span class="co">#&gt;             size     index</span>
-<span class="co">#&gt; 10-P-1       153 1.2027955</span>
-<span class="co">#&gt; 11-N-9       758 0.7646565</span>
-<span class="co">#&gt; 11-N-1      1303 0.9293974</span>
-<span class="co">#&gt; 11-O-10      638 0.8228576</span>
-<span class="co">#&gt; 11-N-4      1266 0.7901428</span>
-<span class="co">#&gt; 13-N-5        79 0.9998430</span>
-<span class="co">#&gt; 13-N-4       241 1.2051989</span>
-<span class="co">#&gt; 13-N-16      171 1.1776226</span>
-<span class="co">#&gt; 13-O-11      128 1.1533432</span>
-<span class="co">#&gt; 13-O-10      226 1.2884172</span>
-<span class="co">#&gt; 13-P-1       360 1.1725355</span>
-<span class="co">#&gt; 13-P-8       192 1.5296294</span>
-<span class="co">#&gt; 13-P-10       91 1.7952443</span>
-<span class="co">#&gt; 13-O-7      1233 1.1627477</span>
-<span class="co">#&gt; 13-O-5      1709 1.0718463</span>
-<span class="co">#&gt; 13-N-21      614 0.9205717</span>
-<span class="co">#&gt; 12-O-5       424 1.1751002</span>
-<span class="co">#&gt; Holden Lake  360 0.7307620</span>
-<span class="co">#&gt; 13-N-15     1300 1.1270126</span>
-<span class="co">#&gt; 12-N-3       983 1.0270291</span></code></pre></div>
-<p>Note that <code>berger</code>, <code>mcintosh</code> and <code>simpson</code> methods return a <em>dominance</em> index, not the reciprocal form usually adopted, so that an increase in the value of the index accompanies a decrease in diversity.</p>
+<div class="section level4">
+<h4 id="usage-1">Usage<a class="anchor" aria-label="anchor" href="#usage-1"></a>
+</h4>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
+<span class="co">#&gt;  [1] 1.2027955 0.7646565 0.9293974 0.8228576 0.7901428 0.9998430 1.2051989</span>
+<span class="co">#&gt;  [8] 1.1776226 1.1533432 1.2884172 1.1725355 1.5296294 1.7952443 1.1627477</span>
+<span class="co">#&gt; [15] 1.0718463 0.9205717 1.1751002 0.7307620 1.1270126 1.0270291</span></code></pre></div>
+<p>Note that <code>berger</code>, <code>mcintosh</code> and
+<code>simpson</code> methods return a <em>dominance</em> index, not the
+reciprocal form usually adopted, so that an increase in the value of the
+index accompanies a decrease in diversity.</p>
 <p>Corresponding <em>evenness</em> can also be computed :</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/heterogeneity-index.html">index_evenness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
-<span class="co">#&gt; &lt;EvennessIndex: shannon&gt;</span>
-<span class="co">#&gt;             size     index</span>
-<span class="co">#&gt; 10-P-1       153 0.8676335</span>
-<span class="co">#&gt; 11-N-9       758 0.5515831</span>
-<span class="co">#&gt; 11-N-1      1303 0.5187066</span>
-<span class="co">#&gt; 11-O-10      638 0.5112702</span>
-<span class="co">#&gt; 11-N-4      1266 0.4909433</span>
-<span class="co">#&gt; 13-N-5        79 0.9100964</span>
-<span class="co">#&gt; 13-N-4       241 0.7488322</span>
-<span class="co">#&gt; 13-N-16      171 0.7316981</span>
-<span class="co">#&gt; 13-O-11      128 0.6436931</span>
-<span class="co">#&gt; 13-O-10      226 0.7190793</span>
-<span class="co">#&gt; 13-P-1       360 0.5638704</span>
-<span class="co">#&gt; 13-P-8       192 0.7860740</span>
-<span class="co">#&gt; 13-P-10       91 0.8633300</span>
-<span class="co">#&gt; 13-O-7      1233 0.5049749</span>
-<span class="co">#&gt; 13-O-5      1709 0.4654969</span>
-<span class="co">#&gt; 13-N-21      614 0.4427014</span>
-<span class="co">#&gt; 12-O-5       424 0.5651037</span>
-<span class="co">#&gt; Holden Lake  360 0.3514222</span>
-<span class="co">#&gt; 13-N-15     1300 0.4894554</span>
-<span class="co">#&gt; 12-N-3       983 0.4938966</span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/heterogeneity-index.html">jackknife_evenness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
-<span class="co">#&gt;                  mean        bias      error</span>
-<span class="co">#&gt; 10-P-1      0.8541826 -0.12105804 0.17247290</span>
-<span class="co">#&gt; 11-N-9      0.5229102 -0.25805553 0.31565858</span>
-<span class="co">#&gt; 11-N-1      0.5024664 -0.14616113 0.20624488</span>
-<span class="co">#&gt; 11-O-10     0.4739365 -0.33600268 0.32893607</span>
-<span class="co">#&gt; 11-N-4      0.4440664 -0.42189287 0.40017752</span>
-<span class="co">#&gt; 13-N-5      0.8974920 -0.11343944 0.16354987</span>
-<span class="co">#&gt; 13-N-4      0.7262617 -0.20313477 0.22460296</span>
-<span class="co">#&gt; 13-N-16     0.7073085 -0.21950598 0.24003652</span>
-<span class="co">#&gt; 13-O-11     0.6217918 -0.19711219 0.20704537</span>
-<span class="co">#&gt; 13-O-10     0.6978373 -0.19117864 0.19056885</span>
-<span class="co">#&gt; 13-P-1      0.5751710  0.10170574 0.30684862</span>
-<span class="co">#&gt; 13-P-8      0.7787592 -0.06583308 0.11167791</span>
-<span class="co">#&gt; 13-P-10     0.8579532 -0.04839131 0.07841825</span>
-<span class="co">#&gt; 13-O-7      0.4819095 -0.20758833 0.14724961</span>
-<span class="co">#&gt; 13-O-5      0.4410617 -0.21991724 0.16649998</span>
-<span class="co">#&gt; 13-N-21     0.4315972 -0.09993810 0.19500393</span>
-<span class="co">#&gt; 12-O-5      0.5421317 -0.20674813 0.16823118</span>
-<span class="co">#&gt; Holden Lake 0.3714220  0.17999834 0.35902155</span>
-<span class="co">#&gt; 13-N-15     0.4691684 -0.18258300 0.16652541</span>
-<span class="co">#&gt; 12-N-3      0.4673624 -0.23880781 0.20782401</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/heterogeneity.html">evenness</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
+<span class="co">#&gt;  [1] 0.8676335 0.5515831 0.5187066 0.5112702 0.4909433 0.9100964 0.7488322</span>
+<span class="co">#&gt;  [8] 0.7316981 0.6436931 0.7190793 0.5638704 0.7860740 0.8633300 0.5049749</span>
+<span class="co">#&gt; [15] 0.4654969 0.4427014 0.5651037 0.3514222 0.4894554 0.4938966</span></code></pre></div>
 </div>
 </div>
 </div>
-<div class="section level1">
-<h1 id="beta-diversity">
-<span class="math inline">\(\beta\)</span>-diversity<a class="anchor" aria-label="anchor" href="#beta-diversity"></a>
-</h1>
 <div class="section level2">
-<h2 id="turnover">Turnover<a class="anchor" aria-label="anchor" href="#turnover"></a>
+<h2 id="beta-diversity">
+<span class="math inline">\(\beta\)</span>-diversity<a class="anchor" aria-label="anchor" href="#beta-diversity"></a>
 </h2>
 <div class="section level3">
-<h3 id="definitions-2">Definitions<a class="anchor" aria-label="anchor" href="#definitions-2"></a>
+<h3 id="turnover">Turnover<a class="anchor" aria-label="anchor" href="#turnover"></a>
 </h3>
-<p>The following methods can be used to ascertain the degree of turnover in taxa composition along a gradient on qualitative (presence/absence) data. This assumes that the order of the matrix rows (from 1 to <span class="math inline">\(m\)</span>) follows the progression along the gradient/transect.</p>
-<p>We denote the <span class="math inline">\(m \times p\)</span> incidence matrix by <span class="math inline">\(X = \left[ x_{ij} \right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> and the <span class="math inline">\(p \times p\)</span> corresponding co-occurrence matrix by <span class="math inline">\(Y = \left[ y_{ij} \right] ~\forall i,j \in \left[ 1,p \right]\)</span>, with row and column sums:</p>
+<div class="section level4">
+<h4 id="definitions-2">Definitions<a class="anchor" aria-label="anchor" href="#definitions-2"></a>
+</h4>
+<p>The following methods can be used to ascertain the degree of turnover
+in taxa composition along a gradient on qualitative (presence/absence)
+data. This assumes that the order of the matrix rows (from 1 to <span class="math inline">\(m\)</span>) follows the progression along the
+gradient/transect.</p>
+<p>We denote the <span class="math inline">\(m \times p\)</span>
+incidence matrix by <span class="math inline">\(X = \left[ x_{ij}
+\right] ~\forall i \in \left[ 1,m \right], j \in \left[ 1,p
+\right]\)</span> and the <span class="math inline">\(p \times p\)</span>
+corresponding co-occurrence matrix by <span class="math inline">\(Y =
+\left[ y_{ij} \right] ~\forall i,j \in \left[ 1,p \right]\)</span>, with
+row and column sums:</p>
 <p><span class="math display">\[\begin{align}
- x_{i \cdot} = \sum_{j = 1}^{p} x_{ij} &amp;&amp;
- x_{\cdot j} = \sum_{i = 1}^{m} x_{ij} &amp;&amp;
- x_{\cdot \cdot} = \sum_{j = 1}^{p} \sum_{i = 1}^{m} x_{ij} &amp;&amp;
- \forall x_{ij} \in \lbrace 0,1 \rbrace \\
+x_{i \cdot} = \sum_{j = 1}^{p} x_{ij} &amp;&amp;
+x_{\cdot j} = \sum_{i = 1}^{m} x_{ij} &amp;&amp;
+x_{\cdot \cdot} = \sum_{j = 1}^{p} \sum_{i = 1}^{m} x_{ij} &amp;&amp;
+\forall x_{ij} \in \lbrace 0,1 \rbrace \\
 
- y_{i \cdot} = \sum_{j \geqslant i}^{p} y_{ij} &amp;&amp;
- y_{\cdot j} = \sum_{i \leqslant j}^{p} y_{ij} &amp;&amp;
- y_{\cdot \cdot} = \sum_{i = 1}^{p} \sum_{j \geqslant i}^{p} y_{ij} &amp;&amp;
- \forall y_{ij} \in \lbrace 0,1 \rbrace
+y_{i \cdot} = \sum_{j \geqslant i}^{p} y_{ij} &amp;&amp;
+y_{\cdot j} = \sum_{i \leqslant j}^{p} y_{ij} &amp;&amp;
+y_{\cdot \cdot} = \sum_{i = 1}^{p} \sum_{j \geqslant i}^{p} y_{ij}
+&amp;&amp;
+\forall y_{ij} \in \lbrace 0,1 \rbrace
 \end{align}\]</span></p>
 <table class="table">
 <caption>Turnover measures. *: implemented.</caption>
@@ -523,79 +571,100 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \beta_W = \frac{S}{\alpha} - 1 \]</span></td>
+<td align="left"><span class="math display">\[ \beta_W =
+\frac{S}{\alpha} - 1 \]</span></td>
 <td align="left">
 <span class="citation">Whittaker (1960)</span> *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ \beta_C = \frac{g(H) + l(H)}{2} - 1 \]</span></td>
+<td align="left"><span class="math display">\[ \beta_C = \frac{g(H) +
+l(H)}{2} - 1 \]</span></td>
 <td align="left">
 <span class="citation">Cody (1975)</span> *</td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \beta_R = \frac{S^2}{2 y_{\cdot \cdot} + S} - 1 \]</span></td>
+<td align="left"><span class="math display">\[ \beta_R = \frac{S^2}{2
+y_{\cdot \cdot} + S} - 1 \]</span></td>
 <td align="left">
 <span class="citation">Routledge (1977)</span> *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ \beta_I = \log x_{\cdot \cdot} - \frac{\sum_{j = 1}^{p} x_{\cdot j} \log x_{\cdot j}}{x_{\cdot \cdot}} - \frac{\sum_{i = 1}^{m} x_{i \cdot} \log x_{i \cdot}}{x_{\cdot \cdot}} \]</span></td>
+<td align="left"><span class="math display">\[ \beta_I = \log x_{\cdot
+\cdot} - \frac{\sum_{j = 1}^{p} x_{\cdot j} \log x_{\cdot j}}{x_{\cdot
+\cdot}} - \frac{\sum_{i = 1}^{m} x_{i \cdot} \log x_{i \cdot}}{x_{\cdot
+\cdot}} \]</span></td>
 <td align="left">
 <span class="citation">Routledge (1977)</span> *</td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ \beta_E = \exp(\beta_I) - 1 \]</span></td>
+<td align="left"><span class="math display">\[ \beta_E = \exp(\beta_I) -
+1 \]</span></td>
 <td align="left">
 <span class="citation">Routledge (1977)</span> *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ \beta_T = \frac{g(H) + l(H)}{2\alpha} \]</span></td>
+<td align="left"><span class="math display">\[ \beta_T = \frac{g(H) +
+l(H)}{2\alpha} \]</span></td>
 <td align="left">
-<span class="citation">Wilson and Shmida (1984)</span> *</td>
+<span class="citation">Wilson and Shmida (1984)</span>
+*</td>
 </tr>
 </tbody>
 </table>
 <p>Where:</p>
 <ul>
 <li>
-<span class="math inline">\(\alpha\)</span> is the mean sample diversity: <span class="math inline">\(\alpha = \frac{x_{\cdot \cdot}}{m}\)</span>,</li>
+<span class="math inline">\(\alpha\)</span> is the mean sample
+diversity: <span class="math inline">\(\alpha = \frac{x_{\cdot
+\cdot}}{m}\)</span>,</li>
 <li>
-<span class="math inline">\(g(H)\)</span> is the number of taxa gained along the transect,</li>
+<span class="math inline">\(g(H)\)</span> is the number of taxa
+gained along the transect,</li>
 <li>
-<span class="math inline">\(l(H)\)</span> is the number of taxa lost along the transect.</li>
+<span class="math inline">\(l(H)\)</span> is the number of taxa lost
+along the transect.</li>
 </ul>
 </div>
-<div class="section level3">
-<h3 id="usage-2">Usage<a class="anchor" aria-label="anchor" href="#usage-2"></a>
-</h3>
+<div class="section level4">
+<h4 id="usage-2">Usage<a class="anchor" aria-label="anchor" href="#usage-2"></a>
+</h4>
 </div>
 </div>
-<div class="section level2">
-<h2 id="similarity">Similarity<a class="anchor" aria-label="anchor" href="#similarity"></a>
-</h2>
 <div class="section level3">
-<h3 id="definitions-3">Definitions<a class="anchor" aria-label="anchor" href="#definitions-3"></a>
+<h3 id="similarity">Similarity<a class="anchor" aria-label="anchor" href="#similarity"></a>
 </h3>
-<p>Similarity between two samples <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> or between two types <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> can be measured as follow.</p>
-<p>These indices provide a scale of similarity from <span class="math inline">\(0\)</span>-<span class="math inline">\(1\)</span> where <span class="math inline">\(1\)</span> is perfect similarity and <span class="math inline">\(0\)</span> is no similarity, with the exception of the Brainerd-Robinson index which is scaled between <span class="math inline">\(0\)</span> and <span class="math inline">\(200\)</span>.</p>
+<div class="section level4">
+<h4 id="definitions-3">Definitions<a class="anchor" aria-label="anchor" href="#definitions-3"></a>
+</h4>
+<p>Similarity between two samples <span class="math inline">\(a\)</span>
+and <span class="math inline">\(b\)</span> or between two types <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> can be measured as follow.</p>
+<p>These indices provide a scale of similarity from <span class="math inline">\(0\)</span>-<span class="math inline">\(1\)</span>
+where <span class="math inline">\(1\)</span> is perfect similarity and
+<span class="math inline">\(0\)</span> is no similarity, with the
+exception of the Brainerd-Robinson index which is scaled between <span class="math inline">\(0\)</span> and <span class="math inline">\(200\)</span>.</p>
 <table class="table">
-<caption>Qualitative similarity measures (between samples). *: implemented.</caption>
+<caption>Qualitative similarity measures (between samples). *:
+implemented.</caption>
 <thead><tr class="header">
 <th align="left">Measure</th>
 <th align="left">Reference</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math display">\[ C_J = \frac{o_j}{S_a + S_b - o_j} \]</span></td>
+<td align="left"><span class="math display">\[ C_J = \frac{o_j}{S_a +
+S_b - o_j} \]</span></td>
 <td align="left">Jaccard *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ C_S = \frac{2 \times o_j}{S_a + S_b} \]</span></td>
+<td align="left"><span class="math display">\[ C_S = \frac{2 \times
+o_j}{S_a + S_b} \]</span></td>
 <td align="left">Sorenson *</td>
 </tr>
 </tbody>
 </table>
 <table class="table">
-<caption>Quantitative similarity measures (between samples). *: implemented.</caption>
+<caption>Quantitative similarity measures (between samples). *:
+implemented.</caption>
 <colgroup>
 <col width="68%">
 <col width="31%">
@@ -606,23 +675,31 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math display">\[ C_{BR} = 200 - \sum_{j = 1}^{S} \left| \frac{a_j \times 100}{\sum_{j = 1}^{S} a_j} - \frac{b_j \times 100}{\sum_{j = 1}^{S} b_j} \right|\]</span></td>
+<td align="left"><span class="math display">\[ C_{BR} = 200 - \sum_{j =
+1}^{S} \left| \frac{a_j \times 100}{\sum_{j = 1}^{S} a_j} - \frac{b_j
+\times 100}{\sum_{j = 1}^{S} b_j} \right|\]</span></td>
 <td align="left">
-<span class="citation">Brainerd (1951)</span>, <span class="citation">Robinson (1951)</span> *</td>
+<span class="citation">(<strong>brainerd1951?</strong>)</span>, <span class="citation">(<strong>robinson1951?</strong>)</span> *</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math display">\[ C_N = \frac{2 \sum_{j = 1}^{S} \min(a_j, b_j)}{N_a + N_b} \]</span></td>
+<td align="left"><span class="math display">\[ C_N = \frac{2 \sum_{j =
+1}^{S} \min(a_j, b_j)}{N_a + N_b} \]</span></td>
 <td align="left">
-<span class="citation">Bray and Curtis (1957)</span>, Sorenson *</td>
+<span class="citation">Bray and Curtis (1957)</span>,
+Sorenson *</td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math display">\[ C_{MH} = \frac{2 \sum_{j = 1}^{S} a_j \times b_j}{(\frac{\sum_{j = 1}^{S} a_j^2}{N_a^2} + \frac{\sum_{j = 1}^{S} b_j^2}{N_b^2}) \times N_a \times N_b} \]</span></td>
+<td align="left"><span class="math display">\[ C_{MH} = \frac{2 \sum_{j
+= 1}^{S} a_j \times b_j}{(\frac{\sum_{j = 1}^{S} a_j^2}{N_a^2} +
+\frac{\sum_{j = 1}^{S} b_j^2}{N_b^2}) \times N_a \times N_b}
+\]</span></td>
 <td align="left">Morisita-Horn *</td>
 </tr>
 </tbody>
 </table>
 <table class="table">
-<caption>Quantitative similarity measures (between types). *: implemented.</caption>
+<caption>Quantitative similarity measures (between types). *:
+implemented.</caption>
 <colgroup>
 <col width="68%">
 <col width="31%">
@@ -632,227 +709,317 @@
 <th align="left">Reference</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left"><span class="math display">\[ C_{Bi} = \frac{o_i - N \times p}{\sqrt{N \times p \times (1 - p)}} \]</span></td>
+<td align="left"><span class="math display">\[ C_{Bi} = \frac{o_i - N
+\times p}{\sqrt{N \times p \times (1 - p)}} \]</span></td>
 <td align="left">
-<span class="citation">K. Kintigh (2006)</span> *</td>
+<span class="citation">(<strong>kintigh2006?</strong>)</span> *</td>
 </tr></tbody>
 </table>
 <p>Where:</p>
 <ul>
 <li>
-<span class="math inline">\(S_a\)</span> and <span class="math inline">\(S_b\)</span> denote the total number of taxa observed in samples <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, respectively,</li>
+<span class="math inline">\(S_a\)</span> and <span class="math inline">\(S_b\)</span> denote the total number of taxa
+observed in samples <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, respectively,</li>
 <li>
-<span class="math inline">\(N_a\)</span> and <span class="math inline">\(N_b\)</span> denote the total number of individuals in samples <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, respectively,</li>
+<span class="math inline">\(N_a\)</span> and <span class="math inline">\(N_b\)</span> denote the total number of
+individuals in samples <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, respectively,</li>
 <li>
-<span class="math inline">\(a_j\)</span> and <span class="math inline">\(b_j\)</span> denote the number of individuals in the <span class="math inline">\(j\)</span>-th type/taxon, <span class="math inline">\(j \in \left[ 1,S \right]\)</span>,</li>
+<span class="math inline">\(a_j\)</span> and <span class="math inline">\(b_j\)</span> denote the number of individuals in
+the <span class="math inline">\(j\)</span>-th type/taxon, <span class="math inline">\(j \in \left[ 1,S \right]\)</span>,</li>
 <li>
-<span class="math inline">\(x_i\)</span> and <span class="math inline">\(y_i\)</span> denote the number of individuals in the <span class="math inline">\(i\)</span>-th sample/case, <span class="math inline">\(i \in \left[ 1,m \right]\)</span>,</li>
+<span class="math inline">\(x_i\)</span> and <span class="math inline">\(y_i\)</span> denote the number of individuals in
+the <span class="math inline">\(i\)</span>-th sample/case, <span class="math inline">\(i \in \left[ 1,m \right]\)</span>,</li>
 <li>
-<span class="math inline">\(o_i\)</span> denotes the number of sample/case common to both type/taxon: <span class="math inline">\(o_i = \sum_{k = 1}^{m} x_k \cap y_k\)</span>,</li>
+<span class="math inline">\(o_i\)</span> denotes the number of
+sample/case common to both type/taxon: <span class="math inline">\(o_i =
+\sum_{k = 1}^{m} x_k \cap y_k\)</span>,</li>
 <li>
-<span class="math inline">\(o_j\)</span> denotes the number of type/taxon common to both sample/case: <span class="math inline">\(o_j = \sum_{k = 1}^{S} a_k \cap b_k\)</span>.</li>
+<span class="math inline">\(o_j\)</span> denotes the number of
+type/taxon common to both sample/case: <span class="math inline">\(o_j =
+\sum_{k = 1}^{S} a_k \cap b_k\)</span>.</li>
 </ul>
 </div>
-<div class="section level3">
-<h3 id="usage-3">Usage<a class="anchor" aria-label="anchor" href="#usage-3"></a>
-</h3>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="section level4">
+<h4 id="usage-3">Usage<a class="anchor" aria-label="anchor" href="#usage-3"></a>
+</h4>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Brainerd-Robinson (similarity between assemblages)</span>
-<span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/similarity-method.html">similarity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_sequential.html" class="external-link">scale_colour_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<span class="va">BR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span>
+<span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">BR</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_YlOrBr.html" class="external-link">scale_colour_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="diversity_files/figure-html/similarity-1.png" width="672" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="co"># Binomial co-occurrence (similarity between types)</span>
-<span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/similarity-method.html">similarity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_diverging.html" class="external-link">scale_colour_PRGn</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<span class="va">BI</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span>
+<span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">BI</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_PRGn.html" class="external-link">scale_colour_PRGn</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="diversity_files/figure-html/similarity-2.png" width="672" style="display: block; margin: auto;"></p>
 </div>
 </div>
 </div>
-<div class="section level1">
-<h1 id="sample-size-and-significance">Sample Size and Significance<a class="anchor" aria-label="anchor" href="#sample-size-and-significance"></a>
-</h1>
-<p><span class="citation">K. W. Kintigh (1989)</span></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="section level2">
+<h2 id="sample-size-and-significance">Sample Size and Significance<a class="anchor" aria-label="anchor" href="#sample-size-and-significance"></a>
+</h2>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">RA</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rarefaction.html">rarefaction</a></span><span class="op">(</span><span class="va">mississippi</span>, sample <span class="op">=</span> <span class="fl">100</span>, method <span class="op">=</span> <span class="st">"hurlbert"</span><span class="op">)</span>
+
+<span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">RA</span><span class="op">)</span></code></pre></div>
+<p><img src="diversity_files/figure-html/rarefaction-1.png" width="700"></p>
+<p><span class="citation">Kintigh (1989)</span></p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span>
-<span class="va">chevelon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="va">chevelon</span><span class="op">)</span>
+<span class="va">HE</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
+<span class="va">HE_sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate.html">simulate</a></span><span class="op">(</span><span class="va">HE</span><span class="op">)</span>
+<span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">HE_sim</span><span class="op">)</span>
 
-<span class="va">sim_evenness</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/heterogeneity-index.html">simulate_heterogeneity</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
-<span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim_evenness</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span>
-
-<span class="va">sim_richness</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/richness-index.html">simulate_richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span>
-<span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim_richness</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></code></pre></div>
+<span class="va">RI</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/deprecate.html">index_richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span>
+<span class="co">#&gt; Warning: 'index_richness' is deprecated.</span>
+<span class="co">#&gt; Use 'richness' instead.</span>
+<span class="co">#&gt; See help("Deprecated")</span>
+<span class="va">RI_sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate.html">simulate</a></span><span class="op">(</span><span class="va">RI</span><span class="op">)</span>
+<span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">RI_sim</span><span class="op">)</span> </code></pre></div>
 <p><img src="diversity_files/figure-html/sample-size-1.png" width="336"><img src="diversity_files/figure-html/sample-size-2.png" width="336"></p>
 </div>
-<div class="section level1">
-<h1 id="abundance-models">Abundance models<a class="anchor" aria-label="anchor" href="#abundance-models"></a>
-</h1>
-<p>Ranks <em>vs</em> abundance plot can be used for abundance models (model fitting will be implemented in a future release):</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mississippi</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="../reference/plot_line.html">plot_rank</a></span><span class="op">(</span>log <span class="op">=</span> <span class="st">"xy"</span><span class="op">)</span> <span class="op">+</span>
+<div class="section level2">
+<h2 id="abundance-models">Abundance models<a class="anchor" aria-label="anchor" href="#abundance-models"></a>
+</h2>
+<p>Ranks <em>vs</em> abundance plot can be used for abundance models
+(model fitting will be implemented in a future release):</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_line.html">plot_rank</a></span><span class="op">(</span><span class="va">mississippi</span>, log <span class="op">=</span> <span class="st">"xy"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_sequential.html" class="external-link">scale_color_discreterainbow</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_discreterainbow.html" class="external-link">scale_color_discreterainbow</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="diversity_files/figure-html/plot-rank-1.png" width="672" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level1 unnumbered">
-<h1 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
-</h1>
+<div class="section level2">
+<h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-berger1970" class="csl-entry">
-Berger, W. H., and F. L. Parker. 1970. <span>“Diversity of Planktonic Foraminifera in Deep Sea Sediments.”</span> <em>Science</em> 168 (3937): 1345–47. <a href="https://doi.org/10.1126/science.168.3937.1345" class="external-link">https://doi.org/10.1126/science.168.3937.1345</a>.
+Berger, W. H., and F. L. Parker. 1970. <span>“Diversity of
+<span>Planktonic Foraminifera</span> in <span>Deep Sea
+Sediments</span>.”</span> <em>Science</em> 168 (3937): 1345–47. <a href="https://doi.org/10.1126/science.168.3937.1345" class="external-link">https://doi.org/10.1126/science.168.3937.1345</a>.
 </div>
 <div id="ref-bobrowsky1989" class="csl-entry">
-Bobrowsky, Peter, T., and Bruce F. Ball. 1989. <span>“The Theory and Mechanics of Ecological Diversity in Archaeology.”</span> In <em>Quantifying Diversity in Archaeology</em>, edited by Robert D. Leonard and George T. Jones, 4–12. New Directions in Archaeology. Cambridge: Cambridge University Press.
+Bobrowsky, Peter, T., and Bruce F. Ball. 1989. <span>“The
+<span>Theory</span> and <span>Mechanics</span> of <span>Ecological
+Diversity</span> in <span>Archaeology</span>.”</span> In <em>Quantifying
+<span>Diversity</span> in <span>Archaeology</span></em>, edited by
+Robert D. Leonard and George T. Jones, 4–12. New <span>Directions</span>
+in <span>Archaeology</span>. <span>Cambridge</span>: <span>Cambridge
+University Press</span>.
 </div>
 <div id="ref-bowman1971" class="csl-entry">
-Bowman, K. O., K. Hutcheson, E. P. Odum, and L. R. Shenton. 1971. <span>“Comments on the Distribution of Indices of Diversity.”</span> In <em>Statistical Ecology</em>, edited by E. C. Patil, E. C. Pielou, and W. E. Waters, 3:315–66. University Park, <span>PA</span>: Pennsylvania State University Press.
-</div>
-<div id="ref-brainerd1951" class="csl-entry">
-Brainerd, George W. 1951. <span>“The Place of Chronological Ordering in Archaeological Analysis.”</span> <em>American Antiquity</em> 16 (4): 301–13. <a href="https://doi.org/10.2307/276979" class="external-link">https://doi.org/10.2307/276979</a>.
+Bowman, K. O., K. Hutcheson, E. P. Odum, and L. R. Shenton. 1971.
+<span>“Comments on the <span>Distribution</span> of <span>Indices</span>
+of <span>Diversity</span>.”</span> In <em>Statistical Ecology</em>,
+edited by E. C. Patil, E. C. Pielou, and W. E. Waters, 3:315–66.
+<span>University Park, PA</span>: <span>Pennsylvania State University
+Press</span>.
 </div>
 <div id="ref-bray1957" class="csl-entry">
-Bray, J. Roger, and J. T. Curtis. 1957. <span>“An Ordination of the Upland Forest Communities of Southern Wisconsin.”</span> <em>Ecological Monographs</em> 27 (4): 325–49. <a href="https://doi.org/10.2307/1942268" class="external-link">https://doi.org/10.2307/1942268</a>.
+Bray, J. Roger, and J. T. Curtis. 1957. <span>“An
+<span>Ordination</span> of the <span>Upland Forest Communities</span> of
+<span>Southern Wisconsin</span>.”</span> <em>Ecological Monographs</em>
+27 (4): 325–49. <a href="https://doi.org/10.2307/1942268" class="external-link">https://doi.org/10.2307/1942268</a>.
 </div>
 <div id="ref-brillouin1956" class="csl-entry">
-Brillouin, Leon. 1956. <em>Science and Information Theory</em>. New York: Academic Press.
-</div>
-<div id="ref-decaprariis1976" class="csl-entry">
-Caprariis, Pascal de, Richard H. Lindemann, and Catharine M. Collins. 1976. <span>“A Method for Determining Optimum Sample Size in Species Diversity Studies.”</span> <em>Journal of the International Association for Mathematical Geology</em> 8 (5): 575–81. <a href="https://doi.org/10.1007/BF01042995" class="external-link">https://doi.org/10.1007/BF01042995</a>.
+Brillouin, Leon. 1956. <em>Science and <span>Information
+Theory</span></em>. <span>New York</span>: <span>Academic Press</span>.
 </div>
 <div id="ref-chao1984" class="csl-entry">
-Chao, Anne. 1984. <span>“Nonparametric Estimation of the Number of Classes in a Population.”</span> <em>Scandinavian Journal of Statistics</em> 11 (4): 265–70.
+Chao, Anne. 1984. <span>“Nonparametric <span>Estimation</span> of the
+<span>Number</span> of <span>Classes</span> in a
+<span>Population</span>.”</span> <em>Scandinavian Journal of
+Statistics</em> 11 (4): 265–70.
 </div>
 <div id="ref-chao1987" class="csl-entry">
-———. 1987. <span>“Estimating the Population Size for Capture Recapture Data with Unequal Catchability.”</span> <em>Biometrics</em> 43 (4): 783–91. <a href="https://doi.org/10.2307/2531532" class="external-link">https://doi.org/10.2307/2531532</a>.
+———. 1987. <span>“Estimating the <span>Population Size</span> for
+<span>Capture Recapture Data</span> with <span>Unequal
+Catchability</span>.”</span> <em>Biometrics</em> 43 (4): 783–91. <a href="https://doi.org/10.2307/2531532" class="external-link">https://doi.org/10.2307/2531532</a>.
 </div>
 <div id="ref-chao2016" class="csl-entry">
-Chao, Anne, and Chun-Huo Chiu. 2016. <span>“Species Richness: Estimation and Comparison.”</span> In <em>Wiley <span>StatsRef</span>: Statistics Reference Online</em>, edited by N. Balakrishnan, Theodore Colton, Brian Everitt, Walter Piegorsch, Fabrizio Ruggeri, and Jozef L. Teugels, 1–26. Chichester, <span>UK</span>: John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2" class="external-link">https://doi.org/10.1002/9781118445112.stat03432.pub2</a>.
+Chao, Anne, and Chun-Huo Chiu. 2016. <span>“Species
+<span>Richness</span>: <span>Estimation</span> and
+<span>Comparison</span>.”</span> In <em>Wiley <span>StatsRef</span>:
+Statistics Reference Online</em>, edited by N. Balakrishnan, Theodore
+Colton, Brian Everitt, Walter Piegorsch, Fabrizio Ruggeri, and Jozef L.
+Teugels, 1–26. <span>Chichester, UK</span>: <span>John Wiley &amp; Sons,
+Ltd</span>. <a href="https://doi.org/10.1002/9781118445112.stat03432.pub2" class="external-link">https://doi.org/10.1002/9781118445112.stat03432.pub2</a>.
 </div>
 <div id="ref-chao1992" class="csl-entry">
-Chao, Anne, and Shen-Ming Lee. 1992. <span>“Estimating the Number of Classes via Sample Coverage.”</span> <em>Journal of the American Statistical Association</em> 87 (417): 210–17. <a href="https://doi.org/10.1080/01621459.1992.10475194" class="external-link">https://doi.org/10.1080/01621459.1992.10475194</a>.
+Chao, Anne, and Shen-Ming Lee. 1992. <span>“Estimating the
+<span>Number</span> of <span>Classes Via Sample Coverage</span>.”</span>
+<em>Journal of the American Statistical Association</em> 87 (417):
+210–17. <a href="https://doi.org/10.1080/01621459.1992.10475194" class="external-link">https://doi.org/10.1080/01621459.1992.10475194</a>.
 </div>
 <div id="ref-chiu2014" class="csl-entry">
-Chiu, Chun-Huo, Yi-Ting Wang, Bruno A. Walther, and Anne Chao. 2014. <span>“An Improved Nonparametric Lower Bound of Species Richness via a Modified Good-Turing Frequency Formula.”</span> <em>Biometrics</em> 70 (3): 671–82. <a href="https://doi.org/10.1111/biom.12200" class="external-link">https://doi.org/10.1111/biom.12200</a>.
+Chiu, Chun-Huo, Yi-Ting Wang, Bruno A. Walther, and Anne Chao. 2014.
+<span>“An <span>Improved Nonparametric Lower Bound</span> of
+<span>Species Richness Via</span> a <span>Modified Good-Turing Frequency
+Formula</span>.”</span> <em>Biometrics</em> 70 (3): 671–82. <a href="https://doi.org/10.1111/biom.12200" class="external-link">https://doi.org/10.1111/biom.12200</a>.
 </div>
 <div id="ref-cody1975" class="csl-entry">
-Cody, M. L. 1975. <span>“Towards a Theory of Continental Species Diversity: Bird Distributions over Mediterranean Habitat Gradients.”</span> In <em>Ecology and Evolution of Communities</em>, edited by M. L. Cody and J. M. Diamond, 214–57. Cambridge, <span>MA</span>: Harvard University Press.
+Cody, M. L. 1975. <span>“Towards a <span>Theory</span> of
+<span>Continental Species Diversity</span>: <span>Bird Distributions
+Over Mediterranean Habitat Gradients</span>.”</span> In <em>Ecology and
+Evolution of Communities</em>, edited by M. L. Cody and J. M. Diamond,
+214–57. <span>Cambridge, MA</span>: <span>Harvard University
+Press</span>.
+</div>
+<div id="ref-decaprariis1976" class="csl-entry">
+de Caprariis, Pascal, Richard H. Lindemann, and Catharine M. Collins.
+1976. <span>“A <span>Method</span> for <span>Determining Optimum Sample
+Size</span> in <span>Species Diversity Studies</span>.”</span>
+<em>Journal of the International Association for Mathematical
+Geology</em> 8 (5): 575–81. <a href="https://doi.org/10.1007/BF01042995" class="external-link">https://doi.org/10.1007/BF01042995</a>.
 </div>
 <div id="ref-fisher1943" class="csl-entry">
-Fisher, R. A., A. Steven Corbet, and C. B. Williams. 1943. <span>“The Relation Between the Number of Species and the Number of Individuals in a Random Sample of an Animal Population.”</span> <em>The Journal of Animal Ecology</em> 12 (1): 42. <a href="https://doi.org/10.2307/1411" class="external-link">https://doi.org/10.2307/1411</a>.
+Fisher, R. A., A. Steven Corbet, and C. B. Williams. 1943. <span>“The
+<span>Relation Between</span> the <span>Number</span> of
+<span>Species</span> and the <span>Number</span> of
+<span>Individuals</span> in a <span>Random Sample</span> of an
+<span>Animal Population</span>.”</span> <em>The Journal of Animal
+Ecology</em> 12 (1): 42. <a href="https://doi.org/10.2307/1411" class="external-link">https://doi.org/10.2307/1411</a>.
 </div>
 <div id="ref-gleason1922" class="csl-entry">
-Gleason, Henry Allan. 1922. <span>“On the Relation Between Species and Area.”</span> <em>Ecology</em> 3 (2): 158–62. <a href="https://doi.org/10.2307/1929150" class="external-link">https://doi.org/10.2307/1929150</a>.
+Gleason, Henry Allan. 1922. <span>“On the <span>Relation Between
+Species</span> and <span>Area</span>.”</span> <em>Ecology</em> 3 (2):
+158–62. <a href="https://doi.org/10.2307/1929150" class="external-link">https://doi.org/10.2307/1929150</a>.
 </div>
 <div id="ref-hurlbert1971" class="csl-entry">
-Hurlbert, Stuart H. 1971. <span>“The Nonconcept of Species Diversity: A Critique and Alternative Parameters.”</span> <em>Ecology</em> 52 (4): 577–86. <a href="https://doi.org/10.2307/1934145" class="external-link">https://doi.org/10.2307/1934145</a>.
+Hurlbert, Stuart H. 1971. <span>“The <span>Nonconcept</span> of
+<span>Species Diversity</span>: <span>A Critique</span> and
+<span>Alternative Parameters</span>.”</span> <em>Ecology</em> 52 (4):
+577–86. <a href="https://doi.org/10.2307/1934145" class="external-link">https://doi.org/10.2307/1934145</a>.
 </div>
 <div id="ref-hutcheson1970" class="csl-entry">
-Hutcheson, K. 1970. <span>“A Test for Comparing Diversity Based on the Shannon Formula.”</span> <em>Journal of Theoretical Biology</em> 29 (1): 151–54. <a href="https://doi.org/10.1016/0022-5193(70)90124-4" class="external-link">https://doi.org/10.1016/0022-5193(70)90124-4</a>.
+Hutcheson, K. 1970. <span>“A <span>Test</span> for <span>Comparing
+Diversity Based</span> on the <span>Shannon Formula</span>.”</span>
+<em>Journal of Theoretical Biology</em> 29 (1): 151–54. <a href="https://doi.org/10.1016/0022-5193(70)90124-4" class="external-link">https://doi.org/10.1016/0022-5193(70)90124-4</a>.
 </div>
 <div id="ref-kilburn1966" class="csl-entry">
-Kilburn, Paul D. 1966. <span>“Analysis of the Species-Area Relation.”</span> <em>Ecology</em> 47 (5): 831–43. <a href="https://doi.org/10.2307/1934269" class="external-link">https://doi.org/10.2307/1934269</a>.
-</div>
-<div id="ref-kintigh2006" class="csl-entry">
-Kintigh, Keith. 2006. <span>“Ceramic Dating and Type Associations.”</span> In <em>Managing Archaeological Data: Essays in Honor of Sylvia w. Gaines</em>, edited by Jeffrey Hantman and Rachel Most, 17–26. Anthropological Research Paper 57. Tempe, <span>AZ</span>: Arizona State University. <a href="https://doi.org/10.6067/XCV8J38QSS" class="external-link">https://doi.org/10.6067/XCV8J38QSS</a>.
+Kilburn, Paul D. 1966. <span>“Analysis of the <span>Species-Area
+Relation</span>.”</span> <em>Ecology</em> 47 (5): 831–43. <a href="https://doi.org/10.2307/1934269" class="external-link">https://doi.org/10.2307/1934269</a>.
 </div>
 <div id="ref-kintigh1989" class="csl-entry">
-Kintigh, Keith W. 1989. <span>“Sample Size, Significance, and Measures of Diversity.”</span> In <em>Quantifying Diversity in Archaeology</em>, edited by Robert D. Leonard and George T. Jones, 25–36. New Directions in Archaeology. Cambridge: Cambridge University Press.
+Kintigh, Keith W. 1989. <span>“Sample <span>Size</span>,
+<span>Significance</span>, and <span>Measures</span> of
+<span>Diversity</span>.”</span> In <em>Quantifying
+<span>Diversity</span> in <span>Archaeology</span></em>, edited by
+Robert D. Leonard and George T. Jones, 25–36. New
+<span>Directions</span> in <span>Archaeology</span>.
+<span>Cambridge</span>: <span>Cambridge University Press</span>.
 </div>
 <div id="ref-laxton1978" class="csl-entry">
-Laxton, R. R. 1978. <span>“The Measure of Diversity.”</span> <em>Journal of Theoretical Biology</em> 70 (1): 51–67. <a href="https://doi.org/10.1016/0022-5193(78)90302-8" class="external-link">https://doi.org/10.1016/0022-5193(78)90302-8</a>.
+Laxton, R. R. 1978. <span>“The <span>Measure</span> of
+<span>Diversity</span>.”</span> <em>Journal of Theoretical Biology</em>
+70 (1): 51–67. <a href="https://doi.org/10.1016/0022-5193(78)90302-8" class="external-link">https://doi.org/10.1016/0022-5193(78)90302-8</a>.
 </div>
 <div id="ref-macarthur1965" class="csl-entry">
-Macarthur, Robert H. 1965. <span>“Patterns of Species Diversity.”</span> <em>Biological Reviews</em> 40 (4): 510–33. <a href="https://doi.org/10.1111/j.1469-185X.1965.tb00815.x" class="external-link">https://doi.org/10.1111/j.1469-185X.1965.tb00815.x</a>.
+Macarthur, Robert H. 1965. <span>“Patterns of <span>Species
+Diversity</span>.”</span> <em>Biological Reviews</em> 40 (4): 510–33. <a href="https://doi.org/10.1111/j.1469-185X.1965.tb00815.x" class="external-link">https://doi.org/10.1111/j.1469-185X.1965.tb00815.x</a>.
 </div>
 <div id="ref-magurran1988" class="csl-entry">
-Magurran, Anne E. 1988. <em>Ecological Diversity and Its Measurement</em>. Princeton, <span>NJ</span>: Princeton University Press.
+Magurran, Anne E. 1988. <em>Ecological <span>Diversity</span> and
+<span>Its Measurement</span></em>. <span>Princeton, NJ</span>:
+<span>Princeton University Press</span>.
 </div>
 <div id="ref-margalef1958" class="csl-entry">
-Margalef, R. 1958. <span>“Information Theory in Ecology.”</span> <em>General Systems</em> 3: 36–71.
+Margalef, R. 1958. <span>“Information <span>Theory</span> in
+<span>Ecology</span>.”</span> <em>General Systems</em> 3: 36–71.
 </div>
 <div id="ref-mcintosh1967" class="csl-entry">
-McIntosh, Robert P. 1967. <span>“An Index of Diversity and the Relation of Certain Concepts to Diversity.”</span> <em>Ecology</em> 48 (3): 392–404. <a href="https://doi.org/10.2307/1932674" class="external-link">https://doi.org/10.2307/1932674</a>.
+McIntosh, Robert P. 1967. <span>“An <span>Index</span> of
+<span>Diversity</span> and the <span>Relation</span> of <span>Certain
+Concepts</span> to <span>Diversity</span>.”</span> <em>Ecology</em> 48
+(3): 392–404. <a href="https://doi.org/10.2307/1932674" class="external-link">https://doi.org/10.2307/1932674</a>.
 </div>
 <div id="ref-menhinick1964" class="csl-entry">
-Menhinick, Edward F. 1964. <span>“A Comparison of Some Species-Individuals Diversity Indices Applied to Samples of Field Insects.”</span> <em>Ecology</em> 45 (4): 859–61. <a href="https://doi.org/10.2307/1934933" class="external-link">https://doi.org/10.2307/1934933</a>.
+Menhinick, Edward F. 1964. <span>“A <span>Comparison</span> of
+<span>Some Species-Individuals Diversity Indices Applied</span> to
+<span>Samples</span> of <span>Field Insects</span>.”</span>
+<em>Ecology</em> 45 (4): 859–61. <a href="https://doi.org/10.2307/1934933" class="external-link">https://doi.org/10.2307/1934933</a>.
 </div>
 <div id="ref-odum1960" class="csl-entry">
-Odum, H. T., J. E. Cantlon, and L. S. Kornicker. 1960. <span>“An Organizational Hierarchy Postulate for the Interpretation of Species-Individual Distributions, Species Entropy, Ecosystem Evolution, and the Meaning of a Species-Variety Index.”</span> <em>Ecology</em> 41 (2): 395–95. <a href="https://doi.org/10.2307/1930248" class="external-link">https://doi.org/10.2307/1930248</a>.
+Odum, H. T., J. E. Cantlon, and L. S. Kornicker. 1960. <span>“An
+<span>Organizational Hierarchy Postulate</span> for the
+<span>Interpretation</span> of <span>Species-Individual
+Distributions</span>, <span>Species Entropy</span>, <span>Ecosystem
+Evolution</span>, and the <span>Meaning</span> of a
+<span>Species-Variety Index</span>.”</span> <em>Ecology</em> 41 (2):
+395–95. <a href="https://doi.org/10.2307/1930248" class="external-link">https://doi.org/10.2307/1930248</a>.
 </div>
 <div id="ref-peet1974" class="csl-entry">
-Peet, R. K. 1974. <span>“The Measurement of Species Diversity.”</span> <em>Annual Review of Ecology and Systematics</em> 5 (1): 285–307. <a href="https://doi.org/10.1146/annurev.es.05.110174.001441" class="external-link">https://doi.org/10.1146/annurev.es.05.110174.001441</a>.
+Peet, R. K. 1974. <span>“The <span>Measurement</span> of <span>Species
+Diversity</span>.”</span> <em>Annual Review of Ecology and
+Systematics</em> 5 (1): 285–307. <a href="https://doi.org/10.1146/annurev.es.05.110174.001441" class="external-link">https://doi.org/10.1146/annurev.es.05.110174.001441</a>.
 </div>
 <div id="ref-pielou1975" class="csl-entry">
-Pielou, E. C. 1975. <em>Ecological Diversity</em>. New York: Wiley.
+Pielou, E. C. 1975. <em>Ecological <span>Diversity</span></em>.
+<span>New York</span>: <span>Wiley</span>.
 </div>
 <div id="ref-preston1948" class="csl-entry">
-Preston, F. W. 1948. <span>“The Commonness, and Rarity, of Species.”</span> <em>Ecology</em> 29 (3): 254–83. <a href="https://doi.org/10.2307/1930989" class="external-link">https://doi.org/10.2307/1930989</a>.
+Preston, F. W. 1948. <span>“The <span>Commonness</span>, and
+<span>Rarity</span>, of <span>Species</span>.”</span> <em>Ecology</em>
+29 (3): 254–83. <a href="https://doi.org/10.2307/1930989" class="external-link">https://doi.org/10.2307/1930989</a>.
 </div>
 <div id="ref-preston1962" class="csl-entry">
-———. 1962a. <span>“The Canonical Distribution of Commonness and Rarity: Part i.”</span> <em>Ecology</em> 43 (2): 185. <a href="https://doi.org/10.2307/1931976" class="external-link">https://doi.org/10.2307/1931976</a>.
+———. 1962a. <span>“The <span>Canonical Distribution</span> of
+<span>Commonness</span> and <span>Rarity</span>: <span>Part
+I</span>.”</span> <em>Ecology</em> 43 (2): 185. <a href="https://doi.org/10.2307/1931976" class="external-link">https://doi.org/10.2307/1931976</a>.
 </div>
 <div id="ref-preston1962a" class="csl-entry">
-———. 1962b. <span>“The Canonical Distribution of Commonness and Rarity: Part Ii.”</span> <em>Ecology</em> 43 (3): 410–32. <a href="https://doi.org/10.2307/1933371" class="external-link">https://doi.org/10.2307/1933371</a>.
-</div>
-<div id="ref-robinson1951" class="csl-entry">
-Robinson, W. S. 1951. <span>“A Method for Chronologically Ordering Archaeological Deposits.”</span> <em>American Antiquity</em> 16 (4): 293–301. <a href="https://doi.org/10.2307/276978" class="external-link">https://doi.org/10.2307/276978</a>.
+———. 1962b. <span>“The <span>Canonical Distribution</span> of
+<span>Commonness</span> and <span>Rarity</span>: <span>Part
+Ii</span>.”</span> <em>Ecology</em> 43 (3): 410–32. <a href="https://doi.org/10.2307/1933371" class="external-link">https://doi.org/10.2307/1933371</a>.
 </div>
 <div id="ref-routledge1977" class="csl-entry">
-Routledge, R. D. 1977. <span>“On Whittaker’s Components of Diversity.”</span> <em>Ecology</em> 58 (5): 1120–27. <a href="https://doi.org/10.2307/1936932" class="external-link">https://doi.org/10.2307/1936932</a>.
+Routledge, R. D. 1977. <span>“On <span>Whittaker</span>’s
+<span>Components</span> of <span>Diversity</span>.”</span>
+<em>Ecology</em> 58 (5): 1120–27. <a href="https://doi.org/10.2307/1936932" class="external-link">https://doi.org/10.2307/1936932</a>.
 </div>
 <div id="ref-sander1968" class="csl-entry">
-Sander, Howard L. 1968. <span>“Marine Benthic Diversity: A Comparative Study.”</span> <em>The American Naturalist</em> 102 (925): 243–82. <a href="https://www.jstor.org/stable/2459027" class="external-link">https://www.jstor.org/stable/2459027</a>.
+Sander, Howard L. 1968. <span>“Marine <span>Benthic Diversity</span>:
+<span>A Comparative Study</span>.”</span> <em>The American
+Naturalist</em> 102 (925): 243–82.
 </div>
 <div id="ref-shannon1948" class="csl-entry">
-Shannon, C. E. 1948. <span>“A Mathematical Theory of Communication.”</span> <em>The Bell System Technical Journal</em> 27: 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="external-link">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>.
+Shannon, C. E. 1948. <span>“A <span>Mathematical Theory</span> of
+<span>Communication</span>.”</span> <em>The Bell System Technical
+Journal</em> 27: 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" class="external-link">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>.
 </div>
 <div id="ref-simpson1949" class="csl-entry">
-Simpson, E. H. 1949. <span>“Measurement of Diversity.”</span> <em>Nature</em> 163 (4148): 688–88. <a href="https://doi.org/10.1038/163688a0" class="external-link">https://doi.org/10.1038/163688a0</a>.
+Simpson, E. H. 1949. <span>“Measurement of
+<span>Diversity</span>.”</span> <em>Nature</em> 163 (4148): 688–88. <a href="https://doi.org/10.1038/163688a0" class="external-link">https://doi.org/10.1038/163688a0</a>.
 </div>
 <div id="ref-whittaker1960" class="csl-entry">
-Whittaker, R. H. 1960. <span>“Vegetation of the Siskiyou Mountains, Oregon and California.”</span> <em>Ecological Monographs</em> 30 (3): 279–338. <a href="https://doi.org/10.2307/1943563" class="external-link">https://doi.org/10.2307/1943563</a>.
+Whittaker, R. H. 1960. <span>“Vegetation of the <span>Siskiyou
+Mountains</span>, <span>Oregon</span> and
+<span>California</span>.”</span> <em>Ecological Monographs</em> 30 (3):
+279–338. <a href="https://doi.org/10.2307/1943563" class="external-link">https://doi.org/10.2307/1943563</a>.
 </div>
 <div id="ref-wilson1984" class="csl-entry">
-Wilson, M. V., and A. Shmida. 1984. <span>“Measuring Beta Diversity with Presence-Absence Data.”</span> <em>The Journal of Ecology</em> 72 (3): 1055–64. <a href="https://doi.org/10.2307/2259551" class="external-link">https://doi.org/10.2307/2259551</a>.
+Wilson, M. V., and A. Shmida. 1984. <span>“Measuring <span>Beta
+Diversity</span> with <span>Presence-Absence Data</span>.”</span>
+<em>The Journal of Ecology</em> 72 (3): 1055–64. <a href="https://doi.org/10.2307/2259551" class="external-link">https://doi.org/10.2307/2259551</a>.
 </div>
 </div>
 </div>
-  </div>
- <div class="col-md-3" id="pkgdown-sidebar">
-        <nav id="toc"><h2>On this page</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-<p>
-  tabula is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tabula" class="external-link">tesselle.org</a>.
-</p>
+<p>tabula is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=tabula" class="external-link">tesselle.org</a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p>
-  </p>
-<p>Developed by Nicolas Frerebeau.</p>
-
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
-
+<p></p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer>
