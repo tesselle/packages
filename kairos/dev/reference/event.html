@@ -22,7 +22,7 @@ accumulation dates of an assemblage.
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,15 +30,13 @@ accumulation dates of an assemblage.
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/kairos.html">Get started</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
@@ -101,10 +99,10 @@ accumulation dates of an assemblage.</p></li>
 <span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span><span class="op">)</span>
 
 <span class="co"># S4 method for EventDate</span>
-<span class="fu">jackknife</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"kairos.progress"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
+<span class="fu"><a href="resample.html">jackknife</a></span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span>, progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"kairos.progress"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for EventDate</span>
-<span class="fu">bootstrap</span><span class="op">(</span>
+<span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span>
   <span class="va">object</span>,
   level <span class="op">=</span> <span class="fl">0.95</span>,
   probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span>,
@@ -119,41 +117,62 @@ accumulation dates of an assemblage.</p></li>
     <dl><dt>object</dt>
 <dd><p>An \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a
 <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
+
+
 <dt>dates</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates expressed in CE years (BCE years
 must be given as negative numbers). If named, the names must match
 the row names of <code>object</code>.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Further arguments to be passed to internal methods.</p></dd>
+
+
 <dt>data</dt>
 <dd><p>A <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data
 (absolute frequencies)for which to predict event and accumulation dates.</p></dd>
+
+
 <dt>cutoff</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the cumulative percentage of variance
 used to select CA factorial components for linear model fitting (see
 details). All compounds with a cumulative percentage of variance of less
 than the <code>cutoff</code> value will be retained.</p></dd>
+
+
 <dt>level</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
+
+
 <dt>margin</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscripts which the prediction
 will be applied over: <code>1</code> indicates rows, <code>2</code> indicates columns.</p></dd>
+
+
 <dt>progress</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a progress bar be displayed?</p></dd>
+
+
 <dt>probs</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of probabilities with values in
 \([0,1]\) (see <code><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">stats::quantile()</a></code>). If <code>NULL</code>, quantiles are not
 computed.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
 replications.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <ul><li><p><code>event()</code> returns an <a href="EventDate-class.html">EventDate</a> object.</p></li>
+    
+
+<ul><li><p><code>event()</code> returns an <a href="EventDate-class.html">EventDate</a> object.</p></li>
 <li><p><code>predict_event()</code> returns a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
 <li><p><code>predict_accumulation()</code> returns a <a href="MeanDate-class.html">MeanDate</a> object.</p></li>
-<li><p><code>bootstrap()</code> and <code>jackknife()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
+<li><p><code><a href="resample.html">bootstrap()</a></code> and <code><a href="resample.html">jackknife()</a></code> return a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -171,7 +190,7 @@ of the context by residual or intrusive material." In other words,
 accumulation dates estimate occurrence of archaeological events and rhythms
 of the long term.</p>
 <p>This method relies on strong archaeological and statistical assumptions
-(see <code><a href="../articles/kairos.html">vignette("kairos")</a></code>).</p>
+(see <code>vignette("kairos")</code>).</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
@@ -187,7 +206,7 @@ release.</p>
     <h2 id="resampling">Resampling<a class="anchor" aria-label="anchor" href="#resampling"></a></h2>
     
 
-<p>If <code>jackknife()</code> is used, one type/fabric is removed at a
+<p>If <code><a href="resample.html">jackknife()</a></code> is used, one type/fabric is removed at a
 time and all statistics are recalculated. In this way, one can assess
 whether certain type/fabric has a substantial influence on the date
 estimate.
@@ -203,7 +222,7 @@ with the following columns:</p><dl><dt><code>mean</code></dt>
 <dd><p>The standard error of predicted means.</p></dd>
 
 
-</dl><p>If <code>bootstrap()</code> is used, a large number of new bootstrap assemblages is
+</dl><p>If <code><a href="resample.html">bootstrap()</a></code> is used, a large number of new bootstrap assemblages is
 created, with the same sample size, by resampling each of the original
 assemblage with replacement. Then, examination of the bootstrap statistics
 makes it possible to pinpoint assemblages that require further
@@ -277,7 +296,7 @@ for Seriation of Sagalassos Tablewares. In Doerr, M. &amp; Apostolis, S. (eds.),
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

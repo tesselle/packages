@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,14 +19,12 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/kairos.html">Get started</a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
@@ -54,7 +52,21 @@
       <small>Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="section level2"><h2 class="pkg-version" data-toc-text="1.0.1.9000" id="kairos-1019000">kairos 1.0.1.9000<a class="anchor" aria-label="anchor" href="#kairos-1019000"></a></h2></div>
+    <div class="section level2"><h2 class="pkg-version" data-toc-text="1.1.0.9000" id="kairos-1109000">kairos 1.1.0.9000<a class="anchor" aria-label="anchor" href="#kairos-1109000"></a></h2></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.1.0" id="kairos-110">kairos 1.1.0<a class="anchor" aria-label="anchor" href="#kairos-110"></a></h2><p class="text-muted">CRAN release: 2022-06-18</p>
+<div class="section level3">
+<h3 id="new-classes-and-methods-1-1-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-1-0"></a></h3>
+<ul><li>Add seriation methods: <code><a href="../reference/seriation.html">seriate_rank()</a></code>, <code><a href="../reference/seriation.html">seriate_average()</a></code>, <code><a href="../reference/seriation.html">permute()</a></code>, <code><a href="../reference/seriation.html">get_order()</a></code>.</li>
+<li>Add <code>SimulationMeanDate</code> to store mean date estimations from simulated assemblages.</li>
+<li>Add <code><a href="https://rdrr.io/r/stats/simulate.html" class="external-link">simulate()</a></code> method for <code>MeanDate</code> objects.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="breaking-changes-1-1-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-1-1-0"></a></h3>
+<ul><li>No longer use classes from <strong>arkhe</strong>.</li>
+<li>Fix <code><a href="../reference/resample.html">bootstrap()</a></code> method for <code>MeanDate</code> objects: resample with replacement instead of simulating observations from a multinomial distribution.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.1" id="kairos-101">kairos 1.0.1<a class="anchor" aria-label="anchor" href="#kairos-101"></a></h2><p class="text-muted">CRAN release: 2022-03-11</p>
 <div class="section level3">
@@ -73,7 +85,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

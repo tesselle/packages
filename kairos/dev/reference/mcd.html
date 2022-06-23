@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,15 +18,13 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/kairos.html">Get started</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
@@ -64,62 +62,37 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="co"># S4 method for numeric,numeric</span>
-<span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="co"># S4 method for data.frame,numeric</span>
-<span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="co"># S4 method for matrix,numeric</span>
 <span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span>
 
-<span class="co"># S4 method for MeanDate</span>
-<span class="fu">bootstrap</span><span class="op">(</span>
-  <span class="va">object</span>,
-  level <span class="op">=</span> <span class="fl">0.95</span>,
-  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"student"</span>, <span class="st">"normal"</span><span class="op">)</span>,
-  probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span><span class="op">)</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>
-<span class="op">)</span>
+<span class="co"># S4 method for data.frame,numeric</span>
+<span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span>
 
-<span class="co"># S4 method for MeanDate</span>
-<span class="fu">jackknife</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></code></pre></div>
+<span class="co"># S4 method for matrix,numeric</span>
+<span class="fu">mcd</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector, an \(m \times p\) <code>numeric</code>
-<code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
+<dd><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector, an \(m \times p\)
+<code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
+
+
 <dt>dates</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates expressed in CE years (BCE years
-must be given as negative numbers).</p></dd>
+<dd><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates expressed in CE
+years (BCE years must be given as negative numbers).</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
-<dt>na.rm</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should missing values (including <code>NaN</code>) be
-removed?</p></dd>
-<dt>level</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.
-Must be a single number between \(0\) and \(1\). If <code>NULL</code>, no
-confidence interval are computed.</p></dd>
-<dt>type</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string giving the type of confidence
-interval to be returned. It must be one "<code>student</code>" (default) or
-"<code>normal</code>". Any unambiguous substring can be given. Only used if <code>level</code>
-is not <code>NULL</code>.``</p></dd>
-<dt>probs</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of probabilities with values in
-\([0,1]\) (see <code><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">stats::quantile()</a></code>). If <code>NULL</code>, quantiles are not
-computed.</p></dd>
-<dt>n</dt>
-<dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
-replications.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <ul><li><p><code>mcd()</code> returns a single <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value or a <a href="MeanDate-class.html">MeanDate</a> object.</p></li>
-<li><p><code>bootstrap()</code> and <code>jackknife()</code> return a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></li>
-</ul></div>
+    
+
+<p>A single <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value or a <a href="MeanDate-class.html">MeanDate</a> object.</p>
+    </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The Mean Ceramic Date (MCD) is a point estimate of the occupation of an
@@ -147,7 +120,7 @@ New York: Academic Press.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot_mcd</a></p>
+    <div class="dont-index"><p><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot_mcd</a>, <code><a href="resample.html">bootstrap()</a></code>, <code><a href="resample.html">jackknife()</a></code>, <code><a href="https://rdrr.io/r/stats/simulate.html" class="external-link">simulate()</a></code></p>
 <p>Other dating methods: 
 <code><a href="event.html">event</a>()</code></p></div>
     </div>
@@ -176,36 +149,43 @@ New York: Academic Press.</p>
 <span class="r-in"><span class="va">mid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">vapply</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">dates</span>, FUN <span class="op">=</span> <span class="va">mean</span>, FUN.VALUE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Calculate MCD</span></span>
-<span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu">mcd</span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">mc_dates</span> <span class="op">&lt;-</span> <span class="fu">mcd</span><span class="op">(</span><span class="va">zuni</span><span class="op">[</span><span class="fl">100</span><span class="op">:</span><span class="fl">125</span>, <span class="op">]</span>, dates <span class="op">=</span> <span class="va">mid</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1162   1138   1154   1091   1092    841 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789 LZ0783 LZ0782 LZ0778 LZ0777 LZ0776 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1207   1128   1100   1227   1238   1028 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Plot</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">mc_dates</span>, select <span class="op">=</span> <span class="fl">100</span><span class="op">:</span><span class="fl">125</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="mcd-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="co"># \donttest{</span></span>
 <span class="r-in"><span class="co">## Bootstrap resampling</span></span>
-<span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         min   mean  max     lower     upper     Q25    Q50     Q75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1136 1163.1 1183 1157.5093 1168.6907 1153.00 1162.0 1177.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1062 1131.0 1192 1119.3188 1142.6812 1114.25 1129.0 1153.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1104 1151.0 1208 1141.3785 1160.6215 1134.75 1150.5 1163.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1081 1089.9 1097 1088.4948 1091.3052 1088.00 1091.0 1093.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1002 1104.3 1194 1083.7171 1124.8829 1066.00 1115.0 1151.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  738  858.4  996  832.8286  883.9714  841.00  841.0  893.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        original      mean      bias    error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789     1012  930.3000 -81.70000 55.49287</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0783      995  949.8667 -45.13333 27.63023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0782     1100 1100.0000   0.00000  0.00000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0778       NA        NA        NA       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0777     1275 1275.0000   0.00000  0.00000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776      880  816.8667 -63.13333 50.66028</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Jackknife resampling</span></span>
-<span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu"><a href="resample.html">jackknife</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             mean        bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1105 1162.0556   0.9444444  27.537909</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1103 1137.5556  -7.5555556  68.762698</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1100 1153.6111  -6.6111111  50.237614</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1099 1091.0556   0.9444444   9.860289</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1097 1091.6111  -6.6111111  70.898489</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ1096  849.6667 147.3333333 268.508845</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            mean       bias     error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789 1206.833  -2.833333  32.47264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0783 1128.111   1.888889  21.19778</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0782      NaN        NaN       NaN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0778 1226.778  -3.777778  22.52269</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0777      NaN        NaN       NaN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776 1024.889 -52.888889 127.64539</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Simulation</span></span>
+<span class="r-in"><span class="va">sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/simulate.html" class="external-link">simulate</a></span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span>, interval <span class="op">=</span> <span class="st">"percentiles"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="mcd-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span class="co"># }</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -217,7 +197,7 @@ New York: Academic Press.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

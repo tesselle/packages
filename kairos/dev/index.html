@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A toolkit for absolute dating and analysis of chronological
     patterns. This package includes functions for chronological modeling
-    and dating of archaeological assemblages from count data. It allows to
-    compute time point estimates and density estimates of the occupation and 
-    duration of an archaeological site.">
+    and dating of archaeological assemblages from count data. It provides
+    methods for matrix seriation. It also allows to compute time point 
+    estimates and density estimates of the occupation and duration of an 
+    archaeological site.">
 <title>Analysis of Chronological Patterns from Archaeological Count Data • kairos</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -26,9 +27,10 @@
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Analysis of Chronological Patterns from Archaeological Count Data">
 <meta property="og:description" content="A toolkit for absolute dating and analysis of chronological
     patterns. This package includes functions for chronological modeling
-    and dating of archaeological assemblages from count data. It allows to
-    compute time point estimates and density estimates of the occupation and 
-    duration of an archaeological site.">
+    and dating of archaeological assemblages from count data. It provides
+    methods for matrix seriation. It also allows to compute time point 
+    estimates and density estimates of the occupation and duration of an 
+    archaeological site.">
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
@@ -47,7 +49,7 @@
     
     <a class="navbar-brand me-2" href="index.html">kairos</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,14 +59,12 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
-  <a class="nav-link" href="articles/kairos.html">Get started</a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="articles/bibliography.html">Bibliography</a>
   </div>
@@ -103,8 +103,10 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>A toolkit for absolute dating and analysis of chronological patterns. This package includes functions for chronological modeling and dating of archaeological assemblages from count data. It allows to compute time point estimates and density estimates of the occupation and duration of an archaeological site. <strong>kairos</strong> provides methods for:</p>
+<p>A convenient and reproducible toolkit for relative and absolute dating and analysis of chronological patterns. This package includes functions for chronological modeling and dating of archaeological assemblages from count data. It provides methods for matrix seriation. It also allows to compute time point estimates and density estimates of the occupation and duration of an archaeological site. <strong>kairos</strong> provides methods for:</p>
 <ul>
+<li>Matrix seriation: <code><a href="reference/seriation.html">seriate_rank()</a></code> and <code><a href="reference/seriation.html">seriate_average()</a></code>
+</li>
 <li>Mean ceramic date estimation (South 1977): <code><a href="reference/mcd.html">mcd()</a></code>
 </li>
 <li>Event and accumulation date estimation (Bellanger and Husi 2012): <code><a href="reference/event.html">event()</a></code>
@@ -114,6 +116,7 @@
 <li>Chronological apportioning (Roberts et al. 2012): <code><a href="reference/apportion.html">apportion()</a></code>
 </li>
 </ul>
+<p><a href="https://packages.tesselle.org/tabula/" class="external-link"><strong>tabula</strong></a> is a companion package to <strong>kairos</strong> that provides functions for visualization and analysis of archaeological count data.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -131,49 +134,36 @@
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## Load packages</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># datasets</span></code></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/" class="external-link">tabula</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></code></pre></div>
 <p><strong>kairos</strong> only supports dates expressed in CE years (BCE years must be given as negative numbers). <strong>All results are rounded to zero decimal places</strong> (sub-annual precision does not make sense in most situations). You can change this behavior with <code>options(kairos.precision = x)</code> (for <code>x</code> decimal places).</p>
 <p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Aoristic Analysis</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span>
-
-<span class="co">## Set the start and end dates for each ceramic type</span>
-<span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
-  LINO <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">600</span>, <span class="fl">875</span><span class="op">)</span>, KIAT <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">850</span>, <span class="fl">950</span><span class="op">)</span>, RED <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">900</span>, <span class="fl">1050</span><span class="op">)</span>,
-  GALL <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1025</span>, <span class="fl">1125</span><span class="op">)</span>, ESC <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1050</span>, <span class="fl">1150</span><span class="op">)</span>, PUBW <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1050</span>, <span class="fl">1150</span><span class="op">)</span>,
-  RES <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1000</span>, <span class="fl">1200</span><span class="op">)</span>, TULA <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1175</span>, <span class="fl">1300</span><span class="op">)</span>, PINE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1350</span><span class="op">)</span>,
-  PUBR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1000</span>, <span class="fl">1200</span><span class="op">)</span>, WING <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1100</span>, <span class="fl">1200</span><span class="op">)</span>, WIPO <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1125</span>, <span class="fl">1225</span><span class="op">)</span>,
-  SJ <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1200</span>, <span class="fl">1300</span><span class="op">)</span>, LSJ <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1250</span>, <span class="fl">1300</span><span class="op">)</span>, SPR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1250</span>, <span class="fl">1300</span><span class="op">)</span>,
-  PINER <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1325</span><span class="op">)</span>, HESH <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1450</span><span class="op">)</span>, KWAK <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1450</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="co">## Keep only assemblages that have a sample size of at least 10</span>
-<span class="va">keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">zuni</span>, MARGIN <span class="op">=</span> <span class="fl">1</span>, FUN <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&gt;=</span> <span class="fl">10</span><span class="op">)</span>
-
-<span class="co">## Calculate date ranges for each assemblage</span>
-<span class="va">span</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span>
-  X <span class="op">=</span> <span class="va">zuni</span><span class="op">[</span><span class="va">keep</span>, <span class="op">]</span>,
-  FUN <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">dates</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">dates</span><span class="op">[</span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>,
-  MARGIN <span class="op">=</span> <span class="fl">1</span>,
-  dates <span class="op">=</span> <span class="va">dates</span>
-<span class="op">)</span>
-
-<span class="co">## Coerce to data.frame</span>
-<span class="va">span</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">span</span><span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">span</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"from"</span>, <span class="st">"to"</span><span class="op">)</span>
-
-<span class="co">## Calculate aoristic sum (weights)</span>
-<span class="va">aorist_weigth</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">span</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_weigth</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-aoristic-1.png"><!-- --></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Rate of change</span>
+<code class="sourceCode R"><span class="co">## Build an incidence matrix with random data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span>
-<span class="va">aorist_roc</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weigth</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_roc</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-aoristic-2.png"><!-- --></p>
+<span class="va">incidence1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, <span class="fl">400</span>, <span class="cn">TRUE</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.6</span>, <span class="fl">0.4</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
+<span class="va">incidence1</span> <span class="op">&lt;-</span> <span class="va">incidence1</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="co"># logical</span>
+
+<span class="co">## Get seriation order on rows and columns</span>
+<span class="co">## If no convergence is reached before the maximum number of iterations (100), </span>
+<span class="co">## it stops with a warning.</span>
+<span class="op">(</span><span class="va">indices</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/seriation.html">seriate_rank</a></span><span class="op">(</span><span class="va">incidence1</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; Plus d’une classe "PermutationOrder" est trouvée en cache : Utilisation de la première, depuis l’espace de noms 'tabula'</span>
+<span class="co">#&gt; Aussi défini par 'kairos'</span>
+<span class="co">#&gt; &lt;RankPermutationOrder&gt;</span>
+<span class="co">#&gt; Permutation order for matrix seriation:</span>
+<span class="co">#&gt; - Row order: 1 4 20 3 9 16 19 10 13 2 11 7 17 5 6 18 14 15 8 12...</span>
+<span class="co">#&gt; - Column order: 1 16 9 4 8 14 3 20 13 2 6 18 7 17 5 11 19 12 15 10...</span>
+
+<span class="co">## Permute rows and columns</span>
+<span class="va">incidence2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/seriation.html">permute</a></span><span class="op">(</span><span class="va">incidence1</span>, <span class="va">indices</span><span class="op">)</span>
+
+<span class="co">## Plot matrix</span>
+<span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_matrix.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence1</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"white"</span>, <span class="st">"TRUE"</span> <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span><span class="op">)</span>
+<span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_matrix.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence2</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"white"</span>, <span class="st">"TRUE"</span> <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-seriation-1.png" width="50%"><img src="reference/figures/README-seriation-2.png" width="50%"></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
@@ -250,7 +240,7 @@
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer>

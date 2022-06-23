@@ -13,10 +13,10 @@
     <loc>https://packages.tesselle.org/kairos/dev/articles/bibliography.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/dev/articles/index.html</loc>
+    <loc>https://packages.tesselle.org/kairos/dev/articles/dating.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/dev/articles/kairos.html</loc>
+    <loc>https://packages.tesselle.org/kairos/dev/articles/index.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/articles/seriation.html</loc>
@@ -95,6 +95,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/plot_time.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/resample.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/roc.html</loc>

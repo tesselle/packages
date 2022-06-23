@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,15 +18,13 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/kairos.html">Get started</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
@@ -71,7 +69,7 @@
         <dd>Event and Accumulation Dates</dd>
       </dl><dl><dt>
           
-          <code><a href="mcd.html">mcd()</a></code> <code><a href="mcd.html">bootstrap(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="mcd.html">jackknife(<i>&lt;MeanDate&gt;</i>)</a></code> 
+          <code><a href="mcd.html">mcd()</a></code> 
         </dt>
         <dd>Mean Ceramic Date</dd>
       </dl></div><div class="section level2">
@@ -118,9 +116,25 @@
 
       <dl><dt>
           
-          <code><a href="seriation.html">seriation</a></code> 
+          <code><a href="seriation.html">seriate_average()</a></code> <code><a href="seriation.html">seriate_rank()</a></code> <code><a href="seriation.html">refine()</a></code> <code><a href="seriation.html">permute()</a></code> <code><a href="seriation.html">get_order()</a></code> 
         </dt>
         <dd>Matrix Seriation</dd>
+      </dl></div><div class="section level2">
+      <h2 id="resampling-methods">Resampling Methods<a class="anchor" aria-label="anchor" href="#resampling-methods"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="resample.html">bootstrap()</a></code> <code><a href="resample.html">jackknife()</a></code> <code><a href="resample.html">simulate(<i>&lt;MeanDate&gt;</i>)</a></code> 
+        </dt>
+        <dd>Resampling Methods</dd>
       </dl></div><div class="section level2">
       <h2 id="visualization">Visualization<a class="anchor" aria-label="anchor" href="#visualization"></a></h2>
       
@@ -149,7 +163,7 @@
         <dd>Detection of Selective Processes</dd>
       </dl><dl><dt>
           
-          <code><a href="plot_mcd.html">autoplot(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="plot_mcd.html">plot(<i>&lt;MeanDate&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
+          <code><a href="plot_mcd.html">autoplot(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="plot_mcd.html">plot(<i>&lt;MeanDate&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="plot_mcd.html">autoplot(<i>&lt;SimulationMeanDate&gt;</i>)</a></code> <code><a href="plot_mcd.html">plot(<i>&lt;SimulationMeanDate&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
         </dt>
         <dd>MCD Plot</dd>
       </dl><dl><dt>
@@ -221,7 +235,7 @@
 
       <dl><dt>
           
-          <code><a href="mutators.html">get_order()</a></code> <code><a href="mutators.html">get_model()</a></code> <code><a href="mutators.html">get_weights()</a></code> <code><a href="mutators.html">get_dates(<i>&lt;AoristicSum&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;EventDate&gt;</i>)</a></code> <code><a href="mutators.html">get_dates(<i>&lt;RateOfChange&gt;</i>)</a></code> <code><a href="mutators.html">get_groups(<i>&lt;AoristicSum&gt;</i>)</a></code> 
+          <code><a href="mutators.html">get_dates()</a></code> <code><a href="mutators.html">get_groups()</a></code> <code><a href="mutators.html">get_model()</a></code> <code><a href="mutators.html">get_weights()</a></code> 
         </dt>
         <dd>Get or Set Parts of an Object</dd>
       </dl></div>
@@ -234,7 +248,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>

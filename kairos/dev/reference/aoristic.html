@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,15 +18,13 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/kairos.html">Get started</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
@@ -83,34 +81,51 @@
     <dl><dt>x</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector. If <code>y</code> is missing, must be a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> (or a
 <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>) with <code>numeric</code> components (columns) <code>from</code> and <code>to</code>.</p></dd>
+
+
 <dt>y</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector. If missing, an attempt is made to interpret
 <code>x</code> in a suitable way.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
+
+
 <dt>step</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> vector giving the step size, i.e. the
 width of each time step in the time series (in years CE; defaults to
 \(1\) - i.e. annual level).</p></dd>
+
+
 <dt>start</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the beginning of the time
 window (in years CE).</p></dd>
+
+
 <dt>stop</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the end of the time
 window (in years CE).</p></dd>
+
+
 <dt>weight</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the aoristic sum be weighted by
 the length of periods (default). If <code>FALSE</code> the aoristic sum is the number
 of elements within a time block.</p></dd>
+
+
 <dt>groups</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></code> vector in the sense that <code>as.factor(groups)</code>
 defines the grouping. If <code>x</code> is a <code>list</code> (or a <code>data.frame</code>), <code>groups</code> can
 be a length-one vector giving the index of the grouping component (column)
 of <code>x</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>An <a href="AoristicSum-class.html">AoristicSum</a> object.</p>
+    
+
+<p>An <a href="AoristicSum-class.html">AoristicSum</a> object.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -237,7 +252,7 @@ Criminology</em>, 18(1): 23-43. <a href="https://doi.org/10.1023/A%3A10132408288
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
 </div>
 
     </footer></div>
