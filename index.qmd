@@ -1,0 +1,99 @@
+---
+title: "tesselle"
+description: |
+  [**tesselle**](https://www.tesselle.org/) is a collection of 
+  [R](https://www.r-project.org/) packages for research and teaching in 
+  archaeology. These packages focus on quantitative analysis methods developed 
+  for archaeology.
+about:
+  id: hero-heading
+  template: jolla
+  image: https://www.tesselle.org/images/tesselle.png
+  image-shape: rectangle
+  links:
+    - icon: house
+      text: Homepage
+      href: "https://www.tesselle.org"
+    - icon: github
+      text: Github
+      href: https://github.com/tesselle/
+    - icon: download
+      text: R-universe
+      href: https://tesselle.r-universe.dev/
+---
+
+```{r setup, include=FALSE}
+## Get packages info
+repo <- utils::contrib.url("https://tesselle.r-universe.dev")
+pkg <- utils::available.packages(contriburl = repo)
+pkg <- as.data.frame(pkg)
+url_pkg <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
+
+## Build sitemap index
+loc <- paste0(url_pkg, "/sitemap.xml")
+map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", loc)
+cat(
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '  <sitemap>',
+  '    <loc>https://packages.tesselle.org/sitemap.xml</loc>',
+  '  </sitemap>',
+  map,
+  '</sitemapindex>',
+  file = "sitemapindex.xml",
+  sep = "\n",
+  append = FALSE
+)
+
+## Build search index
+sea <- list()
+for (i in seq_along(url_pkg)) {
+  path <- url_pkg[[i]]
+  tmp <- try(
+    expr = rjson::fromJSON(file = paste0(path, "/search.json")), 
+    silent = TRUE
+  )
+  if (!inherits(tmp, "try-error")) {
+    for (j in seq_along(tmp)) {
+      tmp[[j]]$package <- pkg$Package[[i]]
+    }
+    sea <- c(sea, tmp)
+  }
+}
+writeLines(rjson::toJSON(sea), "search.json")
+
+az <- order(pkg$Package)
+info <- pkg[az, c("Package", "Version", "Depends", "License")]
+```
+
+:::{#hero-heading}
+:::
+
+<form role="search">
+<div class="form-group">
+<label for="search-input"><strong>Search in the documentation</strong></label>
+<input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/search.json" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+</div>
+</form>
+
+```{r doc, echo=FALSE}
+url_doc <- "<a href=\"%s/\" title=\"Read the doc of %s (stable)\">%s</a>"
+url_dev <- "<a href=\"%s/dev/\" title=\"Read the doc of %s (dev)\">%s</a>"
+
+version_stable <- sub(".9[0-9]{3}", "", info$Version)
+version_stable[version_stable == "0.0.0"] <- "no stable release"
+link_doc <- sprintf(url_doc, url_pkg[az], info$Package, version_stable)
+link_dev <- sprintf(url_dev, url_pkg[az], info$Package, info$Version)
+
+data <- data.frame(
+  Package = info$Package,
+  Stable = link_doc,
+  Development = link_dev
+)
+knitr::kable(
+  x = data, 
+  row.names = FALSE,
+  escape = FALSE,
+  booktab = TRUE
+)
+```

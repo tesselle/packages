@@ -14,19 +14,9 @@ URL: https://github.com/tesselle/packages
 Depends: 
     R (>= 4.1.0)
 Imports:
-    adjustedcranlogs,
-    dplyr,
-    flexdashboard,
-    ggraph,
-    ggplot2,
-    khroma,
-    lubridate,
-    metathis,
-    miniCRAN,
-    rjson,
-    tidygraph
-Suggests:
     knitr,
+    quarto,
+    rjson,
     rmarkdown
 Encoding: UTF-8
 LazyData: true

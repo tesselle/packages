@@ -1,4 +1,4 @@
-# Package repository
+# packages
 
 Most of the R packages of the [tesselle](https://www.tesselle.org/) project are distributed on [CRAN](https://cran.r-project.org/), but some data packages are too large and can only be installed from our universe: [tesselle.r-universe.dev](https://tesselle.r-universe.dev).
 

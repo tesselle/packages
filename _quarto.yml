@@ -1,0 +1,26 @@
+project:
+  type: website
+  resources:
+    - robots.txt
+    - sitemap*
+
+website:
+  title: "tesselle"
+  site-url: https://www.tesselle.org
+  repo-url: https://github.com/tesselle/packages
+  image: https://www.tesselle.org/images/tesselle.png
+  favicon: https://www.tesselle.org/images/icons/favicon.ico
+  twitter-card:
+    site: "@nfrerebeau"
+    creator: "@nfrerebeau"
+  open-graph: true
+  search: false
+  page-footer:
+    center:
+      - The tesselle project is supported by the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a>, <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.
+
+format:
+  html:
+    theme: default
+    css: style.css
+    include-in-header: _header.html

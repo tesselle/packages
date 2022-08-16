@@ -17,6 +17,7 @@
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 .Rproj.user
-# distill output
+
+# Quarto output
+/.quarto/
 _site/
-_docs/
