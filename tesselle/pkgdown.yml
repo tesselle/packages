@@ -1,8 +1,8 @@
 pandoc: 2.14.2
-pkgdown: 2.0.3
-pkgdown_sha: ~
+pkgdown: 2.0.6.9000
+pkgdown_sha: 956f076f661eb2de9413f64ea24a580cf444466d
 articles: {}
-last_built: 2022-04-28T10:07Z
+last_built: 2022-08-16T18:56Z
 urls:
   reference: https://packages.tesselle.org/tesselle/reference
   article: https://packages.tesselle.org/tesselle/articles
