@@ -60,10 +60,7 @@ for (i in seq_along(url_pkg)) {
     sea <- c(sea, tmp)
   }
 }
-writeLines(rjson::toJSON(sea), "search.json")
-
-az <- order(pkg$Package)
-info <- pkg[az, c("Package", "Version", "Depends", "License")]
+writeLines(rjson::toJSON(sea), "packages.json")
 ```
 
 :::{#hero-heading}
@@ -72,11 +69,13 @@ info <- pkg[az, c("Package", "Version", "Depends", "License")]
 <form role="search">
 <div class="form-group">
 <label for="search-input"><strong>Search in the documentation</strong></label>
-<input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/search.json" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+<input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/packages.json" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
 </div>
 </form>
 
 ```{r doc, echo=FALSE}
+az <- order(pkg$Package)
+info <- pkg[az, c("Package", "Version", "Depends", "License")]
 url_doc <- "<a href=\"%s/\" title=\"Read the doc of %s (stable)\">%s</a>"
 url_dev <- "<a href=\"%s/dev/\" title=\"Read the doc of %s (dev)\">%s</a>"
 

@@ -1,7 +1,7 @@
 project:
   type: website
   resources:
-    - robots.txt
+    - packages*
     - sitemap*
 
 website:
@@ -22,5 +22,4 @@ website:
 format:
   html:
     theme: default
-    css: style.css
     include-in-header: _header.html
