@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/404.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/pull_request_template.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tesselle/reference/tesselle-package.html</loc>
+  </url>
+</urlset>

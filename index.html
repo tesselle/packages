@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="tesselle is a collection of R packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.">
+
+<title>tesselle</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="./https://www.tesselle.org/images/icons/favicon.ico" rel="icon">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<!-- search -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="packages.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<!-- Matomo -->
+<script src="https://www.tesselle.org/scripts/unicorn.js"></script>
+<noscript></noscript><meta property="og:title" content="tesselle">
+<meta property="og:description" content="tesselle is a collection of R packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.">
+<meta property="og:site-name" content="tesselle">
+<meta name="twitter:title" content="tesselle">
+<meta name="twitter:description" content="tesselle is a collection of R packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.">
+<meta name="twitter:creator" content="@nfrerebeau">
+<meta name="twitter:card" content="summary">
+</head><body class="fullcontent"><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p>
+
+
+
+
+
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<div class="quarto-about-jolla">
+  <img src="https://www.tesselle.org/images/tesselle.png" class="about-image
+  rectangle " style="width: 15em;">
+ <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">tesselle</h1>
+</div>
+<div>
+  <div class="description">
+    <p><a href="https://www.tesselle.org/"><strong>tesselle</strong></a> is a collection of <a href="https://www.r-project.org/">R</a> packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.</p>
+  </div>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header><div id="hero-heading">
+</div> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="https://www.tesselle.org" class="about-link">
+    <i class="bi bi-house"></i>
+     <span class="about-link-text">Homepage</span>
+  </a>
+  <a href="https://github.com/tesselle/" class="about-link">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Github</span>
+  </a>
+  <a href="https://tesselle.r-universe.dev/" class="about-link">
+    <i class="bi bi-download"></i>
+     <span class="about-link-text">R-universe</span>
+  </a>
+</div>
+</div>
+
+<form role="search">
+<div class="form-group">
+<p><label for="search-input"><strong>Search in the documentation</strong></label> <input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/packages.json" id="search-input" placeholder="Search..." autocomplete="off"></p>
+</div>
+</form>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 48%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Package</th>
+<th style="text-align: left;">Stable</th>
+<th style="text-align: left;">Development</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">arkhe</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/arkhe/" title="Read the doc of arkhe (stable)">0.5.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/arkhe/dev/" title="Read the doc of arkhe (dev)">0.5.0.9000</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">chronos</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/chronos/" title="Read the doc of chronos (stable)">no stable release</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/chronos/dev/" title="Read the doc of chronos (dev)">0.0.0.9000</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dimensio</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/dimensio/" title="Read the doc of dimensio (stable)">0.3.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/dimensio/dev/" title="Read the doc of dimensio (dev)">0.3.0.9000</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fasti</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/fasti/" title="Read the doc of fasti (stable)">no stable release</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/fasti/dev/" title="Read the doc of fasti (dev)">0.0.0.9000</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">folio</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/folio/" title="Read the doc of folio (stable)">1.2.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/folio/dev/" title="Read the doc of folio (dev)">1.2.0.9000</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kairos</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/kairos/" title="Read the doc of kairos (stable)">1.1.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/kairos/dev/" title="Read the doc of kairos (dev)">1.1.0.9000</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">khroma</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/khroma/" title="Read the doc of khroma (stable)">1.9.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/khroma/dev/" title="Read the doc of khroma (dev)">1.9.0.9000</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tabula</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/tabula/" title="Read the doc of tabula (stable)">1.7.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/tabula/dev/" title="Read the doc of tabula (dev)">1.7.0.9000</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tekton</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/tekton/" title="Read the doc of tekton (stable)">no stable release</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/tekton/dev/" title="Read the doc of tekton (dev)">0.0.0.9000</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tesselle</td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/tesselle/" title="Read the doc of tesselle (stable)">1.0.0</a></td>
+<td style="text-align: left;"><a href="https://packages.tesselle.org/tesselle/dev/" title="Read the doc of tesselle (dev)">1.0.0.9000</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

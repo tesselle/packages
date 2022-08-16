@@ -1,0 +1,67 @@
+Package: arkhe
+Version: 0.5.0
+Depends: R (>= 3.3)
+Imports: methods, stats, utils
+Suggests: covr, knitr, rmarkdown, testthat (>= 3.0.0)
+License: GPL (>= 3)
+MD5sum: 06a9cd429bac314cd55073a73833f91e
+NeedsCompilation: no
+
+Package: dimensio
+Version: 0.3.0
+Depends: R (>= 3.3)
+Imports: ggplot2, grDevices, methods, rlang
+Suggests: covr, FactoMineR, ggrepel, khroma, testthat (>= 3.0.0),
+        vdiffr (>= 1.0.0)
+License: GPL (>= 3)
+MD5sum: 0970d900513ed2800b47f57ff60c12d5
+NeedsCompilation: no
+
+Package: folio
+Version: 1.2.0
+Depends: R (>= 2.10)
+License: GPL (>= 3)
+MD5sum: 1207ec9baa05c82e7cfcd59fc2d43cb7
+NeedsCompilation: no
+
+Package: kairos
+Version: 1.1.0
+Depends: R (>= 3.4)
+Imports: arkhe (>= 0.5.0), boot, dimensio (>= 0.2.2), extraDistr,
+        ggplot2, Hmisc, methods, rlang, stats, utils
+Suggests: covr, folio, khroma, knitr, rmarkdown, testthat (>= 3.0.0),
+        vdiffr (>= 1.0.0)
+License: GPL (>= 3)
+MD5sum: 9447cacb87b03d0301870ce6bde3b303
+NeedsCompilation: no
+
+Package: khroma
+Version: 1.9.0
+Depends: R (>= 3.3)
+Imports: graphics, grDevices, grid, stats, utils
+Suggests: covr, crayon, fansi, ggplot2, ggraph, knitr, rmarkdown,
+        scales, spacesXYZ, testthat (>= 3.0.0), vdiffr (>= 1.0.0)
+License: GPL (>= 3)
+MD5sum: 56ac93a60f9e7ccd258b6e0f671d88f8
+NeedsCompilation: no
+
+Package: tabula
+Version: 1.7.0
+Depends: R (>= 3.3)
+Imports: arkhe (>= 0.5.0), boot, kairos (>= 1.1.0), ggplot2, methods,
+        rlang, stats, utils
+Suggests: covr, folio, khroma, knitr, magrittr, rmarkdown, testthat (>=
+        3.0.0), vdiffr (>= 1.0.0)
+License: GPL (>= 3)
+MD5sum: 1f2f7d9c8c9f65ddc8e77b61db62d4a1
+NeedsCompilation: no
+
+Package: tesselle
+Version: 1.0.0
+Depends: R (>= 3.3)
+Imports: arkhe (>= 0.4.0), dimensio (>= 0.2.2), folio (>= 1.0.0),
+        kairos (>= 1.0.0), khroma (>= 1.8.0), tabula (>= 1.6.1)
+Suggests: covr
+License: GPL (>= 3)
+MD5sum: 918f8eb2ec0203cf430631b88fb917dd
+NeedsCompilation: no
