@@ -1,8 +1,5 @@
 project:
   type: website
-  resources:
-    - packages*
-    - sitemap*
 
 website:
   title: "tesselle"

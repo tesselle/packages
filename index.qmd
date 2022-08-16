@@ -22,13 +22,17 @@ about:
       href: https://tesselle.r-universe.dev/
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| echo: false
 ## Get packages info
 repo <- utils::contrib.url("https://tesselle.r-universe.dev")
 pkg <- utils::available.packages(contriburl = repo)
 pkg <- as.data.frame(pkg)
 url_pkg <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
+```
 
+```{r}
+#| echo: false
 ## Build sitemap index
 loc <- paste0(url_pkg, "/sitemap.xml")
 map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", loc)
@@ -40,11 +44,14 @@ cat(
   '  </sitemap>',
   map,
   '</sitemapindex>',
-  file = "sitemapindex.xml",
+  file = "_site/sitemapindex.xml",
   sep = "\n",
   append = FALSE
 )
+```
 
+```{r}
+#| echo: false
 ## Build search index
 sea <- list()
 for (i in seq_along(url_pkg)) {
@@ -60,7 +67,7 @@ for (i in seq_along(url_pkg)) {
     sea <- c(sea, tmp)
   }
 }
-writeLines(rjson::toJSON(sea), "packages.json")
+cat(rjson::toJSON(sea), file = "_site/packages.json", append = FALSE)
 ```
 
 :::{#hero-heading}
