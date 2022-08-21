@@ -34,7 +34,13 @@
     <loc>https://packages.tesselle.org/alkahest/reference/alkahest-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/alkahest/reference/baseline.html</loc>
+    <loc>https://packages.tesselle.org/alkahest/reference/baseline_linear.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/baseline_rubberband.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/baseline_snip.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/index.html</loc>
@@ -43,7 +49,16 @@
     <loc>https://packages.tesselle.org/alkahest/reference/rescale.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/alkahest/reference/smooth.html</loc>
+    <loc>https://packages.tesselle.org/alkahest/reference/smooth_loess.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/smooth_rectangular.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/smooth_savitzky.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/smooth_triangular.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/subset.html</loc>
