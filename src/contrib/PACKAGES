@@ -57,11 +57,11 @@ MD5sum: 1f2f7d9c8c9f65ddc8e77b61db62d4a1
 NeedsCompilation: no
 
 Package: tesselle
-Version: 1.0.0
+Version: 1.1.0
 Depends: R (>= 3.3)
-Imports: arkhe (>= 0.4.0), dimensio (>= 0.2.2), folio (>= 1.0.0),
-        kairos (>= 1.0.0), khroma (>= 1.8.0), tabula (>= 1.6.1)
+Imports: arkhe (>= 0.5.0), dimensio (>= 0.3.0), folio (>= 1.2.0),
+        kairos (>= 1.1.0), khroma (>= 1.9.0), tabula (>= 1.7.0)
 Suggests: covr
 License: GPL (>= 3)
-MD5sum: 918f8eb2ec0203cf430631b88fb917dd
+MD5sum: 1dbc449434c192fd57ad72c0baf0a6d6
 NeedsCompilation: no
