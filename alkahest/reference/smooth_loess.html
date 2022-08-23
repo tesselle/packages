@@ -54,10 +54,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">smooth_loess</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">smooth_loess</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, span <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span></span>
+<span><span class="fu">smooth_loess</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, span <span class="op">=</span> <span class="fl">0.75</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">smooth_loess</span><span class="op">(</span><span class="va">x</span>, span <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">smooth_loess</span><span class="op">(</span><span class="va">x</span>, span <span class="op">=</span> <span class="fl">0.75</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -68,7 +68,7 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 
 <dt>...</dt>
-<dd><p>Currently not used.</p></dd>
+<dd><p>Extra arguments to be passed to <code><a href="https://rdrr.io/r/stats/loess.html" class="external-link">stats::loess()</a></code>.</p></dd>
 
 
 <dt>span</dt>
