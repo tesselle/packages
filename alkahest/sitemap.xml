@@ -46,6 +46,12 @@
     <loc>https://packages.tesselle.org/alkahest/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/peaks_find.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/peaks_fwhm.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/rescale_range.html</loc>
   </url>
   <url>
