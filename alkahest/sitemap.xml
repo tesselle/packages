@@ -31,6 +31,9 @@
     <loc>https://packages.tesselle.org/alkahest/reference/LaBr.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/XRD.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/alkahest-package.html</loc>
   </url>
   <url>
@@ -46,16 +49,34 @@
     <loc>https://packages.tesselle.org/alkahest/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/integrate_trapezoid.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/peaks_find.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/peaks_fwhm.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/replace_negative.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/replace_threshold.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/rescale_range.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/rescale_total.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/rescale_transform.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/shift_interpolate.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/shift_offset.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/signal_correct.html</loc>
@@ -74,8 +95,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/subset.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/alkahest/reference/transform.html</loc>
   </url>
 </urlset>
