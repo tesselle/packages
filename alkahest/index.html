@@ -5,10 +5,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A toolbox for pre-processing XY data from experimental methods 
-    (i.e. any signal that can be measured along a continuous variable). This 
-    package provides methods for baseline correction, smoothing, normalization 
-    and integration.">
+<meta name="description" content="A lightweight, dependency-free toolbox for pre-processing XY data 
+    from experimental methods (i.e. any signal that can be measured along a 
+    continuous variable). This package provides methods for baseline estimation 
+    and correction, smoothing, normalization, integration and peaks detection.">
 <title>Pre-Processing XY Data from Experimental Methods • alkahest</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
@@ -17,10 +17,10 @@
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Pre-Processing XY Data from Experimental Methods">
-<meta property="og:description" content="A toolbox for pre-processing XY data from experimental methods 
-    (i.e. any signal that can be measured along a continuous variable). This 
-    package provides methods for baseline correction, smoothing, normalization 
-    and integration.">
+<meta property="og:description" content="A lightweight, dependency-free toolbox for pre-processing XY data 
+    from experimental methods (i.e. any signal that can be measured along a 
+    continuous variable). This package provides methods for baseline estimation 
+    and correction, smoothing, normalization, integration and peaks detection.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
 <meta name="twitter:site" content="@nfrerebeau">
@@ -80,7 +80,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>Pre-Process XY Data from Experimental Methods. <strong>alkahest</strong> is a lightweight, dependency-free toolbox for pre-processing XY data from experimental methods (i.e. any signal that can be measured along a continuous variable). It provides methods for baseline correction, smoothing, normalization and integration.</p>
+<p><strong>alkahest</strong> is a lightweight, dependency-free toolbox for pre-processing XY data from experimental methods (i.e. any signal that can be measured along a continuous variable). It provides methods for baseline estimation and correction, smoothing, normalization, integration and peaks detection.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -114,40 +114,37 @@
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_snip</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-baseline-1.png"><!-- --></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Correct baseline</span></span>
-<span><span class="va">BEGe_correct</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/signal_correct.html">signal_correct</a></span><span class="op">(</span><span class="va">BEGe</span>, method <span class="op">=</span> <span class="st">"SNIP"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## X-ray diffraction</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"XRD"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Plot spectrum</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe_correct</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
+<span><span class="co">## Correct baseline</span></span>
+<span><span class="va">XRD_correct</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/signal_correct.html">signal_correct</a></span><span class="op">(</span><span class="va">XRD</span>, method <span class="op">=</span> <span class="st">"SNIP"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD_correct</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Find peaks</span></span>
-<span><span class="va">BEGe_peaks</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/peaks_find.html">peaks_find</a></span><span class="op">(</span><span class="va">BEGe_correct</span>, SNR <span class="op">=</span> <span class="fl">3</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_peaks</span>, type <span class="op">=</span> <span class="st">"p"</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">XRD_peaks</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/peaks_find.html">peaks_find</a></span><span class="op">(</span><span class="va">XRD_correct</span>, SNR <span class="op">=</span> <span class="fl">3</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">XRD_peaks</span>, type <span class="op">=</span> <span class="st">"p"</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-peaks-1.png"><!-- --></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## gamma-ray spectrometry</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"LaBr"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">4</span>, <span class="fl">4</span>, length <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">dnorm</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Subset from 1350 to 1650 keV</span></span>
-<span><span class="va">LaBr</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/subset.html">signal_select</a></span><span class="op">(</span><span class="va">LaBr</span>, from <span class="op">=</span> <span class="fl">1350</span>, to <span class="op">=</span> <span class="fl">1650</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Plot raw spectrum</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span>, main <span class="op">=</span> <span class="st">"Raw data"</span><span class="op">)</span></span>
+<span><span class="co">## Plot raw data</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span>, main <span class="op">=</span> <span class="st">"Raw data"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Rectangular smoothing</span></span>
-<span><span class="va">LaBr_unweighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/smooth_rectangular.html">smooth_rectangular</a></span><span class="op">(</span><span class="va">LaBr</span>, m <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_unweighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span>,</span>
-<span>     main <span class="op">=</span> <span class="st">"Rectangular smoothing"</span><span class="op">)</span> </span>
+<span><span class="va">unweighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/smooth_rectangular.html">smooth_rectangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, m <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">unweighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span>, main <span class="op">=</span> <span class="st">"Rectangular smoothing"</span><span class="op">)</span> </span>
 <span></span>
 <span><span class="co">## Triangular smoothing</span></span>
-<span><span class="va">LaBr_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/smooth_triangular.html">smooth_triangular</a></span><span class="op">(</span><span class="va">LaBr</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_weighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span>,</span>
-<span>     main <span class="op">=</span> <span class="st">"Triangular smoothing"</span><span class="op">)</span></span>
+<span><span class="va">weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/smooth_triangular.html">smooth_triangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">weighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span>, main <span class="op">=</span> <span class="st">"Triangular smoothing"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Savitzky–Golay filter</span></span>
-<span><span class="va">LaBr_savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">LaBr</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_savitzky</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span>,</span>
-<span>     main <span class="op">=</span> <span class="st">"Savitzky–Golay filter"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">savitzky</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span>, main <span class="op">=</span> <span class="st">"Savitzky–Golay filter"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-smooth-1.png" width="50%"><img src="reference/figures/README-smooth-2.png" width="50%"><img src="reference/figures/README-smooth-3.png" width="50%"><img src="reference/figures/README-smooth-4.png" width="50%"></p>
 </div>
 <div class="section level2">
@@ -201,6 +198,7 @@
 <li><a href="https://github.com/tesselle/alkahest/actions" class="external-link"><img src="https://github.com/tesselle/alkahest/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://app.codecov.io/gh/tesselle/alkahest" class="external-link"><img src="https://codecov.io/gh/tesselle/alkahest/branch/master/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://www.codefactor.io/repository/github/tesselle/alkahest/overview/main" class="external-link"><img src="https://www.codefactor.io/repository/github/tesselle/alkahest/badge/main" alt="CodeFactor"></a></li>
+<li><a href="https://cran.r-project.org/package=alkahest" class="external-link"><img src="https://tinyverse.netlify.com/badge/alkahest" alt="Dependencies"></a></li>
 </ul>
 </div>
 
