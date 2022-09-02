@@ -95,7 +95,8 @@ the ends of the spectrum.</p>
     <div class="dont-index"><p>Other smoothing methods: 
 <code><a href="smooth_loess.html">smooth_loess</a>()</code>,
 <code><a href="smooth_savitzky.html">smooth_savitzky</a>()</code>,
-<code><a href="smooth_triangular.html">smooth_triangular</a>()</code></p></div>
+<code><a href="smooth_triangular.html">smooth_triangular</a>()</code>,
+<code><a href="smooth_whittaker.html">smooth_whittaker</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -104,33 +105,39 @@ the ends of the spectrum.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## gamma-ray spectrometry</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"LaBr"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Simulate data with some noise</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">4</span>, <span class="fl">4</span>, length <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">dnorm</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot spectrum</span></span></span>
-<span class="r-in"><span><span class="va">LaBr</span> <span class="op">&lt;-</span> <span class="fu"><a href="subset.html">signal_select</a></span><span class="op">(</span><span class="va">LaBr</span>, from <span class="op">=</span> <span class="fl">1350</span>, to <span class="op">=</span> <span class="fl">1650</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="smooth_rectangular-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Rectangular smoothing</span></span></span>
-<span class="r-in"><span><span class="va">LaBr_unweighted</span> <span class="op">&lt;-</span> <span class="fu">smooth_rectangular</span><span class="op">(</span><span class="va">LaBr</span>, m <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_unweighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">unweighted</span> <span class="op">&lt;-</span> <span class="fu">smooth_rectangular</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, m <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">unweighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="smooth_rectangular-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Triangular smoothing</span></span></span>
-<span class="r-in"><span><span class="va">LaBr_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_triangular.html">smooth_triangular</a></span><span class="op">(</span><span class="va">LaBr</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_weighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_triangular.html">smooth_triangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">weighted</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="smooth_rectangular-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Loess smoothing</span></span></span>
-<span class="r-in"><span><span class="va">LaBr_loess</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_loess.html">smooth_loess</a></span><span class="op">(</span><span class="va">LaBr</span>, span <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_loess</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">loess</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_loess.html">smooth_loess</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, span <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">loess</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="smooth_rectangular-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Savitzky–Golay filter</span></span></span>
-<span class="r-in"><span><span class="va">LaBr_savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">LaBr</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LaBr_savitzky</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">savitzky</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="smooth_rectangular-5.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Whittaker smoothing</span></span></span>
+<span class="r-in"><span><span class="va">whittaker</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_whittaker.html">smooth_whittaker</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, lambda <span class="op">=</span> <span class="fl">1600</span>, d <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">whittaker</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="smooth_rectangular-6.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
