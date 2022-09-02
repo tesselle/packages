@@ -67,6 +67,15 @@
     <loc>https://packages.tesselle.org/alkahest/reference/replace_threshold.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/resample_bin.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/resample_down.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/resample_interpolate.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/rescale_range.html</loc>
   </url>
   <url>
@@ -76,13 +85,10 @@
     <loc>https://packages.tesselle.org/alkahest/reference/rescale_transform.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/alkahest/reference/shift_interpolate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/alkahest/reference/shift_offset.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/signal_correct.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/signal_shift.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/smooth_loess.html</loc>
