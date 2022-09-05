@@ -92,6 +92,7 @@ Defaults to 1, i.e. normalizes by total intensity.</p></dd>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other normalization methods: 
+<code><a href="rescale_area.html">rescale_area</a>()</code>,
 <code><a href="rescale_range.html">rescale_range</a>()</code>,
 <code><a href="rescale_transform.html">rescale_transform</a>()</code></p></div>
     </div>
@@ -112,15 +113,24 @@ Defaults to 1, i.e. normalizes by total intensity.</p></dd>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="rescale_total-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Normalize by area under the curve</span></span></span>
+<span class="r-in"><span><span class="va">BEGe_area</span> <span class="op">&lt;-</span> <span class="fu"><a href="rescale_area.html">rescale_area</a></span><span class="op">(</span><span class="va">BEGe</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe_area</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="rescale_total-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="integrate_rectangle.html">integrate_rectangle</a></span><span class="op">(</span><span class="va">BEGe</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 147922.1</span>
+<span class="r-in"><span><span class="fu"><a href="integrate_rectangle.html">integrate_rectangle</a></span><span class="op">(</span><span class="va">BEGe_area</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Rescale so that intensities sum to 1</span></span></span>
 <span class="r-in"><span><span class="va">BEGe_total</span> <span class="op">&lt;-</span> <span class="fu">rescale_total</span><span class="op">(</span><span class="va">BEGe</span>, total <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe_total</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="rescale_total-2.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="rescale_total-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Rescale intensities to 0-1</span></span></span>
 <span class="r-in"><span><span class="va">BEGe_range</span> <span class="op">&lt;-</span> <span class="fu"><a href="rescale_range.html">rescale_range</a></span><span class="op">(</span><span class="va">BEGe</span>, min <span class="op">=</span> <span class="fl">0</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe_range</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="rescale_total-3.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="rescale_total-4.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
