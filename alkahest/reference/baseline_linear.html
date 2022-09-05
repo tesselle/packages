@@ -61,10 +61,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">baseline_linear</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">baseline_linear</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">baseline_linear</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, points <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">baseline_linear</span><span class="op">(</span><span class="va">x</span>, from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">baseline_linear</span><span class="op">(</span><span class="va">x</span>, points <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -78,14 +78,9 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 <dd><p>Currently not used.</p></dd>
 
 
-<dt>from</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the first data point (in <code>x</code> unit)
-to be used for linear interpolation.</p></dd>
-
-
-<dt>to</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> value giving the last data point (in <code>x</code> unit)
-to be used for linear interpolation.</p></dd>
+<dt>points</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the data points to be used in
+the fitting process (in <code>x</code> unit).</p></dd>
 
 </dl></div>
     <div class="section level2">

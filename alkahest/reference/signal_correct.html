@@ -61,10 +61,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span>, <span class="st">"4S"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span>, <span class="st">"4S"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -75,13 +75,31 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 
 <dt>...</dt>
-<dd><p>Extra arguments to be passed to <code>baseline_*()</code>.</p></dd>
+<dd><p>Extra arguments to be passed to <code>baseline_*()</code> (see details).</p></dd>
 
 
 <dt>method</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method for baseline
-estimation. It must be one of "<code>linear</code>", "<code>rubberband</code>" or "<code>SNIP</code>".
-Any unambiguous substring can be given.</p></dd>
+estimation. It must be one of "<code>linear</code>", "<code>rubberband</code>", "<code>SNIP</code>" or "<code>4S</code>"
+(see details). Any unambiguous substring can be given.</p></dd>
+
+</dl></div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>Available methods for baseline estimation:</p><dl><dt><code>linear</code></dt>
+<dd><p>Linear baseline estimation (see <code><a href="baseline_linear.html">baseline_linear()</a></code>).</p></dd>
+
+<dt><code>rubberband</code></dt>
+<dd><p>Rubberband baseline estimation (see
+<code><a href="baseline_rubberband.html">baseline_rubberband()</a></code>).</p></dd>
+
+<dt><code>SNIP</code></dt>
+<dd><p>Sensitive Nonlinear Iterative Peak clipping algorithm
+(see <code><a href="baseline_snip.html">baseline_snip()</a></code>).</p></dd>
+
+<dt><code>4S</code></dt>
+<dd><p>4S Peak Filling (see <code><a href="baseline_peakfilling.html">baseline_peakfilling()</a></code>).</p></dd>
+
 
 </dl></div>
     <div class="section level2">
