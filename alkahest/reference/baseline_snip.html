@@ -89,8 +89,7 @@ be used?</p></dd>
 
 
 <dt>n</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> value giving the number of iterations.
-Only used if <code>method</code> is "<code>SNIP</code>".</p></dd>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> value giving the number of iterations.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -121,6 +120,7 @@ Beam Interactions with Materials and Atoms</em>, 34(3), p. 396-402.
     <div class="dont-index"><p><code><a href="signal_correct.html">signal_correct()</a></code></p>
 <p>Other baseline estimation methods: 
 <code><a href="baseline_linear.html">baseline_linear</a>()</code>,
+<code><a href="baseline_peakfilling.html">baseline_peakfilling</a>()</code>,
 <code><a href="baseline_rubberband.html">baseline_rubberband</a>()</code></p></div>
     </div>
     <div class="section level2">
@@ -153,12 +153,13 @@ Beam Interactions with Materials and Atoms</em>, 34(3), p. 396-402.
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_snip</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="baseline_snip-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Baseline correction</span></span></span>
-<span class="r-in"><span><span class="va">BEGe_corr</span> <span class="op">&lt;-</span> <span class="fu"><a href="signal_correct.html">signal_correct</a></span><span class="op">(</span><span class="va">BEGe</span>, method <span class="op">=</span> <span class="st">"SNIP"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## 4S Peak Filling</span></span></span>
+<span class="r-in"><span><span class="va">BEGe_peak</span> <span class="op">&lt;-</span> <span class="fu"><a href="baseline_peakfilling.html">baseline_peakfilling</a></span><span class="op">(</span><span class="va">BEGe</span>, n <span class="op">=</span> <span class="fl">5</span>, m <span class="op">=</span> <span class="fl">5</span>, by <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_corr</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_peak</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="baseline_snip-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
