@@ -140,6 +140,23 @@ Triangular smoothing
 </p>
 </div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Loess smoothing</span></span>
+<span><span class="va">loess</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_loess.html">smooth_loess</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, span <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html" class="external-link">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">loess</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">"l"</span>, lty <span class="op">=</span> <span class="fl">2</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span> <span class="op">-</span> <span class="va">loess</span><span class="op">$</span><span class="va">y</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.03</span>, <span class="fl">0.03</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<img src="smoothing_files/figure-html/loess-1.png" alt="Loess smoothing" width="672"><p class="caption">
+Loess smoothing
+</p>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Savitzky–Golay filter</span></span>
 <span><span class="va">savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span></span>
@@ -156,7 +173,7 @@ Triangular smoothing
 Savitzky–Golay filter
 </p>
 </div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Whittaker smoothing</span></span>
 <span><span class="va">whittaker</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_whittaker.html">smooth_whittaker</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, lambda <span class="op">=</span> <span class="fl">1000</span>, d <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span></span>
