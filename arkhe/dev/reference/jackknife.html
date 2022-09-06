@@ -64,7 +64,7 @@
 
 
 <dt>...</dt>
-<dd><p>Extra arguments passed to <code>do</code>.</p></dd>
+<dd><p>Extra arguments to be passed to <code>do</code>.</p></dd>
 
 
 <dt>do</dt>
@@ -76,7 +76,12 @@ single numeric value.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>Returns a named <code>numeric</code> vector with the following elements:</p><dl><dt><code>mean</code></dt>
+<p>Returns a named <code>numeric</code></p>
+<p></p>
+<p><code>vector</code> with the following elements:</p><dl><dt><code>original</code></dt>
+<dd><p>The observed value of <code>do</code> applied to <code>object</code>.</p></dd>
+
+<dt><code>mean</code></dt>
 <dd><p>The jackknife estimate of mean of <code>do</code>.</p></dd>
 
 <dt><code>bias</code></dt>
@@ -90,6 +95,7 @@ single numeric value.</p></dd>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other resampling methods: 
+<code><a href="bootstrap.html">bootstrap</a>()</code>,
 <code><a href="confidence.html">confidence</a>()</code></p></div>
     </div>
     <div class="section level2">
@@ -99,11 +105,23 @@ single numeric value.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Jackknife</span></span></span>
-<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Bootstrap</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   original       mean       bias      error </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1693101 -0.1693101  0.0000000  0.1906198 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.4425761  0.3793300 -0.0632461  0.2486071 </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Estimate the 25th and 95th percentiles</span></span></span>
+<span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">mean</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       25%       75% </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.2910660 0.6604635 </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Jackknife</span></span></span>
+<span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  original      mean      bias     error </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.4425761 0.4425761 0.0000000 0.2839847 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
