@@ -4,6 +4,12 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/alkahest/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -25,15 +31,9 @@
     <loc>https://packages.tesselle.org/kairos/sitemap.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
     <loc>https://packages.tesselle.org/dimensio/sitemap.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>

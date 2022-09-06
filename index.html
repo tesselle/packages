@@ -52,7 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="packages.js"></script>
+<script src="references.js"></script>
 <link rel="stylesheet" href="style.css">
 
 <!-- Matomo -->
@@ -113,6 +115,10 @@ ul.task-list li input[type="checkbox"] {
     <i class="bi bi-house"></i>
      <span class="about-link-text">Homepage</span>
   </a>
+  <a href="https://twitter.com/tesselle_" class="about-link">
+    <i class="bi bi-twitter"></i>
+     <span class="about-link-text">Twitter</span>
+  </a>
   <a href="https://github.com/tesselle/" class="about-link">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
@@ -124,11 +130,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 
+<section id="explore" class="level2">
+<h2 data-anchor-id="explore">Explore</h2>
 <form role="search">
 <div class="form-group">
-<p><label for="search-input"><strong>Search in the documentation</strong></label> <input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/packages.json" id="search-input" placeholder="Search..." autocomplete="off"></p>
+<p><label for="search-packages"><strong>Search in the documentation</strong></label> <input type="search" class="form-control" aria-label="Search for..." name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off"></p>
 </div>
 </form>
+<form role="search">
+<div class="form-group">
+<p><label for="search-references"><strong>Search in the bibliography</strong></label> <input type="search" class="form-control" aria-label="Search for..." name="search-references" data-search-index="/references.json" id="search-references" placeholder="e.g. Peeples" autocomplete="off"></p>
+</div>
+</form>
+</section>
+<section id="read-the-doc" class="level2">
+<h2 data-anchor-id="read-the-doc">Read the doc</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -207,6 +223,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

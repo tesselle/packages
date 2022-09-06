@@ -1,9 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#explore",
+    "href": "index.html#explore",
     "title": "tesselle",
-    "section": "",
-    "text": "Homepage\n  \n  \n    \n     Github\n  \n  \n    \n     R-universe\n  \n\n\n\n\n\nSearch in the documentation \n\n\n\n\n\n\n\n\n\n\n\n\nPackage\nStable\nDevelopment\n\n\n\n\nalkahest\nno stable release\n0.0.0.9000\n\n\narkhe\n0.5.0\n0.5.0.9000\n\n\nchronos\nno stable release\n0.0.0.9000\n\n\ndimensio\n0.3.0\n0.3.0.9000\n\n\nfasti\nno stable release\n0.0.0.9000\n\n\nfolio\n1.2.0\n1.2.0.9000\n\n\nkairos\n1.1.0\n1.1.0.9000\n\n\nkhroma\n1.9.0\n1.9.0.9000\n\n\ntabula\n1.7.0\n1.7.0.9000\n\n\ntekton\nno stable release\n0.0.0.9000\n\n\ntesselle\n1.1.0\n1.1.0.9000"
+    "section": "Explore",
+    "text": "Explore\n\n\nSearch in the documentation \n\n\n\n\nSearch in the bibliography"
+  },
+  {
+    "objectID": "index.html#read-the-doc",
+    "href": "index.html#read-the-doc",
+    "title": "tesselle",
+    "section": "Read the doc",
+    "text": "Read the doc\n\n\n\n\n\n\n\n\n\n\nPackage\nStable\nDevelopment\n\n\n\n\nalkahest\nno stable release\n0.0.0.9000\n\n\narkhe\n0.5.0\n0.5.0.9000\n\n\nchronos\nno stable release\n0.0.0.9000\n\n\ndimensio\n0.3.0\n0.3.0.9000\n\n\nfasti\nno stable release\n0.0.0.9000\n\n\nfolio\n1.2.0\n1.2.0.9000\n\n\nkairos\n1.1.0\n1.1.0.9000\n\n\nkhroma\n1.9.0\n1.9.0.9000\n\n\ntabula\n1.7.0\n1.7.0.9000\n\n\ntekton\nno stable release\n0.0.0.9000\n\n\ntesselle\n1.1.0\n1.1.0.9000"
   }
 ]
