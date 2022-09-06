@@ -78,7 +78,9 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A CountMatrix object.</p></dd>
+<dd><p>A \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or
+<code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies giving the number of
+individuals for each class).</p></dd>
 
 
 <dt>...</dt>
@@ -142,8 +144,7 @@ graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Abundance data</span></span></span>
-<span class="r-in"><span><span class="co">## Coerce dataset to a count matrix (data from Desachy 2004)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Ceramic data</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"compiegne"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Compute EPPM</span></span></span>

@@ -51,7 +51,17 @@
       <small>Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="section level2"><h2 class="pkg-version" data-toc-text="1.7.0.9000" id="tabula-1709000">tabula 1.7.0.9000<a class="anchor" aria-label="anchor" href="#tabula-1709000"></a></h2></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.7.0.9000" id="tabula-1709000">tabula 1.7.0.9000<a class="anchor" aria-label="anchor" href="#tabula-1709000"></a></h2>
+<div class="section level3">
+<h3 id="new-classes-and-methods-1-7-0-9000">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-7-0-9000"></a></h3>
+<ul><li>Add <code><a href="../reference/heterogeneity.html">index_boone()</a></code>: Boone heterogeneity index.</li>
+<li>Add <code><a href="../reference/rarefaction.html">index_baxter()</a></code>: Baxter rarefaction index.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="bugfixes--changes-1-7-0-9000">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-7-0-9000"></a></h3>
+<ul><li>Remove all previously deprecated methods.</li></ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.7.0" id="tabula-170">tabula 1.7.0<a class="anchor" aria-label="anchor" href="#tabula-170"></a></h2><p class="text-muted">CRAN release: 2022-06-23</p>
 <p><strong>Seriation methods are now reexported from kairos and will be removed in a future release.</strong></p>
@@ -68,7 +78,7 @@
 <ul><li>
 <code><a href="../reference/rarefaction.html">rarefaction()</a></code> now returns a <code>RarefactionIndex</code> object.</li>
 <li>Deprecate <code>bootstrap_*()</code>, <code>jackknife_*()</code> and <code>simulate_*()</code>.</li>
-<li>Deprecate <code><a href="../reference/deprecate.html">index_heterogeneity()</a></code>, <code><a href="../reference/deprecate.html">index_evenness()</a></code>, <code><a href="../reference/deprecate.html">index_richness()</a></code> and <code><a href="../reference/deprecate.html">index_composition()</a></code>.</li>
+<li>Deprecate <code>index_heterogeneity()</code>, <code>index_evenness()</code>, <code>index_richness()</code> and <code>index_composition()</code>.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="breaking-changes-1-7-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-1-7-0"></a></h3>
@@ -100,7 +110,7 @@
 <li>Add <code><a href="../reference/independance.html">eppm()</a></code> and <code><a href="../reference/independance.html">pvi()</a></code> to calculate independence statistics.</li>
 <li>Add <code>predict_event()</code> and <code>predict_accumulation</code> to estimate the event and accumulation dates of an assemblage.</li>
 <li>Add <code>bootstrap_*()</code> and <code>jackknife_*()</code> to perform bootstrap and jackknife resampling.</li>
-<li>Add <code><a href="../reference/deprecate.html">simulate_evenness()</a></code> and <code><a href="../reference/deprecate.html">simulate_richness()</a></code> to measure diversity in simulated assemblages.</li>
+<li>Add <code>simulate_evenness()</code> and <code>simulate_richness()</code> to measure diversity in simulated assemblages.</li>
 <li>
 <code><a href="https://packages.tesselle.org/kairos/reference/seriation.html" class="external-link">seriate_average()</a></code> replaces <code>seriate_correspondance()</code>.</li>
 <li>
@@ -111,7 +121,7 @@
 <ul><li>Remove all previously deprecated methods.</li>
 <li>Deprecate <code>seriate_correspondance()</code>, <code>seriate_reciprocal()</code> and <code>refine_dates()</code>,</li>
 <li>
-<code><a href="../reference/deprecate.html">index_composition()</a></code> now returns a <code>CompositionIndex</code> object.</li>
+<code>index_composition()</code> now returns a <code>CompositionIndex</code> object.</li>
 <li>
 <code><a href="../reference/similarity.html">similarity()</a></code> now returns a <code>dist</code> object.</li>
 <li>
@@ -163,13 +173,13 @@
 <ul><li>
 <code>DiversityIndex</code>, <code>HeterogeneityIndex</code>, <code>EvennessIndex</code> and <code>RichnessIndex</code>: S4 classes that represent diversity index.</li>
 <li>
-<code><a href="../reference/deprecate.html">index_heterogeneity()</a></code> replaces <code>diversity()</code>.</li>
+<code>index_heterogeneity()</code> replaces <code>diversity()</code>.</li>
 <li>
-<code><a href="../reference/deprecate.html">index_evenness()</a></code> replaces <code><a href="../reference/heterogeneity.html">evenness()</a></code>.</li>
+<code>index_evenness()</code> replaces <code><a href="../reference/heterogeneity.html">evenness()</a></code>.</li>
 <li>
-<code><a href="../reference/deprecate.html">index_richness()</a></code> replaces <code><a href="../reference/richness.html">richness()</a></code>.</li>
+<code>index_richness()</code> replaces <code><a href="../reference/richness.html">richness()</a></code>.</li>
 <li>
-<code><a href="../reference/deprecate.html">index_composition()</a></code> allows to estimate asymptotic species richness.</li>
+<code>index_composition()</code> allows to estimate asymptotic species richness.</li>
 <li>
 <code><a href="../reference/plot_diversity.html">plot_diversity()</a></code> produces a diversity <em>vs</em> sample size graph and allow to compare estimates with simulated assemblages.</li>
 <li>Add replacement methods for the <code>*Matrix</code> classes.</li>

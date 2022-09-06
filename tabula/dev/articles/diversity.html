@@ -88,7 +88,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Diversity Measures</h1>
                         <h4 data-toc-skip class="author">N. Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2022-08-16</h4>
+            <h4 data-toc-skip class="date">2022-09-06</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/vignettes/diversity.Rmd" class="external-link"><code>vignettes/diversity.Rmd</code></a></small>
       <div class="d-none name"><code>diversity.Rmd</code></div>
@@ -565,8 +565,8 @@
 <h2 id="sample-size-and-significance">Sample Size and Significance<a class="anchor" aria-label="anchor" href="#sample-size-and-significance"></a>
 </h2>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">RA</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rarefaction.html">rarefaction</a></span><span class="op">(</span><span class="va">mississippi</span>, sample <span class="op">=</span> <span class="fl">100</span>, method <span class="op">=</span> <span class="st">"hurlbert"</span><span class="op">)</span></span>
-<span></span>
+<code class="sourceCode R"><span><span class="co"># Baxter rarefaction</span></span>
+<span><span class="va">RA</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rarefaction.html">rarefaction</a></span><span class="op">(</span><span class="va">mississippi</span>, sample <span class="op">=</span> <span class="fl">100</span>, method <span class="op">=</span> <span class="st">"baxter"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">RA</span><span class="op">)</span></span></code></pre></div>
 <p><img src="diversity_files/figure-html/rarefaction-1.png" width="700"></p>
 <p><span class="citation">Kintigh (1989)</span></p>
@@ -576,10 +576,7 @@
 <span><span class="va">HE_sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate.html">simulate</a></span><span class="op">(</span><span class="va">HE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">HE_sim</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">RI</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/deprecate.html">index_richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: 'index_richness' is deprecated.</span></span>
-<span><span class="co">#&gt; Use 'richness' instead.</span></span>
-<span><span class="co">#&gt; See help("Deprecated")</span></span>
+<span><span class="va">RI</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/richness.html">richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span></span>
 <span><span class="va">RI_sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate.html">simulate</a></span><span class="op">(</span><span class="va">RI</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">RI_sim</span><span class="op">)</span> </span></code></pre></div>
 <p><img src="diversity_files/figure-html/sample-size-1.png" width="336"><img src="diversity_files/figure-html/sample-size-2.png" width="336"></p>
