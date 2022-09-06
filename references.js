@@ -7,13 +7,13 @@
     /* Adapted from https://github.com/rstudio/bookdown/blob/2d692ba4b61f1e466c92e78fd712b0ab08c11d31/inst/resources/bs4_book/bs4_book.js#L25 */
     // Initialise search index on focus
     var fuse;
-    $("#search-packages").focus(async function(e) {
+    $("#search-references").focus(async function(e) {
       if (fuse) {
         return;
       }
 
       $(e.target).addClass("loading");
-      var response = await fetch($("#search-packages").data("search-index"));
+      var response = await fetch($("#search-references").data("search-index"));
       var data = await response.json();
 
       var options = {
@@ -52,10 +52,8 @@
           items = [
             {
               package:"tesselle",
-              dir:"Sorry 😿",
-              previous_headings:"",
-              title:"No results found.",
-              what:"No results found.",
+              title:"Sorry 😿",
+              text:"No results found.",
               path:window.location.href
             }
           ];
@@ -63,18 +61,16 @@
       }
       callback(items);
     }
-    $("#search-packages").autocomplete(options, [
+    $("#search-references").autocomplete(options, [
       {
         name: "content",
         source: searchFuse,
         templates: {
           suggestion: (s) => {
-            if (s.title == s.what) {
-              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div>`;
-            } else if (s.previous_headings == "") {
-              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
+            if (s.text != "") {
+              return `${s.package} > ${s.title} > <div class="search-details">${s.text}</div>`;
             } else {
-              return `${s.package} > ${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
+              return `${s.package} > <div class="search-details"> ${s.title}</div>`;
             }
           },
         },

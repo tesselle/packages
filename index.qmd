@@ -14,6 +14,9 @@ about:
     - icon: house
       text: Homepage
       href: "https://www.tesselle.org"
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/tesselle_
     - icon: github
       text: Github
       href: https://github.com/tesselle/
@@ -53,7 +56,7 @@ cat(
 ```{r}
 #| echo: false
 ## Build search index
-sea <- list()
+search_pkg <- search_ref <- list()
 for (i in seq_along(url_pkg)) {
   path <- url_pkg[[i]]
   tmp <- try(
@@ -62,23 +65,42 @@ for (i in seq_along(url_pkg)) {
   )
   if (!inherits(tmp, "try-error")) {
     for (j in seq_along(tmp)) {
+      ## Add package name
       tmp[[j]]$package <- pkg$Package[[i]]
+      
+      ## Get references
+      if (!is.null(tmp[[j]]$what) && tmp[[j]]$what == "References") {
+        search_ref <- c(search_ref, tmp[j])
+        # tmp[[j]] <- NULL 
+      }
     }
-    sea <- c(sea, tmp)
+    search_pkg <- c(search_pkg, tmp)
   }
 }
-cat(rjson::toJSON(sea), file = "_site/packages.json", append = FALSE)
+cat(rjson::toJSON(search_pkg), file = "_site/packages.json", append = FALSE)
+cat(rjson::toJSON(search_ref), file = "_site/references.json", append = FALSE)
 ```
 
 :::{#hero-heading}
 :::
 
+## Explore
+
 <form role="search">
 <div class="form-group">
-<label for="search-input"><strong>Search in the documentation</strong></label>
-<input type="search" class="form-control" aria-label="Search" name="search-input" data-search-index="/packages.json" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+<label for="search-packages"><strong>Search in the documentation</strong></label>
+<input type="search" class="form-control" aria-label="Search for..." name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off">
 </div>
 </form>
+
+<form role="search">
+<div class="form-group">
+<label for="search-references"><strong>Search in the bibliography</strong></label>
+<input type="search" class="form-control" aria-label="Search for..." name="search-references" data-search-index="/references.json" id="search-references" placeholder="e.g. Peeples" autocomplete="off">
+</div>
+</form>
+
+## Read the doc
 
 ```{r doc, echo=FALSE}
 az <- order(pkg$Package)
