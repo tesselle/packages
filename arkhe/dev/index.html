@@ -5,16 +5,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A collection of classes that represent
-    archaeological data. This package provides a set of S4 classes that
-    represent different special types of matrix (absolute/relative
-    frequency, presence/absence data, co-occurrence matrix, etc.) upon
-    which package developers can build subclasses. It also provides a set
-    of generic methods (mutators and coercion mechanisms) and functions
-    (e.g. summary statistics, predicates). In addition, a few classes of 
-    general interest (e.g. that represent stratigraphic relationships) 
-    are implemented.">
-<title>Representation of Archaeological Data • arkhe</title>
+<meta name="description" content="A collection of simple functions for cleaning rectangular data. 
+    This package allows to detect, count and replace values or delete 
+    rows/columns according to a specific predicate. In addition, it provides 
+    tools to check conditions and return informative error messages.">
+<title>Tools for cleaning rectangular data • arkhe</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -27,16 +22,11 @@
 <link href="deps/Ubuntu-0.4.2/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Representation of Archaeological Data">
-<meta property="og:description" content="A collection of classes that represent
-    archaeological data. This package provides a set of S4 classes that
-    represent different special types of matrix (absolute/relative
-    frequency, presence/absence data, co-occurrence matrix, etc.) upon
-    which package developers can build subclasses. It also provides a set
-    of generic methods (mutators and coercion mechanisms) and functions
-    (e.g. summary statistics, predicates). In addition, a few classes of 
-    general interest (e.g. that represent stratigraphic relationships) 
-    are implemented.">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Tools for cleaning rectangular data">
+<meta property="og:description" content="A collection of simple functions for cleaning rectangular data. 
+    This package allows to detect, count and replace values or delete 
+    rows/columns according to a specific predicate. In addition, it provides 
+    tools to check conditions and return informative error messages.">
 <meta property="og:image" content="https://packages.tesselle.org/arkhe/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
@@ -64,9 +54,6 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="articles/arkhe.html">Get started</a>
-</li>
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
@@ -104,7 +91,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>A collection of classes that represent archaeological data. This package provides a set of S4 classes that represent different special types of matrix (absolute/relative frequency, presence/absence data, co-occurrence matrix, etc.) upon which package developers can build subclasses. It also provides a set of generic methods (mutators and coercion mechanisms) and functions (e.g. predicates). In addition, a few classes of general interest (e.g. that represent stratigraphic relationships) are implemented.</p>
+<p>A collection of simple functions for cleaning rectangular data. This package allows to detect, count and replace values or delete rows/columns according to a specific predicate. In addition, it provides tools to check conditions and return informative error messages.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -123,143 +110,57 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Load the package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/arkhe/">arkhe</a></span><span class="op">)</span></span></code></pre></div>
-<p><strong>arkhe</strong> provides a set of S4 classes that represent different special types of matrix.</p>
-<ul>
-<li>Integer matrix:<ul>
-<li>
-<code>CountMatrix</code> represents absolute frequency data,</li>
-<li>
-<code>OccurrenceMatrix</code> represents a co-occurrence matrix,</li>
-</ul>
-</li>
-<li>Numeric matrix:<ul><li>
-<code>CompositionMatrix</code> represents relative frequency (compositional) data,</li></ul>
-</li>
-<li>Logical matrix:<ul>
-<li>
-<code>IncidenceMatrix</code> represents presence/absence data,</li>
-<li>
-<code>StratigraphicMatrix</code> represents stratigraphic relationships.</li>
-</ul>
-</li>
-</ul>
-<p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (assemblage/sample) must be saved in its own row.</p>
-<p>These new classes are of simple use as they inherit from the base <code>matrix</code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Define a count data matrix</span></span>
-<span><span class="co">## (data will be rounded to zero decimal places, then coerced with as.integer)</span></span>
-<span><span class="va">quanti</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/CountMatrix-class.html">CountMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## Create a matrix</span></span>
+<span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">25</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">5</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Define a logical matrix</span></span>
-<span><span class="co">## (data will be coerced with as.logical)</span></span>
-<span><span class="va">quali</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/IncidenceMatrix-class.html">IncidenceMatrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
-<p><strong>arkhe</strong> uses coercing mechanisms (with validation methods) for data type conversions:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Create a count matrix</span></span>
-<span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">75</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">15</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="co">## Add NA</span></span>
+<span><span class="va">k</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">25</span>, <span class="fl">3</span>, <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span>
+<span><span class="va">X</span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span></span>
+<span><span class="co">#&gt; [1,]    6    7    8    9    2</span></span>
+<span><span class="co">#&gt; [2,]    8   10   NA    7    6</span></span>
+<span><span class="co">#&gt; [3,]   NA    1   10    4    1</span></span>
+<span><span class="co">#&gt; [4,]    7   10    7   10    3</span></span>
+<span><span class="co">#&gt; [5,]   NA    9    4    3    1</span></span>
 <span></span>
-<span><span class="co">## Coerce to absolute frequencies</span></span>
-<span><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
+<span><span class="co">## Count missing values in rows</span></span>
+<span><span class="fu"><a href="reference/count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 0 1 1 0 1</span></span>
+<span><span class="co">## Count non-missing values in columns</span></span>
+<span><span class="fu"><a href="reference/count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 3 5 4 5 5</span></span>
 <span></span>
-<span><span class="co">## Coerce to relative frequencies</span></span>
-<span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
+<span><span class="co">## Find row with NA</span></span>
+<span><span class="fu"><a href="reference/detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE  TRUE  TRUE FALSE  TRUE</span></span>
+<span><span class="co">## Find column without any NA</span></span>
+<span><span class="fu"><a href="reference/detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE  TRUE FALSE  TRUE  TRUE</span></span>
 <span></span>
-<span><span class="co">## Row sums are internally stored before coercing to a frequency matrix</span></span>
-<span><span class="co">## (use get_totals() to get these values)</span></span>
-<span><span class="co">## This allows to restore the source data</span></span>
-<span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/all.html" class="external-link">all</a></span><span class="op">(</span><span class="va">A1</span> <span class="op">==</span> <span class="va">A2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] TRUE</span></span>
+<span><span class="co">## Remove row with any NA</span></span>
+<span><span class="fu"><a href="reference/remove.html">compact</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span></span>
+<span><span class="co">#&gt; [1,]    6    7    8    9    2</span></span>
+<span><span class="co">#&gt; [2,]    7   10    7   10    3</span></span>
+<span><span class="co">## Remove column with any NA</span></span>
+<span><span class="fu"><a href="reference/remove.html">compact</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span><span class="co">#&gt; [1,]    7    9    2</span></span>
+<span><span class="co">#&gt; [2,]   10    7    6</span></span>
+<span><span class="co">#&gt; [3,]    1    4    1</span></span>
+<span><span class="co">#&gt; [4,]   10   10    3</span></span>
+<span><span class="co">#&gt; [5,]    9    3    1</span></span>
 <span></span>
-<span><span class="co">## Coerce to presence/absence</span></span>
-<span><span class="va">D</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_incidence</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Coerce to a co-occurrence matrix</span></span>
-<span><span class="va">E</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_occurrence</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></code></pre></div>
-<p>The <code>CountMatrix</code>, <code>CompositionMatrix</code> and <code>IncidenceMatrix</code> classes have special slots:</p>
-<ul>
-<li>
-<code>samples</code> for replicated measurements/observation,</li>
-<li>
-<code>groups</code> to group data by site/area,</li>
-<li>
-<code>dates</code> to specify the date point estimate of an assemblage,</li>
-<li>
-<code>tqp</code> and <code>taq</code> to specify the chronology of an assemblage.</li>
-</ul>
-<p>The way chronological information is handled is somewhat opinionated. Sub-annual precision is overkill/meaningless in most situations: dates are assumed to be expressed in years CE and are stored as integers (values are coerced with <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer()</a></code> and hence truncated towards zero).</p>
-<p>When coercing a <code>data.frame</code> to a <code>*Matrix</code> object, an attempt is made to automatically assign values to these slots by mapping column names. This behavior can be disabled by setting <code>options(arkhe.autodetect = FALSE)</code>.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
-<span><span class="va">Y</span><span class="op">$</span><span class="va">samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span><span class="op">)</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="va">Y</span><span class="op">$</span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span><span class="op">)</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="va">Y</span><span class="op">$</span><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1400</span><span class="op">:</span><span class="fl">1451</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="va">Y</span><span class="op">$</span><span class="va">tpq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1301</span><span class="op">:</span><span class="fl">1400</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TPQ</span></span>
-<span><span class="va">Y</span><span class="op">$</span><span class="va">taq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1451</span><span class="op">:</span><span class="fl">1500</span>, <span class="fl">15</span>, <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># TAQ</span></span>
-<span></span>
-<span><span class="co">## Coerce to a count matrix</span></span>
-<span><span class="va">Z</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Get groups</span></span>
-<span><span class="fu"><a href="reference/mutators.html">get_samples</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] "d" "a" "b" "e" "b" "e" "b" "d" "e" "d" "d" "e" "e" "e" "a"</span></span>
-<span></span>
-<span><span class="co">## Get groups</span></span>
-<span><span class="fu"><a href="reference/mutators.html">get_groups</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] "A" "E" "A" "B" "A" "D" "A" "E" "D" "B" "E" "D" "A" "A" "C"</span></span>
-<span></span>
-<span><span class="co">## Get dates</span></span>
-<span><span class="fu"><a href="reference/mutators.html">get_dates</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] 1442 1449 1431 1439 1429 1411 1400 1439 1437 1440 1444 1418 1450 1436 1427</span></span>
-<span></span>
-<span><span class="co">## Get chronology</span></span>
-<span><span class="fu"><a href="reference/mutators.html">get_terminus</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span><span class="co">#&gt;        tpq  taq</span></span>
-<span><span class="co">#&gt; row1  1302 1486</span></span>
-<span><span class="co">#&gt; row2  1346 1496</span></span>
-<span><span class="co">#&gt; row3  1349 1456</span></span>
-<span><span class="co">#&gt; row4  1372 1485</span></span>
-<span><span class="co">#&gt; row5  1370 1495</span></span>
-<span><span class="co">#&gt; row6  1318 1455</span></span>
-<span><span class="co">#&gt; row7  1389 1467</span></span>
-<span><span class="co">#&gt; row8  1377 1488</span></span>
-<span><span class="co">#&gt; row9  1346 1462</span></span>
-<span><span class="co">#&gt; row10 1308 1487</span></span>
-<span><span class="co">#&gt; row11 1362 1464</span></span>
-<span><span class="co">#&gt; row12 1400 1451</span></span>
-<span><span class="co">#&gt; row13 1312 1464</span></span>
-<span><span class="co">#&gt; row14 1316 1483</span></span>
-<span><span class="co">#&gt; row15 1332 1468</span></span>
-<span></span>
-<span><span class="co">## Summarize</span></span>
-<span><span class="fu"><a href="reference/summary.html">summary</a></span><span class="op">(</span><span class="va">Z</span><span class="op">)</span></span>
-<span><span class="co">#&gt; &lt;AbundanceSummary: 15 x 5&gt;</span></span>
-<span><span class="co">#&gt; A ------------------------------------------------------------------------------</span></span>
-<span><span class="co">#&gt; * Observations: 6</span></span>
-<span><span class="co">#&gt; * Variables: 5</span></span>
-<span><span class="co">#&gt; * Replicated measurements: TRUE</span></span>
-<span><span class="co">#&gt; * Chronology: 1302 - 1495 (year CE)</span></span>
-<span><span class="co">#&gt; B ------------------------------------------------------------------------------</span></span>
-<span><span class="co">#&gt; * Observations: 2</span></span>
-<span><span class="co">#&gt; * Variables: 5</span></span>
-<span><span class="co">#&gt; * Replicated measurements: FALSE</span></span>
-<span><span class="co">#&gt; * Chronology: 1308 - 1487 (year CE)</span></span>
-<span><span class="co">#&gt; C ------------------------------------------------------------------------------</span></span>
-<span><span class="co">#&gt; * Observation: 1</span></span>
-<span><span class="co">#&gt; * Variables: 5</span></span>
-<span><span class="co">#&gt; * Replicated measurements: FALSE</span></span>
-<span><span class="co">#&gt; * Chronology: 1332 - 1468 (year CE)</span></span>
-<span><span class="co">#&gt; D ------------------------------------------------------------------------------</span></span>
-<span><span class="co">#&gt; * Observations: 3</span></span>
-<span><span class="co">#&gt; * Variables: 5</span></span>
-<span><span class="co">#&gt; * Replicated measurements: TRUE</span></span>
-<span><span class="co">#&gt; * Chronology: 1318 - 1462 (year CE)</span></span>
-<span><span class="co">#&gt; E ------------------------------------------------------------------------------</span></span>
-<span><span class="co">#&gt; * Observations: 3</span></span>
-<span><span class="co">#&gt; * Variables: 5</span></span>
-<span><span class="co">#&gt; * Replicated measurements: TRUE</span></span>
-<span><span class="co">#&gt; * Chronology: 1346 - 1496 (year CE)</span></span>
-<span><span class="co">#&gt; --------------------------------------------------------------------------------</span></span></code></pre></div>
+<span><span class="co">## Replace NA with zeros</span></span>
+<span><span class="fu"><a href="reference/replace.html">replace_NA</a></span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span></span>
+<span><span class="co">#&gt; [1,]    6    7    8    9    2</span></span>
+<span><span class="co">#&gt; [2,]    8   10    0    7    6</span></span>
+<span><span class="co">#&gt; [3,]    0    1   10    4    1</span></span>
+<span><span class="co">#&gt; [4,]    7   10    7   10    3</span></span>
+<span><span class="co">#&gt; [5,]    0    9    4    3    1</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
@@ -313,6 +214,7 @@
 <li><a href="https://github.com/tesselle/arkhe/actions" class="external-link"><img src="https://github.com/tesselle/arkhe/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://app.codecov.io/gh/tesselle/arkhe" class="external-link"><img src="https://codecov.io/gh/tesselle/arkhe/branch/main/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://www.codefactor.io/repository/github/tesselle/arkhe/overview/main" class="external-link"><img src="https://www.codefactor.io/repository/github/tesselle/arkhe/badge/main" alt="CodeFactor"></a></li>
+<li><a href="https://cran.r-project.org/package=arkhe" class="external-link"><img src="https://tinyverse.netlify.com/badge/arkhe" alt="Dependencies"></a></li>
 </ul>
 </div>
 

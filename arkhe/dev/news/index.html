@@ -19,9 +19,6 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/arkhe.html">Get started</a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="active nav-item">
@@ -47,7 +44,15 @@
       <small>Source: <a href="https://github.com/tesselle/arkhe/blob/HEAD/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="section level2"><h2 class="pkg-version" data-toc-text="0.5.0.9000" id="arkhe-0509000">arkhe 0.5.0.9000<a class="anchor" aria-label="anchor" href="#arkhe-0509000"></a></h2></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.5.0.9000" id="arkhe-0509000">arkhe 0.5.0.9000<a class="anchor" aria-label="anchor" href="#arkhe-0509000"></a></h2>
+<div class="section level3">
+<h3 id="new-classes-and-methods-0-5-0-9000">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-0-5-0-9000"></a></h3>
+<ul><li>Export all type and scalar predicates.</li></ul></div>
+<div class="section level3">
+<h3 id="breaking-changes-0-5-0-9000">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-0-5-0-9000"></a></h3>
+<ul><li>Remove all <code>*Matrix</code> classes and methods.</li></ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.5.0" id="arkhe-050">arkhe 0.5.0<a class="anchor" aria-label="anchor" href="#arkhe-050"></a></h2><p class="text-muted">CRAN release: 2022-06-15</p>
 <div class="section level3">
@@ -69,9 +74,9 @@
 <li>Add <code><a href="../reference/replace.html">replace_zero()</a></code> to replace zero in a <code>matrix</code>-like object.</li>
 <li>Add <code><a href="../reference/remove.html">remove_Inf()</a></code> to remove infinite values in a <code>matrix</code>-like object.</li>
 <li>Add <code>assert_*()</code> and <code><a href="../reference/validate.html">validate()</a></code> to validate objects.</li>
-<li>Add <code><a href="../reference/mutators.html">get_dates()</a></code>, <code>set_dates()&lt;-</code> to extract/replace <code>dates</code> slot.</li>
-<li>Add <code><a href="../reference/mutators.html">get_terminus()</a></code>, <code>set_terminus()&lt;-</code>, <code><a href="../reference/mutators.html">get_tpq()</a></code>, <code>set_tpq()&lt;-</code>, <code><a href="../reference/mutators.html">get_taq()</a></code>, <code>set_taq()&lt;-</code> to extract/replace <code>tpq</code> and <code>taq</code> slots.</li>
-<li>Add <code><a href="../reference/summary.html">summary()</a></code> for <code>AbundanceMatrix</code> objects.</li>
+<li>Add <code>get_dates()</code>, <code>set_dates()&lt;-</code> to extract/replace <code>dates</code> slot.</li>
+<li>Add <code>get_terminus()</code>, <code>set_terminus()&lt;-</code>, <code>get_tpq()</code>, <code>set_tpq()&lt;-</code>, <code>get_taq()</code>, <code>set_taq()&lt;-</code> to extract/replace <code>tpq</code> and <code>taq</code> slots.</li>
+<li>Add <code><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary()</a></code> for <code>AbundanceMatrix</code> objects.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="internals-0-4-0">Internals<a class="anchor" aria-label="anchor" href="#internals-0-4-0"></a></h3>
@@ -94,7 +99,7 @@
 <h3 id="new-classes-and-methods-0-3-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-0-3-0"></a></h3>
 <ul><li>Add <code><a href="../reference/replace.html">replace_NA()</a></code> to replace missing values.</li>
 <li>Add <code><a href="../reference/remove.html">remove_NA()</a></code>, <code><a href="../reference/remove.html">remove_zero()</a></code> and <code><a href="../reference/remove.html">remove_empty()</a></code> to remove missing values, zeros and empty rows/columns in a <code>matrix</code>.</li>
-<li>Add <code><a href="../reference/mutators.html">get_samples()</a></code>, <code>set_samples()&lt;-</code>, <code><a href="../reference/mutators.html">get_groups()</a></code> and <code>set_groups()&lt;-</code> to extract/replace <code>samples</code> and <code>groups</code> slots.</li>
+<li>Add <code>get_samples()</code>, <code>set_samples()&lt;-</code>, <code>get_groups()</code> and <code>set_groups()&lt;-</code> to extract/replace <code>samples</code> and <code>groups</code> slots.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bugfixes--changes-0-3-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-0-3-0"></a></h3>
@@ -103,7 +108,7 @@
 <li>Deprecate <code>as_abundance()</code>.</li>
 <li>Remove <code>SimilarityMatrix</code> class.</li>
 <li>
-<code><a href="../reference/coerce.html">as_long()</a></code> gained a new <code>reverse</code> argument.</li>
+<code><a href="../reference/reshape.html">as_long()</a></code> gained a new <code>reverse</code> argument.</li>
 </ul></div>
 </div>
     <div class="section level2">

@@ -10,12 +10,6 @@
     <loc>https://packages.tesselle.org/arkhe/dev/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/articles/arkhe.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/articles/index.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/authors.html</loc>
   </url>
   <url>
@@ -26,27 +20,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/pull_request_template.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/AbundanceMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/CompositionMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/CountMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/DataMatrix.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/IncidenceMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/OccurrenceMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/StratigraphicMatrix-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/arkhe-package.html</loc>
@@ -61,9 +34,6 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check-data.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/check-graph.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check-matrix.html</loc>
   </url>
   <url>
@@ -74,9 +44,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check_class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/coerce.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/conditions.html</loc>
@@ -95,12 +62,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/jackknife.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/mutators.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-graph.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-matrix.html</loc>
@@ -127,10 +88,7 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/replace.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/subset.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/summary.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/reshape.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/validate.html</loc>
