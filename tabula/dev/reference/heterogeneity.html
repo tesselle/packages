@@ -318,47 +318,47 @@ Bell System Technical Journal</em>, 27, 379-423.
 <span class="r-in"><span><span class="co">## Bootstrap resampling (summary statistics)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        original      mean         bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.6681740 1.7003796  0.032205581 0.2305524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 1.2130076 1.2112217 -0.001785874 0.4210319</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.6931472 0.6158739 -0.077273282 0.5234281</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.2090063  0.209006290 0.3737397</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.2286251  0.228625132 0.3876574</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.7481555 1.7712412  0.023085726 0.2230995</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  1.0986123 0.9745259 -0.124086409 0.5215546</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.8711604 1.8656577 -0.005502744 0.2251778</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.7207095 1.7163457 -0.004363827 0.2402181</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.9115521 1.9281646  0.016612544 0.1436764</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  1.0397208 0.9349817 -0.104739068 0.5290648</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.8200760 1.8257102  0.005634185 0.2253529</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.6681740 1.7103539  0.042179887 0.2196370</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 1.2130076 1.1805713 -0.032436263 0.4288507</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.6931472 0.6050102 -0.088136939 0.5322960</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.2260497  0.226049713 0.3918873</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.2174046  0.217404571 0.3779620</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.7481555 1.7601622  0.012006763 0.2204813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  1.0986123 0.9828982 -0.115714082 0.5041233</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.8711604 1.8563990 -0.014761442 0.2260059</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.7207095 1.7132388 -0.007470739 0.2471001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.9115521 1.9164460  0.004893935 0.1522869</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  1.0397208 0.9545181 -0.085202653 0.5155174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.8200760 1.8197131 -0.000362859 0.2106098</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            Min.   1st Qu.    Median      Mean   3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.6931472 1.5764922 1.7328680 1.7029370 1.8546526 2.197225</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9556999 1.2130076 1.1738841 1.4985691 2.145842</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.0000000 0.6931472 0.6072216 1.0986123 1.791759</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000 0.0000000 0.2132446 0.6931472 1.609438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000 0.0000000 0.2251197 0.6931472 1.609438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.5623351 1.6313454 1.7917595 1.7704090 1.9356005 2.302585</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6931472 1.0986123 0.9874266 1.3862944 2.079442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.6365142 1.7342904 1.8848713 1.8461964 2.0228085 2.282174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 0.3767702 1.5912842 1.7489261 1.7153614 1.8818704 2.205707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.1020189 1.8375856 1.9472870 1.9280322 2.0282503 2.244697</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.6365142 1.0397208 0.9618782 1.3321790 2.043192</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.9502705 1.6769878 1.8343720 1.8175599 1.9722470 2.210254</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.0000000 1.5607104 1.7480673 1.7040653 1.8548326 2.302585</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9649629 1.2730283 1.1890786 1.4777486 2.044931</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.0000000 0.6931472 0.6035081 1.0986123 1.945910</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000 0.0000000 0.2022844 0.0000000 1.609438</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000 0.0000000 0.2158076 0.6931472 1.609438</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.8675632 1.6313454 1.7986522 1.7701233 1.9356005 2.197225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6931472 1.0986123 0.9958018 1.3862944 2.197225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.5623351 1.7347645 1.8848713 1.8563024 2.0140355 2.284243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 0.3767702 1.5832585 1.7632778 1.7202021 1.8885554 2.216102</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.0846613 1.8462202 1.9448848 1.9265884 2.0292308 2.261908</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.6931472 1.0549202 0.9725689 1.3321790 2.025326</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.9502705 1.6726254 1.8340788 1.8102426 1.9722470 2.267948</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             25%       50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.5764922 1.7118451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.9556999 1.2130076</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.5810938 1.7480673</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.9556999 1.2636544</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.6931472</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.6114722 1.7930940</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.6094379 1.7917595</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.6931472 1.0986123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.7367407 1.8946289</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.5912842 1.7498859</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.8403911 1.9482525</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.7328680 1.8848713</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.6044883 1.7668870</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.8557304 1.9476262</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.6931472 1.0397208</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.6769878 1.8337855</span>
 <span class="r-in"><span></span></span>
