@@ -84,7 +84,7 @@
 
 
 <dt>data</dt>
-<dd><p>A CompositionMatrix object.</p></dd>
+<dd><p>A <a href="CompositionMatrix-class.html">CompositionMatrix</a> object.</p></dd>
 
 
 <dt>level</dt>
@@ -137,11 +137,6 @@ Archaeological Science: Reports</em>, 32, 102423.
 .</p>
     </div>
     <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other outlier detection methods: 
-<code><a href="OutlierIndex-class.html">OutlierIndex-class</a></code></p></div>
-    </div>
-    <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>N. Frerebeau</p>
     </div>
@@ -150,8 +145,10 @@ Archaeological Science: Reports</em>, 32, 102423.
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Coerce to chemical data</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"kommos"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_composition</a></span><span class="op">(</span><span class="va">kommos</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/remove.html" class="external-link">remove_NA</a></span><span class="op">(</span><span class="va">coda</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">kommos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/remove.html" class="external-link">remove_NA</a></span><span class="op">(</span><span class="va">kommos</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_composition</a></span><span class="op">(</span><span class="va">kommos</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Found more than one class "CompositionMatrix" in cache; using the first, from namespace 'arkhe'</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Also defined by ‘nexus’</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Detect outliers</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">find_outliers</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
@@ -162,9 +159,6 @@ Archaeological Science: Reports</em>, 32, 102423.
 <span class="r-in"><span><span class="fu">plot_outliers</span><span class="op">(</span><span class="va">out</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_highcontrast.html" class="external-link">scale_colour_highcontrast</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>'default.stringsAsFactors' is deprecated.</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> Use '`stringsAsFactors = FALSE`' instead.</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> See help("Deprecated")</span>
 <span class="r-plt img"><img src="outliers-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">plot_outliers</span><span class="op">(</span><span class="va">out</span>, <span class="va">coda</span>, select <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span> <span class="op">+</span></span></span>

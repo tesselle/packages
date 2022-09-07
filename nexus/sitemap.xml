@@ -28,16 +28,25 @@
     <loc>https://packages.tesselle.org/nexus/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/LogRatio.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/CompositionMatrix-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/LogRatio-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/NumericMatrix.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/OutlierIndex-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/additive-log-ratio.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/coerce.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/centered-log-ratio.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/covariance.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/distance.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/hongite.html</loc>
@@ -46,16 +55,10 @@
     <loc>https://packages.tesselle.org/nexus/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/inverse-log-ratio.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/reference/isometric-log-ratio.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/nexus/reference/lia_age.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/mutators.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/nexus-package.html</loc>
@@ -64,12 +67,30 @@
     <loc>https://packages.tesselle.org/nexus/reference/outliers.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/pivot-log-ratio.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/subset.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/transform_alr.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/transform_clr.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/transform_ilr.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/transform_inverse.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/transform_lr.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/transform_plr.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/variation.html</loc>
   </url>
 </urlset>

@@ -45,7 +45,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Inverse Log-Ratio Transformation</h1>
       <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/nexus/blob/HEAD/R/transform.R" class="external-link"><code>R/transform.R</code></a></small>
-      <div class="d-none name"><code>inverse-log-ratio.Rd</code></div>
+      <div class="d-none name"><code>transform_inverse.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
@@ -63,16 +63,13 @@
 <span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ILR</span></span>
-<span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for PLR</span></span>
 <span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A CompositionMatrix object.</p></dd>
+<dd><p>A <a href="CompositionMatrix-class.html">CompositionMatrix</a> object.</p></dd>
 
 
 <dt>...</dt>
@@ -83,7 +80,7 @@
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A CompositionMatrix object.</p>
+<p>A <a href="CompositionMatrix-class.html">CompositionMatrix</a> object.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -104,11 +101,11 @@ Boca Raton: CRC Press.</p>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other log-ratio transformations: 
-<code><a href="LogRatio.html">LogRatio</a></code>,
-<code><a href="additive-log-ratio.html">transform_alr</a>()</code>,
-<code><a href="centered-log-ratio.html">transform_clr</a>()</code>,
-<code><a href="isometric-log-ratio.html">transform_ilr</a>()</code>,
-<code><a href="pivot-log-ratio.html">transform_pivot</a>()</code></p></div>
+<code><a href="transform_alr.html">transform_alr</a>()</code>,
+<code><a href="transform_clr.html">transform_clr</a>()</code>,
+<code><a href="transform_ilr.html">transform_ilr</a>()</code>,
+<code><a href="transform_lr.html">transform_lr</a>()</code>,
+<code><a href="transform_plr.html">transform_plr</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -117,19 +114,24 @@ Boca Raton: CRC Press.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Coerce to chemical data</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Coerce to compositonal data</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"hongite"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/coerce.html" class="external-link">as_composition</a></span><span class="op">(</span><span class="va">hongite</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_composition</a></span><span class="op">(</span><span class="va">hongite</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Found more than one class "CompositionMatrix" in cache; using the first, from namespace 'arkhe'</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Also defined by ‘nexus’</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Pairwise log-ratio</span></span></span>
+<span class="r-in"><span><span class="va">lr</span> <span class="op">&lt;-</span> <span class="fu"><a href="transform_lr.html">transform_lr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Centered log-ratio</span></span></span>
-<span class="r-in"><span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="centered-log-ratio.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Additive log-ratio</span></span></span>
-<span class="r-in"><span><span class="va">alr</span> <span class="op">&lt;-</span> <span class="fu"><a href="additive-log-ratio.html">transform_alr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">alr</span> <span class="op">&lt;-</span> <span class="fu"><a href="transform_alr.html">transform_alr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Isometric log-ratio</span></span></span>
-<span class="r-in"><span><span class="va">ilr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="isometric-log-ratio.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">ilr2</span> <span class="op">&lt;-</span> <span class="fu"><a href="pivot-log-ratio.html">transform_pivot</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">ilr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">ilr2</span> <span class="op">&lt;-</span> <span class="fu"><a href="transform_plr.html">transform_plr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
