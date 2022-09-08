@@ -171,8 +171,8 @@ which logarithms are computed.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<ul><li><p><code>heterogeneity()</code> returns an <a href="DiversityIndex.html">HeterogeneityIndex</a> object.</p></li>
-<li><p><code>evenness()</code> returns an <a href="DiversityIndex.html">EvennessIndex</a> object.</p></li>
+<ul><li><p><code>heterogeneity()</code> returns an <a href="DiversityIndex-class.html">HeterogeneityIndex</a> object.</p></li>
+<li><p><code>evenness()</code> returns an <a href="DiversityIndex-class.html">EvennessIndex</a> object.</p></li>
 <li><p><code>index_*()</code> return a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></li>
 </ul></div>
     <div class="section level2">
@@ -304,79 +304,48 @@ Bell System Technical Journal</em>, 27, 379-423.
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Ceramic data</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"chevelon"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"cantabria"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Shannon diversity index</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu">heterogeneity</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1.6681740 1.2130076 0.6931472 0.0000000 0.0000000 1.7481555 1.0986123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 1.8711604 1.7207095 1.9115521 1.0397208 1.8200760</span>
-<span class="r-in"><span><span class="op">(</span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">evenness</span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.8572718 0.8750000 1.0000000       NaN       NaN 0.8983742 1.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.9615862 0.8842698 0.8699849 0.9463946 0.9353340</span>
+<span class="r-in"><span><span class="op">(</span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu">heterogeneity</span><span class="op">(</span><span class="va">cantabria</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.269200 2.955298 2.491683 2.485604 2.329187</span>
+<span class="r-in"><span><span class="op">(</span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">evenness</span><span class="op">(</span><span class="va">cantabria</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8987278 0.8966760 0.8462335 0.9178574 0.9373336</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Bootstrap resampling (summary statistics)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        original      mean         bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.6681740 1.7103539  0.042179887 0.2196370</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 1.2130076 1.1805713 -0.032436263 0.4288507</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.6931472 0.6050102 -0.088136939 0.5322960</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.2260497  0.226049713 0.3918873</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.2174046  0.217404571 0.3779620</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.7481555 1.7601622  0.012006763 0.2204813</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  1.0986123 0.9828982 -0.115714082 0.5041233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.8711604 1.8563990 -0.014761442 0.2260059</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.7207095 1.7132388 -0.007470739 0.2471001</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.9115521 1.9164460  0.004893935 0.1522869</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  1.0397208 0.9545181 -0.085202653 0.5155174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.8200760 1.8197131 -0.000362859 0.2106098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean         bias      error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.279299  0.010099447 0.07893787</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.984059  0.028761469 0.14263184</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.519761  0.028077890 0.21056766</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.481113 -0.004491183 0.22688803</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.322017 -0.007169842 0.26019506</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            Min.   1st Qu.    Median      Mean   3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 0.0000000 1.5607104 1.7480673 1.7040653 1.8548326 2.302585</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.0000000 0.9649629 1.2730283 1.1890786 1.4777486 2.044931</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.0000000 0.6931472 0.6035081 1.0986123 1.945910</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000 0.0000000 0.2022844 0.0000000 1.609438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000 0.0000000 0.2158076 0.6931472 1.609438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  0.8675632 1.6313454 1.7986522 1.7701233 1.9356005 2.197225</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.0000000 0.6931472 1.0986123 0.9958018 1.3862944 2.197225</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  0.5623351 1.7347645 1.8848713 1.8563024 2.0140355 2.284243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 0.3767702 1.5832585 1.7632778 1.7202021 1.8885554 2.216102</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.0846613 1.8462202 1.9448848 1.9265884 2.0292308 2.261908</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.0000000 0.6931472 1.0549202 0.9725689 1.3321790 2.025326</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  0.9502705 1.6726254 1.8340788 1.8102426 1.9722470 2.267948</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.985155 3.221930 3.280957 3.276148 3.334819 3.481469</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.435257 2.878759 2.976330 2.969578 3.069081 3.378070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.779676 2.383635 2.529035 2.514439 2.651865 3.182378</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.331664 2.362522 2.514476 2.494205 2.654242 3.053134</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.039721 2.138397 2.338872 2.302546 2.499065 2.926418</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             25%       50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.5810938 1.7480673</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 0.9556999 1.2636544</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.0000000 0.6931472</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.6094379 1.7917595</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.6931472 1.0986123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.7328680 1.8848713</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.6044883 1.7668870</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.8557304 1.9476262</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.6931472 1.0397208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.6769878 1.8337855</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       25%      50%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.228569 3.282100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.879118 2.976228</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.383644 2.520623</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.372192 2.511343</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.163956 2.329187</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="resample.html">jackknife</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            mean       bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610s 1.5680395 -0.9012101 0.2056978</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P610e 1.1096729 -0.9300118 0.3968560</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P625  0.5545177 -1.2476649 0.8317766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P630  0.0000000  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P307  0.0000000  0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P631  1.6463856 -0.9159291 0.2108823</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P623  0.9769728 -1.0947558 0.5574224</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P624  1.7643489 -0.9613033 0.2126469</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626s 1.6152716 -0.9489415 0.2242804</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P626e 1.8080769 -0.9312771 0.1429090</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P627  0.9244221 -1.0376881 0.5301829</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P628  1.7148123 -0.9473731 0.2085352</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      mean       bias      error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.246457 -0.9779158 0.08145529</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.932856 -0.9649994 0.15907033</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.469588 -0.9500688 0.19670002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.462723 -0.9838709 0.22195573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.305876 -1.0023704 0.25266291</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

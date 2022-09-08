@@ -34,7 +34,10 @@
     <loc>https://packages.tesselle.org/tabula/dev/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/DiversityIndex.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/DiversityIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/cantabria.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/deprecate.html</loc>

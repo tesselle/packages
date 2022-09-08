@@ -72,7 +72,7 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <a href="DiversityIndex.html">DiversityIndex</a> object.</p></dd>
+<dd><p>A <a href="DiversityIndex-class.html">DiversityIndex</a> object.</p></dd>
 
 
 <dt>n</dt>
@@ -103,7 +103,7 @@ Any unambiguous substring can be given.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>Returns a <a href="DiversityIndex.html">DiversityIndex</a> object.</p>
+<p>Returns a <a href="DiversityIndex-class.html">DiversityIndex</a> object.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -135,17 +135,16 @@ with Simulated Assemblages. <em>American Antiquity</em>, 49(1), 44-54.
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
-<span class="r-in"><span><span class="co">## Ceramic data</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"chevelon"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"cantabria"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Assemblage diversity size comparison</span></span></span>
 <span class="r-in"><span><span class="co">## Warning: this may take a few seconds!</span></span></span>
-<span class="r-in"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu"><a href="heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu"><a href="heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">cantabria</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">h_sim</span> <span class="op">&lt;-</span> <span class="fu">simulate</span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">h_sim</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="simulate-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="richness.html">richness</a></span><span class="op">(</span><span class="va">chevelon</span>, method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="richness.html">richness</a></span><span class="op">(</span><span class="va">cantabria</span>, method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">r_sim</span> <span class="op">&lt;-</span> <span class="fu">simulate</span><span class="op">(</span><span class="va">r</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">r_sim</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="simulate-2.png" alt="" width="700" height="433"></span>
