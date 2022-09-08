@@ -20,9 +20,9 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="deps/_Roboto-0.4.1/font.css" rel="stylesheet">
-<link href="deps/_Ubuntu-0.4.1/font.css" rel="stylesheet">
+<link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.2/font.css" rel="stylesheet">
+<link href="deps/Ubuntu-0.4.2/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Analysis and Visualization of Archaeological Count Data">
@@ -50,7 +50,7 @@
     
     <a class="navbar-brand me-2" href="index.html">tabula</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.7.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.8.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,23 +129,22 @@
 </h2>
 <p>You can install the released version of <strong>tabula</strong> from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tabula"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tabula"</span><span class="op">)</span></span></code></pre></div>
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tesselle/tabula"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tesselle/tabula"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Load packages</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/" class="external-link">khroma</a></span><span class="op">)</span> <span class="co"># Color scales</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span> <span class="co"># Pipes</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## Load packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/" class="external-link">khroma</a></span><span class="op">)</span> <span class="co"># Color scales</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span></span></code></pre></div>
 <p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
 <div class="section level3">
 <h3 id="visualization">Visualization<a class="anchor" aria-label="anchor" href="#visualization"></a>
@@ -153,24 +152,24 @@
 <p>Several types of graphs are available in <strong>tabula</strong> which uses <a href="https://ggplot2.tidyverse.org" class="external-link"><strong>ggplot2</strong></a> for plotting informations. This makes it easy to customize diagrams (e.g. using themes and scales).</p>
 <p>Bertin or Ford (battleship curve) diagrams can be plotted, with statistic threshold (including B. Desachy’s <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">sériographe</a>).</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Bertin matrix with variables scaled to 0-1 and the variable mean as threshold</span>
-<span class="va">scale_01</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">(</span><span class="va">x</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu"><a href="reference/plot_bar.html">plot_bertin</a></span><span class="op">(</span><span class="va">mississippi</span>, threshold <span class="op">=</span> <span class="va">mean</span>, scale <span class="op">=</span> <span class="va">scale_01</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_vibrant.html" class="external-link">scale_fill_vibrant</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Mean"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## Bertin matrix with variables scaled to 0-1 and the variable mean as threshold</span></span>
+<span><span class="va">scale_01</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">(</span><span class="va">x</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/plot_bar.html">plot_bertin</a></span><span class="op">(</span><span class="va">mississippi</span>, threshold <span class="op">=</span> <span class="va">mean</span>, scale <span class="op">=</span> <span class="va">scale_01</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_vibrant.html" class="external-link">scale_fill_vibrant</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Mean"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-bertin-1.png" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Ford diagram</span>
-<span class="fu"><a href="reference/plot_bar.html">plot_ford</a></span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## Ford diagram</span></span>
+<span><span class="fu"><a href="reference/plot_bar.html">plot_ford</a></span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-ford-1.png" style="display: block; margin: auto;"></p>
 <p>Spot matrix<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Adapted from Dan Gopstein’s original &lt;a href="https://dgopstein.github.io/articles/spot-matrix/" class="external-link"&gt;idea&lt;/a&gt;.&lt;/p&gt;'><sup>1</sup></a> allows direct examination of data:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Plot co-occurrence of types</span>
-<span class="co">## (i.e. how many times (percent) each pairs of taxa occur together </span>
-<span class="co">## in at least one sample.)</span>
-<span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">mississippi</span>, freq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>size <span class="op">=</span> <span class="st">"Co-occurrence"</span>, colour <span class="op">=</span> <span class="st">"Co-occurrence"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_YlOrBr.html" class="external-link">scale_colour_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## Plot co-occurrence of types</span></span>
+<span><span class="co">## (i.e. how many times (percent) each pairs of taxa occur together </span></span>
+<span><span class="co">## in at least one sample.)</span></span>
+<span><span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">mississippi</span>, freq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>size <span class="op">=</span> <span class="st">"Co-occurrence"</span>, colour <span class="op">=</span> <span class="st">"Co-occurrence"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_YlOrBr.html" class="external-link">scale_colour_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-plot-occ-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level3">
@@ -178,34 +177,34 @@
 </h3>
 <p><em>Diversity</em> can be measured according to several indices (referred to as indices of <em>heterogeneity</em> – see <code><a href="articles/diversity.html">vignette("diversity")</a></code>). Corresponding <em>evenness</em> (i.e. a measure of how evenly individuals are distributed across the sample) can also be computed, as well as <em>richness</em> and <em>rarefaction</em>.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span>
-<span class="co">#&gt;  [1] 1.2027955 0.7646565 0.9293974 0.8228576 0.7901428 0.9998430 1.2051989</span>
-<span class="co">#&gt;  [8] 1.1776226 1.1533432 1.2884172 1.1725355 1.5296294 1.7952443 1.1627477</span>
-<span class="co">#&gt; [15] 1.0718463 0.9205717 1.1751002 0.7307620 1.1270126 1.0270291</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] 1.2027955 0.7646565 0.9293974 0.8228576 0.7901428 0.9998430 1.2051989</span></span>
+<span><span class="co">#&gt;  [8] 1.1776226 1.1533432 1.2884172 1.1725355 1.5296294 1.7952443 1.1627477</span></span>
+<span><span class="co">#&gt; [15] 1.0718463 0.9205717 1.1751002 0.7307620 1.1270126 1.0270291</span></span></code></pre></div>
 <p>Measure diversity by comparing to simulated assemblages:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span>
-
-<span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span>
-<span class="va">chevelon</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span>
-
-<span class="va">chevelon</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="reference/richness.html">richness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://packages.tesselle.org/khroma/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span></span>
+<span><span class="va">chevelon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">chevelon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/richness.html">richness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-sample-size-1.png"><img src="reference/figures/README-sample-size-2.png"></p>
 <p>Several methods can be used to ascertain the degree of <em>turnover</em> in taxa composition along a gradient on qualitative (presence/absence) data. It assumes that the order of the matrix rows (from <em>1</em> to <em>n</em>) follows the progression along the gradient/transect.</p>
 <p>Diversity can also be measured by addressing <em>similarity</em> between pairs of sites:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Calculate the Brainerd-Robinson index</span>
-<span class="co">## Plot the similarity matrix</span>
-<span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span>
-
-<span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_iridescent.html" class="external-link">scale_colour_iridescent</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## Calculate the Brainerd-Robinson index</span></span>
+<span><span class="co">## Plot the similarity matrix</span></span>
+<span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_iridescent.html" class="external-link">scale_colour_iridescent</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-similarity-brainerd-1.png" style="display: block; margin: auto;"></p>
 </div>
 </div>
@@ -277,7 +276,7 @@
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
     </footer>

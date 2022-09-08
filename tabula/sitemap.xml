@@ -37,7 +37,10 @@
     <loc>https://packages.tesselle.org/tabula/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/DiversityIndex.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/DiversityIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/cantabria.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/deprecate.html</loc>
@@ -89,12 +92,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/simulate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/reference/stats_bootstrap.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/reference/stats_jackknife.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/subset.html</loc>
