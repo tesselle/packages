@@ -114,7 +114,7 @@ Linear baseline.
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Correct baseline</span></span>
-<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, add <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
@@ -149,7 +149,7 @@ Polynomial baseline
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Correct baseline</span></span>
-<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, add <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
@@ -184,9 +184,9 @@ Rubberband baseline
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Correct baseline</span></span>
-<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">BEGe</span>, lag <span class="op">=</span> <span class="va">baseline</span>, add <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">BEGe</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="baseline_files/figure-html/rubberband-2.png" alt="Rubberband baseline" width="672"><p class="caption">
 Rubberband baseline
@@ -219,9 +219,9 @@ SNIP baseline
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Correct baseline</span></span>
-<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">BEGe</span>, lag <span class="op">=</span> <span class="va">baseline</span>, add <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">BEGe</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="baseline_files/figure-html/snip-2.png" alt="SNIP baseline" width="672"><p class="caption">
 SNIP baseline
@@ -232,19 +232,19 @@ SNIP baseline
 <h2 id="s-peak-filling">4S Peak Filling<a class="anchor" aria-label="anchor" href="#s-peak-filling"></a>
 </h2>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## gamma-ray spectrometry</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"BEGe"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Subset from 2.75 to 200 keV</span></span>
-<span><span class="va">BEGe</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/subset.html">signal_select</a></span><span class="op">(</span><span class="va">BEGe</span>, from <span class="op">=</span> <span class="fl">3</span>, to <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## X-ray diffraction</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"XRD"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Plot spectrum</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Estimate baseline</span></span>
-<span><span class="va">baseline</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/baseline_peakfilling.html">baseline_peakfilling</a></span><span class="op">(</span><span class="va">BEGe</span>, n <span class="op">=</span> <span class="fl">5</span>, m <span class="op">=</span> <span class="fl">5</span>, by <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="co">## Whittaker smoothing</span></span>
+<span><span class="va">smooth</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_whittaker.html">smooth_whittaker</a></span><span class="op">(</span><span class="va">XRD</span>, lambda <span class="op">=</span> <span class="fl">1000</span>, d <span class="op">=</span> <span class="fl">2</span>, sparse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
+<span><span class="co">## 4S Peak Filling baseline</span></span>
+<span><span class="va">baseline</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/baseline_peakfilling.html">baseline_peakfilling</a></span><span class="op">(</span><span class="va">smooth</span>, n <span class="op">=</span> <span class="fl">10</span>, m <span class="op">=</span> <span class="fl">5</span>, by <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">baseline</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="baseline_files/figure-html/peakfilling-1.png" alt="4S Peak Filling" width="672"><p class="caption">
@@ -254,7 +254,7 @@ SNIP baseline
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Correct baseline</span></span>
-<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">BEGe</span>, lag <span class="op">=</span> <span class="va">baseline</span>, add <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">corrected</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">corrected</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">

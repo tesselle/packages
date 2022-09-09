@@ -123,7 +123,7 @@
 <p><img src="reference/figures/README-baseline-1.png"><!-- --></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Correct baseline</span></span>
-<span><span class="va">XRD</span><span class="op">$</span><span class="va">count</span> <span class="op">&lt;-</span> <span class="va">XRD</span><span class="op">$</span><span class="va">count</span> <span class="op">-</span> <span class="va">baseline</span><span class="op">$</span><span class="va">y</span></span>
+<span><span class="va">XRD</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Find peaks</span></span>
 <span><span class="va">peaks</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/peaks_find.html">peaks_find</a></span><span class="op">(</span><span class="va">XRD</span>, SNR <span class="op">=</span> <span class="fl">3</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>

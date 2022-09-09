@@ -59,13 +59,13 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">signal_shift</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">signal_shift</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lag</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">signal_shift</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lag</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu">signal_shift</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lag</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">signal_shift</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lag</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">signal_shift</span><span class="op">(</span><span class="va">x</span>, <span class="va">lag</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -75,17 +75,12 @@
 interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r/grDevices/xy.coords.html" class="external-link">grDevices::xy.coords()</a></code>).</p></dd>
 
 
+<dt>lag</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the offset.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
-
-
-<dt>lag</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the offset.</p></dd>
-
-
-<dt>add</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should <code>lag</code> be added to <code>x</code>?
-If <code>FALSE</code>, <code>lag</code> is subtracted from <code>x</code>.</p></dd>
 
 </dl></div>
     <div class="section level2">
