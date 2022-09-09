@@ -61,10 +61,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">smooth_whittaker</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">smooth_whittaker</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, lambda <span class="op">=</span> <span class="fl">1600</span>, d <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu">smooth_whittaker</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, lambda <span class="op">=</span> <span class="fl">1600</span>, d <span class="op">=</span> <span class="fl">2</span>, sparse <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">smooth_whittaker</span><span class="op">(</span><span class="va">x</span>, lambda <span class="op">=</span> <span class="fl">1600</span>, d <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">smooth_whittaker</span><span class="op">(</span><span class="va">x</span>, lambda <span class="op">=</span> <span class="fl">1600</span>, d <span class="op">=</span> <span class="fl">2</span>, sparse <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -85,6 +85,11 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 <dt>d</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the order of the penalty.</p></dd>
+
+
+<dt>sparse</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should sparse matrices be used for
+computation? If <code>TRUE</code>, <span class="pkg">Matrix</span> is required.</p></dd>
 
 </dl></div>
     <div class="section level2">
