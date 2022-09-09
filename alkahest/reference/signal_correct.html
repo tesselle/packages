@@ -25,6 +25,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/smoothing.html">Smoothing Methods</a>
+    <a class="dropdown-item" href="../articles/baseline.html">Baseline Estimation</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -105,6 +106,7 @@ estimation. It must be one of "<code>linear</code>", "<code>rubberband</code>", 
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other signal processing methods: 
+<code><a href="signal_drift.html">signal_drift</a>()</code>,
 <code><a href="signal_mean.html">signal_mean</a>()</code>,
 <code><a href="signal_shift.html">signal_shift</a>()</code>,
 <code><a href="subset.html">subset</a>()</code></p></div>
@@ -118,12 +120,20 @@ estimation. It must be one of "<code>linear</code>", "<code>rubberband</code>", 
 <span class="r-in"><span><span class="co">## Subset from 2.75 to 200 keV</span></span></span>
 <span class="r-in"><span><span class="va">BEGe</span> <span class="op">&lt;-</span> <span class="fu"><a href="subset.html">signal_select</a></span><span class="op">(</span><span class="va">BEGe</span>, from <span class="op">=</span> <span class="fl">3</span>, to <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Baseline correction</span></span></span>
+<span class="r-in"><span><span class="co">## Drift</span></span></span>
+<span class="r-in"><span><span class="va">baseline</span> <span class="op">&lt;-</span> <span class="fu"><a href="baseline_snip.html">baseline_snip</a></span><span class="op">(</span><span class="va">BEGe</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">BEGe_drif</span> <span class="op">&lt;-</span> <span class="fu"><a href="signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">BEGe</span>, lag <span class="op">=</span> <span class="va">baseline</span>, add <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_drif</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="signal_correct-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Correct</span></span></span>
 <span class="r-in"><span><span class="va">BEGe_corr</span> <span class="op">&lt;-</span> <span class="fu">signal_correct</span><span class="op">(</span><span class="va">BEGe</span>, method <span class="op">=</span> <span class="st">"SNIP"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_corr</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="signal_correct-1.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="signal_correct-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

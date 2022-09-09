@@ -47,6 +47,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/smoothing.html">Smoothing Methods</a>
+    <a class="dropdown-item" href="../articles/baseline.html">Baseline Estimation</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -105,9 +106,11 @@
 Simulated data.
 </p>
 </div>
+<div class="section level2">
+<h2 id="rectangular-smoothing">Rectangular smoothing<a class="anchor" aria-label="anchor" href="#rectangular-smoothing"></a>
+</h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Rectangular smoothing</span></span>
-<span><span class="va">unweighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_rectangular.html">smooth_rectangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">unweighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_rectangular.html">smooth_rectangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html" class="external-link">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
@@ -122,9 +125,12 @@ Simulated data.
 Rectangular smoothing.
 </p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="triangular-smoothing">Triangular smoothing<a class="anchor" aria-label="anchor" href="#triangular-smoothing"></a>
+</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Triangular smoothing</span></span>
-<span><span class="va">weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_triangular.html">smooth_triangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_triangular.html">smooth_triangular</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html" class="external-link">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
@@ -139,9 +145,12 @@ Rectangular smoothing.
 Triangular smoothing
 </p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="loess-smoothing">Loess smoothing<a class="anchor" aria-label="anchor" href="#loess-smoothing"></a>
+</h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Loess smoothing</span></span>
-<span><span class="va">loess</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_loess.html">smooth_loess</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, span <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">loess</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_loess.html">smooth_loess</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, span <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html" class="external-link">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
@@ -156,9 +165,12 @@ Triangular smoothing
 Loess smoothing
 </p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="savitzkygolay-filter">Savitzky–Golay filter<a class="anchor" aria-label="anchor" href="#savitzkygolay-filter"></a>
+</h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Savitzky–Golay filter</span></span>
-<span><span class="va">savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">savitzky</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_savitzky.html">smooth_savitzky</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, m <span class="op">=</span> <span class="fl">21</span>, p <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html" class="external-link">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
@@ -173,9 +185,12 @@ Loess smoothing
 Savitzky–Golay filter
 </p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="whittaker-smoothing">Whittaker smoothing<a class="anchor" aria-label="anchor" href="#whittaker-smoothing"></a>
+</h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Whittaker smoothing</span></span>
-<span><span class="va">whittaker</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_whittaker.html">smooth_whittaker</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, lambda <span class="op">=</span> <span class="fl">1000</span>, d <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">whittaker</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/smooth_whittaker.html">smooth_whittaker</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">z</span>, lambda <span class="op">=</span> <span class="fl">1000</span>, d <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html" class="external-link">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
@@ -189,6 +204,7 @@ Savitzky–Golay filter
 <img src="smoothing_files/figure-html/whittaker-1.png" alt="Whittaker smoothing" width="672"><p class="caption">
 Whittaker smoothing
 </p>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

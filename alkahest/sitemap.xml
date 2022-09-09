@@ -13,6 +13,9 @@
     <loc>https://packages.tesselle.org/alkahest/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/articles/baseline.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/articles/bibliography.html</loc>
   </url>
   <url>
@@ -104,6 +107,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/signal_correct.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/signal_drift.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/signal_mean.html</loc>
