@@ -62,10 +62,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">peaks_find</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">peaks_find</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MAD"</span><span class="op">)</span>, SNR <span class="op">=</span> <span class="fl">2</span>, m <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">peaks_find</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, method <span class="op">=</span> <span class="st">"MAD"</span>, SNR <span class="op">=</span> <span class="fl">2</span>, m <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">peaks_find</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MAD"</span><span class="op">)</span>, SNR <span class="op">=</span> <span class="fl">2</span>, m <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">peaks_find</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="st">"MAD"</span>, SNR <span class="op">=</span> <span class="fl">2</span>, m <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -90,7 +90,8 @@ background noise estimation (see below).</p></dd>
 
 
 <dt>m</dt>
-<dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the half window size.
+<dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the window size (i.e. the number of
+adjacent points to be used).
 If <code>NULL</code>, 5% of the data points is used as the half window size.</p></dd>
 
 </dl></div>
@@ -108,10 +109,16 @@ higher than \(SNR \times noise\) to be recognized as peak.</p>
 <dd><p>Median Absolute Deviation.</p></dd>
 
 
-</dl></div>
+</dl><p>Note that to improve peak detection, it may be helpful to smooth the data
+and remove the baseline beforehand.</p>
+    </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>Adapted from Stasia Grinberg's
+    <p>There will be \((m - 1) / 2\) points both at the beginning and at the end
+of the data series for which a complete \(m\)-width window cannot be
+obtained. To prevent data loss, progressively wider/narrower windows are
+used at both ends of the data series.</p>
+<p>Adapted from Stasia Grinberg's
 <a href="https://github.com/stas-g/findPeaks" class="external-link"><code>findPeaks</code></a> function.</p>
     </div>
     <div class="section level2">
@@ -126,23 +133,29 @@ higher than \(SNR \times noise\) to be recognized as peak.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## gamma-ray spectrometry</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"BEGe"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## X-ray diffraction</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"XRD"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Subset from 2.75 to 200 keV</span></span></span>
-<span class="r-in"><span><span class="va">BEGe</span> <span class="op">&lt;-</span> <span class="fu"><a href="subset.html">signal_select</a></span><span class="op">(</span><span class="va">BEGe</span>, from <span class="op">=</span> <span class="fl">3</span>, to <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Whittaker smoothing</span></span></span>
+<span class="r-in"><span><span class="va">smooth</span> <span class="op">&lt;-</span> <span class="fu"><a href="smooth_whittaker.html">smooth_whittaker</a></span><span class="op">(</span><span class="va">XRD</span>, lambda <span class="op">=</span> <span class="fl">1000</span>, d <span class="op">=</span> <span class="fl">2</span>, sparse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## 4S Peak Filling baseline</span></span></span>
+<span class="r-in"><span><span class="va">baseline</span> <span class="op">&lt;-</span> <span class="fu"><a href="baseline_peakfilling.html">baseline_peakfilling</a></span><span class="op">(</span><span class="va">smooth</span>, n <span class="op">=</span> <span class="fl">10</span>, m <span class="op">=</span> <span class="fl">5</span>, by <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">baseline</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="peaks_find-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Correct baseline</span></span></span>
-<span class="r-in"><span><span class="va">BEGe_correct</span> <span class="op">&lt;-</span> <span class="fu"><a href="signal_correct.html">signal_correct</a></span><span class="op">(</span><span class="va">BEGe</span>, method <span class="op">=</span> <span class="st">"SNIP"</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Plot spectrum</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">BEGe_correct</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/mad.html" class="external-link">mad</a></span><span class="op">(</span><span class="va">BEGe_correct</span><span class="op">$</span><span class="va">y</span><span class="op">)</span> <span class="op">*</span> <span class="fl">3</span><span class="op">)</span> <span class="co"># noise threshold</span></span></span>
+<span class="r-in"><span><span class="va">XRD</span> <span class="op">&lt;-</span> <span class="fu"><a href="signal_drift.html">signal_drift</a></span><span class="op">(</span><span class="va">XRD</span>, lag <span class="op">=</span> <span class="va">baseline</span>, subtract <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Find peaks</span></span></span>
-<span class="r-in"><span><span class="va">BEGe_peaks</span> <span class="op">&lt;-</span> <span class="fu">peaks_find</span><span class="op">(</span><span class="va">BEGe_correct</span>, SNR <span class="op">=</span> <span class="fl">3</span>, m <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">BEGe_peaks</span>, type <span class="op">=</span> <span class="st">"p"</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="peaks_find-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="va">peaks</span> <span class="op">&lt;-</span> <span class="fu">peaks_find</span><span class="op">(</span><span class="va">XRD</span>, SNR <span class="op">=</span> <span class="fl">3</span>, m <span class="op">=</span> <span class="fl">11</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">peaks</span>, type <span class="op">=</span> <span class="st">"p"</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">peaks</span>, <span class="st">"noise"</span><span class="op">)</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="co"># noise threshold</span></span></span>
+<span class="r-plt img"><img src="peaks_find-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Half-Width at Half-Maximum</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">4</span>, <span class="fl">4</span>, length <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>

@@ -80,7 +80,8 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 
 <dt>m</dt>
-<dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of adjacent points to be used.</p></dd>
+<dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the window size (i.e. the number of
+adjacent points to be used).</p></dd>
 
 
 <dt>p</dt>
@@ -97,10 +98,13 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>This method is based on the least-squares fitting of polynomials to
 segments of \(m\) adjacent points.</p>
-<p>There will be \((m - 1) / 2\) points both at the beginning and at the end
-of the spectrum for which a complete \(m\)-width smooth cannot be
-calculated. To prevent data loss, the original \((m - 1) / 2\) points at
-the ends of the spectrum are preserved.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    <p>There will be \((m - 1) / 2\) points both at the beginning and at the end
+of the data series for which a complete \(m\)-width window cannot be
+obtained. To prevent data loss, the original \((m - 1) / 2\) points at
+both ends of the data series are preserved.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>

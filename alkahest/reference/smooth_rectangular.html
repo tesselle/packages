@@ -80,7 +80,8 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 
 <dt>m</dt>
-<dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of adjacent points to be used.</p></dd>
+<dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the window size (i.e. the number of
+adjacent points to be used).</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -93,10 +94,13 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>It replaces each point in the signal with the average of \(m\) adjacent
 points.</p>
-<p>There will be \((m - 1) / 2\) points both at the beginning and at the end
-of the spectrum for which a complete \(m\)-width smooth cannot be
-calculated. To prevent data loss, progressively smaller smooths are used at
-the ends of the spectrum.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    <p>There will be \((m - 1) / 2\) points both at the beginning and at the end
+of the data series for which a complete \(m\)-width window cannot be
+obtained. To prevent data loss, progressively wider/narrower windows are
+used at both ends of the data series.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
