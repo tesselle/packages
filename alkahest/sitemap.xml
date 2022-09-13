@@ -141,4 +141,10 @@
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/subset.html</loc>
   </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/window_sliding.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/window_tumbling.html</loc>
+  </url>
 </urlset>

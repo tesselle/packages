@@ -81,12 +81,13 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 <dt>m</dt>
 <dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the window size (i.e. the number of
-adjacent points to be used) for minimization/maximization.</p></dd>
+adjacent points to be used; see <code><a href="window_sliding.html">window_sliding()</a></code>) for
+minimization/maximization.</p></dd>
 
 
 <dt>s</dt>
 <dd><p>An odd <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the window size (i.e. the number of
-adjacent points to be used) for smoothing.</p></dd>
+adjacent points to be used; see <code><a href="window_sliding.html">window_sliding()</a></code>) for smoothing.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -94,6 +95,13 @@ adjacent points to be used) for smoothing.</p></dd>
     
 
 <p>Returns a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> with two components <code>x</code> and <code>y</code>.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    <p>There will be \((m - 1) / 2\) points both at the beginning and at the end
+of the data series for which a complete \(m\)-width window cannot be
+obtained. To prevent data loss, progressively wider/narrower windows are
+used at both ends of the data series.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
