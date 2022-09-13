@@ -16,7 +16,7 @@ about:
       href: "https://www.tesselle.org"
     - icon: twitter
       text: Twitter
-      href: https://twitter.com/tesselle_
+      href: https://twitter.com/archaeostats
     - icon: github
       text: Github
       href: https://github.com/tesselle/
