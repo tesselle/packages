@@ -58,21 +58,18 @@
 <h2 class="pkg-version" data-toc-text="0.0.0.9000" id="chronos-0009000">chronos 0.0.0.9000<a class="anchor" aria-label="anchor" href="#chronos-0009000"></a></h2>
 <div class="section level3">
 <h3 id="new-classes-and-methods-0-0-0-9000">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-0-0-0-9000"></a></h3>
-<ul><li><code><a href="../reference/apportion.html">apportion()</a></code></li>
-<li><code><a href="../reference/interpolate.html">interpolate()</a></code></li>
-<li>
-<code><a href="../reference/bind.html">bind()</a></code> allow to bind multiple <code>MCMC</code> objects.</li>
-<li><code><a href="../reference/proxy.html">proxy()</a></code></li>
-<li><code><a href="../reference/rec.html">rece()</a></code></li>
-<li>
-<code><a href="../reference/roc.html">roc()</a></code> allows to compute the rate of change from a tempo/activity plot (returns a <code>RateOfChange</code> object).</li>
+<ul><li>Add <code><a href="../reference/apportion.html">apportion()</a></code>.</li>
+<li>Add <code><a href="../reference/bind.html">bind()</a></code> to bind multiple <code>MCMC</code> objects.</li>
+<li>Add <code><a href="../reference/proxy.html">proxy()</a></code> to compute layer-counted proxy records uncertainties (returns a <code>ProxyRecord</code> object).</li>
+<li>Add <code><a href="../reference/rec.html">rece()</a></code> to compute Radiocarbon Event Count Ensembles from MCMC (returns an <code>RECE</code> object).</li>
+<li>Add <code><a href="../reference/roc.html">roc()</a></code> to compute the rate of change from a tempo/activity plot (returns a <code>RateOfChange</code> object).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="enhancements-0-0-0-9000">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-0-0-0-9000"></a></h3>
 <ul><li>Support for CE, BP and b2k time scales.</li></ul></div>
 <div class="section level3">
 <h3 id="bug-fixes--changes-0-0-0-9000">Bug fixes &amp; changes<a class="anchor" aria-label="anchor" href="#bug-fixes--changes-0-0-0-9000"></a></h3>
-<ul><li>Changement de l’estimation des intervalles HPD (<code>hdrcde::hdr()</code> -&gt; <code><a href="https://rdrr.io/r/stats/density.html" class="external-link">stats::density()</a></code>).</li></ul></div>
+<ul><li>Use <code><a href="https://rdrr.io/r/stats/density.html" class="external-link">stats::density()</a></code> instead of <code>hdrcde::hdr()</code> for HDPI estimation.</li></ul></div>
 <div class="section level3">
 <h3 id="breaking-changes-0-0-0-9000">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-0-0-0-9000"></a></h3>
 <ul><li>Full rewrite in S4.</li>
