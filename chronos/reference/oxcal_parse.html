@@ -72,6 +72,27 @@ are to be read from (typically returned by <code><a href="oxcal_execute.html">ox
 
 </dl></div>
     <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    
+
+<p>A <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> with the following elements:</p><dl><dt><code>ocd</code></dt>
+<dd><p>A <code>list</code> holding the ranges, probability distributions, etc.
+for each parameter.</p></dd>
+
+<dt><code>model</code></dt>
+<dd><p>A <code>list</code> containing information about the model.</p></dd>
+
+<dt><code>calib</code></dt>
+<dd><p>A <code>list</code> containing information about the calibration
+curve.</p></dd>
+
+
+</dl></div>
+    <div class="section level2">
+    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+    <p><a href="https://c14.arch.ox.ac.uk/oxcalhelp/hlp_analysis_file.html" class="external-link">https://c14.arch.ox.ac.uk/oxcalhelp/hlp_analysis_file.html</a></p>
+    </div>
+    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other OxCal tools: 
 <code><a href="oxcal_calibrate.html">oxcal_calibrate</a>()</code>,
@@ -84,6 +105,32 @@ are to be read from (typically returned by <code><a href="oxcal_execute.html">ox
     <p>N. Frerebeau</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co">## Download OxCal</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="oxcal_setup.html">oxcal_setup</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Calibrate 14C dates</span></span></span>
+<span class="r-in"><span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu"><a href="oxcal_calibrate.html">oxcal_calibrate</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"X"</span>,<span class="st">"Y"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  dates <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5000</span>, <span class="fl">2500</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  errors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">50</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cal</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Custom script</span></span></span>
+<span class="r-in"><span><span class="va">scr</span> <span class="op">&lt;-</span> <span class="st">'Plot()</span></span></span>
+<span class="r-in"><span><span class="st"> {</span></span></span>
+<span class="r-in"><span><span class="st">  R_Date("X",5000,25);</span></span></span>
+<span class="r-in"><span><span class="st">  R_Date("Y",2500,50);</span></span></span>
+<span class="r-in"><span><span class="st"> };'</span></span></span>
+<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="oxcal_execute.html">oxcal_execute</a></span><span class="op">(</span><span class="va">scr</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">res</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 
