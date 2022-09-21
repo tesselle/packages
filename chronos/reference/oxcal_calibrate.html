@@ -89,23 +89,16 @@ used.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> with the following columns:</p><dl><dt><code>name</code></dt>
-<dd></dd>
+<p>A <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> with the following elements:</p><dl><dt><code>ocd</code></dt>
+<dd><p>A <code>list</code> holding the ranges, probability distributions, etc.
+for each parameter.</p></dd>
 
-<dt><code>type</code></dt>
-<dd></dd>
+<dt><code>model</code></dt>
+<dd><p>A <code>list</code> containing information about the model.</p></dd>
 
-<dt><code>date</code></dt>
-<dd></dd>
-
-<dt><code>error</code></dt>
-<dd></dd>
-
-<dt><code>range</code></dt>
-<dd></dd>
-
-<dt><code>likelihood</code></dt>
-<dd></dd>
+<dt><code>calib</code></dt>
+<dd><p>A <code>list</code> containing information about the calibration
+curve.</p></dd>
 
 
 </dl></div>
@@ -134,7 +127,8 @@ used.</p></dd>
 <span class="r-in"><span>  dates <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5000</span>, <span class="fl">4500</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  errors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">45</span>, <span class="fl">35</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">cal</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">cal</span>, curve <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">cal</span>, curve <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Custom script</span></span></span>
 <span class="r-in"><span><span class="va">scr</span> <span class="op">&lt;-</span> <span class="st">'Plot()</span></span></span>
@@ -157,7 +151,10 @@ used.</p></dd>
 <span class="r-in"><span><span class="st"> };'</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="oxcal_execute.html">oxcal_execute</a></span><span class="op">(</span><span class="va">scr</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="oxcal_parse.html">oxcal_parse</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">res</span>, curve <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">res</span>, curve <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
