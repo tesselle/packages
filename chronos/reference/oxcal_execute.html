@@ -136,12 +136,26 @@ Fractions of seconds are ignored (see <code><a href="https://rdrr.io/r/base/syst
 <span class="r-in"><span><span class="co">## Custom script</span></span></span>
 <span class="r-in"><span><span class="va">scr</span> <span class="op">&lt;-</span> <span class="st">'Plot()</span></span></span>
 <span class="r-in"><span><span class="st"> {</span></span></span>
-<span class="r-in"><span><span class="st">  R_Date("X",5000,25);</span></span></span>
-<span class="r-in"><span><span class="st">  R_Date("Y",2500,50);</span></span></span>
+<span class="r-in"><span><span class="st">  Sequence("Sequence1")</span></span></span>
+<span class="r-in"><span><span class="st">  {</span></span></span>
+<span class="r-in"><span><span class="st">   Boundary("Begin");</span></span></span>
+<span class="r-in"><span><span class="st">   Phase("Phase1")</span></span></span>
+<span class="r-in"><span><span class="st">   {</span></span></span>
+<span class="r-in"><span><span class="st">    R_Date("Lab-1",5000,25);</span></span></span>
+<span class="r-in"><span><span class="st">    R_Date("Lab-2",4900,37);</span></span></span>
+<span class="r-in"><span><span class="st">   };</span></span></span>
+<span class="r-in"><span><span class="st">   Boundary("Between");</span></span></span>
+<span class="r-in"><span><span class="st">   Phase("Phase2")</span></span></span>
+<span class="r-in"><span><span class="st">   {</span></span></span>
+<span class="r-in"><span><span class="st">    R_Date("Lab-3",4800,43);</span></span></span>
+<span class="r-in"><span><span class="st">   };</span></span></span>
+<span class="r-in"><span><span class="st">   Boundary("End");</span></span></span>
+<span class="r-in"><span><span class="st">  };</span></span></span>
 <span class="r-in"><span><span class="st"> };'</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">oxcal_execute</span><span class="op">(</span><span class="va">scr</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="oxcal_parse.html">oxcal_parse</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">res</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
