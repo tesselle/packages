@@ -58,10 +58,13 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/occurrence.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/plot_bar.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/plot_bertin.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/plot_diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/plot_ford.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/plot_heatmap.html</loc>
@@ -83,6 +86,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/richness.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/seriograph.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/similarity.html</loc>
