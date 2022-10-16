@@ -123,9 +123,11 @@ observations divided by the total number of observations) be displayed?</p></dd>
 positif au pourcentage moyen", EPPM) represents a deviation from the
 situation of statistical independence. As independence can be interpreted as
 the absence of relationships between types and the chronological order of
-the assemblages, <code>EPPM</code> is a useful tool to explore significance
+the assemblages, EPPM is a useful tool to explore significance
 of relationship between rows and columns related to seriation (Desachy
 2004).</p>
+<p><code>seriograph()</code> superimposes the frequencies (grey) and EPPM values (black)
+for each row-column pair in a Ford diagram.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -138,6 +140,7 @@ graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><code><a href="plot_ford.html">plot_ford()</a></code></p>
 <p>Other plot methods: 
+<code><a href="matrigraph.html">matrigraph</a>()</code>,
 <code><a href="plot_bertin.html">plot_bertin</a>()</code>,
 <code><a href="plot_diceleraas.html">plot_diceleraas</a>()</code>,
 <code><a href="plot_diversity.html">plot_diversity</a></code>,
@@ -156,9 +159,7 @@ graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"compiegne"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Seriograph</span></span></span>
-<span class="r-in"><span><span class="fu">seriograph</span><span class="op">(</span><span class="va">compiegne</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_highcontrast.html" class="external-link">scale_fill_highcontrast</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">seriograph</span><span class="op">(</span><span class="va">compiegne</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="seriograph-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Compute EPPM</span></span></span>
