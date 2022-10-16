@@ -158,19 +158,19 @@ returns the result of <code>f</code> applied to the <code>n</code> values of <co
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Sample observations from a multinomial distribution</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">50</span>, <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 37.5 34.0 36.5 39.5 44.0 33.0 38.0 39.0 39.5 39.5 34.5 41.5 35.0 35.0 37.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 36.0 40.0 38.5 40.0 38.5 39.0 40.0 40.0 32.5 37.5 35.0 36.0 38.0 35.5 34.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 35.5 41.5 35.5 34.0 39.0 36.0 35.0 37.0 41.0 40.0 37.5 40.5 36.0 35.0 37.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] 39.5 34.5 38.5 37.0 37.0 38.0 37.0 34.5 40.0 35.0 34.5 35.5 34.0 35.5 42.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 37.5 39.0 39.0 36.0 40.0 36.5 37.0 40.5 36.5 38.0 35.0 40.0 37.0 40.5 43.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] 40.0 39.5 38.5 35.5 42.5 37.0 40.5 34.0 35.5 38.5 33.0 38.0 40.0 39.0 38.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 37.0 39.5 36.0 35.0 38.5 38.5 41.0 36.5 41.0 42.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 56.0 56.5 58.5 57.0 58.0 53.0 58.0 55.5 55.5 55.0 54.0 54.0 53.0 51.0 52.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 57.5 57.0 54.5 57.0 58.0 54.5 52.0 57.0 53.5 55.5 58.0 50.0 55.0 55.0 53.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 54.5 49.0 53.5 51.0 54.0 51.0 54.0 57.5 52.0 58.0 58.0 54.5 52.0 55.0 55.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] 54.5 56.0 55.0 53.5 58.0 52.0 57.0 56.0 57.5 56.0 57.5 54.5 58.0 55.5 56.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 57.5 55.5 54.0 56.0 51.0 53.0 62.5 56.0 54.5 56.5 55.0 58.0 56.0 57.0 52.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] 57.5 56.5 52.5 60.5 60.5 55.0 55.5 52.5 54.5 53.0 57.5 53.0 52.5 54.0 57.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 56.0 57.0 56.5 57.0 53.0 53.0 54.0 57.0 56.0 52.5</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Estimate the 25th, 50th and 95th percentiles</span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span></span></span>
 <span class="r-in"><span><span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">median</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  25%  50%  75% </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35.5 37.5 39.5 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54.5 56.0 57.0 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
