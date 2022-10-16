@@ -49,6 +49,9 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check_class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/compact.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/conditions.html</loc>
   </url>
   <url>
@@ -61,10 +64,19 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/detect.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/empty.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/infinite.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/jackknife.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/missing.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-matrix.html</loc>
@@ -85,15 +97,12 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-utils.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/remove.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/replace.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/reshape.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/validate.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/zero.html</loc>
   </url>
 </urlset>
