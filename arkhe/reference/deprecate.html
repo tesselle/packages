@@ -60,6 +60,8 @@
 <span></span>
 <span><span class="fu">assert_trend</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
+<span><span class="fu">assert_relation</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">expected</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
 <span><span class="fu">assert_matrix</span><span class="op">(</span><span class="va">x</span>, <span class="va">expected</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">remove_empty</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
@@ -67,8 +69,23 @@
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>...</dt>
+    <dl><dt>object</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></dd>
+
+
+<dt>...</dt>
 <dd><p>Extra parameters to be passed to internal methods.</p></dd>
+
+
+<dt>level</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.
+Must be a single number between \(0\) and \(1\).</p></dd>
+
+
+<dt>type</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string giving the type of confidence
+interval to be returned. It must be one "<code>student</code>" (the default) or
+"<code>normal</code>". Any unambiguous substring can be given.</p></dd>
 
 
 <dt>x, y</dt>

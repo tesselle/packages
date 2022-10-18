@@ -54,7 +54,12 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">confidence_multinomial</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric</span></span>
-<span><span class="fu">confidence_multinomial</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">confidence_multinomial</span><span class="op">(</span></span>
+<span>  <span class="va">object</span>,</span>
+<span>  level <span class="op">=</span> <span class="fl">0.95</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"wald"</span>,</span>
+<span>  corrected <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -71,6 +76,16 @@ occurrences of each class.</p></dd>
 <dt>level</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.
 Must be a single number between \(0\) and \(1\).</p></dd>
+
+
+<dt>method</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method to be used.
+Any unambiguous substring can be used.</p></dd>
+
+
+<dt>corrected</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should continuity correction be used?
+Only used if <code>method</code> is "<code>wald</code>".</p></dd>
 
 </dl></div>
     <div class="section level2">
