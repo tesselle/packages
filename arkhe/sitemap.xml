@@ -67,7 +67,13 @@
     <loc>https://packages.tesselle.org/arkhe/reference/conditions.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/confidence.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/reference/confidence_binomial.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/confidence_mean.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/confidence_multinomial.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/count.html</loc>
