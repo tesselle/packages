@@ -51,7 +51,7 @@ replace_zero replaces zeros.
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Tools for working with zeros</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/compact.R" class="external-link"><code>R/compact.R</code></a>, <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/replace.R" class="external-link"><code>R/replace.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/discard.R" class="external-link"><code>R/discard.R</code></a>, <a href="https://github.com/tesselle/arkhe/blob/HEAD/R/replace.R" class="external-link"><code>R/replace.R</code></a></small>
       <div class="d-none name"><code>zero.Rd</code></div>
     </div>
 
@@ -106,8 +106,9 @@ condition defined by <code>f</code> are considered.</p></dd>
 <code><a href="compact.html">compact</a>()</code>,
 <code><a href="count.html">count</a>()</code>,
 <code><a href="detect.html">detect</a>()</code>,
-<code><a href="empty.html">empty</a></code>,
+<code><a href="discard.html">discard</a>()</code>,
 <code><a href="infinite.html">infinite</a></code>,
+<code><a href="keep.html">keep</a>()</code>,
 <code><a href="missing.html">missing</a></code></p></div>
     </div>
     <div class="section level2">
@@ -125,49 +126,62 @@ condition defined by <code>f</code> are considered.</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    8    9    5    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    9    2    4   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    6    7    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    9    6    3   NA   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    1    6   10    7    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4   NA    2    6    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2   10    7    9   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    5    1   NA    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    5   10   NA    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8   10    2    5    7</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Count missing values in rows</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 0 2 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 0 1 1 0</span>
 <span class="r-in"><span><span class="co">## Count non-missing values in columns</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5 5 5 4 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5 4 5 3 5</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Find row with NA</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE FALSE  TRUE FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE FALSE  TRUE  TRUE FALSE</span>
 <span class="r-in"><span><span class="co">## Find column without any NA</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE  TRUE  TRUE FALSE FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE FALSE  TRUE FALSE  TRUE</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Keep row without any NA</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="keep.html">keep</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2   10    7    9   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8   10    2    5    7</span>
+<span class="r-in"><span><span class="co">## Keep row without any NA</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="keep.html">keep</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    2    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    1    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8   10    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    2    7</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove row with any NA</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="compact.html">compact</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="discard.html">discard</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    8    9    5    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    6    7    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    1    6   10    7    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2   10    7    9   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8   10    2    5    7</span>
 <span class="r-in"><span><span class="co">## Remove column with any NA</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="compact.html">compact</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="discard.html">discard</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    8    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    9    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    6    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    9    6    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    1    6   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    2    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    1    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8   10    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    2    7</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace NA with zeros</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="missing.html">replace_NA</a></span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    8    9    5    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    9    2    4    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    6    7    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    9    6    3    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    1    6   10    7    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    0    2    6    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2   10    7    9   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    5    1    0    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    5   10    0    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8   10    2    5    7</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

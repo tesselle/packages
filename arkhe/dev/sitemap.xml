@@ -67,7 +67,7 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/detect.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/empty.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/discard.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/index.html</loc>
@@ -77,6 +77,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/jackknife.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/keep.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/missing.html</loc>
