@@ -49,14 +49,16 @@
 <div class="section level3">
 <h3 id="new-classes-and-methods-1-0-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-0-0"></a></h3>
 <ul><li>Add <code><a href="../reference/append.html">append_rownames()</a></code> to convert row names to an explicit column.</li>
-<li>Add <code><a href="../reference/bootstrap.html">bootstrap()</a></code> for bootstrap estimation.</li>
-<li>Add <code><a href="../reference/discard.html">discard()</a></code> and <code><a href="../reference/keep.html">keep()</a></code> remove/keep rows/columns in an array-like object using a predicate function.</li>
-<li>Add <code><a href="../reference/compact.html">compact()</a></code> to remove empty columns and rows in a <code>matrix</code>.</li>
 <li>Add <code><a href="../reference/check-numeric.html">assert_positive()</a></code>, <code><a href="../reference/check-numeric.html">assert_negative()</a></code>, <code><a href="../reference/check-numeric.html">assert_odd()</a></code>, <code><a href="../reference/check-numeric.html">assert_even()</a></code>, <code><a href="../reference/check-numeric-trend.html">assert_constant()</a></code>, <code><a href="../reference/check-numeric-trend.html">assert_decreasing()</a></code>, <code><a href="../reference/check-numeric-trend.html">assert_increasing()</a></code>, <code><a href="../reference/check-numeric-comparison.html">assert_lower()</a></code> and <code><a href="../reference/check-numeric-comparison.html">assert_greater()</a></code> to check <code>numeric</code> vectors.</li>
+<li>Add <code><a href="../reference/bootstrap.html">bootstrap()</a></code> for bootstrap estimation.</li>
+<li>Add <code><a href="../reference/compact.html">compact()</a></code> to remove empty columns/rows in an array-like object.</li>
+<li>Add <code><a href="../reference/discard.html">discard()</a></code> and <code><a href="../reference/keep.html">keep()</a></code> remove/keep rows/columns in an array-like object using a predicate function.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bugfixes--changes-1-0-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-0-0"></a></h3>
-<ul><li>Export all predicate functions.</li></ul></div>
+<ul><li>Export all predicate functions.</li>
+<li>Deprecate <code><a href="../reference/deprecate.html">assert_numeric()</a></code>, <code><a href="../reference/deprecate.html">assert_trend()</a></code>, <code><a href="../reference/check-numeric.html">assert_relation()</a></code>, <code><a href="../reference/deprecate.html">assert_matrix()</a></code> and <code><a href="../reference/deprecate.html">remove_empty()</a></code>.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="breaking-changes-1-0-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-1-0-0"></a></h3>
 <ul><li>Remove all <code>*Matrix</code> classes and methods.</li>
@@ -108,7 +110,7 @@
 <div class="section level3">
 <h3 id="new-classes-and-methods-0-3-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-0-3-0"></a></h3>
 <ul><li>Add <code><a href="../reference/missing.html">replace_NA()</a></code> to replace missing values.</li>
-<li>Add <code><a href="../reference/missing.html">remove_NA()</a></code>, <code><a href="../reference/zero.html">remove_zero()</a></code> and <code>remove_empty()</code> to remove missing values, zeros and empty rows/columns in a <code>matrix</code>.</li>
+<li>Add <code><a href="../reference/missing.html">remove_NA()</a></code>, <code><a href="../reference/zero.html">remove_zero()</a></code> and <code><a href="../reference/deprecate.html">remove_empty()</a></code> to remove missing values, zeros and empty rows/columns in a <code>matrix</code>.</li>
 <li>Add <code>get_samples()</code>, <code>set_samples()&lt;-</code>, <code>get_groups()</code> and <code>set_groups()&lt;-</code> to extract/replace <code>samples</code> and <code>groups</code> slots.</li>
 </ul></div>
 <div class="section level3">
