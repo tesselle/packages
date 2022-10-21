@@ -93,13 +93,6 @@ cat(rjson::toJSON(search_ref), file = "_site/references.json", append = FALSE)
 </div>
 </form>
 
-<form role="search">
-<div class="form-group">
-<label for="search-references"><strong>Search in the bibliography</strong></label>
-<input type="search" class="form-control" aria-label="Search for..." name="search-references" data-search-index="/references.json" id="search-references" placeholder="e.g. Peeples" autocomplete="off">
-</div>
-</form>
-
 ## Read the doc
 
 ```{r doc, echo=FALSE}
