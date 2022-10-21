@@ -4,6 +4,9 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/fasti/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -32,8 +35,5 @@
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/fasti/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
