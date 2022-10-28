@@ -64,6 +64,9 @@
     <loc>https://packages.tesselle.org/kairos/dev/reference/apportion.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/deprecate.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/event.html</loc>
   </url>
   <url>
@@ -97,7 +100,13 @@
     <loc>https://packages.tesselle.org/kairos/dev/reference/plot_time.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/dev/reference/resample.html</loc>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/resample_event.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/resample_mcd.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/resample_seriation.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/roc.html</loc>

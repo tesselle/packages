@@ -61,7 +61,7 @@ get_order() returns the seriation order for rows and columns.
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Matrix Seriation</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/HEAD/R/seriate_average.R" class="external-link"><code>R/seriate_average.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/HEAD/R/seriate_permute.R" class="external-link"><code>R/seriate_permute.R</code></a>, and 2 more</small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/HEAD/R/seriate_average.R" class="external-link"><code>R/seriate_average.R</code></a>, <a href="https://github.com/tesselle/kairos/blob/HEAD/R/seriate_permute.R" class="external-link"><code>R/seriate_permute.R</code></a>, and 1 more</small>
       <div class="d-none name"><code>seriation.Rd</code></div>
     </div>
 
@@ -77,8 +77,6 @@ get_order() returns the seriation order for rows and columns.
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">seriate_average</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">seriate_rank</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">refine</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">permute</span><span class="op">(</span><span class="va">object</span>, <span class="va">order</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
@@ -103,13 +101,7 @@ get_order() returns the seriation order for rows and columns.
 <span><span class="fu">seriate_rank</span><span class="op">(</span><span class="va">object</span>, EPPM <span class="op">=</span> <span class="cn">FALSE</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">seriate_rank</span><span class="op">(</span><span class="va">object</span>, EPPM <span class="op">=</span> <span class="cn">FALSE</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for AveragePermutationOrder</span></span>
-<span><span class="fu">refine</span><span class="op">(</span><span class="va">object</span>, <span class="va">cutoff</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for BootstrapCA</span></span>
-<span><span class="fu">refine</span><span class="op">(</span><span class="va">object</span>, <span class="va">cutoff</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">seriate_rank</span><span class="op">(</span><span class="va">object</span>, EPPM <span class="op">=</span> <span class="cn">FALSE</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -149,16 +141,6 @@ instead of raw data?</p></dd>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the stopping rule (i.e. maximum number of
 iterations) to avoid infinite loop.</p></dd>
 
-
-<dt>cutoff</dt>
-<dd><p>A function that takes a numeric vector as argument and returns
-a single numeric value (see below).</p></dd>
-
-
-<dt>n</dt>
-<dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
-replications.</p></dd>
-
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -167,7 +149,6 @@ replications.</p></dd>
 <ul><li><p><code>seriate_*()</code> returns a <a href="PermutationOrder-class.html">PermutationOrder</a> object.</p></li>
 <li><p><code>permute()</code> returns either a permuted <code>matrix</code> or a permuted <code>data.frame</code>
 (the same as <code>object</code>).</p></li>
-<li><p><code><a href="resample.html">bootstrap()</a></code> returns a <a href="RefineCA-class.html">RefineCA</a> object.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="seriation">Seriation<a class="anchor" aria-label="anchor" href="#seriation"></a></h2>
@@ -206,22 +187,6 @@ stops with a warning.</p></dd>
 
 </dl></div>
     <div class="section level2">
-    <h2 id="correspondence-analysis">Correspondence Analysis<a class="anchor" aria-label="anchor" href="#correspondence-analysis"></a></h2>
-    
-
-<p><code><a href="resample.html">bootstrap()</a></code> allows to identify samples that are subject to
-sampling error or samples that have underlying structural relationships
-and might be influencing the ordering along the CA space.</p>
-<p>This relies on a partial bootstrap approach to CA-based seriation where each
-sample is replicated <code>n</code> times. The maximum dimension length of
-the convex hull around the sample point cloud allows to remove samples for
-a given <code>cutoff</code> value.</p>
-<p>According to Peebles and Schachner (2012), "[this] point removal procedure
-[results in] a reduced dataset where the position of individuals within the
-CA are highly stable and which produces an ordering consistent with the
-assumptions of frequency seriation."</p>
-    </div>
-    <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Desachy, B. (2004). Le sériographe EPPM: un outil informatisé de sériation
 graphique pour tableaux de comptages. <em>Revue archéologique de Picardie</em>,
@@ -235,15 +200,10 @@ In C. Weihs &amp; W. Gaul (Eds.), <em>Classification: The Ubiquitous
 Challenge</em>. Berlin Heidelberg: Springer, p. 307-316.
 <a href="https://doi.org/10.1007/3-540-28084-7_34" class="external-link">doi:10.1007/3-540-28084-7_34</a>
 .</p>
-<p>Peeples, M. A., &amp; Schachner, G. (2012). Refining correspondence
-analysis-based ceramic seriation of regional data sets. <em>Journal of
-Archaeological Science</em>, 39(8), 2818-2827.
-<a href="https://doi.org/10.1016/j.jas.2012.04.040" class="external-link">doi:10.1016/j.jas.2012.04.040</a>
-.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="https://packages.tesselle.org/dimensio/reference/ca.html" class="external-link">dimensio::ca()</a></code></p></div>
+    <div class="dont-index"><p><a href="resample_seriation.html">bootstrap()</a>, <code><a href="https://packages.tesselle.org/dimensio/reference/ca.html" class="external-link">dimensio::ca()</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

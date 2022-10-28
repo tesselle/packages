@@ -279,7 +279,10 @@ frequency seriation.”</p>
 <p><img src="seriation_files/figure-html/refine-1.png" width="480"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
-<span><span class="op">(</span><span class="va">zuni_keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seriation.html">refine</a></span><span class="op">(</span><span class="va">zuni_boot</span>, cutoff <span class="op">=</span> <span class="va">fun</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">(</span><span class="va">zuni_keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/deprecate.html">refine</a></span><span class="op">(</span><span class="va">zuni_boot</span>, cutoff <span class="op">=</span> <span class="va">fun</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: 'refine()' is deprecated.</span></span>
+<span><span class="co">#&gt; Use 'bootstrap()' instead.</span></span>
+<span><span class="co">#&gt; See help("Deprecated")</span></span>
 <span><span class="co">#&gt; &lt;RefineCA&gt;</span></span>
 <span><span class="co">#&gt; Partial bootstrap CA seriation refinement:</span></span>
 <span><span class="co">#&gt; - Cutoff value: 2.55</span></span>
