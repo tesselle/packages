@@ -4,12 +4,12 @@
 heterogeneity() returns an heterogeneity or dominance index.
 evenness() returns an evenness measure.
 
-"><title>Heterogeneity and Evenness — heterogeneity • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.2/font.css" rel="stylesheet"><link href="../deps/Ubuntu-0.4.2/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Heterogeneity and Evenness — heterogeneity"><meta property="og:description" content="
+"><title>Heterogeneity and Evenness — heterogeneity • tabula</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.2/font.css" rel="stylesheet"><link href="../deps/Ubuntu-0.4.2/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Heterogeneity and Evenness — heterogeneity"><meta property="og:description" content="
 
 heterogeneity() returns an heterogeneity or dominance index.
 evenness() returns an evenness measure.
 
-"><meta property="og:image" content="https://packages.tesselle.org/tabula/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@nfrerebeau"><meta name="twitter:site" content="@nfrerebeau"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
+"><meta property="og:image" content="https://packages.tesselle.org/tabula/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@nfrerebeau"><meta name="twitter:site" content="@archaeostats"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript></head><body>
@@ -20,7 +20,7 @@ evenness() returns an evenness measure.
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.8.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -313,39 +313,39 @@ Bell System Technical Journal</em>, 27, 379-423.
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8987278 0.8966760 0.8462335 0.9178574 0.9373336</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Bootstrap resampling (summary statistics)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean         bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.278701  0.009501222 0.08474152</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.972357  0.017059064 0.15031660</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.520707  0.029024310 0.19573432</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.497800  0.012196417 0.21750065</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.307843 -0.021343937 0.26494662</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.284366  0.015166336 0.08233275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.970911  0.015613510 0.15511439</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.533474  0.041791067 0.19278193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.481302 -0.004302029 0.21714355</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.319020 -0.010166748 0.26570320</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.012923 3.233187 3.287888 3.282214 3.334360 3.514768</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.438450 2.881013 2.981630 2.972426 3.076113 3.397745</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.778748 2.397072 2.528968 2.521920 2.652930 3.235729</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.549207 2.343675 2.490192 2.475061 2.624542 3.057407</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.193550 2.138333 2.310908 2.288688 2.482535 3.068657</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.964754 3.229583 3.280223 3.276647 3.330663 3.496145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.487505 2.863894 2.979936 2.968196 3.080468 3.292932</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.450006 2.402212 2.531029 2.530539 2.666604 3.225557</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.661323 2.342474 2.505266 2.483137 2.633068 3.036997</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.153742 2.160898 2.340683 2.313223 2.500231 2.983484</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="resample.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                       25%      50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.224145 3.280899</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.874878 2.971479</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.392446 2.530533</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.343167 2.505622</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.165553 2.351257</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.226325 3.281854</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.884282 2.973282</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.403644 2.531049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.345239 2.498742</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.159732 2.357102</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="resample.html">jackknife</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      mean       bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.246457 -0.9779158 0.08145529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.932856 -0.9649994 0.15907033</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.469588 -0.9500688 0.19670002</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.462723 -0.9838709 0.22195573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.305876 -1.0023704 0.25266291</span>
+<span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean       bias      error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.246457 -0.9779158 0.08145529</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.932856 -0.9649994 0.15907033</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.469588 -0.9500688 0.19670002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.462723 -0.9838709 0.22195573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.305876 -1.0023704 0.25266291</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

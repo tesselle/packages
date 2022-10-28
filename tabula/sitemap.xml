@@ -49,10 +49,10 @@
     <loc>https://packages.tesselle.org/tabula/reference/heterogeneity.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/independance.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/index.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/matrigraph.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/mutator.html</loc>
@@ -61,16 +61,22 @@
     <loc>https://packages.tesselle.org/tabula/reference/occurrence.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/plot_bar.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_bertin.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_diceleraas.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/plot_diversity.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_ford.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/plot_heatmap.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/plot_line.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_rank.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/plot_spot.html</loc>
@@ -86,6 +92,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/richness.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/seriograph.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/similarity.html</loc>
