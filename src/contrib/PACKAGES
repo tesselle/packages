@@ -27,10 +27,10 @@ MD5sum: 0970d900513ed2800b47f57ff60c12d5
 NeedsCompilation: no
 
 Package: folio
-Version: 1.2.0
+Version: 1.3.0
 Depends: R (>= 2.10)
 License: GPL (>= 3)
-MD5sum: 1207ec9baa05c82e7cfcd59fc2d43cb7
+MD5sum: 829ae357c38afd13a7fa0421ea2fb333
 NeedsCompilation: no
 
 Package: kairos
