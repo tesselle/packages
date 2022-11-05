@@ -55,7 +55,7 @@
     <loc>https://packages.tesselle.org/tabula/reference/matrigraph.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/mutators.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/occurrence.html</loc>
@@ -101,9 +101,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/simulate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/reference/subset.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/tabula-package.html</loc>
