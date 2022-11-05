@@ -314,29 +314,29 @@ Bell System Technical Journal</em>, 27, 379-423.
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Bootstrap resampling (summary statistics)</span></span></span>
 <span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean         bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.272138  0.002938723 0.08164892</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.968252  0.012953911 0.14717361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.524807  0.033123832 0.20150437</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.481039 -0.004565014 0.21995630</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.318350 -0.010836634 0.26236615</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean        bias      error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.280065  0.01086493 0.08435471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.967709  0.01241115 0.15093129</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.521452  0.02976897 0.19665119</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.472946 -0.01265836 0.23179030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.295456 -0.03373071 0.26747512</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.939136 3.225485 3.280283 3.276166 3.330641 3.557011</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.269889 2.887835 2.990192 2.976454 3.076433 3.349880</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.609612 2.399879 2.528407 2.517074 2.654067 3.196760</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.039721 2.340951 2.511361 2.482646 2.635522 3.080882</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.098612 2.148366 2.327482 2.308419 2.491505 3.023860</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.9250061 3.226097 3.285646 3.277353 3.336889 3.479746</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 1.9001165 2.889000 2.985244 2.978745 3.079765 3.375285</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.6080828 2.391809 2.523534 2.513481 2.650644 3.174232</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.6151196 2.330751 2.487248 2.470788 2.628079 3.010511</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        0.9649629 2.151884 2.333873 2.305880 2.488794 2.925842</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                       25%      50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.232522 3.280139</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.885446 2.985763</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.394442 2.537333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.352086 2.519174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.153532 2.336907</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.224928 3.284217</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.870856 2.977561</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.400081 2.531470</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.347480 2.500138</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.163323 2.334716</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
 <span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
