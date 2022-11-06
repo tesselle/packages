@@ -55,14 +55,13 @@ MD5sum: 56ac93a60f9e7ccd258b6e0f671d88f8
 NeedsCompilation: no
 
 Package: tabula
-Version: 1.8.0
+Version: 2.0.0
 Depends: R (>= 3.3)
-Imports: arkhe (>= 0.5.0), boot, kairos (>= 1.1.0), ggplot2, methods,
-        rlang, stats, utils
+Imports: arkhe (>= 1.0.0), ggplot2, methods, rlang, stats, utils
 Suggests: covr, folio, khroma, knitr, rmarkdown, testthat (>= 3.0.0),
         vdiffr (>= 1.0.0)
 License: GPL (>= 3)
-MD5sum: 1b2bccb3797be508ad1ee1cff7231e88
+MD5sum: 7dbd22f5dced9ca4c562927ccacee97f
 NeedsCompilation: no
 
 Package: tesselle
