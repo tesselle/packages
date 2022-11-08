@@ -16,7 +16,7 @@
     <loc>https://packages.tesselle.org/kairos/articles/bibliography.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/articles/dating.html</loc>
+    <loc>https://packages.tesselle.org/kairos/articles/event.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/articles/index.html</loc>
@@ -58,13 +58,16 @@
     <loc>https://packages.tesselle.org/kairos/reference/RateOfChange-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/reference/RefineCA-class.html</loc>
+    <loc>https://packages.tesselle.org/kairos/reference/RefinePermutationOrder-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/aoristic.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/apportion.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/deprecate.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/event.html</loc>
@@ -85,6 +88,9 @@
     <loc>https://packages.tesselle.org/kairos/reference/mutators.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/reference/permute.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/reference/plot_aoristic.html</loc>
   </url>
   <url>
@@ -100,12 +106,24 @@
     <loc>https://packages.tesselle.org/kairos/reference/plot_time.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/reference/resample.html</loc>
+    <loc>https://packages.tesselle.org/kairos/reference/reexports.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/resample_event.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/resample_mcd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/reference/roc.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/reference/seriation.html</loc>
+    <loc>https://packages.tesselle.org/kairos/reference/seriate_average.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/seriate_rank.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/reference/seriate_refine.html</loc>
   </url>
 </urlset>
