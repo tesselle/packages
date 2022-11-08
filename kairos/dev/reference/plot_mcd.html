@@ -24,8 +24,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -147,13 +147,13 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-in"><span><span class="co">## Bootstrap resampling</span></span></span>
 <span class="r-in"><span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        original     mean       bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789     1207 1208.633   1.633333  26.80129</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0783     1128 1128.300   0.300000  22.55438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0782     1100      NaN        NaN        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0778     1227 1217.367  -9.633333  35.91319</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0777     1238      NaN        NaN        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776     1028 1018.000 -10.000000 104.40769</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        original     mean      bias    error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789     1207 1210.600  3.600000 26.44787</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0783     1128 1130.200  2.200000 21.29173</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0782     1100      NaN       NaN       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0778     1227 1218.467 -8.533333 13.51559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0777     1238      NaN       NaN       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776     1028      NaN       NaN       NA</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
 <span class="r-in"><span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span></span>
@@ -167,7 +167,7 @@ displayed (invisibly returns <code>x</code>).</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776     1028 1024.889 -52.888889 127.64539</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Simulation</span></span></span>
-<span class="r-in"><span><span class="va">sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/simulate.html" class="external-link">simulate</a></span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span>, interval <span class="op">=</span> <span class="st">"percentiles"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/tabula/reference/simulate.html" class="external-link">simulate</a></span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span>, interval <span class="op">=</span> <span class="st">"percentiles"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sim</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot_mcd-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>

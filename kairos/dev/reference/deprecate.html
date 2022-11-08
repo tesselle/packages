@@ -24,8 +24,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -72,7 +72,11 @@
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
 <dd><p>A <a href="PermutationOrder-class.html">PermutationOrder</a> object (typically returned by
-<code><a href="seriation.html">seriate_average()</a></code>).</p></dd>
+<code><a href="seriate_average.html">seriate_average()</a></code>).</p></dd>
+
+
+<dt>...</dt>
+<dd><p>Further arguments to be passed to internal methods.</p></dd>
 
 
 <dt>cutoff</dt>
@@ -81,10 +85,8 @@ a single numeric value (see below).</p></dd>
 
 
 <dt>margin</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscripts which the
-rearrangement will be applied over: <code>1</code> indicates rows, <code>2</code> indicates
-columns, <code>c(1, 2)</code> indicates rows then columns, <code>c(2, 1)</code> indicates columns
-then rows.</p></dd>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscripts which the
+refinement will be applied over: <code>1</code> indicates rows, <code>2</code> indicates columns.</p></dd>
 
 
 <dt>axes</dt>

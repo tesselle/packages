@@ -36,8 +36,8 @@ accumulation dates of an assemblage.
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -81,10 +81,10 @@ accumulation dates of an assemblage.</p></li>
 <span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame,numeric</span></span>
-<span><span class="fu">event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, rank <span class="op">=</span> <span class="fl">10</span>, cutoff <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix,numeric</span></span>
-<span><span class="fu">event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">event</span><span class="op">(</span><span class="va">object</span>, <span class="va">dates</span>, rank <span class="op">=</span> <span class="fl">10</span>, cutoff <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for EventDate,missing</span></span>
 <span><span class="fu">predict_event</span><span class="op">(</span><span class="va">object</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
@@ -96,7 +96,10 @@ accumulation dates of an assemblage.</p></li>
 <span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for EventDate,matrix</span></span>
-<span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for EventDate</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -121,20 +124,26 @@ the row names of <code>object</code>.</p></dd>
 (absolute frequencies)for which to predict event and accumulation dates.</p></dd>
 
 
+<dt>rank</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of CA factorial components
+to be use for linear model fitting (see details).</p></dd>
+
+
 <dt>cutoff</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the cumulative percentage of variance
 used to select CA factorial components for linear model fitting (see
 details). All compounds with a cumulative percentage of variance of less
-than the <code>cutoff</code> value will be retained.</p></dd>
-
-
-<dt>level</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
+than the <code>cutoff</code> value will be retained.
+This argument is defunct: use <code>rank</code> instead.</p></dd>
 
 
 <dt>margin</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscripts which the prediction
 will be applied over: <code>1</code> indicates rows, <code>2</code> indicates columns.</p></dd>
+
+
+<dt>level</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -161,7 +170,7 @@ of the context by residual or intrusive material." In other words,
 accumulation dates estimate occurrence of archaeological events and rhythms
 of the long term.</p>
 <p>This method relies on strong archaeological and statistical assumptions
-(see <code>vignette("kairos")</code>).</p>
+(see <code><a href="../articles/event.html">vignette("event")</a></code>).</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
@@ -211,7 +220,7 @@ for Seriation of Sagalassos Tablewares. In Doerr, M. &amp; Apostolis, S. (eds.),
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"kairos"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"event"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>

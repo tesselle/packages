@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="kairos">
-<title>Dating Methods • kairos</title>
+<title>Event Date Model • kairos</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -19,7 +19,7 @@
 <link href="../deps/Ubuntu-0.4.2/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Dating Methods">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Event Date Model">
 <meta property="og:description" content="kairos">
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -54,8 +54,8 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -86,146 +86,25 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Dating Methods</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Event Date Model</h1>
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2022-10-28</h4>
+            <h4 data-toc-skip class="date">2022-11-08</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/dating.Rmd" class="external-link"><code>vignettes/dating.Rmd</code></a></small>
-      <div class="d-none name"><code>dating.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/event.Rmd" class="external-link"><code>vignettes/event.Rmd</code></a></small>
+      <div class="d-none name"><code>event.Rmd</code></div>
     </div>
 
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Load packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
-<h2 id="not-all-dates-are-created-equal">Not All Dates Are Created Equal<a class="anchor" aria-label="anchor" href="#not-all-dates-are-created-equal"></a>
+<h2 id="definition">Definition<a class="anchor" aria-label="anchor" href="#definition"></a>
 </h2>
-<p>This vignette presents different methods for dating archaeological
-assemblages using artifact count data. Here, dating refers to “the
-placement in time of events relative to one another or to any
-established scale of temporal measurement” <span class="citation">(Dean
-1978)</span>. This involves distinguishing between <em>relative</em>
-(that provide only a chronological sequence of events) and
-<em>absolute</em> dating methods (that yield a calendric indication and
-may provide the duration of an event) <span class="citation">(O’Brien
-and Lyman 2002)</span>. Strictly speaking, there is no absolute dating
-given how dates are produced and given that any date refers to a scale.
-The distinction between absolute and relative time can be rephrased more
-clearly as quantifiable <em>vs</em> non-quantifiable <span class="citation">(O’Brien and Lyman 2002)</span>: absolute dates “are
-expressed as points on standard scales of time measurement” <span class="citation">(Dean 1978)</span>.</p>
-<p>We will keep here the distinction between a date an age as formulated
-by <span class="citation">Colman, Pierce, and Birkeland (1987)</span>:
-“a <em>date</em> is a specific point in time, whereas an <em>age</em> is
-an interval of time measured back from the present.” Dealing with dates
-in archaeology can be tricky if one does not take into account the
-sources of the chronological information. In most cases, a date
-represents a <em>terminus</em> for a given archaeological assemblage.
-That is, a date before (<em>terminus ante-quem</em>) or after
-(<em>terminus post-quem</em>) which the formation process of the
-assemblage took place. This in mind, one obvious question that should
-underlie any investigation is what does the date represent?</p>
-<p>First, let’s be more formal:</p>
-<ul>
-<li>An archaeological <em>event</em> is determined by its unknown
-calendar date <span class="math inline">\(t\)</span> with associated
-error <span class="math inline">\(\delta t\)</span>.</li>
-<li>
-<span class="math inline">\(t \pm \delta t\)</span> can be provided
-by different means and is assumed to be related to the event.</li>
-</ul>
-<p>This implies that:</p>
-<ul>
-<li>There are no error-free dates in archaeology (although uncertainties
-cannot always be quantified).</li>
-<li>Errors are assumed here to be symmetrical. This is true for most
-physical dating methods, but may be false after some data processing
-(e.g. 14C calibration).</li>
-</ul>
-<p>For a set of <span class="math inline">\(m\)</span> assemblages in
-which <span class="math inline">\(p\)</span> different types of artifact
-were recorded, let <span class="math inline">\(X = \left[ x_{ij} \right]
-~\forall i \in \left[ 1,m \right], j \in \left[ 1,p \right]\)</span> be
-the <span class="math inline">\(m \times p\)</span> count matrix with
-row and column sums:</p>
-<p><span class="math display">\[
-\begin{align}
-x_{i \cdot} = \sum_{j = 1}^{p} x_{ij} &amp;&amp;
-x_{\cdot j} = \sum_{i = 1}^{m} x_{ij} &amp;&amp;
-x_{\cdot \cdot} = \sum_{i = 1}^{m} x_{i \cdot} = \sum_{j = 1}^{p}
-x_{\cdot j} &amp;&amp;
-\forall x_{ij} \in \mathbb{N}
-\end{align}
-\]</span></p>
-<p>Note that all <span class="math inline">\(x_{ij}\)</span> are assumed
-to be error-free.</p>
-</div>
-<div class="section level2">
-<h2 id="mean-ceramic-date">Mean Ceramic Date<a class="anchor" aria-label="anchor" href="#mean-ceramic-date"></a>
-</h2>
-<div class="section level3">
-<h3 id="definition">Definition<a class="anchor" aria-label="anchor" href="#definition"></a>
-</h3>
-<p>The Mean Ceramic Date (MCD) is a point estimate of the occupation of
-an archaeological site <span class="citation">(South 1977)</span>. The
-MCD is estimated as the weighted mean of the date midpoints of the
-ceramic types <span class="math inline">\(t_j\)</span> (based on
-absolute dates or the known production interval) found in a given
-assemblage. The weights are the conditional frequencies of the
-respective types in the assemblage.</p>
-<p>The MCD is defined as: <span class="math display">\[
-t^{MCD}_i = \sum_{j = 1}^{p} t_j \times \frac{x_{ij}}{x_{i \cdot}}
-\]</span></p>
-</div>
-<div class="section level3">
-<h3 id="limitation">Limitation<a class="anchor" aria-label="anchor" href="#limitation"></a>
-</h3>
-<p>The MCD is a point estimate: knowing the mid-date of an assemblage
-and not knowing the time span of accumulation might be short sighted.
-<strong>MCD offers a rough indication of the chronological position of
-an assemblage, but does not tell if an assemblage represents ten or 100
-years.</strong></p>
-</div>
-<div class="section level3">
-<h3 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Coerce the zuni dataset to an abundance (count) matrix</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Set the start and end dates for each ceramic type</span></span>
-<span><span class="va">zuni_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>  LINO <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">600</span>, <span class="fl">875</span><span class="op">)</span>, KIAT <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">850</span>, <span class="fl">950</span><span class="op">)</span>, RED <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">900</span>, <span class="fl">1050</span><span class="op">)</span>, </span>
-<span>  GALL <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1025</span>, <span class="fl">1125</span><span class="op">)</span>, ESC <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1050</span>, <span class="fl">1150</span><span class="op">)</span>, PUBW <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1050</span>, <span class="fl">1150</span><span class="op">)</span>,</span>
-<span>  RES <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1000</span>, <span class="fl">1200</span><span class="op">)</span>, TULA <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1175</span>, <span class="fl">1300</span><span class="op">)</span>, PINE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1350</span><span class="op">)</span>,</span>
-<span>  PUBR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1000</span>, <span class="fl">1200</span><span class="op">)</span>, WING <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1100</span>, <span class="fl">1200</span><span class="op">)</span>, WIPO <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1125</span>, <span class="fl">1225</span><span class="op">)</span>,</span>
-<span>  SJ <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1200</span>, <span class="fl">1300</span><span class="op">)</span>, LSJ <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1250</span>, <span class="fl">1300</span><span class="op">)</span>, SPR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1250</span>, <span class="fl">1300</span><span class="op">)</span>,</span>
-<span>  PINER <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1325</span><span class="op">)</span>, HESH <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1450</span><span class="op">)</span>, KWAK <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1275</span>, <span class="fl">1450</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Calculate date midpoint</span></span>
-<span><span class="va">zuni_mid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">vapply</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">zuni_dates</span>, FUN <span class="op">=</span> <span class="va">mean</span>, FUN.VALUE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Calculate MCD</span></span>
-<span><span class="va">zuni_mcd</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mcd.html">mcd</a></span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">zuni_mid</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">zuni_mcd</span><span class="op">)</span></span>
-<span><span class="co">#&gt; LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span></span>
-<span><span class="co">#&gt;   1162   1138   1154   1091   1092    841</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">zuni_mcd</span>, select <span class="op">=</span> <span class="fl">100</span><span class="op">:</span><span class="fl">125</span><span class="op">)</span></span></code></pre></div>
-<p><img src="dating_files/figure-html/mcd-model-1.png" width="672" style="display: block; margin: auto;"></p>
-</div>
-</div>
-<div class="section level2">
-<h2 id="event-accumulation-date">Event &amp; Accumulation Date<a class="anchor" aria-label="anchor" href="#event-accumulation-date"></a>
-</h2>
-<div class="section level3">
-<h3 id="definition-1">Definition<a class="anchor" aria-label="anchor" href="#definition-1"></a>
-</h3>
 <p>Event and accumulation dates are density estimates of the occupation
 and duration of an archaeological site <span class="citation">(L.
 Bellanger, Husi, and Tomassone 2006; L. Bellanger, Tomassone, and Husi
@@ -239,9 +118,9 @@ time, and at worst, as imprecise dating due to contamination of the
 context by residual or intrusive material.” In other words, accumulation
 dates estimate occurrence of archaeological events and rhythms of the
 long term.</p>
-<div class="section level4">
-<h4 id="event-date">Event Date<a class="anchor" aria-label="anchor" href="#event-date"></a>
-</h4>
+<div class="section level3">
+<h3 id="event-date">Event Date<a class="anchor" aria-label="anchor" href="#event-date"></a>
+</h3>
 <p>Event dates are estimated by fitting a Gaussian multiple linear
 regression model on the factors resulting from a correspondence analysis
 - somewhat similar to the idea introduced by <span class="citation">Poblome and Groenen (2003)</span>. This model results
@@ -317,9 +196,9 @@ distribution:</p>
 t^E_i \sim \mathcal{N}(\widehat{t^E_i},\widehat{V_i})
 \]</span></p>
 </div>
-<div class="section level4">
-<h4 id="accumulation-date">Accumulation Date<a class="anchor" aria-label="anchor" href="#accumulation-date"></a>
-</h4>
+<div class="section level3">
+<h3 id="accumulation-date">Accumulation Date<a class="anchor" aria-label="anchor" href="#accumulation-date"></a>
+</h3>
 <p>As row (assemblages) and columns (types) CA coordinates are linked
 together through the so-called transition formulae, event dates for each
 type <span class="math inline">\(t^E_j\)</span> can be predicted
@@ -344,9 +223,9 @@ is close enough to the definition of the <em>tempo plot</em> introduced
 by <span class="citation">Dye (2016)</span>.</p>
 </div>
 </div>
-<div class="section level3">
-<h3 id="limitation-1">Limitation<a class="anchor" aria-label="anchor" href="#limitation-1"></a>
-</h3>
+<div class="section level2">
+<h2 id="limitation">Limitation<a class="anchor" aria-label="anchor" href="#limitation"></a>
+</h2>
 <p>Event and accumulation dates estimation relies on the same conditions
 and assumptions as the matrix seriation problem. <span class="citation">Dunnell (1970)</span> summarizes these conditions and
 assumptions as follows.</p>
@@ -371,16 +250,16 @@ chronological.</p>
 highly dependent on the range of the known dates and the fit of the
 regression.</p>
 </div>
-<div class="section level3">
-<h3 id="usage-1">Usage<a class="anchor" aria-label="anchor" href="#usage-1"></a>
-</h3>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <p>This package provides an implementation of the chronological modeling
 method developed by <span class="citation">Lise Bellanger and Husi
 (2012)</span>. This method is slightly modified here and allows the
 construction of different probability density curves of archaeological
 assemblage dates (<em>event</em>, <em>activity</em> and
 <em>tempo</em>).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Bellanger et al. did not publish the data supporting their demonstration: </span></span>
 <span><span class="co">## no replication of their results is possible. </span></span>
 <span><span class="co">## Here is a pseudo-reproduction using the zuni dataset</span></span>
@@ -396,62 +275,63 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <span></span>
 <span><span class="co">## Model the event and accumulation date for each assemblage</span></span>
 <span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">event</a></span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">zuni_dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Argument 'cutoff' is defunct; please use 'rank' instead.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu"><a href="../reference/mutators.html">get_model</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
-<span><span class="co">#&gt; stats::lm(formula = date ~ ., data = contexts, na.action = stats::na.omit)</span></span>
+<span><span class="co">#&gt; stats::lm(formula = date ~ ., data = data)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Residuals:</span></span>
-<span><span class="co">#&gt;         1         2         3         4         5         6         7         8 </span></span>
-<span><span class="co">#&gt;  0.517235 -4.017534 -0.279200  0.662137 -1.246499  0.576044  2.634482 -4.383683 </span></span>
-<span><span class="co">#&gt;         9        10        11        12        13        14        15 </span></span>
-<span><span class="co">#&gt; -1.093837 -0.005002  2.543773 -0.032706  3.480918 -0.759429  1.403301 </span></span>
+<span><span class="co">#&gt;  LZ0569  LZ0279    CS16  LZ0066  LZ0852  LZ1209   CS144  LZ0563  LZ0329 LZ0005Q </span></span>
+<span><span class="co">#&gt;  0.4466 -3.9079 -0.2887  0.7279 -1.3127  0.5037  2.7819 -4.4530 -0.7960  0.1254 </span></span>
+<span><span class="co">#&gt;  LZ0322  LZ0067  LZ0578  LZ0227  LZ0610 </span></span>
+<span><span class="co">#&gt;  2.6011 -0.1375  3.5140 -0.7672  0.9624 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
-<span><span class="co">#&gt;             Estimate Std. Error  t value Pr(&gt;|t|)    </span></span>
-<span><span class="co">#&gt; (Intercept) 1164.350      1.892  615.459 2.15e-13 ***</span></span>
-<span><span class="co">#&gt; F1          -158.314      1.472 -107.582 1.32e-09 ***</span></span>
-<span><span class="co">#&gt; F2            25.629      1.444   17.753 1.04e-05 ***</span></span>
-<span><span class="co">#&gt; F3            -5.546      1.905   -2.912   0.0333 *  </span></span>
-<span><span class="co">#&gt; F4            11.416      3.407    3.351   0.0203 *  </span></span>
-<span><span class="co">#&gt; F5            -2.713      2.448   -1.108   0.3183    </span></span>
-<span><span class="co">#&gt; F6             2.697      1.181    2.285   0.0711 .  </span></span>
-<span><span class="co">#&gt; F7             3.966      3.001    1.322   0.2435    </span></span>
-<span><span class="co">#&gt; F8            11.132      2.941    3.785   0.0128 *  </span></span>
-<span><span class="co">#&gt; F9            -4.886      2.020   -2.418   0.0602 .  </span></span>
+<span><span class="co">#&gt;              Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept) 1164.6501     2.9154 399.481 2.36e-10 ***</span></span>
+<span><span class="co">#&gt; F1          -158.2879     1.6497 -95.948 7.07e-08 ***</span></span>
+<span><span class="co">#&gt; F2            25.7034     1.6841  15.263 0.000107 ***</span></span>
+<span><span class="co">#&gt; F3            -5.6058     2.1603  -2.595 0.060368 .  </span></span>
+<span><span class="co">#&gt; F4            10.7571     5.8231   1.847 0.138419    </span></span>
+<span><span class="co">#&gt; F5            -3.1388     3.9485  -0.795 0.471160    </span></span>
+<span><span class="co">#&gt; F6             2.7244     1.3288   2.050 0.109653    </span></span>
+<span><span class="co">#&gt; F7             4.5647     5.2198   0.874 0.431212    </span></span>
+<span><span class="co">#&gt; F8            11.2980     3.4629   3.263 0.031006 *  </span></span>
+<span><span class="co">#&gt; F9            -5.1715     2.9554  -1.750 0.155041    </span></span>
+<span><span class="co">#&gt; F10           -0.3957     2.6497  -0.149 0.888522    </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Residual standard error: 3.669 on 5 degrees of freedom</span></span>
-<span><span class="co">#&gt;   (405 observations deleted due to missingness)</span></span>
-<span><span class="co">#&gt; Multiple R-squared:  0.9997, Adjusted R-squared:  0.9992 </span></span>
-<span><span class="co">#&gt; F-statistic:  1979 on 9 and 5 DF,  p-value: 2.456e-08</span></span>
+<span><span class="co">#&gt; Residual standard error: 4.09 on 4 degrees of freedom</span></span>
+<span><span class="co">#&gt; Multiple R-squared:  0.9997, Adjusted R-squared:  0.999 </span></span>
+<span><span class="co">#&gt; F-statistic:  1433 on 10 and 4 DF,  p-value: 1.167e-06</span></span>
 <span></span>
 <span><span class="co">## Estimate event dates</span></span>
 <span><span class="va">event</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_event</a></span><span class="op">(</span><span class="va">model</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">event</span><span class="op">)</span></span>
 <span><span class="co">#&gt;        date lower upper error</span></span>
-<span><span class="co">#&gt; LZ1105 1168  1158  1178     4</span></span>
-<span><span class="co">#&gt; LZ1103 1143  1139  1147     1</span></span>
-<span><span class="co">#&gt; LZ1100 1156  1148  1164     3</span></span>
-<span><span class="co">#&gt; LZ1099 1099  1092  1106     3</span></span>
-<span><span class="co">#&gt; LZ1097 1088  1080  1097     3</span></span>
-<span><span class="co">#&gt; LZ1096  839   829   849     4</span></span>
+<span><span class="co">#&gt; LZ1105 1169  1152  1185     6</span></span>
+<span><span class="co">#&gt; LZ1103 1143  1136  1150     2</span></span>
+<span><span class="co">#&gt; LZ1100 1156  1141  1172     5</span></span>
+<span><span class="co">#&gt; LZ1099 1099  1087  1111     4</span></span>
+<span><span class="co">#&gt; LZ1097 1088  1078  1099     4</span></span>
+<span><span class="co">#&gt; LZ1096  840   825   855     5</span></span>
 <span></span>
 <span><span class="co">## Estimate accumulation dates</span></span>
 <span><span class="va">acc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_accumulation</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">acc</span><span class="op">)</span></span>
 <span><span class="co">#&gt; LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span></span>
 <span><span class="co">#&gt;   1170   1140   1158   1087   1092    875</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Activity plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="dating_files/figure-html/event-plot-1.png" width="700"></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<p><img src="event_files/figure-html/event-plot-1.png" width="700"></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Tempo plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="dating_files/figure-html/event-plot-2.png" width="700"></p>
+<p><img src="event_files/figure-html/event-plot-2.png" width="700"></p>
 <p>Resampling methods can be used to check the stability of the
 resulting model. If <code>jackknife()</code> is used, one type/fabric is
 removed at a time and all statistics are recalculated. In this way, one
@@ -461,32 +341,31 @@ of new bootstrap assemblages is created, with the same sample size, by
 resampling the original assemblage with replacement. Then, examination
 of the bootstrap statistics makes it possible to pinpoint assemblages
 that require further investigation.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Check model variability</span></span>
 <span><span class="co">## Warning: this may take a few seconds</span></span>
 <span></span>
 <span><span class="co">## Jackknife fabrics</span></span>
 <span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
-<span><span class="co">#&gt;        date lower upper error  bias</span></span>
-<span><span class="co">#&gt; LZ1105 1457  1447  1466     4  4913</span></span>
-<span><span class="co">#&gt; LZ1103  948   945   952     1 -3315</span></span>
-<span><span class="co">#&gt; LZ1100 1094  1086  1102     3 -1054</span></span>
-<span><span class="co">#&gt; LZ1099 1253  1246  1260     3  2618</span></span>
-<span><span class="co">#&gt; LZ1097  917   908   925     3 -2907</span></span>
-<span><span class="co">#&gt; LZ1096 1060  1050  1070     4  3757</span></span>
+<span><span class="co">#&gt;        date lower upper error bias</span></span>
+<span><span class="co">#&gt; LZ1105 1169  1153  1186     6    0</span></span>
+<span><span class="co">#&gt; LZ1103 1143  1137  1150     2    0</span></span>
+<span><span class="co">#&gt; LZ1100 1158  1142  1173     5   34</span></span>
+<span><span class="co">#&gt; LZ1099 1097  1085  1109     4  -34</span></span>
+<span><span class="co">#&gt; LZ1097 1094  1083  1104     4  102</span></span>
+<span><span class="co">#&gt; LZ1096  842   827   857     5   34</span></span>
 <span></span>
 <span><span class="co">## Bootstrap of assemblages</span></span>
 <span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
 <span><span class="co">#&gt;         min      mean  max      Q5     Q95</span></span>
-<span><span class="co">#&gt; LZ1105 1124 1168.1333 1195 1141.00 1190.10</span></span>
-<span><span class="co">#&gt; LZ1103 1073 1147.1667 1203 1115.00 1180.65</span></span>
-<span><span class="co">#&gt; LZ1100 1069 1154.1333 1217 1108.10 1202.45</span></span>
-<span><span class="co">#&gt; LZ1099 1089 1099.2000 1112 1090.35 1109.75</span></span>
-<span><span class="co">#&gt; LZ1097  726 1069.8667 1151  949.65 1127.65</span></span>
-<span><span class="co">#&gt; LZ1096  726  843.7333 1123  744.00  939.95</span></span></code></pre></div>
-</div>
+<span><span class="co">#&gt; LZ1105 1133 1166.8000 1237 1144.80 1192.30</span></span>
+<span><span class="co">#&gt; LZ1103 1112 1146.9000 1186 1119.45 1175.20</span></span>
+<span><span class="co">#&gt; LZ1100 1051 1149.9333 1204 1084.70 1190.10</span></span>
+<span><span class="co">#&gt; LZ1099 1087 1097.3333 1117 1089.45 1107.65</span></span>
+<span><span class="co">#&gt; LZ1097  949 1088.8333 1254  989.75 1209.75</span></span>
+<span><span class="co">#&gt; LZ1096  726  874.1667 1124  726.00 1043.15</span></span></code></pre></div>
 </div>
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
@@ -509,17 +388,6 @@ Bellanger, L., R. Tomassone, and P. Husi. 2008. <span>“A
 <span>Statistical Approach</span> for <span>Dating Archaeological
 Contexts</span>.”</span> <em>Journal of Data Science</em> 6: 135–54.
 </div>
-<div id="ref-colman1987" class="csl-entry">
-Colman, Steven M., Kenneth L. Pierce, and Peter W. Birkeland. 1987.
-<span>“Suggested <span>Terminology</span> for <span>Quaternary Dating
-Methods</span>.”</span> <em>Quaternary Research</em> 28 (2): 314–19. <a href="https://doi.org/10.1016/0033-5894(87)90070-6" class="external-link">https://doi.org/10.1016/0033-5894(87)90070-6</a>.
-</div>
-<div id="ref-dean1978" class="csl-entry">
-Dean, Jeffrey S. 1978. <span>“Independent <span>Dating</span> in
-<span>Archaeological Analysis</span>.”</span> In <em>Advances in
-<span>Archaeological Method</span> and <span>Theory</span></em>, 223–55.
-<span>Elsevier</span>. <a href="https://doi.org/10.1016/B978-0-12-003101-6.50013-5" class="external-link">https://doi.org/10.1016/B978-0-12-003101-6.50013-5</a>.
-</div>
 <div id="ref-dunnell1970" class="csl-entry">
 Dunnell, Robert C. 1970. <span>“Seriation <span>Method</span> and
 <span>Its Evaluation</span>.”</span> <em>American Antiquity</em> 35
@@ -531,23 +399,12 @@ Dye, Thomas S. 2016. <span>“Long-<span>Term Rhythms</span> in the
 Stratification</span>.”</span> <em>Journal of Archaeological
 Science</em> 71 (July): 1–9. <a href="https://doi.org/10.1016/j.jas.2016.05.006" class="external-link">https://doi.org/10.1016/j.jas.2016.05.006</a>.
 </div>
-<div id="ref-obrien2002" class="csl-entry">
-O’Brien, Michael J, and R. Lee Lyman. 2002. <em>Seriation,
-<span>Stratigraphy</span>, and <span>Index Fossils</span>: <span>The
-Backbone</span> of <span>Archaeological Dating</span></em>.
-<span>Dordrecht</span>: <span>Springer</span>.
-</div>
 <div id="ref-poblome2003" class="csl-entry">
 Poblome, J., and P. J. F. Groenen. 2003. <span>“Constrained
 <span>Correspondence Analysis</span> for <span>Seriation</span> of
 <span>Sagalassos Tablewares</span>.”</span> In <em>The <span>Digital
 Heritage</span> of <span>Archaeology</span></em>, edited by M. Doerr and
 A. Sarris. <span>Hellenic Ministry of Culture</span>.
-</div>
-<div id="ref-south1977" class="csl-entry">
-South, S. A. 1977. <em>Method and <span>Theory</span> in
-<span>Historical Archaeology</span></em>. Studies in Archeology.
-<span>New York</span>: <span>Academic Press</span>.
 </div>
 </div>
 </div>

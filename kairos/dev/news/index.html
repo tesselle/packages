@@ -24,8 +24,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -56,25 +56,27 @@
 <h2 class="pkg-version" data-toc-text="1.1.0.9000" id="kairos-1109000">kairos 1.1.0.9000<a class="anchor" aria-label="anchor" href="#kairos-1109000"></a></h2>
 <div class="section level3">
 <h3 id="new-classes-and-methods-1-1-0-9000">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-1-0-9000"></a></h3>
-<ul><li>Add <code><a href="https://packages.tesselle.org/dimensio/reference/bootstrap.html" class="external-link">bootstrap()</a></code> method for <code>PermutationOrder</code> objects.</li>
+<ul><li>Add <code><a href="../reference/seriate_refine.html">seriate_refine()</a></code> method for <code>PermutationOrder</code> objects.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bugfixes--changes-1-1-0-9000">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-1-0-9000"></a></h3>
 <ul><li>Deprecate <code><a href="../reference/deprecate.html">refine()</a></code>.</li>
+<li>
+<code>cutoff</code> argument of <code><a href="../reference/event.html">event()</a></code> is defunct (use <code>rank</code> instead).</li>
 </ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.1.0" id="kairos-110">kairos 1.1.0<a class="anchor" aria-label="anchor" href="#kairos-110"></a></h2><p class="text-muted">CRAN release: 2022-06-18</p>
 <div class="section level3">
 <h3 id="new-classes-and-methods-1-1-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-1-0"></a></h3>
-<ul><li>Add seriation methods: <code><a href="../reference/seriation.html">seriate_rank()</a></code>, <code><a href="../reference/seriation.html">seriate_average()</a></code>, <code><a href="../reference/seriation.html">permute()</a></code>, <code><a href="../reference/seriation.html">get_order()</a></code>.</li>
+<ul><li>Add seriation methods: <code><a href="../reference/seriate_rank.html">seriate_rank()</a></code>, <code><a href="../reference/seriate_average.html">seriate_average()</a></code>, <code><a href="../reference/permute.html">permute()</a></code>, <code><a href="../reference/permute.html">get_order()</a></code>.</li>
 <li>Add <code>SimulationMeanDate</code> to store mean date estimations from simulated assemblages.</li>
-<li>Add <code><a href="https://rdrr.io/r/stats/simulate.html" class="external-link">simulate()</a></code> method for <code>MeanDate</code> objects.</li>
+<li>Add <code><a href="https://packages.tesselle.org/tabula/reference/simulate.html" class="external-link">simulate()</a></code> method for <code>MeanDate</code> objects.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="breaking-changes-1-1-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-1-1-0"></a></h3>
 <ul><li>No longer use classes from <strong>arkhe</strong>.</li>
-<li>Fix <code><a href="https://packages.tesselle.org/dimensio/reference/bootstrap.html" class="external-link">bootstrap()</a></code> method for <code>MeanDate</code> objects: resample with replacement instead of simulating observations from a multinomial distribution.</li>
+<li>Fix <code>bootstrap()</code> method for <code>MeanDate</code> objects: resample with replacement instead of simulating observations from a multinomial distribution.</li>
 </ul></div>
 </div>
     <div class="section level2">

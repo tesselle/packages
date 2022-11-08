@@ -64,8 +64,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -106,7 +106,7 @@
 </h2>
 <p>A convenient and reproducible toolkit for relative and absolute dating and analysis of chronological patterns. This package includes functions for chronological modeling and dating of archaeological assemblages from count data. It provides methods for matrix seriation. It also allows to compute time point estimates and density estimates of the occupation and duration of an archaeological site. <strong>kairos</strong> provides methods for:</p>
 <ul>
-<li>Matrix seriation: <code><a href="reference/seriation.html">seriate_rank()</a></code> and <code><a href="reference/seriation.html">seriate_average()</a></code>
+<li>Matrix seriation: <code><a href="reference/seriate_rank.html">seriate_rank()</a></code> and <code><a href="reference/seriate_average.html">seriate_average()</a></code>
 </li>
 <li>Mean ceramic date estimation (South 1977): <code><a href="reference/mcd.html">mcd()</a></code>
 </li>
@@ -147,27 +147,40 @@
 <span><span class="va">incidence1</span> <span class="op">&lt;-</span> <span class="va">incidence1</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="co"># logical</span></span>
 <span></span>
 <span><span class="co">## Get seriation order on rows and columns</span></span>
-<span><span class="op">(</span><span class="va">indices</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/seriation.html">seriate_rank</a></span><span class="op">(</span><span class="va">incidence1</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">(</span><span class="va">indices</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/seriate_rank.html">seriate_rank</a></span><span class="op">(</span><span class="va">incidence1</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;RankPermutationOrder&gt;</span></span>
 <span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
 <span><span class="co">#&gt; - Row order: 1 4 20 3 9 16 19 10 13 2 11 7 17 5 6 18 14 15 8 12...</span></span>
 <span><span class="co">#&gt; - Column order: 1 16 9 4 8 14 3 20 13 2 6 18 7 17 5 11 19 12 15 10...</span></span>
 <span></span>
 <span><span class="co">## Permute rows and columns</span></span>
-<span><span class="va">incidence2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/seriation.html">permute</a></span><span class="op">(</span><span class="va">incidence1</span>, <span class="va">indices</span><span class="op">)</span></span>
+<span><span class="va">incidence2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/permute.html">permute</a></span><span class="op">(</span><span class="va">incidence1</span>, <span class="va">indices</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Plot matrix</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu">plot_heatmap</span><span class="op">(</span><span class="va">incidence1</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: 'as_long()' est obsolète.</span></span>
-<span><span class="co">#&gt; Utilisez plutôt ‘to_long()’.</span></span>
-<span><span class="co">#&gt; Voir help("Deprecated")</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu">plot_heatmap</span><span class="op">(</span><span class="va">incidence2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: 'as_long()' est obsolète.</span></span>
-<span><span class="co">#&gt; Utilisez plutôt ‘to_long()’.</span></span>
-<span><span class="co">#&gt; Voir help("Deprecated")</span></span></code></pre></div>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-seriation-1.png" width="50%"><img src="reference/figures/README-seriation-2.png" width="50%"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Aoristic Analysis</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"loire"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
+<span><span class="va">loire</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">loire</span>, <span class="va">area</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Anjou"</span>, <span class="st">"Blésois"</span>, <span class="st">"Orléanais"</span>, <span class="st">"Haut-Poitou"</span>, <span class="st">"Touraine"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Get time range</span></span>
+<span><span class="va">loire_range</span> <span class="op">&lt;-</span> <span class="va">loire</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"lower"</span>, <span class="st">"upper"</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co">## Calculate aoristic sum (weights) by group</span></span>
+<span><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">loire_range</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>                          groups <span class="op">=</span> <span class="va">loire</span><span class="op">$</span><span class="va">area</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-aoristic-1.png"><!-- --></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co">## Rate of change by group</span></span>
+<span><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-aoristic-2.png"><!-- --></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>

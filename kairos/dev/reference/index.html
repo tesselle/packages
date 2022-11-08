@@ -24,8 +24,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -64,7 +64,7 @@
 
       <dl><dt>
           
-          <code><a href="event.html">event()</a></code> <code><a href="event.html">predict_event()</a></code> <code><a href="event.html">predict_accumulation()</a></code> 
+          <code><a href="event.html">event()</a></code> <code><a href="event.html">predict_event()</a></code> <code><a href="event.html">predict_accumulation()</a></code> <code><a href="event.html">summary(<i>&lt;EventDate&gt;</i>)</a></code> 
         </dt>
         <dd>Event and Accumulation Dates</dd>
       </dl><dl><dt>
@@ -116,9 +116,24 @@
 
       <dl><dt>
           
-          <code><a href="seriation.html">seriate_average()</a></code> <code><a href="seriation.html">seriate_rank()</a></code> <code><a href="seriation.html">permute()</a></code> <code><a href="seriation.html">get_order()</a></code> 
+          <code><a href="permute.html">permute()</a></code> <code><a href="permute.html">get_order()</a></code> 
         </dt>
-        <dd>Matrix Seriation</dd>
+        <dd>Rearranges a Data Matrix</dd>
+      </dl><dl><dt>
+          
+          <code><a href="seriate_average.html">seriate_average()</a></code> 
+        </dt>
+        <dd>Correspondence Analysis-Based Seriation</dd>
+      </dl><dl><dt>
+          
+          <code><a href="seriate_rank.html">seriate_rank()</a></code> 
+        </dt>
+        <dd>Reciprocal Ranking Seriation</dd>
+      </dl><dl><dt>
+          
+          <code><a href="seriate_refine.html">seriate_refine()</a></code> 
+        </dt>
+        <dd>Refine CA-based Seriation</dd>
       </dl></div><div class="section level2">
       <h2 id="resampling-methods">Resampling Methods<a class="anchor" aria-label="anchor" href="#resampling-methods"></a></h2>
       
@@ -140,11 +155,6 @@
           <code><a href="resample_mcd.html">bootstrap(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="resample_mcd.html">jackknife(<i>&lt;MeanDate&gt;</i>)</a></code> <code><a href="resample_mcd.html">simulate(<i>&lt;MeanDate&gt;</i>)</a></code> 
         </dt>
         <dd>Resample Mean Ceramic Dates</dd>
-      </dl><dl><dt>
-          
-          <code><a href="resample_seriation.html">bootstrap(<i>&lt;AveragePermutationOrder&gt;</i>)</a></code> <code><a href="resample_seriation.html">bootstrap(<i>&lt;BootstrapCA&gt;</i>)</a></code> 
-        </dt>
-        <dd>Resample CA Seriation</dd>
       </dl></div><div class="section level2">
       <h2 id="visualization">Visualization<a class="anchor" aria-label="anchor" href="#visualization"></a></h2>
       
@@ -229,7 +239,7 @@
         <dd>Rate of Change</dd>
       </dl><dl><dt>
           
-          <code><a href="RefineCA-class.html">`[[`(<i>&lt;RefineCA&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
+          <code><a href="RefinePermutationOrder-class.html">RefinePermutationOrder-class</a></code> <code><a href="RefinePermutationOrder-class.html">.RefinePermutationOrder</a></code> <code><a href="RefinePermutationOrder-class.html">RefineCA-class</a></code> 
         </dt>
         <dd>Partial Bootstrap CA</dd>
       </dl></div><div class="section level2">

@@ -26,8 +26,8 @@ assemblages."><meta property="og:image" content="https://packages.tesselle.org/k
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/dating.html">Dating Methods</a>
     <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
+    <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -65,18 +65,19 @@ assemblages.</p>
     <h2 id="slots">Slots<a class="anchor" aria-label="anchor" href="#slots"></a></h2>
     
 
-<dl><dt><code>dates</code></dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates.</p></dd>
+<dl><dt><code>contexts</code></dt>
+<dd><p>A \(m \times p\) <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> of count
+data.</p></dd>
+
+
+<dt><code>dates</code></dt>
+<dd><p>A length-\(m\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of dates.</p></dd>
 
 
 <dt><code>model</code></dt>
 <dd><p>A <a href="https://rdrr.io/r/stats/lm.html" class="external-link">multiple linear model</a>: the Gaussian
 multiple linear regression model fitted for event date estimation and
 prediction.</p></dd>
-
-
-<dt><code>cutoff</code></dt>
-<dd><p>An length-one <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> vector giving the cutoff value.</p></dd>
 
 
 <dt><code>keep</code></dt>
@@ -94,7 +95,7 @@ prediction.</p></dd>
 <code><a href="MeanDate-class.html">MeanDate-class</a></code>,
 <code><a href="PermutationOrder-class.html">PermutationOrder-class</a></code>,
 <code><a href="RateOfChange-class.html">RateOfChange-class</a></code>,
-<code><a href="RefineCA-class.html">RefineCA-class</a></code></p></div>
+<code><a href="RefinePermutationOrder-class.html">RefinePermutationOrder-class</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
