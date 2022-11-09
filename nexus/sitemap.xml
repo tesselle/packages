@@ -46,7 +46,7 @@
     <loc>https://packages.tesselle.org/nexus/reference/covariance.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/distance.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/dist.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/hongite.html</loc>
@@ -58,6 +58,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/lia_age.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/mahalanobis.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/mutators.html</loc>
   </url>
   <url>
@@ -65,6 +68,12 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/outliers.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/plot_outliers.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
