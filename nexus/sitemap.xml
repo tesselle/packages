@@ -76,7 +76,10 @@
     <loc>https://packages.tesselle.org/nexus/reference/pca.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/plot.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/plot_coda.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/plot_logratio.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/plot_outliers.html</loc>
