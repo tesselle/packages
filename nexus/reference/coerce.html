@@ -18,7 +18,10 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+  <a class="nav-link" href="../articles/nexus.html">Get started</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
@@ -44,7 +47,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Coerce</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/nexus/blob/HEAD/R/coerce.R" class="external-link"><code>R/coerce.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/nexus/blob/HEAD/R/coerce.R" class="external-link"><code>R/coerce.R</code></a>, <a href="https://github.com/tesselle/nexus/blob/HEAD/R/mutators.R" class="external-link"><code>R/mutators.R</code></a></small>
       <div class="d-none name"><code>coerce.Rd</code></div>
     </div>
 
@@ -58,6 +61,10 @@
 <span></span>
 <span><span class="fu">as_composition</span><span class="op">(</span><span class="va">from</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
+<span><span class="fu">get_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">set_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span></span>
+<span></span>
 <span><span class="co"># S4 method for matrix</span></span>
 <span><span class="fu">as_composition</span><span class="op">(</span><span class="va">from</span><span class="op">)</span></span>
 <span></span>
@@ -65,7 +72,13 @@
 <span><span class="fu">as_composition</span><span class="op">(</span><span class="va">from</span>, samples <span class="op">=</span> <span class="cn">NULL</span>, groups <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for CompositionMatrix</span></span>
-<span><span class="fu">as_count</span><span class="op">(</span><span class="va">from</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">as_count</span><span class="op">(</span><span class="va">from</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for CompositionMatrix</span></span>
+<span><span class="fu">get_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for CompositionMatrix</span></span>
+<span><span class="fu">set_totals</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -76,6 +89,14 @@
 
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
+
+
+<dt>x</dt>
+<dd><p>An object from which to get or set element(s).</p></dd>
+
+
+<dt>value</dt>
+<dd><p>A possible value for the element(s) of <code>x</code>.</p></dd>
 
 
 <dt>samples</dt>
@@ -98,12 +119,13 @@ group the samples. If <code>NULL</code> (the default), no grouping is stored.</p
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The following methods are available:</p>
-<table class="table table"><tr><td><strong>Method</strong></td><td><strong>From</strong></td><td><strong>To</strong></td></tr><tr><td><code>as_composition()</code></td><td><code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code></td><td><a href="CompositionMatrix-class.html">CompositionMatrix</a></td></tr><tr><td><code>as_count()</code></td><td><a href="CompositionMatrix-class.html">CompositionMatrix</a></td><td><code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code></td></tr></table><p>The <a href="CompositionMatrix-class.html">CompositionMatrix</a> class has special slots:</p><ul><li><p><code>samples</code> for replicated measurements/observation,</p></li>
+<table class="table table"><tr><td><strong>Method</strong></td><td><strong>From</strong></td><td><strong>To</strong></td></tr><tr><td><code>as_composition()</code></td><td><code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code></td><td><a href="CompositionMatrix-class.html">CompositionMatrix</a></td></tr><tr><td><code>as_count()</code></td><td><a href="CompositionMatrix-class.html">CompositionMatrix</a></td><td><code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code></td></tr></table><p>Note that all non-numeric variable will be removed.</p>
+<p>The <a href="CompositionMatrix-class.html">CompositionMatrix</a> class has special slots:</p><ul><li><p><code>samples</code> for replicated measurements/observation,</p></li>
 <li><p><code>groups</code> to group data by site/area.</p></li>
 </ul><p>When coercing a <code>data.frame</code> to a <a href="CompositionMatrix-class.html">CompositionMatrix</a> object, an
 attempt is made to automatically assign values to these slots by mapping
 column names (case insensitive, plural insensitive). This behavior can be
-disabled by setting <code>options(nexus.autodetect = FALSE)</code> or overrided by
+disabled by setting <code>options(nexus.autodetect = FALSE)</code> or overridden by
 explicitly specifying the columns to be used in <code>as_composition()</code>.</p>
     </div>
     <div class="section level2">
@@ -135,13 +157,13 @@ explicitly specifying the columns to be used in <code>as_composition()</code>.</
 <span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            col1       col2        col3       col4       col5 samples</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1 0.20930233 0.28903654 0.312292359 0.13289037 0.05647841    row1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2 0.27859238 0.20821114 0.266862170 0.02932551 0.21700880    row2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3 0.16722408 0.19397993 0.177257525 0.24080268 0.22073579    row3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4 0.24555160 0.28825623 0.003558719 0.21352313 0.24911032    row4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5 0.20606061 0.30000000 0.057575758 0.26060606 0.17575758    row5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row6 0.06741573 0.08988764 0.284644195 0.32584270 0.23220974    row6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            col1      col2       col3       col4      col5 samples</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1 0.26016260 0.1422764 0.30487805 0.04471545 0.2479675    row1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2 0.11186441 0.2203390 0.13220339 0.30847458 0.2271186    row2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3 0.21397380 0.1659389 0.18340611 0.22707424 0.2096070    row3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4 0.05681818 0.1401515 0.37500000 0.10227273 0.3257576    row4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5 0.12032086 0.2219251 0.14973262 0.26203209 0.2459893    row5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row6 0.05063291 0.5759494 0.01265823 0.15189873 0.2088608    row6</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

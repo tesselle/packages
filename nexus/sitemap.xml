@@ -19,6 +19,9 @@
     <loc>https://packages.tesselle.org/nexus/articles/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/articles/nexus.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/authors.html</loc>
   </url>
   <url>
@@ -40,6 +43,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/OutlierIndex-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/as_graph.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/coerce.html</loc>
   </url>
   <url>
@@ -49,7 +55,7 @@
     <loc>https://packages.tesselle.org/nexus/reference/dist.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/graph.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/groups.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/hongite.html</loc>
@@ -62,9 +68,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/mahalanobis.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/reference/mutators.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/nexus-package.html</loc>
@@ -86,6 +89,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/samples.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/subset.html</loc>
