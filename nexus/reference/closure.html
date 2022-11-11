@@ -95,13 +95,9 @@ compositions should be closed (defaults to 1).</p></dd>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other classes: 
-<code><a href="CompositionMatrix-class.html">CompositionMatrix-class</a></code>,
-<code><a href="LogRatio-class.html">LogRatio-class</a></code>,
-<code><a href="LogicalMatrix.html">LogicalMatrix-class</a></code>,
-<code><a href="NumericMatrix.html">NumericMatrix-class</a></code>,
-<code><a href="OutlierIndex-class.html">OutlierIndex-class</a></code>,
-<code><a href="coerce.html">coerce</a>()</code></p></div>
+    <div class="dont-index"><p>Other compositional data tools: 
+<code><a href="as_amounts.html">as_amounts</a>()</code>,
+<code><a href="as_composition.html">as_composition</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -114,23 +110,23 @@ compositions should be closed (defaults to 1).</p></dd>
 <span class="r-in"><span><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Coerce to compositions</span></span></span>
-<span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
 <span class="r-in"><span><span class="co">## (use get_totals() to retrieve these values)</span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
-<span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="coerce.html">as_count</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            col1      col2      col3      col4       col5 samples</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row1 0.16725979 0.2455516 0.2028470 0.2882562 0.09608541    row1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row2 0.12580645 0.2419355 0.1387097 0.1903226 0.30322581    row2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row3 0.09274194 0.1048387 0.1411290 0.3427419 0.31854839    row3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row4 0.15112540 0.1446945 0.1639871 0.2315113 0.30868167    row4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row5 0.27044025 0.1132075 0.1729560 0.1509434 0.29245283    row5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> row6 0.26168224 0.1728972 0.2336449 0.2710280 0.06074766    row6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            col1       col2       col3       col4       col5 samples</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row1 0.24137931 0.31034483 0.28017241 0.13362069 0.03448276    row1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row2 0.01069519 0.06951872 0.52406417 0.10695187 0.28877005    row2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row3 0.20503597 0.12589928 0.33812950 0.10791367 0.22302158    row3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row4 0.35684647 0.12863071 0.15767635 0.24896266 0.10788382    row4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row5 0.27727273 0.15454545 0.08636364 0.39545455 0.08636364    row5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row6 0.12236287 0.39662447 0.16033755 0.08860759 0.23206751    row6</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

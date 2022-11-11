@@ -143,7 +143,7 @@ in its own row.</p>
 <span><span class="co">#&gt; H6 52.3 26.2  4.2 12.5  4.8</span></span>
 <span></span>
 <span><span class="co">## Coerce to compositional data</span></span>
-<span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_composition</a></span><span class="op">(</span><span class="va">hongite</span><span class="op">)</span></span>
+<span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">hongite</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;CompositionMatrix: 6 x 5&gt;</span></span>
 <span><span class="co">#&gt;        A     B     C     D     E</span></span>
@@ -160,7 +160,7 @@ changes are relevant in compositional data analysis).</p>
 can be restored:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Coerce to count data</span></span>
-<span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_count</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
+<span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">hongite</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
@@ -193,13 +193,13 @@ names.</p>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Coerce to a compositional matrix</span></span>
-<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_composition</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/groups.html">has_groups</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>This behavior can be disabled by setting
 <code>options(nexus.autodetect = FALSE)</code> or overridden by
 explicitly specifying the column to be used with the <code>groups</code>
-argument of <code><a href="../reference/coerce.html">as_composition()</a></code>.</p>
+argument of <code><a href="../reference/as_composition.html">as_composition()</a></code>.</p>
 <p><code>get_groups(x)</code> and <code>set_groups(x) &lt;- value</code>
 allow to retrieve or set groups of an existing
 <code>CompositionMatrix</code> (<code>NA</code> can be used to specify
@@ -235,13 +235,13 @@ column is found, row names will be used by default.</p>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Coerce to a compositional matrix</span></span>
-<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce.html">as_composition</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/samples.html">has_replicates</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>This behavior can be disabled by setting
 <code>options(nexus.autodetect = FALSE)</code> or overridden by
 explicitly specifying the column to be used with the
-<code>samples</code> argument of <code><a href="../reference/coerce.html">as_composition()</a></code>.</p>
+<code>samples</code> argument of <code><a href="../reference/as_composition.html">as_composition()</a></code>.</p>
 <p><code>get_samples(x)</code> and
 <code>set_samples(x) &lt;- value</code> allow to retrieve or set sample
 names of an existing <code>CompositionMatrix</code> (missing values are
