@@ -60,7 +60,21 @@
     <h2 id="slots">Slots<a class="anchor" aria-label="anchor" href="#slots"></a></h2>
     
 
-<dl><dt><code>parts</code></dt>
+<dl><dt><code>totals</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector to store the absolute row sums (before
+the closure of the compositions).</p></dd>
+
+
+<dt><code>samples</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector to store the sample identifiers
+(allows duplicates in case of repeated measurements).</p></dd>
+
+
+<dt><code>groups</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector to store the group names (if any).</p></dd>
+
+
+<dt><code>parts</code></dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector to store the part names.</p></dd>
 
 
@@ -93,8 +107,10 @@ respective log-ratios.</p></dd>
 <code><a href="transform_ilr.html">transform_ilr()</a></code>, <code><a href="transform_plr.html">transform_plr()</a></code></p>
 <p>Other classes: 
 <code><a href="CompositionMatrix-class.html">CompositionMatrix-class</a></code>,
+<code><a href="LogicalMatrix.html">LogicalMatrix-class</a></code>,
 <code><a href="NumericMatrix.html">NumericMatrix-class</a></code>,
 <code><a href="OutlierIndex-class.html">OutlierIndex-class</a></code>,
+<code><a href="closure.html">closure</a>()</code>,
 <code><a href="coerce.html">coerce</a>()</code></p></div>
     </div>
     <div class="section level2">
