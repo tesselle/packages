@@ -1,8 +1,8 @@
-pandoc: 2.14.2
+pandoc: 2.19.2
 pkgdown: 2.0.6.9000
-pkgdown_sha: 956f076f661eb2de9413f64ea24a580cf444466d
+pkgdown_sha: 4d7f0f8620fc6b9c80932cac0c7ec7946678bbd3
 articles: {}
-last_built: 2022-08-16T18:25Z
+last_built: 2022-11-25T15:35Z
 urls:
   reference: https://packages.tesselle.org/fasti/reference
   article: https://packages.tesselle.org/fasti/articles
