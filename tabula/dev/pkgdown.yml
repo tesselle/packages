@@ -4,7 +4,7 @@ pkgdown_sha: 2766829b0b6310be5f92820ab6174607353e7f03
 articles:
   bibliography: bibliography.html
   diversity: diversity.html
-last_built: 2022-11-30T09:51Z
+last_built: 2022-11-30T09:59Z
 urls:
   reference: https://packages.tesselle.org/tabula/reference
   article: https://packages.tesselle.org/tabula/articles
