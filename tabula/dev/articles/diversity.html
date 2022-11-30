@@ -365,7 +365,8 @@ dataset containing ceramic counts from the Mississippi region,
 originally published by <span class="citation">Lipo, Madsen, and Dunnell
 (2015)</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/richness.html">richness</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"margalef"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## Data from Lipo et al. 2015</span></span>
+<span><span class="fu"><a href="../reference/richness.html">richness</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"margalef"</span><span class="op">)</span></span>
 <span><span class="co">#&gt;  [1] 0.5963696 0.4524421 0.6971143 0.6193544 0.5599404 0.4577237 0.7292886</span></span>
 <span><span class="co">#&gt;  [8] 0.7779583 1.0304965 0.9224182 1.1892416 1.1412278 1.5518107 1.2645413</span></span>
 <span><span class="co">#&gt; [15] 1.2090820 1.0903435 1.1570758 1.1892416 1.2552092 1.0158754</span></span></code></pre></div>
@@ -748,14 +749,14 @@ type/taxon common to both sample/case: <span class="math inline">\(o_j =
 <h4 id="usage-3">Usage<a class="anchor" aria-label="anchor" href="#usage-3"></a>
 </h4>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Brainerd-Robinson (similarity between assemblages)</span></span>
+<code class="sourceCode R"><span><span class="co">## Brainerd-Robinson (similarity between assemblages)</span></span>
 <span><span class="va">BR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">BR</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_YlOrBr.html" class="external-link">scale_colour_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="diversity_files/figure-html/similarity-1.png" width="672" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
-<span><span class="co"># Binomial co-occurrence (similarity between types)</span></span>
+<span><span class="co">## Binomial co-occurrence (similarity between types)</span></span>
 <span><span class="va">BI</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">BI</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_PRGn.html" class="external-link">scale_colour_PRGn</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -919,11 +920,12 @@ Laxton, R. R. 1978. <span>“The <span>Measure</span> of
 <span>Diversity</span>.”</span> <em>Journal of Theoretical Biology</em>
 70 (1): 51–67. <a href="https://doi.org/10.1016/0022-5193(78)90302-8" class="external-link">https://doi.org/10.1016/0022-5193(78)90302-8</a>.
 </div>
-<div id="ref-lipo2015theoretically" class="csl-entry">
-Lipo, Carl P, Mark E Madsen, and Robert C Dunnell. 2015. <span>“A
-Theoretically-Sufficient and Computationally-Practical Technique for
-Deterministic Frequency Seriation.”</span> <em>PLOS One</em> 10 (4):
-e0124942.
+<div id="ref-lipo2015" class="csl-entry">
+Lipo, Carl P., Mark E. Madsen, and Robert C. Dunnell. 2015. <span>“A
+<span>Theoretically-Sufficient</span> and
+<span>Computationally-Practical Technique</span> for <span>Deterministic
+Frequency Seriation</span>.”</span> <em>PLOS ONE</em> 10 (4): e0124942.
+<a href="https://doi.org/10.1371/journal.pone.0124942" class="external-link">https://doi.org/10.1371/journal.pone.0124942</a>.
 </div>
 <div id="ref-macarthur1965" class="csl-entry">
 Macarthur, Robert H. 1965. <span>“Patterns of <span>Species
