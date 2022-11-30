@@ -1,10 +1,10 @@
 pandoc: 2.19.2
 pkgdown: 2.0.6.9000
-pkgdown_sha: 5bb671b1a8bac8e926479868681936f7c9ee41b3
+pkgdown_sha: 2766829b0b6310be5f92820ab6174607353e7f03
 articles:
   bibliography: bibliography.html
   diversity: diversity.html
-last_built: 2022-11-06T17:11Z
+last_built: 2022-11-30T09:06Z
 urls:
   reference: https://packages.tesselle.org/tabula/reference
   article: https://packages.tesselle.org/tabula/articles
