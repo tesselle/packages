@@ -61,10 +61,16 @@
     <loc>https://packages.tesselle.org/ananke/reference/aoristic.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/as_graph.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/index.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/mutators.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/overlap.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/oxcal_calibrate.html</loc>
