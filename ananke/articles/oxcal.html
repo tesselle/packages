@@ -82,7 +82,7 @@
 
     
     
-<p>These examples use data available through the <a href="https://packages.tesselle.org/fasti/" class="external-link"><strong>fasti</strong></a> package which is available in a <a href="https://tesselle.r-universe.dev" class="external-link">separate repository</a>. <strong>fasti</strong> provides ChronoModel and OxCal input models.</p>
+<p>These examples use data available through the <a href="https://packages.tesselle.org/fasti/" class="external-link"><strong>fasti</strong></a> package which is available in a <a href="https://tesselle.r-universe.dev" class="external-link">separate repository</a>. <strong>fasti</strong> provides OxCal input models.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Install the latest version</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"fasti"</span>, repos <span class="op">=</span> <span class="st">"https://tesselle.r-universe.dev"</span><span class="op">)</span></span></code></pre></div>
@@ -92,129 +92,14 @@
 <span></span>
 <span><span class="co">## Download OxCal</span></span>
 <span><span class="fu"><a href="../reference/oxcal_setup.html">oxcal_setup</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; OxCal doesn't seem to be installed.</span></span>
-<span><span class="co">#&gt; Do you want to download it?</span></span>
-<span><span class="co">#&gt; 1. Yes</span></span>
-<span><span class="co">#&gt; 2. No</span></span>
-<span><span class="co">#&gt; OxCal successfully downloaded and extracted to /tmp/Rtmp5PGwUS.</span></span></code></pre></div>
+<span><span class="co">#&gt; OxCal successfully downloaded and extracted to /tmp/RtmpPiANjv.</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Read OxCal script</span></span>
+<code class="sourceCode R"><span><span class="co">## Read OxCal script from Bosch et al. 2015</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"oxcal/ksarakil/ksarakil.oxcal"</span>, package <span class="op">=</span> <span class="st">"fasti"</span><span class="op">)</span></span>
 <span><span class="va">scr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="va">scr</span>, sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  Plot()</span></span>
-<span><span class="co">#&gt;  {</span></span>
-<span><span class="co">#&gt;   Outlier_Model("General",T(5),U(0,4),"t");</span></span>
-<span><span class="co">#&gt;   Sequence()</span></span>
-<span><span class="co">#&gt;   {</span></span>
-<span><span class="co">#&gt;    Curve("Marine13","marine13.14c");</span></span>
-<span><span class="co">#&gt;    Delta_R("LocalMarine",53,43);</span></span>
-<span><span class="co">#&gt;    Date("Ethelruda");</span></span>
-<span><span class="co">#&gt;    Boundary("start dated IUP");</span></span>
-<span><span class="co">#&gt;    Phase("Layer XXII")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-53000",40550,350)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Boundary("end dated IUP");</span></span>
-<span><span class="co">#&gt;    Boundary("start Ahmarian");</span></span>
-<span><span class="co">#&gt;    Phase("Layer XX")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57597",40040,340)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Phase("Layer XIX")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-53004",39390,330)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Phase("Layer XVIII")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57542",36290,240)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(1.00);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Phase("Layer XVII")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-54846",39850,340)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57603",38260,260)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.50);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57602",36730,240)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.50);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-53001",34090,220)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(1.00);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     Date("Egbert");</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Phase("Layer XVI")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-54847",39910,370)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.20);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57599",39890,310)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.20);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57598",37320,270)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.50);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57544",35960,230)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.50);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Boundary("end Ahmarian");</span></span>
-<span><span class="co">#&gt;    Boundary("start UP");</span></span>
-<span><span class="co">#&gt;    Phase("Layer XII")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-57545",35880,260)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Phase("Layer XI")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-53006",34310,230)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Phase("Layer VI")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-54848",28810,130)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Boundary("end UP");</span></span>
-<span><span class="co">#&gt;    Boundary("start EPI");</span></span>
-<span><span class="co">#&gt;    Phase("Layer V")</span></span>
-<span><span class="co">#&gt;    {</span></span>
-<span><span class="co">#&gt;     R_Date("GrA-53005",26210,130)</span></span>
-<span><span class="co">#&gt;     {</span></span>
-<span><span class="co">#&gt;      Outlier(0.05);</span></span>
-<span><span class="co">#&gt;     };</span></span>
-<span><span class="co">#&gt;    };</span></span>
-<span><span class="co">#&gt;    Boundary("end EPI");</span></span>
-<span><span class="co">#&gt;   };</span></span>
-<span><span class="co">#&gt;  };</span></span>
+<span></span>
+<span><span class="co">## Print script</span></span>
+<span><span class="co"># cat(scr, sep = "\n")</span></span>
 <span></span>
 <span><span class="co">## Execute OxCal script</span></span>
 <span><span class="co">## /!\ this may take a while /!\</span></span>
@@ -224,9 +109,7 @@
 <span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/oxcal_parse.html">oxcal_parse</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></code></pre></div>
-<div class="figure">
-<img src="figure/plot-1.png" alt=""><p class="caption">plot of chunk plot</p>
-</div>
+<p><img src="figures/plot-1.png" alt="plot of chunk plot" style="display: block; margin: auto;"></p>
   </main>
 </div>
 
