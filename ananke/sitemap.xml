@@ -31,10 +31,19 @@
     <loc>https://packages.tesselle.org/ananke/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/AdjacencyMatrix-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/AoristicSum-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/IntervalMatrix-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/RateOfChange-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/StratigraphicMatrix-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/allen_complement.html</loc>
@@ -64,7 +73,13 @@
     <loc>https://packages.tesselle.org/ananke/reference/as_graph.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/as_stratigraphy.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/is_dag.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/mutators.html</loc>
