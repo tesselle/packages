@@ -195,18 +195,20 @@ Criminology</em>, 18(1): 23-43. <a href="https://doi.org/10.1023/A%3A10132408288
 <span class="r-in"><span><span class="co">## Calculate aoristic sum (weights) by group</span></span></span>
 <span class="r-in"><span><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu">aoristic</span><span class="op">(</span><span class="va">loire_range</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>                          groups <span class="op">=</span> <span class="va">loire</span><span class="op">$</span><span class="va">area</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span>, facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="aoristic-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span>, facet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="aoristic-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Rate of change</span></span></span>
 <span class="r-in"><span><span class="va">roc_weighted</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_weighted</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_weighted</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="aoristic-4.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="aoristic-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Rate of change by group</span></span></span>
 <span class="r-in"><span><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="aoristic-5.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="aoristic-6.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
