@@ -4,6 +4,9 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/khroma/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -32,8 +35,5 @@
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
