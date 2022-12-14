@@ -94,7 +94,7 @@ package which is available in a <a href="https://tesselle.r-universe.dev" class=
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/ananke/">ananke</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Download OxCal</span></span>
-<span><span class="fu"><a href="../reference/oxcal_setup.html">oxcal_setup</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu">oxcal_setup</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; OxCal successfully downloaded and extracted to /tmp/RtmpPiANjv.</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Read OxCal script from Bosch et al. 2015</span></span>
@@ -106,10 +106,10 @@ package which is available in a <a href="https://tesselle.r-universe.dev" class=
 <span></span>
 <span><span class="co">## Execute OxCal script</span></span>
 <span><span class="co">## /!\ this may take a while /!\</span></span>
-<span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/oxcal_execute.html">oxcal_execute</a></span><span class="op">(</span><span class="va">scr</span><span class="op">)</span></span>
+<span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">oxcal_execute</span><span class="op">(</span><span class="va">scr</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Parse OxCal output</span></span>
-<span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/oxcal_parse.html">oxcal_parse</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/plot-1.png" alt="plot of chunk plot" style="display: block; margin: auto;"></p>

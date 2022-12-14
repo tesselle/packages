@@ -88,25 +88,7 @@
     <loc>https://packages.tesselle.org/ananke/reference/overlap.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_calibrate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_download.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_execute.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_parse.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_setup.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/ananke/reference/plot_aoristic.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/reexports.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/roc.html</loc>
