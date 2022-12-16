@@ -1,96 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://packages.tesselle.org/ananke/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/CODE_OF_CONDUCT.html</loc>
+    <loc>/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/CONTRIBUTING.html</loc>
+    <loc>/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/LICENSE.html</loc>
+    <loc>/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/articles/bibliography.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/articles/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/articles/oxcal.html</loc>
+    <loc>/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/pull_request_template.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/AdjacencyMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/AoristicSum-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/IntervalMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/RateOfChange-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/StratigraphicMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/allen_complement.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/allen_composition.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/allen_converse.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/allen_intersect.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/allen_relation.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/allen_union.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/ananke-package.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/aoristic.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/as_graph.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/as_stratigraphy.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/is_dag.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/mutators.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/overlap.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/plot_aoristic.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/roc.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
 </urlset>
