@@ -40,6 +40,15 @@
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_grid.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_lines.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_points.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_polygon.html</loc>
   </url>
 </urlset>
