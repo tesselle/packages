@@ -37,7 +37,13 @@
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_axis.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_ellipse.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_grid.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_hull.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_lines.html</loc>
@@ -50,5 +56,8 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_polygon.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_text.html</loc>
   </url>
 </urlset>

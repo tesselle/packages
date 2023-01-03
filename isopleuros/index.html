@@ -105,15 +105,23 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/isopleuros/">isopleuros</a></span><span class="op">)</span></span></code></pre></div>
 <p><strong>isopleuros</strong> tries to mimic the way <strong>graphics</strong> works as much as possible. This means that you should not be confused if you are familiar with the standard R graphics environment.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Data from Husi 2022</span></span>
+<code class="sourceCode R"><span><span class="co">## Data from Barrera and Velde 1989</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"verre"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Select data</span></span>
 <span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="va">verre</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Na2O"</span>, <span class="st">"CaO"</span>, <span class="st">"K2O"</span><span class="op">)</span><span class="op">]</span></span>
 <span></span>
 <span><span class="co">## Ternary plot</span></span>
-<span><span class="fu"><a href="reference/ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="va">coda</span>, panel.first <span class="op">=</span> <span class="fu"><a href="reference/ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-2-1.png" style="display: block; margin: auto;"></p>
+<span><span class="fu"><a href="reference/ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="va">coda</span>, panel.first <span class="op">=</span> <span class="fu"><a href="reference/ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Split data</span></span>
+<span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html" class="external-link">split</a></span><span class="op">(</span><span class="va">coda</span>, f <span class="op">=</span> <span class="va">coda</span><span class="op">$</span><span class="va">Na2O</span> <span class="op">&gt;</span> <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Add tolerance ellipses</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">group</span> <span class="kw">in</span> <span class="va">groups</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="reference/ternary_ellipse.html">ternary_tolerance</a></span><span class="op">(</span><span class="va">group</span>, level <span class="op">=</span> <span class="fl">0.95</span>, border <span class="op">=</span> <span class="st">"blue"</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p><img src="reference/figures/README-ternary-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
