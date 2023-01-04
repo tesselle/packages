@@ -87,12 +87,14 @@ any of the types as in <code><a href="https://rdrr.io/r/graphics/plot.default.ht
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><code><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">graphics::lines()</a></code></p>
 <p>Other plot methods: 
+<code><a href="ternary_arrows.html">ternary_arrows</a>()</code>,
 <code><a href="ternary_axis.html">ternary_axis</a>()</code>,
 <code><a href="ternary_grid.html">ternary_grid</a>()</code>,
 <code><a href="ternary_plot.html">ternary_plot</a>()</code>,
 <code><a href="ternary_points.html">ternary_points</a>()</code>,
 <code><a href="ternary_polygon.html">ternary_polygon</a>()</code>,
-<code><a href="ternary_text.html">ternary_text</a>()</code></p></div>
+<code><a href="ternary_text.html">ternary_text</a>()</code>,
+<code><a href="ternary_title.html">ternary_title</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -108,29 +110,10 @@ any of the types as in <code><a href="https://rdrr.io/r/graphics/plot.default.ht
 <span class="r-in"><span>  Z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">20</span>, <span class="fl">20</span>, <span class="fl">40</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Ternary plot</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="va">coda</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="ternary_lines-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Add points</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_points.html">ternary_points</a></span><span class="op">(</span><span class="va">coda</span>, col <span class="op">=</span> <span class="st">"red"</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="ternary_lines-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Add lines</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">ternary_lines</span><span class="op">(</span><span class="va">coda</span>, col <span class="op">=</span> <span class="st">"red"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="ternary_lines-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Add a polygon</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_polygon.html">ternary_polygon</a></span><span class="op">(</span><span class="va">coda</span>, density <span class="op">=</span> <span class="fl">5</span>, border <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="ternary_lines-4.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Add text</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_text.html">ternary_text</a></span><span class="op">(</span><span class="va">coda</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="ternary_lines-5.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="ternary_lines-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
