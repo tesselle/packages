@@ -122,6 +122,13 @@
 <span>  <span class="fu"><a href="reference/ternary_ellipse.html">ternary_tolerance</a></span><span class="op">(</span><span class="va">group</span>, level <span class="op">=</span> <span class="fl">0.95</span>, border <span class="op">=</span> <span class="st">"blue"</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 <p><img src="reference/figures/README-ternary-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Select data</span></span>
+<span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="va">verre</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Na2O"</span>, <span class="st">"CaO"</span>, <span class="st">"K2O"</span>, <span class="st">"MgO"</span>, <span class="st">"P2O5"</span>, <span class="st">"SiO2"</span>, <span class="st">"Al2O3"</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co">## Ternary plots with marginal compositions</span></span>
+<span><span class="fu"><a href="reference/ternary_pairs.html">ternary_pairs</a></span><span class="op">(</span><span class="va">coda</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">coda</span><span class="op">$</span><span class="va">Na2O</span> <span class="op">&gt;</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-pairs-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
