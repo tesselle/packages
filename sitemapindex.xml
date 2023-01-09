@@ -4,6 +4,15 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/isopleuros/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/fasti/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -26,12 +35,6 @@
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/tabula/sitemap.xml</loc>
