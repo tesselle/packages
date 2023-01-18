@@ -8,12 +8,12 @@ MD5sum: 609179fb0285c1076a21ec39fa4cacdd
 NeedsCompilation: no
 
 Package: arkhe
-Version: 1.0.0
+Version: 1.1.0
 Depends: R (>= 3.3)
-Imports: methods, stats
-Suggests: covr, testthat (>= 3.0.0)
+Imports: methods, stats, utils
+Suggests: testthat (>= 3.0.0)
 License: GPL (>= 3)
-MD5sum: 7ba7dd96591488df6e66a70754155a8e
+MD5sum: 1d57faecf5e9ef84857785ffa6adcdd6
 NeedsCompilation: no
 
 Package: dimensio
