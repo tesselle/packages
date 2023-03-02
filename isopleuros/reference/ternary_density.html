@@ -127,6 +127,10 @@ types.</p></dd>
     
 
 <p><code>ternary_density()</code> is called it for its side-effects.</p>
+
+
+<p>Invisibly returns a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> with elements <code>levels</code> (the contour levels) and
+<code>colors</code> (the contour colors) that can be used for a legend.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -158,7 +162,12 @@ in a future release.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Add density</span></span></span>
 <span class="r-in"><span><span class="co">## Data from Aitchison 1986</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="va">lava</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">ternary_density</span><span class="op">(</span><span class="va">lava</span>, n <span class="op">=</span> <span class="fl">500</span>, nlevels <span class="op">=</span> <span class="fl">10</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"yellow"</span>, <span class="st">"red"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">levels</span> <span class="op">&lt;-</span> <span class="fu">ternary_density</span><span class="op">(</span><span class="va">lava</span>, n <span class="op">=</span> <span class="fl">500</span>, nlevels <span class="op">=</span> <span class="fl">10</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"yellow"</span>, <span class="st">"red"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Add a legend</span></span></span>
+<span class="r-in"><span><span class="va">legend_image</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/as.raster.html" class="external-link">as.raster</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">levels</span><span class="op">$</span><span class="va">colors</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/rasterImage.html" class="external-link">rasterImage</a></span><span class="op">(</span><span class="va">legend_image</span>, <span class="fl">0.85</span>, <span class="fl">0.75</span>, <span class="fl">0.9</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/text.html" class="external-link">text</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0.9</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.75</span>, <span class="fl">1</span><span class="op">)</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">levels</span><span class="op">$</span><span class="va">levels</span><span class="op">)</span>, pos <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="ternary_density-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
