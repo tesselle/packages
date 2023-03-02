@@ -78,6 +78,7 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other statistics: 
+<code><a href="ternary_density.html">ternary_density</a>()</code>,
 <code><a href="ternary_ellipse.html">ternary_ellipse</a>()</code>,
 <code><a href="ternary_hull.html">ternary_hull</a>()</code></p></div>
     </div>
@@ -88,20 +89,11 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Compositional data</span></span></span>
-<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  X <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">96</span>, <span class="fl">49</span>, <span class="fl">57</span>, <span class="fl">92</span>, <span class="fl">62</span>, <span class="fl">85</span>, <span class="fl">75</span>, <span class="fl">76</span>, <span class="fl">30</span>, <span class="fl">36</span>,</span></span>
-<span class="r-in"><span>        <span class="fl">55</span>, <span class="fl">93</span>, <span class="fl">78</span>, <span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">69</span>, <span class="fl">50</span>, <span class="fl">91</span>, <span class="fl">13</span>, <span class="fl">24</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  Y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">59</span>, <span class="fl">90</span>, <span class="fl">18</span>, <span class="fl">99</span>, <span class="fl">80</span>, <span class="fl">22</span>, <span class="fl">74</span>, <span class="fl">43</span>, <span class="fl">68</span>, <span class="fl">80</span>,</span></span>
-<span class="r-in"><span>        <span class="fl">30</span>, <span class="fl">84</span>, <span class="fl">84</span>, <span class="fl">48</span>, <span class="fl">79</span>, <span class="fl">53</span>, <span class="fl">32</span>, <span class="fl">91</span>, <span class="fl">19</span>, <span class="fl">48</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  Z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">88</span>, <span class="fl">7</span>, <span class="fl">58</span>, <span class="fl">81</span>, <span class="fl">16</span>, <span class="fl">48</span>, <span class="fl">91</span>, <span class="fl">85</span>, <span class="fl">12</span>,</span></span>
-<span class="r-in"><span>        <span class="fl">94</span>, <span class="fl">81</span>, <span class="fl">32</span>, <span class="fl">39</span>, <span class="fl">39</span>, <span class="fl">32</span>, <span class="fl">65</span>, <span class="fl">35</span>, <span class="fl">4</span>, <span class="fl">12</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Mean</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="va">coda</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">ternary_mean</span><span class="op">(</span><span class="va">coda</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="ternary_ellipse.html">ternary_confidence</a></span><span class="op">(</span><span class="va">coda</span>, level <span class="op">=</span> <span class="fl">0.95</span>, border <span class="op">=</span> <span class="st">"red"</span>, lty <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Mean</span></span></span>
+<span class="r-in"><span><span class="co">## Data from Aitchison 1986</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="va">lava</span>, panel.first <span class="op">=</span> <span class="fu"><a href="ternary_grid.html">ternary_grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">ternary_mean</span><span class="op">(</span><span class="va">lava</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="ternary_ellipse.html">ternary_confidence</a></span><span class="op">(</span><span class="va">lava</span>, level <span class="op">=</span> <span class="fl">0.95</span>, border <span class="op">=</span> <span class="st">"red"</span>, lty <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="ternary_mean-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

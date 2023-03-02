@@ -22,6 +22,12 @@
     <loc>https://packages.tesselle.org/isopleuros/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/arctic.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/boxite.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/coordinates_cartesian.html</loc>
   </url>
   <url>
@@ -34,6 +40,9 @@
     <loc>https://packages.tesselle.org/isopleuros/reference/isopleuros-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/lava.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_arrows.html</loc>
   </url>
   <url>
@@ -44,6 +53,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_crosshairs.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/isopleuros/reference/ternary_density.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/isopleuros/reference/ternary_ellipse.html</loc>
