@@ -59,6 +59,9 @@
 <span>  n <span class="op">=</span> <span class="fl">50</span>,</span>
 <span>  nlevels <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/pretty.html" class="external-link">pretty</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">value</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="va">nlevels</span><span class="op">)</span>,</span>
+<span>  ilr <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  linear <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  extrapolate <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  palette <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="va">i</span>, <span class="st">"YlOrRd"</span>, rev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span>
@@ -70,6 +73,9 @@
 <span>  n <span class="op">=</span> <span class="fl">50</span>,</span>
 <span>  nlevels <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/pretty.html" class="external-link">pretty</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">value</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="va">nlevels</span><span class="op">)</span>,</span>
+<span>  ilr <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  linear <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  extrapolate <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  palette <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="va">i</span>, <span class="st">"YlOrRd"</span>, rev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -104,6 +110,21 @@ contour levels desired. Only used if <code>levels</code> is <code>NULL</code>.</
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of levels at which to draw contour lines.</p></dd>
 
 
+<dt>ilr</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should interpolation be computed in ILR
+space? If <code>FALSE</code>, interpolation is computed in Cartesian space.</p></dd>
+
+
+<dt>linear</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should linear interpolation be used?
+If <code>FALSE</code>, spline interpolation is used (see <code><a href="https://rdrr.io/pkg/akima/man/interp.html" class="external-link">akima::interp()</a></code>).</p></dd>
+
+
+<dt>extrapolate</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should extrapolation be used outside
+of the convex hull determined by the data points (see <code><a href="https://rdrr.io/pkg/akima/man/interp.html" class="external-link">akima::interp()</a></code>)?</p></dd>
+
+
 <dt>palette</dt>
 <dd><p>A color palette <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> that takes a single integer
 argument (the number of levels) and returns a vector of colors.</p></dd>
@@ -126,8 +147,7 @@ after an isometric log ratio transformation of the original data.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p><strong>This must be considered as highly experimental and subject to major
-changes in a future release.</strong></p>
+    <p>The <span class="pkg">akima</span> package needs to be installed on your machine.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
