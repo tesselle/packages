@@ -13,6 +13,9 @@
     <loc>https://packages.tesselle.org/ananke/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/articles/bibliography.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/articles/index.html</loc>
   </url>
   <url>
@@ -28,10 +31,64 @@
     <loc>https://packages.tesselle.org/ananke/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/BP.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/CE.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/CalibratedAges-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/F14C.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/allen_complement.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/allen_composition.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/allen_converse.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/allen_intersect.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/allen_relation.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/allen_union.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/ananke-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/b2k.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/c14_calibrate.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/c14_combine.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/c14_curve.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/c14_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/hpdi.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/median.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/mutators.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/oxcal_calibrate.html</loc>
@@ -47,5 +104,8 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/oxcal_setup.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/subset.html</loc>
   </url>
 </urlset>
