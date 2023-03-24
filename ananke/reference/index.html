@@ -89,7 +89,7 @@
         </dt>
         <dd>Union of Allen Relations</dd>
       </dl></div><div class="section level2">
-      <h2 id="time-scales">Time scales<a class="anchor" aria-label="anchor" href="#time-scales"></a></h2>
+      <h2 id="interval-analysis">Interval Analysis<a class="anchor" aria-label="anchor" href="#interval-analysis"></a></h2>
       
       
 
@@ -101,19 +101,14 @@
 
       <dl><dt>
           
-          <code><a href="BP.html">BP_to_CE()</a></code> <code><a href="BP.html">BP_to_b2k()</a></code> <code><a href="BP.html">is_BP()</a></code> 
+          <code><a href="as_graph.html">as_graph()</a></code> 
         </dt>
-        <dd>Before Present</dd>
+        <dd>Graph</dd>
       </dl><dl><dt>
           
-          <code><a href="CE.html">CE_to_BP()</a></code> <code><a href="CE.html">CE_to_b2k()</a></code> <code><a href="CE.html">is_CE()</a></code> 
+          <code><a href="overlap.html">overlap()</a></code> 
         </dt>
-        <dd>Common Era</dd>
-      </dl><dl><dt>
-          
-          <code><a href="b2k.html">b2k_to_BP()</a></code> <code><a href="b2k.html">b2k_to_CE()</a></code> <code><a href="b2k.html">is_b2k()</a></code> 
-        </dt>
-        <dd>Before 2000</dd>
+        <dd>Overlap Test</dd>
       </dl></div><div class="section level2">
       <h2 id="radiocarbon-tools">Radiocarbon tools<a class="anchor" aria-label="anchor" href="#radiocarbon-tools"></a></h2>
       
@@ -151,7 +146,7 @@
         </dt>
         <dd>Plot Calibrated Radiocarbon Ages</dd>
       </dl></div><div class="section level2">
-      <h2 id="statistics">Statistics<a class="anchor" aria-label="anchor" href="#statistics"></a></h2>
+      <h2 id="modeling-tools">Modeling Tools<a class="anchor" aria-label="anchor" href="#modeling-tools"></a></h2>
       
       
 
@@ -163,14 +158,24 @@
 
       <dl><dt>
           
-          <code><a href="hpdi.html">hpdi()</a></code> 
+          <code><a href="proxy.html">proxy()</a></code> 
         </dt>
-        <dd>HPD Regions</dd>
+        <dd>Layer-Counted Proxy Records Uncertainties</dd>
       </dl><dl><dt>
           
-          <code><a href="median.html">median(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
+          <code><a href="proxy_plot.html">plot(<i>&lt;ProxyRecord&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
         </dt>
-        <dd>Median</dd>
+        <dd>Plot Layer-Counted Proxy Records Uncertainties</dd>
+      </dl><dl><dt>
+          
+          <code><a href="rec.html">rec()</a></code> 
+        </dt>
+        <dd>Radiocarbon Event Count</dd>
+      </dl><dl><dt>
+          
+          <code><a href="rec_plot.html">plot(<i>&lt;RECE&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
+        </dt>
+        <dd>Radiocarbon Event Count Ensemble</dd>
       </dl></div><div class="section level2">
       <h2 id="oxcal-tools">OxCal Tools<a class="anchor" aria-label="anchor" href="#oxcal-tools"></a></h2>
       
@@ -189,9 +194,9 @@
         <dd>14C Calibration with OxCal</dd>
       </dl><dl><dt>
           
-          <code><a href="oxcal_download.html">oxcal_download()</a></code> 
+          <code><a href="oxcal_configure.html">oxcal_configure()</a></code> 
         </dt>
-        <dd>Download OxCal</dd>
+        <dd>Setup OxCal</dd>
       </dl><dl><dt>
           
           <code><a href="oxcal_execute.html">oxcal_execute()</a></code> 
@@ -199,14 +204,71 @@
         <dd>Execute an Oxcal Script</dd>
       </dl><dl><dt>
           
+          <code><a href="oxcal_install.html">oxcal_install()</a></code> 
+        </dt>
+        <dd>Download OxCal</dd>
+      </dl><dl><dt>
+          
           <code><a href="oxcal_parse.html">oxcal_parse()</a></code> 
         </dt>
         <dd>Read and Parse OxCal Output</dd>
       </dl><dl><dt>
           
-          <code><a href="oxcal_setup.html">oxcal_setup()</a></code> 
+          <code><a href="oxcal_plot.html">plot(<i>&lt;OxCalOutput&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
         </dt>
-        <dd>Setup OxCal</dd>
+        <dd>Plot OxCal Output</dd>
+      </dl></div><div class="section level2">
+      <h2 id="time-scales">Time scales<a class="anchor" aria-label="anchor" href="#time-scales"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="BP.html">BP_to_CE()</a></code> <code><a href="BP.html">BP_to_b2k()</a></code> <code><a href="BP.html">is_BP()</a></code> 
+        </dt>
+        <dd>Before Present</dd>
+      </dl><dl><dt>
+          
+          <code><a href="CE.html">CE_to_BP()</a></code> <code><a href="CE.html">CE_to_b2k()</a></code> <code><a href="CE.html">is_CE()</a></code> 
+        </dt>
+        <dd>Common Era</dd>
+      </dl><dl><dt>
+          
+          <code><a href="b2k.html">b2k_to_BP()</a></code> <code><a href="b2k.html">b2k_to_CE()</a></code> <code><a href="b2k.html">is_b2k()</a></code> 
+        </dt>
+        <dd>Before 2000</dd>
+      </dl></div><div class="section level2">
+      <h2 id="statistics">Statistics<a class="anchor" aria-label="anchor" href="#statistics"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="hpdi.html">hpdi()</a></code> 
+        </dt>
+        <dd>HPD Regions</dd>
+      </dl><dl><dt>
+          
+          <code><a href="mean.html">mean(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
+        </dt>
+        <dd>Mean</dd>
+      </dl><dl><dt>
+          
+          <code><a href="median.html">median(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
+        </dt>
+        <dd>Median</dd>
       </dl></div><div class="section level2">
       <h2 id="mutators">Mutators<a class="anchor" aria-label="anchor" href="#mutators"></a></h2>
       
@@ -228,6 +290,22 @@
           <code><a href="subset.html">`[`(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
         </dt>
         <dd>Extract or Replace Parts of an Object</dd>
+      </dl></div><div class="section level2">
+      <h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="ksarakil.html">ksarakil</a></code> 
+        </dt>
+        <dd>Ksâr 'Akil Radiocarbon Dates</dd>
       </dl></div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

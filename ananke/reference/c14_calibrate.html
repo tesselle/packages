@@ -71,7 +71,7 @@
 <span>  normalize <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  F14C <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  drop <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  eps <span class="op">=</span> <span class="fl">1e-05</span></span>
+<span>  eps <span class="op">=</span> <span class="fl">1e-06</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -152,7 +152,7 @@ calibration values will be removed.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>Adapted from <code>rcarbon::calibrate()</code>.</p>
+    <p>Adapted from <code>rcarbon::calibrate()</code> by Andrew Bevan and Enrico Crema.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -176,7 +176,7 @@ calibration values will be removed.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Calibrate a single date</span></span></span>
-<span class="r-in"><span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu">c14_calibrate</span><span class="op">(</span><span class="fl">130</span>, <span class="fl">20</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu">c14_calibrate</span><span class="op">(</span><span class="fl">300</span>, <span class="fl">20</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_calibrate-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
@@ -194,35 +194,10 @@ calibration values will be removed.</p></dd>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">CE</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_calibrate-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## HPDI</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="hpdi.html">hpdi</a></span><span class="op">(</span><span class="va">BP</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      lower upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5894  5805 0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5794  5783 0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  5768  5603 0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      lower upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5562  5298 0.94</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5257  5247 0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "BP"</span>
-<span class="r-in"><span><span class="fu"><a href="hpdi.html">hpdi</a></span><span class="op">(</span><span class="va">CE</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      lower upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -3945 -3856 0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] -3845 -3834 0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] -3819 -3654 0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      lower upper    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -3613 -3349 0.94</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] -3308 -3298 0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"calendar")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CE"</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">CE</span>, density <span class="op">=</span> <span class="cn">TRUE</span>, interval <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="c14_calibrate-4.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">CE</span>, density <span class="op">=</span> <span class="cn">FALSE</span>, interval <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="c14_calibrate-5.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

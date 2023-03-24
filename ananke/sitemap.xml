@@ -43,6 +43,18 @@
     <loc>https://packages.tesselle.org/ananke/reference/F14C.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/OxCalFiles-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/OxCalOutput-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/ProxyRecord.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/RECE.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/allen_complement.html</loc>
   </url>
   <url>
@@ -62,6 +74,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/ananke-package.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/as_graph.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/b2k.html</loc>
@@ -85,25 +100,49 @@
     <loc>https://packages.tesselle.org/ananke/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/ksarakil.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/mean.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/median.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/mutators.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/overlap.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/oxcal_calibrate.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_download.html</loc>
+    <loc>https://packages.tesselle.org/ananke/reference/oxcal_configure.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/oxcal_execute.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/oxcal_install.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/oxcal_parse.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_setup.html</loc>
+    <loc>https://packages.tesselle.org/ananke/reference/oxcal_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/proxy.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/proxy_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/rec.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/rec_plot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/subset.html</loc>

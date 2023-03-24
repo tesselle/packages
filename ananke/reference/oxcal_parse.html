@@ -55,39 +55,29 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">file</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S3 method for OxCalFiles</span></span>
-<span><span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">file</span><span class="op">)</span></span>
+<span><span class="co"># S4 method for OxCalFiles</span></span>
+<span><span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S3 method for character</span></span>
-<span><span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">file</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co"># S4 method for character</span></span>
+<span><span class="fu">oxcal_parse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>file</dt>
+    <dl><dt>object</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string naming a JavaScript file which the data
-are to be read from (typically returned by <code><a href="oxcal_execute.html">oxcal_execute()</a></code>).</p></dd>
+are to be read from (or an <code><a href="OxCalFiles-class.html">OxCalFiles</a></code> object returned by
+<code><a href="oxcal_execute.html">oxcal_execute()</a></code>).</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> with the following elements:</p><dl><dt><code>ocd</code></dt>
-<dd><p>A <code>list</code> holding the ranges, probability distributions, etc.
-for each parameter.</p></dd>
-
-<dt><code>model</code></dt>
-<dd><p>A <code>list</code> containing information about the model.</p></dd>
-
-<dt><code>calib</code></dt>
-<dd><p>A <code>list</code> containing information about the calibration
-curve.</p></dd>
-
-
-</dl></div>
+<p>An <code><a href="OxCalOutput-class.html">OxCalOutput</a></code> object.</p>
+    </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p><a href="https://c14.arch.ox.ac.uk/oxcalhelp/hlp_analysis_file.html" class="external-link">https://c14.arch.ox.ac.uk/oxcalhelp/hlp_analysis_file.html</a></p>
@@ -96,9 +86,10 @@ curve.</p></dd>
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other OxCal tools: 
 <code><a href="oxcal_calibrate.html">oxcal_calibrate</a>()</code>,
-<code><a href="oxcal_download.html">oxcal_download</a>()</code>,
+<code><a href="oxcal_configure.html">oxcal_configure</a>()</code>,
 <code><a href="oxcal_execute.html">oxcal_execute</a>()</code>,
-<code><a href="oxcal_setup.html">oxcal_setup</a>()</code></p></div>
+<code><a href="oxcal_install.html">oxcal_install</a>()</code>,
+<code><a href="oxcal_plot.html">oxcal_plot</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -109,7 +100,7 @@ curve.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="co">## Download OxCal</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="oxcal_setup.html">oxcal_setup</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="oxcal_configure.html">oxcal_configure</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Custom script</span></span></span>
 <span class="r-in"><span><span class="va">scr</span> <span class="op">&lt;-</span> <span class="st">'Plot()</span></span></span>
