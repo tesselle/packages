@@ -71,13 +71,26 @@
 <span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  panel.last <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for CalibratedSPD,missing</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ann <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"ann"</span><span class="op">)</span>,</span>
+<span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  frame.plot <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  panel.last <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
-<dd><p>A <code><a href="CalibratedAges-class.html">CalibratedAges</a></code> object.</p></dd>
+<dd><p>A <code><a href="CalibratedAges-class.html">CalibratedAges</a></code> or <code><a href="CalibratedSPD-class.html">CalibratedSPD</a></code> object.</p></dd>
 
 
 <dt>density</dt>
@@ -152,7 +165,8 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <code><a href="F14C.html">F14C</a></code>,
 <code><a href="c14_calibrate.html">c14_calibrate</a>()</code>,
 <code><a href="c14_combine.html">c14_combine</a>()</code>,
-<code><a href="c14_curve.html">c14_curve</a>()</code></p></div>
+<code><a href="c14_curve.html">c14_curve</a>()</code>,
+<code><a href="spd.html">spd</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

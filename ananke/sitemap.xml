@@ -40,6 +40,9 @@
     <loc>https://packages.tesselle.org/ananke/reference/CalibratedAges-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/CalibratedSPD-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/F14C.html</loc>
   </url>
   <url>
@@ -143,6 +146,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/rec_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/spd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/subset.html</loc>
