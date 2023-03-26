@@ -58,6 +58,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for RECE,missing</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
+<span>  scale <span class="op">=</span> <span class="st">"BP"</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="fl">12</span>, <span class="st">"Viridis"</span>, rev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -69,6 +70,11 @@
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>An <code><a href="RECE.html">RECE</a></code> object.</p></dd>
+
+
+<dt>scale</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the chronological scale.
+It must be one of "<code>BP</code>" (cal BP; the default), "<code>CE</code>" or "<code>b2k</code>".</p></dd>
 
 
 <dt>col</dt>

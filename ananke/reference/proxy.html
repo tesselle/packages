@@ -71,7 +71,6 @@ distributions on absolute, error-free time axes.</p>
 <span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span>,</span>
 <span>  grid <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  resolution <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"BP"</span>, <span class="st">"CE"</span>, <span class="st">"b2k"</span><span class="op">)</span>,</span>
 <span>  density <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  n <span class="op">=</span> <span class="fl">100</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -97,11 +96,12 @@ calendar ages were measured.</p></dd>
 
 
 <dt>time</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the calendar ages.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the calendar ages (in cal BP years).</p></dd>
 
 
 <dt>time_error</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the calendar age uncertainties.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the calendar age uncertainties
+(in cal BP years).</p></dd>
 
 
 <dt>from</dt>
@@ -126,11 +126,6 @@ If <code>NULL</code> (the default), equally spaced points will be used (accordin
 resolution (in units of <code>time</code>) at which densities are to be estimated.
 If <code>NULL</code> (the default), the smallest temporal difference between two
 consecutive records will be used.</p></dd>
-
-
-<dt>calendar</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the chronological scale
-It must be one of "<code>BP</code>" (the default), "<code>CE</code>" or "<code>b2k</code>".</p></dd>
 
 
 <dt>density</dt>
