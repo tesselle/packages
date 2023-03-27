@@ -19,9 +19,6 @@
     <loc>https://packages.tesselle.org/ananke/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/articles/oxcal.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/ananke/authors.html</loc>
   </url>
   <url>
@@ -44,12 +41,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/F14C.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/OxCalFiles-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/OxCalOutput-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/ProxyRecord.html</loc>
@@ -116,24 +107,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/overlap.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_calibrate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_configure.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_execute.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_install.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_parse.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/ananke/reference/oxcal_plot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/proxy.html</loc>
