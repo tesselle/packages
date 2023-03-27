@@ -2,8 +2,8 @@ pandoc: 2.19.2
 pkgdown: 2.0.7.9000
 pkgdown_sha: c354aa7e5ea1f9936692494c28c89e5bdd31fc68
 articles:
-  bibliography: bibliography.html
-last_built: 2022-12-16T13:26Z
+  aion: aion.html
+last_built: 2023-03-27T07:34Z
 urls:
   reference: https://packages.tesselle.org/aion/reference
   article: https://packages.tesselle.org/aion/articles

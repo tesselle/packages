@@ -13,7 +13,7 @@
     <loc>https://packages.tesselle.org/aion/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/articles/bibliography.html</loc>
+    <loc>https://packages.tesselle.org/aion/articles/aion.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/articles/index.html</loc>
@@ -28,66 +28,33 @@
     <loc>https://packages.tesselle.org/aion/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/AdjacencyMatrix-class.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/OxCalFiles-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/AoristicSum-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/IntervalMatrix-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/RateOfChange-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/StratigraphicMatrix-class.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/OxCalOutput-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/reference/aion-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/allen_complement.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/allen_composition.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/allen_converse.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/allen_intersect.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/allen_relation.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/allen_union.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/aoristic.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/as_graph.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/as_stratigraphy.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/aion/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/is_dag.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/oxcal_calibrate.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/mutators.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/oxcal_configure.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/overlap.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/oxcal_execute.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/plot_aoristic.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/oxcal_install.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/roc.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/oxcal_parse.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/plot.html</loc>
   </url>
 </urlset>
