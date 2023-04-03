@@ -64,6 +64,9 @@
     <loc>https://packages.tesselle.org/dimensio/reference/dimensio-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/dimnames.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/envelopes.html</loc>
   </url>
   <url>
@@ -85,7 +88,7 @@
     <loc>https://packages.tesselle.org/dimensio/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/dimensio/reference/mutators.html</loc>
+    <loc>https://packages.tesselle.org/dimensio/reference/loadings.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/pca.html</loc>
