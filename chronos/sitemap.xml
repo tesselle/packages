@@ -16,12 +16,6 @@
     <loc>https://packages.tesselle.org/chronos/articles/bibliography.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/articles/chronos.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/articles/import.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/articles/index.html</loc>
   </url>
   <url>
@@ -31,85 +25,43 @@
     <loc>https://packages.tesselle.org/chronos/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/news/index.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/ActivityEvents.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/Calendar-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/AgeDepthModel.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/CalibratedAges-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/CumulativeEvents.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/CalibratedSPD-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/MCMC.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/F14C.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/OccurrenceEvents.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/TimeScale-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/PhasesMCMC.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/c14_calibrate.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/ProxyRecord.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/c14_combine.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/RECE.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/c14_curve.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/RateOfChange.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/TimeRange.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/activity.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/apportion.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/bind.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/boundaries.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/bury.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/calendar.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/check.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/c14_plot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/chronos-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/coda.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/convert.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/coerce.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/credible.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/duration.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/elapse.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/events.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/hiatus.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/era.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/hpdi.html</loc>
@@ -118,60 +70,27 @@
     <loc>https://packages.tesselle.org/chronos/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/interpolate.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/ksarakil.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/mutator.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/mean.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/occurrence.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/median.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/older.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/mutators.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/phase.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/project.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/phases.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/plot.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/proxy.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/read_bcal.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/read_chronomodel.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/read_oxcal.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/rec.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/roc.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/sensitivity.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/sort.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/spd.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/subset.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/summary.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/tempo.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/transition.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/years.html</loc>
   </url>
 </urlset>
