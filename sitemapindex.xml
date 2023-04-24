@@ -7,6 +7,9 @@
     <loc>https://packages.tesselle.org/khroma/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/nexus/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -41,8 +44,5 @@
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/aion/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
