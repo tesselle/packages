@@ -57,41 +57,49 @@
     <h2 id="slots">Slots<a class="anchor" aria-label="anchor" href="#slots"></a></h2>
     
 
-<dl><dt><code>label</code></dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string giving the abbreviated label of the time
-scale.</p></dd>
+<dl><dt><code>.Data</code></dt>
+<dd><p>A <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> giving the the observed time-series
+values.</p></dd>
 
 
-<dt><code>name</code></dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string giving the name of the time scale.</p></dd>
+<dt><code>era_label</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the abbreviated label of
+the time scale.</p></dd>
 
 
-<dt><code>epoch</code></dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the epoch year from which years are
-counted (in Gregorian astronomical years).</p></dd>
+<dt><code>era_name</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the name of the time scale.</p></dd>
 
 
-<dt><code>scale</code></dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of years represented by one
-unit.</p></dd>
+<dt><code>era_epoch</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value specifying the epoch year from which
+years are counted (in Gregorian astronomical years).</p></dd>
 
 
-<dt><code>direction</code></dt>
+<dt><code>era_scale</code></dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of years represented by
+one unit. It should be a power of 10 (i.e. 1000 means ka).</p></dd>
+
+
+<dt><code>era_direction</code></dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying if years are counted backwards
-(\(-1\)) or forwards (\(1\)) from <code>epoch</code>.</p></dd>
+(<code>-1</code>) or forwards (<code>1</code>) from <code>epoch</code>.</p></dd>
+
+
+<dt><code>era_unit</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the name of the year unit.</p></dd>
+
+
+<dt><code>era_days</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the average length of the year in
+solar days.</p></dd>
 
 
 </dl></div>
     <div class="section level2">
-    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>This class inherits from <code><a href="Calendar-class.html">Calendar</a></code>.</p>
-    </div>
-    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other classes: 
-<code><a href="Calendar-class.html">Calendar-class</a></code>,
-<code><a href="CalibratedAges-class.html">CalibratedAges-class</a></code>,
-<code><a href="CalibratedSPD-class.html">CalibratedSPD-class</a></code></p></div>
+<code><a href="TimeSeries-class.html">TimeSeries-class</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

@@ -47,7 +47,7 @@
     </div>
 
     <div class="section level2">
-      <h2 id="radiocarbon-tools">Radiocarbon tools<a class="anchor" aria-label="anchor" href="#radiocarbon-tools"></a></h2>
+      <h2 id="time-scales">Time Scales<a class="anchor" aria-label="anchor" href="#time-scales"></a></h2>
       
       
 
@@ -59,34 +59,50 @@
 
       <dl><dt>
           
-          <code><a href="F14C.html">BP14C_to_F14C()</a></code> <code><a href="F14C.html">F14C_to_BP14C()</a></code> 
+          <code><a href="era.html">era()</a></code> 
         </dt>
-        <dd>F14C</dd>
+        <dd>Time Scales</dd>
       </dl><dl><dt>
           
-          <code><a href="c14_calibrate.html">c14_calibrate()</a></code> 
+          <code><a href="era_get.html">era_label()</a></code> <code><a href="era_get.html">era_name()</a></code> <code><a href="era_get.html">era_epoch()</a></code> <code><a href="era_get.html">era_scale()</a></code> <code><a href="era_get.html">era_direction()</a></code> <code><a href="era_get.html">era_unit()</a></code> <code><a href="era_get.html">era_days()</a></code> 
         </dt>
-        <dd>14C Calibration</dd>
+        <dd>Time Scales Mutators</dd>
+      </dl></div><div class="section level2">
+      <h2 id="time-series">Time Series<a class="anchor" aria-label="anchor" href="#time-series"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="project.html">project()</a></code> 
+        </dt>
+        <dd>Change the Time Scale</dd>
       </dl><dl><dt>
           
-          <code><a href="c14_combine.html">c14_combine()</a></code> 
+          <code><a href="series.html">series()</a></code> 
         </dt>
-        <dd>14C Calibration</dd>
+        <dd>Create Time Series</dd>
       </dl><dl><dt>
           
-          <code><a href="c14_curve.html">c14_curve()</a></code> 
+          <code><a href="start.html">start(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
-        <dd>14C Calibration Curve</dd>
+        <dd>Terminal Times of Time Series</dd>
       </dl><dl><dt>
           
-          <code><a href="c14_plot.html">plot(<i>&lt;CalibratedAges&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="c14_plot.html">plot(<i>&lt;CalibratedSPD&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
+          <code><a href="time.html">time(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
-        <dd>Plot Calibrated Radiocarbon Ages</dd>
+        <dd>Sampling Times of Time Series</dd>
       </dl><dl><dt>
           
-          <code><a href="spd.html">spd()</a></code> 
+          <code><a href="window.html">window(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
-        <dd>Summed Probability Distributions</dd>
+        <dd>Time Series Windows</dd>
       </dl></div><div class="section level2">
       <h2 id="allen-s-interval-algebra">Allen’s Interval Algebra<a class="anchor" aria-label="anchor" href="#allen-s-interval-algebra"></a></h2>
       
@@ -129,6 +145,27 @@
         </dt>
         <dd>Union of Allen Relations</dd>
       </dl></div><div class="section level2">
+      <h2 id="mutators">Mutators<a class="anchor" aria-label="anchor" href="#mutators"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="mutators.html">names(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="mutators.html">`names&lt;-`(<i>&lt;TimeSeries&gt;</i>)</a></code> 
+        </dt>
+        <dd>Get or Set Parts of an Object</dd>
+      </dl><dl><dt>
+          
+          <code><a href="subset.html">`[`(<i>&lt;TimeSeries&gt;</i>)</a></code> 
+        </dt>
+        <dd>Extract or Replace Parts of an Object</dd>
+      </dl></div><div class="section level2">
       <h2 id="statistics">Statistics<a class="anchor" aria-label="anchor" href="#statistics"></a></h2>
       
       
@@ -144,74 +181,6 @@
           <code><a href="hpdi.html">hpdi()</a></code> 
         </dt>
         <dd>HPD Regions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="mean.html">mean(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
-        </dt>
-        <dd>Mean</dd>
-      </dl><dl><dt>
-          
-          <code><a href="median.html">median(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
-        </dt>
-        <dd>Median</dd>
-      </dl></div><div class="section level2">
-      <h2 id="time-scales">Time scales<a class="anchor" aria-label="anchor" href="#time-scales"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="project.html">project()</a></code> 
-        </dt>
-        <dd>Change the Time Scale</dd>
-      </dl><dl><dt>
-          
-          <code><a href="years.html">years()</a></code> 
-        </dt>
-        <dd>Time Grid</dd>
-      </dl></div><div class="section level2">
-      <h2 id="mutators">Mutators<a class="anchor" aria-label="anchor" href="#mutators"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="mutators.html">names(<i>&lt;CalibratedAges&gt;</i>)</a></code> <code><a href="mutators.html">`names&lt;-`(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
-        </dt>
-        <dd>Get or Set Parts of an Object</dd>
-      </dl><dl><dt>
-          
-          <code><a href="subset.html">`[`(<i>&lt;CalibratedAges&gt;</i>)</a></code> 
-        </dt>
-        <dd>Extract or Replace Parts of an Object</dd>
-      </dl></div><div class="section level2">
-      <h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="ksarakil.html">ksarakil</a></code> 
-        </dt>
-        <dd>Ksâr 'Akil Radiocarbon Dates</dd>
       </dl></div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

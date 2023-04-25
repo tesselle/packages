@@ -28,19 +28,10 @@
     <loc>https://packages.tesselle.org/chronos/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/Calendar-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/CalibratedAges-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/CalibratedSPD-class.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/F14C.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/reference/TimeScale-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/TimeSeries-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/allen_complement.html</loc>
@@ -61,18 +52,6 @@
     <loc>https://packages.tesselle.org/chronos/reference/allen_union.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/c14_calibrate.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/c14_combine.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/c14_curve.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/c14_plot.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/reference/chronos-package.html</loc>
   </url>
   <url>
@@ -82,19 +61,13 @@
     <loc>https://packages.tesselle.org/chronos/reference/era.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/era_get.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/hpdi.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/ksarakil.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/mean.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/median.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/mutators.html</loc>
@@ -103,12 +76,18 @@
     <loc>https://packages.tesselle.org/chronos/reference/project.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/spd.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/series.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/start.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/subset.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/years.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/time.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/window.html</loc>
   </url>
 </urlset>

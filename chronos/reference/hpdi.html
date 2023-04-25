@@ -57,17 +57,14 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, <span class="va">density</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, <span class="va">density</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for CalibratedAges,missing</span></span>
-<span><span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">hpdi</span><span class="op">(</span><span class="va">object</span>, <span class="va">density</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the coordinates of the points where
-the density is estimated or a <code><a href="CalibratedAges-class.html">CalibratedAges</a></code> object.</p></dd>
+the density is estimated.</p></dd>
 
 
 <dt>density</dt>
@@ -100,94 +97,10 @@ the HPD interval and associated probabilities.</p>
 .</p>
     </div>
     <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other statistics: 
-<code><a href="mean.html">mean</a>()</code>,
-<code><a href="median.html">median</a>()</code></p></div>
-    </div>
-    <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>N. Frerebeau</p>
     </div>
 
-    <div class="section level2">
-    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Calibrate multiple dates</span></span></span>
-<span class="r-in"><span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu"><a href="c14_calibrate.html">c14_calibrate</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  ages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5000</span>, <span class="fl">4500</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  errors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">45</span>, <span class="fl">35</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"X"</span>, <span class="st">"Y"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## HPDI</span></span></span>
-<span class="r-in"><span><span class="fu">hpdi</span><span class="op">(</span><span class="va">cal</span>, level <span class="op">=</span> <span class="fl">0.683</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5861 5826 0.15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5752 5656 0.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  5619 5609 0.04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5286 5260 0.11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5247 5233 0.06</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  5222 5217 0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]  5190 5157 0.14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]  5144 5053 0.37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="fu">hpdi</span><span class="op">(</span><span class="va">cal</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5894 5805 0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5794 5783 0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  5768 5603 0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5305 5041 0.94</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5000 4990 0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="fu">hpdi</span><span class="op">(</span><span class="va">cal</span>, level <span class="op">=</span> <span class="fl">0.997</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5903 5597 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5316 4964 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Convert BP scale to CE</span></span></span>
-<span class="r-in"><span><span class="va">CE</span> <span class="op">&lt;-</span> <span class="fu"><a href="project.html">project</a></span><span class="op">(</span><span class="va">cal</span>, <span class="st">"CE"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">hpdi</span><span class="op">(</span><span class="va">CE</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start  stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -3944 -3855 0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] -3844 -3833 0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] -3818 -3653 0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start  stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] -3355 -3091 0.94</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] -3050 -3040 0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Convert BP scale to b2k</span></span></span>
-<span class="r-in"><span><span class="va">b2k</span> <span class="op">&lt;-</span> <span class="fu"><a href="project.html">project</a></span><span class="op">(</span><span class="va">cal</span>, <span class="st">"b2k"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">hpdi</span><span class="op">(</span><span class="va">b2k</span>, level <span class="op">=</span> <span class="fl">0.954</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5944 5855 0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5844 5833 0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  5818 5653 0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      start stop    p</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5355 5091 0.94</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  5050 5040 0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-</code></pre></div>
-    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 
