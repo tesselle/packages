@@ -44,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Create Time Series</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/chronos/blob/HEAD/R/time.R" class="external-link"><code>R/time.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/chronos/blob/HEAD/R/series.R" class="external-link"><code>R/series.R</code></a></small>
       <div class="d-none name"><code>series.Rd</code></div>
     </div>
 
@@ -54,21 +54,45 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">series</span><span class="op">(</span><span class="va">data</span>, <span class="va">scale</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix,TimeScale</span></span>
-<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, end <span class="op">=</span> <span class="cn">NULL</span>, frequency <span class="op">=</span> <span class="fl">1</span>, names <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span><span class="fu">series</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  <span class="va">scale</span>,</span>
+<span>  <span class="va">start</span>,</span>
+<span>  end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  frequency <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  delta <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  names <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,TimeScale</span></span>
-<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, end <span class="op">=</span> <span class="cn">NULL</span>, frequency <span class="op">=</span> <span class="fl">1</span>, names <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span><span class="fu">series</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  <span class="va">scale</span>,</span>
+<span>  <span class="va">start</span>,</span>
+<span>  end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  frequency <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  delta <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  names <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame,TimeScale</span></span>
-<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, end <span class="op">=</span> <span class="cn">NULL</span>, frequency <span class="op">=</span> <span class="fl">1</span>, names <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">series</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  <span class="va">scale</span>,</span>
+<span>  <span class="va">start</span>,</span>
+<span>  end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  frequency <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  delta <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  names <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>object</dt>
+    <dl><dt>data</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> <code>vector</code> or <code>matrix</code> of the observed time-series
 values. A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> will be coerced to a <code>numeric</code> <code>matrix</code> via
 <code><a href="https://rdrr.io/r/base/data.matrix.html" class="external-link">data.matrix()</a></code>.</p></dd>
@@ -93,8 +117,13 @@ last observation.</p></dd>
 
 
 <dt>frequency</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the time
-difference between two observations (resolution), in years.</p></dd>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the number of
+observations per year. Only used if <code>delta</code> is <code>NULL</code>.</p></dd>
+
+
+<dt>delta</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the fraction of
+year between successive observations.</p></dd>
 
 
 <dt>names</dt>
@@ -117,6 +146,7 @@ year 1950).</p>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other time series tools: 
+<code><a href="plot.html">plot</a>()</code>,
 <code><a href="project.html">project</a>()</code>,
 <code><a href="start.html">start</a>()</code>,
 <code><a href="time.html">time</a>()</code>,
@@ -129,16 +159,19 @@ year 1950).</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Univariate</span></span></span>
-<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"BCE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create time-series of 100 observations</span></span></span>
+<span class="r-in"><span><span class="co">## Sampled every years starting from 1000 CE</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Univariate</span></span></span>
+<span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"BCE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "S1"</span>
-<span class="r-in"><span><span class="fu"><a href="start.html">start</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="start.html">start</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1000</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 701</span>
-<span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 1000  999  998  997  996  995  994  993  992  991  990  989  988  987  986</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [16]  985  984  983  982  981  980  979  978  977  976  975  974  973  972  971</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [31]  970  969  968  967  966  965  964  963  962  961  960  959  958  957  956</span>
@@ -161,15 +194,15 @@ year 1950).</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [286]  715  714  713  712  711  710  709  708  707  706  705  704  703  702  701</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Multivariate</span></span></span>
-<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "S1" "S2" "S3"</span>
-<span class="r-in"><span><span class="fu"><a href="start.html">start</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="start.html">start</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1000</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1099</span>
-<span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 1000 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044</span>
