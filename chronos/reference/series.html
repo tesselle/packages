@@ -57,13 +57,13 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix,TimeScale</span></span>
-<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, <span class="va">increment</span>, labels <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, end <span class="op">=</span> <span class="cn">NULL</span>, frequency <span class="op">=</span> <span class="fl">1</span>, names <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,TimeScale</span></span>
-<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, <span class="va">increment</span>, labels <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, end <span class="op">=</span> <span class="cn">NULL</span>, frequency <span class="op">=</span> <span class="fl">1</span>, names <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame,TimeScale</span></span>
-<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, <span class="va">increment</span>, labels <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">series</span><span class="op">(</span><span class="va">object</span>, <span class="va">scale</span>, <span class="va">start</span>, end <span class="op">=</span> <span class="cn">NULL</span>, frequency <span class="op">=</span> <span class="fl">1</span>, names <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -87,12 +87,17 @@ values. A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external
 first observation.</p></dd>
 
 
-<dt>increment</dt>
+<dt>end</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the year of the
+last observation.</p></dd>
+
+
+<dt>frequency</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the time
 difference between two observations (resolution), in years.</p></dd>
 
 
-<dt>labels</dt>
+<dt>names</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the names of the time
 series.</p></dd>
 
@@ -102,6 +107,12 @@ series.</p></dd>
     
 
 <p>A <code><a href="TimeSeries-class.html">TimeSeries</a></code> object.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p><code>series()</code> only supports data sampled at equidistant points in time,
+expressed in decimal years (1950 means 1950.0, i.e. the beginning of the
+year 1950).</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -119,14 +130,14 @@ series.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Univariate</span></span></span>
-<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"BCE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span>, increment <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"BCE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "S1"</span>
 <span class="r-in"><span><span class="fu"><a href="start.html">start</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1000</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 699</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 701</span>
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 1000  999  998  997  996  995  994  993  992  991  990  989  988  987  986</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [16]  985  984  983  982  981  980  979  978  977  976  975  974  973  972  971</span>
@@ -150,7 +161,7 @@ series.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [286]  715  714  713  712  711  710  709  708  707  706  705  704  703  702  701</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Multivariate</span></span></span>
-<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span>, increment <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu">series</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, start <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "S1" "S2" "S3"</span>
