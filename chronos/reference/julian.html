@@ -75,9 +75,9 @@
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other time scales tools: 
+<code><a href="calendar_get.html">calendar_get</a></code>,
+<code><a href="calendar.html">calendar</a>()</code>,
 <code><a href="convert.html">convert</a>()</code>,
-<code><a href="era_get.html">era_get</a></code>,
-<code><a href="era.html">era</a>()</code>,
 <code><a href="gregorian.html">gregorian</a></code></p></div>
     </div>
     <div class="section level2">
@@ -87,7 +87,13 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create a custom gregorian calendar</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Define time scales</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">BP</span> <span class="op">&lt;-</span> <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Before Present (BP): Gregorian years (365.243 days) counted backwards from 1950.</span>
+<span class="r-in"><span><span class="op">(</span><span class="va">AD</span> <span class="op">&lt;-</span> <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"AD"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Anno Domini (AD): Gregorian years (365.243 days) counted forwards from 0.</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Create a custom gregorian calendar</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="gregorian.html">as_gregorian</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  label <span class="op">=</span> <span class="st">"AUC"</span>,</span></span>
 <span class="r-in"><span>  name <span class="op">=</span> <span class="st">"Ab urbe condita"</span>,</span></span>

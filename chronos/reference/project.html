@@ -81,7 +81,7 @@
 <dt>target</dt>
 <dd><p>A <code><a href="TimeSeries-class.html">TimeSeries</a></code> object serving as a template for the
 target calendar. Alternatively, a <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the target
-calendar or a <code><a href="TimeScale-class.html">TimeScale</a></code> object (see <code><a href="era.html">era()</a></code>).</p></dd>
+calendar or a <code><a href="TimeScale-class.html">TimeScale</a></code> object (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
 
 
 <dt>...</dt>
@@ -97,6 +97,9 @@ calendar or a <code><a href="TimeScale-class.html">TimeScale</a></code> object (
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other time series tools: 
+<code><a href="as_date.html">as_date</a>()</code>,
+<code><a href="as_fixed.html">as_fixed</a>()</code>,
+<code><a href="as_year.html">as_year</a>()</code>,
 <code><a href="plot.html">plot</a>()</code>,
 <code><a href="series.html">series</a>()</code>,
 <code><a href="start.html">start</a>()</code>,
@@ -112,11 +115,11 @@ calendar or a <code><a href="TimeScale-class.html">TimeScale</a></code> object (
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create time series</span></span></span>
-<span class="r-in"><span><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1100</span><span class="op">:</span><span class="fl">1199</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1100</span><span class="op">:</span><span class="fl">1199</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Reproject to BP time scale</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu">project</span><span class="op">(</span><span class="va">A</span>, <span class="fu"><a href="era.html">era</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu">project</span><span class="op">(</span><span class="va">A</span>, <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 time series observed between 950 and 851 BP.</span>
 <span class="r-in"><span><span class="op">(</span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu">project</span><span class="op">(</span><span class="va">B</span>, <span class="va">A</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 time series observed between 850 and 751 BP.</span>

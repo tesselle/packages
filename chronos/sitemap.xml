@@ -49,6 +49,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/JulianCalendar-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/RataDie-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/TimeLine-class.html</loc>
   </url>
   <url>
@@ -76,19 +79,34 @@
     <loc>https://packages.tesselle.org/chronos/reference/allen_union.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/arithmetic.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/as_date.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/as_fixed.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/as_year.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/b2k-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/calendar.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/calendar_get.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/chronos-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/compare.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/convert.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/era.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/era_get.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/gregorian.html</loc>
