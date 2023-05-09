@@ -5,15 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A toolkit for archaeological time series and temporal
-    reasoning. This package provides classes and methods to represent and
-    work with archaeological time series. This package includes common
+<meta name="description" content="A toolkit for archaeological time series analysis and
+    temporal reasoning. This package provides classes and methods to
+    represent and work with archaeological time series. It includes common
     time scales (e.g., before present, common era) and supports
-    user-defined scales.  Time series can be reprojected to a different
-    time scale (e.g. from BP to CE years).  This package includes common
-    time scales (e.g., before present, common era) and supports
-    user-defined scales.  It also includes tools to describe and analyze
-    finite time intervals.">
+    user-defined scales. Time series can be reprojected to a different
+    time scale (e.g. from BP to CE years). It also includes tools to
+    describe and analyze finite time intervals.">
 <title>Archaeological Time Series • chronos</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -23,20 +21,18 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.5/font.css" rel="stylesheet">
-<link href="deps/Ubuntu-0.4.5/font.css" rel="stylesheet">
+<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.6/font.css" rel="stylesheet">
+<link href="deps/Ubuntu-0.4.6/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Archaeological Time Series">
-<meta property="og:description" content="A toolkit for archaeological time series and temporal
-    reasoning. This package provides classes and methods to represent and
-    work with archaeological time series. This package includes common
+<meta property="og:description" content="A toolkit for archaeological time series analysis and
+    temporal reasoning. This package provides classes and methods to
+    represent and work with archaeological time series. It includes common
     time scales (e.g., before present, common era) and supports
-    user-defined scales.  Time series can be reprojected to a different
-    time scale (e.g. from BP to CE years).  This package includes common
-    time scales (e.g., before present, common era) and supports
-    user-defined scales.  It also includes tools to describe and analyze
-    finite time intervals.">
+    user-defined scales. Time series can be reprojected to a different
+    time scale (e.g. from BP to CE years). It also includes tools to
+    describe and analyze finite time intervals.">
 <meta property="og:image" content="https://packages.tesselle.org/chronos/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
@@ -104,7 +100,8 @@
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p>Base R ships with a lot of functionality useful for time series, in particular in the <strong>stats</strong> package: a time-series object can be created with the <code><a href="https://rdrr.io/r/stats/ts.html" class="external-link">stats::ts()</a></code> function. These objects are agnostic: the unit of time is not relevant, only the sampling frequency matters. Most of the archaeological time-series are different, because they are defined for a given year-based time scale (in the same way that geographic data are linked to a coordinate system).</p>
-<p><strong>chronos</strong> provides a system of classes and methods to represent and work with such time-series. This package includes common time scales (e.g., before present, common era) and supports user-defined scales. Time-series can be reprojected to a different time scale (e.g. from BP to CE years). <strong>chronos</strong> only supports data sampled at equidistant points in time, expressed in decimal years (1950 means 1950.0, i.e. the beginning of the year 1950).</p>
+<p><strong>chronos</strong> provides a system of classes and methods to represent and work with such time-series. This package includes common Gregorian era (e.g., before present, common era) and supports user-defined time scales. Time-series can be reprojected to a different time scale (e.g. from BP to CE years).</p>
+<p><strong>chronos</strong> only supports dates expressed in decimal years (1950 means 1950.0, i.e. the beginning of the year 1950) and uses astronomical notation (<strong>there is a year 0</strong>).</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -127,10 +124,9 @@
 <code class="sourceCode R"><span><span class="co">## Create 6 time-series of 50 observations</span></span>
 <span><span class="co">## Sampled every two years starting from 2000 BP</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/series.html">series</a></span><span class="op">(</span></span>
-<span>  data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">50</span>, ncol <span class="op">=</span> <span class="fl">6</span><span class="op">)</span>,</span>
-<span>  scale <span class="op">=</span> <span class="fu"><a href="reference/era.html">era</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span>,</span>
-<span>  start <span class="op">=</span> <span class="fl">2000</span>,</span>
-<span>  delta <span class="op">=</span> <span class="fl">2</span></span>
+<span>  object <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">50</span>, ncol <span class="op">=</span> <span class="fl">6</span><span class="op">)</span>,</span>
+<span>  time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">2000</span>, by <span class="op">=</span> <span class="op">-</span><span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,</span>
+<span>  calendar <span class="op">=</span> <span class="fu"><a href="reference/era.html">era</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Reproject to the CE time scale</span></span>

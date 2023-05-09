@@ -28,6 +28,30 @@
     <loc>https://packages.tesselle.org/chronos/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/AD-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/BC-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/BCE-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/BP-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/CE-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/GregorianCalendar-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/JulianCalendar-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/TimeLine-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/TimeScale-class.html</loc>
   </url>
   <url>
@@ -52,6 +76,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/allen_union.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/b2k-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/chronos-package.html</loc>
   </url>
   <url>
@@ -64,10 +91,16 @@
     <loc>https://packages.tesselle.org/chronos/reference/era_get.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/hpdi.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/gregorian.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/interval_hdr.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/julian.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/mutators.html</loc>
@@ -92,5 +125,8 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/window.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/years.html</loc>
   </url>
 </urlset>
