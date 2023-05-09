@@ -40,9 +40,6 @@
     <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://packages.tesselle.org/fasti/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
     <loc>https://packages.tesselle.org/aion/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
