@@ -52,9 +52,6 @@
     <loc>https://packages.tesselle.org/chronos/reference/RataDie-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/TimeLine-class.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/reference/TimeScale-class.html</loc>
   </url>
   <url>
@@ -115,9 +112,6 @@
     <loc>https://packages.tesselle.org/chronos/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/interval_hdr.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/reference/julian.html</loc>
   </url>
   <url>
@@ -125,9 +119,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/plot.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/project.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/series.html</loc>
@@ -143,8 +134,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/window.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/chronos/reference/years.html</loc>
   </url>
 </urlset>

@@ -59,17 +59,22 @@
 
       <dl><dt>
           
-          <code><a href="calendar.html">calendar()</a></code> 
+          <code><a href="calendar.html">calendar()</a></code> <code><a href="calendar.html">BP()</a></code> <code><a href="calendar.html">b2k()</a></code> <code><a href="calendar.html">BC()</a></code> <code><a href="calendar.html">BCE()</a></code> <code><a href="calendar.html">AD()</a></code> <code><a href="calendar.html">CE()</a></code> 
         </dt>
-        <dd>Era</dd>
+        <dd>Calendar</dd>
       </dl><dl><dt>
           
-          <code><a href="calendar_get.html">calendar_label()</a></code> <code><a href="calendar_get.html">calendar_name()</a></code> <code><a href="calendar_get.html">calendar_calendar()</a></code> <code><a href="calendar_get.html">calendar_epoch()</a></code> <code><a href="calendar_get.html">calendar_direction()</a></code> <code><a href="calendar_get.html">calendar_year()</a></code> 
+          <code><a href="calendar_get.html">calendar_label()</a></code> <code><a href="calendar_get.html">calendar_name()</a></code> <code><a href="calendar_get.html">calendar_unit()</a></code> <code><a href="calendar_get.html">calendar_epoch()</a></code> <code><a href="calendar_get.html">calendar_direction()</a></code> 
         </dt>
-        <dd>Era Parameters</dd>
+        <dd>Calendar Parameters</dd>
       </dl><dl><dt>
           
-          <code><a href="gregorian.html">is_gregorian()</a></code> <code><a href="gregorian.html">as_gregorian()</a></code> 
+          <code><a href="convert.html">convert()</a></code> 
+        </dt>
+        <dd>Calendar Converter</dd>
+      </dl><dl><dt>
+          
+          <code><a href="gregorian.html">is_gregorian()</a></code> 
         </dt>
         <dd>Gregorian Calendar</dd>
       </dl><dl><dt>
@@ -78,7 +83,7 @@
         </dt>
         <dd>Julian Calendar</dd>
       </dl></div><div class="section level2">
-      <h2 id="time-series">Time Series<a class="anchor" aria-label="anchor" href="#time-series"></a></h2>
+      <h2 id="rata-die">Rata die<a class="anchor" aria-label="anchor" href="#rata-die"></a></h2>
       
       
 
@@ -92,27 +97,33 @@
           
           <code><a href="as_date.html">as_date()</a></code> 
         </dt>
-        <dd>Date Conversion from Rata Die</dd>
+        <dd>Date Conversion from <em>Rata Die</em></dd>
       </dl><dl><dt>
           
           <code><a href="as_fixed.html">as_fixed()</a></code> 
         </dt>
-        <dd>Rata Die</dd>
+        <dd><em>Rata Die</em></dd>
       </dl><dl><dt>
           
           <code><a href="as_year.html">as_year()</a></code> 
         </dt>
-        <dd>Year Conversion from Rata Die</dd>
-      </dl><dl><dt>
+        <dd>Year Conversion from <em>Rata Die</em></dd>
+      </dl></div><div class="section level2">
+      <h2 id="time-series">Time Series<a class="anchor" aria-label="anchor" href="#time-series"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="plot.html">plot(<i>&lt;TimeSeries&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> 
         </dt>
         <dd>Plot Time Series</dd>
-      </dl><dl><dt>
-          
-          <code><a href="project.html">project()</a></code> 
-        </dt>
-        <dd>Change the Time Scale</dd>
       </dl><dl><dt>
           
           <code><a href="series.html">series()</a></code> 
@@ -120,12 +131,12 @@
         <dd>Create Time Series</dd>
       </dl><dl><dt>
           
-          <code><a href="start.html">start(<i>&lt;TimeLine&gt;</i>)</a></code> <code><a href="start.html">start(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;TimeLine&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;TimeSeries&gt;</i>)</a></code> 
+          <code><a href="start.html">start(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="start.html">start(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Terminal Times of Time Series</dd>
       </dl><dl><dt>
           
-          <code><a href="time.html">time(<i>&lt;TimeLine&gt;</i>)</a></code> <code><a href="time.html">time(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="time.html">frequency(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="time.html">frequency(<i>&lt;TimeSeries&gt;</i>)</a></code> 
+          <code><a href="time.html">time(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="time.html">time(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="time.html">frequency(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="time.html">frequency(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Sampling Times of Time Series</dd>
       </dl><dl><dt>
@@ -133,11 +144,6 @@
           <code><a href="window.html">window(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Time Series Windows</dd>
-      </dl><dl><dt>
-          
-          <code><a href="years.html">years()</a></code> 
-        </dt>
-        <dd>Year Vectors</dd>
       </dl></div><div class="section level2">
       <h2 id="operators">Operators<a class="anchor" aria-label="anchor" href="#operators"></a></h2>
       
@@ -151,12 +157,12 @@
 
       <dl><dt>
           
-          <code><a href="arithmetic.html">Arith(<i>&lt;TimeLine&gt;</i>,<i>&lt;TimeLine&gt;</i>)</a></code> 
+          <code><a href="arithmetic.html">Arith(<i>&lt;RataDie&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> 
         </dt>
         <dd>Arithmetic Operators</dd>
       </dl><dl><dt>
           
-          <code><a href="compare.html">Compare(<i>&lt;TimeLine&gt;</i>,<i>&lt;TimeLine&gt;</i>)</a></code> 
+          <code><a href="compare.html">Compare(<i>&lt;RataDie&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> 
         </dt>
         <dd>Chronological Comparison</dd>
       </dl></div><div class="section level2">
@@ -172,30 +178,14 @@
 
       <dl><dt>
           
-          <code><a href="mutators.html">names(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="mutators.html">`names&lt;-`(<i>&lt;TimeSeries&gt;</i>)</a></code> 
+          <code><a href="mutators.html">mutators</a></code> <code><a href="mutators.html">get</a></code> <code><a href="mutators.html">set</a></code> 
         </dt>
         <dd>Get or Set Parts of an Object</dd>
       </dl><dl><dt>
           
-          <code><a href="subset.html">`[`(<i>&lt;TimeLine&gt;</i>)</a></code> <code><a href="subset.html">`[`(<i>&lt;TimeSeries&gt;</i>)</a></code> 
+          <code><a href="subset.html">`[`(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="subset.html">`[`(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Extract or Replace Parts of an Object</dd>
-      </dl></div><div class="section level2">
-      <h2 id="statistics">Statistics<a class="anchor" aria-label="anchor" href="#statistics"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="interval_hdr.html">interval_hdr()</a></code> 
-        </dt>
-        <dd>HPD Regions</dd>
       </dl></div><div class="section level2">
       <h2 id="allen-s-interval-algebra">Allen’s Interval Algebra<a class="anchor" aria-label="anchor" href="#allen-s-interval-algebra"></a></h2>
       

@@ -43,13 +43,13 @@
 </nav><div class="container template-reference-topic">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Date Conversion from Rata Die</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/chronos/blob/HEAD/R/calendar-gregorian.R" class="external-link"><code>R/calendar-gregorian.R</code></a></small>
+      <img src="../logo.png" class="logo" alt=""><h1>Date Conversion from <em>Rata Die</em></h1>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/chronos/blob/HEAD/R/years.R" class="external-link"><code>R/years.R</code></a></small>
       <div class="d-none name"><code>as_date.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
-    <p>Date Conversion from Rata Die</p>
+    <p>Date Conversion from <em>Rata Die</em></p>
     </div>
 
     <div class="section level2">
@@ -57,7 +57,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">as_date</span><span class="op">(</span><span class="va">object</span>, <span class="va">calendar</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,GregorianCalendar</span></span>
-<span><span class="fu">as_date</span><span class="op">(</span><span class="va">object</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">as_date</span><span class="op">(</span><span class="va">object</span>, <span class="va">calendar</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -71,17 +71,17 @@
 
 </dl></div>
     <div class="section level2">
+    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+    <p>Reingold, E. M. and Dershowitz, N. (2018). <em>Calendrical Calculations:
+The Ultimate Edition</em>. Cambridge University Press.
+<a href="https://doi.org/10.1017/9781107415058" class="external-link">doi:10.1017/9781107415058</a>
+.</p>
+    </div>
+    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other time series tools: 
+    <div class="dont-index"><p>Other fixed date tools: 
 <code><a href="as_fixed.html">as_fixed</a>()</code>,
-<code><a href="as_year.html">as_year</a>()</code>,
-<code><a href="plot.html">plot</a>()</code>,
-<code><a href="project.html">project</a>()</code>,
-<code><a href="series.html">series</a>()</code>,
-<code><a href="start.html">start</a>()</code>,
-<code><a href="time.html">time</a>()</code>,
-<code><a href="window.html">window</a>()</code>,
-<code><a href="years.html">years</a>()</code></p></div>
+<code><a href="as_year.html">as_year</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -90,21 +90,22 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## R foundation</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="years.html">years</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1994</span>, <span class="fl">2000</span><span class="op">)</span>, <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Common Era (CE): Gregorian years (365.243 days) counted forwards from 0.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1994 2000</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1994" "2000"</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## R 1.0.0</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_fixed.html">as_fixed</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2000</span>, month <span class="op">=</span> <span class="fl">02</span>, day <span class="op">=</span> <span class="fl">29</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "RataDie"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 730179</span>
+<span class="r-in"><span><span class="fu">as_date</span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   year month day</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2000     2  29</span>
+<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2000</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Vector of years expressed in ka BP</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">ka</span> <span class="op">&lt;-</span> <span class="fu"><a href="years.html">years</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">40</span><span class="op">)</span>, <span class="fu"><a href="calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span>, scale <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Before Present (BP): Gregorian years (365.243 days) counted backwards from 1950.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 30000 35000 40000</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">ka</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "30000" "35000" "40000"</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">ka</span>, format <span class="op">=</span> <span class="st">"ka"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "30000" "35000" "40000"</span>
+<span class="r-in"><span><span class="op">(</span><span class="va">ka</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_fixed.html">as_fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">40</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">BP</a></span><span class="op">(</span><span class="op">)</span>, scale <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "RataDie"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -10245417 -12071629 -13897842</span>
+<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">ka</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -28050 -33050 -38050</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

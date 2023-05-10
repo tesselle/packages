@@ -99,9 +99,10 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>Base R ships with a lot of functionality useful for time series, in particular in the <strong>stats</strong> package: a time-series object can be created with the <code><a href="https://rdrr.io/r/stats/ts.html" class="external-link">stats::ts()</a></code> function. These objects are agnostic: the unit of time is not relevant, only the sampling frequency matters. Most of the archaeological time-series are different, because they are defined for a given year-based time scale (in the same way that geographic data are linked to a coordinate system).</p>
-<p><strong>chronos</strong> provides a system of classes and methods to represent and work with such time-series. This package includes common Gregorian era (e.g., before present, common era) and supports user-defined time scales. Time-series can be reprojected to a different time scale (e.g. from BP to CE years).</p>
-<p><strong>chronos</strong> only supports dates expressed in decimal years (1950 means 1950.0, i.e. the beginning of the year 1950) and uses astronomical notation (<strong>there is a year 0</strong>).</p>
+<p>Base R ships with a lot of functionality useful for time series, in particular in the <strong>stats</strong> package: a time-series object can be created with the <code><a href="https://rdrr.io/r/stats/ts.html" class="external-link">stats::ts()</a></code> function. These objects are agnostic: the unit of time is not relevant, only the sampling frequency matters. Most archaeological time series are different because they are defined for a given calendar era and may involve dates far in the past.</p>
+<p><strong>chronos</strong> provides a system of classes and methods to represent and work with such time-series. Dates are represented as <em>rata die</em> (Reingold and Dershowitz 2018), i.e. the number of days since 01-01-01 (Gregorian), with negative values for earlier dates. This system allows to represent dates independently of any calendar: it makes calculations and comparisons easier.</p>
+<p>Once a time series is created with <strong>chronos</strong>, any calendar can be used for printing or plotting data (defaults to Gregorian Common Era; see <code>vignette("manual")</code>).</p>
+<p>This package supports usual Gregorian era (e.g. Common Era, Before Present), more calendars will be gradually implemented. Note that <strong>chronos</strong> uses the astronomical notation for Gregorian years (there is a year 0).</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -121,26 +122,34 @@
 <code class="sourceCode R"><span><span class="co">## Load package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/chronos/">chronos</a></span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Create 6 time-series of 50 observations</span></span>
+<code class="sourceCode R"><span><span class="co">## Set seed for reproductibility</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Create 6 time-series of 50 observations</span></span>
 <span><span class="co">## Sampled every two years starting from 2000 BP</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/series.html">series</a></span><span class="op">(</span></span>
 <span>  object <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">50</span>, ncol <span class="op">=</span> <span class="fl">6</span><span class="op">)</span>,</span>
 <span>  time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">2000</span>, by <span class="op">=</span> <span class="op">-</span><span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,</span>
-<span>  calendar <span class="op">=</span> <span class="fu">era</span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span></span>
+<span>  calendar <span class="op">=</span> <span class="fu"><a href="reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Reproject to the CE time scale</span></span>
-<span><span class="op">(</span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/project.html">project</a></span><span class="op">(</span><span class="va">X</span>, <span class="fu">era</span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 6 time series observed between -50 and 48 CE.</span></span>
-<span></span>
 <span><span class="co">## Plot</span></span>
-<span><span class="fu"><a href="reference/plot.html">plot</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="reference/plot.html">plot</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="co"># Default calendar</span></span></code></pre></div>
 <p><img src="reference/figures/README-time-series-1.png"><!-- --></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
 </h2>
 <p>Please note that the <strong>chronos</strong> project is released with a <a href="https://www.tesselle.org/conduct.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-reingold2018" class="csl-entry">
+Reingold, Edward M., and Nachum Dershowitz. 2018. <em>Calendrical Calculations: The Ultimate Edition</em>. 4th ed. Cambridge University Press. <a href="https://doi.org/10.1017/9781107415058" class="external-link uri">https://doi.org/10.1017/9781107415058</a>.
+</div>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
