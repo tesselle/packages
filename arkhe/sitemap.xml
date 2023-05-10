@@ -94,10 +94,22 @@
     <loc>https://packages.tesselle.org/arkhe/reference/infinite.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/interval_credible.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/interval_hdr.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/jackknife.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/keep.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/math_gcd.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/math_lcm.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/missing.html</loc>
@@ -128,6 +140,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/validate.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/with_seed.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/zero.html</loc>
