@@ -91,6 +91,12 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/infinite.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/interval_credible.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/interval_hdr.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/jackknife.html</loc>
   </url>
   <url>
