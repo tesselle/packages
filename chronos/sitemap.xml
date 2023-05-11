@@ -82,6 +82,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/as_date.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/as_decimal.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/as_year.html</loc>
   </url>
   <url>
@@ -101,6 +104,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/fixed.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/fixed_gregorian.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/gregorian.html</loc>

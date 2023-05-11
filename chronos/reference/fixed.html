@@ -66,7 +66,8 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>year</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of (decimal) years.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of years. If <code>month</code> and <code>day</code> are missing,
+decimal years are expected.</p></dd>
 
 
 <dt>month</dt>
@@ -78,7 +79,8 @@
 
 
 <dt>calendar</dt>
-<dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
+<dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object specifying the calendar of
+<code>year</code>, <code>month</code> and <code>day</code> (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
 
 
 <dt>...</dt>
@@ -112,7 +114,9 @@ The Ultimate Edition</em>. Cambridge University Press.
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other fixed date tools: 
 <code><a href="as_date.html">as_date</a>()</code>,
-<code><a href="as_year.html">as_year</a>()</code></p></div>
+<code><a href="as_decimal.html">as_decimal</a>()</code>,
+<code><a href="as_year.html">as_year</a>()</code>,
+<code><a href="fixed_gregorian.html">fixed_gregorian</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -129,7 +133,7 @@ The Ultimate Edition</em>. Cambridge University Press.
 <span class="r-out co"><span class="r-pr">#&gt;</span>   year month day</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 2000     2  29</span>
 <span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2000.161</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Vector of years expressed in ka BP</span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">ka</span> <span class="op">&lt;-</span> <span class="fu">fixed</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">40</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, scale <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></span>
