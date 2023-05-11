@@ -163,12 +163,12 @@ a particular calendar:</p>
 <p><em>Rata die</em> can be represented as (nicely formated) character
 vectors:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">rd</span><span class="op">)</span> <span class="co"># Default calendar (Gregorian Common Era)</span></span>
-<span><span class="co">#&gt;  [1] "-6592992" "-6585687" "-6578382" "-6571077" "-6563772" "-6556467"</span></span>
-<span><span class="co">#&gt;  [7] "-6549162" "-6541857" "-6534553" "-6527248"</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">rd</span>, format <span class="op">=</span> <span class="st">"ka"</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] "-6592992" "-6585687" "-6578382" "-6571077" "-6563772" "-6556467"</span></span>
-<span><span class="co">#&gt;  [7] "-6549162" "-6541857" "-6534553" "-6527248"</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/format.html">format</a></span><span class="op">(</span><span class="va">rd</span><span class="op">)</span> <span class="co"># Default calendar (Gregorian Common Era)</span></span>
+<span><span class="co">#&gt;  [1] "-18050 CE" "-18030 CE" "-18010 CE" "-17990 CE" "-17970 CE" "-17950 CE"</span></span>
+<span><span class="co">#&gt;  [7] "-17930 CE" "-17910 CE" "-17890 CE" "-17870 CE"</span></span>
+<span><span class="fu"><a href="../reference/format.html">format</a></span><span class="op">(</span><span class="va">rd</span>, format <span class="op">=</span> <span class="st">"ka"</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] "20 ka BP"    "19.98 ka BP" "19.96 ka BP" "19.94 ka BP" "19.92 ka BP"</span></span>
+<span><span class="co">#&gt;  [6] "19.9 ka BP"  "19.88 ka BP" "19.86 ka BP" "19.84 ka BP" "19.82 ka BP"</span></span></code></pre></div>
 <p>Note that <strong>chronos</strong> uses the astronomical notation for
 Gregorian years (there <em>is</em> a year 0).</p>
 </div>
