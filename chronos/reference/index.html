@@ -59,7 +59,7 @@
 
       <dl><dt>
           
-          <code><a href="calendar.html">calendar()</a></code> <code><a href="calendar.html">BP()</a></code> <code><a href="calendar.html">b2k()</a></code> <code><a href="calendar.html">BC()</a></code> <code><a href="calendar.html">BCE()</a></code> <code><a href="calendar.html">AD()</a></code> <code><a href="calendar.html">CE()</a></code> 
+          <code><a href="calendar.html">calendar()</a></code> 
         </dt>
         <dd>Calendar</dd>
       </dl><dl><dt>
@@ -74,12 +74,12 @@
         <dd>Calendar Converter</dd>
       </dl><dl><dt>
           
-          <code><a href="gregorian.html">is_gregorian()</a></code> 
+          <code><a href="gregorian.html">BP()</a></code> <code><a href="gregorian.html">b2k()</a></code> <code><a href="gregorian.html">BC()</a></code> <code><a href="gregorian.html">BCE()</a></code> <code><a href="gregorian.html">AD()</a></code> <code><a href="gregorian.html">CE()</a></code> 
         </dt>
         <dd>Gregorian Calendar</dd>
       </dl><dl><dt>
           
-          <code><a href="julian.html">is_julian()</a></code> 
+          <code><a href="julian.html">julian</a></code> 
         </dt>
         <dd>Julian Calendar</dd>
       </dl></div><div class="section level2">
@@ -100,14 +100,14 @@
         <dd>Date Conversion from <em>Rata Die</em></dd>
       </dl><dl><dt>
           
-          <code><a href="as_fixed.html">as_fixed()</a></code> 
-        </dt>
-        <dd><em>Rata Die</em></dd>
-      </dl><dl><dt>
-          
           <code><a href="as_year.html">as_year()</a></code> 
         </dt>
         <dd>Year Conversion from <em>Rata Die</em></dd>
+      </dl><dl><dt>
+          
+          <code><a href="fixed.html">fixed()</a></code> 
+        </dt>
+        <dd><em>Rata Die</em> (Fixed Date)</dd>
       </dl></div><div class="section level2">
       <h2 id="time-series">Time Series<a class="anchor" aria-label="anchor" href="#time-series"></a></h2>
       
@@ -129,6 +129,11 @@
           <code><a href="series.html">series()</a></code> 
         </dt>
         <dd>Create Time Series</dd>
+      </dl><dl><dt>
+          
+          <code><a href="span.html">span()</a></code> 
+        </dt>
+        <dd>Duration of Time Series</dd>
       </dl><dl><dt>
           
           <code><a href="start.html">start(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="start.html">start(<i>&lt;TimeSeries&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="start.html">end(<i>&lt;TimeSeries&gt;</i>)</a></code> 
@@ -160,11 +165,6 @@
           <code><a href="arithmetic.html">Arith(<i>&lt;RataDie&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> 
         </dt>
         <dd>Arithmetic Operators</dd>
-      </dl><dl><dt>
-          
-          <code><a href="compare.html">Compare(<i>&lt;RataDie&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> 
-        </dt>
-        <dd>Chronological Comparison</dd>
       </dl></div><div class="section level2">
       <h2 id="mutators">Mutators<a class="anchor" aria-label="anchor" href="#mutators"></a></h2>
       
@@ -177,6 +177,11 @@
       
 
       <dl><dt>
+          
+          <code><a href="is.html">is_gregorian()</a></code> <code><a href="is.html">is_julian()</a></code> 
+        </dt>
+        <dd>Predicates</dd>
+      </dl><dl><dt>
           
           <code><a href="mutators.html">mutators</a></code> <code><a href="mutators.html">get</a></code> <code><a href="mutators.html">set</a></code> 
         </dt>

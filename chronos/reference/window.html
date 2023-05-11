@@ -88,6 +88,7 @@ period of interest (expressed in <em>rata die</em>).</p></dd>
     <div class="dont-index"><p>Other time series tools: 
 <code><a href="plot.html">plot</a>()</code>,
 <code><a href="series.html">series</a>()</code>,
+<code><a href="span.html">span</a>()</code>,
 <code><a href="start.html">start</a>()</code>,
 <code><a href="time.html">time</a>()</code></p></div>
     </div>
@@ -100,7 +101,7 @@ period of interest (expressed in <em>rata die</em>).</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create 3 time-series of 100 observations</span></span></span>
 <span class="r-in"><span><span class="co">## Sampled every years starting from 1000 CE</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between 364878 and 401037 r.d.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Subset between 1025 and 1050 CE</span></span></span>

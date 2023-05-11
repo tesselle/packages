@@ -44,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Gregorian Calendar</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/chronos/blob/HEAD/R/calendar-gregorian.R" class="external-link"><code>R/calendar-gregorian.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/chronos/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/chronos/blob/HEAD/R/calendar.R" class="external-link"><code>R/calendar.R</code></a></small>
       <div class="d-none name"><code>gregorian.Rd</code></div>
     </div>
 
@@ -54,27 +54,35 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">is_gregorian</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">BP</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for TimeScale</span></span>
-<span><span class="fu">is_gregorian</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">b2k</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">BC</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">BCE</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">AD</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">CE</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>object</dt>
-<dd><p>A <code><a href="GregorianCalendar-class.html">GregorianCalendar</a></code> object.</p></dd>
+    <dl><dt>...</dt>
+<dd><p>Currently not used.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<ul><li><p><code>is_gregorian()</code> returns a <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar.</p></li>
-</ul></div>
+<p>A <code><a href="GregorianCalendar-class.html">GregorianCalendar</a></code> object.</p>
+    </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other time scales tools: 
+    <div class="dont-index"><p><code><a href="calendar.html">calendar()</a></code></p>
+<p>Other time scales tools: 
 <code><a href="calendar_get.html">calendar_get</a></code>,
 <code><a href="calendar.html">calendar</a>()</code>,
 <code><a href="convert.html">convert</a>()</code>,

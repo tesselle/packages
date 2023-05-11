@@ -73,12 +73,7 @@
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>Years will be coerced to a plain numeric vector if a computation means their
-era no longer makes sense.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other operators: 
-<code><a href="compare.html">compare</a></code></p></div>
+calendar no longer makes sense.</p>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -88,8 +83,8 @@ era no longer makes sense.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Vectors of years</span></span></span>
-<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_fixed.html">as_fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">350</span>, <span class="fl">31</span>, <span class="fl">1072</span>, <span class="fl">576</span>, <span class="fl">1130</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_fixed.html">as_fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1494</span>, <span class="fl">1645</span>, <span class="op">-</span><span class="fl">869</span>, <span class="fl">1440</span>, <span class="fl">1851</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">350</span>, <span class="fl">31</span>, <span class="fl">1072</span>, <span class="fl">576</span>, <span class="fl">1130</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1494</span>, <span class="fl">1645</span>, <span class="op">-</span><span class="fl">869</span>, <span class="fl">1440</span>, <span class="fl">1851</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Move forward in time</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span></span></span>

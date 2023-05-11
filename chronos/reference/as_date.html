@@ -63,7 +63,7 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <code><a href="RataDie-class.html">RataDie</a></code> object (see <code><a href="as_fixed.html">as_fixed()</a></code>).</p></dd>
+<dd><p>A <code><a href="RataDie-class.html">RataDie</a></code> object (see <code><a href="fixed.html">fixed()</a></code>).</p></dd>
 
 
 <dt>calendar</dt>
@@ -80,8 +80,8 @@ The Ultimate Edition</em>. Cambridge University Press.
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other fixed date tools: 
-<code><a href="as_fixed.html">as_fixed</a>()</code>,
-<code><a href="as_year.html">as_year</a>()</code></p></div>
+<code><a href="as_year.html">as_year</a>()</code>,
+<code><a href="fixed.html">fixed</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -91,20 +91,20 @@ The Ultimate Edition</em>. Cambridge University Press.
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## R 1.0.0</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_fixed.html">as_fixed</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2000</span>, month <span class="op">=</span> <span class="fl">02</span>, day <span class="op">=</span> <span class="fl">29</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2000</span>, month <span class="op">=</span> <span class="fl">02</span>, day <span class="op">=</span> <span class="fl">29</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "RataDie"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 730179</span>
-<span class="r-in"><span><span class="fu">as_date</span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">as_date</span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   year month day</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 2000     2  29</span>
-<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2000</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Vector of years expressed in ka BP</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">ka</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_fixed.html">as_fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">40</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">BP</a></span><span class="op">(</span><span class="op">)</span>, scale <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">ka</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">40</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, scale <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "RataDie"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] -10245417 -12071629 -13897842</span>
-<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">ka</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">ka</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] -28050 -33050 -38050</span>
 </code></pre></div>
     </div>

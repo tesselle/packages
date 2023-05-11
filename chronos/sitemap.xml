@@ -82,9 +82,6 @@
     <loc>https://packages.tesselle.org/chronos/reference/as_date.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/as_fixed.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/chronos/reference/as_year.html</loc>
   </url>
   <url>
@@ -100,16 +97,19 @@
     <loc>https://packages.tesselle.org/chronos/reference/chronos-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/compare.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/convert.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/chronos/reference/convert.html</loc>
+    <loc>https://packages.tesselle.org/chronos/reference/fixed.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/gregorian.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/is.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/julian.html</loc>
@@ -122,6 +122,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/series.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/span.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/start.html</loc>

@@ -87,6 +87,7 @@ taken.</p>
     <div class="dont-index"><p>Other time series tools: 
 <code><a href="plot.html">plot</a>()</code>,
 <code><a href="series.html">series</a>()</code>,
+<code><a href="span.html">span</a>()</code>,
 <code><a href="time.html">time</a>()</code>,
 <code><a href="window.html">window</a>()</code></p></div>
     </div>
@@ -101,13 +102,15 @@ taken.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Univariate</span></span></span>
 <span class="r-in"><span><span class="co">## Sampled every years starting from 1099 BCE</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1099</span><span class="op">:</span><span class="fl">1000</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">BCE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1099</span><span class="op">:</span><span class="fl">1000</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BCE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 time series observed between -401766 and -365607 r.d.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">start</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] -401766</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] -365607</span>
+<span class="r-in"><span><span class="fu"><a href="span.html">span</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 36159</span>
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   [1] -401766 -401401 -401036 -400671 -400305 -399940 -399575 -399210 -398844</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [10] -398479 -398114 -397749 -397383 -397018 -396653 -396288 -395922 -395557</span>
@@ -124,13 +127,15 @@ taken.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Multivariate</span></span></span>
 <span class="r-in"><span><span class="co">## Sampled every century starting from 1000 CE</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span>, calendar <span class="op">=</span> <span class="fu"><a href="calendar.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between 364878 and 401037 r.d.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">start</span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 364878</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 401037</span>
+<span class="r-in"><span><span class="fu"><a href="span.html">span</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 36159</span>
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 364878 365243 365608 365973 366338 366704 367069 367434 367799 368165</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [11] 368530 368895 369260 369626 369991 370356 370721 371087 371452 371817</span>
