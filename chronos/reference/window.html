@@ -72,12 +72,12 @@ end (expressed in rata die)."><meta property="og:image" content="https://package
 
 <dt>start</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the start time of the
-period of interest (expressed in <em>rata die</em>).</p></dd>
+period of interest.</p></dd>
 
 
 <dt>end</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the end time of the
-period of interest (expressed in <em>rata die</em>).</p></dd>
+period of interest.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -108,10 +108,8 @@ period of interest (expressed in <em>rata die</em>).</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between 364878 and 401037 r.d.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Subset between 1025 and 1050 CE</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu">window</span><span class="op">(</span><span class="va">x</span>, start <span class="op">=</span> <span class="fl">1025</span>, end <span class="op">=</span> <span class="fl">1050</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no non-missing arguments to min; returning Inf</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no non-missing arguments to max; returning -Inf</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between Inf and -Inf r.d.</span>
+<span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu">window</span><span class="op">(</span><span class="va">x</span>, start <span class="op">=</span> <span class="fl">374009</span>, end <span class="op">=</span> <span class="fl">383140</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between 374009 and 383140 r.d.</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

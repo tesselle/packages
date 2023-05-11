@@ -60,14 +60,8 @@ taken.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for RataDie</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for TimeSeries</span></span>
 <span><span class="fu">start</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for TimeSeries</span></span>
-<span><span class="fu">start</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for RataDie</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for TimeSeries</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
@@ -101,55 +95,47 @@ taken.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create time-series of 100 observations</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create time-series of 20 observations</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Univariate</span></span></span>
-<span class="r-in"><span><span class="co">## Sampled every years starting from 1099 BCE</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1099</span><span class="op">:</span><span class="fl">1000</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BCE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 time series observed between -401766 and -365607 r.d.</span>
+<span class="r-in"><span><span class="co">## Sampled every years starting from 1029 BCE</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1029</span><span class="op">:</span><span class="fl">1000</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BCE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 time series observed between -376199 and -365607 r.d.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">start</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -401766</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -376199</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] -365607</span>
 <span class="r-in"><span><span class="fu"><a href="span.html">span</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 36159</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10592</span>
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] -401766 -401401 -401036 -400671 -400305 -399940 -399575 -399210 -398844</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [10] -398479 -398114 -397749 -397383 -397018 -396653 -396288 -395922 -395557</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [19] -395192 -394827 -394461 -394096 -393731 -393366 -393000 -392635 -392270</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [28] -391905 -391539 -391174 -390809 -390444 -390078 -389713 -389348 -388983</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [37] -388617 -388252 -387887 -387522 -387156 -386791 -386426 -386061 -385695</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] -385330 -384965 -384600 -384234 -383869 -383504 -383139 -382773 -382408</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [55] -382043 -381678 -381312 -380947 -380582 -380217 -379851 -379486 -379121</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [64] -378756 -378390 -378025 -377660 -377295 -376929 -376564 -376199 -375834</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [73] -375468 -375103 -374738 -374373 -374007 -373642 -373277 -372912 -372546</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [82] -372181 -371816 -371451 -371085 -370720 -370355 -369990 -369624 -369259</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] -368894 -368529 -368163 -367798 -367433 -367068 -366702 -366337 -365972</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [100] -365607</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -376199 -375834 -375468 -375103 -374738 -374373 -374007 -373642 -373277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [10] -372912 -372546 -372181 -371816 -371451 -371085 -370720 -370355 -369990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [19] -369624 -369259 -368894 -368529 -368163 -367798 -367433 -367068 -366702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [28] -366337 -365972 -365607</span>
+<span class="r-in"><span><span class="fu"><a href="time.html">years</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="co"># Default calendar (Gregorian Common Era)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -1029 -1028 -1027 -1026 -1025 -1024 -1023 -1022 -1021 -1020 -1019 -1018</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13] -1017 -1016 -1015 -1014 -1013 -1012 -1011 -1010 -1009 -1008 -1007 -1006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] -1005 -1004 -1003 -1002 -1001 -1000</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Multivariate</span></span></span>
 <span class="r-in"><span><span class="co">## Sampled every century starting from 1000 CE</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="fl">100</span>, <span class="fl">3</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1099</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between 364878 and 401037 r.d.</span>
+<span class="r-in"><span><span class="op">(</span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">90</span><span class="op">)</span>, <span class="fl">30</span>, <span class="fl">3</span><span class="op">)</span>, time <span class="op">=</span> <span class="fl">1000</span><span class="op">:</span><span class="fl">1029</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 time series observed between 364878 and 375470 r.d.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">start</span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 364878</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 401037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 375470</span>
 <span class="r-in"><span><span class="fu"><a href="span.html">span</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 36159</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10592</span>
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 364878 365243 365608 365973 366338 366704 367069 367434 367799 368165</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [11] 368530 368895 369260 369626 369991 370356 370721 371087 371452 371817</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [21] 372182 372548 372913 373278 373643 374009 374374 374739 375104 375470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 375835 376200 376565 376931 377296 377661 378026 378392 378757 379122</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [41] 379487 379853 380218 380583 380948 381314 381679 382044 382409 382775</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [51] 383140 383505 383870 384236 384601 384966 385331 385697 386062 386427</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 386792 387158 387523 387888 388253 388619 388984 389349 389714 390080</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [71] 390445 390810 391175 391541 391906 392271 392636 393002 393367 393732</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [81] 394097 394463 394828 395193 395558 395924 396289 396654 397019 397385</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 397750 398115 398480 398846 399211 399576 399941 400307 400672 401037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 364878 365243 365608 365973 366338 366704 367069 367434 367799 368165</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [11] 368530 368895 369260 369626 369991 370356 370721 371087 371452 371817</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [21] 372182 372548 372913 373278 373643 374009 374374 374739 375104 375470</span>
+<span class="r-in"><span><span class="fu"><a href="time.html">years</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="co"># Default calendar (Gregorian Common Era)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1000 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
