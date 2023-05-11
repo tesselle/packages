@@ -66,6 +66,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="articles/bibliography.html">Bibliography</a>
+    <a class="dropdown-item" href="articles/manual.html">Manual</a>
   </div>
 </li>
       </ul>
@@ -101,7 +102,7 @@
 </h2>
 <p>Base R ships with a lot of functionality useful for time series, in particular in the <strong>stats</strong> package: a time-series object can be created with the <code><a href="https://rdrr.io/r/stats/ts.html" class="external-link">stats::ts()</a></code> function. These objects are agnostic: the unit of time is not relevant, only the sampling frequency matters. Most archaeological time series are different because they are defined for a given calendar era and may involve dates far in the past.</p>
 <p><strong>chronos</strong> provides a system of classes and methods to represent and work with such time-series. Dates are represented as <em>rata die</em> (Reingold and Dershowitz 2018), i.e. the number of days since 01-01-01 (Gregorian), with negative values for earlier dates (if you want to work with vectors of years, you may be interested in the <a href="https://github.com/joeroe/era" class="external-link"><strong>era</strong></a> package). This system allows to represent dates independently of any calendar: it makes calculations and comparisons easier.</p>
-<p>Once a time series is created with <strong>chronos</strong>, any calendar can be used for printing or plotting data (defaults to Gregorian Common Era; see <code>vignette("manual")</code>).</p>
+<p>Once a time series is created with <strong>chronos</strong>, any calendar can be used for printing or plotting data (defaults to Gregorian Common Era; see <code><a href="articles/manual.html">vignette("manual")</a></code>).</p>
 <p>This package supports usual Gregorian era (e.g. Common Era, Before Present), more calendars will be gradually implemented. Note that <strong>chronos</strong> uses the astronomical notation for Gregorian years (there <em>is</em> a year 0).</p>
 </div>
 <div class="section level2">

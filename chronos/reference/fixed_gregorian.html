@@ -27,6 +27,7 @@ Gregorian era."><meta property="og:image" content="https://packages.tesselle.org
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
+    <a class="dropdown-item" href="../articles/manual.html">Manual</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -109,6 +110,10 @@ decimal years are expected.</p></dd>
 <li><p><code>fixed_to_*()</code> returns</p></li>
 </ul></div>
     <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>The astronomical notation is used for Gregorian years (there <em>is</em> a year 0).</p>
+    </div>
+    <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Reingold, E. M. and Dershowitz, N. (2018). <em>Calendrical Calculations:
 The Ultimate Edition</em>. Cambridge University Press.
@@ -132,7 +137,7 @@ The Ultimate Edition</em>. Cambridge University Press.
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## R 1.0.0</span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2000</span>, month <span class="op">=</span> <span class="fl">02</span>, day <span class="op">=</span> <span class="fl">29</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "RataDie"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 730179</span>
 <span class="r-in"><span><span class="fu"><a href="as_date.html">as_date</a></span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   year month day</span>
@@ -140,12 +145,24 @@ The Ultimate Edition</em>. Cambridge University Press.
 <span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2000.161</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Vector of years expressed in ka BP</span></span></span>
-<span class="r-in"><span><span class="op">(</span><span class="va">ka</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">40</span><span class="op">)</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, scale <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "RataDie"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -10245417 -12071629 -13897842</span>
-<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">ka</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -28050 -33050 -38050</span>
+<span class="r-in"><span><span class="co">## Create a vector of years BP (Gregorian)</span></span></span>
+<span class="r-in"><span><span class="co">## (every two years starting from 2000 BP)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">2000</span>, by <span class="op">=</span> <span class="op">-</span><span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 2000 1998 1996 1994 1992 1990 1988 1986 1984 1982</span>
+<span class="r-in"><span><span class="co">## Convert years to rata die</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">rd</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span><span class="va">years</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -18627 -17897 -17166 -16436 -15705 -14975 -14244 -13514 -12783 -12053</span>
+<span class="r-in"><span><span class="co">## Convert back to Gregorian years BP</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">rd</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 2000 1998 1996 1994 1992 1990 1988 1986 1984 1982</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## More convenient</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">rd</span> <span class="op">&lt;-</span> <span class="fu">fixed_from_BP</span><span class="op">(</span><span class="va">years</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -18627 -17897 -17166 -16436 -15705 -14975 -14244 -13514 -12783 -12053</span>
+<span class="r-in"><span><span class="fu">fixed_to_BP</span><span class="op">(</span><span class="va">rd</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 2000 1998 1996 1994 1992 1990 1988 1986 1984 1982</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
