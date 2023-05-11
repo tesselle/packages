@@ -133,16 +133,12 @@ implemented.&lt;/p&gt;"><sup>2</sup></a>.</p>
 <span><span class="co">## Convert 2000-02-29 (Gregorian) to rata die</span></span>
 <span><span class="fu"><a href="../reference/fixed.html">fixed</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">02</span>, <span class="fl">29</span>, calendar <span class="op">=</span> <span class="va">cal</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
-<span><span class="co">#&gt; [1] 1</span></span>
-<span><span class="co">#&gt; attr(,"tsp")</span></span>
-<span><span class="co">#&gt; [1] 1 1 1</span></span>
+<span><span class="co">#&gt; [1] 730179</span></span>
 <span></span>
 <span><span class="co">## If days and months are missing, decimal years are expected</span></span>
 <span><span class="fu"><a href="../reference/fixed.html">fixed</a></span><span class="op">(</span><span class="fl">2000.161</span>, calendar <span class="op">=</span> <span class="va">cal</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
-<span><span class="co">#&gt; [1] 1</span></span>
-<span><span class="co">#&gt; attr(,"tsp")</span></span>
-<span><span class="co">#&gt; [1] 1 1 1</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 730179</span></span></code></pre></div>
 <p>A <em>rata die</em> vector can be converted into dates (or years) of
 a particular calendar:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -154,9 +150,8 @@ a particular calendar:</p>
 <span><span class="co">## Convert years to rata die</span></span>
 <span><span class="op">(</span><span class="va">rd</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fixed.html">fixed</a></span><span class="op">(</span><span class="va">years</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
-<span><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span></span>
-<span><span class="co">#&gt; attr(,"tsp")</span></span>
-<span><span class="co">#&gt; [1]  1 10  1</span></span>
+<span><span class="co">#&gt;  [1] -6592992 -6585687 -6578382 -6571077 -6563772 -6556467 -6549162 -6541857</span></span>
+<span><span class="co">#&gt;  [9] -6534553 -6527248</span></span>
 <span></span>
 <span><span class="co">## Convert back to Gregorian years</span></span>
 <span><span class="fu"><a href="../reference/as_year.html">as_year</a></span><span class="op">(</span><span class="va">rd</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Common Era</span></span>

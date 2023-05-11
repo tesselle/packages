@@ -110,9 +110,7 @@ The Ultimate Edition</em>. Cambridge University Press.
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## R 1.0.0</span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2000</span>, month <span class="op">=</span> <span class="fl">02</span>, day <span class="op">=</span> <span class="fl">29</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"tsp")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 1 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 730179</span>
 <span class="r-in"><span><span class="fu">as_date</span><span class="op">(</span><span class="va">y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   year month day</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 2000     2  29</span>
@@ -126,9 +124,7 @@ The Ultimate Edition</em>. Cambridge University Press.
 <span class="r-in"><span><span class="co">## Convert years to rata die</span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">rd</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed.html">fixed</a></span><span class="op">(</span><span class="va">years</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  1  2  3  4  5  6  7  8  9 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"tsp")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  1 10  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -18627 -17897 -17166 -16436 -15705 -14975 -14244 -13514 -12783 -12053</span>
 <span class="r-in"><span><span class="co">## Convert back to Gregorian years BP</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="as_year.html">as_year</a></span><span class="op">(</span><span class="va">rd</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 2000 1998 1996 1994 1992 1990 1988 1986 1984 1982</span>
@@ -136,9 +132,7 @@ The Ultimate Edition</em>. Cambridge University Press.
 <span class="r-in"><span><span class="co">## More convenient</span></span></span>
 <span class="r-in"><span><span class="op">(</span><span class="va">rd</span> <span class="op">&lt;-</span> <span class="fu"><a href="fixed_gregorian.html">fixed_from_BP</a></span><span class="op">(</span><span class="va">years</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  1  2  3  4  5  6  7  8  9 10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"tsp")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  1 10  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -18627 -17897 -17166 -16436 -15705 -14975 -14244 -13514 -12783 -12053</span>
 <span class="r-in"><span><span class="fu"><a href="fixed_gregorian.html">fixed_to_BP</a></span><span class="op">(</span><span class="va">rd</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 2000 1998 1996 1994 1992 1990 1988 1986 1984 1982</span>
 </code></pre></div>
