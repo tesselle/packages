@@ -50,7 +50,7 @@
     </div>
 
     <div class="section level2">
-      <h2 id="time-scales">Time Scales<a class="anchor" aria-label="anchor" href="#time-scales"></a></h2>
+      <h2 id="calendars">Calendars<a class="anchor" aria-label="anchor" href="#calendars"></a></h2>
       
       
 
@@ -82,6 +82,11 @@
         <dd>Gregorian Calendar</dd>
       </dl><dl><dt>
           
+          <code><a href="is.html">is_gregorian()</a></code> <code><a href="is.html">is_julian()</a></code> 
+        </dt>
+        <dd>Is an Object a Calendar?</dd>
+      </dl><dl><dt>
+          
           <code><a href="julian.html">J()</a></code> 
         </dt>
         <dd>Julian Calendar</dd>
@@ -97,6 +102,11 @@
       
 
       <dl><dt>
+          
+          <code><a href="arithmetic.html">Arith(<i>&lt;RataDie&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="arithmetic.html">Arith(<i>&lt;numeric&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="arithmetic.html">Arith(<i>&lt;RataDie&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> 
+        </dt>
+        <dd>Arithmetic Operators</dd>
+      </dl><dl><dt>
           
           <code><a href="as_date.html">as_date()</a></code> 
         </dt>
@@ -120,12 +130,12 @@
           
           <code><a href="fixed_gregorian.html">fixed_from_BP()</a></code> <code><a href="fixed_gregorian.html">fixed_to_BP()</a></code> <code><a href="fixed_gregorian.html">fixed_from_BC()</a></code> <code><a href="fixed_gregorian.html">fixed_to_BC()</a></code> <code><a href="fixed_gregorian.html">fixed_from_BCE()</a></code> <code><a href="fixed_gregorian.html">fixed_to_BCE()</a></code> <code><a href="fixed_gregorian.html">fixed_from_AD()</a></code> <code><a href="fixed_gregorian.html">fixed_to_AD()</a></code> <code><a href="fixed_gregorian.html">fixed_from_CE()</a></code> <code><a href="fixed_gregorian.html">fixed_to_CE()</a></code> <code><a href="fixed_gregorian.html">fixed_from_b2k()</a></code> <code><a href="fixed_gregorian.html">fixed_to_b2k()</a></code> 
         </dt>
-        <dd>Gregorian Year Conversion to and from <em>Rata Die</em></dd>
+        <dd><em>Rata Die</em> Conversion to and from Gregorian Years</dd>
       </dl><dl><dt>
           
           <code><a href="fixed_julian.html">fixed_from_julian()</a></code> <code><a href="fixed_julian.html">fixed_to_julian()</a></code> 
         </dt>
-        <dd>Julian Year Conversion to and from <em>Rata Die</em></dd>
+        <dd><em>Rata Die</em> Conversion to and from Julian Years</dd>
       </dl><dl><dt>
           
           <code><a href="format.html">format(<i>&lt;TimeScale&gt;</i>)</a></code> <code><a href="format.html">format(<i>&lt;RataDie&gt;</i>)</a></code> 
@@ -173,22 +183,6 @@
         </dt>
         <dd>Time Series Windows</dd>
       </dl></div><div class="section level2">
-      <h2 id="operators">Operators<a class="anchor" aria-label="anchor" href="#operators"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="arithmetic.html">Arith(<i>&lt;RataDie&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="arithmetic.html">Arith(<i>&lt;numeric&gt;</i>,<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="arithmetic.html">Arith(<i>&lt;RataDie&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> 
-        </dt>
-        <dd>Arithmetic Operators</dd>
-      </dl></div><div class="section level2">
       <h2 id="mutators">Mutators<a class="anchor" aria-label="anchor" href="#mutators"></a></h2>
       
       
@@ -200,16 +194,6 @@
       
 
       <dl><dt>
-          
-          <code><a href="is.html">is_gregorian()</a></code> <code><a href="is.html">is_julian()</a></code> 
-        </dt>
-        <dd>Predicates</dd>
-      </dl><dl><dt>
-          
-          <code><a href="mutators.html">mutators</a></code> <code><a href="mutators.html">get</a></code> <code><a href="mutators.html">set</a></code> 
-        </dt>
-        <dd>Get or Set Parts of an Object</dd>
-      </dl><dl><dt>
           
           <code><a href="subset.html">`[`(<i>&lt;RataDie&gt;</i>)</a></code> <code><a href="subset.html">`[`(<i>&lt;TimeSeries&gt;</i>)</a></code> 
         </dt>
