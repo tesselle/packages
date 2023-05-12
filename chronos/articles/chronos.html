@@ -98,20 +98,19 @@ Frerebeau</h4>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/chronos/">chronos</a></span><span class="op">)</span></span></code></pre></div>
 <p>Base R ships with a lot of functionality useful for time series, in
-particular in the <strong>stats</strong> package: a time-series object
-can be created with the <code><a href="https://rdrr.io/r/stats/ts.html" class="external-link">stats::ts()</a></code> function. These objects
-are agnostic: the unit of time is not relevant, only the sampling
-frequency matters. Most archaeological time series are different because
-they are defined for a given calendar era and may involve dates far in
-the past.</p>
+particular in the <strong>stats</strong> package. However, these
+features are not adapted to most archaeological time series. These are
+indeed defined for a given calendar era, they can involve dates very far
+in the past and the sampling of the observation time is (in most cases)
+not constant.</p>
 <p><strong>chronos</strong> provides a system of classes and methods to
 represent and work with such time-series.</p>
 <div class="section level2">
 <h2 id="vectors-of-dates">Vectors of dates<a class="anchor" aria-label="anchor" href="#vectors-of-dates"></a>
 </h2>
-<p>In base R, dates are represented as the number of days since
-1970-01-01 (by default), with negative values for earlier dates (see
-<code><a href="https://rdrr.io/r/base/Dates.html" class="external-link">help(Date)</a></code>). <strong>chronos</strong> uses a different
+<p>In base R, dates are represented by default as the number of days
+since 1970-01-01 (Gregorian), with negative values for earlier dates
+(see <code><a href="https://rdrr.io/r/base/Dates.html" class="external-link">help(Date)</a></code>). <strong>chronos</strong> uses a different
 approach: it allows to create date vectors represented as <em>rata
 die</em> <span class="citation">(Reingold and Dershowitz 2018)</span>,
 i.e. as number of days since 01-01-01 (Gregorian)<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;It is intended that the &lt;em&gt;rata die&lt;/em&gt; should be an
@@ -169,6 +168,11 @@ vectors:</p>
 <span><span class="fu"><a href="../reference/format.html">format</a></span><span class="op">(</span><span class="va">rd</span>, format <span class="op">=</span> <span class="st">"ka"</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt;  [1] "20 ka BP"    "19.98 ka BP" "19.96 ka BP" "19.94 ka BP" "19.92 ka BP"</span></span>
 <span><span class="co">#&gt;  [6] "19.9 ka BP"  "19.88 ka BP" "19.86 ka BP" "19.84 ka BP" "19.82 ka BP"</span></span></code></pre></div>
+<p>The <em>rata die</em> vector provides the internal time
+representation of the <strong>chronos</strong> time-series (if you want
+to work with numeric vectors that represent year-based time scales, you
+may be interested in the <a href="https://github.com/joeroe/era" class="external-link"><strong>era</strong></a>
+package).</p>
 </div>
 <div class="section level2">
 <h2 id="time-series">Time series<a class="anchor" aria-label="anchor" href="#time-series"></a>
