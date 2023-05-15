@@ -14,18 +14,20 @@ about:
     - icon: house
       text: Homepage
       href: "https://www.tesselle.org"
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/archaeostats
     - icon: github
       text: Github
       href: https://github.com/tesselle/
     - icon: download
       text: R-universe
       href: https://tesselle.r-universe.dev/
+listing:
+  - id: gallery
+    template: packages.ejs
+    contents: packages.yml
 ---
 
 ```{r}
+#| label: packages 
 #| echo: false
 ## Get packages info
 repo <- utils::contrib.url("https://tesselle.r-universe.dev")
@@ -35,6 +37,7 @@ url_pkg <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
 ```
 
 ```{r}
+#| label: sitemap 
 #| echo: false
 ## Build sitemap index
 loc <- paste0(url_pkg, "/sitemap.xml")
@@ -54,6 +57,7 @@ cat(
 ```
 
 ```{r}
+#| label: search 
 #| echo: false
 ## Build search index
 search_pkg <- search_ref <- list()
@@ -84,7 +88,7 @@ cat(rjson::toJSON(search_ref), file = "_site/references.json", append = FALSE)
 :::{#hero-heading}
 :::
 
-## Explore
+## Read the doc
 
 <form role="search">
 <div class="form-group">
@@ -93,9 +97,12 @@ cat(rjson::toJSON(search_ref), file = "_site/references.json", append = FALSE)
 </div>
 </form>
 
-## Read the doc
+## Explore
 
-```{r doc, echo=FALSE}
+```{r}
+#| label: doc 
+#| echo: false
+#| eval: false
 az <- order(pkg$Package)
 info <- pkg[az, c("Package", "Version", "Depends", "License")]
 url_doc <- "<a href=\"%s/\" title=\"Read the doc of %s (stable)\">%s</a>"
@@ -112,9 +119,75 @@ data <- data.frame(
   Development = link_dev
 )
 knitr::kable(
-  x = data, 
+  x = data,
   row.names = FALSE,
   escape = FALSE,
   booktab = TRUE
 )
+```
+
+```{=html}
+<style>
+.grid-sizer, .grid-item { 
+  width: 100%;
+  margin: 5px auto;
+}
+@media only screen and (min-width: 600px) {
+  .grid-sizer, .grid-item { 
+    width: 47%;
+    margin: 5px auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .grid-sizer, .grid-item { 
+    width: 30%;
+    margin: 5px auto;
+  }
+}
+</style>
+
+<label for="isotope-select-filter" class="form-label">Filter packages:</label>
+<select id="isotope-select-filter" class="form-select btn-outline-secondary filters-select">
+  <option value="*" selected>show all</option>
+  <option value=".count-data">count data</option>
+  <option value=".compositional-data">compositionnal data</option>
+  <option value=".chronological-data">chronological data</option>
+  <option value=".multivariate-data">multivariate data analysis</option>
+  <option value=".signal-processing">signal processing</option>
+  <option value=".data-visualization">data visualization</option>
+</select>
+```
+
+::: {.column-page}
+
+::: {#gallery}
+:::
+
+:::
+
+```{=html}
+<script>
+// init Isotope
+var $grid = $('.grid').isotope({
+  // options
+  sortBy: 'random',
+  itemSelector: '.card',
+  percentPosition: true,
+  masonry: {
+    // use outer width of grid-sizer for columnWidth
+    columnWidth: '.grid-sizer'
+  }
+});
+
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});
+
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  $grid.isotope({ filter: filterValue });
+});
+</script>
 ```
