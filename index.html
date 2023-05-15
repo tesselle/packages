@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -26,6 +26,8 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <link href="./https://www.tesselle.org/images/icons/favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -48,31 +50,67 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<!-- search -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
 
-<script src="packages.js"></script>
-<script src="references.js"></script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-gallery .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-description','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-description","listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-gallery'] = new List('listing-gallery', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<!-- JQuery -->
+<script src="scripts/jquery-3.7.0.min.js"></script>
+
+<!-- Search -->
+<script src="scripts/fuse-6.6.2.min.js"></script>
+<script src="scripts/autocomplete-0.38.1.min.js"></script>
+<script src="scripts/packages.js"></script>
 <link rel="stylesheet" href="style.css">
+
+<!-- Isotope -->
+<script src="scripts/isotope-3.0.6.min.js"></script>
+<script src="scripts/imagesloaded-5.0.0.min.js"></script>
 
 <!-- Matomo -->
 <script src="https://www.tesselle.org/scripts/unicorn.js"></script>
 <noscript></noscript><meta property="og:title" content="tesselle">
-<meta property="og:description" content="[**tesselle**](https://www.tesselle.org/) is a collection of
-[R](https://www.r-project.org/) packages for research and teaching in
-archaeology.">
+<meta property="og:description" content="tesselle is a collection of R packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.">
+<meta property="og:image" content="https://www.tesselle.org/images/tesselle.png">
 <meta property="og:site-name" content="tesselle">
 <meta name="twitter:title" content="tesselle">
-<meta name="twitter:description" content="[**tesselle**](https://www.tesselle.org/) is a collection of
-[R](https://www.r-project.org/) packages for research and teaching in
-archaeology.">
+<meta name="twitter:description" content="tesselle is a collection of R packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology.">
+<meta name="twitter:image" content="https://www.tesselle.org/images/tesselle.png">
 <meta name="twitter:creator" content="@nfrerebeau">
 <meta name="twitter:site" content="@nfrerebeau">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head><body class="fullcontent"><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p>
 
+<!-- Mastodon -->
+<link rel="me" href="https://archaeo.social/@tesselle">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 
 
@@ -85,19 +123,10 @@ archaeology.">
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <div class="quarto-about-jolla">
   <img src="https://www.tesselle.org/images/tesselle.png" class="about-image
   rectangle " style="width: 15em;">
@@ -116,125 +145,318 @@ archaeology.">
 </div> 
   <hr class="about-sep">
    <div class="about-links">
-  <a href="https://www.tesselle.org" class="about-link">
+  <a href="https://www.tesselle.org" class="about-link" rel="" target="">
     <i class="bi bi-house"></i>
      <span class="about-link-text">Homepage</span>
   </a>
-  <a href="https://twitter.com/archaeostats" class="about-link">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://github.com/tesselle/" class="about-link">
+  <a href="https://github.com/tesselle/" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
   </a>
-  <a href="https://tesselle.r-universe.dev/" class="about-link">
+  <a href="https://tesselle.r-universe.dev/" class="about-link" rel="" target="">
     <i class="bi bi-download"></i>
      <span class="about-link-text">R-universe</span>
   </a>
 </div>
 </div>
 
-<section id="explore" class="level2">
-<h2 data-anchor-id="explore">Explore</h2>
+<section id="read-the-doc" class="level2">
+<h2 data-anchor-id="read-the-doc">Read the doc</h2>
 <form role="search">
 <div class="form-group">
 <p><label for="search-packages"><strong>Search in the documentation</strong></label> <input type="search" class="form-control" aria-label="Search for..." name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off"></p>
 </div>
 </form>
 </section>
-<section id="read-the-doc" class="level2">
-<h2 data-anchor-id="read-the-doc">Read the doc</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped">
-<colgroup>
-<col style="width: 4%">
-<col style="width: 48%">
-<col style="width: 46%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Stable</th>
-<th style="text-align: left;">Development</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">aion</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/aion/" title="Read the doc of aion (stable)">no stable release</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/aion/dev/" title="Read the doc of aion (dev)">0.0.0.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">alkahest</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/alkahest/" title="Read the doc of alkahest (stable)">1.0.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/alkahest/dev/" title="Read the doc of alkahest (dev)">1.0.0.9000</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">arkhe</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/arkhe/" title="Read the doc of arkhe (stable)">1.1.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/arkhe/dev/" title="Read the doc of arkhe (dev)">1.1.0.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">chronos</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/chronos/" title="Read the doc of chronos (stable)">no stable release</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/chronos/dev/" title="Read the doc of chronos (dev)">0.0.0.9000</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">dimensio</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/dimensio/" title="Read the doc of dimensio (stable)">0.3.1</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/dimensio/dev/" title="Read the doc of dimensio (dev)">0.3.1.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">fasti</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/fasti/" title="Read the doc of fasti (stable)">no stable release</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/fasti/dev/" title="Read the doc of fasti (dev)">0.0.0.9000</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">folio</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/folio/" title="Read the doc of folio (stable)">1.3.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/folio/dev/" title="Read the doc of folio (dev)">1.3.0.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">isopleuros</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/isopleuros/" title="Read the doc of isopleuros (stable)">no stable release</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/isopleuros/dev/" title="Read the doc of isopleuros (dev)">0.0.0.9000</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">kairos</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/kairos/" title="Read the doc of kairos (stable)">1.2.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/kairos/dev/" title="Read the doc of kairos (dev)">1.2.0.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">khroma</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/khroma/" title="Read the doc of khroma (stable)">1.10.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/khroma/dev/" title="Read the doc of khroma (dev)">1.10.0.9000</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">nexus</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/nexus/" title="Read the doc of nexus (stable)">no stable release</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/nexus/dev/" title="Read the doc of nexus (dev)">0.0.0.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">tabula</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/tabula/" title="Read the doc of tabula (stable)">2.0.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/tabula/dev/" title="Read the doc of tabula (dev)">2.0.0.9000</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">tekton</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/tekton/" title="Read the doc of tekton (stable)">no stable release</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/tekton/dev/" title="Read the doc of tekton (dev)">0.0.0.9000</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">tesselle</td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/tesselle/" title="Read the doc of tesselle (stable)">1.2.0</a></td>
-<td style="text-align: left;"><a href="https://packages.tesselle.org/tesselle/dev/" title="Read the doc of tesselle (dev)">1.2.0.9000</a></td>
-</tr>
-</tbody>
-</table>
+<section id="explore" class="level2 page-columns page-full">
+<h2 data-anchor-id="explore">Explore</h2>
+<style>
+.grid-sizer, .grid-item { 
+  width: 100%;
+  margin: 5px auto;
+}
+@media only screen and (min-width: 600px) {
+  .grid-sizer, .grid-item { 
+    width: 47%;
+    margin: 5px auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .grid-sizer, .grid-item { 
+    width: 30%;
+    margin: 5px auto;
+  }
+}
+</style>
+
+<label for="isotope-select-filter" class="form-label">Filter packages:</label>
+<select id="isotope-select-filter" class="form-select btn-outline-secondary filters-select">
+  <option value="*" selected="">show all</option>
+  <option value=".count-data">count data</option>
+  <option value=".compositional-data">compositionnal data</option>
+  <option value=".chronological-data">chronological data</option>
+  <option value=".multivariate-data">multivariate data analysis</option>
+  <option value=".signal-processing">signal processing</option>
+  <option value=".data-visualization">data visualization</option>
+</select>
+<div class="column-page">
+<div id="listing-gallery" class="quarto-listing quarto-listing-container-custom">
+
+<!-- <h2>Packages</h2> -->
+<p></p>
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item card border-2 rounded-3 signal-processing">
+    <div class="card-body">
+      <h4 class="card-title">alkahest</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Pre-Processing XY Data from Experimental Methods</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/alkahest">
+      <img src="https://www.tesselle.org/images/alkahest.png" alt="alkahest" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=alkahest">
+        <img src="http://www.r-pkg.org/badges/version/alkahest" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">A lightweight, dependency-free toolbox for pre-processing XY data from experimental methods (i.e. any signal that can be measured along a continuous variable). This package provides methods for baseline estimation and correction, smoothing, normalization, integration and peaks detection.</p>
+      <a href="https://packages.tesselle.org/alkahest" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/alkahest" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 data-cleaning">
+    <div class="card-body">
+      <h4 class="card-title">arkhe</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Tools for Cleaning Rectangular Data</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/arkhe">
+      <img src="https://www.tesselle.org/images/arkhe.png" alt="arkhe" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=arkhe">
+        <img src="http://www.r-pkg.org/badges/version/arkhe" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">A collection of simple functions for cleaning rectangular data. This package allows to detect, count and replace values or delete rows/columns according to a specific predicate. In addition, it provides tools to check conditions and return informative error messages.</p>
+      <a href="https://packages.tesselle.org/arkhe" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/arkhe" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 chronological-data">
+    <div class="card-body">
+      <h4 class="card-title">chronos</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Archaeological Time Series</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/chronos">
+      <img src="https://www.tesselle.org/images/chronos.png" alt="chronos" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=chronos">
+        <img src="http://www.r-pkg.org/badges/version/chronos" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#wip">
+          <img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.">
+        </a>
+      <p class="card-text">A toolkit for archaeological time series analysis. <strong>chronos</strong> provides a system of classes and methods to represent and work with archaeological time series. Dates are represented as <span style="font-style: italic;">rata die</span> and can be converted to (virtualy) any calendar defined by Reingold and Dershowitz (2018)</p>
+      <a href="https://packages.tesselle.org/chronos" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/chronos" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 multivariate-data">
+    <div class="card-body">
+      <h4 class="card-title">dimensio</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Multivariate Data Analysis</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/dimensio">
+      <img src="https://www.tesselle.org/images/dimensio.png" alt="dimensio" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=dimensio">
+        <img src="http://www.r-pkg.org/badges/version/dimensio" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">Simple Principal Components Analysis (PCA) and Correspondence Analysis (CA) based on the Singular Value Decomposition (SVD). This package provides S4 classes and methods to compute, extract, summarize and visualize results of multivariate data analysis. It also includes methods for partial bootstrap validation described in Greenacre (1984) and Lebart et al. (2006).</p>
+      <a href="https://packages.tesselle.org/dimensio" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/dimensio" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 count-data chronological-data">
+    <div class="card-body">
+      <h4 class="card-title">kairos</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Analysis of Chronological Patterns from Archaeological Count Data</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/kairos">
+      <img src="https://www.tesselle.org/images/kairos.png" alt="kairos" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=kairos">
+        <img src="http://www.r-pkg.org/badges/version/kairos" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">A toolkit for absolute dating and analysis of chronological patterns. <strong>kairos</strong> includes functions for chronological modeling and dating of archaeological assemblages from count data. It allows to compute time point estimates and density estimates of the occupation and duration of an archaeological site.</p>
+      <a href="https://packages.tesselle.org/kairos" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/kairos" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 data-visualization">
+    <div class="card-body">
+      <h4 class="card-title">khroma</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Colour Schemes for Scientific Data Visualization</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/khroma">
+      <img src="https://www.tesselle.org/images/khroma.png" alt="khroma" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=khroma">
+        <img src="http://www.r-pkg.org/badges/version/khroma" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">Colour schemes ready for each type of data (qualitative, diverging or sequential), with colours that are distinct for all people, including colour-blind readers. This package provides an implementation of Paul Tol (2018) and Fabio Crameri (2018) colour schemes for use with <code>graphics</code> or <code><a href="https://github.com/tidyverse/ggplot2">ggplot2</a></code>. It provides tools to simulate colour-blindness and to test how well the colours of any palette are identifiable. Several scientific thematic schemes (geologic timescale, land cover, FAO soils, etc.) are also implemented.</p>
+      <a href="https://packages.tesselle.org/khroma" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/khroma" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 dataset">
+    <div class="card-body">
+      <h4 class="card-title">folio</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Datasets for Teaching Archaeology and Paleontology</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/folio">
+      <img src="https://www.tesselle.org/images/folio.png" alt="folio" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=folio">
+        <img src="http://www.r-pkg.org/badges/version/folio" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">Datasets for teaching quantitative approaches and modeling in archaeology and paleontology. <strong>folio</strong> provides several types of data related to broad topics (cultural evolution, radiocarbon dating, paleoenvironments, etc.), which can be used to illustrate statistical methods in the classroom (multivariate data analysis, compositional data analysis, diversity measurement, etc.).</p>
+      <a href="https://packages.tesselle.org/folio" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/folio" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 data-visualization">
+    <div class="card-body">
+      <h4 class="card-title">isopleuros</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Ternary Plots</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/isopleuros">
+      <img src="https://www.tesselle.org/images/isopleuros.png" alt="isopleuros" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=isopleuros">
+        <img src="http://www.r-pkg.org/badges/version/isopleuros" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">Ternary plots made simple. This package allows to create ternary plot using <code>graphics</code>. <strong>isopleuros</strong> provides functions to display the data in the ternary space, to add or tune graphical elements and to display statistical summaries. It also includes common ternary diagrams useful for the archaeologist (e.g. soil texture charts, ceramic phase diagram).</p>
+      <a href="https://packages.tesselle.org/isopleuros" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/isopleuros" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 compositional-data multivariate-data">
+    <div class="card-body">
+      <h4 class="card-title">nexus</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Sourcing Archaeological Materials by Chemical Composition</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/nexus">
+      <img src="https://www.tesselle.org/images/nexus.png" alt="nexus" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=nexus">
+        <img src="http://www.r-pkg.org/badges/version/nexus" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#wip">
+          <img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.">
+        </a>
+      <p class="card-text">Sourcing archaeological materials by chemical composition. <strong>nexus</strong> allows the exploration and analysis of compositional data in the framework of Aitchison (1986). It provides tools for chemical fingerprinting and source tracking of ancient materials.</p>
+      <a href="https://packages.tesselle.org/nexus" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/nexus" class="card-link">Source code</a>
+    </div>
+  </div>
+  <div class="grid-item card border-2 rounded-3 count-data">
+    <div class="card-body">
+      <h4 class="card-title">tabula</h4>
+      <h5 class="card-subtitle mb-2 text-muted">Analysis and Visualization of Archaeological Count Data</h5>
+    </div>
+    <div class="card-body">
+    <a href="https://packages.tesselle.org/tabula">
+      <img src="https://www.tesselle.org/images/tabula.png" alt="tabula" class="card-img-top">
+    </a>
+    </div>
+    <div class="card-body">
+      <a href="https://cran.r-project.org/package=tabula">
+        <img src="http://www.r-pkg.org/badges/version/tabula" alt="CRAN version">
+      </a>
+        <a href="https://www.repostatus.org/#active">
+          <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+        </a>
+      <p class="card-text">An easy way to examine archaeological count data. <strong>tabula</strong> provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). The package make it easy to visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford and Bertin diagrams.</p>
+      <a href="https://packages.tesselle.org/tabula" class="card-link">Documentation</a>
+      <a href="https://github.com/tesselle/tabula" class="card-link">Source code</a>
+    </div>
+  </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
 </div>
+</div>
+<script>
+// init Isotope
+var $grid = $('.grid').isotope({
+  // options
+  sortBy: 'random',
+  itemSelector: '.card',
+  percentPosition: true,
+  masonry: {
+    // use outer width of grid-sizer for columnWidth
+    columnWidth: '.grid-sizer'
+  }
+});
+
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});
+
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  $grid.isotope({ filter: filterValue });
+});
+</script>
+
 
 
 
@@ -261,9 +483,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -328,6 +564,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -368,6 +690,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ The tesselle project is supported by the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a>, <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
