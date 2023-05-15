@@ -10,8 +10,8 @@ If you want to install a package, simply use `install.packages()` with the addit
 
 ``` r
 ## Enable this universe
-options(repos = c(tesselle = 'https://tesselle.r-universe.dev',
-                  CRAN = 'https://cloud.r-project.org'))
+options(repos = c(CRAN = 'https://cloud.r-project.org'),
+                  tesselle = 'https://tesselle.r-universe.dev')
 
 ## Install some packages
 install.packages("tabula")
