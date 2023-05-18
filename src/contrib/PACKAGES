@@ -1,10 +1,10 @@
 Package: alkahest
-Version: 1.0.0
-Depends: R (>= 3.3)
+Version: 1.1.0
+Depends: R (>= 3.5.0)
 Imports: grDevices, methods, stats, utils
-Suggests: knitr, Matrix, rmarkdown, testthat (>= 3.0.0)
+Suggests: knitr, Matrix, rmarkdown, tinytest
 License: GPL (>= 3)
-MD5sum: 609179fb0285c1076a21ec39fa4cacdd
+MD5sum: 162375d9ada26e2b8d9c669f768ce246
 NeedsCompilation: no
 
 Package: arkhe
