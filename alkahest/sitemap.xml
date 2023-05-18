@@ -70,6 +70,9 @@
     <loc>https://packages.tesselle.org/alkahest/reference/integrate_trapezoid.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/ka2_strip_penalized.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/reference/peaks_find.html</loc>
   </url>
   <url>
@@ -116,6 +119,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/signal_shift.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/reference/smooth_likelihood.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/reference/smooth_loess.html</loc>
