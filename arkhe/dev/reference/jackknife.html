@@ -117,48 +117,48 @@ the leave-one-out values of <code>do</code>.</p>
 <span class="r-in"><span><span class="co">## Bootstrap</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    original        mean        bias       error </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.19024738 -0.20098164 -0.01073426  0.22131092 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.02119126 -0.01223046 -0.03342171  0.25419848 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Estimate the 25th and 95th percentiles</span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">mean</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        25%        75% </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.3068482 -0.1128799 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1171523  0.2255914 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get the n bootstrap values</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">mean</span>, f <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="va">x</span> <span class="op">}</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] -0.093593749 -0.235732976 -0.270315170 -0.499111647 -0.397142494</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [6] -0.370551013 -0.130221697 -0.213931431 -0.703471141 -0.114457640</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [11] -0.235302113  0.150432583  0.133245360 -0.176999231 -0.032556518</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] -0.344191329 -0.232986998 -0.385832726 -0.320177085 -0.205679716</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [21] -0.161136452 -0.167058271 -0.055125319 -0.058412245 -0.134506060</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [26]  0.173853646 -0.265929379 -0.223113288  0.106677317 -0.022279764</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] -0.185537204 -0.222698604 -0.303518397 -0.116879104 -0.274890286</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [36] -0.246022014 -0.125791813  0.029740451 -0.357376912  0.180220307</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [41] -0.111893539  0.083751241 -0.067073499  0.159333028  0.387822486</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] -0.220229464  0.243804683  0.036115357 -0.175277436 -0.085088073</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [51] -0.030938002 -0.218568194 -0.430466818 -0.186770146  0.048240104</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [56] -0.434346800 -0.269106834 -0.109594762  0.155728495  0.128770048</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] -0.402826236 -0.245153363 -0.068474761 -0.121842647 -0.146456459</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [66] -0.217421799 -0.265034680 -0.148209754  0.014905146 -0.002320748</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [71] -0.209469491  0.020609296 -0.414021371 -0.439468773 -0.392499106</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] -0.287989009 -0.158309931 -0.092990059 -0.261249687 -0.569267285</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [81] -0.216947365 -0.306946340  0.059226816 -0.065139263 -0.386971424</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [86] -0.033471414 -0.380107717  0.023468662  0.119320644 -0.278527583</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] -0.240376127 -0.062903069 -0.111354379 -0.272424417  0.047750036</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [96] -0.261711607 -0.145517967 -0.275306904  0.165245599 -0.084458642</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] -0.055658460  0.012553285  0.041349400  0.093042974  0.099670160</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [6] -0.061494713  0.127535662 -0.040527374 -0.143555476  0.118334790</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [11]  0.151561415  0.169870488 -0.220031667 -0.318969904  0.247937160</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [16]  0.112273170 -0.153946704  0.017988509  0.118099560 -0.230718158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [21]  0.014144688  0.043731896  0.151408591 -0.022418650 -0.091400509</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [26] -0.095123650 -0.129209040 -0.420982750  0.027713521 -0.021103050</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [31]  0.039398214  0.031874925 -0.226939869  0.216009574 -0.366554636</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [36] -0.242291813 -0.355777520  0.070027436  0.153705660 -0.134157318</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [41]  0.079488321  0.198557519 -0.175332095  0.270354534  0.108570235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] -0.037753383  0.210041803  0.600429287  0.095025215 -0.413641866</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [51]  0.122364575  0.319458581 -0.056478252 -0.122845974 -0.230382243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [56] -0.292437070  0.275786771  0.090458497 -0.043456654 -0.264868254</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] -0.243051953  0.274014016  0.461726220  0.044510659  0.585121620</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [66]  0.243817445 -0.247985199 -0.110062601  0.193125666 -0.009806178</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [71]  0.283232376  0.358339070  0.128498265 -0.093850470  0.031574831</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] -0.143423181  0.126609988  0.222645433  0.054978500 -0.129610676</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [81] -0.012500518 -0.500314364 -0.467066751 -0.373238969 -0.118183873</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [86]  0.340116121  0.073524493 -0.367160824  0.264206607 -0.272366164</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] -0.154071588  0.264070688 -0.167951834  0.031561333 -0.054525719</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [96] -0.116927789  0.160710478 -0.067876616  0.220689858  0.075769325</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife</span></span></span>
 <span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span><span class="op">)</span> <span class="co"># Sample mean</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   original       mean       bias      error </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1902474 -0.1902474  0.0000000  0.1945631 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.02119126 0.02119126 0.00000000 0.25552081 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get the leave-one-out values instead of summary</span></span></span>
 <span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">mean</span>, f <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="va">x</span> <span class="op">}</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -0.2004225 -0.1363526 -0.1075741 -0.2058630 -0.2043010 -0.1294838</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] -0.2159068 -0.1810102 -0.1903949 -0.2600265 -0.2111860 -0.2120743</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13] -0.1571879 -0.2480614 -0.2434510 -0.2007651 -0.2402968 -0.1075044</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19] -0.2100033 -0.1430820</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  0.009677577 -0.063362169 -0.041573626  0.113436163 -0.053129677</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [6]  0.046292428  0.064142530  0.009634954 -0.049300536  0.073217548</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [11]  0.038382637  0.048966625  0.028771901  0.135165752 -0.015810962</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16]  0.056594101 -0.101787575  0.043875153  0.033916100  0.046716237</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
