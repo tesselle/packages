@@ -91,6 +91,9 @@
     <loc>https://packages.tesselle.org/chronos/reference/as_year.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/chronos/reference/axis_year.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/chronos/reference/b2k-class.html</loc>
   </url>
   <url>
@@ -104,6 +107,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/convert.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/data.frame.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/dates.html</loc>
@@ -134,6 +140,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/chronos/reference/pretty.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/chronos/reference/series.html</loc>

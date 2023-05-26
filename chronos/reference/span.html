@@ -87,6 +87,8 @@
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other time series tools: 
+<code><a href="axis_year.html">axis_year</a>()</code>,
+<code><a href="data.frame.html">data.frame</a></code>,
 <code><a href="plot.html">plot</a>()</code>,
 <code><a href="series.html">series</a>()</code>,
 <code><a href="start.html">start</a>()</code>,
@@ -131,6 +133,17 @@
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">Y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1000 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [16] 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Coerce to data frame</span></span></span>
+<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">Y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   time         S1          S2         S3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000  0.4765405 -0.04785643  0.5863831</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999 -1.8761183 -1.27022502  1.3824640</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998  2.3932969 -0.15562723 -0.4429070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997  1.6022319 -0.21488090 -0.5452598</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 -0.3000461  0.33703815 -0.6097430</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995  0.9644258  1.07969028 -0.2625951</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

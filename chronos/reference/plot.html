@@ -60,13 +60,16 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for TimeSeries,missing</span></span>
 <span><span class="fu">plot</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
+<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"multiple"</span>, <span class="st">"single"</span><span class="op">)</span>,</span>
 <span>  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"chronos.calendar"</span><span class="op">)</span>,</span>
 <span>  panel <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span>,</span>
+<span>  flip <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  ncol <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ann <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"ann"</span><span class="op">)</span>,</span>
 <span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  frame.plot <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  frame.plot <span class="op">=</span> <span class="va">axes</span>,</span>
 <span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  panel.last <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -79,6 +82,13 @@
 <dd><p>A <code><a href="TimeSeries-class.html">TimeSeries</a></code> object.</p></dd>
 
 
+<dt>type</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying whether the series should be
+plotted separately (with a common time axis) or on a single plot?
+It must be one of "<code>multiple</code>" or "<code>single</code>". Any unambiguous substring can
+be given.</p></dd>
+
+
 <dt>calendar</dt>
 <dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object specifying the target calendar
 (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
@@ -88,6 +98,17 @@
 <dd><p>A <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> in the form <code>function(x, y, ...)</code> which gives the
 action to be carried out in each panel of the display. The default is
 <code><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">graphics::lines()</a></code>.</p></dd>
+
+
+<dt>flip</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the y-axis (ticks and numbering) be
+flipped from side 2 (left) to 4 (right) from series to series when <code>type</code> is
+"<code>multiple</code>"?</p></dd>
+
+
+<dt>ncol</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of columns to use when
+<code>type</code> is "<code>multiple</code>". Defaults to 1 for up to 4 series, otherwise to 2.</p></dd>
 
 
 <dt>main</dt>
@@ -139,6 +160,8 @@ being displayed. Invisibly returns <code>x</code>.</p>
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><code><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">graphics::plot()</a></code></p>
 <p>Other time series tools: 
+<code><a href="axis_year.html">axis_year</a>()</code>,
+<code><a href="data.frame.html">data.frame</a></code>,
 <code><a href="series.html">series</a>()</code>,
 <code><a href="span.html">span</a>()</code>,
 <code><a href="start.html">start</a>()</code>,
@@ -160,13 +183,17 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-in"><span>  calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Plot</span></span></span>
+<span class="r-in"><span><span class="co">## Multiple</span></span></span>
 <span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="co"># Default calendar</span></span></span>
 <span class="r-plt img"><img src="plot-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># BP</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, flip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># BP</span></span></span>
 <span class="r-plt img"><img src="plot-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># b2k</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># b2k</span></span></span>
 <span class="r-plt img"><img src="plot-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Single</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"single"</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="co"># BP</span></span></span>
+<span class="r-plt img"><img src="plot-4.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
