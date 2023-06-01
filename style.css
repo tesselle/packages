@@ -37,3 +37,8 @@ form {
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
   background-color: #B2D7FF;
 }
+
+/* Logo */
+.logo-institution {
+  height: 72px;
+}

@@ -20,3 +20,4 @@ format:
   html:
     theme: default
     include-in-header: _header.html
+    include-after-body: _footer.html
