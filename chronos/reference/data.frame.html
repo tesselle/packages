@@ -87,6 +87,7 @@ which the time series was sampled.</p>
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other time series tools: 
 <code><a href="axis_year.html">axis_year</a>()</code>,
+<code><a href="image.html">image</a>()</code>,
 <code><a href="plot.html">plot</a>()</code>,
 <code><a href="series.html">series</a>()</code>,
 <code><a href="span.html">span</a>()</code>,
@@ -136,13 +137,13 @@ which the time series was sampled.</p>
 <span class="r-in"><span><span class="co">## Coerce to data frame</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">Y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   time         S1         S2         S3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000 -1.4204310 -0.9759843  0.6482350</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999  0.7572009  1.2590482  1.0142310</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998 -1.2984394 -0.6797108 -1.6579659</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997  0.1095846  0.1304624 -1.2438850</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 -1.2155766 -1.0610649 -1.1867706</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995 -0.5089274  0.6752906  0.5074674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   time          S1         S2          S3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000  3.50989236  0.5143534  1.02292850</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999  0.20369627  0.2415697 -0.46965056</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998  1.83187135  0.2086951  0.03502051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997 -0.04430537  0.3421530 -0.31483020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 -0.32413959 -0.6527394 -0.17613892</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995 -0.49633882  0.1787323 -1.15940442</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

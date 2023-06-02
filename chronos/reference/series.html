@@ -126,6 +126,7 @@ represented by one unit. It should be a power of 10 (i.e. 1000 means ka).</p></d
     <div class="dont-index"><p>Other time series tools: 
 <code><a href="axis_year.html">axis_year</a>()</code>,
 <code><a href="data.frame.html">data.frame</a></code>,
+<code><a href="image.html">image</a>()</code>,
 <code><a href="plot.html">plot</a>()</code>,
 <code><a href="span.html">span</a>()</code>,
 <code><a href="start.html">start</a>()</code>,
@@ -174,13 +175,13 @@ represented by one unit. It should be a power of 10 (i.e. 1000 means ka).</p></d
 <span class="r-in"><span><span class="co">## Coerce to data frame</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">Y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   time          S1         S2           S3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000 -2.29974997  0.1084817 -0.009572035</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999  0.08373053 -0.8694176  0.162541536</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998  0.73229207  0.8555078  0.465888215</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997  1.25174667  0.5866714  2.061028302</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 -0.21542349  1.1054846 -0.137289289</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995  0.41584347 -0.7398686 -0.478804639</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   time         S1         S2         S3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000  1.4066800  0.6386670  1.7930721</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999  1.0240510  0.5236083 -0.3359816</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998 -1.5004582 -1.2670498  1.0660360</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997  0.5126497  0.1618348 -0.7247078</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 -1.8052424  1.5328179  1.0820083</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995 -1.2508937 -0.3189280  0.7998285</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
