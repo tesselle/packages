@@ -6,15 +6,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="aion">
-<title>Manual • aion</title>
+<title>Introduction to aion • aion</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.5/font.css" rel="stylesheet">
-<link href="../deps/Ubuntu-0.4.5/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.6/font.css" rel="stylesheet">
+<link href="../deps/Ubuntu-0.4.6/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Manual">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to aion">
 <meta property="og:description" content="aion">
+<meta property="og:image" content="https://packages.tesselle.org/aion/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
 <meta name="twitter:site" content="@nfrerebeau">
@@ -31,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">aion</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +52,15 @@
 </li>
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
+  </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
@@ -70,11 +86,11 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Manual</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Introduction to aion</h1>
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-03-17</h4>
+            <h4 data-toc-skip class="date">2023-06-03</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/aion/blob/HEAD/vignettes/aion.Rmd" class="external-link"><code>vignettes/aion.Rmd</code></a></small>
       <div class="d-none name"><code>aion.Rmd</code></div>
@@ -82,72 +98,135 @@ Frerebeau</h4>
 
     
     
-<p>These examples use data available through the <a href="https://packages.tesselle.org/fasti/" class="external-link"><strong>fasti</strong></a>
-package which is available in a <a href="https://tesselle.r-universe.dev" class="external-link">separate repository</a>.
-<strong>fasti</strong> provides OxCal <span class="citation">(Bronk
-Ramsey 2009)</span> input models.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Install the latest version</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"fasti"</span>, repos <span class="op">=</span> <span class="st">"https://tesselle.r-universe.dev"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/aion/">aion</a></span><span class="op">)</span></span></code></pre></div>
+<p>Base R ships with a lot of functionality useful for time series, in
+particular in the <strong>stats</strong> package. However, these
+features are not adapted to most archaeological time series. These are
+indeed defined for a given calendar era, they can involve dates very far
+in the past and the sampling of the observation time is (in most cases)
+not constant.</p>
+<p><strong>aion</strong> provides a system of classes and methods to
+represent and work with such time-series.</p>
+<div class="section level2">
+<h2 id="vectors-of-dates">Vectors of dates<a class="anchor" aria-label="anchor" href="#vectors-of-dates"></a>
+</h2>
+<p>In base R, dates are represented by default as the number of days
+since 1970-01-01 (Gregorian), with negative values for earlier dates
+(see <code><a href="https://rdrr.io/r/base/Dates.html" class="external-link">help(Date)</a></code>). <strong>aion</strong> uses a different
+approach: it allows to create date vectors represented as <em>rata
+die</em> <span class="citation">(Reingold and Dershowitz 2018)</span>,
+i.e. as number of days since 01-01-01 (Gregorian)<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;It is intended that the &lt;em&gt;rata die&lt;/em&gt; should be an
+integer value, but this is not enforced in the internal
+representation.&lt;/p&gt;"><sup>1</sup></a>.</p>
+<p>This makes it possible to get rid of a specific calendar and to make
+calculations easier. It is then possible to convert a vector of <em>rata
+die</em> into dates or (decimal) years of any calendar<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Only the Gregorian calendar (and its different eras) and
+the Julian calendar are currently supported. Others will be gradually
+implemented.&lt;/p&gt;"><sup>2</sup></a>.</p>
+<p>The <code><a href="../reference/fixed.html">fixed()</a></code> function allows to create a vector of
+<em>rata die</em> from dates belonging to a specific calendar:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Load package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/aion/">aion</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## Create a calendar object</span></span>
+<span><span class="co">## (Gregorian Common Era)</span></span>
+<span><span class="op">(</span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Common Era (CE): Gregorian years counted forwards from 0.</span></span>
 <span></span>
-<span><span class="co">## Download OxCal</span></span>
-<span><span class="fu"><a href="../reference/oxcal_configure.html">oxcal_configure</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Attempting to download OxCal from https://c14.arch.ox.ac.uk/OxCalDistribution.zip.</span></span>
-<span><span class="co">#&gt; OxCal successfully downloaded and extracted to /tmp/Rtmp1dKsFQ/OxCal.</span></span>
-<span><span class="co">#&gt; OxCal binary found at /tmp/Rtmp1dKsFQ/OxCal/bin/OxCalLinux</span></span></code></pre></div>
+<span><span class="co">## Convert 2000-02-29 (Gregorian) to rata die</span></span>
+<span><span class="fu"><a href="../reference/fixed.html">fixed</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">02</span>, <span class="fl">29</span>, calendar <span class="op">=</span> <span class="va">cal</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
+<span><span class="co">#&gt; [1] 730179</span></span>
+<span></span>
+<span><span class="co">## If days and months are missing, decimal years are expected</span></span>
+<span><span class="fu"><a href="../reference/fixed.html">fixed</a></span><span class="op">(</span><span class="fl">2000.161</span>, calendar <span class="op">=</span> <span class="va">cal</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
+<span><span class="co">#&gt; [1] 730179</span></span></code></pre></div>
+<p>A <em>rata die</em> vector can be converted into dates (or years) of
+a particular calendar:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Read OxCal script from Bosch et al. 2015</span></span>
-<span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"oxcal/ksarakil/ksarakil.oxcal"</span>, package <span class="op">=</span> <span class="st">"fasti"</span><span class="op">)</span></span>
-<span><span class="va">scr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## Create a vector of 10 years BP (Gregorian)</span></span>
+<span><span class="co">## (every 20 years starting from 2000 BP)</span></span>
+<span><span class="op">(</span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">20000</span>, by <span class="op">=</span> <span class="op">-</span><span class="fl">20</span>, length.out <span class="op">=</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] 20000 19980 19960 19940 19920 19900 19880 19860 19840 19820</span></span>
 <span></span>
-<span><span class="co">## Print script</span></span>
-<span><span class="co"># cat(scr, sep = "\n")</span></span>
+<span><span class="co">## Convert years to rata die</span></span>
+<span><span class="op">(</span><span class="va">rd</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fixed.html">fixed</a></span><span class="op">(</span><span class="va">years</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
+<span><span class="co">#&gt;  [1] -6592992 -6585687 -6578382 -6571077 -6563772 -6556467 -6549162 -6541857</span></span>
+<span><span class="co">#&gt;  [9] -6534553 -6527248</span></span>
 <span></span>
-<span><span class="co">## Execute OxCal script</span></span>
-<span><span class="co">## /!\ this may take a while /!\</span></span>
-<span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/oxcal_execute.html">oxcal_execute</a></span><span class="op">(</span><span class="va">scr</span><span class="op">)</span></span>
-<span><span class="co">#&gt; OxCal v4.4.4 (c) Bronk Ramsey (2021)</span></span>
-<span><span class="co">#&gt; MCMC analysis</span></span>
-<span><span class="co">#&gt; Sort Burn    Trial   Save    Shrink  kPasses Done    Ok  Convergence</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     3.0 10.0    100.0   100.0</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     6.0 20.0    100.0   8.1</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     12.0    22.2    100.0   14.0</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     24.0    22.2    100.0   20.4</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     48.0    22.2    100.0   4.8</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.] [.] 96.0    22.2    100.0   60.0</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     192.0   22.2    100.0   62.1</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     384.0   22.2    100.0   90.4</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     768.0   22.2    100.0   85.2</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     1152.0  30.0    100.0   93.9</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     1536.0  40.0    100.0   93.9</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     1920.0  50.0    100.0   93.9</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     2304.0  60.0    100.0   90.3</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     2688.0  70.0    100.0   89.1</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     3072.0  80.0    100.0   89.1</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     3456.0  90.0    100.0   89.1</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     3840.0  100.0   100.0   89.1</span></span>
-<span><span class="co">#&gt; [.]  [.] [.] [.]     4224.0  110.0   100.0   89.1</span></span>
-<span></span>
-<span><span class="co">## Parse OxCal output</span></span>
-<span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/oxcal_parse.html">oxcal_parse</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co">## Convert back to Gregorian years</span></span>
+<span><span class="fu"><a href="../reference/as_year.html">as_year</a></span><span class="op">(</span><span class="va">rd</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"CE"</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Common Era</span></span>
+<span><span class="co">#&gt;  [1] -18050 -18030 -18010 -17990 -17970 -17950 -17930 -17910 -17890 -17870</span></span>
+<span><span class="fu"><a href="../reference/as_year.html">as_year</a></span><span class="op">(</span><span class="va">rd</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"BP"</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Before Present</span></span>
+<span><span class="co">#&gt;  [1] 20000 19980 19960 19940 19920 19900 19880 19860 19840 19820</span></span>
+<span><span class="fu"><a href="../reference/as_year.html">as_year</a></span><span class="op">(</span><span class="va">rd</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/calendar.html">calendar</a></span><span class="op">(</span><span class="st">"b2k"</span><span class="op">)</span><span class="op">)</span> <span class="co"># Before 2000</span></span>
+<span><span class="co">#&gt;  [1] 20050 20030 20010 19990 19970 19950 19930 19910 19890 19870</span></span></code></pre></div>
+<p><em>Rata die</em> can be represented as (nicely formated) character
+vectors:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></code></pre></div>
-<p><img src="figures/plot-1.png" alt="plot of chunk plot" style="display: block; margin: auto;"></p>
-<div class="section level2 unnumbered">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/format.html">format</a></span><span class="op">(</span><span class="va">rd</span><span class="op">)</span> <span class="co"># Default calendar (Gregorian Common Era)</span></span>
+<span><span class="co">#&gt;  [1] "-18050 CE" "-18030 CE" "-18010 CE" "-17990 CE" "-17970 CE" "-17950 CE"</span></span>
+<span><span class="co">#&gt;  [7] "-17930 CE" "-17910 CE" "-17890 CE" "-17870 CE"</span></span>
+<span><span class="fu"><a href="../reference/format.html">format</a></span><span class="op">(</span><span class="va">rd</span>, format <span class="op">=</span> <span class="st">"ka"</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] "20 ka BP"    "19.98 ka BP" "19.96 ka BP" "19.94 ka BP" "19.92 ka BP"</span></span>
+<span><span class="co">#&gt;  [6] "19.9 ka BP"  "19.88 ka BP" "19.86 ka BP" "19.84 ka BP" "19.82 ka BP"</span></span></code></pre></div>
+<p>The <em>rata die</em> vector provides the internal time
+representation of the <strong>aion</strong> time-series (if you want to
+work with numeric vectors that represent year-based time scales, you may
+be interested in the <a href="https://github.com/joeroe/era" class="external-link"><strong>era</strong></a>
+package).</p>
+</div>
+<div class="section level2">
+<h2 id="time-series">Time series<a class="anchor" aria-label="anchor" href="#time-series"></a>
+</h2>
+<p>A Time Series is a sequence of observation time and value pairs with
+strictly increasing observation times. It can be created from a numeric
+vector or matrix:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Set seed for reproductibility</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## 6 x 50 observations...</span></span>
+<span><span class="va">obs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">50</span>, ncol <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## ...sampled every two years starting from 2000 BP</span></span>
+<span><span class="va">spl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">2000</span>, by <span class="op">=</span> <span class="op">-</span><span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Create time series</span></span>
+<span><span class="op">(</span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/series.html">series</a></span><span class="op">(</span>object <span class="op">=</span> <span class="va">obs</span>, time <span class="op">=</span> <span class="va">spl</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; 6 time series observed between -18627 and 17167 r.d.</span></span>
+<span></span>
+<span><span class="co">## Plot</span></span>
+<span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="co"># Default calendar</span></span></code></pre></div>
+<p><img src="aion_files/figure-html/time-series-1.png" width="672"></p>
+<p>Time series terminal and sampling times can be retrieved and
+expressed according to different calendars:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/start.html">start</a></span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] -50</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 48</span></span>
+<span><span class="fu"><a href="../reference/time.html">time</a></span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] 2000 1998 1996 1994 1992 1990 1988 1986 1984 1982 1980 1978 1976 1974 1972</span></span>
+<span><span class="co">#&gt; [16] 1970 1968 1966 1964 1962 1960 1958 1956 1954 1952 1950 1948 1946 1944 1942</span></span>
+<span><span class="co">#&gt; [31] 1940 1938 1936 1934 1932 1930 1928 1926 1924 1922 1920 1918 1916 1914 1912</span></span>
+<span><span class="co">#&gt; [46] 1910 1908 1906 1904 1902</span></span></code></pre></div>
+<p>Note that <strong>aion</strong> uses the astronomical notation for
+Gregorian years (there <em>is</em> a year 0).</p>
+</div>
+<div class="section level2">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-bronkramsey2009" class="csl-entry">
-Bronk Ramsey, Christopher. 2009. <span>“Bayesian <span>Analysis</span>
-of <span>Radiocarbon Dates</span>.”</span> <em>Radiocarbon</em> 51 (1):
-337–60. <a href="https://doi.org/10.1017/S0033822200033865" class="external-link">https://doi.org/10.1017/S0033822200033865</a>.
+<div id="ref-reingold2018" class="csl-entry">
+Reingold, Edward M., and Nachum Dershowitz. 2018. <em>Calendrical
+<span>Calculations</span>: <span>The Ultimate Edition</span></em>. 4th
+ed. <span>Cambridge University Press</span>. <a href="https://doi.org/10.1017/9781107415058" class="external-link">https://doi.org/10.1017/9781107415058</a>.
 </div>
 </div>
 </div>
+
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
 </div>
@@ -160,7 +239,7 @@ of <span>Radiocarbon Dates</span>.”</span> <em>Radiocarbon</em> 51 (1):
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.9000.</p>
+<p>Developed by Nicolas Frerebeau, Joe Roe.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer>

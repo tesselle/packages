@@ -16,6 +16,9 @@
     <loc>https://packages.tesselle.org/aion/articles/aion.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/aion/articles/bibliography.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/aion/articles/index.html</loc>
   </url>
   <url>
@@ -25,36 +28,129 @@
     <loc>https://packages.tesselle.org/aion/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/aion/news/index.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/aion/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/OxCalFiles-class.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/AD-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/OxCalOutput-class.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/BC-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/BCE-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/BP-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/CE-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/GregorianCalendar-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/JulianCalendar-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/RataDie-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/TimeScale-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/TimeSeries-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/reference/aion-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/aion/reference/arithmetic.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/as_date.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/as_decimal.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/as_fixed.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/as_year.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/axis_year.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/b2k-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/calendar.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/calendar_get.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/convert.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/data.frame.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/dates.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/fixed.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/fixed_gregorian.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/fixed_julian.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/format.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/gregorian.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/image.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/aion/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/oxcal_calibrate.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/is.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/oxcal_configure.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/oxcal_execute.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/oxcal_install.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/aion/reference/oxcal_parse.html</loc>
+    <loc>https://packages.tesselle.org/aion/reference/julian.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/reference/plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/pretty.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/series.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/span.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/start.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/subset.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/time.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/window.html</loc>
   </url>
 </urlset>
