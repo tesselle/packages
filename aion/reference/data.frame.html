@@ -117,6 +117,7 @@ which the time series was sampled.</p>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] -365607</span>
 <span class="r-in"><span><span class="fu"><a href="time.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Rata die: number of days since 01-01-01 (Gregorian).</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -376199 -375834 -375468 -375103 -374738 -374373 -374007 -373642 -373277</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [10] -372912 -372546 -372181 -371816 -371451 -371085 -370720 -370355 -369990</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [19] -369624 -369259 -368894 -368529 -368163 -367798 -367433 -367068 -366702</span>
@@ -140,13 +141,13 @@ which the time series was sampled.</p>
 <span class="r-in"><span><span class="co">## Coerce to data frame</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">Y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   time        S1          S2          S3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000 0.7832887 -0.06763594  1.23104387</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999 0.6889302  0.38037860  0.99228896</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998 0.7100564  0.44735874  1.52262806</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997 1.0438167 -1.75039213 -0.50687589</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 1.0921591  1.83318026 -0.64273846</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995 0.7856273 -0.76404279 -0.08860249</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   time         S1         S2         S3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1000 -0.3833319  0.7437258  0.5655668</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  999 -1.2262467  1.6632580 -0.3515964</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  998 -0.1487493  0.3151515  0.2262890</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  997  0.6162860 -2.2978248  0.2902173</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  996 -1.1904954  0.9995751  0.5516764</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  995  2.2710611 -1.0722119  0.7914377</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
