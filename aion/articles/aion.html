@@ -233,7 +233,7 @@ vector or matrix:</p>
 <span></span>
 <span><span class="co">## Create time series</span></span>
 <span><span class="op">(</span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/series.html">series</a></span><span class="op">(</span>object <span class="op">=</span> <span class="va">obs</span>, time <span class="op">=</span> <span class="va">spl</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 6 time series observed between -18627 and 17167 r.d.</span></span></code></pre></div>
+<span><span class="co">#&gt; 50 x 6 x 1 time series observed between -18627 and 17167 r.d.</span></span></code></pre></div>
 <p>Time series terminal and sampling times can be retrieved and
 expressed according to different calendars (<strong>remember that
 outputs are expressed in <em>rata die</em> by default</strong>):</p>
@@ -269,7 +269,7 @@ outputs are expressed in <em>rata die</em> by default</strong>):</p>
 <p><img src="aion_files/figure-html/plot-multiple-1.png" width="672"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Extract the first series</span></span>
-<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="va">X</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="va">X</span><span class="op">[</span>, <span class="fl">1</span>, <span class="op">]</span></span>
 <span></span>
 <span><span class="co">## Plot a single series</span></span>
 <span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span></span>

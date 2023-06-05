@@ -61,7 +61,7 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for TimeSeries</span></span>
-<span><span class="fu">image</span><span class="op">(</span><span class="va">x</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"aion.calendar"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">image</span><span class="op">(</span><span class="va">x</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"aion.calendar"</span><span class="op">)</span>, k <span class="op">=</span> <span class="fl">1</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -73,6 +73,11 @@
 <dt>calendar</dt>
 <dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object specifying the target calendar
 (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
+
+
+<dt>k</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the slice of <code>x</code> along the third
+dimension to be plotted.</p></dd>
 
 
 <dt>...</dt>
@@ -118,12 +123,28 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-plt img"><img src="image-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Single</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"single"</span><span class="op">)</span> <span class="co"># CE</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, facet <span class="op">=</span> <span class="st">"single"</span><span class="op">)</span> <span class="co"># CE</span></span></span>
 <span class="r-plt img"><img src="image-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Image</span></span></span>
 <span class="r-in"><span><span class="fu">image</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="image-5.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Create 6 x 3 time-series of 50 observations</span></span></span>
+<span class="r-in"><span><span class="co">## Sampled every two years starting from 2000 BP</span></span></span>
+<span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  object <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">900</span><span class="op">)</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">6</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">2000</span>, by <span class="op">=</span> <span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, flip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># BP</span></span></span>
+<span class="r-plt img"><img src="image-6.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># b2k</span></span></span>
+<span class="r-plt img"><img src="image-7.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Graphical parameters</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"b"</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="image-8.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
