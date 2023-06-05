@@ -82,9 +82,6 @@
     <loc>https://packages.tesselle.org/aion/reference/as_year.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/aion/reference/axis_year.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/aion/reference/b2k-class.html</loc>
   </url>
   <url>
@@ -152,5 +149,11 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/reference/window.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/year_axis.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/reference/year_grid.html</loc>
   </url>
 </urlset>
