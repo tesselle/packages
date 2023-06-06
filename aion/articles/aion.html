@@ -90,7 +90,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-06-05</h4>
+            <h4 data-toc-skip class="date">2023-06-06</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/aion/blob/HEAD/vignettes/aion.Rmd" class="external-link"><code>vignettes/aion.Rmd</code></a></small>
       <div class="d-none name"><code>aion.Rmd</code></div>
@@ -218,9 +218,15 @@ package).</p>
 <div class="section level2">
 <h2 id="time-series">Time series<a class="anchor" aria-label="anchor" href="#time-series"></a>
 </h2>
-<p>A Time Series is a sequence of observation time and value pairs with
-strictly increasing observation times. It can be created from a numeric
-vector or matrix:</p>
+<p>A time series is a sequence of observation time and value pairs with
+strictly increasing observation times.</p>
+<p>A time series object is an <span class="math inline">\(n \times m
+\times p\)</span> array, with <span class="math inline">\(n\)</span>
+being the number of observations, <span class="math inline">\(m\)</span>
+being the number of series and with the <span class="math inline">\(p\)</span> columns of the third dimension
+containing extra variables for each series. It can be created from a
+numeric <code>vector</code>, <code>matrix</code> or
+<code>array</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Set seed for reproductibility</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
