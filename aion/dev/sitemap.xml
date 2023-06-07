@@ -31,6 +31,9 @@
     <loc>https://packages.tesselle.org/aion/dev/news/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/aion/dev/paper.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/aion/dev/pull_request_template.html</loc>
   </url>
   <url>
