@@ -90,7 +90,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-06-06</h4>
+            <h4 data-toc-skip class="date">2023-06-07</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/aion/blob/HEAD/vignettes/aion.Rmd" class="external-link"><code>vignettes/aion.Rmd</code></a></small>
       <div class="d-none name"><code>aion.Rmd</code></div>
@@ -281,9 +281,9 @@ outputs are expressed in <em>rata die</em> by default</strong>):</p>
 <span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span></span>
 <span>  <span class="va">Y</span>,</span>
 <span>  calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span>, <span class="co"># b2k time scale</span></span>
-<span>  panel.first <span class="op">=</span> <span class="fu"><a href="../reference/year_grid.html">year_grid</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># Add a grid</span></span>
+<span>  panel.first <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># Add a grid</span></span>
 <span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/year_axis.html">year_axis</a></span><span class="op">(</span><span class="va">Y</span>, side <span class="op">=</span> <span class="fl">3</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># Add a secondary time axis</span></span>
+<span><span class="fu"><a href="../reference/year_axis.html">year_axis</a></span><span class="op">(</span>side <span class="op">=</span> <span class="fl">3</span>, calendar <span class="op">=</span> <span class="fu"><a href="../reference/gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># Add a secondary time axis</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/mtext.html" class="external-link">mtext</a></span><span class="op">(</span><span class="fu"><a href="../reference/format.html">format</a></span><span class="op">(</span><span class="fu"><a href="../reference/gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>, side <span class="op">=</span> <span class="fl">3</span>, line <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="co"># Add secondary axis title</span></span></code></pre></div>
 <p><img src="aion_files/figure-html/plot-single-1.png" width="672"></p>
 <p>Note that <strong>aion</strong> uses the astronomical notation for

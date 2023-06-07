@@ -105,13 +105,13 @@ The default is <code><a href="https://rdrr.io/r/graphics/lines.html" class="exte
 
 <dt>flip</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the y-axis (ticks and numbering) be
-flipped from side 2 (left) to 4 (right) from series to series when <code>type</code> is
-"<code>multiple</code>"?</p></dd>
+flipped from side 2 (left) to 4 (right) from series to series when <code>facet</code>
+is "<code>multiple</code>"?</p></dd>
 
 
 <dt>ncol</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of columns to use when
-<code>type</code> is "<code>multiple</code>". Defaults to 1 for up to 4 series, otherwise to 2.</p></dd>
+<code>facet</code> is "<code>multiple</code>". Defaults to 1 for up to 4 series, otherwise to 2.</p></dd>
 
 
 <dt>main</dt>
@@ -156,7 +156,7 @@ place but before the axes, title and box are added.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p><code>plot()</code> is called it for its side-effects: it results in a graphic
+<p><code>plot()</code> is called for its side-effects: it results in a graphic
 being displayed. Invisibly returns <code>x</code>.</p>
     </div>
     <div class="section level2">
@@ -164,8 +164,7 @@ being displayed. Invisibly returns <code>x</code>.</p>
     <div class="dont-index"><p><code><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">graphics::plot()</a></code></p>
 <p>Other plotting tools: 
 <code><a href="image.html">image</a>()</code>,
-<code><a href="year_axis.html">year_axis</a>()</code>,
-<code><a href="year_grid.html">year_grid</a>()</code></p></div>
+<code><a href="year_axis.html">year_axis</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -193,10 +192,12 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-in"><span><span class="co">## Single</span></span></span>
 <span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, facet <span class="op">=</span> <span class="st">"single"</span><span class="op">)</span> <span class="co"># CE</span></span></span>
 <span class="r-plt img"><img src="plot-4.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, facet <span class="op">=</span> <span class="st">"single"</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># BP</span></span></span>
+<span class="r-plt img"><img src="plot-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Image</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="image.html">image</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="plot-5.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="image.html">image</a></span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="plot-6.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Create 6 x 3 time-series of 50 observations</span></span></span>
 <span class="r-in"><span><span class="co">## Sampled every two years starting from 2000 BP</span></span></span>
@@ -206,13 +207,17 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-in"><span>  calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span>, flip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># BP</span></span></span>
-<span class="r-plt img"><img src="plot-6.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># b2k</span></span></span>
 <span class="r-plt img"><img src="plot-7.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">b2k</a></span><span class="op">(</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># b2k</span></span></span>
+<span class="r-plt img"><img src="plot-8.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Graphical parameters</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, lwd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="plot-9.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"b"</span>, pch <span class="op">=</span> <span class="fl">16</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="plot-8.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="plot-10.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"p"</span>, pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">17</span>, <span class="fl">18</span><span class="op">)</span>, cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="plot-11.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

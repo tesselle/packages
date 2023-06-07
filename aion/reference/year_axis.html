@@ -60,22 +60,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">year_axis</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for RataDie</span></span>
-<span><span class="fu">year_axis</span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
-<span>  <span class="va">side</span>,</span>
-<span>  at <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"ka"</span>, <span class="st">"Ma"</span>, <span class="st">"Ga"</span><span class="op">)</span>,</span>
-<span>  labels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"aion.last_calendar"</span><span class="op">)</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for TimeSeries</span></span>
-<span><span class="fu">year_axis</span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">year_axis</span><span class="op">(</span></span>
 <span>  <span class="va">side</span>,</span>
 <span>  at <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"ka"</span>, <span class="st">"Ma"</span>, <span class="st">"Ga"</span><span class="op">)</span>,</span>
@@ -87,16 +72,7 @@
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>x</dt>
-<dd><p>A <code><a href="TimeSeries-class.html">TimeSeries</a></code> object.</p></dd>
-
-
-<dt>...</dt>
-<dd><p>Further parameters to be passed to <code><a href="https://rdrr.io/r/graphics/axis.html" class="external-link">graphics::axis()</a></code>.
-(e.g. <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a>).</p></dd>
-
-
-<dt>side</dt>
+    <dl><dt>side</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying which side of the plot the axis is to
 be drawn on. The axis is placed as follows: 1=below, 2=left, 3=above and
 4=right.</p></dd>
@@ -123,19 +99,23 @@ the tickpoints.</p></dd>
 <dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object specifying the target calendar
 (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
 
+
+<dt>...</dt>
+<dd><p>Further parameters to be passed to <code><a href="https://rdrr.io/r/graphics/axis.html" class="external-link">graphics::axis()</a></code>.
+(e.g. <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a>).</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p><code>year_axis()</code> is called it for its side-effects. Invisibly returns <code>x</code>.</p>
+<p><code>year_axis()</code> is called it for its side-effects.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other plotting tools: 
 <code><a href="image.html">image</a>()</code>,
-<code><a href="plot.html">plot</a>()</code>,
-<code><a href="year_grid.html">year_grid</a>()</code></p></div>
+<code><a href="plot.html">plot</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -148,28 +128,20 @@ the tickpoints.</p></dd>
 <span class="r-in"><span><span class="co">## Sampled every two years starting from 2000 BP</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="series.html">series</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  object <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">2000</span>, by <span class="op">=</span> <span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">300</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">2000</span>, by <span class="op">=</span> <span class="op">-</span><span class="fl">2</span>, length.out <span class="op">=</span> <span class="fl">300</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Axis</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, axes <span class="op">=</span> <span class="cn">FALSE</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># Remove axes</span></span></span>
-<span class="r-in"><span><span class="fu">year_axis</span><span class="op">(</span><span class="va">X</span>, side <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># Same calendar as last plot</span></span></span>
-<span class="r-in"><span><span class="fu">year_axis</span><span class="op">(</span><span class="va">X</span>, side <span class="op">=</span> <span class="fl">3</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># Specific calendar</span></span></span>
+<span class="r-in"><span><span class="fu">year_axis</span><span class="op">(</span>side <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># Same calendar as last plot</span></span></span>
+<span class="r-in"><span><span class="fu">year_axis</span><span class="op">(</span>side <span class="op">=</span> <span class="fl">3</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># Specific calendar</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/mtext.html" class="external-link">mtext</a></span><span class="op">(</span><span class="fu"><a href="format.html">format</a></span><span class="op">(</span><span class="fu"><a href="gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>, side <span class="op">=</span> <span class="fl">3</span>, line <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="year_axis-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Grid</span></span></span>
-<span class="r-in"><span><span class="co">## grid() does not align with the tick marks of the default axis</span></span></span>
-<span class="r-in"><span><span class="co">## because x coordinates of the plotting region are expressed in rata die</span></span></span>
-<span class="r-in"><span><span class="co">## but year_axis() computes tickmarks according to a given calendar</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, panel.first <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="year_axis-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, panel.first <span class="op">=</span> <span class="fu"><a href="year_grid.html">year_grid</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="year_axis-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">X</span>, panel.first <span class="op">=</span> <span class="fu"><a href="year_grid.html">year_grid</a></span><span class="op">(</span><span class="fl">12</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="year_axis-4.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
