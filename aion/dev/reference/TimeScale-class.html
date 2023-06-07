@@ -27,6 +27,7 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/extending.html">Extending aion</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -74,7 +75,13 @@ the time scale.</p></dd>
 
 <dt><code>epoch</code></dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value specifying the epoch year from which
-years are counted (in Gregorian astronomical years).</p></dd>
+years are counted (starting date of the calendar, in years). Allows to
+define multiple era of a calendar.</p></dd>
+
+
+<dt><code>fixed</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value specifying the reference date of the calendar
+(in <em>rata die</em>).</p></dd>
 
 
 <dt><code>direction</code></dt>
