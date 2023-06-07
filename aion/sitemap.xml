@@ -19,6 +19,9 @@
     <loc>https://packages.tesselle.org/aion/articles/bibliography.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/aion/articles/extending.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/aion/articles/index.html</loc>
   </url>
   <url>
@@ -29,6 +32,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/aion/paper.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/aion/pull_request_template.html</loc>

@@ -27,6 +27,7 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/extending.html">Extending aion</a>
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
@@ -68,6 +69,8 @@
 <span></span>
 <span><span class="fu">calendar_epoch</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
+<span><span class="fu">calendar_fixed</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+<span></span>
 <span><span class="fu">calendar_direction</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for TimeScale</span></span>
@@ -81,6 +84,9 @@
 <span></span>
 <span><span class="co"># S4 method for TimeScale</span></span>
 <span><span class="fu">calendar_epoch</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for TimeScale</span></span>
+<span><span class="fu">calendar_fixed</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for TimeScale</span></span>
 <span><span class="fu">calendar_direction</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
@@ -102,8 +108,11 @@ abbreviated label of the time scale.</p></li>
 the time scale.</p></li>
 <li><p><code>calendar_unit()</code> returns a <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the name of
 the calendar.</p></li>
-<li><p><code>calendar_epoch()</code> returns length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the
-epoch year from which years are counted (in Gregorian years).</p></li>
+<li><p><code>calendar_fixed()</code> returns a length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the
+reference date of the calendar (in <em>rata die</em>).</p></li>
+<li><p><code>calendar_epoch()</code> returns a length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the
+epoch year from which years are counted (starting date of the calendar,
+in years).</p></li>
 <li><p><code>calendar_direction()</code> returns a length-one <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> vector specifying
 if years are counted backwards (\(-1\)) or forwards (\(1\)) from
 <code>epoch</code>. Only the <a href="https://rdrr.io/r/base/sign.html" class="external-link">sign</a> of <code>calendar_direction()</code> is relevant.</p></li>
