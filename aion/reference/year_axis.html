@@ -67,6 +67,7 @@
 <span>  format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"ka"</span>, <span class="st">"Ma"</span>, <span class="st">"Ga"</span><span class="op">)</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"aion.last_calendar"</span><span class="op">)</span>,</span>
+<span>  current_calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"aion.last_calendar"</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -99,6 +100,11 @@ the tickpoints.</p></dd>
 <dt>calendar</dt>
 <dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object specifying the target calendar
 (see <code><a href="calendar.html">calendar()</a></code>).</p></dd>
+
+
+<dt>current_calendar</dt>
+<dd><p>A <code><a href="TimeScale-class.html">TimeScale</a></code> object specifying the calendar
+used by the last call to <code><a href="plot.html">plot()</a></code>.</p></dd>
 
 
 <dt>...</dt>
