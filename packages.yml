@@ -2,6 +2,12 @@
 - category: Packages
   description: ''
   tiles:
+    - title: aion
+      subtitle: Archaeological Time Series
+      category: chronological-data
+      description: "A toolkit for archaeological time series analysis. <strong>chronos</strong> provides a system of classes and methods to represent and work with archaeological time series. Dates are represented as <span style='font-style: italic;'>rata die</span> and can be converted to (virtually) any calendar defined by Reingold and Dershowitz (2018)."
+      status: active
+
     - title: alkahest
       subtitle: Pre-Processing XY Data from Experimental Methods
       category: signal-processing
@@ -13,12 +19,6 @@
       category: data-cleaning
       description: "A collection of simple functions for cleaning rectangular data. This package allows to detect, count and replace values or delete rows/columns according to a specific predicate. In addition, it provides tools to check conditions and return informative error messages."
       status: active
-
-    - title: chronos
-      subtitle: Archaeological Time Series
-      category: chronological-data
-      description: "A toolkit for archaeological time series analysis. <strong>chronos</strong> provides a system of classes and methods to represent and work with archaeological time series. Dates are represented as <span style='font-style: italic;'>rata die</span> and can be converted to (virtualy) any calendar defined by Reingold and Dershowitz (2018)"
-      status: wip
 
     - title: dimensio
       subtitle: Multivariate Data Analysis
