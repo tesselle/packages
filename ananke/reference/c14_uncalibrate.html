@@ -85,8 +85,10 @@ calibrated ages (BP).</p></dd>
 <code><a href="c14_calibrate.html">c14_calibrate</a>()</code>,
 <code><a href="c14_combine.html">c14_combine</a>()</code>,
 <code><a href="c14_curve.html">c14_curve</a>()</code>,
+<code><a href="c14_ensemble.html">c14_ensemble</a>()</code>,
 <code><a href="c14_plot.html">c14_plot</a></code>,
-<code><a href="c14_spd.html">c14_spd</a>()</code></p></div>
+<code><a href="c14_spd.html">c14_spd</a>()</code>,
+<code><a href="rec_plot.html">rec_plot</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -95,7 +97,8 @@ calibrated ages (BP).</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Calibrate multiple dates</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co">## Calibrate multiple dates</span></span></span>
 <span class="r-in"><span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu"><a href="c14_calibrate.html">c14_calibrate</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  ages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5000</span>, <span class="fl">4500</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  errors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">45</span>, <span class="fl">35</span><span class="op">)</span>,</span></span>
@@ -104,10 +107,7 @@ calibrated ages (BP).</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Uncalibrate</span></span></span>
 <span class="r-in"><span><span class="fu">c14_uncalibrate</span><span class="op">(</span><span class="va">cal</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   mean sd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 4997 82</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 4515 83</span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

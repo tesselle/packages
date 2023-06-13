@@ -85,7 +85,7 @@ the groups to combine with. If <code>NULL</code> (the default), all dates are co
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> with the following columns:</p><table class="table table"><tr><td><code>groups</code></td><td>Group names</td></tr><tr><td><code>ages</code></td><td>Combined 14C ages</td></tr><tr><td><code>errors</code></td><td>Combined 14C standard deviations</td></tr><tr><td><code>chi2</code></td><td>Chi-squared test statistic</td></tr><tr><td><code>p</code></td><td>Chi-squared test p-value</td></tr></table></div>
+<p>A <code><a href="data.frame.html">data.frame</a></code> with the following columns:</p><table class="table table"><tr><td><code>groups</code></td><td>Group names</td></tr><tr><td><code>ages</code></td><td>Combined 14C ages</td></tr><tr><td><code>errors</code></td><td>Combined 14C standard deviations</td></tr><tr><td><code>chi2</code></td><td>Chi-squared test statistic</td></tr><tr><td><code>p</code></td><td>Chi-squared test p-value</td></tr></table></div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Ward, G. K. and Wilson, S. R. (1978). Procedures for Comparing and Combining
@@ -99,9 +99,11 @@ Radiocarbon Age Determinations: A Critique. <em>Archaeometry</em> 20(1): 19‑31
 <code><a href="F14C.html">F14C</a></code>,
 <code><a href="c14_calibrate.html">c14_calibrate</a>()</code>,
 <code><a href="c14_curve.html">c14_curve</a>()</code>,
+<code><a href="c14_ensemble.html">c14_ensemble</a>()</code>,
 <code><a href="c14_plot.html">c14_plot</a></code>,
 <code><a href="c14_spd.html">c14_spd</a>()</code>,
-<code><a href="c14_uncalibrate.html">c14_uncalibrate</a>()</code></p></div>
+<code><a href="c14_uncalibrate.html">c14_uncalibrate</a>()</code>,
+<code><a href="rec_plot.html">rec_plot</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -111,7 +113,7 @@ Radiocarbon Age Determinations: A Critique. <em>Archaeometry</em> 20(1): 19‑31
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Replicate Ward and Wilson (1978), p. 28</span></span></span>
-<span class="r-in"><span><span class="va">polach1972</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span><span class="va">polach1972</span> <span class="op">&lt;-</span> <span class="fu"><a href="data.frame.html">data.frame</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ANU-7"</span>, <span class="st">"ANU-7"</span>, <span class="st">"ANU-7"</span>, <span class="st">"W-1571"</span>, <span class="st">"ANU-5"</span>,</span></span>
 <span class="r-in"><span>              <span class="st">"C-800"</span>, <span class="st">"L-698D"</span>, <span class="st">"FSU-3"</span>, <span class="st">"Tx-44"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  ages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">14550</span>, <span class="fl">15000</span>, <span class="fl">13700</span>, <span class="fl">14650</span>, <span class="fl">11700</span>, <span class="fl">10860</span>, <span class="fl">11840</span>, <span class="fl">11245</span>, <span class="fl">10700</span><span class="op">)</span>,</span></span>

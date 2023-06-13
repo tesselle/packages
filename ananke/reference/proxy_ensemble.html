@@ -67,8 +67,8 @@ distributions on absolute, error-free time axes.</p>
 <span>  <span class="va">time</span>,</span>
 <span>  <span class="va">time_error</span>,</span>
 <span>  <span class="va">calendar</span>,</span>
-<span>  start <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  from <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  to <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  by <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  n <span class="op">=</span> <span class="fl">30</span>,</span>
 <span>  progress <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"ananke.progress"</span><span class="op">)</span>,</span>
@@ -79,8 +79,9 @@ distributions on absolute, error-free time axes.</p>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>depth</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the depth at which proxy values and
-calendar ages were measured (in decreasing order).</p></dd>
+<dd><p>A positive <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the depth at which proxy
+values and calendar ages were measured. It must be in decreasing order
+(i.e. in chronological order).</p></dd>
 
 
 <dt>...</dt>
@@ -109,12 +110,12 @@ calendar ages were measured (in decreasing order).</p></dd>
 <code>time</code> (see <code><a href="https://packages.tesselle.org/aion/reference/calendar.html" class="external-link">calendar()</a></code>).</p></dd>
 
 
-<dt>start</dt>
+<dt>from</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the starting value of
 the temporal sequence at which densities are to be estimated (in years).</p></dd>
 
 
-<dt>end</dt>
+<dt>to</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the end value of the
 temporal sequence at which densities are to be estimated (in cal BP years).</p></dd>
 
@@ -125,7 +126,7 @@ the temporal sequence at which densities are to be estimated (in years).</p></dd
 
 
 <dt>n</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of item to choose.</p></dd>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of item to choose randomly.</p></dd>
 
 
 <dt>progress</dt>

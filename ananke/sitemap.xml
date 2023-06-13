@@ -40,6 +40,9 @@
     <loc>https://packages.tesselle.org/ananke/reference/ProxyRecord-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/RECE-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/ananke-package.html</loc>
   </url>
   <url>
@@ -52,6 +55,9 @@
     <loc>https://packages.tesselle.org/ananke/reference/c14_curve.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/c14_ensemble.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/c14_plot.html</loc>
   </url>
   <url>
@@ -59,6 +65,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/c14_uncalibrate.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/data.frame.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/index.html</loc>
@@ -83,6 +92,12 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/proxy_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/quantile.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/rec_plot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/reexports.html</loc>
