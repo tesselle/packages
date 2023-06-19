@@ -58,10 +58,9 @@
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
 <span>  calendar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"ananke.calendar"</span><span class="op">)</span>,</span>
+<span>  density <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  interval <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  level <span class="op">=</span> <span class="fl">0.954</span>,</span>
-<span>  flip <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  ncol <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  sort <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  decreasing <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -102,6 +101,10 @@
 (see <code><a href="https://packages.tesselle.org/aion/reference/calendar.html" class="external-link">calendar()</a></code>).</p></dd>
 
 
+<dt>density</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should density be drawn?</p></dd>
+
+
 <dt>interval</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should highest density region be drawn?</p></dd>
 
@@ -109,16 +112,6 @@
 <dt>level</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the confidence level.
 Only used if <code>interval</code> is <code>TRUE</code>.</p></dd>
-
-
-<dt>flip</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the y-axis (ticks and numbering) be
-flipped from side 2 (left) to 4 (right)?</p></dd>
-
-
-<dt>ncol</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of columns to use.
-Defaults to 1.</p></dd>
 
 
 <dt>sort</dt>
@@ -189,7 +182,6 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <code><a href="c14_ensemble.html">c14_ensemble</a>()</code>,
 <code><a href="c14_spd.html">c14_spd</a>()</code>,
 <code><a href="c14_uncalibrate.html">c14_uncalibrate</a>()</code>,
-<code><a href="rangeplot.html">rangeplot</a>()</code>,
 <code><a href="rec_plot.html">rec_plot</a></code></p></div>
     </div>
     <div class="section level2">
@@ -210,16 +202,16 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-in"><span>  errors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">45</span>, <span class="fl">35</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"X"</span>, <span class="st">"Y"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">BP</a></span><span class="op">(</span><span class="op">)</span>, flip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">BP</a></span><span class="op">(</span><span class="op">)</span>, panel.first <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_plot-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span>, interval <span class="op">=</span> <span class="cn">FALSE</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span>, interval <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_plot-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span><span class="op">[</span>, <span class="fl">1</span>, <span class="op">]</span>, col.interval <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_plot-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="rangeplot.html">rangeplot</a></span><span class="op">(</span><span class="va">cal</span>, level <span class="op">=</span> <span class="fl">0.68</span>, lwd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span>, density <span class="op">=</span> <span class="cn">FALSE</span>, level <span class="op">=</span> <span class="fl">0.68</span>, lwd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_plot-5.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="rangeplot.html">rangeplot</a></span><span class="op">(</span><span class="va">cal</span>, level <span class="op">=</span> <span class="fl">0.95</span>, lwd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cal</span>, density <span class="op">=</span> <span class="cn">FALSE</span>, level <span class="op">=</span> <span class="fl">0.95</span>, lwd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="c14_plot-6.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
