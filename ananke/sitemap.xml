@@ -79,6 +79,9 @@
     <loc>https://packages.tesselle.org/ananke/reference/ksarakil.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/ananke/reference/labels.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/ananke/reference/mean.html</loc>
   </url>
   <url>
@@ -95,6 +98,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/quantile.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/rangeplot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/rec_plot.html</loc>

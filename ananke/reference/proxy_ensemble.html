@@ -64,6 +64,7 @@ distributions on absolute, error-free time axes.</p>
 <span>  <span class="va">depth</span>,</span>
 <span>  <span class="va">proxy</span>,</span>
 <span>  <span class="va">proxy_error</span>,</span>
+<span>  <span class="va">step</span>,</span>
 <span>  <span class="va">time</span>,</span>
 <span>  <span class="va">time_error</span>,</span>
 <span>  <span class="va">calendar</span>,</span>
@@ -94,6 +95,11 @@ values and calendar ages were measured. It must be in decreasing order
 
 <dt>proxy_error</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the proxy uncertainties.</p></dd>
+
+
+<dt>step</dt>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector specifying the step size
+(in units of <code>proxy</code>) at which proxy records densities are to be estimated.</p></dd>
 
 
 <dt>time</dt>
@@ -169,10 +175,12 @@ Past</em>, 13(9): 1169-1180. <a href="https://doi.org/10.5194/cp-13-1169-2017" c
 <span class="r-in"><span><span class="va">ngrip2010</span> <span class="op">&lt;-</span> <span class="va">ngrip2010</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">ngrip2010</span><span class="op">)</span><span class="op">:</span><span class="fl">1</span>, <span class="op">]</span> <span class="co"># Sort in chronological order</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replicate fig. 3d from Boers et al. (2017)</span></span></span>
+<span class="r-in"><span><span class="co">## /!\ This may take a while... /!\</span></span></span>
 <span class="r-in"><span><span class="va">ngrip_record</span> <span class="op">&lt;-</span> <span class="fu">proxy_ensemble</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  depth <span class="op">=</span> <span class="va">ngrip2010</span><span class="op">$</span><span class="va">depth</span>,</span></span>
 <span class="r-in"><span>  proxy <span class="op">=</span> <span class="va">ngrip2010</span><span class="op">$</span><span class="va">delta</span>,</span></span>
 <span class="r-in"><span>  proxy_error <span class="op">=</span> <span class="fl">0.01</span>,</span></span>
+<span class="r-in"><span>  step <span class="op">=</span> <span class="fl">0.001</span>,</span></span>
 <span class="r-in"><span>  time <span class="op">=</span> <span class="va">ngrip2010</span><span class="op">$</span><span class="va">age</span>,</span></span>
 <span class="r-in"><span>  time_error <span class="op">=</span> <span class="va">ngrip2010</span><span class="op">$</span><span class="va">MCE</span>,</span></span>
 <span class="r-in"><span>  calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">b2k</a></span><span class="op">(</span><span class="op">)</span>, <span class="co"># /!\</span></span></span>
@@ -180,7 +188,7 @@ Past</em>, 13(9): 1169-1180. <a href="https://doi.org/10.5194/cp-13-1169-2017" c
 <span class="r-in"><span>  n <span class="op">=</span> <span class="fl">30</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">ngrip_record</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">ngrip_record</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
