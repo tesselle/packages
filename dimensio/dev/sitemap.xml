@@ -58,13 +58,13 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/countries.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/dimensio-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/dimensio-package.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/dimnames.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/dimensio/dev/reference/envelopes.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/get_contributions.html</loc>
@@ -91,16 +91,10 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/pca.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/dimensio/dev/reference/plot_contributions.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/dimensio/dev/reference/plot_coordinates.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/dimensio/dev/reference/plot_eigenvalues.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/predict.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/screeplot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/subset.html</loc>
@@ -110,5 +104,17 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_contributions.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_coordinates.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_wrap.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/wrap.html</loc>
   </url>
 </urlset>
