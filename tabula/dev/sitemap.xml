@@ -37,10 +37,10 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/DiversityIndex-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/cantabria.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/birds.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/deprecate.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/cantabria.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/heterogeneity.html</loc>
@@ -103,10 +103,16 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/simulate.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/tabula-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/tabula-package.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/test_diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/trees.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/turnover.html</loc>
