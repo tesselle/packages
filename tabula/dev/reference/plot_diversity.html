@@ -62,28 +62,12 @@
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
 <span>  log <span class="op">=</span> <span class="st">"x"</span>,</span>
-<span>  col.index <span class="op">=</span> <span class="st">"black"</span>,</span>
 <span>  col.mean <span class="op">=</span> <span class="st">"#DDAA33"</span>,</span>
 <span>  col.interval <span class="op">=</span> <span class="st">"#004488"</span>,</span>
 <span>  lty.mean <span class="op">=</span> <span class="st">"solid"</span>,</span>
 <span>  lty.interval <span class="op">=</span> <span class="st">"dashed"</span>,</span>
 <span>  lwd.mean <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  lwd.interval <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  ann <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"ann"</span><span class="op">)</span>,</span>
-<span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  frame.plot <span class="op">=</span> <span class="va">axes</span>,</span>
-<span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  panel.last <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for RarefactionIndex,missing</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
-<span>  legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  palette <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="va">i</span>, <span class="st">"viridis"</span><span class="op">)</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ann <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"ann"</span><span class="op">)</span>,</span>
@@ -106,7 +90,7 @@
 scale. Defaults to <code>x</code>.</p></dd>
 
 
-<dt>col.index, col.mean, col.interval</dt>
+<dt>col.mean, col.interval</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the
 color of the lines.</p></dd>
 
@@ -158,15 +142,6 @@ place but before the axes, title and box are added.</p></dd>
 <dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> to be passed to
 <code><a href="https://rdrr.io/r/graphics/points.html" class="external-link">graphics::points()</a></code>, particularly, <code>cex</code>, <code>col</code> and <code>pch</code>.</p></dd>
 
-
-<dt>legend</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the legend be displayed?</p></dd>
-
-
-<dt>palette</dt>
-<dd><p>A color palette <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> that takes a single integer
-argument (the number of levels) and returns a vector of colors.</p></dd>
-
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -177,21 +152,14 @@ displayed (invisibly returns <code>x</code>).</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other diversity measures: 
-<code><a href="heterogeneity.html">heterogeneity</a>()</code>,
-<code><a href="occurrence.html">occurrence</a>()</code>,
-<code><a href="rarefaction.html">rarefaction</a>()</code>,
-<code><a href="richness.html">richness</a>()</code>,
-<code><a href="similarity.html">similarity</a>()</code>,
-<code><a href="simulate.html">simulate</a>()</code>,
-<code><a href="turnover.html">turnover</a>()</code></p>
-<p>Other plot methods: 
+    <div class="dont-index"><p>Other plot methods: 
 <code><a href="matrigraph.html">matrigraph</a>()</code>,
 <code><a href="plot_bertin.html">plot_bertin</a>()</code>,
 <code><a href="plot_diceleraas.html">plot_diceleraas</a>()</code>,
 <code><a href="plot_ford.html">plot_ford</a>()</code>,
 <code><a href="plot_heatmap.html">plot_heatmap</a>()</code>,
 <code><a href="plot_rank.html">plot_rank</a>()</code>,
+<code><a href="plot_rarefaction.html">plot_rarefaction</a></code>,
 <code><a href="plot_spot.html">plot_spot</a>()</code>,
 <code><a href="seriograph.html">seriograph</a>()</code></p></div>
     </div>
