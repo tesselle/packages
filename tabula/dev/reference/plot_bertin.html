@@ -61,10 +61,24 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">plot_bertin</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">plot_bertin</span><span class="op">(</span><span class="va">object</span>, threshold <span class="op">=</span> <span class="cn">NULL</span>, scale <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span><span class="fu">plot_bertin</span><span class="op">(</span></span>
+<span>  <span class="va">object</span>,</span>
+<span>  threshold <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"black"</span><span class="op">)</span>,</span>
+<span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame</span></span>
-<span><span class="fu">plot_bertin</span><span class="op">(</span><span class="va">object</span>, threshold <span class="op">=</span> <span class="cn">NULL</span>, scale <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">plot_bertin</span><span class="op">(</span></span>
+<span>  <span class="va">object</span>,</span>
+<span>  threshold <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"black"</span><span class="op">)</span>,</span>
+<span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -89,6 +103,14 @@ threshold is computed.</p></dd>
 <dd><p>A <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code> used to scale each variable, that takes a numeric
 vector as argument and returns a numeric vector. If <code>NULL</code> (the default), no
 scaling is performed.</p></dd>
+
+
+<dt>col</dt>
+<dd><p>A vector of colors.</p></dd>
+
+
+<dt>axes</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should axes be drawn on the plot?</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -145,10 +167,14 @@ Bertin's Graphical Data Analysis. In W. Badilla &amp; F. Faulbaum (eds.),
 <span class="r-in"><span><span class="fu">plot_bertin</span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot_bertin-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## ...with variables scaled to 0-1 and the variable mean as threshold</span></span></span>
+<span class="r-in"><span><span class="co">## ...with the variable mean as threshold</span></span></span>
+<span class="r-in"><span><span class="fu">plot_bertin</span><span class="op">(</span><span class="va">mississippi</span>, threshold <span class="op">=</span> <span class="va">mean</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="plot_bertin-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## ...with each variable scaled to 0-1 and the variable mean as threshold</span></span></span>
 <span class="r-in"><span><span class="va">scale_01</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">(</span><span class="va">x</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">plot_bertin</span><span class="op">(</span><span class="va">mississippi</span>, threshold <span class="op">=</span> <span class="va">mean</span>, scale <span class="op">=</span> <span class="va">scale_01</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="plot_bertin-2.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="plot_bertin-3.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
