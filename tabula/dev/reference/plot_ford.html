@@ -61,10 +61,17 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">plot_ford</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">plot_ford</span><span class="op">(</span><span class="va">object</span>, EPPM <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu">plot_ford</span><span class="op">(</span></span>
+<span>  <span class="va">object</span>,</span>
+<span>  weights <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  EPPM <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  col <span class="op">=</span> <span class="st">"darkgrey"</span>,</span>
+<span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame</span></span>
-<span><span class="fu">plot_ford</span><span class="op">(</span><span class="va">object</span>, EPPM <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">plot_ford</span><span class="op">(</span><span class="va">object</span>, weights <span class="op">=</span> <span class="cn">FALSE</span>, EPPM <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -79,16 +86,30 @@ individuals for each class).</p></dd>
 <dd><p>Currently not used.</p></dd>
 
 
+<dt>weights</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should row weights (i.e. the number of
+observations divided by the total number of observations) be displayed?</p></dd>
+
+
 <dt>EPPM</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the EPPM be drawn?
-This argument is defunct: use <code><a href="seriograph.html">seriograph()</a></code> instead.</p></dd>
+See <code><a href="seriograph.html">seriograph()</a></code>.</p></dd>
+
+
+<dt>col</dt>
+<dd><p>A vector of colors for the bars.</p></dd>
+
+
+<dt>axes</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should axes be drawn on the plot?</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot2::ggplot</a> object.</p>
+<p><code>plot_ford()</code> is called it for its side-effects: it results in a graphic
+being displayed (invisibly returns <code>object</code>).</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -115,11 +136,11 @@ chronology</em>. Washington, DC: Pan American Union. Technical manual 1.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Data from Desachy 2004</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"compiegne"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Data from Lipo et al. 2015</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"mississippi"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot a Ford diagram</span></span></span>
-<span class="r-in"><span><span class="fu">plot_ford</span><span class="op">(</span><span class="va">compiegne</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot_ford</span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot_ford-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
