@@ -37,19 +37,40 @@
     <loc>https://packages.tesselle.org/tabula/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/CompositionIndex-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/DiversityIndex-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/cantabria.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/EvennessIndex-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/deprecate.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/HeterogeneityIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/RarefactionIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/RichnessIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/aves.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/bootstrap.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/cantabria.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/heterogeneity.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/jackknife.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/matrigraph.html</loc>
@@ -76,10 +97,19 @@
     <loc>https://packages.tesselle.org/tabula/reference/plot_heatmap.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_matrix.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/plot_rank.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/plot_rarefaction.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/plot_spot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/pueblo.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/rarefaction.html</loc>
@@ -103,6 +133,9 @@
     <loc>https://packages.tesselle.org/tabula/reference/simulate.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/tabula-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/tabula-package.html</loc>
   </url>
   <url>
@@ -110,5 +143,8 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/turnover.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/woodland.html</loc>
   </url>
 </urlset>
