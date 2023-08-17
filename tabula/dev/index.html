@@ -111,6 +111,8 @@
 </li>
 <li>Similarity measurement and co-occurrence: <code><a href="reference/similarity.html">similarity()</a></code>, <code><a href="reference/occurrence.html">occurrence()</a></code>
 </li>
+<li>Assessing sample size and significance: <code><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap()</a></code>, <code><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife()</a></code>, <code><a href="reference/simulate.html">simulate()</a></code>
+</li>
 <li>Bertin (1977) or Ford (1962) (battleship curve) diagrams: <code><a href="reference/plot_bertin.html">plot_bertin()</a></code>, <code><a href="reference/plot_ford.html">plot_ford()</a></code>
 </li>
 <li>Seriograph (Desachy 2004): <code><a href="reference/seriograph.html">seriograph()</a></code>
@@ -163,6 +165,29 @@
 <span><span class="co">## Ford diagram</span></span>
 <span><span class="fu"><a href="reference/plot_ford.html">plot_ford</a></span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-ford-1.png" width="100%" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Co-occurrence of ceramic types</span></span>
+<span><span class="va">mississippi</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/occurrence.html">occurrence</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-occurrence-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"chevelon"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Measure diversity by comparing to simulated assemblages</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">chevelon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">chevelon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/richness.html">richness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-sample-size-1.png" width="50%"><img src="reference/figures/README-sample-size-2.png" width="50%"></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>

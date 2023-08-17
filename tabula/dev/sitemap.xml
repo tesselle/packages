@@ -52,7 +52,7 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/RichnessIndex-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/birds.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/aves.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/bootstrap.html</loc>
@@ -139,9 +139,9 @@
     <loc>https://packages.tesselle.org/tabula/dev/reference/test_diversity.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/trees.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/turnover.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/dev/reference/turnover.html</loc>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/woodland.html</loc>
   </url>
 </urlset>
