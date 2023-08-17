@@ -13,6 +13,12 @@
     <loc>https://packages.tesselle.org/dimensio/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/articles/pca.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/authors.html</loc>
   </url>
   <url>
@@ -61,13 +67,13 @@
     <loc>https://packages.tesselle.org/dimensio/reference/countries.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/dimensio-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/dimensio-package.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/dimnames.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/dimensio/reference/envelopes.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/get_contributions.html</loc>
@@ -94,16 +100,10 @@
     <loc>https://packages.tesselle.org/dimensio/reference/pca.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/dimensio/reference/plot_contributions.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/dimensio/reference/plot_coordinates.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/dimensio/reference/plot_eigenvalues.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/predict.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/screeplot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/subset.html</loc>
@@ -113,5 +113,17 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/viz_contributions.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/viz_coordinates.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/viz_wrap.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/wrap.html</loc>
   </url>
 </urlset>
