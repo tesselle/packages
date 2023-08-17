@@ -130,7 +130,8 @@ evenness() returns an evenness measure.
     <dl><dt>object</dt>
 <dd><p>A \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or
 <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies giving the number of
-individuals for each class).</p></dd>
+individuals for each category, i.e. a contingency table). A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>
+will be coerced to a <code>numeric</code> <code>matrix</code> via <code><a href="https://rdrr.io/r/base/data.matrix.html" class="external-link">data.matrix()</a></code>.</p></dd>
 
 
 <dt>...</dt>
@@ -171,8 +172,8 @@ which logarithms are computed.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<ul><li><p><code>heterogeneity()</code> returns an <a href="DiversityIndex-class.html">HeterogeneityIndex</a> object.</p></li>
-<li><p><code>evenness()</code> returns an <a href="DiversityIndex-class.html">EvennessIndex</a> object.</p></li>
+<ul><li><p><code>heterogeneity()</code> returns an <a href="HeterogeneityIndex-class.html">HeterogeneityIndex</a> object.</p></li>
+<li><p><code>evenness()</code> returns an <a href="EvennessIndex-class.html">EvennessIndex</a> object.</p></li>
 <li><p><code>index_*()</code> return a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></li>
 </ul></div>
     <div class="section level2">
@@ -312,40 +313,8 @@ Bell System Technical Journal</em>, 27, 379-423.
 <span class="r-in"><span><span class="op">(</span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">evenness</span><span class="op">(</span><span class="va">cantabria</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8987278 0.8966760 0.8462335 0.9178574 0.9373336</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Bootstrap resampling (summary statistics)</span></span></span>
-<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean         bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.278011  0.008811373 0.07935392</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.971961  0.016663173 0.15036947</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.520071  0.028387866 0.19704272</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.493062  0.007458196 0.22936958</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.326527 -0.002659804 0.26666723</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.954424 3.222807 3.283885 3.278679 3.334231 3.512407</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.420712 2.886146 2.985559 2.980583 3.082262 3.403314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.657220 2.387863 2.527199 2.516955 2.649749 3.035787</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.656551 2.331432 2.489701 2.479111 2.650698 3.033889</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.153742 2.151884 2.331548 2.306366 2.482845 2.984630</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       25%      50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.231160 3.281992</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.877651 2.983555</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.393152 2.536850</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.349688 2.514767</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.168155 2.336627</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
-<span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean       bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.246457 -0.9779158 0.08145529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.932856 -0.9649994 0.15907033</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.469588 -0.9500688 0.19670002</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.462723 -0.9838709 0.22195573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.305876 -1.0023704 0.25266291</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="heterogeneity-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

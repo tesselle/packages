@@ -34,10 +34,28 @@
     <loc>https://packages.tesselle.org/tabula/dev/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/CompositionIndex-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/DiversityIndex-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/EvennessIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/HeterogeneityIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/RarefactionIndex-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/RichnessIndex-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/birds.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/bootstrap.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/cantabria.html</loc>
@@ -47,6 +65,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/dev/reference/jackknife.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/dev/reference/matrigraph.html</loc>

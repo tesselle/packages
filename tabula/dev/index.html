@@ -105,9 +105,20 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>An easy way to examine archaeological count data. <strong>tabula</strong> provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). The package make it easy to visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams.</p>
+<p>An easy way to examine archaeological count data. This package provides several tests and measures of diversity: heterogeneity and evenness (Brillouin, Shannon, Simpson, etc.), richness and rarefaction (Chao1, Chao2, ACE, ICE, etc.), turnover and similarity (Brainerd-Robinson, etc.). It allows to easily visualize count data and statistical thresholds: rank vs. abundance plots, heatmaps, Ford (1962) and Bertin (1977) diagrams, etc. <strong>tabula</strong> provides methods for:</p>
+<ul>
+<li>Diversity measurement: <code><a href="reference/heterogeneity.html">heterogeneity()</a></code>, <code><a href="reference/heterogeneity.html">evenness()</a></code>, <code><a href="reference/richness.html">richness()</a></code>, <code><a href="reference/rarefaction.html">rarefaction()</a></code>, <code><a href="reference/turnover.html">turnover()</a></code>
+</li>
+<li>Similarity measurement and co-occurrence: <code><a href="reference/similarity.html">similarity()</a></code>, <code><a href="reference/occurrence.html">occurrence()</a></code>
+</li>
+<li>Bertin (1977) or Ford (1962) (battleship curve) diagrams: <code><a href="reference/plot_bertin.html">plot_bertin()</a></code>, <code><a href="reference/plot_ford.html">plot_ford()</a></code>
+</li>
+<li>Seriograph (Desachy 2004): <code><a href="reference/seriograph.html">seriograph()</a></code>
+</li>
+<li>Heatmaps: <code><a href="reference/plot_heatmap.html">plot_heatmap()</a></code>, <code><a href="reference/plot_spot.html">plot_spot()</a></code>
+</li>
+</ul>
 <p><a href="https://packages.tesselle.org/kairos/" class="external-link"><strong>kairos</strong></a> is a companion package to <strong>tabula</strong> that provides functions for chronological modeling and dating of archaeological assemblages from count data.</p>
-<p><strong>Prior to version 2.0.0, tabula included various matrix seriation methods. These methods have been moved to <a href="https://packages.tesselle.org/kairos/" class="external-link">kairos</a>, so that we no longer have chronological tools in two separate packages.</strong></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>To cite tabula <span class="cf">in</span> publications use<span class="sc">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2019</span>). <span class="st">"tabula: An R Package for Analysis, Seriation,</span></span>
@@ -118,8 +129,8 @@
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2022</span>). _tabula<span class="sc">:</span> Analysis and Visualization of</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  Archaeological Count Data_. Université Bordeaux Montaigne, Pessac,</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  France. doi<span class="sc">:</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1489944</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1489944</span><span class="sc">&gt;</span>, R package version <span class="dv">2</span>.<span class="fl">0.0</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>tabula<span class="sc">/</span><span class="er">&gt;</span>.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1489944</span><span class="sc">&gt;</span>, R package version</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>.<span class="dv">0</span>.<span class="fl">0.9000</span>, <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>tabula<span class="sc">/</span><span class="er">&gt;</span>.</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>This package is a part of the tesselle project</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>www.tesselle.org<span class="sc">&gt;</span>.</span></code></pre></div>
@@ -140,75 +151,18 @@
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Install extra packages (if needed)</span></span>
-<span><span class="co"># install.packages("khroma")</span></span>
+<span><span class="co"># install.packages("folio")</span></span>
 <span></span>
 <span><span class="co">## Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span></span></code></pre></div>
 <p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
-<div class="section level3">
-<h3 id="visualization">Visualization<a class="anchor" aria-label="anchor" href="#visualization"></a>
-</h3>
-<p>Several types of graphs are available in <strong>tabula</strong> which uses <a href="https://ggplot2.tidyverse.org" class="external-link"><strong>ggplot2</strong></a> for plotting informations. This makes it easy to customize diagrams (e.g. using themes and scales).</p>
-<p>Bertin or Ford (battleship curve) diagrams can be plotted, with statistic threshold (including B. Desachy’s <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">sériographe</a>).</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Bertin matrix with variables scaled to 0-1 and the variable mean as threshold</span></span>
-<span><span class="va">scale_01</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">(</span><span class="va">x</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## Data from Lipo et al. 2015</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"mississippi"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Data from Lipo et al. 2015</span></span>
-<span><span class="fu"><a href="reference/plot_bertin.html">plot_bertin</a></span><span class="op">(</span><span class="va">mississippi</span>, threshold <span class="op">=</span> <span class="va">mean</span>, scale <span class="op">=</span> <span class="va">scale_01</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_vibrant.html" class="external-link">scale_fill_vibrant</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Mean"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-bertin-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Ford diagram</span></span>
+<span><span class="co">## Ford diagram</span></span>
 <span><span class="fu"><a href="reference/plot_ford.html">plot_ford</a></span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-ford-1.png" style="display: block; margin: auto;"></p>
-<p>Spot matrix allows direct examination of data:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Plot co-occurrence of types</span></span>
-<span><span class="co">## (i.e. how many times (percent) each pairs of taxa occur together </span></span>
-<span><span class="co">## in at least one sample.)</span></span>
-<span><span class="va">mississippi</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="reference/occurrence.html">occurrence</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_YlOrBr.html" class="external-link">scale_colour_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-plot-occ-1.png" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level3">
-<h3 id="diversity">Diversity<a class="anchor" aria-label="anchor" href="#diversity"></a>
-</h3>
-<p><em>Diversity</em> can be measured according to several indices (referred to as indices of <em>heterogeneity</em> – see <code><a href="articles/diversity.html">vignette("diversity")</a></code>). Corresponding <em>evenness</em> (i.e. a measure of how evenly individuals are distributed across the sample) can also be computed, as well as <em>richness</em> and <em>rarefaction</em>.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] 1.2027955 0.7646565 0.9293974 0.8228576 0.7901428 0.9998430 1.2051989</span></span>
-<span><span class="co">#&gt;  [8] 1.1776226 1.1533432 1.2884172 1.1725355 1.5296294 1.7952443 1.1627477</span></span>
-<span><span class="co">#&gt; [15] 1.0718463 0.9205717 1.1751002 0.7307620 1.1270126 1.0270291</span></span></code></pre></div>
-<p>Measure diversity by comparing to simulated assemblages:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span></span>
-<span><span class="va">chevelon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="reference/heterogeneity.html">heterogeneity</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">chevelon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="reference/richness.html">richness</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"count"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="reference/simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-sample-size-1.png"><img src="reference/figures/README-sample-size-2.png"></p>
-<p>Several methods can be used to ascertain the degree of <em>turnover</em> in taxa composition along a gradient on qualitative (presence/absence) data. It assumes that the order of the matrix rows (from <em>1</em> to <em>n</em>) follows the progression along the gradient/transect.</p>
-<p>Diversity can also be measured by addressing <em>similarity</em> between pairs of sites:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Calculate the Brainerd-Robinson index</span></span>
-<span><span class="co">## Plot the similarity matrix</span></span>
-<span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_iridescent.html" class="external-link">scale_colour_iridescent</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-similarity-brainerd-1.png" style="display: block; margin: auto;"></p>
-</div>
+<p><img src="reference/figures/README-ford-1.png" width="100%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
@@ -221,6 +175,9 @@
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-bertin1977" class="csl-entry">
 Bertin, Jacques. 1977. <em>La graphique et le traitement graphique de l’information</em>. Nouvelle bibliothèque scientifique. Paris: Flammarion.
+</div>
+<div id="ref-desachy2004" class="csl-entry">
+Desachy, Bruno. 2004. “Le sériographe EPPM: un outil informatisé de sériation graphique pour tableaux de comptages.” <em>Revue archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link uri">https://doi.org/10.3406/pica.2004.2396</a>.
 </div>
 <div id="ref-ford1962" class="csl-entry">
 Ford, J. A. 1962. <em>A Quantitative Method for Deriving Cultural Chronology</em>. Technical Manual 1. Washington, DC: Pan American Union.

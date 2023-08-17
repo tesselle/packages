@@ -61,22 +61,30 @@
     <h2 id="slots">Slots<a class="anchor" aria-label="anchor" href="#slots"></a></h2>
     
 
-<dl><dt><code>names</code></dt>
+<dl><dt><code>.Data</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of diversity measures.</p></dd>
+
+
+<dt><code>labels</code></dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector giving the sample names.</p></dd>
 
 
 <dt><code>size</code></dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> vector giving the sample sizes.</p></dd>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> vector giving the sample sizes.</p></dd>
+
+
+<dt><code>data</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> matrix of count data.</p></dd>
+
+
+<dt><code>method</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method used.</p></dd>
 
 
 <dt><code>simulation</code></dt>
 <dd><p>A four columns <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> matrix giving the diversity
 measures for the simulated assemblage (sample <code>size</code>, <code>mean</code> estimate,
 <code>lower</code> and <code>upper</code> boundaries of the confidence interval).</p></dd>
-
-
-<dt><code>method</code></dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method used.</p></dd>
 
 
 </dl></div>
@@ -94,17 +102,13 @@ measures for the simulated assemblage (sample <code>size</code>, <code>mean</cod
 
 </dl></div>
     <div class="section level2">
-    <h2 id="get">Get<a class="anchor" aria-label="anchor" href="#get"></a></h2>
-    
-
-<p>In the code snippets below, <code>x</code> is an <code>DiversityIndex</code> object.</p><dl><dt><code>get_method(x)</code></dt>
-<dd><p>Returns the method used to compute the index.</p></dd>
-
-
-</dl></div>
-    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="mutators.html">get_method()</a></code></p></div>
+    <div class="dont-index"><p>Other classes: 
+<code><a href="CompositionIndex-class.html">CompositionIndex-class</a></code>,
+<code><a href="EvennessIndex-class.html">EvennessIndex-class</a></code>,
+<code><a href="HeterogeneityIndex-class.html">HeterogeneityIndex-class</a></code>,
+<code><a href="RarefactionIndex-class.html">RarefactionIndex-class</a></code>,
+<code><a href="RichnessIndex-class.html">RichnessIndex-class</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

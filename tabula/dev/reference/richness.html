@@ -133,7 +133,9 @@ composition() returns asymptotic species richness.
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
 <dd><p>A \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or
-<code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies).</p></dd>
+<code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data (absolute frequencies giving the number of
+individuals for each category, i.e. a contingency table). A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>
+will be coerced to a <code>numeric</code> <code>matrix</code> via <code><a href="https://rdrr.io/r/base/data.matrix.html" class="external-link">data.matrix()</a></code>.</p></dd>
 
 
 <dt>...</dt>
@@ -174,8 +176,8 @@ removed?</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<ul><li><p><code>richness()</code> returns a <a href="DiversityIndex-class.html">RichnessIndex</a> object.</p></li>
-<li><p><code>composition()</code> returns a <a href="DiversityIndex-class.html">CompositionIndex</a> object.</p></li>
+<ul><li><p><code>richness()</code> returns a <a href="RichnessIndex-class.html">RichnessIndex</a> object.</p></li>
+<li><p><code>composition()</code> returns a <a href="CompositionIndex-class.html">CompositionIndex</a> object.</p></li>
 <li><p><code>index_*()</code> return a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></li>
 </ul></div>
     <div class="section level2">
@@ -190,11 +192,11 @@ may not have been seen, or there may not be a fixed number of taxa
 (\(S\)) can be used for the concept of taxa number (McIntosh 1967).</p>
 <p>It is not always possible to ensure that all sample sizes are equal
 and the number of different taxa increases with sample size and
-sampling effort (Magurran 1988). Then, <em>rarefaction</em> (\(E(S)\)) is
-the number of taxa expected if all samples were of a standard size (i.e.
-taxa per fixed number of individuals). Rarefaction assumes that imbalances
-between taxa are due to sampling and not to differences in actual
-abundances.</p>
+sampling effort (Magurran 1988). Then, <em><a href="rarefaction.html">rarefaction</a></em>
+(\(E(S)\)) is the number of taxa expected if all samples were of a
+standard size (i.e. taxa per fixed number of individuals).
+Rarefaction assumes that imbalances between taxa are due to sampling and
+not to differences in actual abundances.</p>
     </div>
     <div class="section level2">
     <h2 id="richness-measures">Richness Measures<a class="anchor" aria-label="anchor" href="#richness-measures"></a></h2>
@@ -274,7 +276,7 @@ Concepts to Diversity. <em>Ecology</em>, 48(3), 392-404.
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="plot_diversity.html">plot_diversity()</a></code></p>
+    <div class="dont-index"><p><code><a href="plot_diversity.html">plot()</a></code></p>
 <p>Other diversity measures: 
 <code><a href="heterogeneity.html">heterogeneity</a>()</code>,
 <code><a href="occurrence.html">occurrence</a>()</code>,
