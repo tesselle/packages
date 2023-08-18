@@ -146,10 +146,10 @@ the results:</p>
 <li>
 <code><a href="../reference/screeplot.html">screeplot()</a></code> produces a scree plot.</li>
 <li>
-<code><a href="../reference/viz_coordinates.html">viz_rows()</a></code>/<code><a href="../reference/viz_coordinates.html">viz_individuals()</a></code> displays
+<code><a href="../reference/viz_individuals.html">viz_rows()</a></code>/<code><a href="../reference/viz_individuals.html">viz_individuals()</a></code> displays
 row/individual principal coordinates.</li>
 <li>
-<code><a href="../reference/viz_coordinates.html">viz_columns()</a></code>/<code><a href="../reference/viz_coordinates.html">viz_variables()</a></code> displays
+<code><a href="../reference/viz_variables.html">viz_columns()</a></code>/<code><a href="../reference/viz_variables.html">viz_variables()</a></code> displays
 columns/variable principal coordinates.</li>
 <li>
 <code><a href="../reference/viz_contributions.html">viz_contributions()</a></code> displays (joint)
@@ -210,68 +210,68 @@ variables separately.</p>
 <div class="section level2">
 <h2 id="plot-pca-loadings">Plot PCA loadings<a class="anchor" aria-label="anchor" href="#plot-pca-loadings"></a>
 </h2>
-<p><code><a href="../reference/viz_coordinates.html">viz_variables()</a></code> depicts the variables by rays emanating
+<p><code><a href="../reference/viz_variables.html">viz_variables()</a></code> depicts the variables by rays emanating
 from the origin (both their lengths and directions are important to the
 interpretation).</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot variables factor map</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_variables</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-var-1.png" width="480"></p>
-<pre><code><span><span class="co">#&gt; [1] -1  1 -1  1</span></span>
-<span><span class="co">#&gt; [1] -1.285063  1.285063 -1.080000  1.080000</span></span></code></pre>
-<p><code><a href="../reference/viz_coordinates.html">viz_variables()</a></code> allows to highlight additional
+<p><code><a href="../reference/viz_variables.html">viz_variables()</a></code> allows to highlight additional
 information by varying different graphical elements (color,
 transparency, shape and size of symbols…).</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight cos2</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_variables</a></span><span class="op">(</span><span class="va">X</span>, colour <span class="op">=</span> <span class="st">"cos2"</span>, col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">X</span>, </span>
+<span>  map_color <span class="op">=</span> <span class="st">"cos2"</span>, </span>
+<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-var-cos2-1.png" width="480"></p>
-<pre><code><span><span class="co">#&gt; [1] -1  1 -1  1</span></span>
-<span><span class="co">#&gt; [1] -1.285063  1.285063 -1.080000  1.080000</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="plot-pca-scores">Plot PCA scores<a class="anchor" aria-label="anchor" href="#plot-pca-scores"></a>
 </h2>
-<p><code><a href="../reference/viz_coordinates.html">viz_individuals()</a></code> allows to display individuals and to
+<p><code><a href="../reference/viz_individuals.html">viz_individuals()</a></code> allows to display individuals and to
 highlight additional information.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Plot individuals and colour by species</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_individuals</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Plot individuals and color by species</span></span>
+<span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
-<span>  colour <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>,</span>
-<span>  shape <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
+<span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>,</span>
+<span>  map_shape <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, </span>
+<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  scale_shape <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-species-1.png" width="480"></p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Add ellipses</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_individuals</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/viz_wrap.html">viz_tolerance</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span>,</span>
-<span>              border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
+<span>              border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Add convex hull</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_individuals</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/viz_wrap.html">viz_hull</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span>,</span>
-<span>         border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span>         border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-wrap-1.png" width="50%"><img src="pca_files/figure-html/plot-wrap-2.png" width="50%"></p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight petal length</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_individuals</a></span><span class="op">(</span></span>
+<span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
-<span>  colour <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
+<span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
+<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  scale_shape <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="480"></p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight contributions</span></span>
-<span><span class="fu"><a href="../reference/viz_coordinates.html">viz_individuals</a></span><span class="op">(</span></span>
+<span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
-<span>  colour <span class="op">=</span> <span class="st">"contrib"</span>, </span>
-<span>  size <span class="op">=</span> <span class="st">"contrib"</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
+<span>  map_color <span class="op">=</span> <span class="st">"contrib"</span>, </span>
+<span>  map_size <span class="op">=</span> <span class="st">"contrib"</span>,</span>
+<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  scale_shape <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-contrib-1.png" width="480"></p>
 </div>
@@ -282,7 +282,7 @@ highlight additional information.</p>
 <code><a href="../reference/tidy.html">tidy()</a></code> and <code><a href="../reference/tidy.html">augment()</a></code> functions allow you to
 extract the results as data frames and thus build custom graphs with
 base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris_tidy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">iris_tidy</span><span class="op">)</span></span>
 <span><span class="co">#&gt;          label component supplementary coordinate contribution        cos2</span></span>
@@ -309,7 +309,7 @@ base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
 <span><span class="co">#&gt; 4 0.9977577</span></span>
 <span><span class="co">#&gt; 5 0.9997491</span></span>
 <span><span class="co">#&gt; 6 0.9998819</span></span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Custom plot with ggplot2</span></span>
 <span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris_augment</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">F1</span>, y <span class="op">=</span> <span class="va">F2</span>, colour <span class="op">=</span> <span class="va">contribution</span><span class="op">)</span> <span class="op">+</span></span>

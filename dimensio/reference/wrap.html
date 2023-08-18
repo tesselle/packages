@@ -59,7 +59,7 @@ wrap_tolerance() computes a tolerance ellipse.
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Wrap Observations</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/wrap.R" class="external-link"><code>R/wrap.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/wrap_ellipses.R" class="external-link"><code>R/wrap_ellipses.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/wrap_hull.R" class="external-link"><code>R/wrap_hull.R</code></a></small>
       <div class="d-none name"><code>wrap.Rd</code></div>
     </div>
 
@@ -79,13 +79,13 @@ wrap_tolerance() computes a tolerance ellipse.
 <span><span class="fu">wrap_tolerance</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
-<span><span class="fu">wrap_hull</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for MultivariateAnalysis</span></span>
 <span><span class="fu">wrap_confidence</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
-<span><span class="fu">wrap_tolerance</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">wrap_tolerance</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for MultivariateAnalysis</span></span>
+<span><span class="fu">wrap_hull</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -134,7 +134,8 @@ belongs to.</p>
 <code><a href="biplot.html">biplot</a>()</code>,
 <code><a href="screeplot.html">screeplot</a>()</code>,
 <code><a href="viz_contributions.html">viz_contributions</a>()</code>,
-<code><a href="viz_coordinates.html">viz_coordinates</a></code>,
+<code><a href="viz_individuals.html">viz_individuals</a>()</code>,
+<code><a href="viz_variables.html">viz_variables</a>()</code>,
 <code><a href="viz_wrap.html">viz_wrap</a></code></p></div>
     </div>
     <div class="section level2">
@@ -162,8 +163,9 @@ belongs to.</p>
 <span class="r-in"><span><span class="va">conf</span> <span class="op">&lt;-</span> <span class="fu">wrap_confidence</span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot with convex hulls</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="viz_coordinates.html">viz_rows</a></span><span class="op">(</span><span class="va">X</span>, colour <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="viz_wrap.html">viz_hull</a></span><span class="op">(</span><span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">col</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>blue <span class="op">=</span> <span class="st">"#004488"</span>, yellow <span class="op">=</span> <span class="st">"#DDAA33"</span>, red <span class="op">=</span> <span class="st">"#BB5566"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_rows</a></span><span class="op">(</span><span class="va">X</span>, map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, scale_color <span class="op">=</span> <span class="va">col</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_wrap.html">viz_hull</a></span><span class="op">(</span><span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, border <span class="op">=</span> <span class="va">col</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="wrap-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

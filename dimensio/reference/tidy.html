@@ -47,7 +47,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Tidy Coordinates</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/tidy.R" class="external-link"><code>R/tidy.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/augment.R" class="external-link"><code>R/augment.R</code></a>, <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/tidy.R" class="external-link"><code>R/tidy.R</code></a></small>
       <div class="d-none name"><code>tidy.Rd</code></div>
     </div>
 
@@ -62,10 +62,10 @@
 <span><span class="fu">augment</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
-<span><span class="fu">tidy</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, principal <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">augment</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, principal <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
-<span><span class="fu">augment</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, principal <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, principal <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -84,14 +84,14 @@ which the data will be returned: <code>1</code> indicates individuals/rows (the
 default), <code>2</code> indicates variables/columns.</p></dd>
 
 
-<dt>principal</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should principal coordinates be
-returned? If <code>FALSE</code>, standard coordinates are returned.</p></dd>
-
-
 <dt>axes</dt>
 <dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the dimensions
 to be for which to compute results.</p></dd>
+
+
+<dt>principal</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should principal coordinates be
+returned? If <code>FALSE</code>, standard coordinates are returned.</p></dd>
 
 </dl></div>
     <div class="section level2">
