@@ -225,7 +225,7 @@ transparency, shape and size of symbols…).</p>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  map_color <span class="op">=</span> <span class="st">"cos2"</span>, </span>
-<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span>
+<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-var-cos2-1.png" width="480"></p>
 </div>
@@ -240,8 +240,8 @@ highlight additional information.</p>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
 <span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>,</span>
 <span>  map_shape <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, </span>
-<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  scale_shape <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
+<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-species-1.png" width="480"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
@@ -260,8 +260,8 @@ highlight additional information.</p>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
-<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  scale_shape <span class="op">=</span> <span class="fl">16</span></span>
+<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="480"></p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
@@ -270,8 +270,8 @@ highlight additional information.</p>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  map_color <span class="op">=</span> <span class="st">"contrib"</span>, </span>
 <span>  map_size <span class="op">=</span> <span class="st">"contrib"</span>,</span>
-<span>  scale_color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  scale_shape <span class="op">=</span> <span class="fl">16</span></span>
+<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-contrib-1.png" width="480"></p>
 </div>

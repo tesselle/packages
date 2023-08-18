@@ -72,16 +72,13 @@
 <span>  map_color <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  map_shape <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  map_size <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  scale_color <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  scale_shape <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  scale_size <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for BootstrapCA</span></span>
-<span><span class="fu">viz_rows</span><span class="op">(</span><span class="va">x</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, scale_color <span class="op">=</span> <span class="cn">NULL</span>, scale_shape <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">viz_rows</span><span class="op">(</span><span class="va">x</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for PCA</span></span>
 <span><span class="fu">viz_individuals</span><span class="op">(</span></span>
@@ -94,9 +91,6 @@
 <span>  map_color <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  map_shape <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  map_size <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  scale_color <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  scale_shape <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  scale_size <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -110,7 +104,7 @@
 
 
 <dt>...</dt>
-<dd><p>Currently not used.</p></dd>
+<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> (see details).</p></dd>
 
 
 <dt>axes</dt>
@@ -134,27 +128,12 @@ plotted?</p></dd>
 
 <dt>map_alpha, map_color, map_shape, map_size</dt>
 <dd><p>A vector specifying the
-information to be highlighted.
-It will be mapped to the corresponding aesthetic, according to the
-corresponding <code>scale</code> argument (see examples and vignettes).
+information to be highlighted. It will be mapped to the corresponding
+aesthetic (see examples and vignettes).
 If a single <code>character</code> string is passed, it must be one of "<code>observation</code>",
 "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>" (see details).
 Any unambiguous substring can be given.
 If <code>NULL</code> (the default), no highlighting is applied.</p></dd>
-
-
-<dt>scale_color</dt>
-<dd><p>The colors for points. Multiple colors can be
-specified so that each point can be given its own color.</p></dd>
-
-
-<dt>scale_shape</dt>
-<dd><p>A vector of plotting characters or symbols.</p></dd>
-
-
-<dt>scale_size</dt>
-<dd><p>A <code>numeric</code> vector giving the amount by which plotting
-characters and symbols should be scaled relative to the default.</p></dd>
 
 
 <dt>main</dt>
@@ -190,6 +169,19 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <dd><p>Joint \(cos^2\) along <code>axes</code>.</p></dd>
 
 
+</dl><p>Commonly used <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> are:</p><dl><dt><code>col</code></dt>
+<dd><p>The colors for lines and points. Multiple colors can be
+specified so that each point can be given its own color.</p></dd>
+
+<dt><code>pch</code></dt>
+<dd><p>A vector of plotting characters or symbols.</p></dd>
+
+<dt><code>cex</code></dt>
+<dd><p>A numerical vector giving the amount by which plotting
+characters and symbols should be scaled relative to the
+default.</p></dd>
+
+
 </dl></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -222,8 +214,7 @@ being displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-in"><span><span class="fu">viz_individuals</span><span class="op">(</span><span class="va">X</span>, map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Sepal.Width</span>, map_size <span class="op">=</span> <span class="st">"cos2"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_individuals-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">viz_individuals</span><span class="op">(</span><span class="va">X</span>, map_color <span class="op">=</span> <span class="st">"contribution"</span>, map_size <span class="op">=</span> <span class="st">"contribution"</span>,</span></span>
-<span class="r-in"><span>                scale_shape <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">viz_individuals</span><span class="op">(</span><span class="va">X</span>, map_color <span class="op">=</span> <span class="st">"contrib"</span>, map_size <span class="op">=</span> <span class="st">"contrib"</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_individuals-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot variables</span></span></span>

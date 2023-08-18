@@ -66,11 +66,20 @@
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
 <span><span class="fu">viz_tolerance</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># S4 method for BootstrapCA</span></span>
+<span><span class="fu">viz_tolerance</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
 <span><span class="fu">viz_confidence</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># S4 method for BootstrapCA</span></span>
+<span><span class="fu">viz_confidence</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
 <span><span class="co"># S4 method for MultivariateAnalysis</span></span>
-<span><span class="fu">viz_hull</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">viz_hull</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, group <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for BootstrapCA</span></span>
+<span><span class="fu">viz_hull</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -147,7 +156,7 @@ displayed. Invisibly returns <code>x</code>.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot with convex hulls</span></span></span>
 <span class="r-in"><span><span class="va">col</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>blue <span class="op">=</span> <span class="st">"#004488"</span>, yellow <span class="op">=</span> <span class="st">"#DDAA33"</span>, red <span class="op">=</span> <span class="st">"#BB5566"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_rows</a></span><span class="op">(</span><span class="va">X</span>, map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, scale_color <span class="op">=</span> <span class="va">col</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_rows</a></span><span class="op">(</span><span class="va">X</span>, map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, col <span class="op">=</span> <span class="va">col</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">viz_hull</span><span class="op">(</span><span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, border <span class="op">=</span> <span class="va">col</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_wrap-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
