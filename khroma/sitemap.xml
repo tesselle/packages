@@ -52,7 +52,19 @@
     <loc>https://packages.tesselle.org/khroma/reference/khroma-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/plot.html</loc>
+    <loc>https://packages.tesselle.org/khroma/reference/plot.color_scheme.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/plot_map.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/plot_scheme.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/plot_scheme_colourblind.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/plot_tiles.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/ramp.html</loc>

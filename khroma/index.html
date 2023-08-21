@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Colour schemes ready for each type of data (qualitative,
-    diverging or sequential), with colours that are distinct for all
-    people, including colour-blind readers. This package provides an
-    implementation of Paul Tol (2018) and Fabio Crameri (2018) 
-    &lt;doi:10.5194/gmd-11-2541-2018&gt; colour schemes for use with graphics or
-    ggplot2. It provides tools to simulate colour-blindness and to test
-    how well the colours of any palette are identifiable. Several
+<meta name="description" content="Color schemes ready for each type of data (qualitative,
+    diverging or sequential), with colors that are distinct for all
+    people, including color-blind readers. This package provides an
+    implementation of Paul Tol (2018) and Fabio Crameri (2018)
+    &lt;doi:10.5194/gmd-11-2541-2018&gt; color schemes for use with graphics
+    or ggplot2. It provides tools to simulate color-blindness and to
+    test how well the colors of any palette are identifiable. Several
     scientific thematic schemes (geologic timescale, land cover, FAO
     soils, etc.) are also implemented.">
 <title>Colour Schemes for Scientific Data Visualization • khroma</title>
@@ -23,18 +23,18 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.5/font.css" rel="stylesheet">
-<link href="deps/Ubuntu-0.4.5/font.css" rel="stylesheet">
+<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.7/font.css" rel="stylesheet">
+<link href="deps/Ubuntu-0.4.7/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Colour Schemes for Scientific Data Visualization">
-<meta property="og:description" content="Colour schemes ready for each type of data (qualitative,
-    diverging or sequential), with colours that are distinct for all
-    people, including colour-blind readers. This package provides an
-    implementation of Paul Tol (2018) and Fabio Crameri (2018) 
-    &lt;doi:10.5194/gmd-11-2541-2018&gt; colour schemes for use with graphics or
-    ggplot2. It provides tools to simulate colour-blindness and to test
-    how well the colours of any palette are identifiable. Several
+<meta property="og:description" content="Color schemes ready for each type of data (qualitative,
+    diverging or sequential), with colors that are distinct for all
+    people, including color-blind readers. This package provides an
+    implementation of Paul Tol (2018) and Fabio Crameri (2018)
+    &lt;doi:10.5194/gmd-11-2541-2018&gt; color schemes for use with graphics
+    or ggplot2. It provides tools to simulate color-blindness and to
+    test how well the colors of any palette are identifiable. Several
     scientific thematic schemes (geologic timescale, land cover, FAO
     soils, etc.) are also implemented.">
 <meta property="og:image" content="https://packages.tesselle.org/khroma/logo.png">
@@ -54,7 +54,7 @@
     
     <a class="navbar-brand me-2" href="index.html">khroma</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.10.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.11.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,8 +69,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="articles/crameri.html">Fabio Crameri's Colour Schemes</a>
-    <a class="dropdown-item" href="articles/tol.html">Paul Tol's Colour Schemes</a>
+    <a class="dropdown-item" href="articles/crameri.html">Fabio Crameri's Color Schemes</a>
+    <a class="dropdown-item" href="articles/tol.html">Paul Tol's Color Schemes</a>
   </div>
 </li>
 <li class="nav-item">
@@ -108,42 +108,64 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>Color blindness affects a large number of individuals. When communicating scientific results colour palettes must therefore be carefully chosen to be accessible to all readers.</p>
-<p>This R package provides an implementation of Okabe and Ito (2008), Tol (2021) and Crameri (2018) colour schemes. These schemes are ready for each type of data (qualitative, diverging or sequential), with colours that are distinct for all people, including colour-blind readers. This package also provides tools to simulate colour-blindness and to test how well the colours of any palette are identifiable. To simulate colour-blindness in production-ready R figures you may also be interested in the <a href="https://github.com/clauswilke/colorblindr" class="external-link"><strong>colorblindr</strong></a> package.</p>
-<p>Tol (2021) and Crameri (2018) offer carefully chosen schemes, ready for each type of data, with colours that are:</p>
+<p>Color blindness affects a large number of individuals. When communicating scientific results color palettes must therefore be carefully chosen to be accessible to all readers.</p>
+<p>This R package provides an implementation of Okabe and Ito (2008), Tol (2021) and Crameri (2018) color schemes. These schemes are ready for each type of data (qualitative, diverging or sequential), with colors that are distinct for all people, including color-blind readers. This package also provides tools to simulate color-blindness and to test how well the colors of any palette are identifiable. To simulate color-blindness in production-ready R figures you may also be interested in the <a href="https://github.com/clauswilke/colorblindr" class="external-link"><strong>colorblindr</strong></a> package.</p>
+<p>Tol (2021) and Crameri (2018) offer carefully chosen schemes, ready for each type of data, with colors that are:</p>
 <ul>
-<li>Distinct for all people, including colour-blind readers,</li>
+<li>Distinct for all people, including color-blind readers,</li>
 <li>Distinct from black and white,</li>
 <li>Distinct on screen and paper,</li>
 <li>Matching well together,</li>
 <li>Citable and reproducible.</li>
 </ul>
 <p>See <code><a href="articles/tol.html">vignette("tol")</a></code> and <code><a href="articles/crameri.html">vignette("crameri")</a></code> for a more complete overview.</p>
-<p>For specific uses, several scientific thematic schemes (geologic timescale, land cover, FAO soils, etc.) are implemented, but these colour schemes may not be colour-blind safe.</p>
-<p>All these colour schemes are implemented for use with base R <strong>graphics</strong> or <a href="https://github.com/tidyverse/ggplot2" class="external-link"><strong>ggplot2</strong></a> and <a href="https://github.com/thomasp85/ggraph" class="external-link"><strong>ggraph</strong></a>.</p>
+<p>For specific uses, several scientific thematic schemes (geologic timescale, land cover, FAO soils, etc.) are implemented, but these color schemes may not be color-blind safe.</p>
+<p>All these color schemes are implemented for use with base R <strong>graphics</strong> or <a href="https://github.com/tidyverse/ggplot2" class="external-link"><strong>ggplot2</strong></a> and <a href="https://github.com/thomasp85/ggraph" class="external-link"><strong>ggraph</strong></a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>To cite khroma <span class="cf">in</span> publications use<span class="sc">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2023</span>). _khroma<span class="sc">:</span> Colour Schemes <span class="cf">for</span> Scientific Data</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  Visualization_. Université Bordeaux Montaigne, Pessac, France.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  doi<span class="sc">:</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1472077</span> <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1472077</span><span class="sc">&gt;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  R package version <span class="dv">1</span>.<span class="fl">11.0</span>, <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>khroma<span class="sc">/</span><span class="er">&gt;</span>.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Une entrée BibTeX pour les utilisateurs LaTeX est</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">@</span>Manual{,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    author <span class="ot">=</span> {Nicolas Frerebeau},</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    title <span class="ot">=</span> {{khroma<span class="sc">:</span> Colour Schemes <span class="cf">for</span> Scientific Data Visualization}},</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    year <span class="ot">=</span> {<span class="dv">2023</span>},</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    organization <span class="ot">=</span> {Université Bordeaux Montaigne},</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    address <span class="ot">=</span> {Pessac, France},</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    note <span class="ot">=</span> {R package version <span class="dv">1</span>.<span class="fl">11.0</span>},</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    doi <span class="ot">=</span> {<span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1472077</span>},</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>khroma<span class="sc">/</span>},</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>This package is a part of the tesselle project</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>www.tesselle.org<span class="sc">&gt;</span>.</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the released version of <strong>khroma</strong> from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a>:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"khroma"</span><span class="op">)</span></span></code></pre></div>
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tesselle/khroma"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/">khroma</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Install extra packages (if needed)</span></span>
+<span><span class="co"># install.packages("ggplot2"))</span></span>
 <span></span>
-<span><span class="co">## Install extra packages (if needed)</span></span>
-<span><span class="co"># install.packages(c("ggplot2", "spacesXYZ"))</span></span></code></pre></div>
+<span><span class="co">## Load packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/">khroma</a></span><span class="op">)</span></span></code></pre></div>
 <details><summary><strong>Available palettes</strong> (click to expand)
-</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Get a table of available palettes</span></span>
 <span><span class="fu"><a href="reference/info.html">info</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt;            palette        type max missing</span></span>
@@ -198,98 +220,84 @@
 <span><span class="co">#&gt; 49 discreterainbow  sequential  23 #777777</span></span>
 <span><span class="co">#&gt; 50   smoothrainbow  sequential  34 #666666</span></span>
 <span><span class="co">#&gt; 51        okabeito qualitative   8    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 52    stratigraphy qualitative 175    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 53            soil qualitative  24    &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 54            land qualitative  14    &lt;NA&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; 52   okabeitoblack qualitative   8    &lt;NA&gt;</span></span>
+<span><span class="co">#&gt; 53    stratigraphy qualitative 175    &lt;NA&gt;</span></span>
+<span><span class="co">#&gt; 54            soil qualitative  24    &lt;NA&gt;</span></span>
+<span><span class="co">#&gt; 55            land qualitative  14    &lt;NA&gt;</span></span></code></pre></div>
 </details><div class="section level3">
-<h3 id="colour-palettes-and-scales">Colour palettes and scales<a class="anchor" aria-label="anchor" href="#colour-palettes-and-scales"></a>
+<h3 id="color-palettes-and-scales">Color palettes and scales<a class="anchor" aria-label="anchor" href="#color-palettes-and-scales"></a>
 </h3>
-<p><code><a href="reference/colour.html">colour()</a></code> returns a palette function that when called with a single integer argument returns a vector of colours.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Paul Tol's bright colour scheme</span></span>
-<span><span class="va">bright</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span></span>
+<p><code><a href="reference/colour.html">color()</a></code> returns a palette function that when called with a single integer argument returns a vector of colors.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Paul Tol's bright color scheme</span></span>
+<span><span class="va">bright</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span></span>
 <span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      blue       red     green    yellow      cyan    purple      grey </span></span>
 <span><span class="co">#&gt; "#4477AA" "#EE6677" "#228833" "#CCBB44" "#66CCEE" "#AA3377" "#BBBBBB" </span></span>
 <span><span class="co">#&gt; attr(,"missing")</span></span>
 <span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Show the colour palette</span></span>
-<span><span class="fu"><a href="reference/plot.html">plot_scheme</a></span><span class="op">(</span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-usage-show-1.png" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Show the color palette</span></span>
+<span><span class="fu"><a href="reference/plot_scheme.html">plot_scheme</a></span><span class="op">(</span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-usage-show-1.png" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">mpg</span>, package <span class="op">=</span> <span class="st">"ggplot2"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Use with graphics</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">4</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/plot.html">plot</a></span><span class="op">(</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">mpg</span><span class="op">$</span><span class="va">displ</span>,</span>
 <span>  y <span class="op">=</span> <span class="va">mpg</span><span class="op">$</span><span class="va">hwy</span>,</span>
 <span>  pch <span class="op">=</span> <span class="fl">16</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">$</span><span class="va">class</span><span class="op">)</span><span class="op">]</span>,</span>
+<span>  col <span class="op">=</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">$</span><span class="va">class</span><span class="op">)</span><span class="op">]</span>,</span>
 <span>  xlab <span class="op">=</span> <span class="st">"displ"</span>,</span>
 <span>  ylab <span class="op">=</span> <span class="st">"hwy"</span>,</span>
 <span>  panel.first <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-plot-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Use with ggplot2</span></span>
 <span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span>, color <span class="op">=</span> <span class="va">class</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="reference/scale_tol_bright.html">scale_colour_bright</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu"><a href="reference/scale_tol_bright.html">scale_color_bright</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-plot-2.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level3">
 <h3 id="diagnostic-tools">Diagnostic tools<a class="anchor" aria-label="anchor" href="#diagnostic-tools"></a>
 </h3>
 <div class="section level4">
-<h4 id="test-how-well-the-colours-are-identifiable">Test how well the colours are identifiable<a class="anchor" aria-label="anchor" href="#test-how-well-the-colours-are-identifiable"></a>
+<h4 id="test-how-well-the-colors-are-identifiable">Test how well the colors are identifiable<a class="anchor" aria-label="anchor" href="#test-how-well-the-colors-are-identifiable"></a>
 </h4>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Okabe &amp; Ito's colour scheme</span></span>
-<span><span class="va">okabe</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"okabe ito"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Okabe &amp; Ito's color scheme</span></span>
+<span><span class="va">okabe</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"okabe ito"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/plot.html">plot_map</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="reference/plot_map.html">plot_map</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-map-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## BuRd sequential colour scheme</span></span>
-<span><span class="va">BuRd</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">colour</a></span><span class="op">(</span><span class="st">"BuRd"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## BuRd sequential color scheme</span></span>
+<span><span class="va">BuRd</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"BuRd"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="reference/plot.html">plot_tiles</a></span><span class="op">(</span><span class="fu">BuRd</span><span class="op">(</span><span class="fl">128</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">256</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="reference/plot_tiles.html">plot_tiles</a></span><span class="op">(</span><span class="fu">BuRd</span><span class="op">(</span><span class="fl">128</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">256</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-tiles-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
-<h4 id="compute-cielab-distance-metric">Compute CIELAB distance metric<a class="anchor" aria-label="anchor" href="#compute-cielab-distance-metric"></a>
-</h4>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">DeltaE</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/compare.html">compare</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">DeltaE</span>, <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                black orange sky blue bluish green yellow  blue vermilion</span></span>
-<span><span class="co">#&gt; orange         64.74                                                    </span></span>
-<span><span class="co">#&gt; sky blue       60.95  53.61                                             </span></span>
-<span><span class="co">#&gt; bluish green   50.51  42.87    34.69                                    </span></span>
-<span><span class="co">#&gt; yellow         88.42  21.72    57.53        38.04                       </span></span>
-<span><span class="co">#&gt; blue           39.23  55.35    22.31        38.40  70.37                </span></span>
-<span><span class="co">#&gt; vermilion      49.36  22.24    52.27        54.36  43.71 49.62          </span></span>
-<span><span class="co">#&gt; reddish purple 53.11  49.01    45.51        63.45  62.54 41.11     37.02</span></span></code></pre></div>
-</div>
-<div class="section level4">
-<h4 id="simulate-colour-blindness">Simulate colour-blindness<a class="anchor" aria-label="anchor" href="#simulate-colour-blindness"></a>
+<h4 id="simulate-color-blindness">Simulate color-blindness<a class="anchor" aria-label="anchor" href="#simulate-color-blindness"></a>
 </h4>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/plot.html">plot_scheme_colourblind</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-usage-colourblind2-1.png" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/plot_scheme_colourblind.html">plot_scheme_colorblind</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-usage-colorblind2-1.png" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
-<span><span class="co">## ggplot2 default colour scheme</span></span>
-<span><span class="co">## (equally spaced hues around the colour wheel)</span></span>
+<span><span class="co">## ggplot2 default color scheme</span></span>
+<span><span class="co">## (equally spaced hues around the color wheel)</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/plot.html">plot_scheme_colourblind</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-usage-colourblind2-2.png" style="display: block; margin: auto;"></p>
+<span><span class="fu"><a href="reference/plot_scheme_colourblind.html">plot_scheme_colorblind</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-usage-colorblind2-2.png" style="display: block; margin: auto;"></p>
 </div>
 </div>
 </div>
