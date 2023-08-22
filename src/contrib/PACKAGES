@@ -73,13 +73,13 @@ MD5sum: f3f08f2c670ceae51b36d96ca10b4a06
 NeedsCompilation: no
 
 Package: tabula
-Version: 2.0.0
-Depends: R (>= 3.3)
-Imports: arkhe (>= 1.0.0), ggplot2, methods, rlang, stats, utils
-Suggests: covr, folio, khroma, knitr, rmarkdown, testthat (>= 3.0.0),
-        vdiffr (>= 1.0.0)
+Version: 3.0.0
+Depends: R (>= 3.5)
+Imports: arkhe (>= 1.2.0), graphics, grDevices, methods, stats, utils
+Suggests: folio, khroma, knitr, rmarkdown, rsvg, svglite, tinysnapshot,
+        tinytest
 License: GPL (>= 3)
-MD5sum: 7dbd22f5dced9ca4c562927ccacee97f
+MD5sum: 427bd47d3d8c51327a3ca248b5611f76
 NeedsCompilation: no
 
 Package: tesselle
