@@ -166,12 +166,11 @@ contributions.</li>
 <span><span class="co">#&gt; F3   0.1467569  3.688021  100.00000</span></span>
 <span></span>
 <span><span class="co">## Scree plot</span></span>
-<span><span class="fu"><a href="../reference/screeplot.html">screeplot</a></span><span class="op">(</span><span class="va">X</span>, cumulative <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/eigenvalues-1.png" width="480"></p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Plot variable contributions to the definition of the first two axes</span></span>
+<span><span class="fu"><a href="../reference/screeplot.html">screeplot</a></span><span class="op">(</span><span class="va">X</span>, cumulative <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Plot variable contributions to the definition of the first two axes</span></span>
 <span><span class="fu"><a href="../reference/viz_contributions.html">viz_contributions</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span>, axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/contributions-1.png" width="480"></p>
+<p><img src="pca_files/figure-html/eigenvalues-1.png" width="50%"><img src="pca_files/figure-html/eigenvalues-2.png" width="50%"></p>
 </div>
 <div class="section level2">
 <h2 id="pca-biplot">PCA biplot<a class="anchor" aria-label="anchor" href="#pca-biplot"></a>
@@ -190,18 +189,18 @@ about biplots.</p>
 distance between the individuals approximates the Euclidean distance
 between rows. In the form biplot the length of a vector approximates the
 quality of the representation of the variable.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"form"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/biplot-rows-1.png" width="480"></p>
+<p><img src="pca_files/figure-html/biplot-rows-1.png" width="672"></p>
 <p>The covariance biplot favors the representation of the variables: the
 length of a vector approximates the standard deviation of the variable
 and the cosine of the angle formed by two vectors approximates the
 correlation between the two variables <span class="citation">(Greenacre
 2010)</span>. In the covariance biplot the distance between the
 individuals approximates the Mahalanobis distance between rows.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"covariance"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/biplot-columns-1.png" width="480"></p>
+<p><img src="pca_files/figure-html/biplot-columns-1.png" width="672"></p>
 <p>Biplots have the drawbacks of their advantages: they can quickly
 become difficult to read as they display a lot of information at once.
 It may then be preferable to visualize the results for individuals and
@@ -213,28 +212,28 @@ variables separately.</p>
 <p><code><a href="../reference/viz_variables.html">viz_variables()</a></code> depicts the variables by rays emanating
 from the origin (both their lengths and directions are important to the
 interpretation).</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot variables factor map</span></span>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/plot-var-1.png" width="480"></p>
+<p><img src="pca_files/figure-html/plot-var-1.png" width="672"></p>
 <p><code><a href="../reference/viz_variables.html">viz_variables()</a></code> allows to highlight additional
 information by varying different graphical elements (color,
 transparency, shape and size of symbols…).</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight cos2</span></span>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  map_color <span class="op">=</span> <span class="st">"cos2"</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span>
+<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">4</span>, range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/plot-var-cos2-1.png" width="480"></p>
+<p><img src="pca_files/figure-html/plot-var-cos2-1.png" width="672"></p>
 </div>
 <div class="section level2">
 <h2 id="plot-pca-scores">Plot PCA scores<a class="anchor" aria-label="anchor" href="#plot-pca-scores"></a>
 </h2>
 <p><code><a href="../reference/viz_individuals.html">viz_individuals()</a></code> allows to display individuals and to
 highlight additional information.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot individuals and color by species</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
@@ -243,8 +242,8 @@ highlight additional information.</p>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
 <span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/plot-ind-species-1.png" width="480"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<p><img src="pca_files/figure-html/plot-ind-species-1.png" width="672"></p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Add ellipses</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/viz_wrap.html">viz_tolerance</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span>,</span>
@@ -255,25 +254,26 @@ highlight additional information.</p>
 <span><span class="fu"><a href="../reference/viz_wrap.html">viz_hull</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span>,</span>
 <span>         border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-wrap-1.png" width="50%"><img src="pca_files/figure-html/plot-wrap-2.png" width="50%"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight petal length</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
+<span>  map_size <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
 <span>  pch <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="480"></p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="672"></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight contributions</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
-<span>  map_color <span class="op">=</span> <span class="st">"contrib"</span>, </span>
+<span>  map_color <span class="op">=</span> <span class="st">"contrib"</span>,</span>
 <span>  map_size <span class="op">=</span> <span class="st">"contrib"</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
 <span>  pch <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="pca_files/figure-html/plot-ind-contrib-1.png" width="480"></p>
+<p><img src="pca_files/figure-html/plot-ind-contrib-1.png" width="672"></p>
 </div>
 <div class="section level2">
 <h2 id="custom-plot">Custom plot<a class="anchor" aria-label="anchor" href="#custom-plot"></a>
@@ -282,7 +282,7 @@ highlight additional information.</p>
 <code><a href="../reference/tidy.html">tidy()</a></code> and <code><a href="../reference/tidy.html">augment()</a></code> functions allow you to
 extract the results as data frames and thus build custom graphs with
 base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris_tidy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">iris_tidy</span><span class="op">)</span></span>
 <span><span class="co">#&gt;          label component supplementary coordinate contribution        cos2</span></span>
@@ -309,7 +309,7 @@ base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
 <span><span class="co">#&gt; 4 0.9977577</span></span>
 <span><span class="co">#&gt; 5 0.9997491</span></span>
 <span><span class="co">#&gt; 6 0.9998819</span></span></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Custom plot with ggplot2</span></span>
 <span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris_augment</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">F1</span>, y <span class="op">=</span> <span class="va">F2</span>, colour <span class="op">=</span> <span class="va">contribution</span><span class="op">)</span> <span class="op">+</span></span>
