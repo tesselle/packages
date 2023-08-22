@@ -119,28 +119,28 @@ the leave-one-out values of <code>do</code>.</p>
 <span class="r-in"><span><span class="co">## Bootstrap resampling</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean         bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.278555  0.009355291 0.08168945</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.962129  0.006830868 0.14856360</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.521215  0.029532190 0.18767486</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.482984 -0.002619898 0.21554714</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.312156 -0.017030246 0.25323673</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.278206  0.009006676 0.08307194</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.972727  0.017429550 0.15398977</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.512902  0.021218780 0.20477828</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.489387  0.003782870 0.21801177</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.304147 -0.025039501 0.26161788</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.952055 3.220044 3.277314 3.272453 3.327767 3.524063</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.412757 2.874888 2.974133 2.968262 3.075679 3.349881</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.492548 2.395232 2.526537 2.521013 2.660344 3.333686</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.608883 2.353727 2.486835 2.476037 2.631901 3.092497</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.279854 2.180351 2.343891 2.316944 2.491505 2.943046</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.025561 3.223493 3.274640 3.274596 3.331732 3.510869</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.510647 2.879026 2.986806 2.977599 3.078147 3.392700</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.867719 2.400420 2.540724 2.524350 2.667965 3.082037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.671531 2.369194 2.515860 2.495118 2.651108 3.035360</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.213008 2.163956 2.343947 2.316331 2.499333 3.061994</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                       25%      50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.228183 3.286832</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.863391 2.966887</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.392896 2.530659</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.359627 2.515557</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.153532 2.339215</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.229519 3.285076</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.878630 2.980912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.396635 2.532030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.366988 2.504375</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.145842 2.329187</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
@@ -153,11 +153,11 @@ the leave-one-out values of <code>do</code>.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.990207 3.231059 3.289124 3.281740 3.333985 3.552713</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.327542 2.883926 2.984172 2.975329 3.081530 3.414069</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.623608 2.403366 2.531790 2.525538 2.664030 3.148793</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.676696 2.336496 2.487700 2.472388 2.635812 3.035232</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.039721 2.143952 2.331548 2.306270 2.498150 2.942076</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.045532 3.229899 3.283922 3.281962 3.334989 3.514534</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.301774 2.872228 2.977945 2.968116 3.075886 3.332967</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.695724 2.396411 2.537224 2.526913 2.674774 3.222411</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.723392 2.333030 2.496161 2.472532 2.637416 2.985356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.277034 2.163956 2.338372 2.313336 2.491497 2.959830</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
