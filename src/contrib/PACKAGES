@@ -26,13 +26,13 @@ MD5sum: ad438745606749dce27e1722e2c950b7
 NeedsCompilation: no
 
 Package: dimensio
-Version: 0.3.1
-Depends: R (>= 3.3)
-Imports: ggplot2, grDevices, methods, rlang
-Suggests: covr, FactoMineR, ggrepel, khroma, testthat (>= 3.0.0),
-        vdiffr (>= 1.0.0)
+Version: 0.4.0
+Depends: R (>= 3.5)
+Imports: ggplot2, graphics, grDevices, methods, rlang
+Suggests: khroma, knitr, rmarkdown, rsvg, svglite, tinysnapshot,
+        tinytest
 License: GPL (>= 3)
-MD5sum: 5cff7cabb52639829210512870b6fd23
+MD5sum: bbacf0e8c6d89b4cf8579efdc0e71f23
 NeedsCompilation: no
 
 Package: folio
