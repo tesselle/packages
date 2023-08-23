@@ -223,7 +223,7 @@ transparency, shape and size of symbols…).</p>
 <code class="sourceCode R"><span><span class="co">## Highlight cos2</span></span>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
-<span>  map_color <span class="op">=</span> <span class="st">"cos2"</span>, </span>
+<span>  highlight <span class="op">=</span> <span class="st">"cos2"</span>, </span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">4</span>, range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-var-cos2-1.png" width="672"></p>
@@ -237,8 +237,7 @@ highlight additional information.</p>
 <code class="sourceCode R"><span><span class="co">## Plot individuals and color by species</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
-<span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>,</span>
-<span>  map_shape <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, </span>
+<span>  highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
 <span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -258,9 +257,9 @@ highlight additional information.</p>
 <code class="sourceCode R"><span><span class="co">## Highlight petal length</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
-<span>  map_color <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
-<span>  map_size <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
+<span>  highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="co"># Custom size scale</span></span>
 <span>  pch <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="672"></p>
@@ -268,9 +267,9 @@ highlight additional information.</p>
 <code class="sourceCode R"><span><span class="co">## Highlight contributions</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
-<span>  map_color <span class="op">=</span> <span class="st">"contrib"</span>,</span>
-<span>  map_size <span class="op">=</span> <span class="st">"contrib"</span>,</span>
+<span>  highlight <span class="op">=</span> <span class="st">"contrib"</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
+<span>  cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="co"># Custom size scale</span></span>
 <span>  pch <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-contrib-1.png" width="672"></p>
