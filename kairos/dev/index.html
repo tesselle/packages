@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A toolkit for absolute and relative dating and analysis of 
-    chronological patterns. This package includes functions for 
-    chronological modeling and dating of archaeological assemblages from 
-    count data. It provides methods for matrix seriation. It also allows 
-    to compute time point estimates and density estimates of the occupation 
-    and duration of an archaeological site.">
+<meta name="description" content="A toolkit for absolute and relative dating and analysis of
+    chronological patterns. This package includes functions for
+    chronological modeling and dating of archaeological assemblages from
+    count data. It provides methods for matrix seriation. It also allows
+    to compute time point estimates and density estimates of the
+    occupation and duration of an archaeological site.">
 <title>Analysis of Chronological Patterns from Archaeological Count Data • kairos</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -20,17 +20,17 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.6/font.css" rel="stylesheet">
-<link href="deps/Ubuntu-0.4.6/font.css" rel="stylesheet">
+<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Roboto-0.4.7/font.css" rel="stylesheet">
+<link href="deps/Ubuntu-0.4.7/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Analysis of Chronological Patterns from Archaeological Count Data">
-<meta property="og:description" content="A toolkit for absolute and relative dating and analysis of 
-    chronological patterns. This package includes functions for 
-    chronological modeling and dating of archaeological assemblages from 
-    count data. It provides methods for matrix seriation. It also allows 
-    to compute time point estimates and density estimates of the occupation 
-    and duration of an archaeological site.">
+<meta property="og:description" content="A toolkit for absolute and relative dating and analysis of
+    chronological patterns. This package includes functions for
+    chronological modeling and dating of archaeological assemblages from
+    count data. It provides methods for matrix seriation. It also allows
+    to compute time point estimates and density estimates of the
+    occupation and duration of an archaeological site.">
 <meta property="og:image" content="https://packages.tesselle.org/kairos/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@nfrerebeau">
@@ -135,52 +135,29 @@
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/" class="external-link">khroma</a></span><span class="op">)</span> <span class="co"># Colour schemes</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/" class="external-link">tabula</a></span><span class="op">)</span> <span class="co"># Plot methods</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span></code></pre></div>
-<p><strong>kairos</strong> only supports dates expressed in CE years (BCE years must be given as negative numbers). <strong>All results are rounded to zero decimal places</strong> (sub-annual precision does not make sense in most situations). You can change this behavior with <code>options(kairos.precision = x)</code> (for <code>x</code> decimal places).</p>
+<p><strong>kairos</strong> v2.0 uses <strong>aion</strong> for internal date representation. Look at <code>vignette("aion")</code> before you start.</p>
 <p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Build an incidence matrix with random data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
-<span><span class="va">incidence1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, <span class="fl">400</span>, <span class="cn">TRUE</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.6</span>, <span class="fl">0.4</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
-<span><span class="va">incidence1</span> <span class="op">&lt;-</span> <span class="va">incidence1</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="co"># logical</span></span>
-<span></span>
-<span><span class="co">## Get seriation order on rows and columns</span></span>
-<span><span class="op">(</span><span class="va">indices</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/seriate_rank.html">seriate_rank</a></span><span class="op">(</span><span class="va">incidence1</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, stop <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; &lt;RankPermutationOrder&gt;</span></span>
-<span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
-<span><span class="co">#&gt; - Row order: 1 4 20 3 9 16 19 10 13 2 11 7 17 5 6 18 14 15 8 12...</span></span>
-<span><span class="co">#&gt; - Column order: 1 16 9 4 8 14 3 20 13 2 6 18 7 17 5 11 19 12 15 10...</span></span>
-<span></span>
-<span><span class="co">## Permute rows and columns</span></span>
-<span><span class="va">incidence2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/permute.html">permute</a></span><span class="op">(</span><span class="va">incidence1</span>, <span class="va">indices</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Plot matrix</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence1</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-seriation-1.png" width="50%"><img src="reference/figures/README-seriation-2.png" width="50%"></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Data from Husi 2022</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"loire"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
-<span><span class="va">loire</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">loire</span>, <span class="va">area</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Anjou"</span>, <span class="st">"Blésois"</span>, <span class="st">"Orléanais"</span>, </span>
-<span>                                   <span class="st">"Haut-Poitou"</span>, <span class="st">"Touraine"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Anjou"</span>, <span class="st">"Blésois"</span>, <span class="st">"Orléanais"</span>, <span class="st">"Haut-Poitou"</span>, <span class="st">"Touraine"</span><span class="op">)</span></span>
+<span><span class="va">loire</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/subset.html">subset</a></span><span class="op">(</span><span class="va">loire</span>, <span class="va">area</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">keep</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Get time range</span></span>
 <span><span class="va">loire_range</span> <span class="op">&lt;-</span> <span class="va">loire</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"lower"</span>, <span class="st">"upper"</span><span class="op">)</span><span class="op">]</span></span>
 <span></span>
 <span><span class="co">## Calculate aoristic sum (weights) by group</span></span>
-<span><span class="va">aorist_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">loire_range</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>                          groups <span class="op">=</span> <span class="va">loire</span><span class="op">$</span><span class="va">area</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">aorist_groups</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">ao</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/aoristic.html">aoristic</a></span><span class="op">(</span><span class="va">loire_range</span>, step <span class="op">=</span> <span class="fl">50</span>, weight <span class="op">=</span> <span class="cn">TRUE</span>, groups <span class="op">=</span> <span class="va">loire</span><span class="op">$</span><span class="va">area</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Plot</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">ao</span>, col <span class="op">=</span> <span class="st">"grey"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-aoristic-1.png"><!-- --></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Rate of change by group</span></span>
-<span><span class="va">roc_groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/roc.html">roc</a></span><span class="op">(</span><span class="va">aorist_groups</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">roc_groups</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">ro</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/roc.html">roc</a></span><span class="op">(</span><span class="va">ao</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">ro</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-aoristic-2.png"><!-- --></p>
 </div>
 <div class="section level2">

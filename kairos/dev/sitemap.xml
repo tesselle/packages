@@ -64,7 +64,7 @@
     <loc>https://packages.tesselle.org/kairos/dev/reference/apportion.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/dev/reference/deprecate.html</loc>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/data.frame.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/event.html</loc>
@@ -76,10 +76,16 @@
     <loc>https://packages.tesselle.org/kairos/dev/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/kairos-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/kairos-package.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/mcd.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/model.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/mutators.html</loc>
@@ -103,6 +109,9 @@
     <loc>https://packages.tesselle.org/kairos/dev/reference/plot_time.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/predict_event.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/reexports.html</loc>
   </url>
   <url>
@@ -122,5 +131,11 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/dev/reference/seriate_refine.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/series.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/dev/reference/subset.html</loc>
   </url>
 </urlset>
