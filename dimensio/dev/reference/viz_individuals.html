@@ -69,6 +69,8 @@
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -87,6 +89,8 @@
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -132,6 +136,18 @@ is explicitly specified (see examples).
 If a single <code>character</code> string is passed, it must be one of "<code>observation</code>",
 "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>" (see <code><a href="tidy.html">augment()</a></code>).
 Any unambiguous substring can be given.</p></dd>
+
+
+<dt>xlim</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the x limits of the plot.
+The default value, <code>NULL</code>, indicates that the range of the
+<a href="https://rdrr.io/r/base/is.finite.html" class="external-link">finite</a> values to be plotted should be used.</p></dd>
+
+
+<dt>ylim</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the y limits of the plot.
+The default value, <code>NULL</code>, indicates that the range of the
+<a href="https://rdrr.io/r/base/is.finite.html" class="external-link">finite</a> values to be plotted should be used.</p></dd>
 
 
 <dt>main</dt>

@@ -71,6 +71,8 @@
 <span>  cex.columns <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"cex"</span><span class="op">)</span>,</span>
 <span>  pch.rows <span class="op">=</span> <span class="fl">16</span>,</span>
 <span>  pch.columns <span class="op">=</span> <span class="fl">17</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -90,6 +92,8 @@
 <span>  pch.columns <span class="op">=</span> <span class="fl">17</span>,</span>
 <span>  lty <span class="op">=</span> <span class="st">"solid"</span>,</span>
 <span>  lwd <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -140,6 +144,18 @@ plotting characters and symbols should be scaled relative to the default.</p></d
 
 <dt>pch.rows, pch.columns</dt>
 <dd><p>A symbol specification.</p></dd>
+
+
+<dt>xlim</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the x limits of the plot.
+The default value, <code>NULL</code>, indicates that the range of the
+<a href="https://rdrr.io/r/base/is.finite.html" class="external-link">finite</a> values to be plotted should be used.</p></dd>
+
+
+<dt>ylim</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the y limits of the plot.
+The default value, <code>NULL</code>, indicates that the range of the
+<a href="https://rdrr.io/r/base/is.finite.html" class="external-link">finite</a> values to be plotted should be used.</p></dd>
 
 
 <dt>main</dt>
