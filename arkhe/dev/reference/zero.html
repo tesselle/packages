@@ -85,8 +85,8 @@ replace_zero replaces zeros.
 
 
 <dt>margin</dt>
-<dd><p>A vector giving the subscripts which the function will be
-applied over (<code>1</code> indicates rows, <code>2</code> indicates columns).</p></dd>
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscripts which the
+function will be applied over (<code>1</code> indicates rows, <code>2</code> indicates columns).</p></dd>
 
 
 <dt>all</dt>
@@ -132,26 +132,26 @@ computation proceeds?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">0</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    0   10   10   10    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    6    0    4    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    1    0    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    6    3   10    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    9    8    4    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    9    0    8    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    7    7   10    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    9    5    5   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    8    4    3    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    1   10    7    0</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove rows with zero</span></span></span>
 <span class="r-in"><span><span class="fu">remove_zero</span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    6    3   10    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    9    8    4    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    9    5    5   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    8    4    3    1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace zero with zeros</span></span></span>
 <span class="r-in"><span><span class="fu">replace_zero</span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1   10   10   10    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    6    1    4    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    1    1    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    6    3   10    3    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    9    8    4    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    9    1    8    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    7    7   10    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    9    5    5   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    8    4    3    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    1   10    7    1</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
