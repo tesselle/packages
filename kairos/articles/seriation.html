@@ -14,9 +14,9 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.2/font.css" rel="stylesheet">
-<link href="../deps/Ubuntu-0.4.2/font.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.7/font.css" rel="stylesheet">
+<link href="../deps/Ubuntu-0.4.7/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Seriation">
@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,7 +89,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2022-11-09</h4>
+            <h4 data-toc-skip class="date">2023-08-30</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/seriation.Rmd" class="external-link"><code>vignettes/seriation.Rmd</code></a></small>
       <div class="d-none name"><code>seriation.Rmd</code></div>
@@ -98,11 +98,11 @@ Frerebeau</h4>
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Install extra packages:</span></span>
-<span><span class="co">## - khroma: colour schemes</span></span>
+<code class="sourceCode R"><span><span class="co">## Install extra packages (if needed):</span></span>
+<span><span class="co">## - dimensio: multivariate analysis</span></span>
 <span><span class="co">## - folio: datasets</span></span>
 <span><span class="co">## - tabula: visualization</span></span>
-<span><span class="co"># install.packages(c("khroma", "folio", "tabula"))</span></span>
+<span><span class="co"># install.packages(c("dimensio", "folio", "tabula"))</span></span>
 <span></span>
 <span><span class="co"># Load packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span></code></pre></div>
@@ -168,10 +168,8 @@ procedure could enter into an infinite loop.</p>
 <span><span class="va">incidence2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">incidence1</span>, <span class="va">indices</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Plot matrix</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence1</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html" class="external-link">scale_fill_logical</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence1</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"black"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_heatmap.html" class="external-link">plot_heatmap</a></span><span class="op">(</span><span class="va">incidence2</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"black"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/reciprocal-1.png" width="50%"><img src="seriation_files/figure-html/reciprocal-2.png" width="50%"></p>
 <p>The positive difference from the column mean percentage (in french
 “écart positif au pourcentage moyen”, EPPM) represents a deviation from
@@ -217,34 +215,32 @@ account for temporal variation. The direction of temporal change within
 the correspondence analysis space is arbitrary: additional information
 is needed to determine the actual order in time.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Get data</span></span>
+<code class="sourceCode R"><span><span class="co">## Data from Peeples and Schachner 2012</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Ford diagram</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/ca-ford-1.png" width="480"></p>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>cex.axis <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/ca-ford-1.png" width="672"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Get row permutations from CA coordinates</span></span>
 <span><span class="op">(</span><span class="va">zun_indices</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seriate_average.html">seriate_average</a></span><span class="op">(</span><span class="va">zuni</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;AveragePermutationOrder&gt;</span></span>
 <span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
-<span><span class="co">#&gt; - Row order: 372 387 350 367 110 417 364 407 357 160 373 406 35...</span></span>
+<span><span class="co">#&gt; - Row order: 372 387 350 367 110 417 364 407 357 356 160 373 34...</span></span>
 <span><span class="co">#&gt; - Column order: 18 14 17 16 13 15 9 8 12 11 6 7 5 10 4 2 3 1...</span></span>
 <span></span>
 <span><span class="co">## Plot CA results</span></span>
-<span><span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/plot_coordinates.html" class="external-link">plot_rows</a></span><span class="op">(</span><span class="va">zun_indices</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Rows"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/ca-seriation-1.png" width="480"></p>
+<span><span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/biplot.html" class="external-link">biplot</a></span><span class="op">(</span><span class="va">zun_indices</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/ca-seriation-1.png" width="672"></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Permute data matrix</span></span>
 <span><span class="va">zuni_permuted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zun_indices</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Ford diagram</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni_permuted</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/ca-permutation-1.png" width="480"></p>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>cex.axis <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni_permuted</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/ca-permutation-1.png" width="672"></p>
 </div>
 <div class="section level3">
 <h3 id="refining">Refining<a class="anchor" aria-label="anchor" href="#refining"></a>
@@ -267,24 +263,15 @@ frequency seriation.”</p>
 <span><span class="co">## Warning: this may take a few seconds!</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">&lt;-</span> <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">zun_indices</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Plot convex hull</span></span>
 <span><span class="co">## Bootstrap CA results for the rows</span></span>
+<span><span class="co">## (add convex hull)</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/plot_coordinates.html" class="external-link">plot_rows</a></span><span class="op">(</span>active <span class="op">=</span> <span class="cn">FALSE</span>, colour <span class="op">=</span> <span class="st">"obs"</span>, fill <span class="op">=</span> <span class="st">"obs"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/envelopes.html" class="external-link">stat_hull</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Rows"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_highcontrast.html" class="external-link">scale_colour_highcontrast</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_highcontrast.html" class="external-link">scale_fill_highcontrast</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"lightgrey"</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_wrap.html" class="external-link">viz_hull</a></span><span class="op">(</span>col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/adjustcolor.html" class="external-link">adjustcolor</a></span><span class="op">(</span><span class="st">"#004488"</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Bootstrap CA results for the columns</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/plot_coordinates.html" class="external-link">plot_columns</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"group"</span>, fill <span class="op">=</span> <span class="st">"group"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/envelopes.html" class="external-link">stat_hull</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Columns"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_discreterainbow.html" class="external-link">scale_colour_discreterainbow</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_discreterainbow.html" class="external-link">scale_fill_discreterainbow</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_variables.html" class="external-link">viz_columns</a></span><span class="op">(</span>pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/bootstrap-1.png" width="50%"><img src="seriation_files/figure-html/bootstrap-2.png" width="50%"></p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Replicates Peeples and Schachner 2012 results</span></span>
@@ -295,41 +282,28 @@ frequency seriation.”</p>
 <span><span class="op">(</span><span class="va">zuni_refine</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seriate_refine.html">seriate_refine</a></span><span class="op">(</span><span class="va">zun_indices</span>, cutoff <span class="op">=</span> <span class="va">fun</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;RefinePermutationOrder&gt;</span></span>
 <span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
-<span><span class="co">#&gt; - Row order: 372 350 387 367 110 417 364 357 407 356 160 344 34...</span></span>
+<span><span class="co">#&gt; - Row order: 372 350 387 367 110 417 364 357 407 160 356 373 34...</span></span>
 <span><span class="co">#&gt; - Column order: 17 18 14 16 13 15 9 8 12 11 6 10 7 5 4 2 3 1...</span></span>
 <span><span class="co">#&gt; Partial bootstrap refinement:</span></span>
-<span><span class="co">#&gt; - Cutoff value: 1.77</span></span>
-<span><span class="co">#&gt; - Rows to keep: 360 of 420 (86%)</span></span>
+<span><span class="co">#&gt; - Cutoff value: 1.75</span></span>
+<span><span class="co">#&gt; - Rows to keep: 354 of 420 (84%)</span></span>
 <span></span>
 <span><span class="co">## Plot CA results for the rows</span></span>
-<span><span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/plot_coordinates.html" class="external-link">plot_rows</a></span><span class="op">(</span><span class="va">zuni_refine</span>, colour <span class="op">=</span> <span class="st">"observation"</span>, fill <span class="op">=</span> <span class="st">"observation"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Rows"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_discreterainbow.html" class="external-link">scale_colour_discreterainbow</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/scale_tol_discreterainbow.html" class="external-link">scale_fill_discreterainbow</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/refine-1.png" width="480"></p>
+<span><span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span><span class="va">zuni_refine</span>, highlight <span class="op">=</span> <span class="st">"observation"</span>, pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/refine-1.png" width="672"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Histogram of convex hull maximum dimension length</span></span>
-<span><span class="va">hull_length</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>length <span class="op">=</span> <span class="va">zuni_refine</span><span class="op">[[</span><span class="st">"length"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
-<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">hull_length</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">length</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">4.5</span>, by <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>, fill <span class="op">=</span> <span class="st">"grey70"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="external-link">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="va">zuni_refine</span><span class="op">[[</span><span class="st">"cutoff"</span><span class="op">]</span><span class="op">]</span>, colour <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Convex hull max. dim."</span>, </span>
-<span>    x <span class="op">=</span> <span class="st">"Maximum length"</span>, </span>
-<span>    y <span class="op">=</span> <span class="st">"Count"</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/refine-histogram-1.png" width="480"></p>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">zuni_refine</span><span class="op">[[</span><span class="st">"length"</span><span class="op">]</span><span class="op">]</span>, xlab <span class="op">=</span> <span class="st">"Maximum length"</span>, main <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="va">zuni_refine</span><span class="op">[[</span><span class="st">"cutoff"</span><span class="op">]</span><span class="op">]</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/refine-histogram-1.png" width="672"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Permute data matrix</span></span>
 <span><span class="va">zuni_permuted2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zuni_refine</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Ford diagram</span></span>
-<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni_permuted2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/refine-permutation-1.png" width="480"></p>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>cex.axis <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
+<span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni_permuted2</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/refine-permutation-1.png" width="672"></p>
 </div>
 </div>
 <div class="section level2 unnumbered">
@@ -337,10 +311,9 @@ frequency seriation.”</p>
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-desachy2004" class="csl-entry">
-Desachy, Bruno. 2004. <span>“<span>Le sériographe EPPM: un outil
-informatisé de sériation graphique pour tableaux de
-comptages</span>.”</span> <em>Revue archéologique de Picardie</em> 3
-(1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">https://doi.org/10.3406/pica.2004.2396</a>.
+Desachy, Bruno. 2004. <span>“Le sériographe EPPM: un outil informatisé
+de sériation graphique pour tableaux de comptages.”</span> <em>Revue
+archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">https://doi.org/10.3406/pica.2004.2396</a>.
 </div>
 <div id="ref-dunnell1970" class="csl-entry">
 Dunnell, Robert C. 1970. <span>“Seriation <span>Method</span> and
@@ -350,7 +323,7 @@ Dunnell, Robert C. 1970. <span>“Seriation <span>Method</span> and
 <div id="ref-ihm2005" class="csl-entry">
 Ihm, Peter. 2005. <span>“A <span>Contribution</span> to the
 <span>History</span> of <span>Seriation</span> in
-<span>Archaeology</span>.”</span> In <em>Classification the
+<span>Archaeology</span>.”</span> In <em>Classification – the
 <span>Ubiquitous Challenge</span></em>, edited by Claus Weihs and
 Wolfgang Gaul, 307–16. <span>Berlin Heidelberg</span>:
 <span>Springer</span>. <a href="https://doi.org/10.1007/3-540-28084-7_34" class="external-link">https://doi.org/10.1007/3-540-28084-7_34</a>.
@@ -375,7 +348,7 @@ Science</em> 39 (8): 2818–27. <a href="https://doi.org/10.1016/j.jas.2012.04.0
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer>

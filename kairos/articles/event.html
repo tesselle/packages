@@ -14,9 +14,9 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.2/font.css" rel="stylesheet">
-<link href="../deps/Ubuntu-0.4.2/font.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.7/font.css" rel="stylesheet">
+<link href="../deps/Ubuntu-0.4.7/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Event Date Model">
@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,7 +89,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2022-11-09</h4>
+            <h4 data-toc-skip class="date">2023-08-30</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/event.Rmd" class="external-link"><code>vignettes/event.Rmd</code></a></small>
       <div class="d-none name"><code>event.Rmd</code></div>
@@ -98,8 +98,10 @@ Frerebeau</h4>
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/folio/" class="external-link">folio</a></span><span class="op">)</span> <span class="co"># Datasets</span></span>
+<code class="sourceCode R"><span><span class="co">## Install extra packages (if needed):</span></span>
+<span><span class="co"># install.packages("folio") # datasets</span></span>
+<span></span>
+<span><span class="co"># Load packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="definition">Definition<a class="anchor" aria-label="anchor" href="#definition"></a>
@@ -261,7 +263,8 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Bellanger et al. did not publish the data supporting their demonstration: </span></span>
 <span><span class="co">## no replication of their results is possible. </span></span>
-<span><span class="co">## Here is a pseudo-reproduction using the zuni dataset</span></span>
+<span><span class="co">## Here is an example using the Zuni dataset from Peeples and Schachner 2012</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Assume that some assemblages are reliably dated (this is NOT a real example)</span></span>
 <span><span class="co">## The names of the vector entries must match the names of the assemblages</span></span>
@@ -273,108 +276,139 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Model the event and accumulation date for each assemblage</span></span>
-<span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">event</a></span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">zuni_dates</span>, cutoff <span class="op">=</span> <span class="fl">90</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: Argument 'cutoff' is defunct; please use 'rank' instead.</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu"><a href="../reference/mutators.html">get_model</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">event</a></span><span class="op">(</span><span class="va">zuni</span>, dates <span class="op">=</span> <span class="va">zuni_dates</span>, rank <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Model summary</span></span>
+<span><span class="co">## (results are expressed in rata die)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
 <span><span class="co">#&gt; stats::lm(formula = date ~ ., data = data)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Residuals:</span></span>
-<span><span class="co">#&gt;  LZ0569  LZ0279    CS16  LZ0066  LZ0852  LZ1209   CS144  LZ0563  LZ0329 LZ0005Q </span></span>
-<span><span class="co">#&gt;  0.4466 -3.9079 -0.2887  0.7279 -1.3127  0.5037  2.7819 -4.4530 -0.7960  0.1254 </span></span>
-<span><span class="co">#&gt;  LZ0322  LZ0067  LZ0578  LZ0227  LZ0610 </span></span>
-<span><span class="co">#&gt;  2.6011 -0.1375  3.5140 -0.7672  0.9624 </span></span>
+<span><span class="co">#&gt;   LZ0569   LZ0279     CS16   LZ0066   LZ0852   LZ1209    CS144   LZ0563 </span></span>
+<span><span class="co">#&gt;   163.57 -1427.33  -105.47   266.02  -479.32   183.86  1016.24 -1626.71 </span></span>
+<span><span class="co">#&gt;   LZ0329  LZ0005Q   LZ0322   LZ0067   LZ0578   LZ0227   LZ0610 </span></span>
+<span><span class="co">#&gt;  -290.90    45.83   950.04   -50.24  1283.51  -280.59   351.48 </span></span>
+<span><span class="co">#&gt; attr(,"class")</span></span>
+<span><span class="co">#&gt; [1] "RataDie"</span></span>
+<span><span class="co">#&gt; attr(,"class")attr(,"package")</span></span>
+<span><span class="co">#&gt; [1] "aion"</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
-<span><span class="co">#&gt;              Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
-<span><span class="co">#&gt; (Intercept) 1164.6501     2.9154 399.481 2.36e-10 ***</span></span>
-<span><span class="co">#&gt; F1          -158.2879     1.6497 -95.948 7.07e-08 ***</span></span>
-<span><span class="co">#&gt; F2            25.7034     1.6841  15.263 0.000107 ***</span></span>
-<span><span class="co">#&gt; F3            -5.6058     2.1603  -2.595 0.060368 .  </span></span>
-<span><span class="co">#&gt; F4            10.7571     5.8231   1.847 0.138419    </span></span>
-<span><span class="co">#&gt; F5            -3.1388     3.9485  -0.795 0.471160    </span></span>
-<span><span class="co">#&gt; F6             2.7244     1.3288   2.050 0.109653    </span></span>
-<span><span class="co">#&gt; F7             4.5647     5.2198   0.874 0.431212    </span></span>
-<span><span class="co">#&gt; F8            11.2980     3.4629   3.263 0.031006 *  </span></span>
-<span><span class="co">#&gt; F9            -5.1715     2.9554  -1.750 0.155041    </span></span>
-<span><span class="co">#&gt; F10           -0.3957     2.6497  -0.149 0.888522    </span></span>
+<span><span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept) 425015.4     1064.9 399.095 2.36e-10 ***</span></span>
+<span><span class="co">#&gt; F1          -57813.4      602.6 -95.938 7.08e-08 ***</span></span>
+<span><span class="co">#&gt; F2            9387.7      615.2  15.260 0.000108 ***</span></span>
+<span><span class="co">#&gt; F3           -2047.2      789.1  -2.594 0.060411 .  </span></span>
+<span><span class="co">#&gt; F4            3928.9     2127.1   1.847 0.138452    </span></span>
+<span><span class="co">#&gt; F5           -1146.2     1442.3  -0.795 0.471276    </span></span>
+<span><span class="co">#&gt; F6             995.1      485.4   2.050 0.109663    </span></span>
+<span><span class="co">#&gt; F7            1667.0     1906.7   0.874 0.431304    </span></span>
+<span><span class="co">#&gt; F8            4126.0     1264.9   3.262 0.031027 *  </span></span>
+<span><span class="co">#&gt; F9           -1889.1     1079.6  -1.750 0.155039    </span></span>
+<span><span class="co">#&gt; F10           -144.8      967.9  -0.150 0.888300    </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Residual standard error: 4.09 on 4 degrees of freedom</span></span>
+<span><span class="co">#&gt; Residual standard error: 1494 on 4 degrees of freedom</span></span>
 <span><span class="co">#&gt; Multiple R-squared:  0.9997, Adjusted R-squared:  0.999 </span></span>
-<span><span class="co">#&gt; F-statistic:  1433 on 10 and 4 DF,  p-value: 1.167e-06</span></span>
+<span><span class="co">#&gt; F-statistic:  1433 on 10 and 4 DF,  p-value: 1.168e-06</span></span>
 <span></span>
-<span><span class="co">## Estimate event dates</span></span>
-<span><span class="va">event</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_event</a></span><span class="op">(</span><span class="va">model</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">event</span><span class="op">)</span></span>
-<span><span class="co">#&gt;        date lower upper error</span></span>
-<span><span class="co">#&gt; LZ1105 1169  1152  1185     6</span></span>
-<span><span class="co">#&gt; LZ1103 1143  1136  1150     2</span></span>
-<span><span class="co">#&gt; LZ1100 1156  1141  1172     5</span></span>
-<span><span class="co">#&gt; LZ1099 1099  1087  1111     4</span></span>
-<span><span class="co">#&gt; LZ1097 1088  1078  1099     4</span></span>
-<span><span class="co">#&gt; LZ1096  840   825   855     5</span></span>
+<span><span class="co">## Extract model coefficients</span></span>
+<span><span class="co">## (convert results to Gregorian years)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  (Intercept)           F1           F2           F3           F4           F5 </span></span>
+<span><span class="co">#&gt; 1163.6512430 -158.2887134   25.7005062   -5.6059619   10.7559523   -3.1402928 </span></span>
+<span><span class="co">#&gt;           F6           F7           F8           F9          F10 </span></span>
+<span><span class="co">#&gt;    2.7236281    4.5617156   11.2951729   -5.1728421   -0.3984238</span></span>
 <span></span>
-<span><span class="co">## Estimate accumulation dates</span></span>
-<span><span class="va">acc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/event.html">predict_accumulation</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">acc</span><span class="op">)</span></span>
-<span><span class="co">#&gt; LZ1105 LZ1103 LZ1100 LZ1099 LZ1097 LZ1096 </span></span>
-<span><span class="co">#&gt;   1170   1140   1158   1087   1092    875</span></span></code></pre></div>
+<span><span class="co">## Extract residual standard deviation</span></span>
+<span><span class="co">## (convert results to Gregorian years)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/sigma.html" class="external-link">sigma</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 4.088072</span></span>
+<span></span>
+<span><span class="co">## Extract model residuals</span></span>
+<span><span class="co">## (convert results to Gregorian years)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/residuals.html" class="external-link">resid</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1]  0.4453877 -3.9104984 -0.2908912  0.7260925 -1.3132066  0.5009809</span></span>
+<span><span class="co">#&gt;  [7]  2.7814906 -4.4554781 -0.7975492  0.1228117  2.6001038 -0.1399926</span></span>
+<span><span class="co">#&gt; [13]  3.5123344 -0.7693659  0.9602214</span></span>
+<span></span>
+<span><span class="co">## Extract model fitted values</span></span>
+<span><span class="co">## (convert results to Gregorian years)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/fitted.values.html" class="external-link">fitted</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] 1096.5531 1122.9078 1328.2882 1110.2712 1217.3105 1250.4963 1259.2185</span></span>
+<span><span class="co">#&gt;  [8] 1210.4540 1076.7948  858.8744 1106.3999  863.1376 1176.4849 1104.7666</span></span>
+<span><span class="co">#&gt; [15] 1073.0370</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Activity plot</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="event_files/figure-html/event-plot-1.png" width="700"></p>
+<code class="sourceCode R"><span><span class="co">## Estimate event dates</span></span>
+<span><span class="co">## (results are expressed in rata die)</span></span>
+<span><span class="va">eve</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/predict_event.html">predict_event</a></span><span class="op">(</span><span class="va">model</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">eve</span><span class="op">)</span></span>
+<span><span class="co">#&gt;            date    lower    upper    error</span></span>
+<span><span class="co">#&gt; LZ1105 426454.0 420445.5 432462.4 2164.087</span></span>
+<span><span class="co">#&gt; LZ1103 417145.8 414689.9 419601.7  884.558</span></span>
+<span><span class="co">#&gt; LZ1100 421968.1 416394.9 427541.4 2007.317</span></span>
+<span><span class="co">#&gt; LZ1099 400974.7 396642.1 405307.4 1560.503</span></span>
+<span><span class="co">#&gt; LZ1097 397176.5 393404.6 400948.3 1358.530</span></span>
+<span><span class="co">#&gt; LZ1096 306371.0 300801.2 311940.7 2006.057</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Activity plot</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span></span></code></pre></div>
+<p><img src="event_files/figure-html/event-plot-1.png" width="672"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"activity"</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="event_files/figure-html/event-plot-2.png" width="672"></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Tempo plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, type <span class="op">=</span> <span class="st">"tempo"</span>, select <span class="op">=</span> <span class="st">"LZ1105"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="event_files/figure-html/event-plot-2.png" width="700"></p>
+<p><img src="event_files/figure-html/event-plot-3.png" width="672"></p>
 <p>Resampling methods can be used to check the stability of the
-resulting model. If <code>jackknife()</code> is used, one type/fabric is
+resulting model. If <code><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife()</a></code> is used, one type/fabric is
 removed at a time and all statistics are recalculated. In this way, one
 can assess whether certain type/fabric has a substantial influence on
-the date estimate. If <code>bootstrap()</code> is used, a large number
+the date estimate. If <code><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap()</a></code> is used, a large number
 of new bootstrap assemblages is created, with the same sample size, by
 resampling the original assemblage with replacement. Then, examination
 of the bootstrap statistics makes it possible to pinpoint assemblages
 that require further investigation.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Check model variability</span></span>
+<span><span class="co">## (results are expressed in rata die)</span></span>
 <span><span class="co">## Warning: this may take a few seconds</span></span>
 <span></span>
 <span><span class="co">## Jackknife fabrics</span></span>
-<span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu">jackknife</span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
+<span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
-<span><span class="co">#&gt;        date lower upper error bias</span></span>
-<span><span class="co">#&gt; LZ1105 1169  1153  1186     6    0</span></span>
-<span><span class="co">#&gt; LZ1103 1143  1137  1150     2    0</span></span>
-<span><span class="co">#&gt; LZ1100 1158  1142  1173     5   34</span></span>
-<span><span class="co">#&gt; LZ1099 1097  1085  1109     4  -34</span></span>
-<span><span class="co">#&gt; LZ1097 1094  1083  1104     4  102</span></span>
-<span><span class="co">#&gt; LZ1096  842   827   857     5   34</span></span>
+<span><span class="co">#&gt;             date     lower     upper    error       bias</span></span>
+<span><span class="co">#&gt; LZ1105 155835376 155829367 155841384 2164.087 2641951670</span></span>
+<span><span class="co">#&gt; LZ1103 152382228 152379772 152384684  884.558 2583406398</span></span>
+<span><span class="co">#&gt; LZ1100 154282606 154277032 154288179 2007.317 2615630836</span></span>
+<span><span class="co">#&gt; LZ1099 146223900 146219567 146228232 1560.503 2478989724</span></span>
+<span><span class="co">#&gt; LZ1097 145743179 145739407 145746951 1358.530 2470882037</span></span>
+<span><span class="co">#&gt; LZ1096 112207578 112202009 112213148 2006.057 1902320527</span></span>
 <span></span>
 <span><span class="co">## Bootstrap of assemblages</span></span>
-<span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu">bootstrap</span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
-<span><span class="co">#&gt;         min     mean  max      Q5     Q95</span></span>
-<span><span class="co">#&gt; LZ1105 1136 1170.600 1237 1142.60 1199.00</span></span>
-<span><span class="co">#&gt; LZ1103 1067 1149.000 1205 1095.70 1194.85</span></span>
-<span><span class="co">#&gt; LZ1100 1102 1158.433 1238 1117.00 1207.55</span></span>
-<span><span class="co">#&gt; LZ1099 1088 1097.100 1106 1088.00 1106.00</span></span>
-<span><span class="co">#&gt; LZ1097  908 1076.100 1191  959.00 1172.80</span></span>
-<span><span class="co">#&gt; LZ1096  726  855.600  991  775.45  979.30</span></span></code></pre></div>
+<span><span class="co">#&gt;             min     mean      max       Q5      Q95</span></span>
+<span><span class="co">#&gt; LZ1105 418582.2 427768.3 438716.9 421359.2 433556.3</span></span>
+<span><span class="co">#&gt; LZ1103 398224.3 417438.2 434142.5 401921.2 432643.1</span></span>
+<span><span class="co">#&gt; LZ1100 392032.3 423217.9 439317.5 405789.0 435923.3</span></span>
+<span><span class="co">#&gt; LZ1099 397037.5 400803.4 407193.8 397356.7 403772.4</span></span>
+<span><span class="co">#&gt; LZ1097 358469.2 401653.7 439303.3 366534.6 428634.8</span></span>
+<span><span class="co">#&gt; LZ1096 264824.9 312015.3 373883.4 264824.9 364068.1</span></span></code></pre></div>
 </div>
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-bellanger2006" class="csl-entry">
-Bellanger, L., Ph. Husi, and R. Tomassone. 2006. <span>“<span>Une
-approche statistique pour la datation de contextes
-archéologiques</span>.”</span> <em>Revue de statistique appliquée</em>
-54 (2): 65–81. <a href="https://doi.org/10.1111/j.1475-4754.2006.00249.x" class="external-link">https://doi.org/10.1111/j.1475-4754.2006.00249.x</a>.
+Bellanger, L., Ph. Husi, and R. Tomassone. 2006. <span>“Une approche
+statistique pour la datation de contextes archéologiques.”</span>
+<em>Revue de statistique appliquée</em> 54 (2): 65–81. <a href="http://www.numdam.org/item/RSA_2006__54_2_65_0/" class="external-link">http://www.numdam.org/item/RSA_2006__54_2_65_0/</a>.
 </div>
 <div id="ref-bellanger2012" class="csl-entry">
 Bellanger, Lise, and Philippe Husi. 2012. <span>“Statistical
@@ -393,17 +427,17 @@ Dunnell, Robert C. 1970. <span>“Seriation <span>Method</span> and
 (03): 305–19. <a href="https://doi.org/10.2307/278341" class="external-link">https://doi.org/10.2307/278341</a>.
 </div>
 <div id="ref-dye2016" class="csl-entry">
-Dye, Thomas S. 2016. <span>“Long-<span>Term Rhythms</span> in the
-<span>Development</span> of <span>Hawaiian Social
-Stratification</span>.”</span> <em>Journal of Archaeological
-Science</em> 71 (July): 1–9. <a href="https://doi.org/10.1016/j.jas.2016.05.006" class="external-link">https://doi.org/10.1016/j.jas.2016.05.006</a>.
+Dye, Thomas S. 2016. <span>“Long-Term Rhythms in the Development of
+<span>Hawaiian</span> Social Stratification.”</span> <em>Journal of
+Archaeological Science</em> 71 (July): 1–9. <a href="https://doi.org/10.1016/j.jas.2016.05.006" class="external-link">https://doi.org/10.1016/j.jas.2016.05.006</a>.
 </div>
 <div id="ref-poblome2003" class="csl-entry">
 Poblome, J., and P. J. F. Groenen. 2003. <span>“Constrained
 <span>Correspondence Analysis</span> for <span>Seriation</span> of
 <span>Sagalassos Tablewares</span>.”</span> In <em>The <span>Digital
 Heritage</span> of <span>Archaeology</span></em>, edited by M. Doerr and
-A. Sarris. <span>Hellenic Ministry of Culture</span>.
+A. Sarris. <span>Athens</span>: <span>Hellenic Ministry of
+Culture</span>.
 </div>
 </div>
 </div>
@@ -419,7 +453,7 @@ A. Sarris. <span>Hellenic Ministry of Culture</span>.
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
+<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer>
