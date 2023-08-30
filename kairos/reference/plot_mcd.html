@@ -214,13 +214,13 @@ displayed (invisibly returns <code>x</code>).</p>
 <span class="r-in"><span><span class="co">## Bootstrap resampling</span></span></span>
 <span class="r-in"><span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">mc_dates</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         original      mean      bias     error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789  757.2917       NaN       NaN        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0783  796.6667  856.7089 60.042234 120.08442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0782  797.5000  855.1660 57.666027  97.46050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0778  952.5862  980.2610 27.674754 108.11924</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0777  996.2963  989.1922 -7.104120  96.68384</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776 1016.0714 1023.4545  7.383089  71.61858</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         original      mean       bias     error</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0789  757.2917       NaN        NaN        NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0783  796.6667  896.7517 100.085012 132.99130</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0782  797.5000  885.4776  87.977613  98.10274</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0778  952.5862  991.6548  39.068553  88.97932</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0777  996.2963 1030.6926  34.396329  87.46198</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LZ0776 1016.0714 1013.0197  -3.051737  70.48581</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
 <span class="r-in"><span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife</a></span><span class="op">(</span><span class="va">mc_dates</span><span class="op">)</span></span></span>
