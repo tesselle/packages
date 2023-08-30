@@ -51,13 +51,13 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">discard</span><span class="op">(</span><span class="va">x</span>, <span class="va">f</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">discard</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">discard_cols</span><span class="op">(</span><span class="va">x</span>, <span class="va">f</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">discard_cols</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">discard_rows</span><span class="op">(</span><span class="va">x</span>, <span class="va">f</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">discard_rows</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for ANY,`function`</span></span>
+<span><span class="co"># S4 method for ANY</span></span>
 <span><span class="fu">discard</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
 <span>  <span class="va">f</span>,</span>
@@ -68,7 +68,7 @@
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for ANY,`function`</span></span>
+<span><span class="co"># S4 method for ANY</span></span>
 <span><span class="fu">discard_rows</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
 <span>  <span class="va">f</span>,</span>
@@ -78,7 +78,7 @@
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for ANY,`function`</span></span>
+<span><span class="co"># S4 method for ANY</span></span>
 <span><span class="fu">discard_cols</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
 <span>  <span class="va">f</span>,</span>
@@ -95,12 +95,12 @@
 <dd><p>An <span style="R">R</span> object (should be a <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>).</p></dd>
 
 
-<dt>f</dt>
-<dd><p>A predicate <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code>.</p></dd>
-
-
 <dt>...</dt>
 <dd><p>Further arguments to be passed to <code>f</code>.</p></dd>
+
+
+<dt>f</dt>
+<dd><p>A predicate <code><a href="https://rdrr.io/r/base/function.html" class="external-link">function</a></code>.</p></dd>
 
 
 <dt>margin</dt>
@@ -153,26 +153,25 @@ on progress?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5   10    8    7    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    3    2    5    3    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   NA   NA    8    7   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4   10    6    7   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    5    4    9    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]   NA    2    9    4    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    5    1    7    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    5   10   NA    2   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    7   10    8   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    7    5    3    8   NA</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove row with any NA</span></span></span>
 <span class="r-in"><span><span class="fu">discard</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5   10    8    7    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    3    2    5    3    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    5    5    4    9    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    8    5    1    7    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    7   10    8   10</span>
 <span class="r-in"><span><span class="co">## Remove column with any NA</span></span></span>
 <span class="r-in"><span><span class="fu">discard</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    8    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    5    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    6    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    5    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    7    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    8</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

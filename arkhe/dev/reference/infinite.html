@@ -131,26 +131,26 @@ condition defined by <code>f</code> are considered.</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">Inf</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    4   10  Inf    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    3    2    3    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    9    2    1    1    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    6    3    8  Inf</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4  Inf    1   10    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    1    8   10    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    6    2    3    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  Inf    5    8    9    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1  Inf    7    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5  Inf   10    9    7</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove rows with Inf</span></span></span>
 <span class="r-in"><span><span class="fu">remove_Inf</span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    8    3    2    3    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    2    1    1    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    1    8   10    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    6    2    3    4</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace Inf with zeros</span></span></span>
 <span class="r-in"><span><span class="fu">replace_Inf</span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    4   10    0    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    3    2    3    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    9    2    1    1    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    6    3    8    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4    0    1   10    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    1    8   10    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    6    2    3    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    5    8    9    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    0    7    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    0   10    9    7</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
