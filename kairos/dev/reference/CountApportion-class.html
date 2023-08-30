@@ -68,9 +68,15 @@ apportioning of artifact types (columns) per site (rows) and per period
     <h2 id="slots">Slots<a class="anchor" aria-label="anchor" href="#slots"></a></h2>
     
 
-<dl><dt><code>p</code></dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></code> giving the probability of apportioning an artifact type
-to a given period.</p></dd>
+<dl><dt><code>.Data</code></dt>
+<dd><p>An \(m \times p \times k\) <code><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></code> giving the
+proportion of an artifact type (\(p\)) for a given period (\(k\)).</p></dd>
+
+
+<dt><code>p</code></dt>
+<dd><p>An \(m \times p \times k\) <code><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></code> giving the
+probability of apportioning an artifact type (\(p\)) to a given period
+(\(k\)).</p></dd>
 
 
 <dt><code>method</code></dt>
@@ -89,7 +95,7 @@ interest (in years AD).</p></dd>
 
 
 <dt><code>step</code></dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> vector giving the step size, i.e. the
+<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the step size, i.e. the
 width of each time step for apportioning (in years AD).</p></dd>
 
 
