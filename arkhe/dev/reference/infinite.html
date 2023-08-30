@@ -71,6 +71,9 @@ replace_Inf replaces infinite values values.
 <span><span class="fu">remove_Inf</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix</span></span>
+<span><span class="fu">replace_Inf</span><span class="op">(</span><span class="va">x</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for data.frame</span></span>
 <span><span class="fu">replace_Inf</span><span class="op">(</span><span class="va">x</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -107,6 +110,7 @@ condition defined by <code>f</code> are considered.</p></dd>
 <code><a href="count.html">count</a>()</code>,
 <code><a href="detect.html">detect</a>()</code>,
 <code><a href="discard.html">discard</a>()</code>,
+<code><a href="empty.html">empty</a></code>,
 <code><a href="keep.html">keep</a>()</code>,
 <code><a href="missing.html">missing</a></code>,
 <code><a href="remove_constant.html">remove_constant</a>()</code>,
@@ -127,27 +131,26 @@ condition defined by <code>f</code> are considered.</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">Inf</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    6   10    5    7    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    2    2    9    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  Inf    7    3    7    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4  Inf    1  Inf    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    6    7    7   10   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    4   10  Inf    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    3    2    3    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    9    2    1    1    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    6    3    8  Inf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4  Inf    1   10    5</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove rows with Inf</span></span></span>
 <span class="r-in"><span><span class="fu">remove_Inf</span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    6   10    5    7    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    2    2    9    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    7    7   10   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    8    3    2    3    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    2    1    1    4</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace Inf with zeros</span></span></span>
 <span class="r-in"><span><span class="fu">replace_Inf</span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    6   10    5    7    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    2    2    9    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    7    3    7    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    0    1    0    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    6    7    7   10   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    4   10    0    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    3    2    3    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    9    2    1    1    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    6    3    8    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4    0    1   10    5</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
