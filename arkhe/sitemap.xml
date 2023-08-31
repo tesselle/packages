@@ -28,6 +28,9 @@
     <loc>https://packages.tesselle.org/arkhe/reference/append.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/arkhe-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/arkhe-package.html</loc>
   </url>
   <url>
@@ -79,13 +82,13 @@
     <loc>https://packages.tesselle.org/arkhe/reference/count.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/deprecate.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/detect.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/discard.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/empty.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/index.html</loc>
@@ -136,7 +139,7 @@
     <loc>https://packages.tesselle.org/arkhe/reference/predicate-utils.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/reshape.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/reference/remove_constant.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/validate.html</loc>
