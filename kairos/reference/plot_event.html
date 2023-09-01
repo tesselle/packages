@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,6 +68,8 @@
 <span>  select <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  n <span class="op">=</span> <span class="fl">500</span>,</span>
 <span>  eps <span class="op">=</span> <span class="fl">1e-09</span>,</span>
+<span>  col.accumulation <span class="op">=</span> <span class="st">"black"</span>,</span>
+<span>  col.event <span class="op">=</span> <span class="st">"red"</span>,</span>
 <span>  flip <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  ncol <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  xlab <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -89,7 +91,7 @@
 
 <dt>type</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string indicating the type of plot.
-It must be one of "<code>activity</code>" (default) or "<code>tempo</code>".
+It must be one of "<code>activity</code>" (default) or "<code>tempo</code>" (see details).
 Any unambiguous substring can be given.</p></dd>
 
 
@@ -116,6 +118,15 @@ length of the vector of quantiles for density computation.</p></dd>
 <dt>eps</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the cutoff below which
 values will be removed.</p></dd>
+
+
+<dt>col.accumulation</dt>
+<dd><p>A color specification for the accumulation density
+curve.</p></dd>
+
+
+<dt>col.event</dt>
+<dd><p>A color specification for the event density curve.</p></dd>
 
 
 <dt>flip</dt>
@@ -176,12 +187,12 @@ assemblage dates (<em>event</em> and <em>accumulation</em> dates; Bellanger and 
 2012). The <em>event</em> date is plotted as a line, while the <em>accumulation</em> date
 is shown as a grey filled area.</p>
 <p>The accumulation date can be displayed as a tempo plot (Dye 2016) or an
-activity plot (Philippe and Vibet 2020):</p><dl><dt>Tempo plot</dt>
+activity plot (Philippe and Vibet 2020):</p><dl><dt><code>tempo</code></dt>
 <dd><p>A tempo plot estimates the cumulative occurrence of
 archaeological events, such as the slope of the plot directly reflects the
 pace of change.</p></dd>
 
-<dt>Activity plot</dt>
+<dt><code>activity</code></dt>
 <dd><p>An activity plot displays the first derivative of the
 tempo plot.</p></dd>
 
@@ -219,9 +230,21 @@ Snippets</em>, 93(1), 1-25. <a href="https://doi.org/10.18637/jss.v093.c01" clas
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"event"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Data from Peeples and Schachner 2012</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Assume that some assemblages are reliably dated (this is NOT a real example)</span></span></span>
+<span class="r-in"><span><span class="va">zuni_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  LZ0569 <span class="op">=</span> <span class="fl">1097</span>, LZ0279 <span class="op">=</span> <span class="fl">1119</span>, CS16 <span class="op">=</span> <span class="fl">1328</span>, LZ0066 <span class="op">=</span> <span class="fl">1111</span>,</span></span>
+<span class="r-in"><span>  LZ0852 <span class="op">=</span> <span class="fl">1216</span>, LZ1209 <span class="op">=</span> <span class="fl">1251</span>, CS144 <span class="op">=</span> <span class="fl">1262</span>, LZ0563 <span class="op">=</span> <span class="fl">1206</span>,</span></span>
+<span class="r-in"><span>  LZ0329 <span class="op">=</span> <span class="fl">1076</span>, LZ0005Q <span class="op">=</span> <span class="fl">859</span>, LZ0322 <span class="op">=</span> <span class="fl">1109</span>, LZ0067 <span class="op">=</span> <span class="fl">863</span>,</span></span>
+<span class="r-in"><span>  LZ0578 <span class="op">=</span> <span class="fl">1180</span>, LZ0227 <span class="op">=</span> <span class="fl">1104</span>, LZ0610 <span class="op">=</span> <span class="fl">1074</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Model the event and accumulation date for each assemblage</span></span></span>
+<span class="r-in"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="event.html">event</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zuni_dates</span>, rank <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, select <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, flip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="plot_event-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

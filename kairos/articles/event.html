@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,7 +89,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-08-30</h4>
+            <h4 data-toc-skip class="date">2023-09-01</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/event.Rmd" class="external-link"><code>vignettes/event.Rmd</code></a></small>
       <div class="d-none name"><code>event.Rmd</code></div>
@@ -283,13 +283,13 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
-<span><span class="co">#&gt; stats::lm(formula = date ~ ., data = data)</span></span>
+<span><span class="co">#&gt; stats::lm(formula = date ~ ., data = contexts)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Residuals:</span></span>
-<span><span class="co">#&gt;   LZ0569   LZ0279     CS16   LZ0066   LZ0852   LZ1209    CS144   LZ0563 </span></span>
-<span><span class="co">#&gt;   163.57 -1427.33  -105.47   266.02  -479.32   183.86  1016.24 -1626.71 </span></span>
-<span><span class="co">#&gt;   LZ0329  LZ0005Q   LZ0322   LZ0067   LZ0578   LZ0227   LZ0610 </span></span>
-<span><span class="co">#&gt;  -290.90    45.83   950.04   -50.24  1283.51  -280.59   351.48 </span></span>
+<span><span class="co">#&gt;   LZ0852   LZ0610   LZ0578   LZ0569   LZ0563   LZ0329   LZ0322   LZ0279 </span></span>
+<span><span class="co">#&gt;  -479.32   351.48  1283.51   163.57 -1626.71  -290.90   950.04 -1427.33 </span></span>
+<span><span class="co">#&gt;   LZ0227   LZ0067   LZ0066  LZ0005Q     CS16    CS144   LZ1209 </span></span>
+<span><span class="co">#&gt;  -280.59   -50.24   266.02    45.83  -105.47  1016.24   183.86 </span></span>
 <span><span class="co">#&gt; attr(,"class")</span></span>
 <span><span class="co">#&gt; [1] "RataDie"</span></span>
 <span><span class="co">#&gt; attr(,"class")attr(,"package")</span></span>
@@ -331,16 +331,16 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <span><span class="co">## Extract model residuals</span></span>
 <span><span class="co">## (convert results to Gregorian years)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/residuals.html" class="external-link">resid</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1]  0.4453877 -3.9104984 -0.2908912  0.7260925 -1.3132066  0.5009809</span></span>
-<span><span class="co">#&gt;  [7]  2.7814906 -4.4554781 -0.7975492  0.1228117  2.6001038 -0.1399926</span></span>
-<span><span class="co">#&gt; [13]  3.5123344 -0.7693659  0.9602214</span></span>
+<span><span class="co">#&gt;  [1] -1.3132066  0.9602214  3.5123344  0.4453877 -4.4554781 -0.7975492</span></span>
+<span><span class="co">#&gt;  [7]  2.6001038 -3.9104984 -0.7693659 -0.1399926  0.7260925  0.1228117</span></span>
+<span><span class="co">#&gt; [13] -0.2908912  2.7814906  0.5009809</span></span>
 <span></span>
 <span><span class="co">## Extract model fitted values</span></span>
 <span><span class="co">## (convert results to Gregorian years)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/fitted.values.html" class="external-link">fitted</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] 1096.5531 1122.9078 1328.2882 1110.2712 1217.3105 1250.4963 1259.2185</span></span>
-<span><span class="co">#&gt;  [8] 1210.4540 1076.7948  858.8744 1106.3999  863.1376 1176.4849 1104.7666</span></span>
-<span><span class="co">#&gt; [15] 1073.0370</span></span></code></pre></div>
+<span><span class="co">#&gt;  [1] 1217.3105 1073.0370 1176.4849 1096.5531 1210.4540 1076.7948 1106.3999</span></span>
+<span><span class="co">#&gt;  [8] 1122.9078 1104.7666  863.1376 1110.2712  858.8744 1328.2882 1259.2185</span></span>
+<span><span class="co">#&gt; [15] 1250.4963</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Estimate event dates</span></span>
 <span><span class="co">## (results are expressed in rata die)</span></span>
@@ -383,23 +383,23 @@ that require further investigation.</p>
 <span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             date     lower     upper    error       bias</span></span>
-<span><span class="co">#&gt; LZ1105 155835376 155829367 155841384 2164.087 2641951670</span></span>
-<span><span class="co">#&gt; LZ1103 152382228 152379772 152384684  884.558 2583406398</span></span>
-<span><span class="co">#&gt; LZ1100 154282606 154277032 154288179 2007.317 2615630836</span></span>
-<span><span class="co">#&gt; LZ1099 146223900 146219567 146228232 1560.503 2478989724</span></span>
-<span><span class="co">#&gt; LZ1097 145743179 145739407 145746951 1358.530 2470882037</span></span>
-<span><span class="co">#&gt; LZ1096 112207578 112202009 112213148 2006.057 1902320527</span></span>
+<span><span class="co">#&gt; LZ1105 155634807 155628798 155640815 2164.087 2638541997</span></span>
+<span><span class="co">#&gt; LZ1103 152396320 152393864 152398776  884.558 2583645955</span></span>
+<span><span class="co">#&gt; LZ1100 154171872 154166299 154177445 2007.317 2613748366</span></span>
+<span><span class="co">#&gt; LZ1099 146238877 146234544 146243210 1560.503 2479244339</span></span>
+<span><span class="co">#&gt; LZ1097 145631868 145628096 145635640 1358.530 2468989755</span></span>
+<span><span class="co">#&gt; LZ1096 112226452 112220882 112232021 2006.057 1902641373</span></span>
 <span></span>
 <span><span class="co">## Bootstrap of assemblages</span></span>
 <span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             min     mean      max       Q5      Q95</span></span>
-<span><span class="co">#&gt; LZ1105 410301.6 424976.9 435617.2 417441.9 433635.2</span></span>
-<span><span class="co">#&gt; LZ1103 393438.0 419004.6 433731.2 400762.2 430867.6</span></span>
-<span><span class="co">#&gt; LZ1100 396340.5 421054.9 441737.4 403788.1 437379.8</span></span>
-<span><span class="co">#&gt; LZ1099 396948.4 400879.6 405461.1 397453.1 404485.5</span></span>
-<span><span class="co">#&gt; LZ1097 360974.4 398883.7 438169.9 377166.6 424714.3</span></span>
-<span><span class="co">#&gt; LZ1096 264824.9 310813.7 368690.1 273004.2 350859.9</span></span></code></pre></div>
+<span><span class="co">#&gt; LZ1105 412500.5 428092.6 441503.3 417020.9 438980.7</span></span>
+<span><span class="co">#&gt; LZ1103 396969.3 417512.2 435152.2 404258.3 430499.0</span></span>
+<span><span class="co">#&gt; LZ1100 368850.1 419240.0 437436.0 396933.0 436149.3</span></span>
+<span><span class="co">#&gt; LZ1099 397156.4 400615.9 406365.3 397296.1 403830.9</span></span>
+<span><span class="co">#&gt; LZ1097 357449.2 395404.5 439303.3 364671.7 437187.9</span></span>
+<span><span class="co">#&gt; LZ1096 264824.9 307706.2 381153.9 264824.9 355533.8</span></span></code></pre></div>
 </div>
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
