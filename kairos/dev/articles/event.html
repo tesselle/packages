@@ -284,13 +284,13 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
-<span><span class="co">#&gt; stats::lm(formula = date ~ ., data = data)</span></span>
+<span><span class="co">#&gt; stats::lm(formula = date ~ ., data = contexts)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Residuals:</span></span>
-<span><span class="co">#&gt;   LZ0569   LZ0279     CS16   LZ0066   LZ0852   LZ1209    CS144   LZ0563 </span></span>
-<span><span class="co">#&gt;   163.57 -1427.33  -105.47   266.02  -479.32   183.86  1016.24 -1626.71 </span></span>
-<span><span class="co">#&gt;   LZ0329  LZ0005Q   LZ0322   LZ0067   LZ0578   LZ0227   LZ0610 </span></span>
-<span><span class="co">#&gt;  -290.90    45.83   950.04   -50.24  1283.51  -280.59   351.48 </span></span>
+<span><span class="co">#&gt;   LZ0852   LZ0610   LZ0578   LZ0569   LZ0563   LZ0329   LZ0322   LZ0279 </span></span>
+<span><span class="co">#&gt;  -479.32   351.48  1283.51   163.57 -1626.71  -290.90   950.04 -1427.33 </span></span>
+<span><span class="co">#&gt;   LZ0227   LZ0067   LZ0066  LZ0005Q     CS16    CS144   LZ1209 </span></span>
+<span><span class="co">#&gt;  -280.59   -50.24   266.02    45.83  -105.47  1016.24   183.86 </span></span>
 <span><span class="co">#&gt; attr(,"class")</span></span>
 <span><span class="co">#&gt; [1] "RataDie"</span></span>
 <span><span class="co">#&gt; attr(,"class")attr(,"package")</span></span>
@@ -332,16 +332,16 @@ assemblage dates (<em>event</em>, <em>activity</em> and
 <span><span class="co">## Extract model residuals</span></span>
 <span><span class="co">## (convert results to Gregorian years)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/residuals.html" class="external-link">resid</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1]  0.4453877 -3.9104984 -0.2908912  0.7260925 -1.3132066  0.5009809</span></span>
-<span><span class="co">#&gt;  [7]  2.7814906 -4.4554781 -0.7975492  0.1228117  2.6001038 -0.1399926</span></span>
-<span><span class="co">#&gt; [13]  3.5123344 -0.7693659  0.9602214</span></span>
+<span><span class="co">#&gt;  [1] -1.3132066  0.9602214  3.5123344  0.4453877 -4.4554781 -0.7975492</span></span>
+<span><span class="co">#&gt;  [7]  2.6001038 -3.9104984 -0.7693659 -0.1399926  0.7260925  0.1228117</span></span>
+<span><span class="co">#&gt; [13] -0.2908912  2.7814906  0.5009809</span></span>
 <span></span>
 <span><span class="co">## Extract model fitted values</span></span>
 <span><span class="co">## (convert results to Gregorian years)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/fitted.values.html" class="external-link">fitted</a></span><span class="op">(</span><span class="va">model</span>, calendar <span class="op">=</span> <span class="fu"><a href="https://packages.tesselle.org/aion/reference/gregorian.html" class="external-link">CE</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] 1096.5531 1122.9078 1328.2882 1110.2712 1217.3105 1250.4963 1259.2185</span></span>
-<span><span class="co">#&gt;  [8] 1210.4540 1076.7948  858.8744 1106.3999  863.1376 1176.4849 1104.7666</span></span>
-<span><span class="co">#&gt; [15] 1073.0370</span></span></code></pre></div>
+<span><span class="co">#&gt;  [1] 1217.3105 1073.0370 1176.4849 1096.5531 1210.4540 1076.7948 1106.3999</span></span>
+<span><span class="co">#&gt;  [8] 1122.9078 1104.7666  863.1376 1110.2712  858.8744 1328.2882 1259.2185</span></span>
+<span><span class="co">#&gt; [15] 1250.4963</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Estimate event dates</span></span>
 <span><span class="co">## (results are expressed in rata die)</span></span>
@@ -384,23 +384,23 @@ that require further investigation.</p>
 <span><span class="va">jack</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/jackknife.html" class="external-link">jackknife</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">jack</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             date     lower     upper    error       bias</span></span>
-<span><span class="co">#&gt; LZ1105 155835376 155829367 155841384 2164.087 2641951670</span></span>
-<span><span class="co">#&gt; LZ1103 152382228 152379772 152384684  884.558 2583406398</span></span>
-<span><span class="co">#&gt; LZ1100 154282606 154277032 154288179 2007.317 2615630836</span></span>
-<span><span class="co">#&gt; LZ1099 146223900 146219567 146228232 1560.503 2478989724</span></span>
-<span><span class="co">#&gt; LZ1097 145743179 145739407 145746951 1358.530 2470882037</span></span>
-<span><span class="co">#&gt; LZ1096 112207578 112202009 112213148 2006.057 1902320527</span></span>
+<span><span class="co">#&gt; LZ1105 155634807 155628798 155640815 2164.087 2638541997</span></span>
+<span><span class="co">#&gt; LZ1103 152396320 152393864 152398776  884.558 2583645955</span></span>
+<span><span class="co">#&gt; LZ1100 154171872 154166299 154177445 2007.317 2613748366</span></span>
+<span><span class="co">#&gt; LZ1099 146238877 146234544 146243210 1560.503 2479244339</span></span>
+<span><span class="co">#&gt; LZ1097 145631868 145628096 145635640 1358.530 2468989755</span></span>
+<span><span class="co">#&gt; LZ1096 112226452 112220882 112232021 2006.057 1902641373</span></span>
 <span></span>
 <span><span class="co">## Bootstrap of assemblages</span></span>
 <span><span class="va">boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">model</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">boot</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             min     mean      max       Q5      Q95</span></span>
-<span><span class="co">#&gt; LZ1105 414363.1 425841.4 437836.4 417472.1 437081.1</span></span>
-<span><span class="co">#&gt; LZ1103 392112.8 417574.8 433533.1 398172.8 431230.1</span></span>
-<span><span class="co">#&gt; LZ1100 407070.4 419463.2 437926.5 407909.2 435648.3</span></span>
-<span><span class="co">#&gt; LZ1099 396823.6 400643.2 403636.9 397650.5 403495.7</span></span>
-<span><span class="co">#&gt; LZ1097 361266.3 397077.6 429463.5 374899.8 425295.9</span></span>
-<span><span class="co">#&gt; LZ1096 264824.9 301743.8 355706.9 264824.9 350981.1</span></span></code></pre></div>
+<span><span class="co">#&gt; LZ1105 411939.5 425879.8 451574.2 416290.5 436781.3</span></span>
+<span><span class="co">#&gt; LZ1103 387954.6 417792.2 437176.4 402897.3 433246.9</span></span>
+<span><span class="co">#&gt; LZ1100 400589.3 421838.6 442384.4 405768.0 435554.5</span></span>
+<span><span class="co">#&gt; LZ1099 397037.5 400755.7 407525.1 397434.5 405868.4</span></span>
+<span><span class="co">#&gt; LZ1097 364034.1 402266.5 434602.4 374926.1 426407.7</span></span>
+<span><span class="co">#&gt; LZ1096 264824.9 302501.0 347917.1 264824.9 341973.7</span></span></code></pre></div>
 </div>
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>

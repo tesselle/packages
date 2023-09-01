@@ -70,10 +70,10 @@
 <span><span class="fu">predict_event</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, margin <span class="op">=</span> <span class="fl">1</span>, level <span class="op">=</span> <span class="fl">0.95</span>, calendar <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for EventDate,missing</span></span>
-<span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+<span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, calendar <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for EventDate,matrix</span></span>
-<span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">predict_accumulation</span><span class="op">(</span><span class="va">object</span>, <span class="va">data</span>, level <span class="op">=</span> <span class="fl">0.95</span>, calendar <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -116,13 +116,6 @@ will be applied over: <code>1</code> indicates rows, <code>2</code> indicates co
 <li><p><code>predict_accumulation()</code> returns a <code><a href="data.frame.html">data.frame</a></code>.</p></li>
 </ul></div>
     <div class="section level2">
-    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>Bellanger <em>et al.</em> did not publish the data supporting their demonstration:
-no replication of their results is possible. This implementation must be
-considered <strong>experimental</strong> and subject to major changes in a future
-release.</p>
-    </div>
-    <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Bellanger, L. &amp; Husi, P. (2013). Mesurer et modéliser le temps inscrit dans
 la matière à partir d'une source matérielle : la céramique médiévale.
@@ -156,9 +149,21 @@ Pottery Quantification for the Dating of Some Archaeological Contexts.
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"event"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Data from Peeples and Schachner 2012</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Assume that some assemblages are reliably dated (this is NOT a real example)</span></span></span>
+<span class="r-in"><span><span class="va">zuni_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  LZ0569 <span class="op">=</span> <span class="fl">1097</span>, LZ0279 <span class="op">=</span> <span class="fl">1119</span>, CS16 <span class="op">=</span> <span class="fl">1328</span>, LZ0066 <span class="op">=</span> <span class="fl">1111</span>,</span></span>
+<span class="r-in"><span>  LZ0852 <span class="op">=</span> <span class="fl">1216</span>, LZ1209 <span class="op">=</span> <span class="fl">1251</span>, CS144 <span class="op">=</span> <span class="fl">1262</span>, LZ0563 <span class="op">=</span> <span class="fl">1206</span>,</span></span>
+<span class="r-in"><span>  LZ0329 <span class="op">=</span> <span class="fl">1076</span>, LZ0005Q <span class="op">=</span> <span class="fl">859</span>, LZ0322 <span class="op">=</span> <span class="fl">1109</span>, LZ0067 <span class="op">=</span> <span class="fl">863</span>,</span></span>
+<span class="r-in"><span>  LZ0578 <span class="op">=</span> <span class="fl">1180</span>, LZ0227 <span class="op">=</span> <span class="fl">1104</span>, LZ0610 <span class="op">=</span> <span class="fl">1074</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Model the event and accumulation date for each assemblage</span></span></span>
+<span class="r-in"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="event.html">event</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zuni_dates</span>, rank <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">model</span>, select <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, event <span class="op">=</span> <span class="cn">TRUE</span>, flip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="predict_event-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
