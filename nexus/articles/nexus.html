@@ -87,7 +87,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-09-04</h4>
+            <h4 data-toc-skip class="date">2023-09-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/vignettes/nexus.Rmd" class="external-link"><code>vignettes/nexus.Rmd</code></a></small>
       <div class="d-none name"><code>nexus.Rmd</code></div>
@@ -108,12 +108,7 @@ exploration and analysis of compositional data in the framework of <span class="
 <h2 id="get-started">Get started<a class="anchor" aria-label="anchor" href="#get-started"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'nexus'</span></span>
-<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     biplot, screeplot</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span></code></pre></div>
 <p><strong>nexus</strong> provides a set of S4 classes that represent
 different special types of matrix. The most basic class represents a
 compositional data matrix, i.e. quantitative (nonnegative) descriptions
@@ -162,7 +157,7 @@ can be restored:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Compositional bar plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">coda</span>, order <span class="op">=</span> <span class="st">"A"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="nexus_files/figure-html/unnamed-chunk-4-1.png" width="100%"></p>
+<p><img src="nexus_files/figure-html/barplot-1.png" width="100%"></p>
 <div class="section level3">
 <h3 id="working-with-reference-groups">Working with (reference) groups<a class="anchor" aria-label="anchor" href="#working-with-reference-groups"></a>
 </h3>
@@ -252,29 +247,59 @@ not allowed):</p>
 <p>Note that the presence of repeated measurements may affect some
 calculations (read the documentation carefully).</p>
 </div>
-</div>
-<div class="section level2">
-<h2 id="log-ratio-transformations">Log-ratio transformations<a class="anchor" aria-label="anchor" href="#log-ratio-transformations"></a>
-</h2>
+<div class="section level3">
+<h3 id="log-ratio-transformations">Log-ratio transformations<a class="anchor" aria-label="anchor" href="#log-ratio-transformations"></a>
+</h3>
 <p>The amount of every part is limited to the whole. The absolute amount
 of the whole is noninformative since it is typically due to artifacts on
 the measurement procedure. Thus only relative changes are relevant. If
 the relative amount of one part increases, the amounts of other parts
 must decrease, introducing spurious anticorrelation.</p>
 </div>
+</div>
 <div class="section level2">
 <h2 id="use-cases">Use cases<a class="anchor" aria-label="anchor" href="#use-cases"></a>
 </h2>
 <div class="section level3">
-<h3 id="glass-compositions">Glass compositions<a class="anchor" aria-label="anchor" href="#glass-compositions"></a>
+<h3 id="ceramic-compositions">Ceramic compositions<a class="anchor" aria-label="anchor" href="#ceramic-compositions"></a>
 </h3>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Data from Day et al. 2011</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"kommos"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Remove rows with missing values</span></span>
+<span><span class="va">kommos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/missing.html" class="external-link">remove_NA</a></span><span class="op">(</span><span class="va">kommos</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Coerce to a compositional matrix</span></span>
+<span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">kommos</span><span class="op">)</span></span>
+<span><span class="co">#&gt; 2 qualitative variables were removed: type, date.</span></span>
+<span></span>
+<span><span class="co">## Set groups</span></span>
+<span><span class="fu">set_groups</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">kommos</span><span class="op">$</span><span class="va">type</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Compositional bar plot</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">coda</span>, order <span class="op">=</span> <span class="st">"Ca"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="nexus_files/figure-html/ceramics-barplot-1.png" width="100%"></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## CLR</span></span>
+<span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">clr</span>, border <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span>, <span class="st">"#33BBEE"</span>, <span class="st">"#EE3377"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="nexus_files/figure-html/ceramics-clr-1.png" width="100%"></p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## PCA</span></span>
+<span><span class="va">clr_pca</span> <span class="op">&lt;-</span> <span class="fu">pca</span><span class="op">(</span><span class="va">clr</span>, scale <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_individuals</a></span><span class="op">(</span><span class="va">clr_pca</span>, highlight <span class="op">=</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">16</span>, </span>
+<span>                col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span>, <span class="st">"#33BBEE"</span>, <span class="st">"#EE3377"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_variables.html" class="external-link">viz_variables</a></span><span class="op">(</span><span class="va">clr_pca</span><span class="op">)</span></span></code></pre></div>
+<p><img src="nexus_files/figure-html/ceramics-pca-1.png" width="50%"><img src="nexus_files/figure-html/ceramics-pca-2.png" width="50%"></p>
 </div>
 <div class="section level3">
 <h3 id="slag-inclusions">Slag inclusions<a class="anchor" aria-label="anchor" href="#slag-inclusions"></a>
 </h3>
 </div>
 </div>
-<div class="section level2 unnumbered">
+<div class="section level2">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
