@@ -96,7 +96,7 @@ group the samples. If <code>NULL</code> (the default), no grouping is stored.</p
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The <a href="CompositionMatrix-class.html">CompositionMatrix</a> class has special slots
-(see <code>vignette("manual")</code>):</p><ul><li><p><code>samples</code> for repeated measurements/observation,</p></li>
+(see <code><a href="../articles/nexus.html">vignette("nexus")</a></code>):</p><ul><li><p><code>samples</code> for repeated measurements/observation,</p></li>
 <li><p><code>groups</code> to group data by site/area.</p></li>
 </ul><p>When coercing a <code>data.frame</code> to a <a href="CompositionMatrix-class.html">CompositionMatrix</a> object, an
 attempt is made to automatically assign values to these slots by mapping
@@ -135,13 +135,13 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           V1         V2         V3          V4         V5 samples</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.40963855 0.05421687 0.02409639 0.006024096 0.50602410       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.34892086 0.21582734 0.16187050 0.248201439 0.02517986       2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.03460208 0.12110727 0.30449827 0.290657439 0.24913495       3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.12977099 0.33587786 0.11450382 0.335877863 0.08396947       4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.24436090 0.17669173 0.19548872 0.063909774 0.31954887       5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.34013605 0.34013605 0.15986395 0.115646259 0.04421769       6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          V1          V2        V3          V4         V5 samples</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.1226054 0.237547893 0.3295019 0.237547893 0.07279693       1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.3632479 0.337606838 0.2350427 0.004273504 0.05982906       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.1928571 0.003571429 0.2785714 0.250000000 0.27500000       3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.2825279 0.234200743 0.3457249 0.044609665 0.09293680       4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.2698413 0.380952381 0.1230159 0.103174603 0.12301587       5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.1265060 0.138554217 0.5000000 0.216867470 0.01807229       6</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

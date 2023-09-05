@@ -60,7 +60,11 @@
     <h2 id="slots">Slots<a class="anchor" aria-label="anchor" href="#slots"></a></h2>
     
 
-<dl><dt><code>samples</code></dt>
+<dl><dt><code>.Data</code></dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> vector.</p></dd>
+
+
+<dt><code>samples</code></dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector to store the sample identifiers
 (allows duplicates in case of repeated measurements).</p></dd>
 
@@ -74,12 +78,16 @@
 
 
 <dt><code>limit</code></dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the cut-off value used for outlier
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the cut-off value used for outlier
 detection.</p></dd>
 
 
 <dt><code>robust</code></dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: were robust estimators used?</p></dd>
+
+
+<dt><code>df</code></dt>
+<dd><p>A (non-negative) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the degrees of freedom.</p></dd>
 
 
 </dl></div>
@@ -92,8 +100,8 @@ detection.</p></dd>
     <div class="dont-index"><p>Other classes: 
 <code><a href="CompositionMatrix-class.html">CompositionMatrix-class</a></code>,
 <code><a href="LogRatio-class.html">LogRatio-class</a></code>,
-<code><a href="LogicalMatrix.html">LogicalMatrix-class</a></code>,
-<code><a href="NumericMatrix.html">NumericMatrix-class</a></code></p></div>
+<code><a href="LogicalMatrix-class.html">LogicalMatrix-class</a></code>,
+<code><a href="NumericMatrix-class.html">NumericMatrix-class</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

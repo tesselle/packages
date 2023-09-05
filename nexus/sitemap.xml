@@ -37,10 +37,10 @@
     <loc>https://packages.tesselle.org/nexus/reference/LogRatio-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/LogicalMatrix.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/LogicalMatrix-class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/NumericMatrix.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/NumericMatrix-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/OutlierIndex-class.html</loc>
@@ -74,9 +74,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/reference/lia_age.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/mahalanobis.html</loc>

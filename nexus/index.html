@@ -131,12 +131,7 @@
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Load the package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attachement du package : 'nexus'</span></span>
-<span><span class="co">#&gt; L'objet suivant est masqué depuis 'package:stats':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     biplot</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span></code></pre></div>
 <p><strong>nexus</strong> provides a set of S4 classes that represent different special types of matrix. The most basic class represents a compositional data matrix, i.e. quantitative (nonnegative) descriptions of the parts of some whole, carrying relative, rather than absolute, information (Aitchison 1986).</p>
 <p><em>It assumes that you keep your data tidy</em>: each variable must be saved in its own column and each observation (sample) must be saved in its own row.</p>
 <p>These new classes are of simple use as they inherit from base <code>matrix</code>:</p>
@@ -163,7 +158,7 @@
 <span><span class="co">#&gt; H4 0.509 0.238 0.072 0.101 0.080</span></span>
 <span><span class="co">#&gt; H5 0.442 0.383 0.029 0.077 0.069</span></span>
 <span><span class="co">#&gt; H6 0.523 0.262 0.042 0.125 0.048</span></span></code></pre></div>
-<p>The <code>CompositionMatrix</code> class has special slots (see <code>vignette("manual")</code>):</p>
+<p>The <code>CompositionMatrix</code> class has special slots (see <code><a href="articles/nexus.html">vignette("nexus")</a></code>):</p>
 <ul>
 <li>
 <code>samples</code> for repeated measurements/observation,</li>
