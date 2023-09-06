@@ -79,14 +79,14 @@
 
 <dt><code>limit</code></dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the cut-off value used for outlier
-detection.</p></dd>
+detection (quantile of the Chi-squared distribution).</p></dd>
 
 
 <dt><code>robust</code></dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: were robust estimators used?</p></dd>
 
 
-<dt><code>df</code></dt>
+<dt><code>dof</code></dt>
 <dd><p>A (non-negative) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> value giving the degrees of freedom.</p></dd>
 
 
@@ -95,6 +95,15 @@ detection.</p></dd>
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
     <p>These classes inherit from <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code>.</p>
     </div>
+    <div class="section level2">
+    <h2 id="coerce">Coerce<a class="anchor" aria-label="anchor" href="#coerce"></a></h2>
+    
+
+<p>In the code snippets below, <code>x</code> is a <code>OutlierIndex</code> object.</p><dl><dt><code>as.data.frame(x)</code></dt>
+<dd><p>Coerces to a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></dd>
+
+
+</dl></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other classes: 

@@ -65,19 +65,19 @@
 <span>  center <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  cov <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  robust <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  alpha <span class="op">=</span> <span class="fl">0.5</span>,</span>
-<span>  level <span class="op">=</span> <span class="fl">0.975</span></span>
+<span>  quantile <span class="op">=</span> <span class="fl">0.975</span>,</span>
+<span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <a href="CompositionMatrix-class.html">CompositionMatrix</a>.</p></dd>
+<dd><p>A <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code>.</p></dd>
 
 
 <dt>...</dt>
-<dd><p>Currently not used.</p></dd>
+<dd><p>Extra parameters to be passed to <code><a href="https://rdrr.io/pkg/robustbase/man/covMcd.html" class="external-link">robustbase::covMcd()</a></code>.</p></dd>
 
 
 <dt>center</dt>
@@ -95,23 +95,18 @@ distribution. If missing, will be estimated from <code>x</code>.</p></dd>
 estimation be used (see <code><a href="https://rdrr.io/pkg/robustbase/man/covMcd.html" class="external-link">robustbase::covMcd()</a></code>)?</p></dd>
 
 
-<dt>alpha</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector controlling the size of the
-subsets over which the determinant is minimized (see
-<code><a href="https://rdrr.io/pkg/robustbase/man/covMcd.html" class="external-link">robustbase::covMcd()</a></code>). Only used if <code>robust</code> is <code>TRUE</code>.</p></dd>
-
-
-<dt>level</dt>
+<dt>quantile</dt>
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the significance level.
-<code>level</code> is used as a cut-off value for outlier detection: observations with
-larger (squared) Mahalanobis distance are considered as potential outliers.</p></dd>
+<code>quantile</code> is used as a cut-off value for outlier detection: observations
+with larger (squared) Mahalanobis distance are considered as potential
+outliers.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>An <a href="OutlierIndex-class.html">OutlierIndex</a> object.</p>
+<p>An <code><a href="OutlierIndex-class.html">OutlierIndex</a></code> object.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -164,9 +159,11 @@ Archaeological Science: Reports</em>, 32, 102423.
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Coerce to chemical data</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"hongite"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">hongite</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Data from Day et al. 2011</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"kommos"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span> <span class="co"># Coerce to compositional data</span></span></span>
+<span class="r-in"><span><span class="va">kommos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/missing.html" class="external-link">remove_NA</a></span><span class="op">(</span><span class="va">kommos</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># Remove cases with missing values</span></span></span>
+<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">kommos</span>, groups <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># Use ceramic types for grouping</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 1 qualitative variable was removed: date.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Detect outliers</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">outliers</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>

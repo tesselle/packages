@@ -91,18 +91,18 @@ group the samples. If <code>NULL</code> (the default), no grouping is stored.</p
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <a href="CompositionMatrix-class.html">CompositionMatrix</a> object.</p>
+<p>A <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> object.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>The <a href="CompositionMatrix-class.html">CompositionMatrix</a> class has special slots
-(see <code><a href="../articles/nexus.html">vignette("nexus")</a></code>):</p><ul><li><p><code>samples</code> for repeated measurements/observation,</p></li>
+    <p>The <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> class has special slots:</p><ul><li><p><code>samples</code> for repeated measurements/observation,</p></li>
 <li><p><code>groups</code> to group data by site/area.</p></li>
-</ul><p>When coercing a <code>data.frame</code> to a <a href="CompositionMatrix-class.html">CompositionMatrix</a> object, an
+</ul><p>When coercing a <code>data.frame</code> to a <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> object, an
 attempt is made to automatically assign values to these slots by mapping
 column names (case insensitive, plural insensitive). This behavior can be
 disabled by setting <code>options(nexus.autodetect = FALSE)</code> or overridden by
 explicitly specifying the columns to be used.</p>
+<p>See <code><a href="../articles/nexus.html">vignette("nexus")</a></code>.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
@@ -135,13 +135,13 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          V1          V2        V3          V4         V5 samples</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.1226054 0.237547893 0.3295019 0.237547893 0.07279693       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.3632479 0.337606838 0.2350427 0.004273504 0.05982906       2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.1928571 0.003571429 0.2785714 0.250000000 0.27500000       3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.2825279 0.234200743 0.3457249 0.044609665 0.09293680       4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.2698413 0.380952381 0.1230159 0.103174603 0.12301587       5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.1265060 0.138554217 0.5000000 0.216867470 0.01807229       6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          V1         V2         V3        V4          V5 samples groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.3095238 0.26984127 0.03174603 0.1865079 0.202380952       1   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.3348624 0.06422018 0.22935780 0.2935780 0.077981651       2   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.2041667 0.32083333 0.17916667 0.2875000 0.008333333       3   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.0212766 0.34893617 0.11914894 0.1234043 0.387234043       4   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.2639405 0.10037175 0.27881041 0.1412639 0.215613383       5   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.2521008 0.10504202 0.39915966 0.1638655 0.079831933       6   &lt;NA&gt;</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
