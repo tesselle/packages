@@ -64,7 +64,8 @@
 <span>  <span class="va">object</span>,</span>
 <span>  center <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  cov <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  robust <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  robust <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mve"</span>, <span class="st">"mcd"</span><span class="op">)</span>,</span>
 <span>  quantile <span class="op">=</span> <span class="fl">0.975</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -77,7 +78,8 @@
 
 
 <dt>...</dt>
-<dd><p>Extra parameters to be passed to <code><a href="https://rdrr.io/pkg/robustbase/man/covMcd.html" class="external-link">robustbase::covMcd()</a></code>.</p></dd>
+<dd><p>Extra parameters to be passed to <code><a href="https://rdrr.io/pkg/MASS/man/cov.rob.html" class="external-link">MASS::cov.rob()</a></code>.
+Only used if <code>robust</code> is <code>TRUE</code>.</p></dd>
 
 
 <dt>center</dt>
@@ -92,7 +94,13 @@ distribution. If missing, will be estimated from <code>x</code>.</p></dd>
 
 <dt>robust</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should robust location and scatter
-estimation be used (see <code><a href="https://rdrr.io/pkg/robustbase/man/covMcd.html" class="external-link">robustbase::covMcd()</a></code>)?</p></dd>
+estimation be used?</p></dd>
+
+
+<dt>method</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method to be used.
+It must be one of "<code>mve</code>" (minimum volume ellipsoid) or "<code>mcd</code>" (minimum
+covariance determinant). Only used if <code>robust</code> is <code>TRUE</code>.</p></dd>
 
 
 <dt>quantile</dt>
@@ -167,6 +175,7 @@ Archaeological Science: Reports</em>, 32, 102423.
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Detect outliers</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">outliers</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Quantile-Quantile plot</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
