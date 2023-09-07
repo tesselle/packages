@@ -184,18 +184,18 @@ ul.task-list li input[type="checkbox"] {
 <style>
 .grid-sizer, .grid-item { 
   width: 100%;
-  margin: 5px auto;
+  margin: 1px auto;
 }
 @media only screen and (min-width: 600px) {
   .grid-sizer, .grid-item { 
-    width: 47%;
-    margin: 5px auto;
+    width: calc(50% - 5px);
+    margin: 1px auto;
   }
 }
 @media only screen and (min-width: 768px) {
   .grid-sizer, .grid-item { 
-    width: 30%;
-    margin: 5px auto;
+    width: calc(33% - 5px);
+    margin: 1px auto;
   }
 }
 </style>
@@ -452,7 +452,8 @@ var $grid = $('.grid').isotope({
   percentPosition: true,
   masonry: {
     // use outer width of grid-sizer for columnWidth
-    columnWidth: '.grid-sizer'
+    columnWidth: '.grid-sizer',
+    gutter: 1
   }
 });
 
@@ -474,7 +475,6 @@ $('.filters-select').on( 'change', function() {
 </section>
 
 </main> <!-- /main -->
-<div style="display: inline; text-align: center;"><a href="https://www.u-bordeaux-montainge.fr"><img src="https://www.tesselle.org/images/UBM.jpg" class="logo-institution"></a><a href="https://www.cnrs.fr"><img src="https://www.tesselle.org/images/CNRS.png" class="logo-institution"></a></div>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -707,13 +707,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
- The tesselle project is supported by the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a>, <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.
-  </li>  
-</ul>
-    </div>
+    <div class="nav-footer-center"><a href="https://www.u-bordeaux-montainge.fr"><img src="https://www.tesselle.org/images/UBM.jpg" class="logo-institution"></a><a href="https://www.cnrs.fr"><img src="https://www.tesselle.org/images/CNRS.png" class="logo-institution"></a> <br>The tesselle project is supported by <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a>, the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
