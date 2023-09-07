@@ -13,11 +13,11 @@ website:
   open-graph: true
   search: false
   page-footer:
-    center:
-      - The tesselle project is supported by the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a>, <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.
+    center: |
+      <a href="https://www.u-bordeaux-montainge.fr"><img src="https://www.tesselle.org/images/UBM.jpg" class="logo-institution" /></a><a href="https://www.cnrs.fr"><img src="https://www.tesselle.org/images/CNRS.png" class="logo-institution" /></a>
+      <br>The tesselle project is supported by <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a>, the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.
 
 format:
   html:
     theme: default
     include-in-header: _header.html
-    include-after-body: _footer.html
