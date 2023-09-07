@@ -137,18 +137,18 @@ knitr::kable(
 <style>
 .grid-sizer, .grid-item { 
   width: 100%;
-  margin: 5px auto;
+  margin: 1px auto;
 }
 @media only screen and (min-width: 600px) {
   .grid-sizer, .grid-item { 
-    width: 47%;
-    margin: 5px auto;
+    width: calc(50% - 5px);
+    margin: 1px auto;
   }
 }
 @media only screen and (min-width: 768px) {
   .grid-sizer, .grid-item { 
-    width: 30%;
-    margin: 5px auto;
+    width: calc(33% - 5px);
+    margin: 1px auto;
   }
 }
 </style>
@@ -182,7 +182,8 @@ var $grid = $('.grid').isotope({
   percentPosition: true,
   masonry: {
     // use outer width of grid-sizer for columnWidth
-    columnWidth: '.grid-sizer'
+    columnWidth: '.grid-sizer',
+    gutter: 1
   }
 });
 
