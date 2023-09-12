@@ -49,6 +49,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/aggregate.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/arithmetic.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/as_amounts.html</loc>
   </url>
   <url>
@@ -91,6 +94,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/pca_coda.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/perturbation.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/plot_coda.html</loc>
   </url>
   <url>
@@ -98,6 +104,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/plot_outliers.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/powering.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
