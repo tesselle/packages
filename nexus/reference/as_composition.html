@@ -140,20 +140,23 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu">as_composition</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
-<span class="r-in"><span><span class="co">## (use get_totals() to retrieve these values)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="totals.html">get_totals</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 259 143 249 178 276 201 390 235 356 336  96 239 337 257 216 234 224 222 310</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 292</span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
 <span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
+<span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2         V3         V4         V5 samples groups</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.09424084 0.13089005 0.44502618 0.24083770 0.08900524      S1   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.34649123 0.32017544 0.17543860 0.03947368 0.11842105      S2   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.06589147 0.16666667 0.30620155 0.13565891 0.32558140      S3   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.24813896 0.23076923 0.06947891 0.21588089 0.23573201      S4   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.26557377 0.03606557 0.11475410 0.25573770 0.32786885      S5   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.03431373 0.48529412 0.18627451 0.01960784 0.27450980      S6   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2         V3        V4         V5 samples groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.06177606 0.06177606 0.35135135 0.3281853 0.19691120      S1   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.04895105 0.04195804 0.39160839 0.4615385 0.05594406      S2   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.40160643 0.14056225 0.02409639 0.3052209 0.12851406      S3   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.07303371 0.16292135 0.27528090 0.1123596 0.37640449      S4   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.12318841 0.24637681 0.21376812 0.1630435 0.25362319      S5   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.06467662 0.29353234 0.30845771 0.1442786 0.18905473      S6   &lt;NA&gt;</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -98,6 +98,34 @@ row sums assigned.</p></li>
     <p>N. Frerebeau</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create a count matrix</span></span></span>
+<span class="r-in"><span><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Coerce to compositions</span></span></span>
+<span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
+<span class="r-in"><span><span class="fu">get_totals</span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 120 182 215 197 209 257 262 182 283 378 290 232 165 221 273 406 307 272 337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 233</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
+<span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
+<span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2         V3         V4         V5 samples groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.53333333 0.30833333 0.03333333 0.06666667 0.05833333      S1   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.15934066 0.49450549 0.15384615 0.06593407 0.12637363      S2   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.02325581 0.05581395 0.37209302 0.31162791 0.23720930      S3   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.03553299 0.32487310 0.29441624 0.22842640 0.11675127      S4   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.29665072 0.20574163 0.22966507 0.22009569 0.04784689      S5   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.08560311 0.31906615 0.03501946 0.38521401 0.17509728      S6   &lt;NA&gt;</span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

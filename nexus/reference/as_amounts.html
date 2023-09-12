@@ -100,20 +100,23 @@
 <span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
-<span class="r-in"><span><span class="co">## (use get_totals() to retrieve these values)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="totals.html">get_totals</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 200 215 271 289 272 265 227 276 217 162 297 204 340 170 221 224 176 306 258</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 242</span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
 <span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu">as_amounts</span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
+<span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            V1        V2         V3         V4         V5 samples groups</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.33913043 0.0826087 0.13043478 0.05217391 0.39565217      S1   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.01801802 0.4954955 0.29729730 0.01801802 0.17117117      S2   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.07500000 0.0562500 0.20000000 0.62500000 0.04375000      S3   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.18055556 0.3935185 0.24537037 0.03703704 0.14351852      S4   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.17316017 0.1428571 0.03030303 0.25541126 0.39826840      S5   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.24712644 0.1321839 0.25000000 0.28160920 0.08908046      S6   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           V1        V2        V3         V4         V5 samples groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.0850000 0.3900000 0.1950000 0.24500000 0.08500000      S1   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.2279070 0.1627907 0.2697674 0.01395349 0.32558140      S2   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.2730627 0.3653137 0.1033210 0.18450185 0.07380074      S3   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.2387543 0.2179931 0.2698962 0.18685121 0.08650519      S4   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.1654412 0.2683824 0.1948529 0.15073529 0.22058824      S5   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.1622642 0.2188679 0.1433962 0.16226415 0.31320755      S6   &lt;NA&gt;</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

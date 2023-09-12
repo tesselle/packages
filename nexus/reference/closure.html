@@ -106,27 +106,32 @@ compositions should be closed (defaults to 1).</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create a count matrix</span></span></span>
-<span class="r-in"><span><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Coerce to compositions</span></span></span>
-<span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Perturbation</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="perturbation.html">perturbation</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 1 x 3&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       V1  V2    V3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.125 0.5 0.375</span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 1 x 3&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       V1  V2    V3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.125 0.5 0.375</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
-<span class="r-in"><span><span class="co">## (use get_totals() to retrieve these values)</span></span></span>
-<span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
-<span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Powering</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="powering.html">powering</a></span><span class="op">(</span><span class="va">y</span>, <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 1 x 3&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           V1        V2        V3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.1666667 0.6666667 0.1666667</span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">*</span> <span class="fl">2</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 1 x 3&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           V1        V2        V3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.1666667 0.6666667 0.1666667</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Coerce to an S3 data.frame</span></span></span>
-<span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            V1          V2         V3        V4         V5 samples groups</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.21008403 0.239495798 0.02941176 0.1680672 0.35294118      S1   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.11462451 0.272727273 0.24901186 0.1739130 0.18972332      S2   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.02830189 0.070754717 0.08962264 0.4103774 0.40094340      S3   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.27240143 0.003584229 0.34767025 0.2724014 0.10394265      S4   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.08542714 0.185929648 0.36180905 0.2763819 0.09045226      S5   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.14285714 0.043650794 0.32539683 0.3531746 0.13492063      S6   &lt;NA&gt;</span>
+<span class="r-in"><span><span class="co">## Scalar product</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="scalar.html">scalar</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.06646867</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

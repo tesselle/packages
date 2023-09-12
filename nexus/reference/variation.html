@@ -110,13 +110,19 @@ Boca Raton: CRC Press.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Variation matrix</span></span></span>
 <span class="r-in"><span><span class="co">## (Aitchison 1986, definition 4.4)</span></span></span>
-<span class="r-in"><span><span class="fu">variation</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">(</span><span class="va">varia</span> <span class="op">&lt;-</span> <span class="fu">variation</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            A         B         C          D         E</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A 0.00000000 0.2592742 1.5328586 0.08281464 0.1385604</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> B 0.25927416 0.0000000 3.0006804 0.54727146 0.6490135</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> C 1.53285862 3.0006804 0.0000000 1.11145146 0.9476375</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> D 0.08281464 0.5472715 1.1114515 0.00000000 0.1870579</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> E 0.13856035 0.6490135 0.9476375 0.18705791 0.0000000</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Cluster dendrogram</span></span></span>
+<span class="r-in"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">as.dist</a></span><span class="op">(</span><span class="va">varia</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></span><span class="op">(</span><span class="va">d</span>, method <span class="op">=</span> <span class="st">"ward.D2"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="variation-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
