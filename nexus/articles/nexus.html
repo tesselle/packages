@@ -108,7 +108,13 @@ exploration and analysis of compositional data in the framework of <span class="
 <h2 id="get-started">Get started<a class="anchor" aria-label="anchor" href="#get-started"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## Install extra packages (if needed):</span></span>
+<span><span class="co">## - dimensio: multivariate analysis</span></span>
+<span><span class="co">## - folio: datasets</span></span>
+<span><span class="co">## - isopleuros: ternary plot</span></span>
+<span><span class="co"># install.packages(c("dimensio", "folio", "isopleuros"))</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span></code></pre></div>
 <p><strong>nexus</strong> provides a set of S4 classes that represent
 different special types of matrix. The most basic class represents a
 compositional data matrix, i.e. quantitative (nonnegative) descriptions
