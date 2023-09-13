@@ -61,6 +61,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/as_graph.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/barplot.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/closure.html</loc>
   </url>
   <url>
@@ -95,9 +98,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/perturbation.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/reference/plot_coda.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/plot_logratio.html</loc>
