@@ -4,6 +4,21 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/nexus/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/isopleuros/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/alkahest/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/ananke/sitemap.xml</loc>
   </sitemap>
   <sitemap>
@@ -26,20 +41,5 @@
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/khroma/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/nexus/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/isopleuros/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/alkahest/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
