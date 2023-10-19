@@ -12,7 +12,7 @@ decomposition."><meta property="og:image" content="https://packages.tesselle.org
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,34 +172,34 @@ Paris: Dunod, 2006.</p>
 <span class="r-in"><span><span class="co">## Get row coordinates</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          F1          F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -2.032409  0.28085613 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -2.170509  0.08045204 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 -2.342144 -0.10541898 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 -2.344124 -0.23468718 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 -2.101459  0.18065408 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 -1.571063  0.39938987 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -2.051545  0.27314849 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -2.187953  0.07617075 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 -2.357549 -0.10688691 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 -2.359375 -0.23321595 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 -2.119749  0.17465962 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 -1.596313  0.38845016 FALSE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get column coordinates</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9327177  0.3595041 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9844532 -0.1133177 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9666608 -0.2314771 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3298748  0.4616406  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9354919  0.3520954 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9850967 -0.1076883 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9669731 -0.2309258 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3411157  0.4247419  TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get correlations between variables and dimensions</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_contributions.html">get_correlations</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9327177  0.3595041 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9844532 -0.1133177 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9666608 -0.2314771 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3298748  0.4616406  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9354919  0.3520954 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9850967 -0.1076883 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9669731 -0.2309258 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3411157  0.4247419  TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get eigenvalues</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="get_eigenvalues.html">get_eigenvalues</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    eigenvalues  variance cumulative</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F1   2.7735436 93.410174   93.41017</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F2   0.1956657  6.589826  100.00000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F1   2.7805975 93.638822   93.63882</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F2   0.1888947  6.361178  100.00000</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

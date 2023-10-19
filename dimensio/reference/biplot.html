@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +60,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for CA</span></span>
 <span><span class="fu">biplot</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
+<span>  <span class="va">...</span>,</span>
 <span>  axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rows"</span>, <span class="st">"columns"</span>, <span class="st">"contributions"</span><span class="op">)</span>,</span>
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
@@ -71,14 +72,16 @@
 <span>  cex.columns <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"cex"</span><span class="op">)</span>,</span>
 <span>  pch.rows <span class="op">=</span> <span class="fl">16</span>,</span>
 <span>  pch.columns <span class="op">=</span> <span class="fl">17</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  sub <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for PCA</span></span>
 <span><span class="fu">biplot</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
+<span>  <span class="va">...</span>,</span>
 <span>  axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"form"</span>, <span class="st">"covariance"</span><span class="op">)</span>,</span>
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
@@ -90,9 +93,10 @@
 <span>  pch.columns <span class="op">=</span> <span class="fl">17</span>,</span>
 <span>  lty <span class="op">=</span> <span class="st">"solid"</span>,</span>
 <span>  lwd <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  sub <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  sub <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -100,6 +104,10 @@
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>A <code><a href="CA-class.html">CA</a></code> or <code><a href="PCA-class.html">PCA</a></code> object.</p></dd>
+
+
+<dt>...</dt>
+<dd><p>Currently not used.</p></dd>
 
 
 <dt>axes</dt>
@@ -142,16 +150,24 @@ plotting characters and symbols should be scaled relative to the default.</p></d
 <dd><p>A symbol specification.</p></dd>
 
 
+<dt>xlim</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the x limits of the plot.
+The default value, <code>NULL</code>, indicates that the range of the
+<a href="https://rdrr.io/r/base/is.finite.html" class="external-link">finite</a> values to be plotted should be used.</p></dd>
+
+
+<dt>ylim</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the y limits of the plot.
+The default value, <code>NULL</code>, indicates that the range of the
+<a href="https://rdrr.io/r/base/is.finite.html" class="external-link">finite</a> values to be plotted should be used.</p></dd>
+
+
 <dt>main</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string giving a main title for the plot.</p></dd>
 
 
 <dt>sub</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string giving a subtitle for the plot.</p></dd>
-
-
-<dt>...</dt>
-<dd><p>Further parameters to be passed to <code><a href="https://rdrr.io/pkg/wordcloud/man/wordlayout.html" class="external-link">wordcloud::wordlayout()</a></code>.</p></dd>
 
 
 <dt>lty, lwd</dt>

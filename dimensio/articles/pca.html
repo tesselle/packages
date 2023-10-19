@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -224,7 +224,8 @@ transparency, shape and size of symbols…).</p>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  highlight <span class="op">=</span> <span class="st">"cos2"</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">4</span>, range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">4</span>, range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomleft"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-var-cos2-1.png" width="672"></p>
 </div>
@@ -239,7 +240,8 @@ highlight additional information.</p>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
-<span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span> <span class="co"># Custom symbols</span></span>
+<span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span>, <span class="fl">17</span><span class="op">)</span>, <span class="co"># Custom symbols</span></span>
+<span>  legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomright"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-species-1.png" width="672"></p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
@@ -260,7 +262,8 @@ highlight additional information.</p>
 <span>  highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
 <span>  cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="co"># Custom size scale</span></span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
+<span>  pch <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomleft"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="672"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
@@ -270,7 +273,8 @@ highlight additional information.</p>
 <span>  highlight <span class="op">=</span> <span class="st">"contrib"</span>,</span>
 <span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, <span class="co"># Custom color scale</span></span>
 <span>  cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="co"># Custom size scale</span></span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
+<span>  pch <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomleft"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-contrib-1.png" width="672"></p>
 </div>

@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,34 +97,34 @@ initial dataset (active individuals only).</p></dd>
 <span class="r-in"><span><span class="co">## Get row coordinates</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          F1          F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -2.093090  0.29090646 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -2.230345  0.09157279 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 -2.401333 -0.09328414 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 -2.402495 -0.22190447 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 -2.161718  0.19123962 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 -1.633770  0.40889077 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -1.972968  0.27930127 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -2.109207  0.08119138 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 -2.278585 -0.10182145 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 -2.280425 -0.23107052 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 -2.041087  0.18024633 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 -1.518877  0.39836573 FALSE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get column coordinates</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9308275  0.3643076 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9841342 -0.1138202 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9656191 -0.2351788 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3360454  0.4364270  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9345137  0.3550043 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9841926 -0.1171289 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9684370 -0.2235344 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3220008  0.4663841  TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get correlations between variables and dimensions</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_contributions.html">get_correlations</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9308275  0.3643076 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9841342 -0.1138202 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9656191 -0.2351788 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3360454  0.4364270  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9345137  0.3550043 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9841926 -0.1171289 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9684370 -0.2235344 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.3220008  0.4663841  TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get eigenvalues</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="get_eigenvalues.html">get_eigenvalues</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    eigenvalues  variance cumulative</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F1   2.7673802 93.229129   93.22913</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F2   0.2009841  6.770871  100.00000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F1   2.7798212 93.611297    93.6113</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F2   0.1897148  6.388703   100.0000</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
