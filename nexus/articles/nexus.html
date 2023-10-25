@@ -87,7 +87,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-09-13</h4>
+            <h4 data-toc-skip class="date">2023-10-25</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/vignettes/nexus.Rmd" class="external-link"><code>vignettes/nexus.Rmd</code></a></small>
       <div class="d-none name"><code>nexus.Rmd</code></div>
@@ -191,7 +191,7 @@ names.</p>
 <span></span>
 <span><span class="co">## Coerce to a compositional matrix</span></span>
 <span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/groups.html">has_groups</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/groups.html">any_assigned</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>This behavior can be disabled by setting
 <code>options(nexus.autodetect = FALSE)</code> or overridden by
@@ -233,7 +233,7 @@ column is found, row names will be used by default.</p>
 <span></span>
 <span><span class="co">## Coerce to a compositional matrix</span></span>
 <span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/samples.html">has_replicates</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/samples.html">any_replicated</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>This behavior can be disabled by setting
 <code>options(nexus.autodetect = FALSE)</code> or overridden by

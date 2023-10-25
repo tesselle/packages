@@ -62,12 +62,11 @@
 <span><span class="co"># S4 method for CompositionMatrix</span></span>
 <span><span class="fu">outliers</span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
-<span>  center <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  cov <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  groups <span class="op">=</span> <span class="fu"><a href="groups.html">get_groups</a></span><span class="op">(</span><span class="va">object</span><span class="op">)</span>,</span>
 <span>  robust <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mve"</span>, <span class="st">"mcd"</span><span class="op">)</span>,</span>
-<span>  quantile <span class="op">=</span> <span class="fl">0.975</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  quantile <span class="op">=</span> <span class="fl">0.975</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -82,14 +81,9 @@
 Only used if <code>robust</code> is <code>TRUE</code>.</p></dd>
 
 
-<dt>center</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the mean vector of the
-distribution. If missing, will be estimated from <code>x</code>.</p></dd>
-
-
-<dt>cov</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> matrix giving the covariance of the
-distribution. If missing, will be estimated from <code>x</code>.</p></dd>
+<dt>groups</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></code> in the sense that <code><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor(groups)</a></code>
+defines the grouping. If set, XXX.</p></dd>
 
 
 <dt>robust</dt>
@@ -174,16 +168,20 @@ Archaeological Science: Reports</em>, 32, 102423.
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 1 qualitative variable was removed: date.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Detect outliers</span></span></span>
-<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">outliers</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">outliers</span><span class="op">(</span><span class="va">coda</span>, groups <span class="op">=</span> <span class="cn">NULL</span>, robust <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Quantile-Quantile plot</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span> <span class="co"># Plot</span></span></span>
 <span class="r-plt img"><img src="outliers-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Plot</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># Quantile-Quantile plot</span></span></span>
 <span class="r-plt img"><img src="outliers-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Detect outliers by group</span></span></span>
+<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">outliers</span><span class="op">(</span><span class="va">coda</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">15</span>, drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="co"># Plot</span></span></span>
+<span class="r-plt img"><img src="outliers-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="co"># Quantile-Quantile plot</span></span></span>
+<span class="r-plt img"><img src="outliers-4.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

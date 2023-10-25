@@ -57,20 +57,31 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">has_replicates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">any_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">is_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">get_samples</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">set_samples</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">value</span></span>
 <span></span>
 <span><span class="co"># S4 method for CompositionMatrix</span></span>
-<span><span class="fu">has_replicates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="fu">is_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for LogRatio</span></span>
-<span><span class="fu">has_replicates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="fu">is_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for OutlierIndex</span></span>
-<span><span class="fu">has_replicates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="fu">is_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for CompositionMatrix</span></span>
+<span><span class="fu">any_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for LogRatio</span></span>
+<span><span class="fu">any_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for OutlierIndex</span></span>
+<span><span class="fu">any_replicated</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for CompositionMatrix</span></span>
 <span><span class="fu">get_samples</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
@@ -101,8 +112,11 @@
 
 <ul><li><p><code>set_samples()</code> returns an object of the same sort as <code>x</code> with the new
 sample names assigned.</p></li>
-<li><p><code>get_samples()</code> returns the sample names of <code>x</code>.</p></li>
-<li><p><code>has_replicates()</code> returns a <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar.</p></li>
+<li><p><code>get_samples()</code> returns a <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector giving the sample names of <code>x</code>.</p></li>
+<li><p><code>any_replicated()</code> returns a <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar specifying whether or not
+<code>x</code> replicated observations.</p></li>
+<li><p><code>is_replicated()</code> returns a <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> vector specifying whether or not
+an observation is a replicate.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>

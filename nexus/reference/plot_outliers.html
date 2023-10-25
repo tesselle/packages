@@ -60,11 +60,11 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for OutlierIndex,missing</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
+<span>  <span class="va">...</span>,</span>
 <span>  qq <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  limit <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.75</span><span class="op">)</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span><span class="op">)</span>,</span>
-<span>  pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">16</span><span class="op">)</span>,</span>
+<span>  ncol <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  flip <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  xlab <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylab <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -73,8 +73,7 @@
 <span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  frame.plot <span class="op">=</span> <span class="va">axes</span>,</span>
 <span>  panel.first <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  panel.last <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  panel.last <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -84,13 +83,12 @@
 <dd><p>An <code><a href="OutlierIndex-class.html">OutlierIndex</a></code> object.</p></dd>
 
 
+<dt>...</dt>
+<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a>.</p></dd>
+
+
 <dt>qq</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a quantile-quantile plot be produced?</p></dd>
-
-
-<dt>limit</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the cut-off value for outlier
-detection be displayed? Only used if <code>qq</code> is <code>FALSE</code>.</p></dd>
 
 
 <dt>probs</dt>
@@ -99,12 +97,14 @@ Corresponding quantile pairs define the line drawn (see <code><a href="https://r
 Only used if <code>qq</code> is <code>TRUE</code>.</p></dd>
 
 
-<dt>col</dt>
-<dd><p>A vector of colors.</p></dd>
+<dt>ncol</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of columns to use when
+<code>facet</code> is "<code>multiple</code>". Defaults to 1 for up to 4 series, otherwise to 2.</p></dd>
 
 
-<dt>pch</dt>
-<dd><p>A vector of plotting <code>character</code> (symbol).</p></dd>
+<dt>flip</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the y-axis (ticks and numbering) be
+flipped from side 2 (left) to 4 (right) from group to group?</p></dd>
 
 
 <dt>xlab, ylab</dt>
@@ -142,10 +142,6 @@ background grids.</p></dd>
 <dt>panel.last</dt>
 <dd><p>An <code>expression</code> to be evaluated after plotting has taken
 place but before the axes, title and box are added.</p></dd>
-
-
-<dt>...</dt>
-<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a>.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -189,16 +185,20 @@ outliers for compositional data. <em>Computers &amp; Geosciences</em>, 39, 77-85
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 1 qualitative variable was removed: date.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Detect outliers</span></span></span>
-<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="outliers.html">outliers</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="outliers.html">outliers</a></span><span class="op">(</span><span class="va">coda</span>, groups <span class="op">=</span> <span class="cn">NULL</span>, robust <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Quantile-Quantile plot</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span> <span class="co"># Plot</span></span></span>
 <span class="r-plt img"><img src="plot_outliers-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Plot</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># Quantile-Quantile plot</span></span></span>
 <span class="r-plt img"><img src="plot_outliers-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Detect outliers by group</span></span></span>
+<span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="outliers.html">outliers</a></span><span class="op">(</span><span class="va">coda</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">15</span>, drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="co"># Plot</span></span></span>
+<span class="r-plt img"><img src="plot_outliers-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">out</span>, qq <span class="op">=</span> <span class="cn">TRUE</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="co"># Quantile-Quantile plot</span></span></span>
+<span class="r-plt img"><img src="plot_outliers-4.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
