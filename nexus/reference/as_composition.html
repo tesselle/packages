@@ -68,8 +68,10 @@
 <span><span class="co"># S4 method for data.frame</span></span>
 <span><span class="fu">as_composition</span><span class="op">(</span></span>
 <span>  <span class="va">from</span>,</span>
+<span>  codes <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  samples <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  groups <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  auto <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"nexus.autodetect"</span><span class="op">)</span>,</span>
 <span>  verbose <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"nexus.verbose"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -84,15 +86,25 @@
 <dd><p>Currently not used.</p></dd>
 
 
+<dt>codes</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the index of the column to be used as
+laboratory codes (unique identifiers).</p></dd>
+
+
 <dt>samples</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the index of the column to be used for
-sample identification: allows to identify replicated measurements.
+sample identification: allows duplicates to identify replicated measurements.
 If <code>NULL</code> (the default), row names will be used as sample IDs.</p></dd>
 
 
 <dt>groups</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the index of the column to be used to
 group the samples. If <code>NULL</code> (the default), no grouping is stored.</p></dd>
+
+
+<dt>auto</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: try to automatically detect <code>codes</code>,
+<code>samples</code> and <code>groups</code> columns?</p></dd>
 
 
 <dt>verbose</dt>
@@ -108,7 +120,8 @@ on progress?</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>The <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> class has special slots:</p><ul><li><p><code>samples</code> for <a href="samples.html">repeated measurements/observation</a>,</p></li>
+    <p>The <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> class has special slots:</p><ul><li><p><code>codes</code> for <a href="identifiers.html">laboratory codes</a>,</p></li>
+<li><p><code>samples</code> for <a href="samples.html">repeated measurements/observation</a>,</p></li>
 <li><p><code>groups</code> to <a href="https://rdrr.io/r/grDevices/plotmath.html" class="external-link">group data by site/area</a>.</p></li>
 </ul><p>When coercing a <code>data.frame</code> to a <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> object, an
 attempt is made to automatically assign values to these slots by mapping
@@ -124,7 +137,8 @@ explicitly specifying the columns to be used.</p>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other compositional data tools: 
-<code><a href="as_amounts.html">as_amounts</a>()</code></p></div>
+<code><a href="as_amounts.html">as_amounts</a>()</code>,
+<code><a href="as_features.html">as_features</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -141,8 +155,8 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="totals.html">get_totals</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 214 168 276 203 340 219 259 300 321 357 259 197 252 254 193 230 233 239 180</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 285</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 294 293 210 306 245 315 228 285 328 273 297 299 144 247 239 332 293 265 246</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 211</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
 <span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
@@ -150,13 +164,13 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             V1         V2         V3         V4         V5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.004672897 0.34579439 0.09813084 0.16822430 0.38317757</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.125000000 0.51785714 0.23214286 0.06547619 0.05952381</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.126811594 0.05797101 0.24275362 0.21014493 0.36231884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.078817734 0.31527094 0.16256158 0.06896552 0.37438424</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.276470588 0.27647059 0.01764706 0.21176471 0.21764706</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.374429224 0.19634703 0.22374429 0.07305936 0.13242009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2        V3         V4         V5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.26870748 0.27210884 0.1666667 0.04421769 0.24829932</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.09215017 0.27986348 0.1774744 0.19112628 0.25938567</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.26666667 0.03809524 0.3952381 0.04761905 0.25238095</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.20261438 0.32026144 0.1176471 0.29084967 0.06862745</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.24897959 0.33877551 0.2367347 0.08571429 0.08979592</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.15238095 0.17777778 0.2888889 0.25396825 0.12698413</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

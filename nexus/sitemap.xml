@@ -58,6 +58,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/as_composition.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/as_features.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/as_graph.html</loc>
   </url>
   <url>
@@ -77,6 +80,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/hongite.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/identifiers.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/index.html</loc>
