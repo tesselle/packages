@@ -1,10 +1,10 @@
 Package: aion
-Version: 1.0.1
+Version: 1.0.2
 Depends: R (>= 3.3)
-Imports: arkhe (>= 1.2.0), graphics, grDevices, methods
+Imports: arkhe (>= 1.3.0), graphics, grDevices, methods
 Suggests: knitr, rmarkdown, rsvg, svglite, tinysnapshot, tinytest
 License: GPL (>= 3)
-MD5sum: 9ae5ddfe6f353c615a97b538fc6f64de
+MD5sum: 0fba59e72f4342cc7955117abbb93070
 NeedsCompilation: no
 
 Package: alkahest
