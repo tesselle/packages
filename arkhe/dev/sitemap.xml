@@ -64,6 +64,9 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/compact.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/concat.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/conditions.html</loc>
   </url>
   <url>
@@ -116,6 +119,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/needs.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/null.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-matrix.html</loc>

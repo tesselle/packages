@@ -68,7 +68,7 @@ replace_empty() replaces empty strings.
 <span><span class="fu">replace_empty</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY</span></span>
-<span><span class="fu">remove_empty</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu">remove_empty</span><span class="op">(</span><span class="va">x</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for matrix</span></span>
 <span><span class="fu">replace_empty</span><span class="op">(</span><span class="va">x</span>, <span class="va">value</span><span class="op">)</span></span>
@@ -97,11 +97,6 @@ function will be applied over (<code>1</code> indicates rows, <code>2</code> ind
 values all meet the condition defined by <code>f</code> are considered. If <code>FALSE</code>
 (the default), only rows/columns where at least one value validates the
 condition defined by <code>f</code> are considered.</p></dd>
-
-
-<dt>na.rm</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should <code>NA</code> values be stripped before the
-computation proceeds?</p></dd>
 
 
 <dt>value</dt>
@@ -136,27 +131,27 @@ computation proceeds?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">""</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "M"  ""   "T"  "D"  ""  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "Z"  "B"  "D"  "N"  "J" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] ""   "K"  "P"  "H"  "G" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "A"  "E"  "I"  "Q"  "P" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "O"  "L"  "J"  "V"  "L" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "C"  "G"  "X"  "A"  "B" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "U"  "I"  "Y"  "M"  "J" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "U"  "W"  "D"  ""   ""  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] ""   "P"  "B"  "S"  "J" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "U"  "A"  "R"  "M"  "O" </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove rows with empty strings</span></span></span>
 <span class="r-in"><span><span class="fu">remove_empty</span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "Z"  "B"  "D"  "N"  "J" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "A"  "E"  "I"  "Q"  "P" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "O"  "L"  "J"  "V"  "L" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "C"  "G"  "X"  "A"  "B" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "U"  "I"  "Y"  "M"  "J" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "U"  "A"  "R"  "M"  "O" </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace empty strings</span></span></span>
 <span class="r-in"><span><span class="fu">replace_empty</span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="st">"XXX"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1]  [,2]  [,3] [,4] [,5] </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "M"   "XXX" "T"  "D"  "XXX"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "Z"   "B"   "D"  "N"  "J"  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "XXX" "K"   "P"  "H"  "G"  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "A"   "E"   "I"  "Q"  "P"  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "O"   "L"   "J"  "V"  "L"  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1]  [,2] [,3] [,4]  [,5] </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "C"   "G"  "X"  "A"   "B"  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "U"   "I"  "Y"  "M"   "J"  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "U"   "W"  "D"  "XXX" "XXX"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "XXX" "P"  "B"  "S"   "J"  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "U"   "A"  "R"  "M"   "O"  </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
