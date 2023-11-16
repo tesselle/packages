@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.4.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,19 +123,18 @@ computation proceeds?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    2    6    6    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    9    4    4   10    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10   10   10   NA   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    8    4    8    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4    2   NA    9    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5    7    9    5    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    9   NA    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   NA    5   NA    5    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    9   10    9    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    6    3    8    6</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Count missing values in rows</span></span></span>
 <span class="r-in"><span><span class="fu">count</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 2 0 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 2 0 0</span>
 <span class="r-in"><span><span class="co">## Count non-missing values in columns</span></span></span>
 <span class="r-in"><span><span class="fu">count</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> V1 V2 V3 V4 V5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  5  5  4  4  4 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4 5 3 5 5</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -147,7 +146,7 @@ computation proceeds?</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p></p><p>Developed by Nicolas Frerebeau, Université Bordeaux Montaigne, CNRS.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer></div>

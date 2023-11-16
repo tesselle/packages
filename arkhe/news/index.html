@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.4.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,21 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="1.3.0" id="arkhe-130">arkhe 1.3.0<a class="anchor" aria-label="anchor" href="#arkhe-130"></a></h2>
+<h2 class="pkg-version" data-toc-text="1.4.0" id="arkhe-140">arkhe 1.4.0<a class="anchor" aria-label="anchor" href="#arkhe-140"></a></h2>
+<div class="section level3">
+<h3 id="new-classes-and-methods-1-4-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-4-0"></a></h3>
+<ul><li>Add <code>%||%</code> to replace <code>NULL</code> with a default value.</li>
+<li>Add <code>%+%</code> to concatenate character vectors.</li>
+<li>Add <code>scale_range</code> to rescale a continuous vector to have specified minimum and maximum.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="bugfixes--changes-1-4-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-4-0"></a></h3>
+<ul><li>Remove deprecated methods.</li>
+<li>Remove <code>na.rm</code> argument of numeric predicates (so that the length of the output equals the length of the input).</li>
+</ul></div>
+</div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.3.0" id="arkhe-130">arkhe 1.3.0<a class="anchor" aria-label="anchor" href="#arkhe-130"></a></h2><p class="text-muted">CRAN release: 2023-09-01</p>
 <div class="section level3">
 <h3 id="new-classes-and-methods-1-3-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-3-0"></a></h3>
 <ul><li>Add <code><a href="../reference/remove_constant.html">remove_constant()</a></code> to remove constant columns.</li>
@@ -55,7 +69,7 @@
 <div class="section level3">
 <h3 id="bugfixes--changes-1-3-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-3-0"></a></h3>
 <ul><li>Remove deprecated methods.</li>
-<li>Deprecate <code><a href="../reference/arkhe-deprecated.html">to_long()</a></code> and <code><a href="../reference/arkhe-deprecated.html">wide_to_long()</a></code>.</li>
+<li>Deprecate <code>to_long()</code> and <code>wide_to_long()</code>.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="internals-1-3-0">Internals<a class="anchor" aria-label="anchor" href="#internals-1-3-0"></a></h3>
@@ -100,7 +114,7 @@
 <li>Add <code><a href="../reference/bootstrap.html">bootstrap()</a></code> for bootstrap estimation.</li>
 <li>Add <code><a href="../reference/compact.html">compact()</a></code> to remove empty columns/rows in an array-like object.</li>
 <li>Add <code><a href="../reference/discard.html">discard()</a></code> and <code><a href="../reference/keep.html">keep()</a></code> remove/keep rows/columns in an array-like object using a predicate function.</li>
-<li>Add <code><a href="../reference/arkhe-deprecated.html">to_long()</a></code> to transform a <code>matrix</code> to a long <code>data.frame</code>.</li>
+<li>Add <code>to_long()</code> to transform a <code>matrix</code> to a long <code>data.frame</code>.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bugfixes--changes-1-0-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-0-0"></a></h3>
@@ -204,7 +218,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p></p><p>Developed by Nicolas Frerebeau, Université Bordeaux Montaigne, CNRS.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer></div>

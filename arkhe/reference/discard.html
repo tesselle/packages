@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.4.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,6 +64,7 @@
 <span>  margin <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  negate <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  all <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  na.rm <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  verbose <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"arkhe.verbose"</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span>
@@ -74,6 +75,7 @@
 <span>  <span class="va">f</span>,</span>
 <span>  negate <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  all <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  na.rm <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  verbose <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"arkhe.verbose"</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span>
@@ -84,6 +86,7 @@
 <span>  <span class="va">f</span>,</span>
 <span>  negate <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  all <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  na.rm <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  verbose <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"arkhe.verbose"</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -120,6 +123,11 @@ values all meet the condition defined by <code>f</code> are considered. If <code
 condition defined by <code>f</code> are considered.</p></dd>
 
 
+<dt>na.rm</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should <code>NA</code> values be stripped before the
+computation proceeds?</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should <span style="R">R</span> report extra information
 on progress?</p></dd>
@@ -153,25 +161,26 @@ on progress?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    6   NA    9    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    5    5    8   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    7    3    4    4    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    4    5   NA    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    5    1   10    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    1    5    6   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    3    8    2    2    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    6   NA   NA    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    7    3    4    9    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    6    8    5   10</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove row with any NA</span></span></span>
 <span class="r-in"><span><span class="fu">discard</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    3    4    4    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    5    1   10    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    8    2    2    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    7    3    4    9    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    6    8    5   10</span>
 <span class="r-in"><span><span class="co">## Remove column with any NA</span></span></span>
 <span class="r-in"><span><span class="fu">discard</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    7    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    3    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    7    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    6</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -183,7 +192,7 @@ on progress?</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p></p><p>Developed by Nicolas Frerebeau, Université Bordeaux Montaigne, CNRS.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer></div>

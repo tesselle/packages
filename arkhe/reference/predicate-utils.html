@@ -28,7 +28,7 @@ or infinite values.
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.4.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,9 @@ or infinite values.</p></li>
 <span></span>
 <span><span class="fu">has_infinite</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">is_empty</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">is_empty</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">is_unique</span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -103,6 +105,11 @@ with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has leng
 <dt>names</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector specifying the names to test <code>x</code>
 with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has names, and <code>FALSE</code> otherwise.</p></dd>
+
+
+<dt>na.rm</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should missing values (including <code>NaN</code>)
+be omitted?</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -130,7 +137,7 @@ with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has name
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p></p><p>Developed by Nicolas Frerebeau, Université Bordeaux Montaigne, CNRS.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer></div>

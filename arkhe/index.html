@@ -46,7 +46,7 @@
     
     <a class="navbar-brand me-2" href="index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.4.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,9 +99,9 @@
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2023</span>). _arkhe<span class="sc">:</span> Tools <span class="cf">for</span> Cleaning Rectangular Data_.</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  Université Bordeaux Montaigne, Pessac, France.</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  doi<span class="sc">:</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.3526659</span> <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.3526659</span><span class="sc">&gt;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  R package version <span class="dv">1</span>.<span class="fl">3.0</span>, <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>arkhe<span class="sc">/</span><span class="er">&gt;</span>.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  R package version <span class="dv">1</span>.<span class="fl">4.0</span>, <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>arkhe<span class="sc">/</span><span class="er">&gt;</span>.</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Une entrée BibTeX pour les utilisateurs LaTeX est</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>A BibTeX entry <span class="cf">for</span> LaTeX users is</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">@</span>Manual{,</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    author <span class="ot">=</span> {Nicolas Frerebeau},</span>
@@ -109,7 +109,7 @@
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    year <span class="ot">=</span> {<span class="dv">2023</span>},</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    organization <span class="ot">=</span> {Université Bordeaux Montaigne},</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    address <span class="ot">=</span> {Pessac, France},</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    note <span class="ot">=</span> {R package version <span class="dv">1</span>.<span class="fl">3.0</span>},</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    note <span class="ot">=</span> {R package version <span class="dv">1</span>.<span class="fl">4.0</span>},</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>arkhe<span class="sc">/</span>},</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    doi <span class="ot">=</span> {<span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.3526659</span>},</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  }</span>
@@ -143,50 +143,49 @@
 <span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span>
 <span><span class="va">X</span></span>
 <span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span></span>
-<span><span class="co">#&gt; [1,]    5    8   NA    3    5</span></span>
-<span><span class="co">#&gt; [2,]    9    7    8    4    2</span></span>
-<span><span class="co">#&gt; [3,]    4   10    7   NA    2</span></span>
-<span><span class="co">#&gt; [4,]   NA    5    5    4    3</span></span>
-<span><span class="co">#&gt; [5,]    7    9    9    8    1</span></span>
+<span><span class="co">#&gt; [1,]    9   10   10    4    9</span></span>
+<span><span class="co">#&gt; [2,]    1    6    6   10    4</span></span>
+<span><span class="co">#&gt; [3,]   NA    3   NA    3    5</span></span>
+<span><span class="co">#&gt; [4,]    3   10    2    8   NA</span></span>
+<span><span class="co">#&gt; [5,]    4    9    3    9    3</span></span>
 <span></span>
 <span><span class="co">## Count missing values in rows</span></span>
 <span><span class="fu"><a href="reference/count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 1 0 1 1 0</span></span>
+<span><span class="co">#&gt; [1] 0 0 2 1 0</span></span>
 <span><span class="co">## Count non-missing values in columns</span></span>
 <span><span class="fu"><a href="reference/count.html">count</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; V1 V2 V3 V4 V5 </span></span>
-<span><span class="co">#&gt;  4  5  4  4  5</span></span>
+<span><span class="co">#&gt; [1] 4 5 4 5 4</span></span>
 <span></span>
 <span><span class="co">## Find row with NA</span></span>
 <span><span class="fu"><a href="reference/detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1]  TRUE FALSE  TRUE  TRUE FALSE</span></span>
+<span><span class="co">#&gt; [1] FALSE FALSE  TRUE  TRUE FALSE</span></span>
 <span><span class="co">## Find column without any NA</span></span>
 <span><span class="fu"><a href="reference/detect.html">detect</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">#&gt;    V1    V2    V3    V4    V5 </span></span>
-<span><span class="co">#&gt; FALSE  TRUE FALSE FALSE  TRUE</span></span>
+<span><span class="co">#&gt; [1] FALSE  TRUE FALSE  TRUE FALSE</span></span>
 <span></span>
 <span><span class="co">## Remove row with any NA</span></span>
 <span><span class="fu"><a href="reference/discard.html">discard</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span></span>
-<span><span class="co">#&gt; [1,]    9    7    8    4    2</span></span>
-<span><span class="co">#&gt; [2,]    7    9    9    8    1</span></span>
+<span><span class="co">#&gt; [1,]    9   10   10    4    9</span></span>
+<span><span class="co">#&gt; [2,]    1    6    6   10    4</span></span>
+<span><span class="co">#&gt; [3,]    4    9    3    9    3</span></span>
 <span><span class="co">## Remove column with any NA</span></span>
 <span><span class="fu"><a href="reference/discard.html">discard</a></span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      [,1] [,2]</span></span>
-<span><span class="co">#&gt; [1,]    8    5</span></span>
-<span><span class="co">#&gt; [2,]    7    2</span></span>
-<span><span class="co">#&gt; [3,]   10    2</span></span>
-<span><span class="co">#&gt; [4,]    5    3</span></span>
-<span><span class="co">#&gt; [5,]    9    1</span></span>
+<span><span class="co">#&gt; [1,]   10    4</span></span>
+<span><span class="co">#&gt; [2,]    6   10</span></span>
+<span><span class="co">#&gt; [3,]    3    3</span></span>
+<span><span class="co">#&gt; [4,]   10    8</span></span>
+<span><span class="co">#&gt; [5,]    9    9</span></span>
 <span></span>
 <span><span class="co">## Replace NA with zeros</span></span>
 <span><span class="fu"><a href="reference/missing.html">replace_NA</a></span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span></span>
-<span><span class="co">#&gt; [1,]    5    8    0    3    5</span></span>
-<span><span class="co">#&gt; [2,]    9    7    8    4    2</span></span>
-<span><span class="co">#&gt; [3,]    4   10    7    0    2</span></span>
-<span><span class="co">#&gt; [4,]    0    5    5    4    3</span></span>
-<span><span class="co">#&gt; [5,]    7    9    9    8    1</span></span></code></pre></div>
+<span><span class="co">#&gt; [1,]    9   10   10    4    9</span></span>
+<span><span class="co">#&gt; [2,]    1    6    6   10    4</span></span>
+<span><span class="co">#&gt; [3,]    0    3    0    3    5</span></span>
+<span><span class="co">#&gt; [4,]    3   10    2    8    0</span></span>
+<span><span class="co">#&gt; [5,]    4    9    3    9    3</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
@@ -230,6 +229,8 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Nicolas Frerebeau <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-5759-4944" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Université Bordeaux Montaigne <br><small class="roles"> Funder </small>  </li>
+<li>CNRS <br><small class="roles"> Funder </small>  </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
@@ -246,7 +247,7 @@
 
 <div class="pkgdown-footer-right">
 <p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Developed by Nicolas Frerebeau, Université Bordeaux Montaigne, CNRS.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer>
