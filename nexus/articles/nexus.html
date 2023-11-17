@@ -316,13 +316,13 @@ Egozcue et al. 2003)</span> and pivot log-ratio <span class="citation">(<em>PLR<
 <h3 id="principle-component-analysis">Principle Component Analysis<a class="anchor" aria-label="anchor" href="#principle-component-analysis"></a>
 </h3>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/dimensio/" class="external-link">dimensio</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## CLR</span></span>
+<code class="sourceCode R"><span><span class="co">## CLR</span></span>
 <span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## PCA</span></span>
-<span><span class="va">clr_pca</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca.html">pca</a></span><span class="op">(</span><span class="va">clr</span>, scale <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/dimensio/" class="external-link">dimensio</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">clr_pca</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/pca.html" class="external-link">pca</a></span><span class="op">(</span><span class="va">clr</span>, scale <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_individuals</a></span><span class="op">(</span><span class="va">clr_pca</span>, highlight <span class="op">=</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">16</span>, </span>
 <span>                col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span>, <span class="st">"#33BBEE"</span>, <span class="st">"#EE3377"</span><span class="op">)</span><span class="op">)</span></span>
@@ -333,19 +333,52 @@ Egozcue et al. 2003)</span> and pivot log-ratio <span class="citation">(<em>PLR<
 <h3 id="manova">MANOVA<a class="anchor" aria-label="anchor" href="#manova"></a>
 </h3>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/manova.html" class="external-link">manova</a></span><span class="op">(</span><span class="fu"><a href="../reference/transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span> <span class="op">~</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## ILR</span></span>
+<span><span class="va">ilr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## MANOVA</span></span>
+<span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/manova.html" class="external-link">manova</a></span><span class="op">(</span><span class="va">ilr</span> <span class="op">~</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">ilr</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                  Df Pillai approx F num Df den Df    Pr(&gt;F)    </span></span>
-<span><span class="co">#&gt; get_groups(coda)  3 1.7932   4.8487     57    186 &lt; 2.2e-16 ***</span></span>
-<span><span class="co">#&gt; Residuals        78                                            </span></span>
+<span><span class="co">#&gt;                 Df Pillai approx F num Df den Df    Pr(&gt;F)    </span></span>
+<span><span class="co">#&gt; get_groups(ilr)  3 1.7932   4.8487     57    186 &lt; 2.2e-16 ***</span></span>
+<span><span class="co">#&gt; Residuals       78                                            </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span></code></pre></div>
 <p>The MANOVA results suggest that there are statistically significant
 differences between groups.</p>
+</div>
+<div class="section level3">
+<h3 id="discriminant-analysis">Discriminant Analysis<a class="anchor" aria-label="anchor" href="#discriminant-analysis"></a>
+</h3>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">discr</span> <span class="op">&lt;-</span> <span class="fu">MASS</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MASS/man/lda.html" class="external-link">lda</a></span><span class="op">(</span><span class="fu"><a href="../reference/transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span>, grouping <span class="op">=</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">## LDA</span></span>
+<span><span class="va">discr</span> <span class="op">&lt;-</span> <span class="fu">MASS</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MASS/man/lda.html" class="external-link">lda</a></span><span class="op">(</span><span class="va">ilr</span>, grouping <span class="op">=</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">ilr</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">discr</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/ceramics-lda-1.png" width="100%"></p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co">## Back transform results</span></span>
+<span><span class="fu"><a href="../reference/transform_inverse.html">transform_inverse</a></span><span class="op">(</span><span class="va">discr</span><span class="op">$</span><span class="va">means</span>, origin <span class="op">=</span> <span class="va">ilr</span><span class="op">)</span></span>
+<span><span class="co">#&gt;              Sm           Lu           U          Yb         As           Sb</span></span>
+<span><span class="co">#&gt; CJ  0.014938709 0.0008558484 0.007253021 0.006793156 0.02199766 0.0014569243</span></span>
+<span><span class="co">#&gt; EJ  0.018613143 0.0010139916 0.007584757 0.008127263 0.01819848 0.0012892835</span></span>
+<span><span class="co">#&gt; SNA 0.007141080 0.0005084305 0.003701554 0.003950209 0.01127728 0.0009184591</span></span>
+<span><span class="co">#&gt; TSJ 0.009835545 0.0006601008 0.005386968 0.005152492 0.01369280 0.0018069781</span></span>
+<span><span class="co">#&gt;              Ca           Na         La         Ce         Th        Cr</span></span>
+<span><span class="co">#&gt; CJ  0.029204741 0.0009599806 0.07678692 0.16797505 0.01897389 0.4392215</span></span>
+<span><span class="co">#&gt; EJ  0.025610707 0.0018649908 0.09678585 0.21657222 0.02321610 0.3286455</span></span>
+<span><span class="co">#&gt; SNA 0.007737157 0.0012335187 0.03893221 0.08823033 0.01467079 0.6248961</span></span>
+<span><span class="co">#&gt; TSJ 0.008745270 0.0013825884 0.05646163 0.11939198 0.01937137 0.4647827</span></span>
+<span><span class="co">#&gt;              Hf          Cs         Sc         Rb          Fe          Ta</span></span>
+<span><span class="co">#&gt; CJ  0.011779918 0.004874522 0.03227958 0.10114053 0.010336253 0.003030762</span></span>
+<span><span class="co">#&gt; EJ  0.017996210 0.004785199 0.04344994 0.10870167 0.013130417 0.004482816</span></span>
+<span><span class="co">#&gt; SNA 0.005908416 0.004618774 0.03019832 0.09111503 0.008644199 0.001635972</span></span>
+<span><span class="co">#&gt; TSJ 0.008497490 0.011135602 0.03551225 0.17345781 0.010099512 0.002099366</span></span>
+<span><span class="co">#&gt;             Co          Eu</span></span>
+<span><span class="co">#&gt; CJ  0.04679035 0.003350694</span></span>
+<span><span class="co">#&gt; EJ  0.05566413 0.004267303</span></span>
+<span><span class="co">#&gt; SNA 0.05301923 0.001662958</span></span>
+<span><span class="co">#&gt; TSJ 0.05036299 0.002164612</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
