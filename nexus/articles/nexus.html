@@ -22,13 +22,12 @@
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to nexus">
 <meta property="og:description" content="nexus">
 <meta property="og:image" content="https://packages.tesselle.org/nexus/logo.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@nfrerebeau">
-<meta name="twitter:site" content="@nfrerebeau">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
+<![endif]--><meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="tesselle">
+<script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -87,7 +86,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-10-25</h4>
+            <h4 data-toc-skip class="date">2023-11-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/vignettes/nexus.Rmd" class="external-link"><code>vignettes/nexus.Rmd</code></a></small>
       <div class="d-none name"><code>nexus.Rmd</code></div>
@@ -161,6 +160,10 @@ can be restored:</p>
 <span><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">hongite</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Ternary plots</span></span>
+<span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></code></pre></div>
+<p><img src="nexus_files/figure-html/plot-1.png" width="100%"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Compositional bar plot</span></span>
 <span><span class="fu"><a href="../reference/barplot.html">barplot</a></span><span class="op">(</span><span class="va">coda</span>, order <span class="op">=</span> <span class="st">"A"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/barplot-1.png" width="100%"></p>
@@ -180,7 +183,7 @@ belongs to a specific group (or not). When coercing a
 <code>data.frame</code> to a <code>CompositionMatrix</code> object, an
 attempt is made to automatically detect groups by mapping column
 names.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Create a data.frame</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"C"</span>, <span class="st">"C"</span>, <span class="st">"B"</span><span class="op">)</span>,</span>
@@ -201,7 +204,7 @@ argument of <code><a href="../reference/as_composition.html">as_composition()</a
 allow to retrieve or set groups of an existing
 <code>CompositionMatrix</code> (<code>NA</code> can be used to specify
 that a sample does not belong to any group):</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Set groups (NA means no group)</span></span>
 <span><span class="fu">set_groups</span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"X"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">"Y"</span><span class="op">)</span></span>
 <span></span>
@@ -222,7 +225,7 @@ the same sample name.</p>
 <code>CompositionMatrix</code> object, an attempt is made to
 automatically detect samples by mapping column names. If no matching
 column is found, row names will be used by default.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Create a data.frame</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"C"</span>, <span class="st">"C"</span><span class="op">)</span>,</span>
@@ -243,7 +246,7 @@ explicitly specifying the column to be used with the
 <code>set_samples(x) &lt;- value</code> allow to retrieve or set sample
 names of an existing <code>CompositionMatrix</code> (missing values are
 not allowed):</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Set sample names</span></span>
 <span><span class="fu">set_samples</span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>, <span class="st">"G"</span>, <span class="st">"H"</span>, <span class="st">"I"</span><span class="op">)</span></span>
 <span></span>
@@ -253,23 +256,46 @@ not allowed):</p>
 <p>Note that the presence of repeated measurements may affect some
 calculations (read the documentation carefully).</p>
 </div>
-<div class="section level3">
-<h3 id="log-ratio-transformations">Log-ratio transformations<a class="anchor" aria-label="anchor" href="#log-ratio-transformations"></a>
-</h3>
-<p>The amount of every part is limited to the whole. The absolute amount
-of the whole is noninformative since it is typically due to artifacts on
-the measurement procedure. Thus only relative changes are relevant. If
-the relative amount of one part increases, the amounts of other parts
-must decrease, introducing spurious anticorrelation.</p>
-</div>
 </div>
 <div class="section level2">
-<h2 id="use-cases">Use cases<a class="anchor" aria-label="anchor" href="#use-cases"></a>
+<h2 id="log-ratio-transformations">Log-ratio transformations<a class="anchor" aria-label="anchor" href="#log-ratio-transformations"></a>
 </h2>
-<div class="section level3">
-<h3 id="ceramic-compositions">Ceramic compositions<a class="anchor" aria-label="anchor" href="#ceramic-compositions"></a>
-</h3>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<p>The package provides the following transformations: centered log
+ratio <span class="citation">(<em>CLR</em>, Aitchison 1986)</span>,
+additive log ratio <span class="citation">(<em>ALR</em>, Aitchison
+1986)</span>, isometric log ratio <span class="citation">(<em>ILR</em>,
+Egozcue et al. 2003)</span> and pivot log-ratio <span class="citation">(<em>PLR</em>, Hron et al. 2017)</span>.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## CLR</span></span>
+<span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">clr</span><span class="op">)</span></span>
+<span><span class="co">#&gt;            A          B          C           D          E</span></span>
+<span><span class="co">#&gt; H1 1.3346582  0.9032446 -1.2180710 -0.69677410 -0.3230577</span></span>
+<span><span class="co">#&gt; H2 1.1265880  0.4209146 -0.5515464 -0.52956753 -0.4663886</span></span>
+<span><span class="co">#&gt; H3 0.8258984 -0.5767451  0.7472061 -0.53372770 -0.4626318</span></span>
+<span><span class="co">#&gt; H4 1.2367416  0.4765643 -0.7190403 -0.38058588 -0.6136798</span></span>
+<span><span class="co">#&gt; H5 1.2943994  1.1511245 -1.4296147 -0.45310510 -0.5628040</span></span>
+<span><span class="co">#&gt; H6 1.4065594  0.7153224 -1.1153524 -0.02470833 -0.9818211</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">clr</span><span class="op">)</span></span></code></pre></div>
+<p><img src="nexus_files/figure-html/transform-1.png" width="100%"></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">back</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_inverse.html">transform_inverse</a></span><span class="op">(</span><span class="va">clr</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">back</span><span class="op">)</span></span>
+<span><span class="co">#&gt; &lt;CompositionMatrix: 6 x 5&gt;</span></span>
+<span><span class="co">#&gt;        A     B     C     D     E</span></span>
+<span><span class="co">#&gt; H1 0.488 0.317 0.038 0.064 0.093</span></span>
+<span><span class="co">#&gt; H2 0.482 0.238 0.090 0.092 0.098</span></span>
+<span><span class="co">#&gt; H3 0.370 0.091 0.342 0.095 0.102</span></span>
+<span><span class="co">#&gt; H4 0.509 0.238 0.072 0.101 0.080</span></span>
+<span><span class="co">#&gt; H5 0.442 0.383 0.029 0.077 0.069</span></span>
+<span><span class="co">#&gt; H6 0.523 0.262 0.042 0.125 0.048</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="multivariate-methods">Multivariate methods<a class="anchor" aria-label="anchor" href="#multivariate-methods"></a>
+</h2>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Data from Day et al. 2011</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"kommos"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
@@ -282,17 +308,18 @@ must decrease, introducing spurious anticorrelation.</p>
 <span></span>
 <span><span class="co">## Set groups</span></span>
 <span><span class="fu">set_groups</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">kommos</span><span class="op">$</span><span class="va">type</span></span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Compositional bar plot</span></span>
 <span><span class="fu"><a href="../reference/barplot.html">barplot</a></span><span class="op">(</span><span class="va">coda</span>, order <span class="op">=</span> <span class="st">"Ca"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/ceramics-barplot-1.png" width="100%"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## CLR</span></span>
-<span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">clr</span>, border <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span>, <span class="st">"#33BBEE"</span>, <span class="st">"#EE3377"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="nexus_files/figure-html/ceramics-clr-1.png" width="100%"></p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="section level3">
+<h3 id="principle-component-analysis">Principle Component Analysis<a class="anchor" aria-label="anchor" href="#principle-component-analysis"></a>
+</h3>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/dimensio/" class="external-link">dimensio</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## CLR</span></span>
+<span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## PCA</span></span>
 <span><span class="va">clr_pca</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca.html">pca</a></span><span class="op">(</span><span class="va">clr</span>, scale <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
@@ -303,8 +330,22 @@ must decrease, introducing spurious anticorrelation.</p>
 <p><img src="nexus_files/figure-html/ceramics-pca-1.png" width="50%"><img src="nexus_files/figure-html/ceramics-pca-2.png" width="50%"></p>
 </div>
 <div class="section level3">
-<h3 id="slag-inclusions">Slag inclusions<a class="anchor" aria-label="anchor" href="#slag-inclusions"></a>
+<h3 id="manova">MANOVA<a class="anchor" aria-label="anchor" href="#manova"></a>
 </h3>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/manova.html" class="external-link">manova</a></span><span class="op">(</span><span class="fu"><a href="../reference/transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span> <span class="op">~</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span><span class="co">#&gt;                  Df Pillai approx F num Df den Df    Pr(&gt;F)    </span></span>
+<span><span class="co">#&gt; get_groups(coda)  3 1.7932   4.8487     57    186 &lt; 2.2e-16 ***</span></span>
+<span><span class="co">#&gt; Residuals        78                                            </span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span></code></pre></div>
+<p>The MANOVA results suggest that there are statistically significant
+differences between groups.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">discr</span> <span class="op">&lt;-</span> <span class="fu">MASS</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MASS/man/lda.html" class="external-link">lda</a></span><span class="op">(</span><span class="fu"><a href="../reference/transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span>, grouping <span class="op">=</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">discr</span><span class="op">)</span></span></code></pre></div>
+<p><img src="nexus_files/figure-html/ceramics-lda-1.png" width="100%"></p>
 </div>
 </div>
 <div class="section level2">
@@ -317,10 +358,24 @@ Aitchison, J. 1986. <em>The <span>Statistical Analysis</span> of
 Applied Probability. <span>Londres, UK ; New York, USA</span>:
 <span>Chapman and Hall</span>. <a href="https://doi.org/10.1007/978-94-009-4109-0" class="external-link">https://doi.org/10.1007/978-94-009-4109-0</a>.
 </div>
+<div id="ref-egozcue2003" class="csl-entry">
+Egozcue, J. J., V. Pawlowsky-Glahn, G. Mateu-Figueras, and C.
+Barceló-Vidal. 2003. <span>“Isometric <span>Logratio
+Transformations</span> for <span>Compositional Data
+Analysis</span>.”</span> <em>Mathematical Geology</em> 35 (3): 279–300.
+<a href="https://doi.org/10.1023/A:1023818214614" class="external-link">https://doi.org/10.1023/A:1023818214614</a>.
+</div>
 <div id="ref-greenacre2021" class="csl-entry">
 Greenacre, Michael. 2021. <span>“Compositional <span>Data
 Analysis</span>.”</span> <em>Annual Review of Statistics and Its
 Application</em> 8 (1): 271–99. <a href="https://doi.org/10.1146/annurev-statistics-042720-124436" class="external-link">https://doi.org/10.1146/annurev-statistics-042720-124436</a>.
+</div>
+<div id="ref-hron2017" class="csl-entry">
+Hron, Karel, Peter Filzmoser, Patrice de Caritat, Eva Fišerová, and
+Alžběta Gardlo. 2017. <span>“Weighted <span>Pivot Coordinates</span> for
+<span>Compositional Data</span> and <span>Their Application</span> to
+<span>Geochemical Mapping</span>.”</span> <em>Mathematical
+Geosciences</em> 49 (6): 797–814. <a href="https://doi.org/10.1007/s11004-017-9684-z" class="external-link">https://doi.org/10.1007/s11004-017-9684-z</a>.
 </div>
 <div id="ref-weigand1977" class="csl-entry">
 Weigand, P. C., G. Harbottle, and E. Sayre. 1977. <span>“Turquoise
@@ -340,12 +395,15 @@ Ericson and T. K. Earle, 15–34. <span>New York, NY</span>:
 
 
     <footer><div class="pkgdown-footer-left">
-<p>nexus is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=nexus" class="external-link">tesselle.org</a>.</p>
+  <p>nexus is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=nexus" class="external-link">tesselle.org</a>.</p>
+
+  <p></p>
+<p>Developed by Nicolas Frerebeau, Anne Philippe, <a href="https://www.u-bordeaux-montaigne.fr" class="external-link"><img src="https://www.tesselle.org/images/UBM.jpg" alt="Université Bordeaux Montaigne" height="32" style="margin-bottom: 3px;"></a>, <a href="https://www.cnrs.fr" class="external-link"><img src="https://www.tesselle.org/images/CNRS.png" alt="CNRS" height="32" style="margin-bottom: 3px;"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p>
-<p>Developed by Nicolas Frerebeau, Anne Philippe.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer>

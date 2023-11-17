@@ -91,6 +91,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/mahalanobis.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/margin.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/mean.html</loc>
   </url>
   <url>
@@ -104,6 +107,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/perturbation.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/plot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/plot_logratio.html</loc>
