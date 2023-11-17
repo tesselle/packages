@@ -161,26 +161,25 @@ on progress?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    6    9    4    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    7    5    7    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    6    7    1    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    1    9   NA    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    8    1   NA   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    2    7    9    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    5    5   NA    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    7    2   10   10    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    2    8    4   NA    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]   NA    6    6    7    1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Keep row without any NA</span></span></span>
 <span class="r-in"><span><span class="fu">keep</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    6    9    4    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    7    5    7    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    6    7    1    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    2    7    9    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    7    2   10   10    9</span>
 <span class="r-in"><span><span class="co">## Keep row without any NA</span></span></span>
 <span class="r-in"><span><span class="fu">keep</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    6    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    7    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    6    7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    1    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5    8    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    7    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    5    5    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    2   10    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8    4    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    6    6    1</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
