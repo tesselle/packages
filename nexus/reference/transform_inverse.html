@@ -57,22 +57,30 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span>, <span class="va">origin</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for CLR</span></span>
+<span><span class="co"># S4 method for CLR,missing</span></span>
 <span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for ALR</span></span>
+<span><span class="co"># S4 method for ALR,missing</span></span>
 <span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for ILR</span></span>
-<span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co"># S4 method for ILR,missing</span></span>
+<span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for matrix,ILR</span></span>
+<span><span class="fu">transform_inverse</span><span class="op">(</span><span class="va">object</span>, <span class="va">origin</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
-<dd><p>A <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> object.</p></dd>
+<dd><p>A <code><a href="LogRatio-class.html">LogRatio</a></code> object.</p></dd>
+
+
+<dt>origin</dt>
+<dd><p>A <code><a href="LogRatio-class.html">LogRatio</a></code> object to be used for the inverse
+transformation.</p></dd>
 
 
 <dt>...</dt>
@@ -159,7 +167,7 @@ Boca Raton: CRC Press.</p>
     <footer><div class="pkgdown-footer-left">
   <p>nexus is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=nexus" class="external-link">tesselle.org</a>.</p>
 
-  <p></p><p>Developed by Nicolas Frerebeau, Anne Philippe, <a href="https://www.u-bordeaux-montaigne.fr" class="external-link"><img src="https://www.tesselle.org/images/UBM.jpg" alt="Université Bordeaux Montaigne" height="32" style="margin-bottom: 3px;"></a>, <a href="https://www.cnrs.fr" class="external-link"><img src="https://www.tesselle.org/images/CNRS.png" alt="CNRS" height="32" style="margin-bottom: 3px;"></a>.</p>
+  <p></p><p>Developed by Nicolas Frerebeau, Anne Philippe, <a href="https://www.u-bordeaux-montaigne.fr" class="external-link"><img src="https://www.tesselle.org/images/logo-ubm.svg" alt="Université Bordeaux Montaigne" height="32" style="margin-bottom: 3px;"></a>, <a href="https://www.cnrs.fr" class="external-link"><img src="https://www.tesselle.org/images/logo-cnrs.svg" alt="CNRS" height="32" style="margin-bottom: 3px;"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">

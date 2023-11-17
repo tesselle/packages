@@ -159,4 +159,7 @@
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/variation.html</loc>
   </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/zero.html</loc>
+  </url>
 </urlset>
