@@ -124,6 +124,12 @@
     <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/replace_NA.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/replace_zero.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/samples.html</loc>
   </url>
   <url>
@@ -158,8 +164,5 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/variation.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/reference/zero.html</loc>
   </url>
 </urlset>
