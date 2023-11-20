@@ -7,10 +7,10 @@ frequency() returns the mean number of samples per unit time.
 time() creates the vector of times at which a time series was sampled.
 frequency() returns the mean number of samples per unit time.
 
-"><meta property="og:image" content="https://packages.tesselle.org/aion/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@nfrerebeau"><meta name="twitter:site" content="@nfrerebeau"><meta name="robots" content="noindex"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
+"><meta property="og:image" content="https://packages.tesselle.org/aion/logo.png"><meta name="robots" content="noindex"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript></head><body>
+<![endif]--><meta property="og:locale" content="en_US"><meta property="og:site_name" content="tesselle"><script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
@@ -150,13 +150,13 @@ frequency() returns the mean number of samples per unit time.
 <span class="r-in"><span><span class="co">## Coerce to data frame</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">Y</span>, calendar <span class="op">=</span> <span class="fu"><a href="gregorian.html">BP</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   time series variable      value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  950     S1        A -1.7861956</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  949     S1        A -0.4684956</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  948     S1        A  0.5356783</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  947     S1        A -0.4117930</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  946     S1        A -1.0062249</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  945     S1        A -0.4798575</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   time series variable       value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  950     S1        A -0.05763006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  949     S1        A  0.87883752</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  948     S1        A  0.67386032</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  947     S1        A -1.85773008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  946     S1        A  0.44768078</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  945     S1        A -2.27605641</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -164,11 +164,13 @@ frequency() returns the mean number of samples per unit time.
 
 
     <footer><div class="pkgdown-footer-left">
-<p>aion is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=aion" class="external-link">tesselle.org</a>.</p>
+  <p>aion is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=aion" class="external-link">tesselle.org</a>.</p>
+
+  <p></p><p>Developed by Nicolas Frerebeau, Joe Roe, <a href="https://www.u-bordeaux-montaigne.fr" class="external-link"><img src="https://www.tesselle.org/images/logo-ubm.svg" alt="Université Bordeaux Montaigne" height="32" style="margin-bottom: 3px;"></a>, <a href="https://www.cnrs.fr" class="external-link"><img src="https://www.tesselle.org/images/logo-cnrs.svg" alt="CNRS" height="32" style="margin-bottom: 3px;"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p><p>Developed by Nicolas Frerebeau, Joe Roe.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer></div>
