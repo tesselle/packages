@@ -82,9 +82,6 @@
     <loc>https://packages.tesselle.org/ananke/reference/labels.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/ananke/reference/lia_age.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/ananke/reference/mean.html</loc>
   </url>
   <url>
@@ -92,6 +89,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/mutators.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/ananke/reference/pb_age.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/ananke/reference/proxy_ensemble.html</loc>
