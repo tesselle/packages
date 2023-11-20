@@ -22,14 +22,13 @@
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Principal Components Analysis">
 <meta property="og:description" content="dimensio">
 <meta property="og:image" content="https://packages.tesselle.org/dimensio/logo.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@nfrerebeau">
-<meta name="twitter:site" content="@nfrerebeau">
 <meta name="robots" content="noindex">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><!-- Matomo --><script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
+<![endif]--><meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="tesselle">
+<script src="https://www.tesselle.org/scripts/unicorn.js"></script><noscript><p><img src="https://analyseweb.huma-num.fr/matomo.php?idsite=332&amp;rec=1" style="border:0" alt=""></p></noscript>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -191,7 +190,162 @@ distance between the individuals approximates the Euclidean distance
 between rows. In the form biplot the length of a vector approximates the
 quality of the representation of the variable.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"form"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"form"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in graphics::strwidth("A", cex = cex, font = font, vfont = vfont, :</span></span>
+<span><span class="co">#&gt; "label" is not a graphical parameter</span></span>
+<span><span class="co">#&gt; Warning in graphics::strheight("A", cex = cex, font = font, vfont = vfont, :</span></span>
+<span><span class="co">#&gt; "label" is not a graphical parameter</span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x, y = y, labels = labels, col = col, cex = cex, :</span></span>
+<span><span class="co">#&gt; "label" is not a graphical parameter</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/biplot-rows-1.png" width="672"></p>
 <p>The covariance biplot favors the representation of the variables: the
 length of a vector approximates the standard deviation of the variable
@@ -200,7 +354,162 @@ correlation between the two variables <span class="citation">(Greenacre
 2010)</span>. In the covariance biplot the distance between the
 individuals approximates the Mahalanobis distance between rows.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"covariance"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"covariance"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in graphics::strwidth("A", cex = cex, font = font, vfont = vfont, :</span></span>
+<span><span class="co">#&gt; "label" is not a graphical parameter</span></span>
+<span><span class="co">#&gt; Warning in graphics::strheight("A", cex = cex, font = font, vfont = vfont, :</span></span>
+<span><span class="co">#&gt; "label" is not a graphical parameter</span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x + cos(i) * xo, y = y + sin(i) * yo, labels =</span></span>
+<span><span class="co">#&gt; labels, : "label" is not a graphical parameter</span></span>
+<span><span class="co">#&gt; Warning in text.default(x = x, y = y, labels = labels, col = col, cex = cex, :</span></span>
+<span><span class="co">#&gt; "label" is not a graphical parameter</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/biplot-columns-1.png" width="672"></p>
 <p>Biplots have the drawbacks of their advantages: they can quickly
 become difficult to read as they display a lot of information at once.
@@ -341,12 +650,15 @@ Greenacre, Michael J. 2010. <em>Biplots in Practice</em>.
 
 
     <footer><div class="pkgdown-footer-left">
-<p>dimensio is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=dimensio" class="external-link">tesselle.org</a>.</p>
+  <p>dimensio is a part of the <strong>tesselle</strong> project, a collection of packages for research and teaching in archaeology. Learn more at <a href="https://www.tesselle.org/?mtm_campaign=pkgdown&amp;mtm_kwd=dimensio" class="external-link">tesselle.org</a>.</p>
+
+  <p></p>
+<p>Developed by Nicolas Frerebeau, <a href="https://www.u-bordeaux-montaigne.fr" class="external-link"><img src="https://www.tesselle.org/images/logo-ubm.svg" alt="Université Bordeaux Montaigne" height="32" style="margin-bottom: 3px;"></a>, <a href="https://www.cnrs.fr" class="external-link"><img src="https://www.tesselle.org/images/logo-cnrs.svg" alt="CNRS" height="32" style="margin-bottom: 3px;"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-<p></p>
-<p>Developed by Nicolas Frerebeau.</p> <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer>
