@@ -8,8 +8,8 @@ website:
   repo-url: https://github.com/tesselle/packages
   repo-actions: [edit, issue]
 
-  favicon: images/icons/favicon.ico
-  image: images/card.png
+  favicon: /images/icons/favicon.ico
+  image: /images/card.png
   margin-header: |
     ![](/images/tesselle.png)
   open-graph:
