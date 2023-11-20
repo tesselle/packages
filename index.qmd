@@ -1,32 +1,13 @@
 ---
-title: "tesselle"
+title: "R Packages & Archaeology"
 description: |
-  [**tesselle**](https://www.tesselle.org/) is a collection of 
-  [R](https://www.r-project.org/) packages for research and teaching in 
-  archaeology. These packages focus on quantitative analysis methods developed 
-  for archaeology. The **tesselle** packages are designed to work seamlessly 
-  together and to complement general-purpose and other specialized statistical 
-  packages. These packages can be used to explore and analyze common data types 
-  in archaeology: count data, compositional data and chronological data.
-about:
-  id: hero-heading
-  template: jolla
-  image: https://www.tesselle.org/images/tesselle.png
-  image-shape: rectangle
-  links:
-    - icon: house
-      text: Homepage
-      href: "https://www.tesselle.org"
-    - icon: github
-      text: Github
-      href: https://github.com/tesselle/
-    - icon: download
-      text: R-universe
-      href: https://tesselle.r-universe.dev/
-listing:
-  - id: gallery
-    template: packages.ejs
-    contents: packages.yml
+  **tesselle** is a collection of [R](https://www.r-project.org/) packages for 
+  research and teaching in archaeology. These packages focus on quantitative 
+  analysis methods developed for archaeology. The **tesselle** packages are 
+  designed to work seamlessly together and to complement general-purpose and 
+  other specialized statistical packages. Learn more at 
+  [tesselle.org](https://www.tesselle.org).
+title-block-banner: true
 ---
 
 ```{r}
@@ -88,14 +69,9 @@ cat(rjson::toJSON(search_pkg), file = "_site/packages.json", append = FALSE)
 cat(rjson::toJSON(search_ref), file = "_site/references.json", append = FALSE)
 ```
 
-:::{#hero-heading}
-:::
+## Read the doc
 
-::: {.callout-note appearance="minimal"}
-Quickly discover relevant content by [searching the documentation](#sec-doc), [filtering packages](#sec-packages) by topic or exploring the [project bibliography](https://www.zotero.org/groups/2894473/tesselle/library). 
-:::
-
-## Read the doc {#sec-doc}
+Quickly discover relevant content by searching the documentation or exploring the [project bibliography](https://www.zotero.org/groups/2894473/tesselle/library).
 
 <form role="search">
 <div class="form-group">
@@ -103,99 +79,3 @@ Quickly discover relevant content by [searching the documentation](#sec-doc), [f
 <input type="search" class="form-control" aria-label="Search for..." name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off">
 </div>
 </form>
-
-## Explore {#sec-packages}
-
-```{r}
-#| label: doc 
-#| echo: false
-#| eval: false
-az <- order(pkg$Package)
-info <- pkg[az, c("Package", "Version", "Depends", "License")]
-url_doc <- "<a href=\"%s/\" title=\"Read the doc of %s (stable)\">%s</a>"
-url_dev <- "<a href=\"%s/dev/\" title=\"Read the doc of %s (dev)\">%s</a>"
-
-version_stable <- sub(".9[0-9]{3}", "", info$Version)
-version_stable[version_stable == "0.0.0"] <- "no stable release"
-link_doc <- sprintf(url_doc, url_pkg[az], info$Package, version_stable)
-link_dev <- sprintf(url_dev, url_pkg[az], info$Package, info$Version)
-
-data <- data.frame(
-  Package = info$Package,
-  Stable = link_doc,
-  Development = link_dev
-)
-knitr::kable(
-  x = data,
-  row.names = FALSE,
-  escape = FALSE,
-  booktab = TRUE
-)
-```
-
-```{=html}
-<style>
-.grid-sizer, .grid-item { 
-  width: 100%;
-  margin: 1px auto;
-}
-@media only screen and (min-width: 600px) {
-  .grid-sizer, .grid-item { 
-    width: calc(50% - 5px);
-    margin: 1px auto;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .grid-sizer, .grid-item { 
-    width: calc(33% - 5px);
-    margin: 1px auto;
-  }
-}
-</style>
-
-<label for="isotope-select-filter" class="form-label">Filter packages:</label>
-<select id="isotope-select-filter" class="form-select btn-outline-secondary filters-select">
-  <option value="*" selected>show all</option>
-  <option value=".count-data">count data</option>
-  <option value=".compositional-data">compositionnal data</option>
-  <option value=".chronological-data">chronological data</option>
-  <option value=".multivariate-data">multivariate data analysis</option>
-  <option value=".signal-processing">signal processing</option>
-  <option value=".data-visualization">data visualization</option>
-</select>
-```
-
-::: {.column-page}
-
-::: {#gallery}
-:::
-
-:::
-
-```{=html}
-<script>
-// init Isotope
-var $grid = $('.grid').isotope({
-  // options
-  sortBy: 'random',
-  itemSelector: '.card',
-  percentPosition: true,
-  masonry: {
-    // use outer width of grid-sizer for columnWidth
-    columnWidth: '.grid-sizer',
-    gutter: 1
-  }
-});
-
-// layout Isotope after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
-});
-
-$('.filters-select').on( 'change', function() {
-  // get filter value from option value
-  var filterValue = this.value;
-  $grid.isotope({ filter: filterValue });
-});
-</script>
-```

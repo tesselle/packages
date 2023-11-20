@@ -2,22 +2,80 @@ project:
   type: website
 
 website:
-  title: "tesselle"
+  title: "packages.tesselle"
+
   site-url: https://www.tesselle.org
   repo-url: https://github.com/tesselle/packages
-  image: https://www.tesselle.org/images/tesselle.png
-  favicon: https://www.tesselle.org/images/icons/favicon.ico
-  twitter-card:
-    site: "@nfrerebeau"
-    creator: "@nfrerebeau"
-  open-graph: true
+  repo-actions: [edit, issue]
+
+  favicon: images/icons/favicon.ico
+  image: images/card.png
+  margin-header: |
+    ![](/images/tesselle.png)
+  open-graph:
+    image: https://www.tesselle.org/images/card.png
+
   search: false
+  navbar:
+    background: "#ffd402ff"
+    pinned: true
+    right:
+      - icon: house
+        text: Homepage
+        href: "https://www.tesselle.org"
+      - sidebar:packages
+      - icon: github
+        text: Github
+        href: https://github.com/tesselle/
+      - icon: download
+        text: R-universe
+        href: https://tesselle.r-universe.dev/
+
+  sidebar:
+    - id: packages
+      title: "Packages"
+      collapse-level: 1
+      contents:
+        - section: "Count data"
+          contents:
+            - text: tabula
+              url:  https://packages.tesselle.org/tabula/
+        - section: "Compositional data"
+          contents:
+            - text: nexus
+              url:  https://packages.tesselle.org/nexus/
+        - section: "Chronological data"
+          contents:
+            - text: aion
+              url:  https://packages.tesselle.org/aion/
+            - text: kairos
+              url:  https://packages.tesselle.org/kairos/
+        - section: "Multivariate data"
+          contents:
+            - text: arkhe
+              url:  https://packages.tesselle.org/arkhe/
+            - text: dimensio
+              url:  https://packages.tesselle.org/dimensio/
+        - section: "Signal processing"
+          contents:
+            - text: alkahest
+              url:  https://packages.tesselle.org/alkahest/
+        - section: "Data visualization"
+          contents:
+            - text: khroma
+              url:  https://packages.tesselle.org/khroma/
+            - text: isopleuros
+              url:  https://packages.tesselle.org/isopleuros/
+        - section: "Datasets"
+          contents:
+            - text: folio
+              url:  https://packages.tesselle.org/folio/
   page-footer:
     center: |
-      <a href="https://www.u-bordeaux-montainge.fr"><img src="https://www.tesselle.org/images/UBM.jpg" class="logo-institution" /></a><a href="https://www.cnrs.fr"><img src="https://www.tesselle.org/images/CNRS.png" class="logo-institution" /></a>
+      <a href="https://www.u-bordeaux-montainge.fr"><img src="https://www.tesselle.org/images/logo-ubm.svg" class="logo-institution" /></a><a href="https://www.cnrs.fr"><img src="https://www.tesselle.org/images/logo-cnrs.svg" class="logo-institution" /></a>
       <br>The tesselle project is supported by <a href="https://www.archeosciences-bordeaux.fr/" target="_blank">Archéosciences Bordeaux</a>, the <a href="https://mshs.univ-toulouse.fr/" target="_blank"><abbr title="Centre de Recherche et d'Études pour l'Art Préhistorique">CREAP</abbr></a> and the <a href="https://www.huma-num.fr/" target="_blank"><abbr title="Très Grande Infrastructure de Recherche">TGIR</abbr> Huma-Num</a>.
 
 format:
   html:
-    theme: default
+    theme: custom.scss
     include-in-header: _header.html
