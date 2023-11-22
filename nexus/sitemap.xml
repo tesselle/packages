@@ -97,6 +97,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/mean.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/metric_var.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/nexus-package.html</loc>
   </url>
   <url>
@@ -136,7 +139,7 @@
     <loc>https://packages.tesselle.org/nexus/reference/scalar.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/spread.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/scale.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/subset.html</loc>
