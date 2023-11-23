@@ -57,16 +57,32 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">burt</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">burt</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame</span></span>
-<span><span class="fu">burt</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">burt</span><span class="op">(</span><span class="va">object</span>, exclude <span class="op">=</span> <span class="cn">NULL</span>, abbrev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>object</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>.</p></dd>
+
+
+<dt>...</dt>
+<dd><p>Currently not used.</p></dd>
+
+
+<dt>exclude</dt>
+<dd><p>A <code>vector</code> of values to be excluded when forming the set of
+levels (see <code><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor()</a></code>). If <code>NULL</code> (the default), will make <code>NA</code> an extra
+level.</p></dd>
+
+
+<dt>abbrev</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the column names be abbreviated?
+If <code>FALSE</code>, these are of the form 'factor_level' but if <code>abbrev = TRUE</code> they
+are just 'level' which will suffice if the factors have distinct levels.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -95,19 +111,19 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Complete disjunctive table</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="cdt.html">cdt</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      A_a A_b B_x B_y B_z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]   1   0   1   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   0   1   0   1   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   1   0   0   0   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      a b x y z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 1 0 1 0 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 0 1 0 1 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] 1 0 0 0 1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Burt table</span></span></span>
 <span class="r-in"><span><span class="fu">burt</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     A_a A_b B_x B_y B_z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A_a   2   0   1   0   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> A_b   0   1   0   1   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B_x   1   0   1   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B_y   0   1   0   1   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> B_z   1   0   0   0   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   a b x y z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> a 2 0 1 0 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> b 0 1 0 1 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x 1 0 1 0 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> y 0 1 0 1 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> z 1 0 0 0 1</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
