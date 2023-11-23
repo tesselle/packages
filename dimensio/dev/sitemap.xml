@@ -31,6 +31,9 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/CA-class.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/MCA-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/MultivariateAnalysis.html</loc>
   </url>
   <url>
@@ -53,6 +56,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/bootstrap.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/burt.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/ca.html</loc>
@@ -97,6 +103,9 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/loadings.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/mca.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/pca.html</loc>
   </url>
   <url>
@@ -113,6 +122,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/summary.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/svd2.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/tidy.html</loc>

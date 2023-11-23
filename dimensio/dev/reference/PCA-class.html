@@ -75,6 +75,7 @@ initial dataset (active individuals only).</p></dd>
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other class: 
 <code><a href="CA-class.html">CA-class</a></code>,
+<code><a href="MCA-class.html">MCA-class</a></code>,
 <code><a href="MultivariateAnalysis.html">MultivariateAnalysis</a></code>,
 <code><a href="MultivariateBootstrap.html">MultivariateBootstrap</a></code>,
 <code><a href="MultivariateResults.html">MultivariateResults</a></code>,
@@ -96,35 +97,35 @@ initial dataset (active individuals only).</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get row coordinates</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -2.037585  0.3139840 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -2.172851  0.1173484 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 -2.341831 -0.0645878 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 -2.342034 -0.1923043 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 -2.105218  0.2156662 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 -1.580570  0.4274832 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          F1          F2  .sup</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -2.110529  0.31765423 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -2.243887  0.12532303 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 -2.410743 -0.05346423 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 -2.410428 -0.17671769 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 -2.177208  0.22148863 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 -1.658127  0.42460240 FALSE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get column coordinates</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9314769  0.3627541 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9844487 -0.1149840 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9665050 -0.2324884 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.2961740  0.4568465  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9337352  0.3565774 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9852040 -0.1054791 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9655034 -0.2372135 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.2918689  0.4196642  TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get correlations between variables and dimensions</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="get_contributions.html">get_correlations</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      F1         F2  .sup</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9314769  0.3627541 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9844487 -0.1149840 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9665050 -0.2324884 FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.2961740  0.4568465  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  0.9337352  0.3565774 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Length  0.9852040 -0.1054791 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Petal.Width   0.9655034 -0.2372135 FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Width  -0.2918689  0.4196642  TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Get eigenvalues</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="get_eigenvalues.html">get_eigenvalues</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    eigenvalues  variance cumulative</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F1   2.7709205 93.303797    93.3038</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F2   0.1988627  6.696203   100.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F1   2.7746852 93.448011   93.44801</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> F2   0.1945436  6.551989  100.00000</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
