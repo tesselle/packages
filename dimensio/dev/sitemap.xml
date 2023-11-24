@@ -28,6 +28,12 @@
     <loc>https://packages.tesselle.org/dimensio/dev/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/BootstrapCA-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/BootstrapPCA-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/CA-class.html</loc>
   </url>
   <url>
@@ -112,6 +118,12 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/predict.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/prepare.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/prepare_legend.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/reexports.html</loc>
   </url>
   <url>
@@ -130,10 +142,16 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/tidy.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_biplot.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_contributions.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_individuals.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_points.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/viz_variables.html</loc>
