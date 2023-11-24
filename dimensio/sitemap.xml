@@ -31,7 +31,16 @@
     <loc>https://packages.tesselle.org/dimensio/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/BootstrapCA-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/BootstrapPCA-class.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/CA-class.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/MCA-class.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/MultivariateAnalysis.html</loc>
@@ -58,7 +67,13 @@
     <loc>https://packages.tesselle.org/dimensio/reference/bootstrap.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/burt.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/ca.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/cdt.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/colours.html</loc>
@@ -97,10 +112,22 @@
     <loc>https://packages.tesselle.org/dimensio/reference/loadings.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/mca.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/pca.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/predict.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/prepare.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/prepare_legend.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/reexports.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/screeplot.html</loc>
@@ -112,13 +139,22 @@
     <loc>https://packages.tesselle.org/dimensio/reference/summary.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/svd2.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/viz_biplot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/viz_contributions.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/viz_individuals.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/viz_points.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/viz_variables.html</loc>
