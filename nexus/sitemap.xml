@@ -67,6 +67,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/barplot.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/chemistry.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/closure.html</loc>
   </url>
   <url>
@@ -100,6 +103,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/metric_var.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/mix.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/nexus-package.html</loc>
   </url>
   <url>
@@ -110,6 +116,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/perturbation.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/petrography.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/plot.html</loc>
