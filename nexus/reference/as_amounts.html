@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">nexus</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,6 +29,9 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
@@ -102,8 +105,8 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="totals.html">get_totals</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 200 319 198 364 225 306 244 207 327 253  98 300 393 369 275 204 329 230 260</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 147 282 265 156 292 144 267 221 383 214 240 116 189 221 229 184 286 284 275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 280</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
 <span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu">as_amounts</span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
@@ -111,13 +114,13 @@
 <span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            V1        V2        V3         V4         V5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.40000000 0.1750000 0.0400000 0.35000000 0.03500000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.21943574 0.1128527 0.2539185 0.22884013 0.18495298</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.24747475 0.4141414 0.2727273 0.01515152 0.05050505</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.21428571 0.1318681 0.1648352 0.21703297 0.27197802</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.08888889 0.2444444 0.0400000 0.21333333 0.41333333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.30392157 0.1470588 0.1307190 0.27450980 0.14379085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             V1         V2         V3         V4         V5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.095238095 0.15646259 0.22448980 0.39455782 0.12925170</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.269503546 0.30851064 0.06737589 0.17021277 0.18439716</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.177358491 0.24150943 0.26415094 0.07547170 0.24150943</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.403846154 0.05128205 0.05769231 0.47435897 0.01282051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.328767123 0.27054795 0.20890411 0.01369863 0.17808219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.006944444 0.45138889 0.07638889 0.15972222 0.30555556</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

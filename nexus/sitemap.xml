@@ -28,6 +28,9 @@
     <loc>https://packages.tesselle.org/nexus/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/news/index.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/pull_request_template.html</loc>
   </url>
   <url>
