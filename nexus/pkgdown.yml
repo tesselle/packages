@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   bibliography: bibliography.html
   nexus: nexus.html
-last_built: 2023-11-27T11:14Z
+last_built: 2023-11-27T11:24Z
 urls:
   reference: https://packages.tesselle.org/nexus/reference
   article: https://packages.tesselle.org/nexus/articles
