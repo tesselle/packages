@@ -65,7 +65,10 @@
 <span><span class="fu">seriate_refine</span><span class="op">(</span><span class="va">object</span>, <span class="va">cutoff</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fl">1</span>, n <span class="op">=</span> <span class="fl">30</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for BootstrapCA</span></span>
-<span><span class="fu">seriate_refine</span><span class="op">(</span><span class="va">object</span>, <span class="va">cutoff</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fl">1</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">seriate_refine</span><span class="op">(</span><span class="va">object</span>, <span class="va">cutoff</span>, margin <span class="op">=</span> <span class="fl">1</span>, axes <span class="op">=</span> <span class="fl">1</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for RefinePermutationOrder</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -98,13 +101,19 @@ used.</p></dd>
 <dd><p>A non-negative <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> giving the number of bootstrap
 replications.</p></dd>
 
+
+<dt>x</dt>
+<dd><p>A <code><a href="RefinePermutationOrder-class.html">RefinePermutationOrder</a></code> object</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <code><a href="RefinePermutationOrder-class.html">RefinePermutationOrder</a></code> object.</p>
-    </div>
+<ul><li><p><code>seriate_refine()</code> returns a <code><a href="RefinePermutationOrder-class.html">RefinePermutationOrder</a></code> object.</p></li>
+<li><p><code><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist()</a></code> is called it for its side-effects: it results in a histogram
+being displayed (invisibly returns <code>x</code>).</p></li>
+</ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p><code>seriate_refine()</code> allows to identify samples that are subject to
@@ -119,6 +128,12 @@ a given <code>cutoff</code> value.</p>
 the CA are highly stable and which produces an ordering consistent with the
 assumptions of frequency seriation."</p>
     </div>
+    <div class="section level2">
+    <h2 id="methods-by-class-">Methods (by class)<a class="anchor" aria-label="anchor" href="#methods-by-class-"></a></h2>
+    
+<ul><li><p><code>hist(RefinePermutationOrder)</code>: Compute and plot a histogram of convex hull
+maximum dimension length.</p></li>
+</ul></div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Peeples, M. A., &amp; Schachner, G. (2012). Refining correspondence
