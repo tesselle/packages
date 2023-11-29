@@ -44,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>14C Calibration Curve</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/ananke/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/ananke/blob/HEAD/R/radiocarbon.R" class="external-link"><code>R/radiocarbon.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/ananke/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/ananke/blob/HEAD/R/c14_curve.R" class="external-link"><code>R/c14_curve.R</code></a></small>
       <div class="d-none name"><code>c14_curve.Rd</code></div>
     </div>
 
@@ -54,18 +54,18 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">c14_curve</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">c14_curve</span><span class="op">(</span><span class="va">name</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for character</span></span>
-<span><span class="fu">c14_curve</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span>
+<span><span class="fu">c14_curve</span><span class="op">(</span><span class="va">name</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for CalibratedAges</span></span>
-<span><span class="fu">c14_curve</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">c14_curve</span><span class="op">(</span><span class="va">name</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>object</dt>
+    <dl><dt>name</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector naming calibration curves (see details).</p></dd>
 
 
@@ -77,9 +77,7 @@
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <code>list</code> of three-column <code><a href="data.frame.html">data.frame</a></code>: calibrated age BP, uncalibrated
-age BP and standard deviation.</p>
-    </div>
+<p>A <code>list</code> of three-column <code><a href="data.frame.html">data.frame</a></code>:</p><table class="table table"><tr><td><code>CALBP</code></td><td>Calibrated age BP</td></tr><tr><td><code>AGE</code></td><td>Uncalibrated radiocarbon age</td></tr><tr><td><code>ERROR</code></td><td>Standard deviation</td></tr></table></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The following calibration curves are available:</p>
@@ -155,7 +153,7 @@ Years cal BP. <em>Radiocarbon</em>, 55(4): 1869‑1887.
 <a href="https://doi.org/10.2458/azu_js_rc.55.16947" class="external-link">doi:10.2458/azu_js_rc.55.16947</a>
 .</p>
 <p>Stuiver, Minze, Paula J. Reimer, Edouard Bard, J. Warren Beck, G. S. Burr,
-Konrad A. Hughen, Bernd Kromer, Gerry McCormac, Johannes Van Der Plicht, and
+Konrad A. Hughen, Bernd Kromer, Gerry McCormac, Johannes van der Plicht, and
 Marco Spurk (1998). INTCAL98 Radiocarbon Age Calibration, 24,000-0 cal BP.
 <em>Radiocarbon</em>, 40(3): 1041‑1083. <a href="https://doi.org/10.1017/S0033822200019123" class="external-link">doi:10.1017/S0033822200019123</a>
 .</p>

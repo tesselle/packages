@@ -44,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>14C Calibration</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/ananke/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/ananke/blob/HEAD/R/radiocarbon.R" class="external-link"><code>R/radiocarbon.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/ananke/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/ananke/blob/HEAD/R/c14_calibrate.R" class="external-link"><code>R/c14_calibrate.R</code></a></small>
       <div class="d-none name"><code>c14_calibrate.Rd</code></div>
     </div>
 
@@ -54,11 +54,11 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">c14_calibrate</span><span class="op">(</span><span class="va">ages</span>, <span class="va">errors</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">c14_calibrate</span><span class="op">(</span><span class="va">values</span>, <span class="va">errors</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
 <span><span class="fu">c14_calibrate</span><span class="op">(</span></span>
-<span>  <span class="va">ages</span>,</span>
+<span>  <span class="va">values</span>,</span>
 <span>  <span class="va">errors</span>,</span>
 <span>  names <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  curves <span class="op">=</span> <span class="st">"intcal20"</span>,</span>
@@ -76,13 +76,14 @@
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>ages</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the BP ages to be calibrated.</p></dd>
+    <dl><dt>values</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the BP ages or F14C values to be
+calibrated.</p></dd>
 
 
 <dt>errors</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the standard deviation of the ages
-to be calibrated.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the standard deviation of the
+values to be calibrated.</p></dd>
 
 
 <dt>...</dt>
@@ -90,13 +91,13 @@ to be calibrated.</p></dd>
 
 
 <dt>names</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector specifying the names of the ages (e.g.
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector specifying the names of the samples (e.g.
 laboratory codes).</p></dd>
 
 
 <dt>curves</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector specifying the calibration curve to be
-used. Different curves can be specified per dated sample.</p></dd>
+used. Different curves can be specified per sample.</p></dd>
 
 
 <dt>reservoir_offsets</dt>
@@ -130,7 +131,7 @@ resolution (in years) of the calibration.</p></dd>
 
 <dt>F14C</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the calibration be carried out in
-F14C space? If <code>TRUE</code>, <code>ages</code> must be expressed as F14C ratios.</p></dd>
+F14C space? If <code>TRUE</code>, <code>values</code> must be expressed as F14C.</p></dd>
 
 
 <dt>drop</dt>
@@ -186,7 +187,7 @@ calibration values will be removed.</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Calibrate multiple dates</span></span></span>
 <span class="r-in"><span><span class="va">cal</span> <span class="op">&lt;-</span> <span class="fu">c14_calibrate</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  ages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5000</span>, <span class="fl">4500</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5000</span>, <span class="fl">4500</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  errors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">45</span>, <span class="fl">35</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"X"</span>, <span class="st">"Y"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
