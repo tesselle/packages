@@ -28,6 +28,12 @@
     <loc>https://packages.tesselle.org/janus/reference/janus-package.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_chi2_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_chi_server.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/janus/reference/module_count_server.html</loc>
   </url>
   <url>
