@@ -34,6 +34,24 @@
     <loc>https://packages.tesselle.org/janus/reference/module_chi_server.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_coda_plot_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_coda_plot_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_coda_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_coda_summary_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_coda_summary_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_coda_ui.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/janus/reference/module_count_server.html</loc>
   </url>
   <url>
@@ -61,6 +79,12 @@
     <loc>https://packages.tesselle.org/janus/reference/module_import_ui.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_logratio_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_logratio_ui.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/janus/reference/module_missing_server.html</loc>
   </url>
   <url>
@@ -71,6 +95,12 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/janus/reference/module_multivar_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_pca_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_pca_ui.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/janus/reference/module_prepare_server.html</loc>
@@ -89,6 +119,12 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/janus/reference/module_summary_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_ternary_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/janus/reference/module_ternary_ui.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/janus/reference/run_app.html</loc>
