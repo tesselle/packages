@@ -2,15 +2,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "R Packages & Archaeology",
+    "title": "Welcome",
     "section": "",
-    "text": "Quickly discover relevant content by searching the documentation or exploring the project bibliography.\n\n\nSearch in the documentation"
-  },
-  {
-    "objectID": "index.html#read-the-doc",
-    "href": "index.html#read-the-doc",
-    "title": "R Packages & Archaeology",
-    "section": "",
-    "text": "Quickly discover relevant content by searching the documentation or exploring the project bibliography.\n\n\nSearch in the documentation"
+    "text": "Welcome\ntesselle is a collection of R packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology. The tesselle packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.\n\n\nRead the doc\nQuickly discover relevant content by searching the documentation or exploring the project bibliography.\n\n\nSearch in the documentation \n\n\n\n\n\n\nCount data\n\n\n  \n    \n      \n        tabula\n        \n          \n        \n        Analysis and Visualization of Archaeological Count Data\n      \n    \n    \n      \n    \n  \n\nCompositional data\n\n\n  \n    \n      \n        nexus\n        \n          \n        \n        Sourcing Archaeological Materials by Chemical Composition\n      \n    \n    \n      \n    \n  \n\nChronological data\n\n\n  \n    \n      \n        kairos\n        \n          \n        \n        Analysis of Chronological Patterns from Archaeological Count Data\n      \n    \n    \n      \n    \n  \n  \n    \n      \n        aion\n        \n          \n        \n        Archaeological Time Series\n      \n    \n    \n      \n    \n  \n\nMultivariate data analysis\n\n\n  \n    \n      \n        dimensio\n        \n          \n        \n        Multivariate Data Analysis\n      \n    \n    \n      \n    \n  \n\nData visualization\n\n\n  \n    \n      \n        isopleuros\n        \n          \n        \n        Ternary Plots\n      \n    \n    \n      \n    \n  \n  \n    \n      \n        khroma\n        \n          \n        \n        Colour Schemes for Scientific Data Visualization\n      \n    \n    \n      \n    \n  \n\nTools\n\n\n  \n    \n      \n        alkahest\n        \n          \n        \n        Pre-Processing XY Data from Experimental Methods\n      \n    \n    \n      \n    \n  \n  \n    \n      \n        arkhe\n        \n          \n        \n        Tools for Cleaning Rectangular Data\n      \n    \n    \n      \n    \n  \n\nDatasets\n\n\n  \n    \n      \n        folio\n        \n          \n        \n        Datasets for Teaching Archaeology and Paleontology\n      \n    \n    \n      \n    \n  \n\n\nNo matching items"
   }
 ]
