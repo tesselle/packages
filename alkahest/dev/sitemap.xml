@@ -10,10 +10,16 @@
     <loc>https://packages.tesselle.org/alkahest/dev/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/dev/articles/baseline.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/dev/articles/bibliography.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/dev/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/dev/articles/smoothing.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/dev/authors.html</loc>
