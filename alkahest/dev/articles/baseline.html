@@ -53,9 +53,9 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/baseline.html">Baseline Estimation</a>
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
+    <a class="dropdown-item" href="../articles/baseline.html">Baseline</a>
     <a class="dropdown-item" href="../articles/smoothing.html">Smoothing</a>
+    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
   </div>
 </li>
 <li class="nav-item">
@@ -98,9 +98,9 @@ Frerebeau</h4>
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/alkahest/">alkahest</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Load data</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/alkahest/">alkahest</a></span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## Load data</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"XRD"</span><span class="op">)</span> <span class="co"># X-ray diffraction</span></span>
 <span></span>
 <span><span class="co">## Subset from 20 to 70 degrees</span></span>
@@ -111,12 +111,12 @@ Frerebeau</h4>
 <div class="section level2">
 <h2 id="linear-baseline">Linear baseline<a class="anchor" aria-label="anchor" href="#linear-baseline"></a>
 </h2>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot spectrum</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, ylim <span class="op">=</span> <span class="va">ylim</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Estimate the baseline</span></span>
+<span><span class="co">## Estimate the baseline between 25 and 34 degrees</span></span>
 <span><span class="va">baseline</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/baseline_linear.html">baseline_linear</a></span><span class="op">(</span><span class="va">XRD</span>, points <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">34</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Plot the baseline</span></span>
@@ -135,7 +135,7 @@ Linear baseline.
 <div class="section level2">
 <h2 id="polynomial-baseline">Polynomial baseline<a class="anchor" aria-label="anchor" href="#polynomial-baseline"></a>
 </h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot spectrum</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, ylim <span class="op">=</span> <span class="va">ylim</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span>
@@ -151,15 +151,15 @@ Linear baseline.
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">corrected</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="baseline_files/figure-html/polynomial-1.png" alt="Polynomial baseline" width="672"><p class="caption">
-Polynomial baseline
+<img src="baseline_files/figure-html/polynomial-1.png" alt="Polynomial baseline." width="672"><p class="caption">
+Polynomial baseline.
 </p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="rolling-ball-baseline">Rolling Ball baseline<a class="anchor" aria-label="anchor" href="#rolling-ball-baseline"></a>
 </h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot spectrum</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, ylim <span class="op">=</span> <span class="va">ylim</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span>
@@ -175,15 +175,15 @@ Polynomial baseline
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">corrected</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="baseline_files/figure-html/rollingball-1.png" alt="Rolling Ball baseline" width="672"><p class="caption">
-Rolling Ball baseline
+<img src="baseline_files/figure-html/rollingball-1.png" alt="Rolling Ball baseline." width="672"><p class="caption">
+Rolling Ball baseline.
 </p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="rubberband-baseline">Rubberband baseline<a class="anchor" aria-label="anchor" href="#rubberband-baseline"></a>
 </h2>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot spectrum</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, ylim <span class="op">=</span> <span class="va">ylim</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span>
@@ -199,15 +199,15 @@ Rolling Ball baseline
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">corrected</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="baseline_files/figure-html/rubberband-1.png" alt="Rubberband baseline" width="672"><p class="caption">
-Rubberband baseline
+<img src="baseline_files/figure-html/rubberband-1.png" alt="Rubberband baseline." width="672"><p class="caption">
+Rubberband baseline.
 </p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="snip-baseline">SNIP baseline<a class="anchor" aria-label="anchor" href="#snip-baseline"></a>
 </h2>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot spectrum</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, ylim <span class="op">=</span> <span class="va">ylim</span>, xlab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">theta</span><span class="op">)</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span>
@@ -223,15 +223,15 @@ Rubberband baseline
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">corrected</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="baseline_files/figure-html/snip-1.png" alt="SNIP baseline" width="672"><p class="caption">
-SNIP baseline
+<img src="baseline_files/figure-html/snip-1.png" alt="SNIP baseline." width="672"><p class="caption">
+SNIP baseline.
 </p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="s-peak-filling">4S Peak Filling<a class="anchor" aria-label="anchor" href="#s-peak-filling"></a>
 </h2>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot spectrum</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">XRD</span>, type <span class="op">=</span> <span class="st">"l"</span>, ylim <span class="op">=</span> <span class="va">ylim</span>, xlab <span class="op">=</span> <span class="st">"Energy (keV)"</span>, ylab <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span>
@@ -248,8 +248,8 @@ SNIP baseline
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">corrected</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="baseline_files/figure-html/peakfilling-1.png" alt="4S Peak Filling" width="672"><p class="caption">
-4S Peak Filling
+<img src="baseline_files/figure-html/peakfilling-1.png" alt="4S Peak Filling." width="672"><p class="caption">
+4S Peak Filling.
 </p>
 </div>
 </div>
