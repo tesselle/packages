@@ -62,10 +62,19 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span>, <span class="st">"4S"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">signal_correct</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  <span class="va">y</span>,</span>
+<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"polynomial"</span>, <span class="st">"asls"</span>, <span class="st">"rollingball"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span>, <span class="st">"4S"</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for ANY,missing</span></span>
-<span><span class="fu">signal_correct</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span>, <span class="st">"4S"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">signal_correct</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"polynomial"</span>, <span class="st">"asls"</span>, <span class="st">"rollingball"</span>, <span class="st">"rubberband"</span>, <span class="st">"SNIP"</span>, <span class="st">"4S"</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -81,8 +90,7 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 
 <dt>method</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method for baseline
-estimation. It must be one of "<code>linear</code>", "<code>rubberband</code>", "<code>SNIP</code>" or "<code>4S</code>"
-(see details). Any unambiguous substring can be given.</p></dd>
+estimation (see details). Any unambiguous substring can be given.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -93,8 +101,19 @@ estimation. It must be one of "<code>linear</code>", "<code>rubberband</code>", 
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Available methods for baseline estimation:</p><dl><dt><code>linear</code></dt>
+    <p>Available methods for baseline estimation:</p><dl><dt><code>asls</code></dt>
+<dd><p>Asymmetric Least Squares Smoothing (see <code><a href="baseline_asls.html">baseline_asls()</a></code>).</p></dd>
+
+<dt><code>linear</code></dt>
 <dd><p>Linear baseline estimation (see <code><a href="baseline_linear.html">baseline_linear()</a></code>).</p></dd>
+
+<dt><code>polynomial</code></dt>
+<dd><p>Polynomial baseline estimation (see
+<code><a href="baseline_polynomial.html">baseline_polynomial()</a></code>).</p></dd>
+
+<dt><code>rollingball</code></dt>
+<dd><p>Rolling ball baseline estimation (see
+<code><a href="baseline_rollingball.html">baseline_rollingball()</a></code>).</p></dd>
 
 <dt><code>rubberband</code></dt>
 <dd><p>Rubberband baseline estimation (see
