@@ -85,6 +85,9 @@
     <loc>https://packages.tesselle.org/nexus/dev/reference/groups.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/dev/reference/hist.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/hongite.html</loc>
   </url>
   <url>
@@ -158,6 +161,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/slides.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/dev/reference/split.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/subset.html</loc>
