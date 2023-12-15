@@ -24,12 +24,6 @@
 <li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
-  </div>
-</li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
@@ -158,8 +152,8 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="totals.html">get_totals</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 285 185 337 317 237 293 192 325 259 328 287 212 301 279 240 188  37 239 347</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 251</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 140 202 336 234 109 209 284 267 218 285 231 314 339 260 285 226 215 276 267</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 208</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
 <span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
@@ -167,13 +161,13 @@ explicitly specifying the columns to be used.</p>
 <span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            V1        V2         V3         V4         V5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.04561404 0.3263158 0.30526316 0.21403509 0.10877193</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.08108108 0.1351351 0.03783784 0.33513514 0.41081081</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.23145401 0.1246291 0.18100890 0.20178042 0.26112760</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.19873817 0.2239748 0.17350158 0.16088328 0.24290221</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.28691983 0.2616034 0.13080169 0.23628692 0.08438819</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.22184300 0.2730375 0.34129693 0.08191126 0.08191126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2         V3        V4         V5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.15000000 0.27142857 0.23571429 0.1071429 0.23571429</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.00990099 0.23267327 0.03960396 0.2574257 0.46039604</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.29166667 0.14880952 0.25892857 0.0625000 0.23809524</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.38888889 0.21794872 0.07692308 0.3034188 0.01282051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.14678899 0.01834862 0.45871560 0.1284404 0.24770642</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.11004785 0.28708134 0.02392344 0.1531100 0.42583732</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -10,9 +10,6 @@
     <loc>https://packages.tesselle.org/nexus/dev/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/dev/articles/bibliography.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/nexus/dev/articles/index.html</loc>
   </url>
   <url>
@@ -140,6 +137,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/powering.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/dev/reference/quantile.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/reexports.html</loc>

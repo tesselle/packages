@@ -24,12 +24,6 @@
 <li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
-  </div>
-</li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
@@ -102,6 +96,7 @@ London: Chapman and Hall, p. 64-91.</p>
 <code><a href="mahalanobis.html">mahalanobis</a>()</code>,
 <code><a href="margin.html">margin</a>()</code>,
 <code><a href="metric_var.html">metric_var</a>()</code>,
+<code><a href="quantile.html">quantile</a>()</code>,
 <code><a href="scale.html">scale</a>()</code>,
 <code><a href="variation.html">variation</a>()</code></p></div>
     </div>
@@ -122,6 +117,15 @@ London: Chapman and Hall, p. 64-91.</p>
 <span class="r-in"><span><span class="fu">mean</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          A          B          C          D          E </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.48941415 0.21966082 0.09881294 0.10405382 0.08805827 </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Quantile</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="quantile.html">quantile</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          A         B     C     D     E</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0%   0.323 0.0520000 0.007 0.055 0.037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25%  0.423 0.1290000 0.038 0.083 0.065</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50%  0.452 0.2380000 0.097 0.095 0.085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75%  0.486 0.3233233 0.234 0.109 0.098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 100% 0.523 0.4660000 0.429 0.158 0.132</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Metric variance</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="metric_var.html">metric_var</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>

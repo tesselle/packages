@@ -53,12 +53,6 @@
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
-  </div>
-</li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
@@ -100,13 +94,14 @@ Frerebeau</h4>
     
 <p>Provenance studies rely on the identification of probable sources,
 such that the variability between two sources is greater than the
-internal variability of a single source <span class="citation">(the
-so-called <em>provenance postulate</em>, Weigand, Harbottle, and Sayre
-1977)</span>. This assumes that a unique signature can be identified for
-each source on the basis of several criteria.</p>
+internal variability of a single source (the so-called <em>provenance
+postulate</em>; Weigand, Harbottle, and Sayre 1977). This assumes that a
+unique signature can be identified for each source on the basis of
+several criteria.</p>
 <p><strong>nexus</strong> is designed for chemical fingerprinting and
 source tracking of ancient materials. It provides provides tools for
-exploration and analysis of compositional data in the framework of <span class="citation">Aitchison (1986)</span>.</p>
+exploration and analysis of compositional data in the framework of
+Aitchison (1986).</p>
 <div class="section level2">
 <h2 id="get-started">Get started<a class="anchor" aria-label="anchor" href="#get-started"></a>
 </h2>
@@ -119,8 +114,7 @@ exploration and analysis of compositional data in the framework of <span class="
 different special types of matrix. The most basic class represents a
 compositional data matrix, i.e. quantitative (positive) descriptions of
 the parts of some whole, carrying relative, rather than absolute,
-information <span class="citation">(Aitchison 1986; Greenacre
-2021)</span>.</p>
+information (Aitchison 1986; Greenacre 2021).</p>
 <p><em>It assumes that you keep your data tidy</em>: each variable must
 be saved in its own column and each observation (sample) must be saved
 in its own row.</p>
@@ -263,10 +257,9 @@ calculations (read the documentation carefully).</p>
 <h2 id="log-ratio-transformations">Log-ratio transformations<a class="anchor" aria-label="anchor" href="#log-ratio-transformations"></a>
 </h2>
 <p>The package provides the following transformations: centered log
-ratio <span class="citation">(<em>CLR</em>, Aitchison 1986)</span>,
-additive log ratio <span class="citation">(<em>ALR</em>, Aitchison
-1986)</span>, isometric log ratio <span class="citation">(<em>ILR</em>,
-Egozcue et al. 2003)</span> and pivot log-ratio <span class="citation">(<em>PLR</em>, Hron et al. 2017)</span>.</p>
+ratio (<em>CLR</em>, Aitchison 1986), additive log ratio (<em>ALR</em>,
+Aitchison 1986), isometric log ratio (<em>ILR</em>, Egozcue et al. 2003)
+and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## CLR</span></span>
 <span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
@@ -384,44 +377,25 @@ differences between groups.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-aitchison1986" class="csl-entry">
-Aitchison, J. 1986. <em>The <span>Statistical Analysis</span> of
-<span>Compositional Data</span></em>. Monographs on Statistics and
-Applied Probability. <span>Londres, UK ; New York, USA</span>:
-<span>Chapman and Hall</span>.
-</div>
-<div id="ref-egozcue2003" class="csl-entry">
-Egozcue, J. J., V. Pawlowsky-Glahn, G. Mateu-Figueras, and C.
-Barceló-Vidal. 2003. <span>“Isometric <span>Logratio
-Transformations</span> for <span>Compositional Data
-Analysis</span>.”</span> <em>Mathematical Geology</em> 35 (3): 279–300.
-<a href="https://doi.org/10.1023/A:1023818214614" class="external-link">https://doi.org/10.1023/A:1023818214614</a>.
-</div>
-<div id="ref-greenacre2021" class="csl-entry">
-Greenacre, Michael. 2021. <span>“Compositional <span>Data
-Analysis</span>.”</span> <em>Annual Review of Statistics and Its
-Application</em> 8 (1): 271–99. <a href="https://doi.org/10.1146/annurev-statistics-042720-124436" class="external-link">https://doi.org/10.1146/annurev-statistics-042720-124436</a>.
-</div>
-<div id="ref-hron2017" class="csl-entry">
-Hron, Karel, Peter Filzmoser, Patrice de Caritat, Eva Fišerová, and
-Alžběta Gardlo. 2017. <span>“Weighted <span>Pivot Coordinates</span> for
-<span>Compositional Data</span> and <span>Their Application</span> to
-<span>Geochemical Mapping</span>.”</span> <em>Mathematical
-Geosciences</em> 49 (6): 797–814. <a href="https://doi.org/10.1007/s11004-017-9684-z" class="external-link">https://doi.org/10.1007/s11004-017-9684-z</a>.
-</div>
-<div id="ref-weigand1977" class="csl-entry">
-Weigand, P. C., G. Harbottle, and E. Sayre. 1977. <span>“Turquoise
-<span>Sources</span> and <span>Source Analysisis</span>:
-<span>Mesoamerica</span> and the <span>Southwestern
-U</span>.<span>S</span>.<span>A</span>.”</span> In <em>Exchange
-<span>Systems</span> in <span>Prehistory</span></em>, edited by J.
-Ericson and T. K. Earle, 15–34. <span>New York, NY</span>:
-<span>Academic Press</span>.
-</div>
-</div>
+<p>Aitchison, J. (1986). <em>The Statistical Analysis of Compositional
+Data. Monographs on Statistics and Applied Probability</em>. Londres, UK
+; New York, USA: Chapman and Hall.</p>
+<p>Egozcue, J. J., Pawlowsky-Glahn, V., Mateu-Figueras, G. and
+Barceló-Vidal, C. (2003). Isometric Logratio Transformations for
+Compositional Data Analysis. <em>Mathematical Geology</em>, 35(3):
+279-300. DOI: <a href="https://doi.org/10.1023/A:1023818214614" class="external-link">10.1023/A:1023818214614</a>.</p>
+<p>Greenacre, M. (2021). Compositional Data Analysis. <em>Annual Review
+of Statistics and Its Application</em>, 8(1): 271-299. DOI: <a href="https://doi.org/10.1146/annurev-statistics-042720-124436" class="external-link">10.1146/annurev-statistics-042720-124436</a>.</p>
+<p>Hron, K., Filzmoser, P., de Caritat, P., Fišerová, E. and Gardlo, A.
+(2017). Weighted Pivot Coordinates for Compositional Data and Their
+Application to Geochemical Mapping. <em>Mathematical Geosciences</em>,
+49(6): 797-814. <a href="https://doi.org/10.1007/s11004-017-9684-z" class="external-link">10.1007/s11004-017-9684-z</a>.</p>
+<p>Weigand, P. C., Harbottle, G. and Sayre, E. (1977). Turquoise Sources
+and Source Analysisis: Mesoamerica and the Southwestern U.S.A. In
+<em>Exchange Systems in Prehistory</em>, edited by J. Ericson and T. K.
+Earle, 15-34. New York, NY: Academic Press.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

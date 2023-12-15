@@ -24,12 +24,6 @@
 <li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
-  </div>
-</li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
@@ -113,8 +107,8 @@ row sums assigned.</p></li>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Row sums are internally stored before coercing to relative frequencies</span></span></span>
 <span class="r-in"><span><span class="fu">get_totals</span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 177 213 237 301 280 271 289 234 212 245 148 256 335 273 252 221 178 182 160</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 287</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  88 145 296 177 227 275 356 284 222 164 304 147 308 252 218 243 232 288 357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 164</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## This allows to restore the source data</span></span></span>
 <span class="r-in"><span><span class="va">A2</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
@@ -122,13 +116,13 @@ row sums assigned.</p></li>
 <span class="r-in"><span><span class="co">## Coerce to a data.frame</span></span></span>
 <span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2         V3         V4        V5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.04519774 0.21468927 0.12429379 0.51977401 0.0960452</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.07511737 0.30516432 0.36619718 0.09859155 0.1549296</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.16455696 0.14767932 0.05063291 0.26582278 0.3713080</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.08970100 0.28571429 0.17940199 0.29568106 0.1495017</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.01428571 0.08928571 0.21428571 0.32500000 0.3571429</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.13653137 0.07380074 0.21771218 0.28782288 0.2841328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            V1         V2         V3         V4          V5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S1 0.04545455 0.04545455 0.60227273 0.04545455 0.261363636</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S2 0.08965517 0.09655172 0.04827586 0.29655172 0.468965517</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S3 0.33445946 0.10135135 0.19256757 0.31756757 0.054054054</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S4 0.24858757 0.32203390 0.08474576 0.25988701 0.084745763</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S5 0.35242291 0.01321586 0.24669604 0.14096916 0.246696035</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S6 0.22181818 0.10909091 0.30181818 0.36363636 0.003636364</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -24,12 +24,6 @@
 <li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
-  </div>
-</li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
@@ -115,6 +109,7 @@ covariance determinant). Only used if <code>robust</code> is <code>TRUE</code>.<
 <code><a href="margin.html">margin</a>()</code>,
 <code><a href="mean.html">mean</a>()</code>,
 <code><a href="metric_var.html">metric_var</a>()</code>,
+<code><a href="quantile.html">quantile</a>()</code>,
 <code><a href="scale.html">scale</a>()</code>,
 <code><a href="variation.html">variation</a>()</code></p></div>
     </div>
@@ -135,13 +130,13 @@ covariance determinant). Only used if <code>robust</code> is <code>TRUE</code>.<
 <span class="r-in"><span><span class="fu">mahalanobis</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         H1         H2         H3         H4         H5         H6         H7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  4.4350697  0.5293921  2.2463414  1.3647605 13.0184551  5.8324688 18.0231947 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4.2525958  0.4286055  2.3324517  1.2578978  8.9748970  6.7279447 14.7773019 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         H8         H9        H10        H11        H12        H13        H14 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25.4910136  1.4264228 18.0221709  2.0490574  5.4416081  5.0114990  6.3602144 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19.3878211  1.5240774 17.8702964  2.0029534  4.5685500  5.6547475  6.1583609 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        H15        H16        H17        H18        H19        H20        H21 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1.9635308  6.4062999  7.3866770  1.5149231  2.9208378  4.7044107  1.1393424 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2.0049518  6.1441708  8.3916283  2.0260606  3.0978041  4.1932258  1.1433319 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        H22        H23        H24        H25 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1.6158258 10.0169365  2.7827184  4.8516637 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1.7390231  9.9092094  2.3384330  3.5207077 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

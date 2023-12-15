@@ -2,9 +2,8 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  bibliography: bibliography.html
   nexus: nexus.html
-last_built: 2023-12-15T13:06Z
+last_built: 2023-12-15T14:53Z
 urls:
   reference: https://packages.tesselle.org/nexus/reference
   article: https://packages.tesselle.org/nexus/articles
