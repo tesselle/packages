@@ -54,6 +54,8 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ternary_grid</span><span class="op">(</span></span>
 <span>  primary <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  secondary <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  center <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  col.primary <span class="op">=</span> <span class="st">"darkgray"</span>,</span>
 <span>  col.secondary <span class="op">=</span> <span class="st">"lightgray"</span>,</span>
 <span>  lty.primary <span class="op">=</span> <span class="st">"dashed"</span>,</span>
@@ -73,6 +75,16 @@ grid in <code>x</code>, <code>y</code> and <code>z</code> direction.</p></dd>
 <dt>secondary</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of cells of the
 secondary grid in <code>x</code>, <code>y</code> and <code>z</code> direction.</p></dd>
+
+
+<dt>center</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the center. If <code>NULL</code>
+(the default), data are assumed not centered.</p></dd>
+
+
+<dt>scale</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the scale factor. If <code>NULL</code>
+(the default), data are assumed not scaled.</p></dd>
 
 
 <dt>col.primary, col.secondary</dt>
