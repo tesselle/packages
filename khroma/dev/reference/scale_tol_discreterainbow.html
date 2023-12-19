@@ -99,7 +99,7 @@ strings listing the name(s) of the aesthetic(s) that this scale works with.</p><
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <a href="https://ggplot2.tidyverse.org/reference/continuous_scale.html" class="external-link">continuous</a> scale.</p>
+<p>A <a href="https://ggplot2.tidyverse.org/reference/discrete_scale.html" class="external-link">discrete</a> scale.</p>
     </div>
     <div class="section level2">
     <h2 id="interpolation">Interpolation<a class="anchor" aria-label="anchor" href="#interpolation"></a></h2>
@@ -142,29 +142,20 @@ URL: <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf" class="ext
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other sequential color schemes: 
-<code><a href="scale_crameri_acton.html">scale_crameri_acton</a></code>,
-<code><a href="scale_crameri_bamako.html">scale_crameri_bamako</a></code>,
-<code><a href="scale_crameri_batlowK.html">scale_crameri_batlowK</a></code>,
-<code><a href="scale_crameri_batlowW.html">scale_crameri_batlowW</a></code>,
-<code><a href="scale_crameri_batlow.html">scale_crameri_batlow</a></code>,
-<code><a href="scale_crameri_bilbao.html">scale_crameri_bilbao</a></code>,
-<code><a href="scale_crameri_buda.html">scale_crameri_buda</a></code>,
-<code><a href="scale_crameri_davos.html">scale_crameri_davos</a></code>,
-<code><a href="scale_crameri_devon.html">scale_crameri_devon</a></code>,
-<code><a href="scale_crameri_grayC.html">scale_crameri_grayC</a></code>,
-<code><a href="scale_crameri_hawaii.html">scale_crameri_hawaii</a></code>,
-<code><a href="scale_crameri_imola.html">scale_crameri_imola</a></code>,
-<code><a href="scale_crameri_lajolla.html">scale_crameri_lajolla</a></code>,
-<code><a href="scale_crameri_lapaz.html">scale_crameri_lapaz</a></code>,
-<code><a href="scale_crameri_nuuk.html">scale_crameri_nuuk</a></code>,
-<code><a href="scale_crameri_oslo.html">scale_crameri_oslo</a></code>,
-<code><a href="scale_crameri_tokyo.html">scale_crameri_tokyo</a></code>,
-<code><a href="scale_crameri_turku.html">scale_crameri_turku</a></code>,
-<code><a href="scale_tol_YlOrBr.html">scale_tol_YlOrBr</a></code>,
-<code><a href="scale_tol_incandescent.html">scale_tol_incandescent</a></code>,
-<code><a href="scale_tol_iridescent.html">scale_tol_iridescent</a></code>,
-<code><a href="scale_tol_smoothrainbow.html">scale_tol_smoothrainbow</a></code></p>
+    <div class="dont-index"><p>Other qualitative color schemes: 
+<code><a href="scale_land.html">scale_colour_land</a>()</code>,
+<code><a href="scale_soil.html">scale_colour_soil</a>()</code>,
+<code><a href="scale_stratigraphy.html">scale_colour_stratigraphy</a>()</code>,
+<code><a href="scale_logical_discrete.html">scale_logical_discrete</a></code>,
+<code><a href="scale_okabeito_discrete.html">scale_okabeito_discrete</a></code>,
+<code><a href="scale_tol_bright.html">scale_tol_bright</a></code>,
+<code><a href="scale_tol_dark.html">scale_tol_dark</a></code>,
+<code><a href="scale_tol_highcontrast.html">scale_tol_highcontrast</a></code>,
+<code><a href="scale_tol_light.html">scale_tol_light</a></code>,
+<code><a href="scale_tol_mediumcontrast.html">scale_tol_mediumcontrast</a></code>,
+<code><a href="scale_tol_muted.html">scale_tol_muted</a></code>,
+<code><a href="scale_tol_pale.html">scale_tol_pale</a></code>,
+<code><a href="scale_tol_vibrant.html">scale_tol_vibrant</a></code></p>
 <p>Other Paul Tol's color schemes: 
 <code><a href="scale_tol_BuRd.html">scale_tol_BuRd</a></code>,
 <code><a href="scale_tol_PRGn.html">scale_tol_PRGn</a></code>,
@@ -190,21 +181,23 @@ URL: <a href="https://personal.sron.nl/~pault/data/colourschemes.pdf" class="ext
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">faithfuld</span>, package <span class="op">=</span> <span class="st">"ggplot2"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">mpg</span>, package <span class="op">=</span> <span class="st">"ggplot2"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span>, fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_raster</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="scale_tol_YlOrBr.html">scale_fill_YlOrBr</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">displ</span>, <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="scale_tol_bright.html">scale_colour_bright</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="scale_tol_discreterainbow-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span>, fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_raster</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="scale_tol_iridescent.html">scale_fill_iridescent</a></span><span class="op">(</span>reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">displ</span>, <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="scale_tol_vibrant.html">scale_colour_vibrant</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="scale_tol_discreterainbow-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span>, fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_raster</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="scale_tol_smoothrainbow.html">scale_fill_smoothrainbow</a></span><span class="op">(</span>range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">diamonds</span>, package <span class="op">=</span> <span class="st">"ggplot2"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">clarity</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="scale_tol_discrete.html">scale_fill_muted</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="scale_tol_discreterainbow-3.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
