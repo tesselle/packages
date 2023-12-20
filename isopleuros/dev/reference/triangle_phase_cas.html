@@ -90,146 +90,17 @@ mass?</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Ceramic phase diagram</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, xlab <span class="op">=</span> <span class="st">"CaO"</span>, ylab <span class="op">=</span> <span class="st">"Al2O3"</span>, zlab <span class="op">=</span> <span class="st">"SiO2"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2 0.4 0.6 0.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8 0.6 0.4 0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2 0.4 0.6 0.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8 0.6 0.4 0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8 0.6 0.4 0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2 0.4 0.6 0.8</span>
 <span class="r-in"><span><span class="fu">triangle_phase_ceramic</span><span class="op">(</span>symbol <span class="op">=</span> <span class="cn">TRUE</span>, mol <span class="op">=</span> <span class="cn">TRUE</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="triangle_phase_cas-1.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 2 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 2 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 1 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 2 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 3 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2 2 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 1 0 2 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 0 3 1 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 2 1 2 1 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 1 0 2 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 1 0 3 1 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 2 1 2 1 0</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, xlab <span class="op">=</span> <span class="st">"CaO"</span>, ylab <span class="op">=</span> <span class="st">"Al2O3"</span>, zlab <span class="op">=</span> <span class="st">"SiO2"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2 0.4 0.6 0.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8 0.6 0.4 0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2 0.4 0.6 0.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8 0.6 0.4 0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8 0.6 0.4 0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0 0 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2 0.4 0.6 0.8</span>
 <span class="r-in"><span><span class="fu">triangle_phase_ceramic</span><span class="op">(</span>symbol <span class="op">=</span> <span class="cn">TRUE</span>, mol <span class="op">=</span> <span class="cn">FALSE</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="triangle_phase_cas-2.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2015741 0.4827708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.0000000 0.4319235 0.5172292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2015741 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.7179608</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.0000000 0.4319235 0.2820392</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4827708 0.2015741 0.4090333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.3718524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.5172292 0.4319235 0.2191143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2015741 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3665023 0.7179608 1.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4319235 0.2820392 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2015741 0.4827708 0.0000000 0.4090333 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.0000000 0.7179608 0.3718524 1.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.0000000 0.4319235 0.5172292 0.2820392 0.2191143 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2015741 0.4827708 0.0000000 0.4090333 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.0000000 0.7179608 0.3718524 1.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.0000000 0.4319235 0.5172292 0.2820392 0.2191143 0.0000000</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## CAS diagram</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="ternary_plot.html">ternary_plot</a></span><span class="op">(</span><span class="cn">NULL</span>, axes <span class="op">=</span> <span class="cn">FALSE</span>, ann <span class="op">=</span> <span class="cn">FALSE</span>, frame.plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
 <span class="r-in"><span><span class="fu">triangle_phase_cas</span><span class="op">(</span>mol <span class="op">=</span> <span class="cn">FALSE</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="triangle_phase_cas-3.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2015741 0.4827708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.0000000 0.4319235 0.5172292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2015741 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.3665023 0.7179608</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.0000000 0.4319235 0.2820392</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2015741 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3665023 0.7179608 0.7724242</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4319235 0.2820392 0.2275758</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2015741 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3665023 0.7724242 1.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4319235 0.2275758 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.20157413 0.00000000 0.08396864</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3665023 1.0000000 0.9160314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4319235 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.20157413 0.08396864 0.40903329</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3665023 0.9160314 0.3718524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4319235 0.0000000 0.2191143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2015741 0.4090333 0.4827708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3665023 0.3718524 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4319235 0.2191143 0.5172292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4090333 0.4827708 0.5833452</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3718524 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2191143 0.5172292 0.4166548</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4090333 0.5833452 0.6511739</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3718524 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2191143 0.4166548 0.3488261</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4090333 0.6511739 0.3548363</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3718524 0.0000000 0.6451637</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2191143 0.3488261 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4090333 0.3548363 0.2156845</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3718524 0.6451637 0.7843155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2191143 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.40903329 0.21568446 0.08396864</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3718524 0.7843155 0.9160314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2191143 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6511739 0.3548363 0.4852914</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.6451637 0.5147086</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3488261 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6511739 0.4852914 0.6226390</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.5147086 0.3773610</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3488261 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6511739 0.6226390 0.7368516</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.000000 0.377361 0.000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3488261 0.0000000 0.2631484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6226390 0.7368516 1.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.377361 0.000000 0.000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0000000 0.2631484 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.00000000 0.20157413 0.48277079 0.00000000 0.00000000 0.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] 0.08396864 0.40903329 0.58334518 0.65117386 0.35483626 0.21568446</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13] 0.48529145 0.62263900 0.73685156 1.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.0000000 0.3665023 0.0000000 0.7179608 0.7724242 1.0000000 0.9160314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.3718524 0.0000000 0.0000000 0.6451637 0.7843155 0.5147086 0.3773610</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15] 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1.0000000 0.4319235 0.5172292 0.2820392 0.2275758 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.2191143 0.4166548 0.3488261 0.0000000 0.0000000 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15] 0.2631484 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.00000000 0.20157413 0.48277079 0.00000000 0.00000000 0.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] 0.08396864 0.40903329 0.58334518 0.65117386 0.35483626 0.21568446</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13] 0.48529145 0.62263900 0.73685156 1.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.0000000 0.3665023 0.0000000 0.7179608 0.7724242 1.0000000 0.9160314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.3718524 0.0000000 0.0000000 0.6451637 0.7843155 0.5147086 0.3773610</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15] 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1.0000000 0.4319235 0.5172292 0.2820392 0.2275758 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.2191143 0.4166548 0.3488261 0.0000000 0.0000000 0.0000000 0.0000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15] 0.2631484 0.0000000</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
