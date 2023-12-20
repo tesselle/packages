@@ -104,10 +104,126 @@ being displayed. Invisibly returns <code>x</code>.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Data from Aitchison 1986</span></span></span>
 <span class="r-in"><span><span class="co">## Ternary plots with marginal compositions</span></span></span>
 <span class="r-in"><span><span class="fu">ternary_pairs</span><span class="op">(</span><span class="va">boxite</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  9.949411 10.184572 11.528027  8.994256 11.924076 12.293989 13.420671</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 13.519763 11.689435 10.558880 10.998788 10.424100  8.171226 10.117676</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [15]  9.443289 10.980008 10.198693 12.574636  8.961614  8.087742 11.897559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [22] 10.134061 12.741563 12.224228  9.992711</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 11.89185 12.78543 11.43399 13.53178 12.02513 13.45466 15.88400 11.98050</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 14.82466 15.54361 13.96180 11.77216 12.48535 12.62218 12.00444 11.42377</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 13.18658 15.74537 13.13929 12.65374 12.65430 12.53547 12.66572 13.73318</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 13.73474</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 13.52141 14.51485 14.05118 13.37303 12.37901 13.87338 15.27246 13.67237</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 15.62358 14.77091 15.17241 12.68907 13.30186 13.79256 13.24692 14.43994</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 12.98974 14.61671 12.87643 13.13717 14.92395 15.26592 12.64084 11.76737</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 13.37025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 15.45244 15.37058 16.62629 16.89809 15.28247 15.70842 18.71027 16.84987</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 18.17073 18.74407 17.98888 14.03940 14.91541 15.64098 14.86057 16.95581</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 17.06329 18.34424 16.75637 14.16565 16.86461 17.97828 16.83247 17.56896</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 16.80216</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.28416 14.61791 14.55957 13.04941 17.16067 17.85000 17.41295 16.68665</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 15.16954 13.99928 14.30774 16.02679 12.56339 14.69796 14.23642 13.66398</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 14.74668 17.08312 13.25002 13.05120 15.26545 12.47279 17.29978 17.58642</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 14.68920</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 16.24154 16.59519 17.89218 12.89632 17.66568 18.40550 16.74255 19.04312</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 15.98705 13.30336 15.54835 17.27509 13.38500 16.06081 15.70991 17.27161</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 14.52655 15.85857 12.98495 13.54981 18.00343 15.18959 17.26579 15.06905</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 14.29939</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 18.56104 17.57357 21.17123 16.29572 21.80911 20.84001 20.51127 23.46880</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 18.59346 16.88177 18.43461 19.11345 15.00864 18.21321 17.62359 20.28084</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 19.08205 19.90279 16.89758 14.61060 20.34454 17.88838 22.99104 22.49844</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 17.96978</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 19.41240 20.83314 17.74624 19.40240 17.81540 20.14316 19.81560 16.87500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 20.27494 19.58372 19.73699 19.50912 20.45181 20.03647 19.97066 17.96965</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 18.78235 19.85735 19.03819 21.19946 19.14854 18.78899 17.16302 16.92916</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 19.65416</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 22.18474 22.06138 20.99854 24.51676 21.99394 22.80751 24.27606 20.79681</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 23.58042 24.85146 23.40079 21.58523 22.93268 22.72166 22.40336 21.10051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 24.67247 24.92135 24.77480 22.85913 21.63855 22.12729 22.85419 25.27563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 24.69904</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.22474 25.04550 25.80500 24.22915 22.64119 23.51729 23.34143 23.73371</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 24.85119 23.61605 25.42984 23.26646 24.43241 24.82850 24.72213 26.67157</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 24.30417 23.13493 24.27917 23.73245 25.51959 26.94702 22.80929 21.65761</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 24.04358</span>
 <span class="r-plt img"><img src="ternary_pairs-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Ternary plots with endite</span></span></span>
 <span class="r-in"><span><span class="fu">ternary_pairs</span><span class="op">(</span><span class="va">boxite</span>, margin <span class="op">=</span> <span class="st">"E"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 43.5 41.1 41.5 33.9 46.5 45.3 33.2 40.8 33.0 28.2 33.9 48.7 37.8 42.0 44.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 39.7 39.3 34.1 36.2 39.5 39.5 33.0 42.3 39.9 37.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 25.1 27.5 20.1 37.8 16.0 19.4 25.2 15.1 30.8 38.6 31.5 19.3 37.1 26.6 26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 23.2 28.1 26.7 35.3 36.0 22.5 33.5 16.6 19.0 30.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 14.7 13.9 20.6 11.1 15.6 14.8 15.2 21.7 15.1 12.1 15.4 13.4 10.4 13.7 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 20.6 13.0 13.6 11.2  9.4 18.7 17.7 16.9 13.4 11.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 10.0  9.5 11.1 11.5 14.3 13.5 17.1 14.6 12.9 14.1 12.0 10.7  8.6 10.5  9.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] 10.2 13.6 17.0 11.9  8.4 11.4  9.8 17.0 21.3 12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 6.7 8.0 6.7 5.7 7.6 9.3 9.3 7.8 8.2 6.9 7.2 7.9 6.1 7.2 6.8 6.3 6.0 8.6 5.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [20] 6.7 7.9 6.0 7.2 6.4 6.5</span>
 <span class="r-plt img"><img src="ternary_pairs-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
