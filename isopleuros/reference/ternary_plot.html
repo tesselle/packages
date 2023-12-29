@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">isopleuros</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.2.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,6 +58,8 @@
 <span>  <span class="va">x</span>,</span>
 <span>  <span class="va">y</span>,</span>
 <span>  <span class="va">z</span>,</span>
+<span>  center <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  zlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -105,6 +107,14 @@ interpret <code>x</code> in a suitable way (see <code><a href="https://rdrr.io/r
 <dt>...</dt>
 <dd><p>Other <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> may also be passed as
 arguments to this function.</p></dd>
+
+
+<dt>center</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the data be centered?</p></dd>
+
+
+<dt>scale</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the data be scaled?</p></dd>
 
 
 <dt>xlim</dt>
@@ -165,8 +175,7 @@ place but before the axes, title and box are added.</p></dd>
     
 
 <p><code>ternary_plot()</code> is called it for its side-effects: it results in a graphic
-being displayed. Invisibly returns <code>x</code>.</p>
-    </div>
+being displayed. Invisibly returns a <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> with the components:</p><table class="table table"><tr><td><code>x</code></td><td>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of x values.</td></tr><tr><td><code>y</code></td><td>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of y values.</td></tr><tr><td><code>z</code></td><td>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of z values.</td></tr><tr><td><code>center</code></td><td>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the center.</td></tr><tr><td><code>scale</code></td><td>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the scale factor.</td></tr></table></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other graphical elements: 
