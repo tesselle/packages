@@ -16,10 +16,67 @@
     <loc>https://packages.tesselle.org/kinesis/news/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/chi2_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/chi2_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/coda_plot_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/coda_plot_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/coda_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/coda_summary_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/coda_summary_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/coda_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/count_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/data_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/data_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/footer_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/footer_ui.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/kinesis/reference/get_config.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kinesis/reference/get_option.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/header_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/header_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/home_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/home_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/import_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/import_ui.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kinesis/reference/index.html</loc>
@@ -28,111 +85,60 @@
     <loc>https://packages.tesselle.org/kinesis/reference/kinesis-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_chi2_ui.html</loc>
+    <loc>https://packages.tesselle.org/kinesis/reference/logratio_server.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_chi_server.html</loc>
+    <loc>https://packages.tesselle.org/kinesis/reference/logratio_ui.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_coda_plot_server.html</loc>
+    <loc>https://packages.tesselle.org/kinesis/reference/missing_server.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_coda_plot_ui.html</loc>
+    <loc>https://packages.tesselle.org/kinesis/reference/missing_ui.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_coda_server.html</loc>
+    <loc>https://packages.tesselle.org/kinesis/reference/multivariate_server.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_coda_summary_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_coda_summary_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_coda_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_count_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_footer_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_footer_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_header_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_header_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_home_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_home_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_import_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_import_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_logratio_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_logratio_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_missing_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_missing_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_multivar_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_multivar_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_pca_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_pca_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_prepare_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_prepare_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_seriate_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_seriate_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_summary_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_summary_ui.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_ternary_server.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/kinesis/reference/module_ternary_ui.html</loc>
+    <loc>https://packages.tesselle.org/kinesis/reference/multivariate_ui.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kinesis/reference/output_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/pca_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/pca_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/prepare_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/prepare_ui.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kinesis/reference/render_plot.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kinesis/reference/run_app.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/seriate_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/seriate_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/summary_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/summary_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/ternary_server.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kinesis/reference/ternary_ui.html</loc>
   </url>
 </urlset>
