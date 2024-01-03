@@ -154,6 +154,12 @@ plotted?</p></dd>
 they result in a graphic being displayed. Invisibly return <code>x</code>.</p>
     </div>
     <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>The red dashed line indicates the expected average contribution (variables
+with a contribution larger than this cutoff can be considered as important
+in contributing to the component).</p>
+    </div>
+    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other plot methods: 
 <code><a href="biplot.html">biplot</a>()</code>,
@@ -188,7 +194,7 @@ they result in a graphic being displayed. Invisibly return <code>x</code>.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.9841236 1.61748779 0.003303827</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot contributions</span></span></span>
-<span class="r-in"><span><span class="fu">viz_contributions</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">viz_contributions</span><span class="op">(</span><span class="va">X</span>, axes <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_contributions-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot cos2</span></span></span>

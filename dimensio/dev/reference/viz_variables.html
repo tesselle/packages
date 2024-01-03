@@ -90,6 +90,7 @@
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  top <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -195,6 +196,13 @@ place but before the axes, title and box are added.</p></dd>
 <code><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">graphics::legend()</a></code>; names of the list are used as argument names.
 If <code>NULL</code>, no legend is displayed.</p></dd>
 
+
+<dt>top</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
+Only the labels of the <code>top</code> \(n\) observations contributing the most to
+the factorial map will be drawn. If <code>NULL</code>, all labels are drawn.
+Only used if <code>labels</code> is <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -296,8 +304,6 @@ specified so that each point can be given its own color.</p></dd>
 <span class="r-in"><span>              col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>              lty <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-9.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
