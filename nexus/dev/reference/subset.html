@@ -78,6 +78,9 @@
 # S4 method for CompositionMatrix,index,index,logical
 [(x, i, j, ..., drop = TRUE)
 
+# S4 method for OutlierIndex,index,ANY
+[[(x, i)
+
 # S4 method for CompositionMatrix
 [(x, i, j, ...) &lt;- value
 
@@ -120,14 +123,6 @@ not for the replacement.</p></dd>
     
 
 <p>A subsetted object of the same sort as <code>x</code>.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="subcomposition">Subcomposition<a class="anchor" aria-label="anchor" href="#subcomposition"></a></h2>
-    
-
-<p>If <code>drop</code> is <code>FALSE</code>, subsetting some of the possible components of a
-<code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> object will produce a closed <em>subcomposition</em>
-(see examples).</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
