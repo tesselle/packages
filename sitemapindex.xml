@@ -25,13 +25,13 @@
     <loc>https://packages.tesselle.org/isopleuros/sitemap.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://packages.tesselle.org/janus/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
     <loc>https://packages.tesselle.org/kairos/sitemap.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/khroma/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/kinesis/sitemap.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/nexus/sitemap.xml</loc>
