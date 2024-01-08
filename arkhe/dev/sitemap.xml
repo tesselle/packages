@@ -55,6 +55,9 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check-numeric.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/check-package.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check-type.html</loc>
   </url>
   <url>
@@ -130,10 +133,16 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/missing.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/needs.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/null.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/null.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/palette_color.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/palette_shape.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/dev/reference/palette_size.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-matrix.html</loc>
@@ -155,9 +164,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/remove_constant.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/scale_color.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/scale_range.html</loc>
