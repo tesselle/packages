@@ -101,16 +101,13 @@ computation proceeds?</p></dd>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other data cleaning tools: 
+    <div class="dont-index"><p>Other data preparation tools: 
+<code><a href="append.html">append</a>()</code>,
+<code><a href="assign.html">assign</a>()</code>,
 <code><a href="compact.html">compact</a>()</code>,
 <code><a href="count.html">count</a>()</code>,
 <code><a href="discard.html">discard</a>()</code>,
-<code><a href="empty.html">empty</a></code>,
-<code><a href="infinite.html">infinite</a></code>,
-<code><a href="keep.html">keep</a>()</code>,
-<code><a href="missing.html">missing</a></code>,
-<code><a href="remove_constant.html">remove_constant</a>()</code>,
-<code><a href="zero.html">zero</a></code></p></div>
+<code><a href="keep.html">keep</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -127,18 +124,18 @@ computation proceeds?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    1    4    3    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   NA   NA    8    3    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    9    9    1    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    6   NA    1    5    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    1    2   10    5    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    8    8   NA    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   NA    7    3    9    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    7    9    5    1    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    9    9    6    5    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    6    8    5    6   NA</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Find row with NA</span></span></span>
 <span class="r-in"><span><span class="fu">detect</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE FALSE  TRUE FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE  TRUE FALSE FALSE  TRUE</span>
 <span class="r-in"><span><span class="co">## Find column without any NA</span></span></span>
 <span class="r-in"><span><span class="fu">detect</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE FALSE  TRUE  TRUE  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE  TRUE FALSE FALSE</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

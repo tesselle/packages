@@ -44,7 +44,7 @@
     </div>
 
     <div class="section level2">
-      <h2 id="data-cleaning">Data cleaning<a class="anchor" aria-label="anchor" href="#data-cleaning"></a></h2>
+      <h2 id="data-preparation">Data Preparation<a class="anchor" aria-label="anchor" href="#data-preparation"></a></h2>
       
       
 
@@ -55,6 +55,16 @@
       
 
       <dl><dt>
+          
+          <code><a href="append.html">append_rownames()</a></code> 
+        </dt>
+        <dd>Convert Row Names to an Explicit Column</dd>
+      </dl><dl><dt>
+          
+          <code><a href="assign.html">assign_colnames()</a></code> <code><a href="assign.html">assign_rownames()</a></code> 
+        </dt>
+        <dd>Assign a Specific Row/Column to the Column/Row Names</dd>
+      </dl><dl><dt>
           
           <code><a href="compact.html">compact()</a></code> <code><a href="compact.html">compact_cols()</a></code> <code><a href="compact.html">compact_rows()</a></code> 
         </dt>
@@ -76,6 +86,22 @@
         <dd>Remove Rows/Columns Using a Predicate</dd>
       </dl><dl><dt>
           
+          <code><a href="keep.html">keep()</a></code> <code><a href="keep.html">keep_cols()</a></code> <code><a href="keep.html">keep_rows()</a></code> 
+        </dt>
+        <dd>Keep Rows/Columns Using a Predicate</dd>
+      </dl></div><div class="section level2">
+      <h2 id="data-cleaning">Data Cleaning<a class="anchor" aria-label="anchor" href="#data-cleaning"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
           <code><a href="empty.html">remove_empty()</a></code> <code><a href="empty.html">replace_empty()</a></code> 
         </dt>
         <dd>Tools for Working With Empty String</dd>
@@ -86,11 +112,6 @@
         <dd>Tools for Working With Infinite Values</dd>
       </dl><dl><dt>
           
-          <code><a href="keep.html">keep()</a></code> <code><a href="keep.html">keep_cols()</a></code> <code><a href="keep.html">keep_rows()</a></code> 
-        </dt>
-        <dd>Keep Rows/Columns Using a Predicate</dd>
-      </dl><dl><dt>
-          
           <code><a href="missing.html">remove_NA()</a></code> <code><a href="missing.html">replace_NA()</a></code> 
         </dt>
         <dd>Tools for Working With Missing Values</dd>
@@ -99,6 +120,11 @@
           <code><a href="remove_constant.html">remove_constant()</a></code> 
         </dt>
         <dd>Remove Constant Columns</dd>
+      </dl><dl><dt>
+          
+          <code><a href="remove_whitespace.html">remove_whitespace()</a></code> 
+        </dt>
+        <dd>Remove Leading/Trailing Whitespace</dd>
       </dl><dl><dt>
           
           <code><a href="zero.html">remove_zero()</a></code> <code><a href="zero.html">replace_zero()</a></code> 
@@ -117,16 +143,11 @@
 
       <dl><dt>
           
-          <code><a href="append.html">append_rownames()</a></code> 
+          <code><a href="scale_range.html">scale_range()</a></code> 
         </dt>
-        <dd>Convert Row Names to an Explicit Column</dd>
-      </dl><dl><dt>
-          
-          <code><a href="assign.html">assign_colnames()</a></code> <code><a href="assign.html">assign_rownames()</a></code> 
-        </dt>
-        <dd>Assign a Specific Row/Column to the Column/Row Names</dd>
+        <dd>Rescale Continuous Vector</dd>
       </dl></div><div class="section level2">
-      <h2 id="scales">Scales<a class="anchor" aria-label="anchor" href="#scales"></a></h2>
+      <h2 id="statistics">Statistics<a class="anchor" aria-label="anchor" href="#statistics"></a></h2>
       
       
 
@@ -138,14 +159,97 @@
 
       <dl><dt>
           
-          <code><a href="scale_color.html">scale_color_numeric()</a></code> <code><a href="scale_color.html">scale_color_factor()</a></code> 
+          <code><a href="confidence_binomial.html">confidence_binomial()</a></code> 
         </dt>
-        <dd>Colour Mapping</dd>
+        <dd>Confidence Interval for Binomial Proportions</dd>
       </dl><dl><dt>
           
-          <code><a href="scale_range.html">scale_range()</a></code> 
+          <code><a href="confidence_mean.html">confidence_mean()</a></code> 
         </dt>
-        <dd>Rescale Continuous Vector</dd>
+        <dd>Confidence Interval for a Mean</dd>
+      </dl><dl><dt>
+          
+          <code><a href="confidence_multinomial.html">confidence_multinomial()</a></code> 
+        </dt>
+        <dd>Confidence Interval for Multinomial Proportions</dd>
+      </dl><dl><dt>
+          
+          <code><a href="interval_credible.html">interval_credible()</a></code> 
+        </dt>
+        <dd>Bayesian Credible Interval</dd>
+      </dl><dl><dt>
+          
+          <code><a href="interval_hdr.html">interval_hdr()</a></code> 
+        </dt>
+        <dd>Highest Density Regions</dd>
+      </dl></div><div class="section level2">
+      <h2 id="resampling">Resampling<a class="anchor" aria-label="anchor" href="#resampling"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="bootstrap.html">bootstrap()</a></code> 
+        </dt>
+        <dd>Bootstrap Estimation</dd>
+      </dl><dl><dt>
+          
+          <code><a href="jackknife.html">jackknife()</a></code> 
+        </dt>
+        <dd>Jackknife Estimation</dd>
+      </dl></div><div class="section level2">
+      <h2 id="mathematics">Mathematics<a class="anchor" aria-label="anchor" href="#mathematics"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="math_gcd.html">math_gcd()</a></code> 
+        </dt>
+        <dd>Greatest Common Divisor</dd>
+      </dl><dl><dt>
+          
+          <code><a href="math_lcm.html">math_lcm()</a></code> 
+        </dt>
+        <dd>Least Common Multiple</dd>
+      </dl></div><div class="section level2">
+      <h2 id="palettes">Palettes<a class="anchor" aria-label="anchor" href="#palettes"></a></h2>
+      
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="palette_color.html">palette_color_continuous()</a></code> <code><a href="palette_color.html">palette_color_discrete()</a></code> 
+        </dt>
+        <dd>Color Mapping</dd>
+      </dl><dl><dt>
+          
+          <code><a href="palette_shape.html">palette_shape()</a></code> 
+        </dt>
+        <dd>Symbol Mapping</dd>
+      </dl><dl><dt>
+          
+          <code><a href="palette_size.html">palette_size()</a></code> 
+        </dt>
+        <dd>Symbol Size Mapping</dd>
       </dl></div><div class="section level2">
       <h2 id="predicates">Predicates<a class="anchor" aria-label="anchor" href="#predicates"></a></h2>
       
@@ -230,97 +334,19 @@
         <dd>Check Numeric Values</dd>
       </dl><dl><dt>
           
+          <code><a href="check-package.html">assert_package()</a></code> <code><a href="check-package.html">needs()</a></code> 
+        </dt>
+        <dd>Check the Availability of a Package</dd>
+      </dl><dl><dt>
+          
           <code><a href="check-type.html">assert_type()</a></code> <code><a href="check-type.html">assert_scalar()</a></code> <code><a href="check-type.html">assert_function()</a></code> 
         </dt>
         <dd>Check Data Types</dd>
       </dl><dl><dt>
           
-          <code><a href="needs.html">needs()</a></code> 
-        </dt>
-        <dd>Check the Availability of a Package</dd>
-      </dl><dl><dt>
-          
           <code><a href="validate.html">validate()</a></code> 
         </dt>
         <dd>Validate a Condition</dd>
-      </dl></div><div class="section level2">
-      <h2 id="statistics">Statistics<a class="anchor" aria-label="anchor" href="#statistics"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="confidence_binomial.html">confidence_binomial()</a></code> 
-        </dt>
-        <dd>Confidence Interval for Binomial Proportions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="confidence_mean.html">confidence_mean()</a></code> 
-        </dt>
-        <dd>Confidence Interval for a Mean</dd>
-      </dl><dl><dt>
-          
-          <code><a href="confidence_multinomial.html">confidence_multinomial()</a></code> 
-        </dt>
-        <dd>Confidence Interval for Multinomial Proportions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="interval_credible.html">interval_credible()</a></code> 
-        </dt>
-        <dd>Bayesian Credible Interval</dd>
-      </dl><dl><dt>
-          
-          <code><a href="interval_hdr.html">interval_hdr()</a></code> 
-        </dt>
-        <dd>Highest Density Regions</dd>
-      </dl></div><div class="section level2">
-      <h2 id="resampling">Resampling<a class="anchor" aria-label="anchor" href="#resampling"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="bootstrap.html">bootstrap()</a></code> 
-        </dt>
-        <dd>Bootstrap Estimation</dd>
-      </dl><dl><dt>
-          
-          <code><a href="jackknife.html">jackknife()</a></code> 
-        </dt>
-        <dd>Jackknife Estimation</dd>
-      </dl></div><div class="section level2">
-      <h2 id="mathematics">Mathematics<a class="anchor" aria-label="anchor" href="#mathematics"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="math_gcd.html">math_gcd()</a></code> 
-        </dt>
-        <dd>Greatest Common Divisor</dd>
-      </dl><dl><dt>
-          
-          <code><a href="math_lcm.html">math_lcm()</a></code> 
-        </dt>
-        <dd>Least Common Multiple</dd>
       </dl></div><div class="section level2">
       <h2 id="utilities">Utilities<a class="anchor" aria-label="anchor" href="#utilities"></a></h2>
       
