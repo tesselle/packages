@@ -75,10 +75,11 @@ before they are downloaded and installed?</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p><code>needs()</code> is designed for use inside other functions in your own package
-to check for the availability of a suggested package.</p>
+    <p><code>assert_package()</code> is designed for use inside other functions in your own
+package to check for the availability of a suggested package.</p>
 <p>If the required packages are not available and <span style="R">R</span> is running interactively,
 the user will be asked to install the packages.</p>
+<p><code>needs()</code> is an alias for <code>assert_package()</code>.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
