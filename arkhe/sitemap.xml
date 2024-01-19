@@ -58,6 +58,9 @@
     <loc>https://packages.tesselle.org/arkhe/reference/check-numeric.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/check-package.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/check-type.html</loc>
   </url>
   <url>
@@ -65,6 +68,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/circle.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/clean_whitespace.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/compact.html</loc>
@@ -94,16 +100,13 @@
     <loc>https://packages.tesselle.org/arkhe/reference/discard.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/empty.html</loc>
+    <loc>https://packages.tesselle.org/arkhe/reference/get.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/inch2line.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/infinite.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/interval_credible.html</loc>
@@ -130,13 +133,16 @@
     <loc>https://packages.tesselle.org/arkhe/reference/math_lcm.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/missing.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/needs.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/null.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/palette_color.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/palette_shape.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/palette_size.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/predicate-matrix.html</loc>
@@ -157,18 +163,42 @@
     <loc>https://packages.tesselle.org/arkhe/reference/predicate-utils.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/remove_Inf.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/remove_NA.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/remove_constant.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/remove_empty.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/remove_zero.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/replace_Inf.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/replace_NA.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/replace_empty.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/replace_zero.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/scale_range.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/seek.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/validate.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/with_seed.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/zero.html</loc>
   </url>
 </urlset>
