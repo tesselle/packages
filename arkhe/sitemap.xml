@@ -118,6 +118,9 @@
     <loc>https://packages.tesselle.org/arkhe/reference/interval_hdr.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/is_scalar.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/jackknife.html</loc>
   </url>
   <url>
@@ -152,9 +155,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/predicate-numeric.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/reference/predicate-scalar.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/predicate-trend.html</loc>
