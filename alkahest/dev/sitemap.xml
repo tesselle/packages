@@ -40,6 +40,9 @@
     <loc>https://packages.tesselle.org/alkahest/dev/reference/LaBr.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/alkahest/dev/reference/Raman.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/alkahest/dev/reference/XRD.html</loc>
   </url>
   <url>
@@ -104,6 +107,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/dev/reference/rescale_range.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/alkahest/dev/reference/rescale_snv.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/alkahest/dev/reference/rescale_total.html</loc>
