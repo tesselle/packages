@@ -60,7 +60,7 @@
 </ul></div>
 <div class="section level3">
 <h3 id="bugfixes--changes-1-5-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-5-0"></a></h3>
-<ul><li>Rename <code><a href="../reference/check-package.html">needs()</a></code> to <code><a href="../reference/check-package.html">assert_package()</a></code>.</li>
+<ul><li>Rename <code><a href="../reference/assert_package.html">needs()</a></code> to <code><a href="../reference/assert_package.html">assert_package()</a></code>.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -116,12 +116,12 @@
 <h2 class="pkg-version" data-toc-text="1.1.0" id="arkhe-110">arkhe 1.1.0<a class="anchor" aria-label="anchor" href="#arkhe-110"></a></h2><p class="text-muted">CRAN release: 2023-01-18</p>
 <div class="section level3">
 <h3 id="new-classes-and-methods-1-1-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-1-0"></a></h3>
-<ul><li>Add <code><a href="../reference/check-package.html">needs()</a></code> to check for the availability of a package.</li>
+<ul><li>Add <code><a href="../reference/assert_package.html">needs()</a></code> to check for the availability of a package.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bugfixes--changes-1-1-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-1-0"></a></h3>
 <ul><li>Remove deprecated methods.</li>
-<li>Remove unused argument in <code><a href="../reference/check-data.html">assert_unique()</a></code>.</li>
+<li>Remove unused argument in <code><a href="../reference/assert_data.html">assert_unique()</a></code>.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -129,7 +129,7 @@
 <div class="section level3">
 <h3 id="new-classes-and-methods-1-0-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-1-0-0"></a></h3>
 <ul><li>Add <code><a href="../reference/append.html">append_rownames()</a></code> to convert row names to an explicit column.</li>
-<li>Add <code><a href="../reference/check-numeric.html">assert_positive()</a></code>, <code><a href="../reference/check-numeric.html">assert_negative()</a></code>, <code><a href="../reference/check-numeric.html">assert_odd()</a></code>, <code><a href="../reference/check-numeric.html">assert_even()</a></code>, <code><a href="../reference/check-numeric-trend.html">assert_constant()</a></code>, <code><a href="../reference/check-numeric-trend.html">assert_decreasing()</a></code>, <code><a href="../reference/check-numeric-trend.html">assert_increasing()</a></code>, <code><a href="../reference/check-numeric-comparison.html">assert_lower()</a></code> and <code><a href="../reference/check-numeric-comparison.html">assert_greater()</a></code> to check <code>numeric</code> vectors.</li>
+<li>Add <code><a href="../reference/assert_numeric.html">assert_positive()</a></code>, <code><a href="../reference/assert_numeric.html">assert_negative()</a></code>, <code><a href="../reference/assert_numeric.html">assert_odd()</a></code>, <code><a href="../reference/assert_numeric.html">assert_even()</a></code>, <code><a href="../reference/assert_constant.html">assert_constant()</a></code>, <code><a href="../reference/assert_constant.html">assert_decreasing()</a></code>, <code><a href="../reference/assert_constant.html">assert_increasing()</a></code>, <code><a href="../reference/assert_lower.html">assert_lower()</a></code> and <code><a href="../reference/assert_lower.html">assert_greater()</a></code> to check <code>numeric</code> vectors.</li>
 <li>Add <code><a href="../reference/bootstrap.html">bootstrap()</a></code> for bootstrap estimation.</li>
 <li>Add <code><a href="../reference/compact.html">compact()</a></code> to remove empty columns/rows in an array-like object.</li>
 <li>Add <code><a href="../reference/discard.html">discard()</a></code> and <code><a href="../reference/keep.html">keep()</a></code> remove/keep rows/columns in an array-like object using a predicate function.</li>
@@ -138,7 +138,7 @@
 <div class="section level3">
 <h3 id="bugfixes--changes-1-0-0">Bugfixes &amp; changes<a class="anchor" aria-label="anchor" href="#bugfixes--changes-1-0-0"></a></h3>
 <ul><li>Export all predicate functions.</li>
-<li>Deprecate <code>as_long()</code>, <code>assert_numeric()</code>, <code>assert_trend()</code>, <code>assert_relation()</code>, <code>assert_matrix()</code> and <code><a href="../reference/remove_empty.html">remove_empty()</a></code>.</li>
+<li>Deprecate <code>as_long()</code>, <code><a href="../reference/assert_numeric.html">assert_numeric()</a></code>, <code>assert_trend()</code>, <code>assert_relation()</code>, <code>assert_matrix()</code> and <code><a href="../reference/remove_empty.html">remove_empty()</a></code>.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="breaking-changes-1-0-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-1-0-0"></a></h3>
@@ -151,7 +151,7 @@
 <div class="section level3">
 <h3 id="new-classes-and-methods-0-5-0">New classes and methods<a class="anchor" aria-label="anchor" href="#new-classes-and-methods-0-5-0"></a></h3>
 <ul><li>Add <code><a href="../reference/assign.html">assign_rownames()</a></code> and <code><a href="../reference/assign.html">assign_colnames()</a></code> to make a specific row/column the column/row names of a <code>data.frame</code>.</li>
-<li>Add <code><a href="../reference/check-numeric.html">assert_count()</a></code> to validate count data (absolute frequencies/integer).</li>
+<li>Add <code><a href="../reference/assert_numeric.html">assert_count()</a></code> to validate count data (absolute frequencies/integer).</li>
 <li>Add <code><a href="../reference/count.html">count()</a></code> to count values by rows/columns according to a given predicate.</li>
 <li>Add <code><a href="../reference/detect.html">detect()</a></code> to find rows/columns in an array-like object according to a given predicate.</li>
 <li>Add <code><a href="../reference/compact.html">compact()</a></code> to remove rows/columns in an array-like object according to a given predicate.</li>
