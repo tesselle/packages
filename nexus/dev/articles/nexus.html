@@ -84,7 +84,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2024-01-04</h4>
+            <h4 data-toc-skip class="date">2024-02-13</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/vignettes/nexus.Rmd" class="external-link"><code>vignettes/nexus.Rmd</code></a></small>
       <div class="d-none name"><code>nexus.Rmd</code></div>
@@ -109,7 +109,8 @@ Aitchison (1986).</p>
 <code class="sourceCode R"><span><span class="co">## Install extra packages (if needed):</span></span>
 <span><span class="co"># install.packages("folio")</span></span>
 <span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/nexus/">nexus</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: dimensio</span></span></code></pre></div>
 <p><strong>nexus</strong> provides a set of S4 classes that represent
 different special types of matrix. The most basic class represents a
 compositional data matrix, i.e. quantitative (positive) descriptions of
@@ -295,7 +296,7 @@ and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"kommos"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Remove rows with missing values</span></span>
-<span><span class="va">kommos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/missing.html" class="external-link">remove_NA</a></span><span class="op">(</span><span class="va">kommos</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">kommos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/remove_NA.html" class="external-link">remove_NA</a></span><span class="op">(</span><span class="va">kommos</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Coerce to a compositional matrix</span></span>
 <span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">kommos</span><span class="op">)</span></span>

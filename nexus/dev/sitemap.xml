@@ -106,6 +106,9 @@
     <loc>https://packages.tesselle.org/nexus/dev/reference/metric_var.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/dev/reference/missing.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/mix.html</loc>
   </url>
   <url>
@@ -131,9 +134,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/plot_outliers.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/dev/reference/policy.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/powering.html</loc>
