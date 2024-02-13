@@ -69,7 +69,7 @@ is_whole() checks if an object only contains whole numbers.
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">is_zero</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">is_zero</span><span class="op">(</span><span class="va">x</span>, tolerance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">.Machine</span><span class="op">$</span><span class="va">double.eps</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">is_odd</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
@@ -79,7 +79,7 @@ is_whole() checks if an object only contains whole numbers.
 <span></span>
 <span><span class="fu">is_negative</span><span class="op">(</span><span class="va">x</span>, strict <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">is_whole</span><span class="op">(</span><span class="va">x</span>, tolerance <span class="op">=</span> <span class="va">.Machine</span><span class="op">$</span><span class="va">double.eps</span><span class="op">^</span><span class="fl">0.5</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">is_whole</span><span class="op">(</span><span class="va">x</span>, tolerance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">.Machine</span><span class="op">$</span><span class="va">double.eps</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -88,16 +88,16 @@ is_whole() checks if an object only contains whole numbers.
 <dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> object to be tested.</p></dd>
 
 
+<dt>tolerance</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> scalar giving the tolerance to check within.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
 
 
 <dt>strict</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should strict inequality be used?</p></dd>
-
-
-<dt>tolerance</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> scalar giving the tolerance to check within.</p></dd>
 
 </dl></div>
     <div class="section level2">
