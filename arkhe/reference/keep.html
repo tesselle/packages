@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.6.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -160,26 +160,25 @@ on progress?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    5   NA    8   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    7    2    2   10    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    1   10    9   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    3    5   10    8    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    3   NA    1    4    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    5    2    6    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6   10    1    8    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   NA    5   10    6    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    8   NA    3    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8   10   NA    4    4</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Keep row without any NA</span></span></span>
 <span class="r-in"><span><span class="fu">keep</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    2    2   10    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    1   10    9   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    5   10    8    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    5    2    6    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6   10    1    8    8</span>
 <span class="r-in"><span><span class="co">## Keep row without any NA</span></span></span>
 <span class="r-in"><span><span class="fu">keep</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    4    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    7   10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    3    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    3    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    6    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    6    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4    4</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

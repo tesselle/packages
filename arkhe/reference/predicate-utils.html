@@ -28,7 +28,7 @@ or infinite values.
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.6.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,7 @@ or infinite values.</p></li>
 <span></span>
 <span><span class="fu">has_infinite</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">is_unique</span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu">is_unique</span><span class="op">(</span><span class="va">x</span>, tolerance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">.Machine</span><span class="op">$</span><span class="va">double.eps</span><span class="op">)</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">has_duplicates</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -105,6 +105,11 @@ with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has leng
 <dt>names</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector specifying the names to test <code>x</code>
 with. If <code>NULL</code>, returns <code>TRUE</code> if <code>x</code> has names, and <code>FALSE</code> otherwise.</p></dd>
+
+
+<dt>tolerance</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> scalar giving the tolerance to check within
+(for <code>numeric</code> vector).</p></dd>
 
 
 <dt>na.rm</dt>

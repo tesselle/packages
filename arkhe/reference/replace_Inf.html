@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.6.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,26 +102,26 @@
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">Inf</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    8    8    2    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    9    2    8    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    9   10  Inf    9    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    7    9   10  Inf    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2  Inf    2    7    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    8    2    3  Inf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  Inf    9    6    3    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    2    8    1    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    2    7    4    3  Inf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    3   10    4    8</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove rows with Inf</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="remove_Inf.html">remove_Inf</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    8    8    2    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    9    2    8    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]   10    2    8    1    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    3   10    4    8</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace Inf with zeros</span></span></span>
 <span class="r-in"><span><span class="fu">replace_Inf</span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    7    8    8    2    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   10    9    2    8    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    9   10    0    9    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    7    9   10    0    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    0    2    7    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    2    8    2    3    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    0    9    6    3    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    2    8    1    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    2    7    4    3    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    2    3   10    4    8</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

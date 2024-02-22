@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.6.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -126,18 +126,18 @@ computation proceeds?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    9    4    4   10    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    8   10    9   NA    9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3   NA    8    6    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   10    6   NA   10    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    3    2    2    1    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    8    9    8   NA    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    6    8    8    7   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   10    2    3   NA   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    1    7   NA   10    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    8    1    2    3    1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Find row with NA</span></span></span>
 <span class="r-in"><span><span class="fu">detect</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE  TRUE  TRUE FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE FALSE  TRUE  TRUE FALSE</span>
 <span class="r-in"><span><span class="co">## Find column without any NA</span></span></span>
 <span class="r-in"><span><span class="fu">detect</span><span class="op">(</span><span class="va">X</span>, f <span class="op">=</span> <span class="va">is.na</span>, margin <span class="op">=</span> <span class="fl">2</span>, negate <span class="op">=</span> <span class="cn">TRUE</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE FALSE FALSE FALSE  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE  TRUE FALSE FALSE  TRUE</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">arkhe</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.6.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,27 +112,26 @@ on progress?</p></dd>
 <span class="r-in"><span><span class="va">X</span><span class="op">[</span><span class="va">k</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">""</span></span></span>
 <span class="r-in"><span><span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "X"  "B"  "L"  "J"  "V" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] ""   "J"  "U"  "W"  "G" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] ""   "H"  ""   "X"  "B" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "L"  "G"  "A"  "X"  "P" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "E"  "Q"  "V"  "O"  "S" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "G"  "B"  "B"  ""   "C" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "B"  "C"  "B"  "S"  "O" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "P"  "O"  "U"  "L"  "I" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "S"  "N"  ""   "Y"  "E" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "M"  "S"  ""   "W"  "E" </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Remove rows with empty strings</span></span></span>
 <span class="r-in"><span><span class="fu">remove_empty</span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "X"  "B"  "L"  "J"  "V" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "L"  "G"  "A"  "X"  "P" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "E"  "Q"  "V"  "O"  "S" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "B"  "C"  "B"  "S"  "O" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "P"  "O"  "U"  "L"  "I" </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Replace empty strings</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="replace_empty.html">replace_empty</a></span><span class="op">(</span><span class="va">X</span>, value <span class="op">=</span> <span class="st">"XXX"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1]  [,2] [,3]  [,4] [,5]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "X"   "B"  "L"   "J"  "V" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "XXX" "J"  "U"   "W"  "G" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "XXX" "H"  "XXX" "X"  "B" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "L"   "G"  "A"   "X"  "P" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "E"   "Q"  "V"   "O"  "S" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3]  [,4]  [,5]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "G"  "B"  "B"   "XXX" "C" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "B"  "C"  "B"   "S"   "O" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "P"  "O"  "U"   "L"   "I" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "S"  "N"  "XXX" "Y"   "E" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "M"  "S"  "XXX" "W"   "E" </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

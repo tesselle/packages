@@ -97,6 +97,9 @@
     <loc>https://packages.tesselle.org/arkhe/reference/count.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/describe.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/arkhe/reference/detect.html</loc>
   </url>
   <url>
@@ -197,6 +200,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/seek.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/arkhe/reference/sparsity.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/reference/validate.html</loc>
