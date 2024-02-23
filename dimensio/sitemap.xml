@@ -82,6 +82,9 @@
     <loc>https://packages.tesselle.org/dimensio/reference/countries.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/dimensio-defunct.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/dimensio-deprecated.html</loc>
   </url>
   <url>
@@ -152,6 +155,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/viz_individuals.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/viz_labels.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/viz_points.html</loc>
