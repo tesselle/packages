@@ -2,9 +2,9 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  bibliography: bibliography.html
-  diversity: diversity.html
-last_built: 2024-02-13T13:16Z
+  alpha: alpha.html
+  beta: beta.html
+last_built: 2024-02-23T16:55Z
 urls:
   reference: https://packages.tesselle.org/tabula/reference
   article: https://packages.tesselle.org/tabula/articles
