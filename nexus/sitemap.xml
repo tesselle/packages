@@ -13,9 +13,6 @@
     <loc>https://packages.tesselle.org/nexus/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/articles/bibliography.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/nexus/articles/index.html</loc>
   </url>
   <url>
@@ -88,6 +85,9 @@
     <loc>https://packages.tesselle.org/nexus/reference/groups.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/reference/hist.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/reference/hongite.html</loc>
   </url>
   <url>
@@ -107,6 +107,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/metric_var.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/missing.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/mix.html</loc>
@@ -136,10 +139,10 @@
     <loc>https://packages.tesselle.org/nexus/reference/plot_outliers.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/policy.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/powering.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/nexus/reference/powering.html</loc>
+    <loc>https://packages.tesselle.org/nexus/reference/quantile.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/reexports.html</loc>
@@ -161,6 +164,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/slides.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/nexus/reference/split.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/reference/subset.html</loc>
