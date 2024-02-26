@@ -15,8 +15,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.7/font.css" rel="stylesheet">
-<link href="../deps/Ubuntu-0.4.7/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.8/font.css" rel="stylesheet">
+<link href="../deps/Ubuntu-0.4.8/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Seriation">
@@ -37,7 +37,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">kairos</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.1.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,9 +52,8 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/seriation.html">Seriation Methods</a>
     <a class="dropdown-item" href="../articles/event.html">Event Date Model</a>
-    <a class="dropdown-item" href="../articles/bibliography.html">Bibliography</a>
+    <a class="dropdown-item" href="../articles/seriation.html">Seriation</a>
   </div>
 </li>
 <li class="nav-item">
@@ -88,7 +87,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2023-11-27</h4>
+            <h4 data-toc-skip class="date">2024-02-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/vignettes/seriation.Rmd" class="external-link"><code>vignettes/seriation.Rmd</code></a></small>
       <div class="d-none name"><code>seriation.Rmd</code></div>
@@ -98,19 +97,19 @@ Frerebeau</h4>
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Install extra packages (if needed):</span></span>
-<span><span class="co">## - dimensio: multivariate analysis</span></span>
 <span><span class="co">## - folio: datasets</span></span>
 <span><span class="co">## - tabula: visualization</span></span>
-<span><span class="co"># install.packages(c("dimensio", "folio", "tabula"))</span></span>
+<span><span class="co"># install.packages(c("folio", "tabula"))</span></span>
 <span></span>
 <span><span class="co"># Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/kairos/">kairos</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: dimensio</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <p>The matrix seriation problem in archaeology is based on three
-conditions and two assumptions, which <span class="citation">Dunnell
-(1970)</span> summarizes as follows.</p>
+conditions and two assumptions, which Dunnell (1970) summarizes as
+follows.</p>
 <p>The homogeneity conditions state that all the groups included in a
 seriation must:</p>
 <ul>
@@ -134,7 +133,7 @@ approximate the required pattern. The resulting order is
 </h2>
 <p>Reciprocal ranking iteratively rearrange rows and/or columns
 according to their weighted rank in the data matrix until convergence
-<span class="citation">(Ihm 2005)</span>.</p>
+(Ihm 2005).</p>
 <p>For a given incidence matrix <span class="math inline">\(C\)</span>:</p>
 <ul>
 <li>The rows of <span class="math inline">\(C\)</span> are rearranged in
@@ -172,11 +171,11 @@ procedure could enter into an infinite loop.</p>
 <p><img src="seriation_files/figure-html/reciprocal-1.png" width="50%"><img src="seriation_files/figure-html/reciprocal-2.png" width="50%"></p>
 <p>The positive difference from the column mean percentage (in french
 “écart positif au pourcentage moyen”, EPPM) represents a deviation from
-the situation of statistical independence <span class="citation">(Desachy 2004)</span>. As independence can be
-interpreted as the absence of relationships between types and the
-chronological order of the assemblages, EPPM is a useful graphical tool
-to explore significance of relationship between rows and columns related
-to seriation <span class="citation">(Desachy 2004)</span>.</p>
+the situation of statistical independence (Desachy 2004). As
+independence can be interpreted as the absence of relationships between
+types and the chronological order of the assemblages, EPPM is a useful
+graphical tool to explore significance of relationship between rows and
+columns related to seriation (Desachy 2004).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Replicates Desachy 2004</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"compiegne"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
@@ -230,7 +229,7 @@ is needed to determine the actual order in time.</p>
 <span><span class="co">#&gt; - Column order: 18 14 17 16 13 15 9 8 12 11 6 7 5 10 4 2 3 1...</span></span>
 <span></span>
 <span><span class="co">## Plot CA results</span></span>
-<span><span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/biplot.html" class="external-link">biplot</a></span><span class="op">(</span><span class="va">zun_indices</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/biplot.html" class="external-link">biplot</a></span><span class="op">(</span><span class="va">zun_indices</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/ca-seriation-1.png" width="672"></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Permute data matrix</span></span>
@@ -244,33 +243,36 @@ is needed to determine the actual order in time.</p>
 <div class="section level3">
 <h3 id="refining">Refining<a class="anchor" aria-label="anchor" href="#refining"></a>
 </h3>
-<p><span class="citation">Peeples and Schachner (2012)</span> propose a
-procedure to identify samples that are subject to sampling error or
-samples that have underlying structural relationships and might be
-influencing the ordering along the CA space. This relies on a partial
-bootstrap approach to CA-based seriation where each sample is replicated
-<code>n</code> times. The maximum dimension length of the convex hull
-around the sample point cloud allows to remove samples for a given
-<code>cutoff</code> value.</p>
-<p>According to <span class="citation">Peeples and Schachner
-(2012)</span>, “[this] point removal procedure [results in] a reduced
-dataset where the position of individuals within the CA are highly
-stable and which produces an ordering consistent with the assumptions of
-frequency seriation.”</p>
+<p>Peeples and Schachner (2012) propose a procedure to identify samples
+that are subject to sampling error or samples that have underlying
+structural relationships and might be influencing the ordering along the
+CA space. This relies on a partial bootstrap approach to CA-based
+seriation where each sample is replicated <code>n</code> times. The
+maximum dimension length of the convex hull around the sample point
+cloud allows to remove samples for a given <code>cutoff</code>
+value.</p>
+<p>According to Peeples and Schachner (2012), “[this] point removal
+procedure [results in] a reduced dataset where the position of
+individuals within the CA are highly stable and which produces an
+ordering consistent with the assumptions of frequency seriation.”</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Partial bootstrap CA</span></span>
 <span><span class="co">## Warning: this may take a few seconds!</span></span>
-<span><span class="va">zuni_boot</span> <span class="op">&lt;-</span> <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">zun_indices</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span><span class="va">zuni_boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">zun_indices</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Bootstrap CA results for the rows</span></span>
 <span><span class="co">## (add convex hull)</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"lightgrey"</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_wrap.html" class="external-link">viz_hull</a></span><span class="op">(</span>col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/adjustcolor.html" class="external-link">adjustcolor</a></span><span class="op">(</span><span class="st">"#004488"</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"lightgrey"</span>, pch <span class="op">=</span> <span class="fl">16</span>, legend <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_wrap.html" class="external-link">viz_hull</a></span><span class="op">(</span>col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/adjustcolor.html" class="external-link">adjustcolor</a></span><span class="op">(</span><span class="st">"#004488"</span>, alpha <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Consider specifying symbols manually: more than 6 becomes difficult to</span></span>
+<span><span class="co">#&gt; discriminate.</span></span>
 <span></span>
 <span><span class="co">## Bootstrap CA results for the columns</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_variables.html" class="external-link">viz_columns</a></span><span class="op">(</span>pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_variables.html" class="external-link">viz_columns</a></span><span class="op">(</span>pch <span class="op">=</span> <span class="fl">16</span>, legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"topright"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Consider specifying symbols manually: more than 6 becomes difficult to</span></span>
+<span><span class="co">#&gt; discriminate.</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/bootstrap-1.png" width="50%"><img src="seriation_files/figure-html/bootstrap-2.png" width="50%"></p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Replicates Peeples and Schachner 2012 results</span></span>
@@ -288,13 +290,12 @@ frequency seriation.”</p>
 <span><span class="co">#&gt; - Rows to keep: 360 of 420 (86%)</span></span>
 <span></span>
 <span><span class="co">## Plot CA results for the rows</span></span>
-<span><span class="fu">dimensio</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span><span class="va">zuni_refine</span>, highlight <span class="op">=</span> <span class="st">"observation"</span>, pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span><span class="va">zuni_refine</span>, highlight <span class="op">=</span> <span class="st">"observation"</span>, pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/refine-1.png" width="672"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Histogram of convex hull maximum dimension length</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">zuni_refine</span><span class="op">[[</span><span class="st">"length"</span><span class="op">]</span><span class="op">]</span>, xlab <span class="op">=</span> <span class="st">"Maximum length"</span>, main <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="va">zuni_refine</span><span class="op">[[</span><span class="st">"cutoff"</span><span class="op">]</span><span class="op">]</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="seriation_files/figure-html/refine-histogram-1.png" width="672"></p>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">zuni_refine</span><span class="op">)</span></span></code></pre></div>
+<p><img src="seriation_files/figure-html/refine-histogram-1.png" width="480"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Permute data matrix</span></span>
 <span><span class="va">zuni_permuted2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zuni_refine</span><span class="op">)</span></span>
@@ -305,35 +306,21 @@ frequency seriation.”</p>
 <p><img src="seriation_files/figure-html/refine-permutation-1.png" width="672"></p>
 </div>
 </div>
-<div class="section level2 unnumbered">
-<h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-desachy2004" class="csl-entry">
-Desachy, Bruno. 2004. <span>“Le sériographe EPPM: un outil informatisé
-de sériation graphique pour tableaux de comptages.”</span> <em>Revue
-archéologique de Picardie</em> 3 (1): 39–56. <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">https://doi.org/10.3406/pica.2004.2396</a>.
-</div>
-<div id="ref-dunnell1970" class="csl-entry">
-Dunnell, Robert C. 1970. <span>“Seriation <span>Method</span> and
-<span>Its Evaluation</span>.”</span> <em>American Antiquity</em> 35
-(03): 305–19. <a href="https://doi.org/10.2307/278341" class="external-link">https://doi.org/10.2307/278341</a>.
-</div>
-<div id="ref-ihm2005" class="csl-entry">
-Ihm, Peter. 2005. <span>“A <span>Contribution</span> to the
-<span>History</span> of <span>Seriation</span> in
-<span>Archaeology</span>.”</span> In <em>Classification – the
-<span>Ubiquitous Challenge</span></em>, edited by Claus Weihs and
-Wolfgang Gaul, 307–16. <span>Berlin Heidelberg</span>:
-<span>Springer</span>. <a href="https://doi.org/10.1007/3-540-28084-7_34" class="external-link">https://doi.org/10.1007/3-540-28084-7_34</a>.
-</div>
-<div id="ref-peeples2012" class="csl-entry">
-Peeples, Matthew A., and Gregson Schachner. 2012. <span>“Refining
-<span>Correspondence Analysis-Based Ceramic Seriation</span> of
-<span>Regional Data Sets</span>.”</span> <em>Journal of Archaeological
-Science</em> 39 (8): 2818–27. <a href="https://doi.org/10.1016/j.jas.2012.04.040" class="external-link">https://doi.org/10.1016/j.jas.2012.04.040</a>.
-</div>
-</div>
+<p>Desachy, B. (2004). Le sériographe EPPM: un outil informatisé de
+sériation graphique pour tableaux de comptages. <em>Revue archéologique
+de Picardie</em>, 3(1), 39-56. DOI: <a href="https://doi.org/10.3406/pica.2004.2396" class="external-link">10.3406/pica.2004.2396</a>.</p>
+<p>Dunnell, R. C. (1970). Seriation Method and Its Evaluation.
+<em>American Antiquity</em>, 35(03), 305-319. DOI: <a href="https://doi.org/10.2307/278341" class="external-link">10.2307/278341</a>.</p>
+<p>Ihm, P. (2005). A Contribution to the History of Seriation in
+Archaeology. In C. Weihs &amp; W. Gaul (Eds.), <em>Classification: The
+Ubiquitous Challenge</em>. Berlin Heidelberg: Springer, p. 307-316. DOI:
+<a href="https://doi.org/10.1007/3-540-28084-7_34" class="external-link">10.1007/3-540-28084-7_34</a>.</p>
+<p>Peeples, M. A. &amp; Schachner, G. (2012). Refining correspondence
+analysis-based ceramic seriation of regional data sets. <em>Journal of
+Archaeological Science</em>, 39(8), 2818-2827. DOI: <a href="https://doi.org/10.1016/j.jas.2012.04.040" class="external-link">10.1016/j.jas.2012.04.040</a>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

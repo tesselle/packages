@@ -13,9 +13,6 @@
     <loc>https://packages.tesselle.org/kairos/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/kairos/articles/bibliography.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/kairos/articles/event.html</loc>
   </url>
   <url>
@@ -32,6 +29,9 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/kairos/paper.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/kairos/pull_request_template.html</loc>
