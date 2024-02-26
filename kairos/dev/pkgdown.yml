@@ -1,0 +1,11 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  event: event.html
+  seriation: seriation.html
+last_built: 2024-02-26T17:58Z
+urls:
+  reference: https://packages.tesselle.org/kairos/reference
+  article: https://packages.tesselle.org/kairos/articles
+
