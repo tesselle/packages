@@ -69,6 +69,7 @@
 <span>  lower <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  freq <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  margin <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  fixed_ratio <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -83,6 +84,7 @@
 <span>  lower <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  freq <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  margin <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  fixed_ratio <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  <span class="va">...</span></span>
@@ -144,6 +146,11 @@ appropriate marginal sums).</p></dd>
 variables/columns. Only used if <code>freq</code> is <code>TRUE</code>.</p></dd>
 
 
+<dt>fixed_ratio</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a fixed aspect ratio (1) be
+used?</p></dd>
+
+
 <dt>axes</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should axes be drawn on the plot? It will
 omit labels where they would abut or overlap previously drawn labels.</p></dd>
@@ -157,7 +164,7 @@ omit labels where they would abut or overlap previously drawn labels.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p><code>plot_heatmap()</code> is called it for its side-effects: it results in a graphic
+<p><code>plot_heatmap()</code> is called for its side-effects: it results in a graphic
 being displayed (invisibly returns <code>object</code>).</p>
     </div>
     <div class="section level2">
