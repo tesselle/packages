@@ -73,6 +73,9 @@
     <loc>https://packages.tesselle.org/nexus/dev/reference/closure.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/nexus/dev/reference/condense.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/covariance.html</loc>
   </url>
   <url>
@@ -80,9 +83,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/dist.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/nexus/dev/reference/flatten.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/nexus/dev/reference/groups.html</loc>
