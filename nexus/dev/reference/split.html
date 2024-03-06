@@ -44,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Divide into Groups</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/nexus/blob/HEAD/R/statistics.R" class="external-link"><code>R/statistics.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/nexus/blob/HEAD/R/split.R" class="external-link"><code>R/split.R</code></a></small>
       <div class="d-none name"><code>split.Rd</code></div>
     </div>
 
@@ -119,42 +119,42 @@ used for the grouping (see <code><a href="https://rdrr.io/r/base/split.html" cla
 <span class="r-in"><span><span class="fu">split</span><span class="op">(</span><span class="va">Y</span>, f <span class="op">=</span> <span class="fu"><a href="groups.html">get_groups</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $X</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 4 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Ca        Fe         Na</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.5212694 0.4132343 0.06549629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.4949290 0.3975659 0.10750507</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.3280591 0.5400844 0.13185654</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.5052706 0.4342937 0.06043570</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            Ca        Fe         Na</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_1 0.5212694 0.4132343 0.06549629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_2 0.4949290 0.3975659 0.10750507</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_3 0.3280591 0.5400844 0.13185654</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B_1 0.5052706 0.4342937 0.06043570</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $Y</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 3 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Ca        Fe         Na</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7 0.4106090 0.5157171 0.07367387</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8 0.1470588 0.7764706 0.07647059</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9 0.4179796 0.5301205 0.05189991</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            Ca        Fe         Na</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_1 0.4106090 0.5157171 0.07367387</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_2 0.1470588 0.7764706 0.07647059</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_3 0.4179796 0.5301205 0.05189991</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Split by sample</span></span></span>
 <span class="r-in"><span><span class="fu">split</span><span class="op">(</span><span class="va">Y</span>, f <span class="op">=</span> <span class="fu"><a href="samples.html">get_samples</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $A</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 3 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Ca        Fe         Na</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.5212694 0.4132343 0.06549629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.4949290 0.3975659 0.10750507</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.3280591 0.5400844 0.13185654</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            Ca        Fe         Na</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_1 0.5212694 0.4132343 0.06549629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_2 0.4949290 0.3975659 0.10750507</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_3 0.3280591 0.5400844 0.13185654</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $B</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 3 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Ca        Fe         Na</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.5052706 0.4342937 0.06043570</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.5221987 0.4242424 0.05355884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.3952569 0.5644269 0.04031621</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            Ca        Fe         Na</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B_1 0.5052706 0.4342937 0.06043570</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B_2 0.5221987 0.4242424 0.05355884</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B_3 0.3952569 0.5644269 0.04031621</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $C</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;CompositionMatrix: 3 x 3&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Ca        Fe         Na</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7 0.4106090 0.5157171 0.07367387</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8 0.1470588 0.7764706 0.07647059</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9 0.4179796 0.5301205 0.05189991</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            Ca        Fe         Na</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_1 0.4106090 0.5157171 0.07367387</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_2 0.1470588 0.7764706 0.07647059</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_3 0.4179796 0.5301205 0.05189991</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>

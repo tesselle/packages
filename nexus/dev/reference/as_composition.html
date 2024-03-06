@@ -117,7 +117,7 @@ on progress?</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>The <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> class has special slots:</p><ul><li><p><code>codes</code> for <a href="identifiers.html">laboratory codes</a>,</p></li>
+    <p>The <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> class has special slots:</p><ul><li><p><code>identifiers</code> for <a href="identifiers.html">laboratory codes</a>,</p></li>
 <li><p><code>samples</code> for <a href="samples.html">repeated measurements/observation</a>,</p></li>
 <li><p><code>groups</code> to <a href="https://rdrr.io/r/grDevices/plotmath.html" class="external-link">group data by site/area</a>.</p></li>
 </ul><p>When coercing a <code>data.frame</code> to a <code><a href="CompositionMatrix-class.html">CompositionMatrix</a></code> object, an
@@ -145,7 +145,7 @@ explicitly specifying the columns to be used.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Create a count matrix</span></span></span>
-<span class="r-in"><span><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">A1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="cn">TRUE</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Coerce to compositions</span></span></span>
 <span class="r-in"><span><span class="va">B</span> <span class="op">&lt;-</span> <span class="fu">as_composition</span><span class="op">(</span><span class="va">A1</span><span class="op">)</span></span></span>
