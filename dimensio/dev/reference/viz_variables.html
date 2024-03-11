@@ -69,6 +69,7 @@
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  top <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -109,6 +110,7 @@
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  top <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -152,12 +154,19 @@ plotted?</p></dd>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should labels be drawn?</p></dd>
 
 
+<dt>top</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
+Only the labels of the <code>top</code> \(n\) observations contributing the most to
+the factorial map will be drawn. If <code>NULL</code>, all labels are drawn.
+Only used if <code>labels</code> is <code>TRUE</code>.</p></dd>
+
+
 <dt>highlight</dt>
 <dd><p>A vector specifying the information to be highlighted.
 If <code>NULL</code> (the default), no highlighting is applied. If a single <code>character</code>
-string is passed, it must be one of "<code>observation</code>", "<code>mass</code>", "<code>sum</code>",
-"<code>contribution</code>" or "<code>cos2</code>" (see <code><a href="tidy.html">augment()</a></code>). Any unambiguous substring
-can be given.</p></dd>
+string is passed, it must be the name of a categorical variable, or one of
+"<code>observation</code>", "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>"
+(see <code><a href="tidy.html">augment()</a></code>).</p></dd>
 
 
 <dt>xlim</dt>
@@ -195,13 +204,6 @@ place but before the axes, title and box are added.</p></dd>
 <dd><p>A <code><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></code> of additional arguments to be passed to
 <code><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">graphics::legend()</a></code>; names of the list are used as argument names.
 If <code>NULL</code>, no legend is displayed.</p></dd>
-
-
-<dt>top</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
-Only the labels of the <code>top</code> \(n\) observations contributing the most to
-the factorial map will be drawn. If <code>NULL</code>, all labels are drawn.
-Only used if <code>labels</code> is <code>TRUE</code>.</p></dd>
 
 </dl></div>
     <div class="section level2">
