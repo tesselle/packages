@@ -57,38 +57,32 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">viz_labels</span><span class="op">(</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">viz_labels</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for MultivariateAnalysis</span></span>
+<span><span class="fu">viz_labels</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
-<span>  <span class="va">y</span>,</span>
-<span>  <span class="va">z</span>,</span>
-<span>  <span class="va">labels</span>,</span>
+<span>  <span class="va">margin</span>,</span>
 <span>  <span class="va">...</span>,</span>
-<span>  margin <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  top <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  box <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  segment <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  cex <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"cex"</span><span class="op">)</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"fg"</span><span class="op">)</span>,</span>
-<span>  bg <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"bg"</span><span class="op">)</span>,</span>
-<span>  font <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="st">"font"</span><span class="op">)</span></span>
+<span>  segment <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>x, y</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the x and y coordinates of a set of
-points. If <code>y</code> is missing, <code>x</code> must be a <code><a href="CA-class.html">CA</a></code>, <code><a href="MCA-class.html">MCA</a></code> or
-<code><a href="PCA-class.html">PCA</a></code> object.</p></dd>
+    <dl><dt>x</dt>
+<dd><p>A <code><a href="CA-class.html">CA</a></code>, <code><a href="MCA-class.html">MCA</a></code> or <code><a href="PCA-class.html">PCA</a></code> object.</p></dd>
 
 
-<dt>z</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving an extra variable for subsetting.</p></dd>
-
-
-<dt>labels</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> vector specifying the text to be written.</p></dd>
+<dt>...</dt>
+<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a>, particularly,
+character expansion, <code>cex</code> and color, <code>col</code>.</p></dd>
 
 
 <dt>margin</dt>
@@ -102,9 +96,27 @@ default), <code>2</code> indicates variables/columns.</p></dd>
 plotted.</p></dd>
 
 
+<dt>active</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the active observations be
+plotted?</p></dd>
+
+
+<dt>sup</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the supplementary observations be
+plotted?</p></dd>
+
+
+<dt>highlight</dt>
+<dd><p>A vector specifying the information to be highlighted.
+If <code>NULL</code> (the default), no highlighting is applied. If a single <code>character</code>
+string is passed, it must be the name of a categorical variable, or one of
+"<code>observation</code>", "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>"
+(see <code><a href="tidy.html">augment()</a></code>).</p></dd>
+
+
 <dt>top</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
-Only the labels of the <code>top</code> \(n\) observations along <code>z</code> will be drawn.
+Only the labels of the <code>top</code> \(n\) observations will be drawn.
 If <code>NULL</code>, all labels are drawn.</p></dd>
 
 
@@ -116,6 +128,10 @@ If <code>NULL</code>, all labels are drawn.</p></dd>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should segments be drawn?</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
+    <p>N. Frerebeau</p>
+    </div>
 
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

@@ -60,12 +60,12 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">prepare</span><span class="op">(</span></span>
 <span>  <span class="va">x</span>,</span>
 <span>  <span class="va">margin</span>,</span>
-<span>  <span class="va">...</span>,</span>
 <span>  axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  principal <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  reorder <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  col <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  bg <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  pch <span class="op">=</span> <span class="fl">16</span>,</span>
@@ -86,10 +86,6 @@
 <dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscript
 which the data will be returned: <code>1</code> indicates individuals/rows (the
 default), <code>2</code> indicates variables/columns.</p></dd>
-
-
-<dt>...</dt>
-<dd><p>Currently not used.</p></dd>
 
 
 <dt>axes</dt>
@@ -141,6 +137,10 @@ and symbols should be scaled relative to the default.</p></dd>
 <dt>lty, lwd</dt>
 <dd><p>A specification for the line type and width.</p></dd>
 
+
+<dt>...</dt>
+<dd><p>Currently not used.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -157,6 +157,9 @@ and symbols should be scaled relative to the default.</p></dd>
 
 <dt><code>label</code></dt>
 <dd><p>Label.</p></dd>
+
+<dt><code>sup</code></dt>
+<dd><p>Is supplementary?</p></dd>
 
 <dt><code>col</code></dt>
 <dd><p>Color for lines and points.</p></dd>

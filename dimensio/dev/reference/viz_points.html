@@ -65,7 +65,8 @@
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  labels_top <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  labels_max <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  labels_what <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -116,11 +117,16 @@ plotted?</p></dd>
 <dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should labels be drawn?</p></dd>
 
 
-<dt>labels_top</dt>
+<dt>labels_max</dt>
 <dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
 Only the labels of the <code>top</code> \(n\) observations contributing the most to
 the factorial map will be drawn. If <code>NULL</code>, all labels are drawn.
 Only used if <code>labels</code> is <code>TRUE</code>.</p></dd>
+
+
+<dt>labels_what</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying how to select the
+labels to be drawn.</p></dd>
 
 
 <dt>highlight</dt>
