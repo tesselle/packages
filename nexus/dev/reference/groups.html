@@ -122,7 +122,6 @@ observation belongs to a group.</p></li>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other mutators: 
-<code><a href="identifiers.html">identifiers</a></code>,
 <code><a href="samples.html">samples</a></code>,
 <code><a href="split.html">split</a>()</code>,
 <code><a href="subset.html">subset</a>()</code>,
@@ -154,27 +153,23 @@ observation belongs to a group.</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6        0.3</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Coerce to compositional data</span></span></span>
-<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">slides</span>, codes <span class="op">=</span> <span class="cn">NULL</span>, samples <span class="op">=</span> <span class="fl">2</span>, groups <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">slides</span>, samples <span class="op">=</span> <span class="fl">2</span>, groups <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="as_features.html">as_features</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   identifier sample group    quartz microcline plagioclass    biotite</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        A_1      A    A1 0.2467532  0.3556444   0.3326673 0.03296703</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2        B_1      B    A1 0.2680000  0.3570000   0.3260000 0.03500000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3        C_1      C    A1 0.2802803  0.3423423   0.3213213 0.03403403</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4        D_1      D    A1 0.2780000  0.3500000   0.3150000 0.03300000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5        E_1      E    A1 0.2660000  0.3450000   0.3360000 0.03000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        A_2      A    A2 0.2730000  0.3550000   0.3210000 0.02500000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    muscovite     opaques  nonopaques</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.01998002 0.005994006 0.005994006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.00400000 0.006000000 0.004000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01101101 0.007007007 0.004004004</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.01000000 0.009000000 0.005000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.01400000 0.006000000 0.003000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.01500000 0.008000000 0.003000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     sample group    quartz microcline plagioclass    biotite  muscovite</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_1      A    A1 0.2467532  0.3556444   0.3326673 0.03296703 0.01998002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B_1      B    A1 0.2680000  0.3570000   0.3260000 0.03500000 0.00400000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_1      C    A1 0.2802803  0.3423423   0.3213213 0.03403403 0.01101101</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> D_1      D    A1 0.2780000  0.3500000   0.3150000 0.03300000 0.01000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E_1      E    A1 0.2660000  0.3450000   0.3360000 0.03000000 0.01400000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_2      A    A2 0.2730000  0.3550000   0.3210000 0.02500000 0.01500000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         opaques  nonopaques</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_1 0.005994006 0.005994006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B_1 0.006000000 0.004000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C_1 0.007007007 0.004004004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> D_1 0.009000000 0.005000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E_1 0.006000000 0.003000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_2 0.008000000 0.003000000</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="identifiers.html">get_identifiers</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A_1" "B_1" "C_1" "D_1" "E_1" "A_2" "B_2" "C_2" "D_2" "E_2" "A_3" "B_3"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13] "C_3" "D_3" "E_3" "A_4" "B_4" "C_4" "D_4" "E_4" "A_5" "B_5" "C_5" "D_5"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [25] "E_5"</span>
 <span class="r-in"><span><span class="fu"><a href="samples.html">get_samples</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A" "B" "C" "D" "E" "A" "B" "C" "D" "E" "A" "B" "C" "D" "E" "A" "B" "C" "D"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [20] "E" "A" "B" "C" "D" "E"</span>
