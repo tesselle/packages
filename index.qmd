@@ -7,6 +7,8 @@ listing:
   - id: gallery
     template: gallery.ejs
     contents: gallery.yml
+    sort-ui: false
+    filter-ui: true
 ---
 
 ```{r}
@@ -17,7 +19,11 @@ repo <- utils::contrib.url("https://tesselle.r-universe.dev")
 pkg <- utils::available.packages(contriburl = repo)
 pkg <- as.data.frame(pkg)
 url_pkg <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
+```
 
+```{r}
+#| label: sitemap 
+#| echo: false
 ## Build sitemap index
 loc <- paste0(url_pkg, "/sitemap.xml")
 map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", loc)
@@ -33,7 +39,11 @@ cat(
   sep = "\n",
   append = FALSE
 )
+```
 
+```{r}
+#| label: search 
+#| echo: false
 ## Build search index
 search_pkg <- list()
 for (i in seq_along(url_pkg)) {
@@ -68,7 +78,7 @@ Quickly discover relevant content by searching the documentation or exploring th
 <form role="search">
 <div class="form-group">
 <label for="search-packages"><strong>Search in the documentation</strong></label>
-<input type="search" class="form-control" aria-label="Search for..." name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off">
+<input type="search" class="form-control" aria-label="Search" name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off">
 </div>
 </form>
 :::
@@ -76,5 +86,10 @@ Quickly discover relevant content by searching the documentation or exploring th
 :::
 :::
 
-::: {#gallery .column-page}
+::: {.column-page}
+# Packages
+
+::: {#gallery}
+:::
+
 :::
