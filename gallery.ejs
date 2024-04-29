@@ -2,12 +2,12 @@
 ```{=html}
 <div class="list grid" style="column-gap: 10px;">
 <% for (const item of items) { %>
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2 bg-light" <%= metadataAttrs(item) %>>
+  <div class="card border-2 rounded-2 g-col-12 g-col-sm-6 g-col-md-4 mb-2 bg-light" <%= metadataAttrs(item) %>>
     <img src="/images/<%- item.title %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
 
     <div class="card-body">
       <h5 class="card-title listing-title"><%= item.title %></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary"><%= item.subtitle %></h6>
+      <h6 class="card-subtitle mb-2 text-body-secondary listing-subtitle"><%= item.subtitle %></h6>
       <small>
       <a href="https://packages.tesselle.org/<%- item.title %>/" class="card-link">Documentation</a>
       <a href="https://github.com/tesselle/<%- item.title %>" class="card-link">Source code</a>
