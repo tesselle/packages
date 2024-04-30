@@ -1,34 +1,84 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/master/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
+  workflow_dispatch:
   schedule:
     - cron:  '00 00 * * 1'
   push:
     branches: [main]
 
-name: render
+name: Build website
 
 jobs:
+  configure:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.packages.outputs.matrix }}
+    steps:
+     - uses: actions/checkout@v4
+
+     - id: packages
+       run: echo "matrix=$(jq -c . < ./config.json)" >> $GITHUB_OUTPUT
+
+  pkgdown:
+    runs-on: ubuntu-latest
+    needs: configure
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.configure.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+          extra-repositories: https://tesselle.r-universe.dev
+
+      - name: Install system dependencies
+        run: sudo apt-get update -y && sudo apt-get install -y libglpk-dev
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::pkgdown, any::devtools, any::tekton
+
+      - name: Build site
+        run: |
+          git clone https://github.com/tesselle/${{ matrix.name }} tmp
+          Rscript -e 'devtools::install(pkg = "tmp", dependencies = TRUE)'
+          Rscript -e 'pkgdown::build_site_github_pages(pkg = "tmp", dest_dir = "docs")'
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.name }}
+          path: tmp/docs
+
   quarto:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    if: ${{ always() }}
+    needs: pkgdown
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: r-lib/actions/setup-r@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
 
-      - name: Install Quarto
+      - name: Install quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render Quarto Project
+      - name: Render quarto project
         uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Download pkgdown artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: _site
 
       - name: Deploy to GitHub pages 🚀
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
         with:
           clean: false
           branch: gh-pages

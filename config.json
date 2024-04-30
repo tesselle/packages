@@ -1,0 +1,46 @@
+{
+    "include": [
+    {
+        "name": "aion"
+    },
+    {
+        "name": "alkahest"
+    },
+    {
+        "name": "ananke"
+    },
+    {
+        "name": "arkhe"
+    },
+    {
+        "name": "dimensio"
+    },
+    {
+        "name": "folio"
+    },
+    {
+        "name": "isopleuros"
+    },
+    {
+        "name": "kairos"
+    },
+    {
+        "name": "khroma"
+    },
+    {
+        "name": "kinesis"
+    },
+    {
+        "name": "nexus"
+    },
+    {
+        "name": "tabula"
+    },
+    {
+        "name": "tekton"
+    },
+    {
+        "name": "tesselle"
+    }
+    ]
+}
