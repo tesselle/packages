@@ -23,6 +23,12 @@ lead isotopic measurements."><!-- mathjax --><script src="https://cdnjs.cloudfla
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/radiocarbon.html">radiocarbon</a>
+  </div>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
@@ -40,7 +46,7 @@ lead isotopic measurements."><!-- mathjax --><script src="https://cdnjs.cloudfla
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Geological Model Age from Lead Isotope Analysis</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/ananke/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/ananke/blob/HEAD/R/lia.R" class="external-link"><code>R/lia.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/ananke/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/ananke/blob/HEAD/R/pb_age.R" class="external-link"><code>R/pb_age.R</code></a></small>
       <div class="d-none name"><code>pb_age.Rd</code></div>
     </div>
 
@@ -188,17 +194,18 @@ Perspective on the Use of Pb Isotopes in Archaeometry. <em>Archaeometry</em>, 54
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">Pb</span> <span class="op">&lt;-</span> <span class="fu"><a href="data.frame.html">data.frame</a></span><span class="op">(</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Reference values from Albarede &amp; Juteau (1984)</span></span></span>
+<span class="r-in"><span><span class="va">Pb</span> <span class="op">&lt;-</span> <span class="fu"><a href="data.frame.html">data.frame</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">18.23247</span>, <span class="fl">18.22936</span>, <span class="fl">18.23102</span><span class="op">)</span>, <span class="co"># Pb206/Pb204</span></span></span>
 <span class="r-in"><span>  y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15.65199</span>, <span class="fl">15.65216</span>, <span class="fl">15.65097</span><span class="op">)</span>, <span class="co"># Pb207/Pb204</span></span></span>
 <span class="r-in"><span>  z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">38.5167</span>, <span class="fl">38.51516</span>, <span class="fl">38.51601</span><span class="op">)</span>   <span class="co"># Pb208/Pb204</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">pb_age</span><span class="op">(</span><span class="va">Pb</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        age       mu    kappa            f</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 428.3959 9.859142 4.074891 1.004859e-14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 430.9796 9.860659 4.076292 1.004859e-14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 427.6003 9.855397 4.075178 1.004859e-14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        age       mu    kappa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 428.3959 9.859142 4.074891</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 430.9796 9.860659 4.076292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 427.6003 9.855397 4.075178</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
