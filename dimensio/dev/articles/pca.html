@@ -107,8 +107,9 @@
 <span><span class="co">#&gt; 3          4.7         3.2          1.3         0.2  setosa</span></span>
 <span><span class="co">#&gt; 4          4.6         3.1          1.5         0.2  setosa</span></span>
 <span><span class="co">#&gt; 5          5.0         3.6          1.4         0.2  setosa</span></span>
-<span><span class="co">#&gt; 6          5.4         3.9          1.7         0.4  setosa</span></span>
-<span></span>
+<span><span class="co">#&gt; 6          5.4         3.9          1.7         0.4  setosa</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Compute PCA</span></span>
 <span><span class="co">## (non numeric variables are automatically removed)</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca.html">pca</a></span><span class="op">(</span><span class="va">iris</span>, center <span class="op">=</span> <span class="cn">TRUE</span>, scale <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
@@ -157,14 +158,15 @@ contributions.</li>
 <li>
 <code><a href="../reference/viz_contributions.html">viz_cos2()</a></code> displays (joint) cos<sup>2</sup>.</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Get eigenvalues</span></span>
 <span><span class="fu"><a href="../reference/get_eigenvalues.html">get_eigenvalues</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
 <span><span class="co">#&gt;    eigenvalues  variance cumulative</span></span>
 <span><span class="co">#&gt; F1   2.9184978 73.342264   73.34226</span></span>
 <span><span class="co">#&gt; F2   0.9140305 22.969715   96.31198</span></span>
-<span><span class="co">#&gt; F3   0.1467569  3.688021  100.00000</span></span>
-<span></span>
+<span><span class="co">#&gt; F3   0.1467569  3.688021  100.00000</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Scree plot</span></span>
 <span><span class="fu"><a href="../reference/screeplot.html">screeplot</a></span><span class="op">(</span><span class="va">X</span>, cumulative <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
@@ -187,7 +189,7 @@ See Greenacre (2010) for more details about biplots.</p>
 distance between the individuals approximates the Euclidean distance
 between rows. In the form biplot the length of a vector approximates the
 quality of the representation of the variable.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"form"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/biplot-rows-1.png" width="672"></p>
 <p>The covariance biplot favors the representation of the variables: the
@@ -196,7 +198,7 @@ and the cosine of the angle formed by two vectors approximates the
 correlation between the two variables (Greenacre, 2010). In the
 covariance biplot the distance between the individuals approximates the
 Mahalanobis distance between rows.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"covariance"</span>, label <span class="op">=</span> <span class="st">"variables"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/biplot-columns-1.png" width="672"></p>
 <p>Biplots have the drawbacks of their advantages: they can quickly
@@ -210,14 +212,14 @@ variables separately.</p>
 <p><code><a href="../reference/viz_variables.html">viz_variables()</a></code> depicts the variables by rays emanating
 from the origin (both their lengths and directions are important to the
 interpretation).</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot variables factor map</span></span>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-var-1.png" width="672"></p>
 <p><code><a href="../reference/viz_variables.html">viz_variables()</a></code> allows to highlight additional
 information by varying different graphical elements (color,
 transparency, shape and size of symbols…).</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight cos2</span></span>
 <span><span class="fu"><a href="../reference/viz_variables.html">viz_variables</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
@@ -232,7 +234,7 @@ transparency, shape and size of symbols…).</p>
 </h2>
 <p><code><a href="../reference/viz_individuals.html">viz_individuals()</a></code> allows to display individuals and to
 highlight additional information.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot individuals and color by species</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
@@ -242,7 +244,7 @@ highlight additional information.</p>
 <span>  legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomright"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-species-1.png" width="672"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Add ellipses</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/viz_wrap.html">viz_tolerance</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span>,</span>
@@ -253,7 +255,7 @@ highlight additional information.</p>
 <span><span class="fu"><a href="../reference/viz_wrap.html">viz_hull</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, level <span class="op">=</span> <span class="fl">0.95</span>,</span>
 <span>         border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-wrap-1.png" width="50%"><img src="pca_files/figure-html/plot-wrap-2.png" width="50%"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight petal length</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
@@ -264,7 +266,7 @@ highlight additional information.</p>
 <span>  legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomleft"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="pca_files/figure-html/plot-ind-petal-1.png" width="672"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight contributions</span></span>
 <span><span class="fu"><a href="../reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
@@ -283,7 +285,7 @@ highlight additional information.</p>
 <code><a href="../reference/tidy.html">tidy()</a></code> and <code><a href="../reference/tidy.html">augment()</a></code> functions allow you to
 extract the results as data frames and thus build custom graphs with
 base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">iris_tidy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">iris_tidy</span><span class="op">)</span></span>
 <span><span class="co">#&gt;          label component supplementary coordinate contribution        cos2</span></span>
@@ -292,8 +294,9 @@ base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
 <span><span class="co">#&gt; 3 Petal.Length        F3         FALSE 0.05444699   2.01999049 0.002964475</span></span>
 <span><span class="co">#&gt; 4  Petal.Width        F1         FALSE 0.96497896  31.90629060 0.931184395</span></span>
 <span><span class="co">#&gt; 5  Petal.Width        F2         FALSE 0.06399985   0.44812296 0.004095980</span></span>
-<span><span class="co">#&gt; 6  Petal.Width        F3         FALSE 0.24298265  40.23019050 0.059040571</span></span>
-<span></span>
+<span><span class="co">#&gt; 6  Petal.Width        F3         FALSE 0.24298265  40.23019050 0.059040571</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="va">iris_augment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tidy.html">augment</a></span><span class="op">(</span><span class="va">X</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">iris_augment</span><span class="op">)</span></span>
 <span><span class="co">#&gt;          F1         F2 label supplementary        mass      sum contribution</span></span>
@@ -310,7 +313,7 @@ base <strong>graphics</strong> or <strong>ggplot2</strong>.</p>
 <span><span class="co">#&gt; 4 0.9977577</span></span>
 <span><span class="co">#&gt; 5 0.9997491</span></span>
 <span><span class="co">#&gt; 6 0.9998819</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Custom plot with ggplot2</span></span>
 <span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris_augment</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">F1</span>, y <span class="op">=</span> <span class="va">F2</span>, colour <span class="op">=</span> <span class="va">contribution</span><span class="op">)</span> <span class="op">+</span></span>

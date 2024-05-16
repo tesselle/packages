@@ -88,7 +88,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2024-05-13</h4>
+            <h4 data-toc-skip class="date">2024-05-16</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/kairos/blob/HEAD/../vignettes/seriation.Rmd" class="external-link"><code>../vignettes/seriation.Rmd</code></a></small>
       <div class="d-none name"><code>seriation.Rmd</code></div>
@@ -161,8 +161,9 @@ procedure could enter into an infinite loop.</p>
 <span><span class="co">#&gt; &lt;RankPermutationOrder&gt;</span></span>
 <span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
 <span><span class="co">#&gt; - Row order: 6 15 12 14 2 5 10 8 13 20 16 18 19 7 9 1 3 11 17 4...</span></span>
-<span><span class="co">#&gt; - Column order: 9 4 2 8 3 1 6 5 16 20 15 14 12 17 13 10 19 7 11 18...</span></span>
-<span></span>
+<span><span class="co">#&gt; - Column order: 9 4 2 8 3 1 6 5 16 20 15 14 12 17 13 10 19 7 11 18...</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Permute matrix rows and columns</span></span>
 <span><span class="va">incidence2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">incidence1</span>, <span class="va">indices</span><span class="op">)</span></span>
 <span></span>
@@ -177,14 +178,14 @@ independence can be interpreted as the absence of relationships between
 types and the chronological order of the assemblages, EPPM is a useful
 graphical tool to explore significance of relationship between rows and
 columns related to seriation (Desachy 2004).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Replicates Desachy 2004</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"compiegne"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Plot frequencies and EPPM values</span></span>
 <span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/seriograph.html" class="external-link">seriograph</a></span><span class="op">(</span><span class="va">compiegne</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/average-1.png" width="672"></p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Get seriation order for columns on EPPM using the reciprocal ranking method</span></span>
 <span><span class="co">## Expected column order: N, A, C, K, P, L, B, E, I, M, D, G, O, J, F, H</span></span>
@@ -192,8 +193,9 @@ columns related to seriation (Desachy 2004).</p>
 <span><span class="co">#&gt; &lt;RankPermutationOrder&gt;</span></span>
 <span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
 <span><span class="co">#&gt; - Row order: 1 2 3 4 5...</span></span>
-<span><span class="co">#&gt; - Column order: 14 1 3 11 16 12 2 5 9 13 4 7 15 10 6 8...</span></span>
-<span></span>
+<span><span class="co">#&gt; - Column order: 14 1 3 11 16 12 2 5 9 13 4 7 15 10 6 8...</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Permute columns</span></span>
 <span><span class="va">compiegne_permuted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">compiegne</span>, <span class="va">indices</span><span class="op">)</span></span>
 <span></span>
@@ -213,7 +215,7 @@ given by the coordinates along one dimension of the CA space, assumed to
 account for temporal variation. The direction of temporal change within
 the correspondence analysis space is arbitrary: additional information
 is needed to determine the actual order in time.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Data from Peeples and Schachner 2012</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"zuni"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
@@ -221,18 +223,19 @@ is needed to determine the actual order in time.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>cex.axis <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
 <span><span class="fu">tabula</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/tabula/reference/plot_ford.html" class="external-link">plot_ford</a></span><span class="op">(</span><span class="va">zuni</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/ca-ford-1.png" width="672"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Get row permutations from CA coordinates</span></span>
 <span><span class="op">(</span><span class="va">zun_indices</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seriate_average.html">seriate_average</a></span><span class="op">(</span><span class="va">zuni</span>, margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;AveragePermutationOrder&gt;</span></span>
 <span><span class="co">#&gt; Permutation order for matrix seriation:</span></span>
 <span><span class="co">#&gt; - Row order: 372 387 350 367 110 417 364 407 357 160 344 348 35...</span></span>
-<span><span class="co">#&gt; - Column order: 18 14 17 16 13 15 9 8 12 11 6 7 5 10 4 2 3 1...</span></span>
-<span></span>
+<span><span class="co">#&gt; - Column order: 18 14 17 16 13 15 9 8 12 11 6 7 5 10 4 2 3 1...</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Plot CA results</span></span>
 <span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/biplot.html" class="external-link">biplot</a></span><span class="op">(</span><span class="va">zun_indices</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/ca-seriation-1.png" width="672"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Permute data matrix</span></span>
 <span><span class="va">zuni_permuted</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zun_indices</span><span class="op">)</span></span>
 <span></span>
@@ -256,7 +259,7 @@ value.</p>
 procedure [results in] a reduced dataset where the position of
 individuals within the CA are highly stable and which produces an
 ordering consistent with the assumptions of frequency seriation.”</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Partial bootstrap CA</span></span>
 <span><span class="co">## Warning: this may take a few seconds!</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://packages.tesselle.org/arkhe/reference/bootstrap.html" class="external-link">bootstrap</a></span><span class="op">(</span><span class="va">zun_indices</span>, n <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
@@ -267,15 +270,16 @@ ordering consistent with the assumptions of frequency seriation.”</p>
 <span>  <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"lightgrey"</span>, pch <span class="op">=</span> <span class="fl">16</span>, legend <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_wrap.html" class="external-link">viz_hull</a></span><span class="op">(</span>col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/adjustcolor.html" class="external-link">adjustcolor</a></span><span class="op">(</span><span class="st">"#004488"</span>, alpha <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning: Consider specifying symbols manually: more than 6 becomes difficult to</span></span>
-<span><span class="co">#&gt; discriminate.</span></span>
-<span></span>
+<span><span class="co">#&gt; discriminate.</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Bootstrap CA results for the columns</span></span>
 <span><span class="va">zuni_boot</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_variables.html" class="external-link">viz_columns</a></span><span class="op">(</span>pch <span class="op">=</span> <span class="fl">16</span>, legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"topright"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning: Consider specifying symbols manually: more than 6 becomes difficult to</span></span>
 <span><span class="co">#&gt; discriminate.</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/bootstrap-1.png" width="50%"><img src="seriation_files/figure-html/bootstrap-2.png" width="50%"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Replicates Peeples and Schachner 2012 results</span></span>
 <span><span class="co">## Samples with convex hull maximum dimension length greater than the cutoff</span></span>
 <span><span class="co">## value will be marked for removal.</span></span>
@@ -288,16 +292,17 @@ ordering consistent with the assumptions of frequency seriation.”</p>
 <span><span class="co">#&gt; - Column order: 17 18 14 16 13 15 9 8 12 11 6 10 7 5 4 2 3 1...</span></span>
 <span><span class="co">#&gt; Partial bootstrap refinement:</span></span>
 <span><span class="co">#&gt; - Cutoff value: 1.77</span></span>
-<span><span class="co">#&gt; - Rows to keep: 360 of 420 (86%)</span></span>
-<span></span>
+<span><span class="co">#&gt; - Rows to keep: 360 of 420 (86%)</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Plot CA results for the rows</span></span>
 <span><span class="fu"><a href="https://packages.tesselle.org/dimensio/reference/viz_individuals.html" class="external-link">viz_rows</a></span><span class="op">(</span><span class="va">zuni_refine</span>, highlight <span class="op">=</span> <span class="st">"observation"</span>, pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/refine-1.png" width="672"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Histogram of convex hull maximum dimension length</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">zuni_refine</span><span class="op">)</span></span></code></pre></div>
 <p><img src="seriation_files/figure-html/refine-histogram-1.png" width="480"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Permute data matrix</span></span>
 <span><span class="va">zuni_permuted2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/permute.html">permute</a></span><span class="op">(</span><span class="va">zuni</span>, <span class="va">zuni_refine</span><span class="op">)</span></span>
 <span></span>

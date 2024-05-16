@@ -91,7 +91,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2024-05-13</h4>
+            <h4 data-toc-skip class="date">2024-05-16</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/aion/blob/HEAD/../vignettes/extending.Rmd" class="external-link"><code>../vignettes/extending.Rmd</code></a></small>
       <div class="d-none name"><code>extending.Rmd</code></div>
@@ -198,8 +198,9 @@ converting <em>rata die</em> to and from this calendar:</p>
 <span>  calendar <span class="op">=</span> <span class="va">cal</span></span>
 <span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rata die: number of days since 01-01-01 (Gregorian).</span></span>
-<span><span class="co">#&gt; [1] -214193</span></span>
-<span></span>
+<span><span class="co">#&gt; [1] -214193</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Convert -214193 r.d. to an Egyptian date</span></span>
 <span><span class="fu"><a href="../reference/as_date.html">as_date</a></span><span class="op">(</span><span class="op">-</span><span class="fl">214193</span>, calendar <span class="op">=</span> <span class="va">cal</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   year month day</span></span>
@@ -207,7 +208,7 @@ converting <em>rata die</em> to and from this calendar:</p>
 <p>The definition of new calendars, combined with the Julian and
 Gregorian calendars already included in <strong>aion</strong>, allows
 you to build conversion tools:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Build a conversion function from Gregorian CE years to Egyptian years</span></span>
 <span><span class="va">Gregorian_to_Egyptian</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/convert.html">convert</a></span><span class="op">(</span><span class="fu"><a href="../reference/gregorian.html">CE</a></span><span class="op">(</span><span class="op">)</span>, <span class="fu">E</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -228,7 +229,7 @@ inherits from the <code>TimeSeries</code> class.</p>
 <p>As an example, you can create a class that represent the results of
 the calibration of radiocarbon dates (this code comes from the <a href="https://packages.tesselle.org/ananke/" class="external-link"><strong>ananke</strong></a>
 package):</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">.CalibratedAges</span> <span class="op">&lt;-</span> <span class="kw">setClass</span><span class="op">(</span></span>
 <span>  Class <span class="op">=</span> <span class="st">"CalibratedAges"</span>,</span>
 <span>  slots <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>

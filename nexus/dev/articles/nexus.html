@@ -84,7 +84,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2024-05-13</h4>
+            <h4 data-toc-skip class="date">2024-05-16</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/nexus/blob/HEAD/../vignettes/nexus.Rmd" class="external-link"><code>../vignettes/nexus.Rmd</code></a></small>
       <div class="d-none name"><code>nexus.Rmd</code></div>
@@ -132,8 +132,9 @@ in its own row.</p>
 <span><span class="co">#&gt; H3 37.0  9.1 34.2  9.5 10.2</span></span>
 <span><span class="co">#&gt; H4 50.9 23.8  7.2 10.1  8.0</span></span>
 <span><span class="co">#&gt; H5 44.2 38.3  2.9  7.7  6.9</span></span>
-<span><span class="co">#&gt; H6 52.3 26.2  4.2 12.5  4.8</span></span>
-<span></span>
+<span><span class="co">#&gt; H6 52.3 26.2  4.2 12.5  4.8</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co">## Coerce to compositional data</span></span>
 <span><span class="va">coda</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_composition.html">as_composition</a></span><span class="op">(</span><span class="va">hongite</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
@@ -150,17 +151,17 @@ composition matrix: each row of the matrix sum up to 1 (only relative
 changes are relevant in compositional data analysis).</p>
 <p>The original row sums are kept internally, so that the source data
 can be restored:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Coerce to count data</span></span>
 <span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_amounts.html">as_amounts</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">hongite</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Ternary plots</span></span>
 <span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/plot-1.png" width="100%"></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Compositional bar plot</span></span>
 <span><span class="fu"><a href="../reference/barplot.html">barplot</a></span><span class="op">(</span><span class="va">coda</span>, order <span class="op">=</span> <span class="st">"A"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/barplot-1.png" width="100%"></p>
@@ -180,7 +181,7 @@ belongs to a specific group (or not). When coercing a
 <code>data.frame</code> to a <code>CompositionMatrix</code> object, an
 attempt is made to automatically detect groups by mapping column
 names.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Create a data.frame</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"C"</span>, <span class="st">"C"</span>, <span class="st">"B"</span><span class="op">)</span>,</span>
@@ -201,7 +202,7 @@ argument of <code><a href="../reference/as_composition.html">as_composition()</a
 allow to retrieve or set groups of an existing
 <code>CompositionMatrix</code> (<code>NA</code> can be used to specify
 that a sample does not belong to any group):</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Set groups (NA means no group)</span></span>
 <span><span class="fu">set_groups</span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"X"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">"Y"</span><span class="op">)</span></span>
 <span></span>
@@ -222,7 +223,7 @@ the same sample name.</p>
 <code>CompositionMatrix</code> object, an attempt is made to
 automatically detect samples by mapping column names. If no matching
 column is found, row names will be used by default.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Create a data.frame</span></span>
 <span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"C"</span>, <span class="st">"C"</span><span class="op">)</span>,</span>
@@ -243,7 +244,7 @@ explicitly specifying the column to be used with the
 <code>set_samples(x) &lt;- value</code> allow to retrieve or set sample
 names of an existing <code>CompositionMatrix</code> (missing values are
 not allowed):</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Set sample names</span></span>
 <span><span class="fu">set_samples</span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>, <span class="st">"G"</span>, <span class="st">"H"</span>, <span class="st">"I"</span><span class="op">)</span></span>
 <span></span>
@@ -261,7 +262,7 @@ calculations (read the documentation carefully).</p>
 ratio (<em>CLR</em>, Aitchison 1986), additive log ratio (<em>ALR</em>,
 Aitchison 1986), isometric log ratio (<em>ILR</em>, Egozcue et al. 2003)
 and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## CLR</span></span>
 <span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">clr</span><span class="op">)</span></span>
@@ -271,11 +272,12 @@ and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
 <span><span class="co">#&gt; H3 0.8258984 -0.5767451  0.7472061 -0.53372770 -0.4626318</span></span>
 <span><span class="co">#&gt; H4 1.2367416  0.4765643 -0.7190403 -0.38058588 -0.6136798</span></span>
 <span><span class="co">#&gt; H5 1.2943994  1.1511245 -1.4296147 -0.45310510 -0.5628040</span></span>
-<span><span class="co">#&gt; H6 1.4065594  0.7153224 -1.1153524 -0.02470833 -0.9818211</span></span>
-<span></span>
+<span><span class="co">#&gt; H6 1.4065594  0.7153224 -1.1153524 -0.02470833 -0.9818211</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">clr</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/transform-1.png" width="100%"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="va">back</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_inverse.html">transform_inverse</a></span><span class="op">(</span><span class="va">clr</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">back</span><span class="op">)</span></span>
@@ -291,7 +293,7 @@ and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
 <div class="section level2">
 <h2 id="multivariate-methods">Multivariate methods<a class="anchor" aria-label="anchor" href="#multivariate-methods"></a>
 </h2>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Data from Day et al. 2011</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"kommos"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
@@ -303,14 +305,14 @@ and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
 <span></span>
 <span><span class="co">## Set groups</span></span>
 <span><span class="fu">set_groups</span><span class="op">(</span><span class="va">coda</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">kommos</span><span class="op">$</span><span class="va">type</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Compositional bar plot</span></span>
 <span><span class="fu"><a href="../reference/barplot.html">barplot</a></span><span class="op">(</span><span class="va">coda</span>, order <span class="op">=</span> <span class="st">"Ca"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/ceramics-barplot-1.png" width="100%"></p>
 <div class="section level3">
 <h3 id="principle-component-analysis">Principle Component Analysis<a class="anchor" aria-label="anchor" href="#principle-component-analysis"></a>
 </h3>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## CLR</span></span>
 <span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_clr.html">transform_clr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span></span>
@@ -325,7 +327,7 @@ and pivot log-ratio (<em>PLR</em>, Hron et al. 2017).</p>
 <div class="section level3">
 <h3 id="manova">MANOVA<a class="anchor" aria-label="anchor" href="#manova"></a>
 </h3>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## ILR</span></span>
 <span><span class="va">ilr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/transform_ilr.html">transform_ilr</a></span><span class="op">(</span><span class="va">coda</span><span class="op">)</span></span>
 <span></span>
@@ -343,12 +345,12 @@ differences between groups.</p>
 <div class="section level3">
 <h3 id="discriminant-analysis">Discriminant Analysis<a class="anchor" aria-label="anchor" href="#discriminant-analysis"></a>
 </h3>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## LDA</span></span>
 <span><span class="va">discr</span> <span class="op">&lt;-</span> <span class="fu">MASS</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MASS/man/lda.html" class="external-link">lda</a></span><span class="op">(</span><span class="va">ilr</span>, grouping <span class="op">=</span> <span class="fu"><a href="../reference/groups.html">get_groups</a></span><span class="op">(</span><span class="va">ilr</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plot.html">plot</a></span><span class="op">(</span><span class="va">discr</span><span class="op">)</span></span></code></pre></div>
 <p><img src="nexus_files/figure-html/ceramics-lda-1.png" width="100%"></p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Back transform results</span></span>
 <span><span class="fu"><a href="../reference/transform_inverse.html">transform_inverse</a></span><span class="op">(</span><span class="va">discr</span><span class="op">$</span><span class="va">means</span>, origin <span class="op">=</span> <span class="va">ilr</span><span class="op">)</span></span>

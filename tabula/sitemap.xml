@@ -13,10 +13,10 @@
     <loc>https://packages.tesselle.org/tabula/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/articles/bibliography.html</loc>
+    <loc>https://packages.tesselle.org/tabula/articles/alpha.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/articles/diversity.html</loc>
+    <loc>https://packages.tesselle.org/tabula/articles/beta.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/articles/index.html</loc>
@@ -32,9 +32,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/paper.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/tabula/pull_request_template.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/CompositionIndex-class.html</loc>
@@ -68,6 +65,81 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_ace.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_baxter.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_berger.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_binomial.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_boone.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_brainerd.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_bray.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_brillouin.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_chao1.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_chao2.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_cody.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_hurlbert.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_ice.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_jaccard.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_margalef.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_mcintosh.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_menhinick.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_morisita.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_routledge.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_shannon.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_simpson.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_sorenson.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_squares.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_whittaker.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/tabula/reference/index_wilson.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/jackknife.html</loc>
@@ -109,6 +181,9 @@
     <loc>https://packages.tesselle.org/tabula/reference/plot_spot.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/profiles.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/pueblo.html</loc>
   </url>
   <url>
@@ -127,6 +202,9 @@
     <loc>https://packages.tesselle.org/tabula/reference/seriograph.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/tabula/reference/she.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/tabula/reference/similarity.html</loc>
   </url>
   <url>
@@ -139,7 +217,7 @@
     <loc>https://packages.tesselle.org/tabula/reference/tabula-package.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/tabula/reference/test_diversity.html</loc>
+    <loc>https://packages.tesselle.org/tabula/reference/test.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/tabula/reference/turnover.html</loc>
