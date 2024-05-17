@@ -1,19 +1,24 @@
 
 ```{=html}
-<div class="list grid" style="column-gap: 10px;">
+<p class="fs-3">R packages of the <strong><a href="https://www.tesselle.org/">tesselle</a></strong> projet:</p>
+
+<div class="grid">
 <% for (const item of items) { %>
-  <div class="card border-2 rounded-2 g-col-12 g-col-sm-6 g-col-md-4 mb-2 bg-light" <%= metadataAttrs(item) %>>
-    <img src="/images/<%- item.title %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
+  <div class="g-col-12 g-col-sm-6 g-col-md-4 mb-2">
+    <div class="card h-100 shadow-sm" <%= metadataAttrs(item) %>>
+      <img src="/images/<%- item.title %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
 
-    <div class="card-body">
-      <h5 class="card-title listing-title"><%= item.title %></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary listing-subtitle"><%= item.subtitle %></h6>
-      <small>
-      <a href="https://packages.tesselle.org/<%- item.title %>/" class="card-link">Documentation</a>
-      <a href="https://github.com/tesselle/<%- item.title %>" class="card-link">Source code</a>
-      </small>
+      <div class="card-body" style="position: relative;">
+        <h5 class="card-title listing-title"><%= item.title %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary listing-subtitle"><%= item.subtitle %></h6>
+      </div>
+      <div class="card-footer bg-light">
+        <div class="d-flex flex-row text-center">
+          <a href="https://packages.tesselle.org/<%- item.title %>/" class="card-link flex-fill">Documentation</a>
+          <a href="https://github.com/tesselle/<%- item.title %>" class="card-link flex-fill">Source code</a>
+        </div>
+      </div>
     </div>
-
   </div>
 <% } %>
 </div>

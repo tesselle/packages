@@ -41,7 +41,6 @@ cat(
 ```
 
 ::: {.column-page}
-# R Packages
 
 ::: {#gallery}
 :::
