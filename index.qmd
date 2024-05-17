@@ -2,7 +2,6 @@
 pagetitle: "tesselle: R Packages & Archaeology"
 resources: 
   - "sitemapindex.xml"
-  - "packages.json"
 listing:
   - id: gallery
     template: gallery.ejs
@@ -41,53 +40,8 @@ cat(
 )
 ```
 
-```{r}
-#| label: search 
-#| echo: false
-## Build search index
-search_pkg <- list()
-for (i in seq_along(url_pkg)) {
-  path <- url_pkg[[i]]
-  tmp <- try(
-    expr = rjson::fromJSON(file = paste0(path, "/search.json")), 
-    silent = TRUE
-  )
-  if (!inherits(tmp, "try-error")) {
-    for (j in seq_along(tmp)) {
-      ## Add package name
-      tmp[[j]]$package <- pkg$Package[[i]]
-    }
-    search_pkg <- c(search_pkg, tmp)
-  }
-}
-cat(rjson::toJSON(search_pkg), file = "packages.json", append = FALSE)
-```
-
-::: {#hero-banner .column-screen}
-::: {.grid .column-page}
-::: {.headline .g-col-lg-6 .g-col-12 .g-col-md-12}
-# Welcome
-[**tesselle**](https://packages.tesselle.org) is a collection of [R](https://www.r-project.org/) packages for research and teaching in archaeology. These packages focus on quantitative analysis methods developed for archaeology. The **tesselle** packages are designed to work seamlessly together and to complement general-purpose and other specialized statistical packages.
-:::
-
-::: {.g-col-lg-6 .g-col-12 .g-col-md-12}
-# Read the doc
-
-Quickly discover relevant content by searching the documentation or exploring the [project bibliography](https://www.zotero.org/groups/2894473/tesselle/library).
-
-<form role="search">
-<div class="form-group">
-<label for="search-packages"><strong>Search in the documentation</strong></label>
-<input type="search" class="form-control" aria-label="Search" name="search-packages" data-search-index="/packages.json" id="search-packages" placeholder="e.g. seriation" autocomplete="off">
-</div>
-</form>
-:::
-
-:::
-:::
-
 ::: {.column-page}
-# Packages
+# R Packages
 
 ::: {#gallery}
 :::
