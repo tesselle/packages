@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Jackknife Estimation</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_diversity.R" class="external-link"><code>R/index_diversity.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/diversity.R" class="external-link"><code>R/diversity.R</code></a></small>
       <div class="d-none name"><code>jackknife.Rd</code></div>
     </div>
 
@@ -116,32 +116,6 @@ the leave-one-out values of <code>do</code>.</p>
 <span class="r-in"><span><span class="op">(</span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu"><a href="heterogeneity.html">heterogeneity</a></span><span class="op">(</span><span class="va">cantabria</span>, method <span class="op">=</span> <span class="st">"shannon"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.269200 2.955298 2.491683 2.485604 2.329187</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Bootstrap resampling</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean          bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.280402  0.0112025976 0.08079012</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.975088  0.0197905305 0.14799321</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.540509  0.0488266469 0.19898130</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.486137  0.0005333296 0.21893775</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.316002 -0.0131842316 0.25809208</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.979042 3.228799 3.283048 3.278504 3.330980 3.513022</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.302014 2.866352 2.975547 2.969013 3.078826 3.351206</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.483755 2.410534 2.541252 2.526640 2.646816 3.189454</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.709473 2.358854 2.505909 2.492024 2.639654 3.010729</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        0.000000 2.163956 2.332882 2.312304 2.488794 2.914345</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       25%      50%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.222216 3.274933</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.887177 2.983977</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.400082 2.532789</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.357496 2.505136</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.165553 2.343891</span>
-<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
 <span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean       bias      error</span>
@@ -151,13 +125,13 @@ the leave-one-out values of <code>do</code>.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.462723 -0.9838709 0.22195573</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.305876 -1.0023704 0.25266291</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="bootstrap.html">bootstrap</a></span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">jackknife</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.985149 3.229306 3.285509 3.282846 3.338739 3.532789</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.464220 2.880741 2.981933 2.975875 3.070218 3.384048</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.740512 2.398534 2.521858 2.516742 2.646314 3.080476</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.589385 2.363075 2.510529 2.493531 2.639931 3.177633</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        1.039721 2.166085 2.351805 2.320512 2.510008 2.892961</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.230811 3.236056 3.249552 3.246457 3.250979 3.269684</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.902193 2.911984 2.921893 2.932856 2.955298 3.018158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.410614 2.444200 2.491683 2.469588 2.491683 2.529489</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.398698 2.425153 2.485604 2.462723 2.485604 2.485604</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.227438 2.260234 2.329187 2.305876 2.329187 2.329187</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

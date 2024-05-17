@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Bootstrap Estimation</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_diversity.R" class="external-link"><code>R/index_diversity.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/diversity.R" class="external-link"><code>R/diversity.R</code></a></small>
       <div class="d-none name"><code>bootstrap.Rd</code></div>
     </div>
 
@@ -146,23 +146,6 @@ the <code>n</code> values of <code>do</code>.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.406740 2.535562</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.341829 2.499437</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.152664 2.339654</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Jackknife resampling</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="jackknife.html">jackknife</a></span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  original     mean       bias      error</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         3.269200 3.246457 -0.9779158 0.08145529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 2.955298 2.932856 -0.9649994 0.15907033</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          2.491683 2.469588 -0.9500688 0.19670002</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        2.485604 2.462723 -0.9838709 0.22195573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        2.329187 2.305876 -1.0023704 0.25266291</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">bootstrap</span><span class="op">(</span><span class="va">h</span>, f <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       Min.  1st Qu.   Median     Mean  3rd Qu.     Max.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Altamira         2.9433811 3.228458 3.281614 3.279012 3.330767 3.525044</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Cueto de la Mina 1.8388354 2.894162 2.991616 2.981012 3.083455 3.384161</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Juyo          1.6831475 2.383264 2.534352 2.514869 2.653568 3.144314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> El Cierro        1.6496588 2.344457 2.495462 2.475503 2.624966 3.000800</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> La Paloma        0.6931472 2.165292 2.335162 2.316862 2.502661 2.941134</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

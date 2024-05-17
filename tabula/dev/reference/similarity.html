@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Similarity</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_similarity.R" class="external-link"><code>R/index_similarity.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/similarity.R" class="external-link"><code>R/similarity.R</code></a></small>
       <div class="d-none name"><code>similarity.Rd</code></div>
     </div>
 
@@ -60,18 +60,6 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">similarity</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">index_jaccard</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_sorenson</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_bray</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_morisita</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_brainerd</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_binomial</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
 <span><span class="co"># S4 method for matrix</span></span>
 <span><span class="fu">similarity</span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
@@ -82,34 +70,7 @@
 <span><span class="fu">similarity</span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
 <span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"brainerd"</span>, <span class="st">"bray"</span>, <span class="st">"jaccard"</span>, <span class="st">"morisita"</span>, <span class="st">"sorenson"</span>, <span class="st">"binomial"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for character,character</span></span>
-<span><span class="fu">index_jaccard</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for logical,logical</span></span>
-<span><span class="fu">index_jaccard</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">index_jaccard</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for logical,logical</span></span>
-<span><span class="fu">index_sorenson</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">index_sorenson</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">index_bray</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">index_morisita</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">index_brainerd</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric,numeric</span></span>
-<span><span class="fu">index_binomial</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></code></pre></div>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -125,10 +86,6 @@ will be coerced to a <code>numeric</code> <code>matrix</code> via <code><a href=
 <dd><p>Currently not used.</p></dd>
 
 
-<dt>x, y</dt>
-<dd><p>A length-\(p\) <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of count data.</p></dd>
-
-
 <dt>method</dt>
 <dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the method to be
 used (see details). Any unambiguous substring can be given.</p></dd>
@@ -138,9 +95,8 @@ used (see details). Any unambiguous substring can be given.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<ul><li><p><code>similarity()</code> returns a <a href="https://rdrr.io/r/stats/dist.html" class="external-link">stats::dist</a> object.</p></li>
-<li><p><code>index_*()</code> return a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></li>
-</ul></div>
+<p>A <a href="https://rdrr.io/r/stats/dist.html" class="external-link">stats::dist</a> object.</p>
+    </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>\(\beta\)-diversity can be measured by addressing <em>similarity</em>
@@ -152,58 +108,44 @@ from \(0\)-\(1\) where \(1\) is perfect similarity and \(0\) is
 no similarity. The Brainerd-Robinson index is scaled between \(0\) and
 \(200\). The Binomial co-occurrence assessment approximates a Z-score.</p>
 <dl><dt><code>binomial</code></dt>
-<dd><p>Binomial co-occurrence assessment. This assesses the
-degree of co-occurrence between taxa/types within a dataset. The strongest
-associations are shown by large positive numbers, the strongest
-segregations by large negative numbers.</p></dd>
+<dd><p><a href="index_binomial.html">Binomial co-occurrence assessment</a>.</p></dd>
 
 <dt><code>brainerd</code></dt>
-<dd><p>Brainerd-Robinson quantitative index. This is a
-city-block metric of similarity between pairs of samples/cases.</p></dd>
+<dd><p><a href="index_brainerd.html">Brainerd-Robinson quantitative index</a>.</p></dd>
 
 <dt><code>bray</code></dt>
-<dd><p>Sorenson quantitative index (Bray and Curtis modified version
-of the Sorenson index).</p></dd>
+<dd><p><a href="index_bray.html">Sorenson quantitative index</a>.</p></dd>
 
 <dt><code>jaccard</code></dt>
-<dd><p>Jaccard qualitative index.</p></dd>
+<dd><p><a href="index_jaccard.html">Jaccard qualitative index</a>.</p></dd>
 
 <dt><code>morisita</code></dt>
-<dd><p>Morisita-Horn quantitative index.</p></dd>
+<dd><p><a href="index_morisita.html">Morisita-Horn quantitative index</a>.</p></dd>
 
 <dt><code>sorenson</code></dt>
-<dd><p>Sorenson qualitative index.</p></dd>
+<dd><p><a href="index_sorenson.html">Sorenson qualitative index</a>.</p></dd>
 
 
 </dl></div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-    <p>Brainerd, G. W. (1951). The Place of Chronological Ordering in
-Archaeological Analysis. <em>American Antiquity</em>, 16(04), 301-313.
-<a href="https://doi.org/10.2307/276979" class="external-link">doi:10.2307/276979</a>
-.</p>
-<p>Bray, J. R. &amp; Curtis, J. T. (1957). An Ordination of the Upland Forest
-Communities of Southern Wisconsin. <em>Ecological Monographs</em>, 27(4),
-325-349. <a href="https://doi.org/10.2307/1942268" class="external-link">doi:10.2307/1942268</a>
-.</p>
-<p>Kintigh, K. (2006). Ceramic Dating and Type Associations. In J. Hantman and
-R. Most (eds.), <em>Managing Archaeological Data: Essays in Honor of
-Sylvia W. Gaines</em>. Anthropological Research Paper, 57. Tempe, AZ: Arizona
-State University, p. 17-26.</p>
-<p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
+    <p>Magurran, A. E. (1988). <em>Ecological Diversity and its Measurement</em>.
 Princeton, NJ: Princeton University Press. <a href="https://doi.org/10.1007/978-94-015-7358-0" class="external-link">doi:10.1007/978-94-015-7358-0</a>
-.</p>
-<p>Robinson, W. S. (1951). A Method for Chronologically Ordering Archaeological
-Deposits. <em>American Antiquity</em>, 16(04), 293-301. <a href="https://doi.org/10.2307/276978" class="external-link">doi:10.2307/276978</a>
 .</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other diversity measures: 
+    <div class="dont-index"><p><code><a href="index_binomial.html">index_binomial()</a></code>, <code><a href="index_brainerd.html">index_brainerd()</a></code>, <code><a href="index_bray.html">index_bray()</a></code>,
+<code><a href="index_jaccard.html">index_jaccard()</a></code>, <code><a href="index_morisita.html">index_morisita()</a></code>, <code><a href="index_sorenson.html">index_sorenson()</a></code></p>
+<p>Other diversity measures: 
 <code><a href="heterogeneity.html">heterogeneity</a>()</code>,
 <code><a href="occurrence.html">occurrence</a>()</code>,
+<code><a href="plot_diversity.html">plot_diversity</a></code>,
+<code><a href="plot_rarefaction.html">plot_rarefaction</a></code>,
+<code><a href="profiles.html">profiles</a>()</code>,
 <code><a href="rarefaction.html">rarefaction</a>()</code>,
 <code><a href="richness.html">richness</a>()</code>,
+<code><a href="she.html">she</a>()</code>,
 <code><a href="simulate.html">simulate</a>()</code>,
 <code><a href="turnover.html">turnover</a>()</code></p></div>
     </div>

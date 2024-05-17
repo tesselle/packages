@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,57 +102,47 @@
 <li>Heatmaps: <code><a href="reference/plot_heatmap.html">plot_heatmap()</a></code>, <code><a href="reference/plot_spot.html">plot_spot()</a></code>.</li>
 </ul>
 <p><a href="https://packages.tesselle.org/kairos/" class="external-link"><strong>kairos</strong></a> is a companion package to <strong>tabula</strong> that provides functions for chronological modeling and dating of archaeological assemblages from count data.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>To cite tabula <span class="cf">in</span> publications use<span class="sc">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2019</span>). <span class="st">"tabula: An R Package for Analysis, Seriation,</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="st">  and Visualization of Archaeological Count Data."</span> _Journal of Open</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  Source Software_, <span class="sc">*</span><span class="dv">4</span><span class="sc">*</span>(<span class="dv">44</span>). doi<span class="sc">:</span><span class="fl">10.21105</span><span class="sc">/</span>joss<span class="fl">.01821</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.21105</span><span class="sc">/</span>joss<span class="fl">.01821</span><span class="sc">&gt;</span>.</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2023</span>). _tabula<span class="sc">:</span> Analysis and Visualization of</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>  Archaeological Count Data_. Université Bordeaux Montaigne, Pessac,</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  France. doi<span class="sc">:</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1489944</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>  <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1489944</span><span class="sc">&gt;</span>, R package version <span class="dv">3</span>.<span class="fl">0.1</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>tabula<span class="sc">/</span><span class="er">&gt;</span>.</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>This package is a part of the tesselle project</span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>www.tesselle.org<span class="sc">&gt;</span>.</span></code></pre></div>
+<hr>
+<p>To cite tabula in publications use:</p>
+<p>Frerebeau N (2019). “tabula: An R Package for Analysis, Seriation, and Visualization of Archaeological Count Data.” <em>Journal of Open Source Software</em>, <em>4</em>(44). <a href="doi:10.21105/joss.01821" class="uri">doi:10.21105/joss.01821</a> <a href="https://doi.org/10.21105/joss.01821" class="external-link uri">https://doi.org/10.21105/joss.01821</a>.</p>
+<p>Frerebeau N (2024). <em>tabula: Analysis and Visualization of Archaeological Count Data</em>. Université Bordeaux Montaigne, Pessac, France. <a href="doi:10.5281/zenodo.1489944" class="uri">doi:10.5281/zenodo.1489944</a> <a href="https://doi.org/10.5281/zenodo.1489944" class="external-link uri">https://doi.org/10.5281/zenodo.1489944</a>, R package version 3.1.0, <a href="https://packages.tesselle.org/tabula/" class="uri">https://packages.tesselle.org/tabula/</a>.</p>
+<p>This package is a part of the tesselle project <a href="https://www.tesselle.org" class="external-link uri">https://www.tesselle.org</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the released version of <strong>tabula</strong> from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tabula"</span><span class="op">)</span></span></code></pre></div>
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"tesselle/tabula"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Install extra packages (if needed)</span></span>
 <span><span class="co"># install.packages("folio")</span></span>
 <span></span>
 <span><span class="co">## Load packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span></span></code></pre></div>
 <p><em>It assumes that you keep your data tidy</em>: each variable (type/taxa) must be saved in its own column and each observation (sample/case) must be saved in its own row.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Data from Lipo et al. 2015</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"mississippi"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Ford diagram</span></span>
 <span><span class="fu"><a href="reference/plot_ford.html">plot_ford</a></span><span class="op">(</span><span class="va">mississippi</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-ford-1.png" width="100%" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Co-occurrence of ceramic types</span></span>
 <span><span class="va">mississippi</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="reference/occurrence.html">occurrence</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-occurrence-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Data from Conkey 1980, Kintigh 1989, p. 28</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"chevelon"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span>
 <span></span>
@@ -178,7 +168,7 @@
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-bertin1977" class="csl-entry">
 Bertin, Jacques. 1977. <em>La graphique et le traitement graphique de l’information</em>. Nouvelle bibliothèque scientifique. Paris: Flammarion.
 </div>
@@ -241,7 +231,7 @@ Ford, J. A. 1962. <em>A Quantitative Method for Deriving Cultural Chronology</em
 <li><a href="https://github.com/tesselle/tabula/actions" class="external-link"><img src="https://github.com/tesselle/tabula/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://app.codecov.io/gh/tesselle/tabula" class="external-link"><img src="https://codecov.io/gh/tesselle/tabula/branch/master/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://www.codefactor.io/repository/github/tesselle/tabula" class="external-link"><img src="https://www.codefactor.io/repository/github/tesselle/tabula/badge" alt="CodeFactor"></a></li>
-<li><a href="https://cran.r-project.org/package=tabula" class="external-link"><img src="https://tinyverse.netlify.com/badge/tabula" alt="Dependencies"></a></li>
+<li><a href="https://cran.r-project.org/package=tabula" class="external-link"><img src="https://tinyverse.netlify.app/badge/tabula" alt="Dependencies"></a></li>
 </ul>
 </div>
 

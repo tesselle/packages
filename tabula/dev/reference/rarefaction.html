@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Rarefaction</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_rarefaction.R" class="external-link"><code>R/index_rarefaction.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/rarefaction.R" class="external-link"><code>R/rarefaction.R</code></a></small>
       <div class="d-none name"><code>rarefaction.Rd</code></div>
     </div>
 
@@ -60,21 +60,11 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">index_baxter</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_hurlbert</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
 <span><span class="co"># S4 method for matrix</span></span>
 <span><span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, sample <span class="op">=</span> <span class="cn">NULL</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hurlbert"</span>, <span class="st">"baxter"</span><span class="op">)</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame</span></span>
-<span><span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, sample <span class="op">=</span> <span class="cn">NULL</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hurlbert"</span>, <span class="st">"baxter"</span><span class="op">)</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric</span></span>
-<span><span class="fu">index_baxter</span><span class="op">(</span><span class="va">x</span>, <span class="va">sample</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for numeric</span></span>
-<span><span class="fu">index_hurlbert</span><span class="op">(</span><span class="va">x</span>, <span class="va">sample</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">rarefaction</span><span class="op">(</span><span class="va">object</span>, sample <span class="op">=</span> <span class="cn">NULL</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hurlbert"</span>, <span class="st">"baxter"</span><span class="op">)</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -88,10 +78,6 @@ will be coerced to a <code>numeric</code> <code>matrix</code> via <code><a href=
 
 <dt>...</dt>
 <dd><p>Currently not used.</p></dd>
-
-
-<dt>x</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector of count data (absolute frequencies).</p></dd>
 
 
 <dt>sample</dt>
@@ -112,18 +98,18 @@ index to be computed (see details). Any unambiguous substring can be given.</p><
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<ul><li><p><code>rarefaction()</code> returns a <a href="RarefactionIndex-class.html">RarefactionIndex</a> object.</p></li>
-<li><p><code>index_*()</code> return a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector.</p></li>
-</ul></div>
+<p>A <a href="RarefactionIndex-class.html">RarefactionIndex</a> object.</p>
+    </div>
     <div class="section level2">
     <h2 id="rarefaction-measures">Rarefaction Measures<a class="anchor" aria-label="anchor" href="#rarefaction-measures"></a></h2>
     
 
 <p>The following rarefaction measures are available for count data:</p><dl><dt><code>baxter</code></dt>
-<dd><p>Baxter's rarefaction.</p></dd>
+<dd><p><a href="index_baxter.html">Baxter's rarefaction</a>.</p></dd>
 
 <dt><code>hurlbert</code></dt>
-<dd><p>Hurlbert's unbiased estimate of Sander's rarefaction.</p></dd>
+<dd><p><a href="index_hurlbert.html">Hurlbert's unbiased estimate</a> of
+Sander's rarefaction.</p></dd>
 
 
 </dl></div>
@@ -146,24 +132,16 @@ Rarefaction assumes that imbalances between taxa are due to sampling and
 not to differences in actual abundances.</p>
     </div>
     <div class="section level2">
-    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-    <p>Baxter, M. J. (2001). Methodological Issues in the Study of Assemblage
-Diversity. <em>American Antiquity</em>, 66(4), 715-725. <a href="https://doi.org/10.2307/2694184" class="external-link">doi:10.2307/2694184</a>
-.</p>
-<p>Hurlbert, S. H. (1971). The Nonconcept of Species Diversity: A Critique and
-Alternative Parameters. <em>Ecology</em>, 52(4), 577-586.
-<a href="https://doi.org/10.2307/1934145" class="external-link">doi:10.2307/1934145</a>
-.</p>
-<p>Sander, H. L. (1968). Marine Benthic Diversity: A Comparative Study.
-<em>The American Naturalist</em>, 102(925), 243-282.</p>
-    </div>
-    <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="plot_rarefaction.html">plot()</a></code></p>
+    <div class="dont-index"><p><code><a href="index_baxter.html">index_baxter()</a></code>, <code><a href="index_hurlbert.html">index_hurlbert()</a></code>, <code><a href="plot_rarefaction.html">plot()</a></code></p>
 <p>Other diversity measures: 
 <code><a href="heterogeneity.html">heterogeneity</a>()</code>,
 <code><a href="occurrence.html">occurrence</a>()</code>,
+<code><a href="plot_diversity.html">plot_diversity</a></code>,
+<code><a href="plot_rarefaction.html">plot_rarefaction</a></code>,
+<code><a href="profiles.html">profiles</a>()</code>,
 <code><a href="richness.html">richness</a>()</code>,
+<code><a href="she.html">she</a>()</code>,
 <code><a href="similarity.html">similarity</a>()</code>,
 <code><a href="simulate.html">simulate</a>()</code>,
 <code><a href="turnover.html">turnover</a>()</code></p></div>

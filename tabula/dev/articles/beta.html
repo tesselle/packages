@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +88,7 @@
                         <h4 data-toc-skip class="author">N.
 Frerebeau</h4>
             
-            <h4 data-toc-skip class="date">2024-05-13</h4>
+            <h4 data-toc-skip class="date">2024-05-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/../vignettes/beta.Rmd" class="external-link"><code>../vignettes/beta.Rmd</code></a></small>
       <div class="d-none name"><code>beta.Rmd</code></div>
@@ -104,9 +104,9 @@ different local systems are from one another (Moreno and Rodríguez
 <span><span class="co"># install.packages("folio") # Datasets</span></span>
 <span></span>
 <span><span class="co">## Load packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Data from Lipo et al. 2015</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/tabula/">tabula</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Ceramic data from Lipo et al. 2015</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"mississippi"</span>, package <span class="op">=</span> <span class="st">"folio"</span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="turnover">Turnover<a class="anchor" aria-label="anchor" href="#turnover"></a>
@@ -135,10 +135,10 @@ y_{\cdot \cdot} = \sum_{i = 1}^{p} \sum_{j \geqslant i}^{p} y_{ij}
 \forall y_{ij} \in \lbrace 0,1 \rbrace
 \end{align}\]</span></p>
 <table class="table">
-<caption>Turnover measures. *: implemented.</caption>
+<caption>Turnover measures.</caption>
 <colgroup>
-<col width="66%">
-<col width="33%">
+<col width="65%">
+<col width="34%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">Measure</th>
@@ -148,34 +148,34 @@ y_{\cdot \cdot} = \sum_{i = 1}^{p} \sum_{j \geqslant i}^{p} y_{ij}
 <tr class="odd">
 <td align="left"><span class="math display">\[ \beta_W =
 \frac{S}{\alpha} - 1 \]</span></td>
-<td align="left">Whittaker (1960)*</td>
+<td align="left">Whittaker (1960)</td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math display">\[ \beta_C = \frac{g(H) +
 l(H)}{2} - 1 \]</span></td>
-<td align="left">Cody (1975)*</td>
+<td align="left">Cody (1975)</td>
 </tr>
 <tr class="odd">
 <td align="left"><span class="math display">\[ \beta_R = \frac{S^2}{2
 y_{\cdot \cdot} + S} - 1 \]</span></td>
-<td align="left">Routledge (1977)*</td>
+<td align="left">Routledge (1977)</td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math display">\[ \beta_I = \log x_{\cdot
 \cdot} - \frac{\sum_{j = 1}^{p} x_{\cdot j} \log x_{\cdot j}}{x_{\cdot
 \cdot}} - \frac{\sum_{i = 1}^{m} x_{i \cdot} \log x_{i \cdot}}{x_{\cdot
 \cdot}} \]</span></td>
-<td align="left">Routledge (1977)*</td>
+<td align="left">Routledge (1977)</td>
 </tr>
 <tr class="odd">
 <td align="left"><span class="math display">\[ \beta_E = \exp(\beta_I) -
 1 \]</span></td>
-<td align="left">Routledge (1977)*</td>
+<td align="left">Routledge (1977)</td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math display">\[ \beta_T = \frac{g(H) +
 l(H)}{2\alpha} \]</span></td>
-<td align="left">Wilson &amp; Shmida (1984)*</td>
+<td align="left">Wilson &amp; Shmida (1984)</td>
 </tr>
 </tbody>
 </table>
@@ -203,8 +203,7 @@ where <span class="math inline">\(1\)</span> is perfect similarity and
 <span class="math inline">\(0\)</span> is no similarity, with the
 exception of the Brainerd-Robinson index which is scaled between <span class="math inline">\(0\)</span> and <span class="math inline">\(200\)</span>.</p>
 <table class="table">
-<caption>Qualitative similarity measures (between samples). *:
-implemented.</caption>
+<caption>Qualitative similarity measures (between samples).</caption>
 <thead><tr class="header">
 <th align="left">Measure</th>
 <th align="left">Reference</th>
@@ -213,21 +212,20 @@ implemented.</caption>
 <tr class="odd">
 <td align="left"><span class="math display">\[ C_J = \frac{o_j}{S_a +
 S_b - o_j} \]</span></td>
-<td align="left">Jaccard*</td>
+<td align="left">Jaccard</td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math display">\[ C_S = \frac{2 \times
 o_j}{S_a + S_b} \]</span></td>
-<td align="left">Sorenson*</td>
+<td align="left">Sorenson</td>
 </tr>
 </tbody>
 </table>
 <table class="table">
-<caption>Quantitative similarity measures (between samples). *:
-implemented.</caption>
+<caption>Quantitative similarity measures (between samples).</caption>
 <colgroup>
-<col width="68%">
-<col width="31%">
+<col width="65%">
+<col width="34%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">Measure</th>
@@ -238,28 +236,27 @@ implemented.</caption>
 <td align="left"><span class="math display">\[ C_{BR} = 200 - \sum_{j =
 1}^{S} \left| \frac{a_j \times 100}{\sum_{j = 1}^{S} a_j} - \frac{b_j
 \times 100}{\sum_{j = 1}^{S} b_j} \right|\]</span></td>
-<td align="left">Brainerd (1951), Robinson (1951)*</td>
+<td align="left">Brainerd (1951), Robinson (1951)</td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math display">\[ C_N = \frac{2 \sum_{j =
 1}^{S} \min(a_j, b_j)}{N_a + N_b} \]</span></td>
-<td align="left">Bray &amp; Curtis (1957), Sorenson*</td>
+<td align="left">Bray &amp; Curtis (1957), Sorenson</td>
 </tr>
 <tr class="odd">
 <td align="left"><span class="math display">\[ C_{MH} = \frac{2 \sum_{j
 = 1}^{S} a_j \times b_j}{(\frac{\sum_{j = 1}^{S} a_j^2}{N_a^2} +
 \frac{\sum_{j = 1}^{S} b_j^2}{N_b^2}) \times N_a \times N_b}
 \]</span></td>
-<td align="left">Morisita-Horn*</td>
+<td align="left">Morisita-Horn</td>
 </tr>
 </tbody>
 </table>
 <table class="table">
-<caption>Quantitative similarity measures (between types). *:
-implemented.</caption>
+<caption>Quantitative similarity measures (between types).</caption>
 <colgroup>
-<col width="68%">
-<col width="31%">
+<col width="65%">
+<col width="34%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">Measure</th>
@@ -268,7 +265,7 @@ implemented.</caption>
 <tbody><tr class="odd">
 <td align="left"><span class="math display">\[ C_{Bi} = \frac{o_i - N
 \times p}{\sqrt{N \times p \times (1 - p)}} \]</span></td>
-<td align="left">Kintigh (2006)*</td>
+<td align="left">Kintigh (2006)</td>
 </tr></tbody>
 </table>
 <p>Where:</p>
@@ -294,12 +291,12 @@ sample/case common to both type/taxon: <span class="math inline">\(o_i =
 type/taxon common to both sample/case: <span class="math inline">\(o_j =
 \sum_{k = 1}^{S} a_k \cap b_k\)</span>.</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Brainerd-Robinson (similarity between assemblages)</span></span>
 <span><span class="va">BR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"brainerd"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plot_spot.html">plot_spot</a></span><span class="op">(</span><span class="va">BR</span>, col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">colour</a></span><span class="op">(</span><span class="st">"YlOrBr"</span><span class="op">)</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="beta_files/figure-html/similarity-1.png" width="672" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Binomial co-occurrence (similarity between types)</span></span>
 <span><span class="va">BI</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/similarity.html">similarity</a></span><span class="op">(</span><span class="va">mississippi</span>, method <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>

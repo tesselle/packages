@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,19 +117,19 @@ returns the result of <code>f</code> applied to the <code>n</code> values of <co
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Sample observations from a multinomial distribution</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">50</span>, <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, do <span class="op">=</span> <span class="va">median</span>, n <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 49.5 50.5 47.0 49.5 50.5 52.5 45.0 48.0 49.5 46.5 50.5 50.0 46.0 44.5 50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 48.5 49.0 52.0 49.5 50.5 44.5 48.5 45.0 51.0 48.5 47.5 48.5 44.0 48.5 50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 49.0 44.0 55.0 48.5 51.0 47.5 45.5 44.5 44.5 47.5 47.0 46.5 48.5 49.0 47.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] 51.0 45.0 49.5 44.0 46.5 47.0 49.0 44.5 44.0 46.5 46.5 50.0 51.5 43.0 43.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 46.5 43.0 46.5 48.0 45.5 51.0 50.0 47.5 47.0 46.0 46.0 52.5 45.5 55.0 48.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] 50.0 46.0 49.5 50.5 51.0 43.0 47.5 45.5 52.5 51.0 46.0 46.0 48.0 53.5 54.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 45.5 47.5 44.5 45.5 51.0 51.0 47.0 46.5 46.5 44.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 49.0 52.0 52.0 50.5 50.5 51.5 50.0 49.5 50.0 49.0 45.5 49.5 53.0 50.5 51.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [16] 50.0 49.5 50.0 48.5 48.5 45.5 50.5 54.0 48.5 46.5 50.0 46.5 49.0 50.0 52.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [31] 48.0 46.0 50.0 48.5 52.0 50.0 49.5 50.5 50.0 49.5 54.0 49.5 50.0 52.5 49.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [46] 51.5 47.5 51.0 53.5 53.0 52.0 52.5 50.0 47.0 48.5 48.0 51.0 50.5 48.0 54.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 51.0 48.0 49.5 49.5 48.5 49.5 53.5 50.0 53.0 51.5 50.5 52.5 54.0 49.5 46.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [76] 47.5 50.5 49.0 47.5 47.5 51.0 49.0 46.5 47.0 51.0 51.0 48.5 52.0 50.0 49.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 52.5 51.0 51.0 49.0 51.0 46.0 50.0 50.0 50.5 51.5</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Estimate the 25th, 50th and 95th percentiles</span></span></span>
 <span class="r-in"><span><span class="va">quant</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">x</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="op">}</span></span></span>
 <span class="r-in"><span><span class="fu">resample</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">100</span>, do <span class="op">=</span> <span class="va">median</span>, f <span class="op">=</span> <span class="va">quant</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    25%    50%    75% </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46.000 47.500 49.125 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  25%  50%  75% </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48.5 50.0 51.5 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

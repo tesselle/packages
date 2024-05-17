@@ -12,7 +12,7 @@ transect."><meta property="og:image" content="https://packages.tesselle.org/tabu
     
     <a class="navbar-brand me-2" href="../index.html">tabula</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.0.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">3.1.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@ transect."><meta property="og:image" content="https://packages.tesselle.org/tabu
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Turnover</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/index_turnover.R" class="external-link"><code>R/index_turnover.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/tabula/blob/HEAD/R/AllGenerics.R" class="external-link"><code>R/AllGenerics.R</code></a>, <a href="https://github.com/tesselle/tabula/blob/HEAD/R/diversity.R" class="external-link"><code>R/diversity.R</code></a></small>
       <div class="d-none name"><code>turnover.Rd</code></div>
     </div>
 
@@ -63,54 +63,24 @@ transect.</p>
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">turnover</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">index_whittaker</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_cody</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_routledge1</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_routledge2</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_routledge3</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">index_wilson</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
 <span><span class="co"># S4 method for matrix</span></span>
 <span><span class="fu">turnover</span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
-<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"whittaker"</span>, <span class="st">"cody"</span>, <span class="st">"routledge1"</span>, <span class="st">"routledge2"</span>, <span class="st">"routledge3"</span>, <span class="st">"wilson"</span><span class="op">)</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"whittaker"</span>, <span class="st">"cody"</span>, <span class="st">"routledge1"</span>, <span class="st">"routledge2"</span>, <span class="st">"routledge3"</span>, <span class="st">"wilson"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for data.frame</span></span>
 <span><span class="fu">turnover</span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
-<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"whittaker"</span>, <span class="st">"cody"</span>, <span class="st">"routledge1"</span>, <span class="st">"routledge2"</span>, <span class="st">"routledge3"</span>, <span class="st">"wilson"</span><span class="op">)</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">index_whittaker</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">index_cody</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">index_routledge1</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">index_routledge2</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">index_routledge3</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for matrix</span></span>
-<span><span class="fu">index_wilson</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="va">...</span>,</span>
+<span>  method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"whittaker"</span>, <span class="st">"cody"</span>, <span class="st">"routledge1"</span>, <span class="st">"routledge2"</span>, <span class="st">"routledge3"</span>, <span class="st">"wilson"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>object, x</dt>
+    <dl><dt>object</dt>
 <dd><p>A \(m \times p\) <code>numeric</code> <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></code> or
 <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> of count data or incidence data. A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code>
 will be coerced to a <code>numeric</code> <code>matrix</code> via <code><a href="https://rdrr.io/r/base/data.matrix.html" class="external-link">data.matrix()</a></code>.</p></dd>
@@ -135,55 +105,43 @@ used (see details). Any unambiguous substring can be given.</p></dd>
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The following methods can be used to ascertain the degree of <em>turnover</em>
 in taxa composition along a gradient (\(\beta\)-diversity) on qualitative
-(presence/absence) data. This assumes that the order of the matrix rows
-(from \(1\) to \(n\)) follows the progression along the
-gradient/transect.</p>
-<dl><dt><code>whittaker</code></dt>
-<dd><p>Whittaker measure.</p></dd>
-
-<dt><code>cody</code></dt>
-<dd><p>Cody measure.</p></dd>
+(presence/absence) data:</p>
+<dl><dt><code>cody</code></dt>
+<dd><p><a href="index_cody.html">Cody measure</a>.</p></dd>
 
 <dt><code>routledge1</code></dt>
-<dd><p>Routledge first measure.</p></dd>
+<dd><p><a href="index_routledge.html">Routledge first measure</a>.</p></dd>
 
 <dt><code>routledge2</code></dt>
-<dd><p>Routledge second measure.</p></dd>
+<dd><p><a href="index_routledge.html">Routledge second measure</a>.</p></dd>
 
 <dt><code>routledge3</code></dt>
-<dd><p>Routledge third measure. This is the exponential form
-of the second measure.</p></dd>
+<dd><p><a href="index_routledge.html">Routledge third measure</a> (exponential
+form of the second measure).</p></dd>
+
+<dt><code>whittaker</code></dt>
+<dd><p><a href="index_whittaker.html">Whittaker measure</a>.</p></dd>
 
 <dt><code>wilson</code></dt>
-<dd><p>Wilson measure.</p></dd>
+<dd><p><a href="index_wilson.html">Wilson measure</a>.</p></dd>
 
 
-</dl></div>
-    <div class="section level2">
-    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-    <p>Cody, M. L. (1975). Towards a theory of continental species diversity: Bird
-distributions over Mediterranean habitat gradients. <em>In</em> M. L. Cody &amp;
-J. M. Diamond (Eds.), <em>Ecology and Evolution of Communities</em>.
-Cambridge, MA: Harvard University Press, p. 214-257.</p>
-<p>Routledge, R. D. (1977). On Whittaker's Components of Diversity.
-<em>Ecology</em>, 58(5), 1120-1127. <a href="https://doi.org/10.2307/1936932" class="external-link">doi:10.2307/1936932</a>
-.</p>
-<p>Whittaker, R. H. (1960). Vegetation of the Siskiyou Mountains, Oregon and
-California. <em>Ecological Monographs</em>, 30(3), 279-338.
-<a href="https://doi.org/10.2307/1943563" class="external-link">doi:10.2307/1943563</a>
-.</p>
-<p>Wilson, M. V., &amp; Shmida, A. (1984). Measuring Beta Diversity with
-Presence-Absence Data. <em>The Journal of Ecology</em>, 72(3), 1055-1064.
-<a href="https://doi.org/10.2307/2259551" class="external-link">doi:10.2307/2259551</a>
-.</p>
+</dl><p>This assumes that the order of the matrix rows (from \(1\) to \(n\))
+follows the progression along the gradient/transect.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other diversity measures: 
+    <div class="dont-index"><p><code><a href="index_cody.html">index_cody()</a></code>, <code><a href="index_routledge.html">index_routledge1()</a></code>, <code><a href="index_routledge.html">index_routledge2()</a></code>,
+<code><a href="index_routledge.html">index_routledge3()</a></code>, <code><a href="index_whittaker.html">index_whittaker()</a></code>, <code><a href="index_wilson.html">index_wilson()</a></code></p>
+<p>Other diversity measures: 
 <code><a href="heterogeneity.html">heterogeneity</a>()</code>,
 <code><a href="occurrence.html">occurrence</a>()</code>,
+<code><a href="plot_diversity.html">plot_diversity</a></code>,
+<code><a href="plot_rarefaction.html">plot_rarefaction</a></code>,
+<code><a href="profiles.html">profiles</a>()</code>,
 <code><a href="rarefaction.html">rarefaction</a>()</code>,
 <code><a href="richness.html">richness</a>()</code>,
+<code><a href="she.html">she</a>()</code>,
 <code><a href="similarity.html">similarity</a>()</code>,
 <code><a href="simulate.html">simulate</a>()</code></p></div>
     </div>
@@ -203,15 +161,15 @@ Presence-Absence Data. <em>The Journal of Ecology</em>, 72(3), 1055-1064.
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Cody's measure</span></span></span>
 <span class="r-in"><span><span class="fu">turnover</span><span class="op">(</span><span class="va">woodland</span>, <span class="st">"cody"</span><span class="op">)</span> <span class="co"># 3</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Routledge's measures</span></span></span>
 <span class="r-in"><span><span class="fu">turnover</span><span class="op">(</span><span class="va">woodland</span>, <span class="st">"routledge1"</span><span class="op">)</span> <span class="co"># 0.29</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2857143</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"><span><span class="fu">turnover</span><span class="op">(</span><span class="va">woodland</span>, <span class="st">"routledge2"</span><span class="op">)</span> <span class="co"># 0.56</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.5594978</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"><span><span class="fu">turnover</span><span class="op">(</span><span class="va">woodland</span>, <span class="st">"routledge3"</span><span class="op">)</span> <span class="co"># 1.75</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.749794</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Wilson and Shmida's measure</span></span></span>
 <span class="r-in"><span><span class="fu">turnover</span><span class="op">(</span><span class="va">woodland</span>, <span class="st">"wilson"</span><span class="op">)</span> <span class="co"># 1</span></span></span>
