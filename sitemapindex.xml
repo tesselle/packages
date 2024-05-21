@@ -4,7 +4,34 @@
     <loc>https://packages.tesselle.org/sitemap.xml</loc>
   </sitemap>
   <sitemap>
+    <loc>https://packages.tesselle.org/khroma/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/tabula/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/kairos/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/dimensio/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://packages.tesselle.org/aion/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/isopleuros/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://packages.tesselle.org/nexus/sitemap.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://packages.tesselle.org/alkahest/sitemap.xml</loc>
@@ -13,36 +40,6 @@
     <loc>https://packages.tesselle.org/ananke/sitemap.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://packages.tesselle.org/arkhe/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/dimensio/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/folio/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/isopleuros/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/kairos/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/khroma/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
     <loc>https://packages.tesselle.org/kinesis/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/nexus/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tabula/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tekton/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://packages.tesselle.org/tesselle/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
