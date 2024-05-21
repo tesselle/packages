@@ -6,26 +6,52 @@ listing:
   - id: gallery
     template: gallery.ejs
     contents: gallery.yml
-    sort-ui: false
+    sort-ui: true
     filter-ui: true
+    field-display-names:
+      package: "Name"
+      version: "Version"
+      stargazers_count: "Stars"
+      open_issues: "Issues"
+      forks: "Forks"
+    field-types:
+      stargazers_count: number
+      open_issues: number
+      forks: number
 ---
 
 ```{r}
 #| label: packages 
 #| echo: false
-## Get packages info
-repo <- utils::contrib.url("https://tesselle.r-universe.dev")
-pkg <- utils::available.packages(contriburl = repo)
-pkg <- as.data.frame(pkg)
-url_pkg <- sprintf("https://packages.tesselle.org/%s", pkg$Package)
+source("_utils.R")
+
+## Get R-universe info
+runiverse <- uni_info()
+## Get GitHub data
+github <- gh_infos()
+
+## Merge metadata
+pkg <- merge(runiverse, github, by.x = "Package", by.y = "name", 
+             all.x = FALSE, all.y = FALSE, sort = FALSE)
+# pkg <- pkg[sample(nrow(pkg, replace = FALSE)), ]
+pkg <- pkg[order(pkg$stargazers_count, decreasing = TRUE), ]
+colnames(pkg) <- tolower(colnames(pkg))
+
+## Write yaml
+cat(
+  yaml::as.yaml(pkg, column.major = FALSE),
+  file = "gallery.yml",
+  sep = "\n",
+  append = FALSE
+)
 ```
 
 ```{r}
 #| label: sitemap 
 #| echo: false
 ## Build sitemap index
-loc <- paste0(url_pkg, "/sitemap.xml")
-map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", loc)
+sitemap <- sprintf("https://packages.tesselle.org/%s/sitemap.xml", pkg$package)
+map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", sitemap)
 cat(
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -41,6 +67,8 @@ cat(
 ```
 
 ::: {.column-page}
+
+[R packages of the **[tesselle](https://www.tesselle.org/)** projet:]{.fs-3}
 
 ::: {#gallery}
 :::

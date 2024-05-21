@@ -1,21 +1,34 @@
 
 ```{=html}
-<p class="fs-3">R packages of the <strong><a href="https://www.tesselle.org/">tesselle</a></strong> projet:</p>
-
-<div class="grid">
+<div class="list grid">
 <% for (const item of items) { %>
-  <div class="g-col-12 g-col-sm-6 g-col-md-4 mb-2">
-    <div class="card h-100 shadow-sm" <%= metadataAttrs(item) %>>
-      <img src="/images/<%- item.title %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
+  <div class="g-col-12 g-col-sm-6 g-col-md-4 mb-2" <%= metadataAttrs(item) %>>
+    <div class="card h-100 shadow-sm">
+      <img src="/images/<%- item.package %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
 
       <div class="card-body" style="position: relative;">
-        <h5 class="card-title listing-title"><%= item.title %></h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary listing-subtitle"><%= item.subtitle %></h6>
+        <h5 class="card-title listing-package"><%= item.package %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary listing-title"><%= item.title %></h6>
       </div>
-      <div class="card-footer bg-light">
+      <div class="card-footer bg-light py-3">
+        <div class="d-flex flex-row text-body-secondary text-center mb-2">
+          <div class="flex-fill">
+            <span class="fa-solid fa-star fa-lg" aria-hidden="true"></span>
+            <span class="sr-only">GitHub stargazers</span> <span class="listing-stargazers_count"><%= item.stargazers_count %></span>
+          </div>
+          <div class="flex-fill">
+            <span class="fa-solid fa-circle-exclamation fa-lg" aria-hidden="true"></span>
+            <span class="sr-only">Open issues</span> <span class="listing-open_issues"><%= item.open_issues %></span>
+          </div>
+          <div class="flex-fill">
+            <span class="fa-solid fa-code-fork fa-lg" aria-hidden="true"></span>
+            <span class="sr-only">Fork</span> <span class="listing-forks"><%= item.forks %></span>
+          </div>
+          <div class="flex-fill listing-version">v<%= item.version %></div>
+        </div>
         <div class="d-flex flex-row text-center">
-          <a href="https://packages.tesselle.org/<%- item.title %>/" class="card-link flex-fill">Documentation</a>
-          <a href="https://github.com/tesselle/<%- item.title %>" class="card-link flex-fill">Source code</a>
+          <a href="https://packages.tesselle.org/<%- item.package %>/" class="card-link flex-fill">Documentation</a>
+          <a href="https://github.com/tesselle/<%- item.package %>" class="card-link flex-fill">Source code</a>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '00 00 * * 1'
+    - cron:  '00 00 1 * *'
   push:
     branches: [main]
 
@@ -58,6 +58,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() }}
     needs: pkgdown
+    env:
+      GITHUB_PAT: ${{ secrets.TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
