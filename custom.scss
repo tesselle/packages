@@ -1,6 +1,4 @@
 /*-- scss:defaults --*/
-$theme: "cosmo" !default;
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
@@ -8,13 +6,16 @@ $headings-font-family: "ubuntu", sans-serif;
 $font-family-base: "roboto", sans-serif;
 $font-family-sans-serif: "roboto", sans-serif;
 
+$link-color: #4F2680;
+$navbar-bg: #FFD402;
+$navbar-fg: #000000;
+$navbar-hl: #D90668;
+/* $footer-bg: #4F2680; */
+/* $footer-fg: #F1E9DA; */
+
 /*-- Additional custom styles --*/
 p {
   font-family: $font-family-sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* Logo */

@@ -2,6 +2,7 @@
 pagetitle: "tesselle: R Packages & Archaeology"
 resources: 
   - "sitemapindex.xml"
+page-layout: full
 listing:
   - id: gallery
     template: gallery.ejs
@@ -66,11 +67,7 @@ cat(
 )
 ```
 
-::: {.column-page}
-
 [R packages of the **[tesselle](https://www.tesselle.org/)** projet:]{.fs-3}
 
 ::: {#gallery}
-:::
-
 :::
