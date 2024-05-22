@@ -4,31 +4,28 @@
 <% for (const item of items) { %>
   <div class="g-col-12 g-col-sm-6 g-col-md-4 g-col-xl-3" <%= metadataAttrs(item) %>>
     <div class="card h-100 shadow-sm">
-      <img src="/images/<%- item.package %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
-
+      <a href="https://packages.tesselle.org/<%- item.package %>/" title="Read <%- item.package %> documentation" class="stretched-link">
+        <img src="/images/<%- item.package %>.png" alt="<%- item.description %>" class="card-img-top rounded-top">
+      </a>
       <div class="card-body" style="position: relative;">
         <h5 class="card-title listing-package"><%= item.package %></h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary listing-title"><%= item.title %></h6>
+        <h6 class="card-subtitle text-body-secondary listing-title"><%= item.title %></h6>
       </div>
       <div class="card-footer bg-light py-3">
-        <div class="d-flex flex-row text-body-secondary text-center mb-2">
+        <div class="d-flex flex-row text-body-secondary text-center">
           <div class="flex-fill">
-            <span class="fa-solid fa-star fa-lg" aria-hidden="true"></span>
+            <span class="fa-solid fa-star" aria-hidden="true"></span>
             <span class="sr-only">GitHub stargazers</span> <span class="listing-stargazers_count"><%= item.stargazers_count %></span>
           </div>
           <div class="flex-fill">
-            <span class="fa-solid fa-circle-exclamation fa-lg" aria-hidden="true"></span>
+            <span class="fa-solid fa-circle-exclamation" aria-hidden="true"></span>
             <span class="sr-only">Open issues</span> <span class="listing-open_issues"><%= item.open_issues %></span>
           </div>
           <div class="flex-fill">
-            <span class="fa-solid fa-code-fork fa-lg" aria-hidden="true"></span>
+            <span class="fa-solid fa-code-fork" aria-hidden="true"></span>
             <span class="sr-only">Fork</span> <span class="listing-forks"><%= item.forks %></span>
           </div>
           <div class="flex-fill listing-version">v<%= item.version %></div>
-        </div>
-        <div class="d-flex flex-row text-center">
-          <a href="https://packages.tesselle.org/<%- item.package %>/" class="card-link flex-fill">Documentation</a>
-          <a href="https://github.com/tesselle/<%- item.package %>" class="card-link flex-fill">Source code</a>
         </div>
       </div>
     </div>
