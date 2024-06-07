@@ -28,9 +28,6 @@
     <loc>https://packages.tesselle.org/dimensio/news/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/dimensio/pull_request_template.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/BootstrapCA-class.html</loc>
   </url>
   <url>
@@ -112,10 +109,28 @@
     <loc>https://packages.tesselle.org/dimensio/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/label.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/reference/loadings.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/mca.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/palette_color.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/palette_color_continuous.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/palette_color_discrete.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/palette_shape.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/palette_size_range.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/pca.html</loc>
@@ -131,6 +146,12 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/reexports.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/scale_midpoint.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/reference/scale_range.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/reference/screeplot.html</loc>
