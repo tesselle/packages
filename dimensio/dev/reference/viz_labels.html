@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.7.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.8.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Non-Overlapping Text Labels</h1>
-      <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/viz_labels.R" class="external-link"><code>R/viz_labels.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/tesselle/dimensio/blob/HEAD/R/viz_coordinates.R" class="external-link"><code>R/viz_coordinates.R</code></a></small>
       <div class="d-none name"><code>viz_labels.Rd</code></div>
     </div>
 
@@ -57,75 +57,34 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">viz_labels</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># S4 method for MultivariateAnalysis</span></span>
-<span><span class="fu">viz_labels</span><span class="op">(</span></span>
-<span>  <span class="va">x</span>,</span>
-<span>  <span class="va">margin</span>,</span>
-<span>  <span class="va">...</span>,</span>
-<span>  axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
-<span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  top <span class="op">=</span> <span class="fl">10</span>,</span>
-<span>  box <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  segment <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">viz_labels</span><span class="op">(</span><span class="va">x</span>, select <span class="op">=</span> <span class="st">"contribution"</span>, n <span class="op">=</span> <span class="fl">10</span>, type <span class="op">=</span> <span class="st">"shadow"</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
-<dd><p>A <code><a href="CA-class.html">CA</a></code>, <code><a href="MCA-class.html">MCA</a></code> or <code><a href="PCA-class.html">PCA</a></code> object.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> (typically returned by <code><a href="prepare.html">prepare()</a></code>).</p></dd>
+
+
+<dt>select</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the variable to select
+labels. If <code>NULL</code>, all labels are drawn.</p></dd>
+
+
+<dt>n</dt>
+<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
+Only the labels of the top \(n\) observations according to <code>select</code> will
+be drawn. If <code>NULL</code>, all labels are drawn.</p></dd>
+
+
+<dt>type</dt>
+<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying the shape of the field.
+It must be one of "<code>text</code>", "<code>shadow</code>" or "<code>box</code>". Any unambiguous substring
+can be given.</p></dd>
 
 
 <dt>...</dt>
-<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a>, particularly,
-character expansion, <code>cex</code> and color, <code>col</code>.</p></dd>
-
-
-<dt>margin</dt>
-<dd><p>A length-one <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the subscript
-which the data will be returned: <code>1</code> indicates individuals/rows (the
-default), <code>2</code> indicates variables/columns.</p></dd>
-
-
-<dt>axes</dt>
-<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving the dimensions to be
-plotted.</p></dd>
-
-
-<dt>active</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the active observations be
-plotted?</p></dd>
-
-
-<dt>sup</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should the supplementary observations be
-plotted?</p></dd>
-
-
-<dt>highlight</dt>
-<dd><p>A vector specifying the information to be highlighted.
-If <code>NULL</code> (the default), no highlighting is applied. If a single <code>character</code>
-string is passed, it must be the name of a categorical variable, or one of
-"<code>observation</code>", "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>"
-(see <code><a href="tidy.html">augment()</a></code>).</p></dd>
-
-
-<dt>top</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
-Only the labels of the <code>top</code> \(n\) observations will be drawn.
-If <code>NULL</code>, all labels are drawn.</p></dd>
-
-
-<dt>box</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should a box be drawn underneath labels?</p></dd>
-
-
-<dt>segment</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should segments be drawn?</p></dd>
+<dd><p>Currently not used.</p></dd>
 
 </dl></div>
     <div class="section level2">

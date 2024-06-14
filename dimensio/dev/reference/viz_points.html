@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.7.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.8.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,10 +64,11 @@
 <span>  <span class="va">...</span>,</span>
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  labels_max <span class="op">=</span> <span class="fl">10</span>,</span>
-<span>  labels_what <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>how <span class="op">=</span> <span class="st">"contribution"</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  symbol <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -100,7 +101,7 @@ plotted.</p></dd>
 
 
 <dt>...</dt>
-<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> (see details).</p></dd>
+<dd><p>Currently not used.</p></dd>
 
 
 <dt>active</dt>
@@ -114,19 +115,12 @@ plotted?</p></dd>
 
 
 <dt>labels</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should labels be drawn?</p></dd>
-
-
-<dt>labels_max</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
-Only the labels of the <code>top</code> \(n\) observations contributing the most to
-the factorial map will be drawn. If <code>NULL</code>, all labels are drawn.
-Only used if <code>labels</code> is <code>TRUE</code>.</p></dd>
-
-
-<dt>labels_what</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></code> string specifying how to select the
-labels to be drawn.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should labels be drawn? Labeling a large
+number of points can be computationally expensive and make the graph
+difficult to read. A selection of points to label can be provided using a
+<code>list</code> of two named elements, <code>how</code> (a string specifying how to select the
+labels to be drawn) and <code>n</code> (an integer specifying the number of labels to
+be drawx). See examples below.</p></dd>
 
 
 <dt>highlight</dt>
@@ -135,6 +129,19 @@ If <code>NULL</code> (the default), no highlighting is applied. If a single <cod
 string is passed, it must be the name of a categorical variable, or one of
 "<code>observation</code>", "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>"
 (see <code><a href="tidy.html">augment()</a></code>).</p></dd>
+
+
+<dt>color</dt>
+<dd><p>The colors for lines and points (will be mapped to <code>highlight</code>).</p></dd>
+
+
+<dt>symbol</dt>
+<dd><p>A vector of plotting characters or symbols.</p></dd>
+
+
+<dt>size</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving range of possible sizes
+(greater than 0; (will be mapped to <code>highlight</code>).</p></dd>
 
 
 <dt>xlim</dt>

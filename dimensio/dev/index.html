@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="index.html">dimensio</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.7.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.8.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,53 +93,35 @@
 </h2>
 <p>Simple Principal Components Analysis (PCA; see <code><a href="articles/pca.html">vignette("pca")</a></code>) and (Multiple) Correspondence Analysis (CA) based on the Singular Value Decomposition (SVD). This package provides S4 classes and methods to compute, extract, summarize and visualize results of multivariate data analysis. It also includes methods for partial bootstrap validation.</p>
 <p>There are many very good packages for multivariate data analysis (such as <a href="http://factominer.free.fr/" class="external-link"><strong>FactoMineR</strong></a>, <a href="https://pbil.univ-lyon1.fr/ade4/" class="external-link"><strong>ade4</strong></a>, <a href="https://rpubs.com/brouwern/veganpca" class="external-link"><strong>vegan</strong></a> or <a href="https://cran.r-project.org/package=ca" class="external-link"><strong>ca</strong></a>, all extended by <a href="https://rpkgs.datanovia.com/factoextra/" class="external-link"><strong>FactoExtra</strong></a>). <strong>dimensio</strong> is designed to be as simple as possible, providing all the necessary tools to explore the results of the analysis.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>To cite dimensio <span class="cf">in</span> publications use<span class="sc">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2024</span>). _dimensio<span class="sc">:</span> Multivariate Data Analysis_.</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  Université Bordeaux Montaigne, Pessac, France.</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  doi<span class="sc">:</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.4478530</span> <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.4478530</span><span class="sc">&gt;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  R package version <span class="dv">0</span>.<span class="fl">7.0</span>, <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>dimensio<span class="sc">/</span><span class="er">&gt;</span>.</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>A BibTeX entry <span class="cf">for</span> LaTeX users is</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  <span class="sc">@</span>Manual{R<span class="sc">-</span>dimensio,</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>    author <span class="ot">=</span> {Nicolas Frerebeau},</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>    title <span class="ot">=</span> {{dimensio<span class="sc">:</span> Multivariate Data Analysis}},</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>    year <span class="ot">=</span> {<span class="dv">2024</span>},</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>    organization <span class="ot">=</span> {Université Bordeaux Montaigne},</span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>    address <span class="ot">=</span> {Pessac, France},</span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>    note <span class="ot">=</span> {R package version <span class="dv">0</span>.<span class="fl">7.0</span>},</span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>    doi <span class="ot">=</span> {<span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.4478530</span>},</span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>    url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>dimensio<span class="sc">/</span>},</span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>  }</span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>This package is a part of the tesselle project</span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a><span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>www.tesselle.org<span class="sc">&gt;</span>.</span></code></pre></div>
+<hr>
+<p>To cite dimensio in publications use:</p>
+<p>Frerebeau N (2024). <em>dimensio: Multivariate Data Analysis</em>. Université Bordeaux Montaigne, Pessac, France. <a href="doi:10.5281/zenodo.4478530" class="uri">doi:10.5281/zenodo.4478530</a> <a href="https://doi.org/10.5281/zenodo.4478530" class="external-link uri">https://doi.org/10.5281/zenodo.4478530</a>, R package version 0.8.0, <a href="https://packages.tesselle.org/dimensio/" class="uri">https://packages.tesselle.org/dimensio/</a>.</p>
+<p>This package is a part of the tesselle project <a href="https://www.tesselle.org" class="external-link uri">https://www.tesselle.org</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the released version of <strong>dimensio</strong> from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"dimensio"</span><span class="op">)</span></span></code></pre></div>
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"tesselle/dimensio"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Install extra packages (if needed)</span></span>
-<span><span class="co"># install.packages("khroma")</span></span>
+<span><span class="co"># install.packages("khroma") # Color schemes</span></span>
 <span></span>
 <span><span class="co">## Load packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/dimensio/">dimensio</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="compute">Compute<a class="anchor" aria-label="anchor" href="#compute"></a>
 </h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Load data</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span>
 <span></span>
@@ -184,36 +166,36 @@
 <code><a href="reference/viz_contributions.html">viz_cos2()</a></code> displays (joint) cos<sup>2</sup>.</li>
 </ul>
 <p>The <code>viz_*()</code> functions allow to highlight additional information by varying different graphical elements (color, transparency, shape and size of symbols…).</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Form biplot</span></span>
 <span><span class="fu"><a href="reference/biplot.html">biplot</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"form"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-biplot-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Highlight species</span></span>
 <span><span class="fu"><a href="reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, </span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
+<span>  symbol <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="co">## Add ellipses</span></span>
 <span><span class="fu"><a href="reference/viz_wrap.html">viz_tolerance</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>, </span>
 <span>  group <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, </span>
 <span>  level <span class="op">=</span> <span class="fl">0.95</span>,</span>
-<span>  border <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"high contrast"</span><span class="op">)</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span>  border <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Highlight petal length</span></span>
 <span><span class="fu"><a href="reference/viz_individuals.html">viz_individuals</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">X</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">255</span><span class="op">)</span>, </span>
-<span>  cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span></span>
+<span>  color <span class="op">=</span> <span class="fu">khroma</span><span class="fu">::</span><span class="fu"><a href="https://packages.tesselle.org/khroma/reference/colour.html" class="external-link">color</a></span><span class="op">(</span><span class="st">"iridescent"</span><span class="op">)</span><span class="op">(</span><span class="fl">255</span><span class="op">)</span>, </span>
+<span>  size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  symbol <span class="op">=</span> <span class="fl">16</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-plot-ind-1.png" width="50%"><img src="reference/figures/README-plot-ind-2.png" width="50%"></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot variables factor map</span></span>
 <span><span class="fu"><a href="reference/viz_variables.html">viz_variables</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
 <span></span>

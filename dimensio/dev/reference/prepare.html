@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.7.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.8.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,13 +66,13 @@
 <span>  principal <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  reorder <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  col <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  bg <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  pch <span class="op">=</span> <span class="fl">16</span>,</span>
-<span>  cex <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  lty <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  lwd <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  alpha <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  fill <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  shape <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  line_type <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  line_width <span class="op">=</span> <span class="va">size</span>,</span>
+<span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -116,26 +116,24 @@ string is passed, it must be the name of a categorical variable, or one of
 (see <code><a href="tidy.html">augment()</a></code>).</p></dd>
 
 
-<dt>col</dt>
-<dd><p>The colors for lines and points.</p></dd>
+<dt>color</dt>
+<dd><p>The colors for lines and points (will be mapped to <code>highlight</code>).</p></dd>
 
 
-<dt>bg</dt>
-<dd><p>The background color for the open plot symbols given by <code>pch = 21:25</code>.</p></dd>
+<dt>shape</dt>
+<dd><p>A vector of plotting characters or symbols (will be mapped to
+<code>highlight</code>). This can either be a single character or an integer code for
+one of a set of graphics symbols.</p></dd>
 
 
-<dt>pch</dt>
-<dd><p>A vector of plotting characters or symbols. This can either be
-a single character or an integer code for one of a set of graphics symbols.</p></dd>
+<dt>size</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving range of possible sizes
+(greater than 0; (will be mapped to <code>highlight</code>).</p></dd>
 
 
-<dt>cex</dt>
-<dd><p>A numerical vector giving the amount by which plotting characters
-and symbols should be scaled relative to the default.</p></dd>
-
-
-<dt>lty, lwd</dt>
-<dd><p>A specification for the line type and width.</p></dd>
+<dt>line_type, line_width</dt>
+<dd><p>A specification for the line type and width (will
+be mapped to <code>highlight</code>).</p></dd>
 
 </dl></div>
     <div class="section level2">

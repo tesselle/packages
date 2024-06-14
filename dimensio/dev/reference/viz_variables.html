@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">dimensio</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.7.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.8.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,8 +69,10 @@
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  labels_max <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  symbol <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -90,9 +92,11 @@
 <span>  axes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  labels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  labels_max <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>how <span class="op">=</span> <span class="st">"contribution"</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  symbol <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  size <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -110,8 +114,10 @@
 <span>  active <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  sup <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  labels <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  labels_max <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  highlight <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  symbol <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  xlim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ylim <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  main <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -132,7 +138,7 @@
 
 
 <dt>...</dt>
-<dd><p>Further <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> (see details).</p></dd>
+<dd><p>Currently not used.</p></dd>
 
 
 <dt>axes</dt>
@@ -151,14 +157,12 @@ plotted?</p></dd>
 
 
 <dt>labels</dt>
-<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should labels be drawn?</p></dd>
-
-
-<dt>labels_max</dt>
-<dd><p>An <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> specifying the number of labels to draw.
-Only the labels of the \(n\) variables contributing the most to the
-factorial map will be drawn. If <code>NULL</code>, all labels are drawn.
-Only used if <code>labels</code> is <code>TRUE</code>.</p></dd>
+<dd><p>A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> scalar: should labels be drawn? Labeling a large
+number of points can be computationally expensive and make the graph
+difficult to read. A selection of points to label can be provided using a
+<code>list</code> of two named elements, <code>how</code> (a string specifying how to select the
+labels to be drawn) and <code>n</code> (an integer specifying the number of labels to
+be drawx). See examples below.</p></dd>
 
 
 <dt>highlight</dt>
@@ -167,6 +171,19 @@ If <code>NULL</code> (the default), no highlighting is applied. If a single <cod
 string is passed, it must be the name of a categorical variable, or one of
 "<code>observation</code>", "<code>mass</code>", "<code>sum</code>", "<code>contribution</code>" or "<code>cos2</code>"
 (see <code><a href="tidy.html">augment()</a></code>).</p></dd>
+
+
+<dt>color</dt>
+<dd><p>The colors for lines and points (will be mapped to <code>highlight</code>).</p></dd>
+
+
+<dt>symbol</dt>
+<dd><p>A vector of plotting characters or symbols.</p></dd>
+
+
+<dt>size</dt>
+<dd><p>A length-two <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> vector giving range of possible sizes
+(greater than 0; (will be mapped to <code>highlight</code>).</p></dd>
 
 
 <dt>xlim</dt>
@@ -214,34 +231,6 @@ If <code>NULL</code>, no legend is displayed.</p></dd>
 being displayed. Invisibly returns <code>x</code>.</p>
     </div>
     <div class="section level2">
-    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Commonly used <a href="https://rdrr.io/r/graphics/par.html" class="external-link">graphical parameters</a> are:</p><dl><dt><code>pch</code></dt>
-<dd><p>A vector of plotting characters or symbols. This can either be
-a single character or an integer code for one of a set of
-graphics symbols.</p></dd>
-
-<dt><code>cex</code></dt>
-<dd><p>A numerical vector giving the amount by which plotting
-characters and symbols should be scaled relative to the
-default.</p></dd>
-
-<dt><code>lty</code></dt>
-<dd><p>A vector of line types.</p></dd>
-
-<dt><code>lwd</code></dt>
-<dd><p>A vector of line widths.</p></dd>
-
-<dt><code>col</code></dt>
-<dd><p>The colors for lines and points. Multiple colors can be
-specified so that each point can be given its own color.</p></dd>
-
-<dt><code>bg</code></dt>
-<dd><p>The background color for the open plot symbols given by
-<code>pch = 21:25</code>.</p></dd>
-
-
-</dl></div>
-    <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
     <p>Be careful: graphical parameters are silently recycled.</p>
     </div>
@@ -273,38 +262,38 @@ specified so that each point can be given its own color.</p></dd>
 <span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, panel.last <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Labels of the 10 individuals with highest cos2</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>how <span class="op">=</span> <span class="st">"cos2"</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="viz_variables-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Plot variables</span></span></span>
 <span class="r-in"><span><span class="fu">viz_variables</span><span class="op">(</span><span class="va">X</span>, panel.last <span class="op">=</span> <span class="fu">graphics</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="viz_variables-2.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="viz_variables-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Graphical parameters</span></span></span>
 <span class="r-in"><span><span class="co">## Continuous values</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>, pch <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="viz_variables-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>, pch <span class="op">=</span> <span class="fl">16</span>,</span></span>
-<span class="r-in"><span>                col <span class="op">=</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="fl">12</span>, <span class="st">"RdPu"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>, symbol <span class="op">=</span> <span class="fl">16</span>, size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-4.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>, pch <span class="op">=</span> <span class="fl">16</span>,</span></span>
-<span class="r-in"><span>                col <span class="op">=</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="fl">12</span>, <span class="st">"RdPu"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                cex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Petal.Length</span>, symbol <span class="op">=</span> <span class="fl">16</span>, size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                color <span class="op">=</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="fl">12</span>, <span class="st">"RdPu"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">viz_variables</span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="st">"contribution"</span>,</span></span>
-<span class="r-in"><span>              col <span class="op">=</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="fl">12</span>, <span class="st">"BluGrn"</span>, rev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>              lwd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>              color <span class="op">=</span> <span class="fu">grDevices</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">hcl.colors</a></span><span class="op">(</span><span class="fl">12</span>, <span class="st">"BluGrn"</span>, rev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>              size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-6.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Discrete values</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, pch <span class="op">=</span> <span class="fl">21</span><span class="op">:</span><span class="fl">23</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, symbol <span class="op">=</span> <span class="fl">21</span><span class="op">:</span><span class="fl">23</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-7.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, pch <span class="op">=</span> <span class="fl">21</span><span class="op">:</span><span class="fl">23</span>,</span></span>
-<span class="r-in"><span>                bg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                col <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="viz_individuals.html">viz_individuals</a></span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, symbol <span class="op">=</span> <span class="fl">21</span><span class="op">:</span><span class="fl">23</span>,</span></span>
+<span class="r-in"><span>                fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#004488"</span>, <span class="st">"#DDAA33"</span>, <span class="st">"#BB5566"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-8.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">viz_variables</span><span class="op">(</span><span class="va">X</span>, highlight <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Petal"</span>, <span class="st">"Petal"</span>, <span class="st">"Sepal"</span>, <span class="st">"Sepal"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>              col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>              lty <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>              color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EE7733"</span>, <span class="st">"#0077BB"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>              symbol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="viz_variables-9.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

@@ -106,10 +106,28 @@
     <loc>https://packages.tesselle.org/dimensio/dev/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/label.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/loadings.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/mca.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/palette_color.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/palette_color_continuous.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/palette_color_discrete.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/palette_shape.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/palette_size_range.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/pca.html</loc>
@@ -125,6 +143,12 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/reexports.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/scale_midpoint.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/dimensio/dev/reference/scale_range.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/dimensio/dev/reference/screeplot.html</loc>
