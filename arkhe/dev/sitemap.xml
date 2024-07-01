@@ -64,9 +64,6 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/check_class.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/circle.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/clean_whitespace.html</loc>
   </url>
   <url>
@@ -103,9 +100,6 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/get.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/inch2line.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/index.html</loc>
   </url>
   <url>
@@ -124,9 +118,6 @@
     <loc>https://packages.tesselle.org/arkhe/dev/reference/keep.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/label_auto.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/label_percent.html</loc>
   </url>
   <url>
@@ -137,15 +128,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/null.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/palette_color.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/palette_shape.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/arkhe/dev/reference/palette_size.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/arkhe/dev/reference/predicate-matrix.html</loc>

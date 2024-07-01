@@ -31,7 +31,7 @@
     <loc>https://packages.tesselle.org/khroma/news/index.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/pull_request_template.html</loc>
+    <loc>https://packages.tesselle.org/khroma/reference/change.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/colour.html</loc>
@@ -40,7 +40,7 @@
     <loc>https://packages.tesselle.org/khroma/reference/compare.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/convert.html</loc>
+    <loc>https://packages.tesselle.org/khroma/reference/crameri.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/index.html</loc>
@@ -49,7 +49,28 @@
     <loc>https://packages.tesselle.org/khroma/reference/info.html</loc>
   </url>
   <url>
+    <loc>https://packages.tesselle.org/khroma/reference/khroma-defunct.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/khroma-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://packages.tesselle.org/khroma/reference/khroma-package.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/palette_color_continuous.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/palette_color_discrete.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/palette_color_picker.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/palette_shape.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/palette_size_range.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/plot.color_scheme.html</loc>
@@ -65,9 +86,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/plot_tiles.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/reference/ramp.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_acton.html</loc>
@@ -115,16 +133,10 @@
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_corkO.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_cyclic.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_davos.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_devon.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_diverging.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_fes.html</loc>
@@ -148,9 +160,6 @@
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_lisbon.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_mutlisequential.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_nuuk.html</loc>
   </url>
   <url>
@@ -164,9 +173,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_romaO.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_sequential.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_crameri_tofino.html</loc>
@@ -188,9 +194,6 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_land.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_logical_discrete.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_okabeito_discrete.html</loc>
@@ -220,13 +223,7 @@
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_dark.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_tol_discrete.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_discreterainbow.html</loc>
-  </url>
-  <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_tol_diverging.html</loc>
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_highcontrast.html</loc>
@@ -253,9 +250,6 @@
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_pale.html</loc>
   </url>
   <url>
-    <loc>https://packages.tesselle.org/khroma/reference/scale_tol_sequential.html</loc>
-  </url>
-  <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_smoothrainbow.html</loc>
   </url>
   <url>
@@ -263,5 +257,11 @@
   </url>
   <url>
     <loc>https://packages.tesselle.org/khroma/reference/scale_tol_vibrant.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/science.html</loc>
+  </url>
+  <url>
+    <loc>https://packages.tesselle.org/khroma/reference/tol.html</loc>
   </url>
 </urlset>

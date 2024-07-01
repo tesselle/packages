@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   event: event.html
   seriation: seriation.html
-last_built: 2024-06-14T15:37Z
+last_built: 2024-07-01T00:50Z
 urls:
   reference: https://packages.tesselle.org/kairos/reference
   article: https://packages.tesselle.org/kairos/articles
