@@ -104,51 +104,33 @@
 <p>See <code><a href="articles/tol.html">vignette("tol")</a></code> and <code><a href="articles/crameri.html">vignette("crameri")</a></code> for a more complete overview.</p>
 <p>For specific uses, several scientific thematic schemes (geologic timescale, land cover, FAO soils, etc.) are implemented, but these color schemes may not be color-blind safe.</p>
 <p>All these color schemes are implemented for use with base R <strong>graphics</strong> or <a href="https://github.com/tidyverse/ggplot2" class="external-link"><strong>ggplot2</strong></a> and <a href="https://github.com/thomasp85/ggraph" class="external-link"><strong>ggraph</strong></a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>To cite khroma <span class="cf">in</span> publications use<span class="sc">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  Frerebeau <span class="fu">N</span> (<span class="dv">2024</span>). _khroma<span class="sc">:</span> Colour Schemes <span class="cf">for</span> Scientific Data</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  Visualization_. Université Bordeaux Montaigne, Pessac, France.</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  doi<span class="sc">:</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1472077</span> <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1472077</span><span class="sc">&gt;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  R package version <span class="dv">1</span>.<span class="fl">13.0</span>, <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>khroma<span class="sc">/</span><span class="er">&gt;</span>.</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>A BibTeX entry <span class="cf">for</span> LaTeX users is</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  <span class="sc">@</span>Manual{,</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>    author <span class="ot">=</span> {Nicolas Frerebeau},</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>    title <span class="ot">=</span> {{khroma<span class="sc">:</span> Colour Schemes <span class="cf">for</span> Scientific Data Visualization}},</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>    year <span class="ot">=</span> {<span class="dv">2024</span>},</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>    organization <span class="ot">=</span> {Université Bordeaux Montaigne},</span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>    address <span class="ot">=</span> {Pessac, France},</span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>    note <span class="ot">=</span> {R package version <span class="dv">1</span>.<span class="fl">13.0</span>},</span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>    doi <span class="ot">=</span> {<span class="fl">10.5281</span><span class="sc">/</span>zenodo<span class="fl">.1472077</span>},</span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>    url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>packages.tesselle.org<span class="sc">/</span>khroma<span class="sc">/</span>},</span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>  }</span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>This package is a part of the tesselle project</span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a><span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>www.tesselle.org<span class="sc">&gt;</span>.</span></code></pre></div>
+<hr>
+<p>To cite khroma in publications use:</p>
+<p>Frerebeau N (2024). <em>khroma: Colour Schemes for Scientific Data Visualization</em>. Université Bordeaux Montaigne, Pessac, France. <a href="doi:10.5281/zenodo.1472077" class="uri">doi:10.5281/zenodo.1472077</a> <a href="https://doi.org/10.5281/zenodo.1472077" class="external-link uri">https://doi.org/10.5281/zenodo.1472077</a>, R package version 1.13.0, <a href="https://packages.tesselle.org/khroma/" class="uri">https://packages.tesselle.org/khroma/</a>.</p>
+<p>This package is a part of the tesselle project <a href="https://www.tesselle.org" class="external-link uri">https://www.tesselle.org</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the released version of <strong>khroma</strong> from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a>:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"khroma"</span><span class="op">)</span></span></code></pre></div>
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"tesselle/khroma"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Install extra packages (if needed)</span></span>
 <span><span class="co"># install.packages("ggplot2"))</span></span>
 <span></span>
 <span><span class="co">## Load packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://packages.tesselle.org/khroma/">khroma</a></span><span class="op">)</span></span></code></pre></div>
 <details><summary><strong>Available palettes</strong> (click to expand)
-</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Get a table of available palettes</span></span>
 <span><span class="fu"><a href="reference/info.html">info</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt;            palette        type max missing</span></span>
@@ -213,18 +195,18 @@
 <h3 id="color-palettes-and-scales">Color palettes and scales<a class="anchor" aria-label="anchor" href="#color-palettes-and-scales"></a>
 </h3>
 <p><code><a href="reference/colour.html">color()</a></code> returns a function that when called with a single integer argument returns a vector of colors.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Paul Tol's bright color scheme</span></span>
 <span><span class="va">bright</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"bright"</span><span class="op">)</span></span>
 <span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "#4477AA" "#EE6677" "#228833" "#CCBB44" "#66CCEE" "#AA3377" "#BBBBBB"</span></span>
 <span><span class="co">#&gt; attr(,"missing")</span></span>
 <span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Plot the color scheme</span></span>
 <span><span class="fu"><a href="reference/plot_scheme.html">plot_scheme</a></span><span class="op">(</span><span class="fu">bright</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span>, colours <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-show-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">mpg</span>, package <span class="op">=</span> <span class="st">"ggplot2"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Use with graphics</span></span>
@@ -240,7 +222,7 @@
 <span>  las <span class="op">=</span> <span class="fl">1</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-plot-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Use with ggplot2</span></span>
 <span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
@@ -256,14 +238,14 @@
 <div class="section level4">
 <h4 id="test-how-well-the-colors-are-identifiable">Test how well the colors are identifiable<a class="anchor" aria-label="anchor" href="#test-how-well-the-colors-are-identifiable"></a>
 </h4>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Okabe &amp; Ito's color scheme</span></span>
 <span><span class="va">okabe</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"okabe ito"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/plot_map.html">plot_map</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-map-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## BuRd sequential color scheme</span></span>
 <span><span class="va">BuRd</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/colour.html">color</a></span><span class="op">(</span><span class="st">"BuRd"</span><span class="op">)</span></span>
 <span></span>
@@ -273,10 +255,10 @@
 <div class="section level4">
 <h4 id="simulate-color-blindness">Simulate color-blindness<a class="anchor" aria-label="anchor" href="#simulate-color-blindness"></a>
 </h4>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/plot_scheme_colourblind.html">plot_scheme_colorblind</a></span><span class="op">(</span><span class="fu">okabe</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-usage-colorblind2-1.png" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## ggplot2 default color scheme</span></span>
 <span><span class="co">## (equally spaced hues around the color wheel)</span></span>

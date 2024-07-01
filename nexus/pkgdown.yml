@@ -3,7 +3,7 @@ pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
   nexus: nexus.html
-last_built: 2024-07-01T00:50Z
+last_built: 2024-07-01T10:19Z
 urls:
   reference: https://packages.tesselle.org/nexus/reference
   article: https://packages.tesselle.org/nexus/articles
