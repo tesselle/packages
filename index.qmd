@@ -2,6 +2,7 @@
 pagetitle: "tesselle: R Packages & Archaeology"
 resources: 
   - "sitemapindex.xml"
+  - "fonts/"
 page-layout: full
 listing:
   - id: gallery
