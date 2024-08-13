@@ -28,24 +28,26 @@ listing:
 source("_utils.R")
 
 ## Get R-universe info
-runiverse <- uni_info()
+runiverse <- try(uni_info())
 ## Get GitHub data
-github <- gh_infos()
+github <- try(gh_infos())
 
-## Merge metadata
-pkg <- merge(runiverse, github, by.x = "Package", by.y = "name", 
-             all.x = FALSE, all.y = FALSE, sort = FALSE)
-# pkg <- pkg[sample(nrow(pkg, replace = FALSE)), ]
-pkg <- pkg[order(pkg$stargazers_count, decreasing = TRUE), ]
-colnames(pkg) <- tolower(colnames(pkg))
-
-## Write yaml
-cat(
-  yaml::as.yaml(pkg, column.major = FALSE),
-  file = "gallery.yml",
-  sep = "\n",
-  append = FALSE
-)
+if (!inherits(runiverse, "try-error") && !inherits(github, "try-error")) {
+  ## Merge metadata
+  pkg <- merge(runiverse, github, by.x = "Package", by.y = "name", 
+               all.x = FALSE, all.y = FALSE, sort = FALSE)
+  # pkg <- pkg[sample(nrow(pkg, replace = FALSE)), ]
+  pkg <- pkg[order(pkg$stargazers_count, decreasing = TRUE), ]
+  colnames(pkg) <- tolower(colnames(pkg))
+  
+  ## Write yaml
+  cat(
+    yaml::as.yaml(pkg, column.major = FALSE),
+    file = "gallery.yml",
+    sep = "\n",
+    append = FALSE
+  )
+}
 ```
 
 ```{r}

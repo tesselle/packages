@@ -1,6 +1,6 @@
 - package: khroma
   title: Colour Schemes for Scientific Data Visualization
-  version: 1.12.0
+  version: 1.13.0
   description: |-
     Color schemes ready for each type of data (qualitative,
     diverging or sequential), with colors that are distinct for all
@@ -11,9 +11,9 @@
     color-blindness and to test how well the colors of any palette
     are identifiable. Several scientific thematic schemes (geologic
     timescale, land cover, FAO soils, etc.) are also implemented.
-  stargazers_count: 193
-  forks: 7
-  open_issues: 1
+  stargazers_count: 201
+  forks: 8
+  open_issues: 0
 - package: tabula
   title: Analysis and Visualization of Archaeological Count Data
   version: 3.1.0
@@ -26,14 +26,14 @@
     easily visualize count data and statistical thresholds: rank vs
     abundance plots, heatmaps, Ford (1962) and Bertin (1977)
     diagrams, etc.
-  stargazers_count: 34
+  stargazers_count: 35
   forks: 5
   open_issues: 0
 - package: kairos
   title: |-
     Analysis of Chronological Patterns from Archaeological Count
     Data
-  version: 2.1.0
+  version: 2.1.1
   description: |-
     A toolkit for absolute and relative dating and analysis of
     chronological patterns. This package includes functions for
@@ -42,7 +42,7 @@
     also allows to compute time point estimates and density
     estimates of the occupation and duration of an archaeological
     site.
-  stargazers_count: 14
+  stargazers_count: 15
   forks: 1
   open_issues: 6
 - package: folio
@@ -61,7 +61,7 @@
   open_issues: 1
 - package: dimensio
   title: Multivariate Data Analysis
-  version: 0.7.0
+  version: 0.8.1
   description: |-
     Simple Principal Components Analysis (PCA) and (Multiple)
     Correspondence Analysis (CA) based on the Singular Value
@@ -74,9 +74,21 @@
   stargazers_count: 10
   forks: 0
   open_issues: 1
+- package: arkhe
+  title: Tools for Cleaning Rectangular Data
+  version: 1.7.0
+  description: |-
+    A dependency-free collection of simple functions for
+    cleaning rectangular data. This package allows to detect, count
+    and replace values or discard rows/columns using a predicate
+    function. In addition, it provides tools to check conditions
+    and return informative error messages.
+  stargazers_count: 10
+  forks: 0
+  open_issues: 0
 - package: aion
   title: Archaeological Time Series
-  version: 1.0.3
+  version: 1.0.4
   description: |-
     A toolkit for archaeological time series. This package
     provides a system of classes and methods to represent and work
@@ -88,18 +100,6 @@
   stargazers_count: 10
   forks: 0
   open_issues: 1
-- package: arkhe
-  title: Tools for Cleaning Rectangular Data
-  version: 1.6.0
-  description: |-
-    A dependency-free collection of simple functions for
-    cleaning rectangular data. This package allows to detect, count
-    and replace values or discard rows/columns using a predicate
-    function. In addition, it provides tools to check conditions
-    and return informative error messages.
-  stargazers_count: 10
-  forks: 0
-  open_issues: 0
 - package: isopleuros
   title: Ternary Plots
   version: 1.2.0
@@ -110,7 +110,7 @@
     elements and to display statistical summaries. It also includes
     common ternary diagrams which are useful for the archaeologist
     (e.g. soil texture charts, ceramic phase diagram).
-  stargazers_count: 8
+  stargazers_count: 9
   forks: 1
   open_issues: 0
 - package: tesselle
@@ -127,23 +127,12 @@
     explore and analyze common data types in archaeology: count
     data, compositional data and chronological data. Learn more
     about 'tesselle' at <https://www.tesselle.org>.
-  stargazers_count: 6
+  stargazers_count: 7
   forks: 0
   open_issues: 0
-- package: nexus
-  title: Sourcing Archaeological Materials by Chemical Composition
-  version: 0.2.0
-  description: |-
-    Exploration and analysis of compositional data in the
-    framework of Aitchison (1986, ISBN: 978-94-010-8324-9). This
-    package provides tools for chemical fingerprinting and source
-    tracking of ancient materials.
-  stargazers_count: 4
-  forks: 0
-  open_issues: 2
 - package: alkahest
   title: Pre-Processing XY Data from Experimental Methods
-  version: 1.1.1
+  version: 1.2.0
   description: |-
     A lightweight, dependency-free toolbox for pre-processing
     XY data from experimental methods (i.e. any signal that can be
@@ -157,13 +146,27 @@
     SNIP algorithm after Ryan et al. (1988)
     <doi:10.1016/0168-583X(88)90063-8>, 4S Peak Filling after
     Liland (2015) <doi:10.1016/j.mex.2015.02.009> and more.
-  stargazers_count: 4
+  stargazers_count: 5
   forks: 0
   open_issues: 0
+- package: nexus
+  title: Sourcing Archaeological Materials by Chemical Composition
+  version: 0.2.0
+  description: |-
+    Exploration and analysis of compositional data in the
+    framework of Aitchison (1986, ISBN: 978-94-010-8324-9). This
+    package provides tools for chemical fingerprinting and source
+    tracking of ancient materials.
+  stargazers_count: 5
+  forks: 0
+  open_issues: 2
 - package: ananke
   title: Quantitative Chronology in Archaeology
-  version: 0.0.0.9000
-  description: What the package does (one paragraph).
+  version: 0.0.1
+  description: |-
+    A toolbox for quantitative chronology in archaeology. This
+    package provides functions for simple radiocarbon calibration
+    and chronological analysis.
   stargazers_count: 0
   forks: 0
   open_issues: 0
