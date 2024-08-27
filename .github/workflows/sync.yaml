@@ -1,0 +1,40 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/master/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '00 00 * * 1'
+
+name: Sync to GitLab
+
+jobs:
+  pkgdown:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {pkg: 'aion'}
+          - {pkg: 'alkahest'}
+          - {pkg: 'ananke'}
+          - {pkg: 'arkhe'}
+          - {pkg: 'dimensio'}
+          - {pkg: 'folio'}
+          - {pkg: 'isopleuros'}
+          - {pkg: 'kairos'}
+          - {pkg: 'khroma'}
+          - {pkg: 'kinesis'}
+          - {pkg: 'nexus'}
+          - {pkg: 'tabula'}
+          - {pkg: 'tekton'}
+          - {pkg: 'tesselle'}
+          - {pkg: 'website'}
+          - {pkg: 'packages'}
+          - {pkg: 'analytics'}
+          - {pkg: 'hex'}
+    steps:
+      - name: Push
+        run: |
+          git clone https://github.com/tesselle/${{ matrix.config.pkg }} tmp && cd tmp
+          git remote add backup https://gitlab-ci-token:${{ secrets.ACCESS_TOKEN }}@gitlab.huma-num.fr/tesselle/${{ matrix.config.pkg }}
+          git push -f backup main
