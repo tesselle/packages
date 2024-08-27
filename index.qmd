@@ -53,9 +53,13 @@ if (!inherits(runiverse, "try-error") && !inherits(github, "try-error")) {
 ```{r}
 #| label: sitemap 
 #| echo: false
-## Build sitemap index
-sitemap <- sprintf("https://packages.tesselle.org/%s/sitemap.xml", pkg$package)
-map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", sitemap)
+if (!inherits(runiverse, "try-error") && !inherits(github, "try-error")) {
+  ## Build sitemap index
+  sitemap <- sprintf("https://packages.tesselle.org/%s/sitemap.xml", pkg$package)
+  map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", sitemap)
+} else {
+  map <- ""
+}
 cat(
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
