@@ -1,6 +1,6 @@
 - package: khroma
   title: Colour Schemes for Scientific Data Visualization
-  version: 1.13.0
+  version: 1.14.0
   description: |-
     Color schemes ready for each type of data (qualitative,
     diverging or sequential), with colors that are distinct for all
@@ -16,7 +16,7 @@
   open_issues: 0
 - package: tabula
   title: Analysis and Visualization of Archaeological Count Data
-  version: 3.1.0
+  version: 3.1.1
   description: |-
     An easy way to examine archaeological count data. This
     package provides several tests and measures of diversity:
@@ -26,7 +26,7 @@
     easily visualize count data and statistical thresholds: rank vs
     abundance plots, heatmaps, Ford (1962) and Bertin (1977)
     diagrams, etc.
-  stargazers_count: 35
+  stargazers_count: 34
   forks: 5
   open_issues: 0
 - package: kairos
@@ -47,7 +47,7 @@
   open_issues: 6
 - package: folio
   title: Datasets for Teaching Archaeology and Paleontology
-  version: 1.4.0
+  version: 1.5.0
   description: |-
     Datasets for teaching quantitative approaches and modeling
     in archaeology and paleontology. This package provides several
@@ -56,12 +56,12 @@
     to illustrate statistical methods in the classroom
     (multivariate data analysis, compositional data analysis,
     diversity measurement, etc.).
-  stargazers_count: 11
+  stargazers_count: 12
   forks: 0
-  open_issues: 1
+  open_issues: 0
 - package: dimensio
   title: Multivariate Data Analysis
-  version: 0.8.1
+  version: 0.9.0
   description: |-
     Simple Principal Components Analysis (PCA) and (Multiple)
     Correspondence Analysis (CA) based on the Singular Value
@@ -130,6 +130,17 @@
   stargazers_count: 7
   forks: 0
   open_issues: 0
+- package: nexus
+  title: Sourcing Archaeological Materials by Chemical Composition
+  version: 0.3.0.9000
+  description: |-
+    Exploration and analysis of compositional data in the
+    framework of Aitchison (1986, ISBN: 978-94-010-8324-9). This
+    package provides tools for chemical fingerprinting and source
+    tracking of ancient materials.
+  stargazers_count: 5
+  forks: 0
+  open_issues: 1
 - package: alkahest
   title: Pre-Processing XY Data from Experimental Methods
   version: 1.2.0
@@ -149,20 +160,18 @@
   stargazers_count: 5
   forks: 0
   open_issues: 0
-- package: nexus
-  title: Sourcing Archaeological Materials by Chemical Composition
-  version: 0.2.0
+- package: kinesis
+  title: '''shiny'' Applications for the ''tesselle'' Packages'
+  version: 0.0.0.9004
   description: |-
-    Exploration and analysis of compositional data in the
-    framework of Aitchison (1986, ISBN: 978-94-010-8324-9). This
-    package provides tools for chemical fingerprinting and source
-    tracking of ancient materials.
-  stargazers_count: 5
+    A collection of 'shiny' applications for the 'tesselle'
+    packages.
+  stargazers_count: 0
   forks: 0
-  open_issues: 2
+  open_issues: 1
 - package: ananke
   title: Quantitative Chronology in Archaeology
-  version: 0.0.1
+  version: 0.0.1.9000
   description: |-
     A toolbox for quantitative chronology in archaeology. This
     package provides functions for simple radiocarbon calibration
@@ -170,13 +179,4 @@
   stargazers_count: 0
   forks: 0
   open_issues: 0
-- package: kinesis
-  title: '''Shiny'' Applications for the ''tesselle'' Packages'
-  version: 0.0.0.9003
-  description: |-
-    A collection of 'shiny' applications for the 'tesselle'
-    packages.
-  stargazers_count: 0
-  forks: 0
-  open_issues: 1
 
