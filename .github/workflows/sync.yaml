@@ -37,4 +37,4 @@ jobs:
         run: |
           git clone https://github.com/tesselle/${{ matrix.config.pkg }} tmp && cd tmp
           git remote add backup https://gitlab-ci-token:${{ secrets.ACCESS_TOKEN }}@gitlab.huma-num.fr/tesselle/${{ matrix.config.pkg }}
-          git push -f backup main
+          git push --follow-tags --force backup main
