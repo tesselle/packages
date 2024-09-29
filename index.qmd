@@ -23,72 +23,14 @@ listing:
 ---
 
 ```{r}
-#| label: packages 
-#| echo: false
-## Helpers
-## R-universe API
-uni_info <- function(what = c("Package", "Title", "Version", "Description")) {
-  api <- httr2::request("https://tesselle.r-universe.dev")
-  req <- httr2::req_url_path(api, "/api/packages/")
-  resp <- httr2::req_perform(req)
-  json <- httr2::resp_body_json(resp)
-
-  pkg <- lapply(X = json, `[`, what)
-  pkg <- lapply(pkg, as.data.frame)
-  pkg <- do.call(rbind, pkg)
-  pkg
-}
-## GitHub API
-gh_infos <- function(what = c("stargazers_count", "forks", "open_issues")) {
-  ## Repo infos
-  user_repo <- gh::gh(
-    endpoint = "/search/repositories",
-    q="user:tesselle topic:r-package",
-    .limit = Inf
-  )
-  items <- user_repo$items
-  if (length(items) < 1) return(NULL)
-  if (length(items) == 1 && items == "") return(NULL)
-
-  items <- lapply(items, `[`, c("name", what))
-  items <- lapply(items, as.data.frame)
-  items <- do.call(rbind, items)
-  items
-}
-
-## Get R-universe info
-runiverse <- try(uni_info())
-## Get GitHub data
-github <- try(gh_infos())
-
-if (!inherits(runiverse, "try-error") && !inherits(github, "try-error")) {
-  ## Merge metadata
-  pkg <- merge(runiverse, github, by.x = "Package", by.y = "name", 
-               all.x = FALSE, all.y = FALSE, sort = FALSE)
-  # pkg <- pkg[sample(nrow(pkg, replace = FALSE)), ]
-  pkg <- pkg[order(pkg$stargazers_count, decreasing = TRUE), ]
-  colnames(pkg) <- tolower(colnames(pkg))
-  
-  ## Write yaml
-  cat(
-    yaml::as.yaml(pkg, column.major = FALSE),
-    file = "gallery.yml",
-    sep = "\n",
-    append = FALSE
-  )
-}
-```
-
-```{r}
 #| label: sitemap 
 #| echo: false
-if (!inherits(runiverse, "try-error") && !inherits(github, "try-error")) {
-  ## Build sitemap index
-  sitemap <- sprintf("https://packages.tesselle.org/%s/sitemap.xml", pkg$package)
-  map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", sitemap)
-} else {
-  map <- ""
-}
+pkg <- read.csv("metadata.csv")
+
+## Build sitemap index
+sitemap <- sprintf("https://packages.tesselle.org/%s/sitemap.xml", pkg$package)
+map <- sprintf("  <sitemap>\n    <loc>%s</loc>\n  </sitemap>", sitemap)
+
 cat(
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

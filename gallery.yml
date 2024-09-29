@@ -26,7 +26,7 @@
     easily visualize count data and statistical thresholds: rank vs
     abundance plots, heatmaps, Ford (1962) and Bertin (1977)
     diagrams, etc.
-  stargazers_count: 34
+  stargazers_count: 35
   forks: 5
   open_issues: 0
 - package: kairos
@@ -44,7 +44,7 @@
     site.
   stargazers_count: 15
   forks: 1
-  open_issues: 6
+  open_issues: 7
 - package: folio
   title: Datasets for Teaching Archaeology and Paleontology
   version: 1.5.0
@@ -56,7 +56,7 @@
     to illustrate statistical methods in the classroom
     (multivariate data analysis, compositional data analysis,
     diversity measurement, etc.).
-  stargazers_count: 12
+  stargazers_count: 13
   forks: 0
   open_issues: 0
 - package: dimensio

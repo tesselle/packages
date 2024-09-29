@@ -75,6 +75,10 @@ jobs:
       - name: Install quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Get data
+        run: |
+          Rscript -e 'source("metadata.R")'
+
       - name: Render quarto project
         uses: quarto-dev/quarto-actions/render@v2
 
