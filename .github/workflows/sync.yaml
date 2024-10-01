@@ -30,6 +30,7 @@ jobs:
           - {pkg: 'tesselle'}
           - {pkg: 'website'}
           - {pkg: 'packages'}
+          - {pkg: 'dashboard'}
           - {pkg: 'analytics'}
           - {pkg: 'hex'}
     steps:
