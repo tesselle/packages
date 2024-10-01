@@ -23,13 +23,16 @@ website:
     right:
       - icon: house
         text: Homepage
-        href: "https://www.tesselle.org"
-      - icon: github
-        text: Github
-        href: https://github.com/tesselle/
+        href: https://www.tesselle.org/
       - icon: download
         text: R-universe
         href: https://tesselle.r-universe.dev/
+      - icon: speedometer
+        text: Dashboard
+        href: https://dashboard.tesselle.org/
+      - icon: github
+        text: Github
+        href: https://github.com/tesselle/
 
   page-footer:
     center: |
